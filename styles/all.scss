@@ -33,7 +33,12 @@ $deep-brown: #554d49;
 
 // 字體設定
 @font-face {
-  font-family: "GenSenRounded";
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
@@ -62,14 +67,15 @@ $bold: 900;
 // 以下兩種範例
 
 // h2.chinese {
-//   font-family: "GenSenRounded";
-//   font-size: $h2-font-size;
+//   font-family: "GenSenRounded-M";
+//   font-size: 48px;
 //   font-weight: $bold;
 //   color: $coral;
 // }
 
 // h3.english {
 //   font-family: "Roboto";
-//   font-size: $h3-font-size;
+//   font-weight: $bold;
+//   font-size: 110px;
 //   color: $lake-green;
 // }
