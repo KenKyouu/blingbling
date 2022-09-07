@@ -72,6 +72,7 @@ body {
   opacity: 80%;
   border-radius: 0 0 20px 20px;
   display: flex;
+  align-items: center;
   box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
   .left {
     padding-left: 20px;
@@ -112,8 +113,7 @@ body {
     background-image: url("https://picsum.photos/id/1008/375/160");
     position: relative;
     .class {
-      width: 60px;
-      height: 25px;
+      padding: 5px 15px;
       border: 1px solid $white;
       border-radius: 4px;
       display: flex;
@@ -124,7 +124,7 @@ body {
       bottom: 20px;
       transform: translateX(-50%);
       h3 {
-        padding-top: 6px;
+        padding-bottom: 3px;
         color: $white;
         font-family: "GenSenRounded-M";
         font-size: $p-font-size;
@@ -134,20 +134,92 @@ body {
   .slider {
     width: 100%;
     overflow: hidden;
-    ul {
-      width: 150%;
-      display: flex;
+    border-bottom: 2px solid $gray;
+    .slider-bar {
+      width: 650px;
+      padding: 0 15px;
       overflow: scroll;
-      li {
-        // width: 60px;
-        height: 30px;
-        padding: 10px;
-        margin: 15px 10px;
-        border: 1px solid $super-dark;
-        border-radius: 15px;
+      ul {
+        width: 150%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: scroll;
+        li {
+          padding: 5px 15px;
+          margin: 15px 10px;
+          border: 2px solid $super-dark;
+          border-radius: 15px;
+          a {
+            color: $super-dark;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+          }
+        }
+      }
+    }
+  }
+  .filter {
+    padding: 10px 0 10px 15px;
+    button.filter {
+      padding: 5px 8px;
+      border: 2px solid $super-dark;
+      border-radius: 10px;
+      background-color: rgba($color: #000000, $alpha: 0);
+      color: $super-dark;
+      font-family: "GenSenRounded-M";
+      font-size: $p-font-size;
+    }
+  }
+  .product-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 6px;
+    a {
+      .product-card {
+        width: 100%;
+        margin: auto;
+        // border: 1px solid $super-dark;
+        .product-image {
+          width: 170px;
+          height: 170px;
+          margin: auto;
+          background-image: url(../images/products/71-1.jpeg);
+          background-size: cover;
+          position: relative;
+          .heart {
+            cursor: default;
+            position: absolute;
+            right: 3px;
+            bottom: 3px;
+          }
+        }
+        .product-title {
+          width: 170px;
+          padding: 5px;
+          h3 {
+            color: $super-dark;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+        }
+        .product-price {
+          width: 170px;
+          padding: 5px;
+          p {
+            color: $deep-brown;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+            font-weight: $bold;
+            &::before {
+              display: inline-block;
+              content: "NT$";
+            }
+          }
+        }
       }
     }
   }
