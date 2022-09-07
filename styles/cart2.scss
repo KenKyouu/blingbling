@@ -1,0 +1,645 @@
+* {
+    box-sizing: border-box;
+}
+
+// 顏色設定
+$super-dark: #000000;
+$dark-red: #a31c2d;
+$pink: #ca3f68;
+$red-pink: #d45a6a;
+$light-pink: #ee92ad;
+$dark-green: #2f5e36;
+$green: #7ea083;
+$lake-green: #2d827d;
+$light-lake-green: #7cb2af;
+$sky-blue: #5292b9;
+$light-sky-blue: #9fc8e1;
+$dark-blue: #154d7a;
+$blue: #548fbe;
+$brown: #7a482d;
+$khaki: #b28064;
+$orange: #cb6b28;
+$light-orange: #e1a77e;
+$coral: #bd392a;
+$light-coral: #f07f72;
+$dark-gray: #4c4948;
+$gray: #c2c2c2;
+$yellow: #ffcd51;
+$light-yellow: #ffe39f;
+$skin: #d4cfc6;
+$white: #ffffff;
+$light-brown: #d4cfc6;
+$deep-brown: #554d49;
+
+// 字體設定
+@font-face {
+font-family: "GenSenRounded-M";
+src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+@font-face {
+font-family: "GenSenRounded-B";
+src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+@font-face {
+font-family: "Roboto";
+src: url("../fonts/RobotoFlex.woff") format("woff"),
+    url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+// 字體大小設定
+// 不分字型
+$h1-font-size: 80px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$p-font-size: 16px;
+$ps-font-size: 14px;
+
+// 字體粗細
+// 細字體不用下font-weight，粗字體再用下列變數
+// ex: font-weight: $bold;
+$bold: 900;
+
+
+//-------------------------------cart2-----------------------------
+.j-cart2-wrap{
+    overflow: hidden;
+}
+.j-cart2-bg{
+    background: url("../images/cart2-bg-m1.svg")left 65vh/50% no-repeat, url("../images/cart2-bg-m2.svg")right 160vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+}
+//--------------------------progress-bar--------
+.j-progress-bar{
+    display: flex;
+    align-items: center;
+    .j-step{
+        outline: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .j-step-top{
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            .j-svg-wrap{
+                background-color: $white;
+                border: 2px solid $super-dark;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg{
+                    width: 55%;
+                    height: 55%;
+                }
+            }
+        }
+        .j-step2-num{
+            background-color: $super-dark;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .j-num2{
+                color: $white;
+                font-family: "Roboto";
+                font-weight: $bold;
+                font-size: $h6-font-size;
+            }
+        }
+        .j-step3-num{
+            background-color: $white;
+            border: 2px solid #A4A4A4;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .j-num3{
+                color: #A4A4A4;
+                font-family: "Roboto";
+                font-weight: $bold;
+                font-size: $h6-font-size;
+            }
+        }
+        .j-step-text{
+            margin-top: 0.75rem;
+            font-family: "Roboto";
+            font-weight: $bold;
+            font-size: $p-font-size;
+        }
+        .j-step3-text{
+            color: #A4A4A4;
+            margin-top: 0.75rem;
+            font-family: "Roboto";
+            font-weight: $bold;
+            font-size: $p-font-size;
+        }
+
+    }
+}
+//-------------------------------form-----------
+%point-shared {
+    cursor: pointer;
+    font-size: 1.125rem;
+    display: block;
+    position: relative;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+%point-input-shared {
+    margin-right: 0.5rem;
+    // position: absolute;
+    cursor: pointer;
+    // opacity: 0;
+    // height: 0;
+    // width: 0;
+}
+/* Create a custom checkbox */
+// .j-checkmark{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 25px;
+//     width: 25px;
+//     background-color: $white;
+//     border: 2px solid $super-dark;
+// }
+/* On mouse-over*/
+// .j-point:hover input ~ .j-checkmark{
+//     background-color: $skin;
+// }
+/* When the checkbox is checked*/
+// .j-point input:checked ~ .j-checkmark{
+//     background-color: $white;
+//     border: 1px solid $super-dark;
+// }
+/* Create the checkmark/indicator (hidden when not checked) */
+// .j-checkmark::after{
+//     content: "";
+//     position: absolute;
+//     display: none;
+// }
+/* Show the checkmark when checked */
+// .j-point input:checked ~ .j-checkmark::after{
+//     display: block;
+// }
+/* Style the checkmark/indicator */
+// .j-point .j-checkmark::after{
+//     left: 9px;
+//     top: 5px;
+//     width: 5px;
+//     height: 10px;
+//     border: solid $super-dark;
+//     border-width: 0 3px 3px 0;
+//     transform: rotate(45deg);
+// }
+
+%required-shared {
+    position: relative;
+}
+%required-before {
+    content: "*";
+    position: absolute;
+    display: block;
+    left: -0.5rem;
+    top: -0.2rem;
+    color: $pink;
+}
+%input-shared{
+    margin-top: 0.75rem;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+}
+%space1-shared {
+    margin-top: 1.125rem;
+}
+%space-shared {
+    margin-top: 1.5rem;
+}
+%info-shared{
+    padding: 0 15px;
+    margin: 1.5rem  auto;
+    font-family: "Roboto";
+    font-weight: $bold;
+    font-size: $p-font-size;
+}
+.j-label, .j-input{
+    width: 100%;
+}
+//----------------------------people-------------------------------
+
+%people-info-shared {
+    font-size: $p-font-size;
+    font-family: "Roboto";
+    font-weight: $bold;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+%check-shared {
+    margin-top: 8px;
+}
+
+.j-people-wrap {
+    .j-people{
+        padding: 15px;
+        .j-orderer{
+            h5 {
+                font-family: "GenSenRounded-B";
+                font-size: $h6-font-size;
+            }
+            .j-people-info {
+            @extend %people-info-shared;
+            .j-check {
+                @extend %check-shared;
+                .j-point {
+                @extend %point-shared;
+                input {
+                    @extend %point-input-shared;
+                    span{
+                        display: block;
+                    }
+                }
+                }
+            }
+            .j-space1 {
+                @extend %space1-shared;
+                .j-label-required {
+                    @extend %required-shared;
+                    &::before{
+                        @extend %required-before;
+                    }
+                }
+                .j-input{
+                    @extend %input-shared;
+                }
+            }
+            .j-space {
+                @extend %space-shared;
+                .j-label-required {
+                    @extend %required-shared;
+                    &::before{
+                        @extend %required-before;
+                    }
+                }
+                .j-input{
+                    @extend %input-shared;
+                }
+            }
+            .j-space{
+                @extend %space-shared;
+                .j-tel-1{
+                    margin-right: 10px;
+                    width: 25%;
+                    .j-input{
+                        @extend %input-shared;
+                    }
+                }
+                .j-tel-2{
+                    width: 75%;
+                    .j-input{
+                        @extend %input-shared;
+                    }
+                }
+            }
+            }
+        }
+        .j-recipient{
+            margin-top: 10vw;
+            h5 {
+                font-family: "GenSenRounded-B";
+                font-size: $h6-font-size;
+                }
+                .j-people-info {
+                @extend %people-info-shared;
+                .j-check {
+                    @extend %check-shared;
+                    .j-point {
+                    @extend %point-shared;
+                    input {
+                        @extend %point-input-shared;
+                    }
+                    }
+                }
+                .j-space1 {
+                    @extend %space1-shared;
+                    .j-label-required {
+                        @extend %required-shared;
+                        &::before{
+                            @extend %required-before;
+                        }
+                    }
+                    .j-input{
+                        @extend %input-shared;
+                    }
+                }
+                .j-space {
+                    @extend %space-shared;
+                    .j-label-required {
+                        @extend %required-shared;
+                        &::before{
+                            @extend %required-before;
+                        }
+                    }
+                    .j-input{
+                        @extend %input-shared;
+                    }
+                }
+                .j-space{
+                    @extend %space-shared;
+                    .j-tel-1{
+                        margin-right: 10px;
+                        width: 25%;
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                    .j-tel-2{
+                        width: 75%;
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                }
+                }
+        }
+    }
+}
+
+
+//---------------------------------logistics----------------------------
+
+%info-li-shared{
+    margin-top: 20px;
+}
+%d-title-shared{
+    border-bottom: 3px solid $lake-green;
+    padding: 20px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: "Roboto";
+    font-weight: $bold;
+    font-size: 1.125rem;
+}
+.j-city, .j-town{
+    width: 100%;
+    appearance: none;
+    background: url() 90% center/4% no-repeat;
+    cursor: pointer;
+    @extend %input-shared;
+    background-color: $white;
+    font-family: "Roboto";
+    font-size: $p-font-size;
+
+}
+.j-city{
+    margin-right: 15px;
+}
+
+
+.j-logistics-wrap{
+    margin-top: 20vw;
+    .j-logistics{
+        h5{
+            font-family: "GenSenRounded-B";
+            font-size: $h6-font-size;
+            margin-left: 15px;
+        }
+        div{
+            .j-home-delivery{
+                width: 100%;
+                font-size: $p-font-size;
+                .j-d-title{
+                    @extend %d-title-shared;
+                    .j-point{
+                        @extend %point-shared;
+                        input{
+                            @extend %point-input-shared;
+                        }
+                    }
+                }
+                .j-home-info{
+                    @extend %info-shared;
+                    li{
+                        @extend %info-li-shared;
+                        .j-label-required{
+                            @extend %required-shared;
+                            &::before{
+                                @extend %required-before;
+                            }
+                        }
+                        .j-select{
+                            // display: flex;
+                            width: 100%;
+                            }
+                        }
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                    li{
+                        @extend %info-li-shared;
+                        .j-label-required{
+                            @extend %required-shared;
+                            &::before{
+                                @extend %required-before;
+                            }
+                        }
+                        .j-timebox{
+                            @extend %input-shared;
+                            display: flex;
+                            width: 70%;
+                            .col-6{
+                                .j-point{
+                                    @extend %point-shared;
+                                    font-size: $p-font-size;
+                                    input{
+                                    @extend %point-input-shared;
+                                    font-size: $p-font-size;
+                                    }
+                                }
+                            }
+                            .col-6{
+                                .j-point{
+                                    @extend %point-shared;
+                                    margin-right: 20px;
+                                    input{
+                                    @extend %point-input-shared;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    li{
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+            }
+        }
+            .j-convenience-store{
+                .j-d-title{
+                    @extend %d-title-shared;
+                    .j-point{
+                        @extend %point-shared;
+                        input{
+                            @extend %point-input-shared;
+                        }
+                    }
+                }
+                .j-store-info{
+                    @extend %info-shared;
+                    .j-space1{
+                        @extend %space1-shared;
+                        .j-label-required{
+                            @extend %required-shared;
+                            &::before{
+                                @extend %required-before;
+                            }
+                        }
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                    .j-space{
+                        @extend %space-shared;
+                        .j-label-required{
+                            @extend %required-shared;
+                            &::before{
+                                @extend %required-before;
+                            }
+                        }
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                    .j-store{
+                        width: 80%;
+                        margin: 30px 10% 0;
+                        border-radius: 10px;
+                        font-size: 1.125rem;
+                        font-weight: $bold;
+                        padding: 10px 30px;
+                        border: none;
+                        background-color: $super-dark;
+                        color: $white;
+                    }
+                }
+            }
+    }
+}
+
+//-------------------------------------------------------------------------
+%pay-title-shared{
+    @extend %d-title-shared;
+}
+
+
+.j-pay-wrap{
+    overflow: hidden;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
+    h5{
+        font-family: "GenSenRounded-B";
+        font-size: $h6-font-size;
+        padding: 0 15px;
+    }
+    div{
+        .j-credit-pay{
+            .j-credit-title{
+                @extend %pay-title-shared;
+                .j-point{
+                    @extend %point-shared;
+                    input{
+                        @extend %point-input-shared;
+                    }
+                }
+            }
+            .j-credit-bg{
+                background: url("../images/cart2-pay-bg.svg") center center/cover no-repeat;
+                border-radius: 0 0 20px 20px;
+                .j-credit-info{
+                    @extend %info-shared;
+                    margin: 0;
+                    li{
+                        .j-label-required {
+                            @extend %required-shared;
+                            &::before{
+                                @extend %required-before;
+                            }
+                        }
+                        .j-holder{
+                            margin-top: 60px;
+                        }
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                        .j-cvv{
+                            margin-bottom: 50px;
+                        }
+                    }
+                    .j-space{
+                        @extend %space-shared;
+                    }
+                }
+            }
+        }
+        .j-bank-pay{
+            .j-bank-title{
+                @extend %pay-title-shared;
+                .j-point{
+                    @extend %point-shared;
+                    input{
+                        @extend %point-input-shared;
+                    }
+                }
+            }
+        }
+        .j-line-pay{
+            .j-line-title{
+                @extend %pay-title-shared;
+                .j-point{
+                    @extend %point-shared;
+                    input{
+                        @extend %point-input-shared;
+                    }
+                }
+            }
+        }
+        .j-apple-pay{
+            .j-apple-title{
+                @extend %pay-title-shared;
+                .j-point{
+                    @extend %point-shared;
+                    input{
+                        @extend %point-input-shared;
+                    }
+                }
+            }
+        }
+        .j-money-pay{
+            .j-money-title{
+                @extend %pay-title-shared;
+                .j-point{
+                    @extend %point-shared;
+                    input{
+                        @extend %point-input-shared;
+                    }
+                }
+            }
+        }
+    }
+}
