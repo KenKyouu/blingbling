@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+$super-dark: #000000;
+$dark-red: #a31c2d;
+$pink: #ca3f68;
+$red-pink: #d45a6a;
+$light-pink: #ee92ad;
+$dark-green: #2f5e36;
+$green: #7ea083;
+$lake-green: #2d827d;
+$light-lake-green: #7cb2af;
+$sky-blue: #5292b9;
+$light-sky-blue: #9fc8e1;
+$dark-blue: #154d7a;
+$blue: #548fbe;
+$brown: #7a482d;
+$khaki: #b28064;
+$orange: #cb6b28;
+$light-orange: #e1a77e;
+$coral: #bd392a;
+$light-coral: #f07f72;
+$dark-gray: #4c4948;
+$gray: #c2c2c2;
+$yellow: #ffcd51;
+$light-yellow: #ffe39f;
+$skin: #d4cfc6;
+$white: #ffffff;
+$light-brown: #d4cfc6;
+$deep-brown: #554d49;
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"),
+    url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+$h1-font-size: 80px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$h7-font-size: 18px;
+$p-font-size: 16px;
+$ps-font-size: 14px;
+$bold: 900;
+
+.footer {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+  .footer-logo {
+    padding-top: 30px;
+    width: 20%;
+    margin: auto;
+  }
+  .footer-nav {
+    ul {
+      margin: 35px 40px 0 40px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid $white;
+      li {
+        a {
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+        }
+      }
+    }
+  }
+  .footer-social {
+    margin: 35px 160px 0 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-c {
+    margin-top: 35px;
+    text-align: center;
+    color: $white;
+    font-family: "Roboto";
+    font-size: $ps-font-size;
+  }
+}
