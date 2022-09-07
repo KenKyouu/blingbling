@@ -18,6 +18,10 @@
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
 
+body {
+  background-image: url(../images/other_bg_paper.png);
+}
+
 .header {
   position: fixed;
   z-index: 100;
@@ -114,5 +118,35 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+}
+
+.content .slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content .slider ul {
+  width: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
+}
+
+.content .slider ul li {
+  height: 30px;
+  padding: 10px;
+  margin: 15px 10px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=product-list.css.map */

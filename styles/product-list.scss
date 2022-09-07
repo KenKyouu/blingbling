@@ -58,6 +58,11 @@ $ps-font-size: 14px;
 $bold: 900;
 
 // Start
+
+body {
+  background-image: url(../images/other_bg_paper.png);
+}
+
 .header {
   position: fixed;
   z-index: 100;
@@ -123,6 +128,26 @@ $bold: 900;
         color: $white;
         font-family: "GenSenRounded-M";
         font-size: $p-font-size;
+      }
+    }
+  }
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    ul {
+      width: 150%;
+      display: flex;
+      overflow: scroll;
+      li {
+        // width: 60px;
+        height: 30px;
+        padding: 10px;
+        margin: 15px 10px;
+        border: 1px solid $super-dark;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
