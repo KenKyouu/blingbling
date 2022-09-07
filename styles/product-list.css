@@ -19,6 +19,8 @@
 }
 
 .header {
+  position: fixed;
+  z-index: 100;
   width: 100%;
   height: 56.5px;
   background-color: #000000;
@@ -27,6 +29,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .header .left {
@@ -75,5 +79,40 @@
 
 .header .right li ul.cart {
   margin-bottom: 5px;
+}
+
+.content .banner {
+  width: 100%;
+  height: 160px;
+  background-image: url("https://picsum.photos/id/1008/375/160");
+  position: relative;
+}
+
+.content .banner .class {
+  width: 60px;
+  height: 25px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.content .banner .class h3 {
+  padding-top: 6px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
 }
 /*# sourceMappingURL=product-list.css.map */
