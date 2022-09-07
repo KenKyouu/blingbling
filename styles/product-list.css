@@ -156,7 +156,7 @@ body {
 }
 
 .content .filter {
-  padding: 10px 0 10px 15px;
+  padding: 15px 0 15px 15px;
 }
 
 .content .filter button.filter {
@@ -177,11 +177,14 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 0 6px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .content .product-list a .product-card {
   width: 100%;
   margin: auto;
+  margin-bottom: 15px;
 }
 
 .content .product-list a .product-card .product-image {
@@ -230,5 +233,58 @@ body {
 .content .product-list a .product-card .product-price p::before {
   display: inline-block;
   content: "NT$";
+}
+
+.footer {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+}
+
+.footer .footer-logo {
+  padding-top: 30px;
+  width: 20%;
+  margin: auto;
+}
+
+.footer .footer-nav ul {
+  margin: 35px 40px 0 40px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #ffffff;
+}
+
+.footer .footer-nav ul li a {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.footer .footer-social {
+  margin: 35px 160px 0 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer-c {
+  margin-top: 35px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
 }
 /*# sourceMappingURL=product-list.css.map */
