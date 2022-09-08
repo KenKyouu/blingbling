@@ -57,7 +57,10 @@ $ps-font-size: 14px;
 $bold: 900;
 
 // Start
+
 .header {
+  position: fixed;
+  z-index: 99;
   width: 100%;
   height: 56.5px;
   background-color: $super-dark;
