@@ -35,13 +35,11 @@ $deep-brown: #554d49;
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"),
@@ -54,69 +52,51 @@ $h3-font-size: 36px;
 $h4-font-size: 32px;
 $h5-font-size: 24px;
 $h6-font-size: 20px;
+$h7-font-size: 18px;
 $p-font-size: 16px;
 $ps-font-size: 14px;
 $bold: 900;
 
-// Start
-
-.header {
-  position: fixed;
-<<<<<<< HEAD
-  top: 0;
-=======
-<<<<<<< HEAD
-=======
-  z-index: 99;
->>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
->>>>>>> 9d304722cb8dcb337439b0671785eca413506c4f
+.footer {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
   width: 100%;
-  height: 56.5px;
-  background-color: $super-dark;
-  opacity: 80%;
-  border-radius: 0 0 20px 20px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
-  top: 0;
-  z-index: 100;
-  align-items: center;
-
-  .left {
-    padding-left: 20px;
-    width: 100%;
-
-    h1.logo {
-      width: 100%;
-
-      a {
-        width: 100%;
-
-        img {
-          width: 75%;
+  height: 257px;
+  .footer-logo {
+    padding-top: 30px;
+    width: 20%;
+    margin: auto;
+  }
+  .footer-nav {
+    ul {
+      margin: 35px 40px 0 40px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid $white;
+      li {
+        a {
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
         }
       }
     }
   }
-
-  .right {
-    padding-right: 10px;
-    width: 100%;
+  .footer-social {
+    margin: 35px 160px 0 160px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    li {
-      display: flex;
-      align-items: center;
-
-      ul {
-        margin: 0 10px;
-      }
-
-      ul.cart {
-        margin-bottom: 5px;
-      }
-    }
+    justify-content: space-between;
+  }
+  .footer-c {
+    margin-top: 35px;
+    text-align: center;
+    color: $white;
+    font-family: "Roboto";
+    font-size: $ps-font-size;
   }
 }
