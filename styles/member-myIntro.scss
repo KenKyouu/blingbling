@@ -1,0 +1,558 @@
+* {
+    box-sizing: border-box;
+}
+
+// 顏色設定
+$super-dark: #000000;
+$dark-red: #a31c2d;
+$pink: #ca3f68;
+$red-pink: #d45a6a;
+$light-pink: #ee92ad;
+$dark-green: #2f5e36;
+$green: #7ea083;
+$lake-green: #2d827d;
+$light-lake-green: #7cb2af;
+$sky-blue: #5292b9;
+$light-sky-blue: #9fc8e1;
+$dark-blue: #154d7a;
+$blue: #548fbe;
+$brown: #7a482d;
+$khaki: #b28064;
+$orange: #cb6b28;
+$light-orange: #e1a77e;
+$coral: #bd392a;
+$light-coral: #f07f72;
+$dark-gray: #4c4948;
+$gray: #c2c2c2;
+$yellow: #ffcd51;
+$light-yellow: #ffe39f;
+$skin: #d4cfc6;
+$white: #ffffff;
+$light-brown: #d4cfc6;
+$deep-brown: #554d49;
+
+// 字體設定
+@font-face {
+    font-family: "GenSenRounded-M";
+    src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+        url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "GenSenRounded-B";
+    src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+        url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/RobotoFlex.woff") format("woff"),
+        url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+// 字體大小設定
+// 不分字型
+$h1-font-size: 80px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$p-font-size: 16px;
+$ps-font-size: 14px;
+
+// 字體粗細
+// 細字體不用下font-weight，粗字體再用下列變數
+// ex: font-weight: $bold;
+$bold: 900;
+
+// 以下兩種範例
+
+// h2.chinese {
+//   font-family: "GenSenRounded-M";
+//   font-size: 48px;
+//   font-weight: $bold;
+//   color: $coral;
+// }
+
+// h3.english {
+//   font-family: "Roboto";
+//   font-weight: $bold;
+//   font-size: 110px;
+//   color: $lake-green;
+// }
+
+
+
+// body {
+//     background-color: $lake-green;
+// }
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+
+    .container {
+        .main {
+            .row {
+                height: 100vh;
+
+                .col {
+                    background-color: $lake-green;
+                    padding: 0;
+
+                    .myName {
+                        padding-top: 80px;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .photoborder {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 100%;
+                            background-color: $light-lake-green;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .myphoto {
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 100%;
+                                background-color: $white;
+                                overflow: hidden;
+
+                                img.photo {
+                                    width: 110%;
+                                }
+                            }
+                        }
+
+                        h5 {
+                            font-family: "GenSenRounded-B";
+                            font-size: $h5-font-size;
+                            color: $super-dark;
+                            padding: 13px 0 13px 0;
+                        }
+
+                        a.coin {
+                            font-family: "Roboto";
+                            font-size: $p-font-size;
+                            color: $super-dark;
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 7px;
+                            text-decoration: none;
+
+                            svg {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
+                    .memberbutton {
+                        width: 100%;
+                        padding: 0px 30px;
+
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+
+                            li.btn {
+                                border: none;
+                                padding: 10px 0;
+
+                                a {
+                                    width: 64px;
+                                    height: 64px;
+                                    border-radius: 10px;
+                                    text-decoration: none;
+                                    font-family: "GenSenRounded-M";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    background-color: $white;
+                                    justify-content: center;
+
+                                    svg {
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .whiteBg {
+                        width: 100%;
+                        height: auto;
+                        background-color: $white;
+                        border-radius: 10px 10px 0 0;
+                        box-shadow: 0 -10px 19px $dark-gray;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 0px 30px;
+                        margin-top: 15px;
+
+                        .member-card {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding-top: 36px;
+
+                            img.memberCard {
+                                width: 280px;
+                                height: 380px;
+                                border-radius: 10px;
+                                background-color: $light-coral;
+                            }
+
+                            .memberLevel {
+                                width: 220px;
+                                height: 26px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                margin-top: 15px;
+
+                                .diamondicon {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding-bottom: 5px;
+                                }
+
+                                .progress {
+                                    width: 204px;
+                                    height: 8px;
+                                    background-color: $light-brown;
+
+                                    .progress-bar {
+                                        background-color: $light-lake-green;
+                                    }
+                                }
+                            }
+                        }
+
+                        .myIntro {
+                            width: 100%;
+
+                            .userName {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                padding-top: 20px;
+
+                                .myIntro-title {
+                                    width: 40%;
+                                    align-items: left;
+
+                                    .myIntro-title-ch {
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $p-font-size;
+                                        color: $lake-green;
+
+                                        p {
+                                            padding: 0 12px;
+                                        }
+                                    }
+
+                                    .myIntro-title-en {
+                                        font-family: "Roboto";
+                                        font-size: $ps-font-size;
+                                        color: $light-brown;
+                                        padding-top: 5px;
+
+                                        p {
+                                            border-left: 2px solid $gray;
+                                            display: inline-block;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+
+                                .myIntro-info {
+                                    width: 60%;
+                                    align-items: left;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+
+                                    p {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .gender {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                padding-top: 20px;
+
+                                .myIntro-title {
+                                    width: 40%;
+                                    align-items: left;
+
+                                    .myIntro-title-ch {
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $p-font-size;
+                                        color: $lake-green;
+
+                                        p {
+                                            padding: 0 12px;
+                                        }
+                                    }
+
+                                    .myIntro-title-en {
+                                        font-family: "Roboto";
+                                        font-size: $ps-font-size;
+                                        color: $light-brown;
+                                        padding-top: 5px;
+
+                                        p {
+                                            border-left: 2px solid $gray;
+                                            display: inline-block;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+
+                                .myIntro-info {
+                                    width: 60%;
+                                    align-items: left;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+
+                                    p {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .birthday {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                padding-top: 20px;
+
+                                .myIntro-title {
+                                    width: 40%;
+                                    align-items: left;
+
+                                    .myIntro-title-ch {
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $p-font-size;
+                                        color: $lake-green;
+
+                                        p {
+                                            padding: 0 12px;
+                                        }
+                                    }
+
+                                    .myIntro-title-en {
+                                        font-family: "Roboto";
+                                        font-size: $ps-font-size;
+                                        color: $light-brown;
+                                        padding-top: 5px;
+
+                                        p {
+                                            border-left: 2px solid $gray;
+                                            display: inline-block;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+
+                                .myIntro-info {
+                                    width: 60%;
+                                    align-items: left;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+
+                                    p {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .email {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                padding-top: 20px;
+
+                                .myIntro-title {
+                                    width: 40%;
+                                    align-items: left;
+
+                                    .myIntro-title-ch {
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $p-font-size;
+                                        color: $lake-green;
+
+                                        p {
+                                            padding: 0 12px;
+                                        }
+                                    }
+
+                                    .myIntro-title-en {
+                                        font-family: "Roboto";
+                                        font-size: $ps-font-size;
+                                        color: $light-brown;
+                                        padding-top: 5px;
+
+                                        p {
+                                            border-left: 2px solid $gray;
+                                            display: inline-block;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+
+                                .myIntro-info {
+                                    width: 60%;
+                                    // display: inline-block;
+                                    align-items: left;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+
+                                    p {
+                                        width: 100%;
+                                        line-height: 18px;
+                                    }
+                                }
+                            }
+
+                            .phone {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                padding-top: 20px;
+
+                                .myIntro-title {
+                                    width: 40%;
+                                    align-items: left;
+
+                                    .myIntro-title-ch {
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $p-font-size;
+                                        color: $lake-green;
+
+                                        p {
+                                            padding: 0 12px;
+                                        }
+                                    }
+
+                                    .myIntro-title-en {
+                                        font-family: "Roboto";
+                                        font-size: $ps-font-size;
+                                        color: $light-brown;
+                                        padding-top: 5px;
+
+                                        p {
+                                            border-left: 2px solid $gray;
+                                            display: inline-block;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+
+                                .myIntro-info {
+                                    width: 60%;
+                                    align-items: left;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+
+                                    p {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .address {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                padding-top: 20px;
+
+                                .myIntro-title {
+                                    width: 40%;
+                                    align-items: left;
+
+                                    .myIntro-title-ch {
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $p-font-size;
+                                        color: $lake-green;
+
+                                        p {
+                                            padding: 0 12px;
+                                        }
+                                    }
+
+                                    .myIntro-title-en {
+                                        font-family: "Roboto";
+                                        font-size: $ps-font-size;
+                                        color: $light-brown;
+                                        padding-top: 5px;
+
+                                        p {
+                                            border-left: 2px solid $gray;
+                                            display: inline-block;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+
+                                .myIntro-info {
+                                    width: 60%;
+                                    // align-items: left;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+
+                                    p {
+                                        width: 100%;
+                                        line-height: 18px;
+                                    }
+                                }
+                            }
+                        }
+
+                        button.editMyInfo {
+                            width: 130px;
+                            height: 38px;
+                            border-radius: 10px;
+                            border: 3px solid $super-dark;
+                            background-color: #ffffff00;
+                            margin: 20px 0;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+
+                            p.edit {
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                            }
+
+                            svg {
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

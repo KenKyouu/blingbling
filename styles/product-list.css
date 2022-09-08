@@ -14,10 +14,17 @@
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3177737f2e7b0bb7b519753403c5e19de2b585a5
 body {
   background-image: url(../images/other_bg_paper.png);
 }
 
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
 .header {
   position: fixed;
   z-index: 100;
@@ -27,8 +34,20 @@ body {
   opacity: 80%;
   border-radius: 0 0 20px 20px;
   display: flex;
+<<<<<<< HEAD
   align-items: center;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+=======
+<<<<<<< HEAD
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+=======
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
+>>>>>>> 3177737f2e7b0bb7b519753403c5e19de2b585a5
 }
 .header .left {
   padding-left: 20px;
@@ -84,6 +103,9 @@ body {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+<<<<<<< HEAD
+}/*# sourceMappingURL=product-list.css.map */
+=======
 }
 .content .slider {
   width: 100%;
@@ -215,4 +237,10 @@ body {
   color: #ffffff;
   font-family: "Roboto";
   font-size: 14px;
+<<<<<<< HEAD
 }/*# sourceMappingURL=product-list.css.map */
+=======
+}
+/*# sourceMappingURL=product-list.css.map */
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
+>>>>>>> 3177737f2e7b0bb7b519753403c5e19de2b585a5
