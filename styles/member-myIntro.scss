@@ -108,25 +108,45 @@ $bold: 900;
                         flex-direction: column;
                         align-items: center;
 
-                        .photoborder {
-                            width: 80px;
-                            height: 80px;
-                            border-radius: 100%;
-                            background-color: $light-lake-green;
+                        .photo {
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            position: relative;
 
-                            .myphoto {
-                                width: 70px;
-                                height: 70px;
+                            .photoborder {
+                                width: 80px;
+                                height: 80px;
                                 border-radius: 100%;
-                                background-color: $white;
-                                overflow: hidden;
+                                background-color: $light-lake-green;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
 
-                                img.photo {
-                                    width: 110%;
+                                .myphoto {
+                                    width: 70px;
+                                    height: 70px;
+                                    border-radius: 100%;
+                                    background-color: $white;
+                                    overflow: hidden;
+
+                                    img.photo {
+                                        width: 110%;
+                                    }
                                 }
+
+                            }
+
+                            .photoedit {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 100%;
+                                background-color: $yellow;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 1;
+                                position: absolute;
+                                right: -3px;
+                                bottom: 0;
                             }
                         }
 
