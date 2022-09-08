@@ -31,6 +31,10 @@
   border-radius: 0 0 20px 20px;
   display: flex;
 <<<<<<< HEAD
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+=======
+<<<<<<< HEAD
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   top: 0;
   z-index: 100;
@@ -42,6 +46,7 @@
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 >>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
+>>>>>>> 3177737f2e7b0bb7b519753403c5e19de2b585a5
 }
 .header .left {
   padding-left: 20px;
