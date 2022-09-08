@@ -371,9 +371,9 @@ body {
   font-size: 16px;
 }
 
-.filter-page .filter-class .gender-filter span.content,
-.filter-page .filter-class .price-filter span.content,
-.filter-page .filter-class .color-filter span.content {
+.filter-page .filter-class .gender-filter span.filter-content,
+.filter-page .filter-class .price-filter span.filter-content,
+.filter-page .filter-class .color-filter span.filter-content {
   color: #c2c2c2;
 }
 
