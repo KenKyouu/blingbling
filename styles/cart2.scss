@@ -56,6 +56,7 @@ $h3-font-size: 36px;
 $h4-font-size: 32px;
 $h5-font-size: 24px;
 $h6-font-size: 20px;
+$h7-font-size: 18px;
 $p-font-size: 16px;
 $ps-font-size: 14px;
 
@@ -65,23 +66,93 @@ $ps-font-size: 14px;
 $bold: 900;
 
 
+// Start
+.header {
+    position: fixed;
+    z-index: 900;
+    width: 100%;
+    height: 56.5px;
+    background-color: $super-dark;
+    opacity: 80%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
+    .left {
+      padding-left: 20px;
+      width: 100%;
+      h1.logo {
+        width: 100%;
+        a {
+          width: 100%;
+          img {
+            width: 75%;
+          }
+        }
+      }
+    }
+    .right {
+      padding-right: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        display: flex;
+        align-items: center;
+        ul {
+          margin: 0 10px;
+        }
+        ul.cart {
+          margin-bottom: 5px;
+        }
+      }
+    }
+}
+
 //-------------------------------cart2-----------------------------
 .j-cart2-wrap{
     overflow: hidden;
 }
 .j-cart2-bg{
-    background: url("../images/cart2-bg-m1.svg")left 65vh/50% no-repeat, url("../images/cart2-bg-m2.svg")right 160vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+    background: url("../images/cart2-bg-m1.svg")left 100vh/50% no-repeat, url("../images/cart2-bg-m2.svg")right 200vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+}
+//------------------------back-page-----------------
+.j-back{
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-top: calc(56.5px + 1rem);
+    .j-back-wrap{
+        svg{
+            width: 70%;
+        }
+    }
+    .j-back-text{
+        margin-left: 10px;
+        font-family: "Roboto";
+        font-weight: $bold;
+        font-size: $p-font-size;
+        color: $dark-gray;
+    }
+
 }
 //--------------------------progress-bar--------
 .j-progress-bar{
+    padding: 5% 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    .j-step{
-        outline: 1px solid;
+    width: 100%;
+    .j-step-up{
+        // outline: 1px solid;
+        padding: 0 4%;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        .j-step-top{
+        justify-content: space-between;
+        width: 100%;
+        height: 2.2rem;
+        .j-step{
             width: 2.2rem;
             height: 2.2rem;
             border-radius: 50%;
@@ -100,11 +171,17 @@ $bold: 900;
                 }
             }
         }
+        .j-line{
+            width: 30%;
+            height: 0.125rem;
+            background-color: $super-dark;
+            margin: 0 5px;
+        }
         .j-step2-num{
             background-color: $super-dark;
             border-radius: 50%;
-            width: 100%;
-            height: 100%;
+            width: 2.2rem;
+            height: 2.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -115,12 +192,28 @@ $bold: 900;
                 font-size: $h6-font-size;
             }
         }
+        .j-dash{
+            width: 30%;
+            height: 0.125rem;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            div{
+                width: 10%;
+                height: 100%;
+                background-color: #A4A4A4;
+                margin-right: 5px;
+                &:nth-child(7){
+                    margin-right: 0;
+                }
+            }
+        }
         .j-step3-num{
             background-color: $white;
             border: 2px solid #A4A4A4;
             border-radius: 50%;
-            width: 100%;
-            height: 100%;
+            width: 2.2rem;
+            height: 2.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -131,11 +224,18 @@ $bold: 900;
                 font-size: $h6-font-size;
             }
         }
+    }
+    .j-step-down{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         .j-step-text{
             margin-top: 0.75rem;
             font-family: "Roboto";
             font-weight: $bold;
             font-size: $p-font-size;
+
         }
         .j-step3-text{
             color: #A4A4A4;
@@ -144,65 +244,150 @@ $bold: 900;
             font-weight: $bold;
             font-size: $p-font-size;
         }
-
+    }
+}
+//------------------------list--------------------
+.j-list{
+    width: 100%;
+    position: relative;
+    margin-top: 5%;
+    .j-list-bar{
+        margin-top: 1vw;
+        width: 100%;
+        .j-list-wrap{
+            background: url("../images/cart2-list-bar.png") center center/contain  no-repeat;
+        }
+        div{
+                position: relative;
+                transform: translateY(-20%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            h5{
+                font-family: "GenSenRounded-B";
+                font-size: $h6-font-size;
+                padding: 7vw 0;
+                color: $white;
+                margin-right: 1rem;
+            }
+            svg{
+                width: 15%;
+            }
+        }
+        .j-list-title{
+            cursor: pointer;
+        }
     }
 }
 //-------------------------------form-----------
+
+//-----custom checkbox
 %point-shared {
     cursor: pointer;
-    font-size: 1.125rem;
+    font-size: $h7-font-size;
     display: block;
     position: relative;
     user-select: none;
+    padding-left: 1.75rem;
 }
 /* Hide the browser's default checkbox */
 %point-input-shared {
-    margin-right: 0.5rem;
-    // position: absolute;
+    // margin-right: 0.5rem;
+    position: absolute;
     cursor: pointer;
-    // opacity: 0;
-    // height: 0;
-    // width: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
 }
 /* Create a custom checkbox */
-// .j-checkmark{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 25px;
-//     width: 25px;
-//     background-color: $white;
-//     border: 2px solid $super-dark;
-// }
+.j-checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: $white;
+    border: 2px solid $super-dark;
+    border-radius: 3px;
+}
 /* On mouse-over*/
-// .j-point:hover input ~ .j-checkmark{
-//     background-color: $skin;
-// }
+.j-point:hover input ~ .j-checkmark{
+    background-color: $skin;
+}
 /* When the checkbox is checked*/
-// .j-point input:checked ~ .j-checkmark{
-//     background-color: $white;
-//     border: 1px solid $super-dark;
-// }
+.j-point input:checked ~ .j-checkmark{
+    background-color: $white;
+    border: 2px solid $super-dark;
+}
 /* Create the checkmark/indicator (hidden when not checked) */
-// .j-checkmark::after{
-//     content: "";
-//     position: absolute;
-//     display: none;
-// }
+.j-checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
 /* Show the checkmark when checked */
-// .j-point input:checked ~ .j-checkmark::after{
-//     display: block;
-// }
+.j-point input:checked ~ .j-checkmark::after{
+    display: block;
+}
 /* Style the checkmark/indicator */
-// .j-point .j-checkmark::after{
-//     left: 9px;
-//     top: 5px;
-//     width: 5px;
-//     height: 10px;
-//     border: solid $super-dark;
-//     border-width: 0 3px 3px 0;
-//     transform: rotate(45deg);
-// }
+.j-point .j-checkmark::after{
+    left: 3.5px;
+    width: 7px;
+    height: 11px;
+    border-right:2px solid $super-dark;
+    border-bottom: 2px solid $super-dark;
+    transform: rotate(45deg);
+    
+}
+
+
+//-----------custom radio
+
+
+  /* Create a custom radio button */
+.j-checkmark-r {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $white;
+    border: 2px solid $super-dark;
+    border-radius: 50%;
+}
+
+  /* On mouse-over */
+.j-point:hover input ~ .j-checkmark-r {
+    background-color: #D4CFC6;
+}
+
+/* When the radio button is checked*/
+.j-point input:checked ~ .j-checkmark-r {
+    background-color: $white;
+}
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.j-checkmark-r:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+  /* Show the indicator (dot/circle) when checked */
+.j-point input:checked ~ .j-checkmark-r:after {
+    display: block;
+}
+
+  /* Style the indicator (dot/circle) */
+    .j-point .j-checkmark-r:after {
+        top: 2.5px;
+        left: 2.5px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: black;
+    }
 
 %required-shared {
     position: relative;
@@ -318,7 +503,7 @@ $bold: 900;
             }
         }
         .j-recipient{
-            margin-top: 10vw;
+            margin-top: 3rem;
             h5 {
                 font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
@@ -392,12 +577,13 @@ $bold: 900;
     margin-top: 10px;
     font-family: "Roboto";
     font-weight: $bold;
-    font-size: 1.125rem;
+    font-size: $h7-font-size;
 }
 .j-city, .j-town{
     width: 100%;
     appearance: none;
-    background: url() 90% center/4% no-repeat;
+    background: url("../images/icons/icon=down.svg") 90% center/0.8rem no-repeat;
+    fill: $super-dark;
     cursor: pointer;
     @extend %input-shared;
     background-color: $white;
@@ -411,7 +597,7 @@ $bold: 900;
 
 
 .j-logistics-wrap{
-    margin-top: 20vw;
+    margin-top: 5rem;
     .j-logistics{
         h5{
             font-family: "GenSenRounded-B";
@@ -486,6 +672,7 @@ $bold: 900;
                     li{
                         .j-input{
                             @extend %input-shared;
+                            line-height: 2;
                         }
                     }
             }
@@ -530,7 +717,8 @@ $bold: 900;
                         width: 80%;
                         margin: 30px 10% 0;
                         border-radius: 10px;
-                        font-size: 1.125rem;
+                        font-family: "GenSenRounded-B";
+                        font-size: $h7-font-size;
                         font-weight: $bold;
                         padding: 10px 30px;
                         border: none;
@@ -550,8 +738,8 @@ $bold: 900;
 
 .j-pay-wrap{
     overflow: hidden;
-    margin-top: 20vw;
-    margin-bottom: 20vw;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
     h5{
         font-family: "GenSenRounded-B";
         font-size: $h6-font-size;
@@ -637,6 +825,51 @@ $bold: 900;
                     @extend %point-shared;
                     input{
                         @extend %point-input-shared;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------------------fixed subtotal-----------
+.j-subtotal{
+    position: relative;
+    width: 100%;
+    .j-subtotal-f{
+        width: 100%;
+        position: fixed;
+        border-radius: 20px 20px 0 0;
+        background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+        box-shadow: 0px -1px 14px rgba($color: $super-dark, $alpha: 0.25);
+        // z-index: 800;
+        bottom: 0;
+        left: 0;
+        .j-sum-item{
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .j-upicon{
+                margin-top: 1rem;
+                width: 100%;
+                text-align: center;
+                cursor: pointer;
+            }
+            .j-total{
+                padding: 1rem 0 2rem;
+                button{
+                    border: none;
+                    background-color: $lake-green;
+                    color: $white;
+                    padding: 10px 30px;
+                    border-radius: 10px;
+                    font-family: "GenSenRounded-B";
+                    font-size: $h7-font-size;
+                    font-weight: $bold;
+                    span{
+                        margin-left: 0.5rem;
                     }
                 }
             }
