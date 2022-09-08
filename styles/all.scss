@@ -37,13 +37,15 @@ $deep-brown: #554d49;
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "GenSenRounded-B";
+  font-family: "GenSenRounded-B"; // ps-cr
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto"; // ps-e
   src: url("../fonts/RobotoFlex.woff") format("woff"),
     url("../fonts/RobotoFlex.ttf") format("truetype");
 }
