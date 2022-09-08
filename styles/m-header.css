@@ -17,9 +17,13 @@
 .header {
   position: fixed;
 <<<<<<< HEAD
+  top: 0;
+=======
+<<<<<<< HEAD
 =======
   z-index: 99;
 >>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
+>>>>>>> 9d304722cb8dcb337439b0671785eca413506c4f
   width: 100%;
   height: 56.5px;
   background-color: #000000;
