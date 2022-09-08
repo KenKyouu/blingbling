@@ -1,22 +1,21 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
 
 body {
   width: 100%;
@@ -26,6 +25,7 @@ body {
   background-repeat: repeat;
 }
 
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
 .indexBox {
   position: relative;
   width: 100%;
@@ -45,12 +45,16 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
 .I-mainSection .mainTop {
   margin: auto;
   width: 100%;
   height: 30%;
 }
+<<<<<<< HEAD
+.I-mainSection .mainTop .mainLogo img {
+  width: 42%;
+}/*# sourceMappingURL=index.css.map */
+=======
 
 .I-mainSection .mainTop .mainLogo {
   width: 60%;
@@ -589,3 +593,4 @@ body {
   line-height: 18px;
 }
 /*# sourceMappingURL=index.css.map */
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
