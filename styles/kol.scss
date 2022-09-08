@@ -48,8 +48,6 @@ $deep-brown: #554d49;
         url("../fonts/RobotoFlex.ttf") format("truetype");
 }
 
-// 字體大小設定
-// 不分字型
 $h1-font-size: 80px;
 $h2-font-size: 48px;
 $h3-font-size: 36px;
@@ -58,10 +56,6 @@ $h5-font-size: 24px;
 $h6-font-size: 20px;
 $p-font-size: 16px;
 $ps-font-size: 14px;
-
-// 字體粗細
-// 細字體不用下font-weight，粗字體再用下列變數
-// ex: font-weight: $bold;
 $bold: 900;
 
 body {
@@ -114,6 +108,56 @@ body {
         }
     }
 }
+
+.footer {
+    margin-top: 30px;
+    background-image: url(../images/footer-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+    height: 257px;
+
+    .footer-logo {
+        padding-top: 30px;
+        width: 20%;
+        margin: auto;
+    }
+
+    .footer-nav {
+        ul {
+            margin: 35px 40px 0 40px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid $white;
+
+            li {
+                a {
+                    color: $white;
+                    font-family: "GenSenRounded-M";
+                    font-size: $p-font-size;
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        margin: 35px 160px 0 160px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-c {
+        margin-top: 35px;
+        text-align: center;
+        color: $white;
+        font-family: "Roboto";
+        font-size: $ps-font-size;
+    }
+}
+
 
 .container {
     width: 100%;
@@ -248,6 +292,47 @@ body {
             li.active {
                 background-color: $lake-green;
                 border: 2px solid $lake-green;
+            }
+        }
+    }
+}
+
+.turn-page-container {
+    margin: 80px 0;
+
+    .kol-turn-page {
+        color: black;
+        text-align: center;
+        border-radius: 50%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                width: 30px;
+                height: 30px;
+                border: none;
+                border-radius: 50%;
+                background-color: none;
+                margin: 0 8px;
+                padding: 10px;
+                color: black;
+                // margin-left: 15px;
+                text-decoration: none;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+
+            li.kol-page-span {
+                background-color: black;
+                color: white;
             }
         }
     }

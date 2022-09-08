@@ -14,14 +14,10 @@
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-<<<<<<< HEAD
-=======
-
 body {
   background-image: url(../images/other_bg_paper.png);
 }
 
->>>>>>> fdc45defbc36117353e6201ee72c0e5d75381ce1
 .header {
   position: fixed;
   z-index: 100;
@@ -31,11 +27,8 @@ body {
   opacity: 80%;
   border-radius: 0 0 20px 20px;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 .header .left {
   padding-left: 20px;
@@ -66,9 +59,6 @@ body {
 }
 .header .right li ul.cart {
   margin-bottom: 5px;
-<<<<<<< HEAD
-}/*# sourceMappingURL=product-list.css.map */
-=======
 }
 
 .content .banner {
@@ -77,71 +67,53 @@ body {
   background-image: url("https://picsum.photos/id/1008/375/160");
   position: relative;
 }
-
 .content .banner .class {
   padding: 5px 15px;
   border: 1px solid #ffffff;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 50%;
   bottom: 20px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .content .banner .class h3 {
   padding-bottom: 3px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
-
 .content .slider {
   width: 100%;
   overflow: hidden;
   border-bottom: 2px solid #c2c2c2;
 }
-
 .content .slider .slider-bar {
   width: 650px;
   padding: 0 15px;
   overflow: scroll;
 }
-
 .content .slider .slider-bar ul {
   width: 150%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: scroll;
 }
-
 .content .slider .slider-bar ul li {
   padding: 5px 15px;
   margin: 15px 10px;
   border: 2px solid #000000;
   border-radius: 15px;
 }
-
 .content .slider .slider-bar ul li a {
   color: #000000;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
-
 .content .filter {
   padding: 15px 0 15px 15px;
 }
-
 .content .filter button.filter {
   padding: 5px 8px;
   border: 2px solid #000000;
@@ -151,25 +123,18 @@ body {
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
-
 .content .product-list {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 0 6px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .content .product-list a .product-card {
   width: 100%;
   margin: auto;
   margin-bottom: 15px;
 }
-
 .content .product-list a .product-card .product-image {
   width: 170px;
   height: 170px;
@@ -178,19 +143,16 @@ body {
   background-size: cover;
   position: relative;
 }
-
 .content .product-list a .product-card .product-image .heart {
   cursor: default;
   position: absolute;
   right: 3px;
   bottom: 3px;
 }
-
 .content .product-list a .product-card .product-title {
   width: 170px;
   padding: 5px;
 }
-
 .content .product-list a .product-card .product-title h3 {
   color: #000000;
   font-family: "GenSenRounded-M";
@@ -200,19 +162,16 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-
 .content .product-list a .product-card .product-price {
   width: 170px;
   padding: 5px;
 }
-
 .content .product-list a .product-card .product-price p {
   color: #554d49;
   font-family: "GenSenRounded-M";
   font-size: 16px;
   font-weight: 900;
 }
-
 .content .product-list a .product-card .product-price p::before {
   display: inline-block;
   content: "NT$";
@@ -228,47 +187,32 @@ body {
   width: 100%;
   height: 257px;
 }
-
 .footer .footer-logo {
   padding-top: 30px;
   width: 20%;
   margin: auto;
 }
-
 .footer .footer-nav ul {
   margin: 35px 40px 0 40px;
   padding-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   border-bottom: 2px solid #ffffff;
 }
-
 .footer .footer-nav ul li a {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
-
 .footer .footer-social {
   margin: 35px 160px 0 160px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .footer .footer-c {
   margin-top: 35px;
   text-align: center;
   color: #ffffff;
   font-family: "Roboto";
   font-size: 14px;
-}
-/*# sourceMappingURL=product-list.css.map */
->>>>>>> fdc45defbc36117353e6201ee72c0e5d75381ce1
+}/*# sourceMappingURL=product-list.css.map */
