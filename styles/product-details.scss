@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  // 顏色設定
+  $super-dark: #000000;
+  $dark-red: #a31c2d;
+  $pink: #ca3f68;
+  $red-pink: #d45a6a;
+  $light-pink: #ee92ad;
+  $dark-green: #2f5e36;
+  $green: #7ea083;
+  $lake-green: #2d827d;
+  $light-lake-green: #7cb2af;
+  $sky-blue: #5292b9;
+  $light-sky-blue: #9fc8e1;
+  $dark-blue: #154d7a;
+  $blue: #548fbe;
+  $brown: #7a482d;
+  $khaki: #b28064;
+  $orange: #cb6b28;
+  $light-orange: #e1a77e;
+  $coral: #bd392a;
+  $light-coral: #f07f72;
+  $dark-gray: #4c4948;
+  $gray: #c2c2c2;
+  $yellow: #ffcd51;
+  $light-yellow: #ffe39f;
+  $skin: #d4cfc6;
+  $white: #ffffff;
+  $light-brown: #d4cfc6;
+  $deep-brown: #554d49;
+  
+  // 字體設定
+  @font-face {
+    font-family: "GenSenRounded-M";
+    src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+      url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "GenSenRounded-B";
+    src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+      url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/RobotoFlex.woff") format("woff"),
+      url("../fonts/RobotoFlex.ttf") format("truetype");
+  }
+  
+  // 字體大小設定
+  // 不分字型
+  $h1-font-size: 80px;
+  $h2-font-size: 48px;
+  $h3-font-size: 36px;
+  $h4-font-size: 32px;
+  $h5-font-size: 24px;
+  $h6-font-size: 20px;
+  $p-font-size: 16px;
+  $ps-font-size: 14px;
+  
+  // 字體粗細
+  // 細字體不用下font-weight，粗字體再用下列變數
+  // ex: font-weight: $bold;
+  $bold: 900;
+  
+  // 以下兩種範例
+  
+  // h2.chinese {
+  //   font-family: "GenSenRounded-M";
+  //   font-size: 48px;
+  //   font-weight: $bold;
+  //   color: $coral;
+  // }
+  
+  // h3.english {
+  //   font-family: "Roboto";
+  //   font-weight: $bold;
+  //   font-size: 110px;
+  //   color: $lake-green;
+  // }
+.content{
+    .containerr{
+        margin: 0 30px 0 30px;
+        .product-pic{
+            width: 100%;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 266px;
+            }
+        }
+        .product-text{
+            .brandname{
+                padding-top: 10px;
+                text-transform:uppercase;
+                font-family:"GenSenRounded-M";
+                color: $deep-brown;
+                font-size: $ps-font-size;
+            }
+            .productname{
+                padding-top: 5px;
+                font-family:"GenSenRounded-B";
+                color: $super-dark;
+                font-size: $h5-font-size;
+            }
+            .star-icon{
+                padding-top: 5px;
+            }
+            .productprice{
+                height: auto;
+                height: auto;
+                font-family:"GenSenRounded-B";
+                font-size: $h4-font-size;
+                display: flex;
+                padding: 20px 0 30px 0;
+                span{
+                    font-size: $ps-font-size;
+                }
+            }
+        }
+        .product-info{
+            .product-info-title{
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-around;
+                font-family: "GenSenRounded-B";
+                $ps-font-size: 14px;
+                .describe{
+                    color:  $super-dark;
+                }
+                .specification{
+                    color: $light-lake-green;
+                }
+            }
+            .long-line{
+                width: 100%;
+                height: 3px;
+                background-color: $lake-green;
+                position: relative;
+                .short-line{
+                    position: absolute;
+                    width: 50%;
+                    height: 7px;
+                    background-color:$super-dark;
+                }
+            }
+            .product-info-text{
+                padding-top: 10px;
+            .describe-text{
+                font-family: "Roboto";
+                font-weight: $bold;
+                line-height: 1.4;
+                font-size: 14px;
+                width: 100%;
+                height: 180px;
+                }
+            }
+        }
+        .mightlike{
+            .mightlike-title{
+                width: 100%;
+                .mightlike-title-text{
+                    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-weight: 900;
+                    font-size: $h3-font-size;
+                    padding-bottom: 10px;
+                }
+                .mightlike-capsule{
+                    width: 90px;
+                    height: 25px;
+                    font-size: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $super-dark;
+                    color: $white;
+                    border-radius: 20px;
+                }
+            }
+        }
+        .mightlike-info{
+            width: 100%;
+            .mightlike-card{
+                .mightlike-card-pic{
+                    img{
+                        width: 145px;
+                        height: 145px;
+                    }
+                }
+                .mightlike-card-text{
+                    
+                }
+            }
+        }
+    }
+}

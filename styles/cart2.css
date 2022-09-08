@@ -1,0 +1,369 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+.j-cart2-wrap {
+  overflow: hidden;
+}
+
+.j-cart2-bg {
+  background: url("../images/cart2-bg-m1.svg") left 65vh/50% no-repeat, url("../images/cart2-bg-m2.svg") right 160vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+}
+
+.j-progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.j-progress-bar .j-step {
+  outline: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.j-progress-bar .j-step .j-step-top {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+
+.j-progress-bar .j-step .j-step-top .j-svg-wrap {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.j-progress-bar .j-step .j-step-top .j-svg-wrap svg {
+  width: 55%;
+  height: 55%;
+}
+
+.j-progress-bar .j-step .j-step2-num {
+  background-color: #000000;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.j-progress-bar .j-step .j-step2-num .j-num2 {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.j-progress-bar .j-step .j-step3-num {
+  background-color: #ffffff;
+  border: 2px solid #A4A4A4;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.j-progress-bar .j-step .j-step3-num .j-num3 {
+  color: #A4A4A4;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.j-progress-bar .j-step .j-step-text {
+  margin-top: 0.75rem;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.j-progress-bar .j-step .j-step3-text {
+  color: #A4A4A4;
+  margin-top: 0.75rem;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point, .j-pay-wrap div .j-line-pay .j-line-title .j-point, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point, .j-pay-wrap div .j-money-pay .j-money-title .j-point {
+  cursor: pointer;
+  font-size: 1.125rem;
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point input, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point input, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point input, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point input, .j-pay-wrap div .j-line-pay .j-line-title .j-point input, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point input, .j-pay-wrap div .j-money-pay .j-money-title .j-point input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+/* On mouse-over*/
+/* When the checkbox is checked*/
+/* Create the checkmark/indicator (hidden when not checked) */
+/* Show the checkmark when checked */
+/* Style the checkmark/indicator */
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required {
+  position: relative;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required::before, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required::before {
+  content: "*";
+  position: absolute;
+  display: block;
+  left: -0.5rem;
+  top: -0.2rem;
+  color: #ca3f68;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 .j-input, .j-city, .j-town, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-input, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-input {
+  margin-top: 0.75rem;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  outline: none;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space1, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 {
+  margin-top: 1.125rem;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space, .j-people-wrap .j-people .j-recipient .j-people-info .j-space, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .j-space {
+  margin-top: 1.5rem;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info {
+  padding: 0 15px;
+  margin: 1.5rem  auto;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.j-label, .j-input {
+  width: 100%;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info, .j-people-wrap .j-people .j-recipient .j-people-info {
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 900;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-check, .j-people-wrap .j-people .j-recipient .j-people-info .j-check {
+  margin-top: 8px;
+}
+
+.j-people-wrap .j-people {
+  padding: 15px;
+}
+
+.j-people-wrap .j-people .j-orderer h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input span {
+  display: block;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 {
+  margin-right: 10px;
+  width: 25%;
+}
+
+.j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 {
+  width: 75%;
+}
+
+.j-people-wrap .j-people .j-recipient {
+  margin-top: 10vw;
+}
+
+.j-people-wrap .j-people .j-recipient h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+}
+
+.j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 {
+  margin-right: 10px;
+  width: 25%;
+}
+
+.j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 {
+  width: 75%;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li, .j-logistics-wrap .j-logistics div .j-home-delivery li {
+  margin-top: 20px;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title, .j-pay-wrap div .j-credit-pay .j-credit-title, .j-pay-wrap div .j-bank-pay .j-bank-title, .j-pay-wrap div .j-line-pay .j-line-title, .j-pay-wrap div .j-apple-pay .j-apple-title, .j-pay-wrap div .j-money-pay .j-money-title {
+  border-bottom: 3px solid #2d827d;
+  padding: 20px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 1.125rem;
+}
+
+.j-city, .j-town {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url() 90% center/4% no-repeat;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+.j-city {
+  margin-right: 15px;
+}
+
+.j-logistics-wrap {
+  margin-top: 20vw;
+}
+
+.j-logistics-wrap .j-logistics h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery {
+  width: 100%;
+  font-size: 16px;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select {
+  width: 100%;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point {
+  font-size: 16px;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point input {
+  font-size: 16px;
+}
+
+.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point {
+  margin-right: 20px;
+}
+
+.j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-store {
+  width: 80%;
+  margin: 30px 10% 0;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  font-weight: 900;
+  padding: 10px 30px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.j-pay-wrap {
+  overflow: hidden;
+  margin-top: 20vw;
+  margin-bottom: 20vw;
+}
+
+.j-pay-wrap h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg {
+  background: url("../images/cart2-pay-bg.svg") center center/cover no-repeat;
+  border-radius: 0 0 20px 20px;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info {
+  margin: 0;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-holder {
+  margin-top: 60px;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-cvv {
+  margin-bottom: 50px;
+}
+/*# sourceMappingURL=cart2.css.map */

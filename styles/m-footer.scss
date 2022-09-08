@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-// 顏色設定
 $super-dark: #000000;
 $dark-red: #a31c2d;
 $pink: #ca3f68;
@@ -31,7 +30,6 @@ $white: #ffffff;
 $light-brown: #d4cfc6;
 $deep-brown: #554d49;
 
-// 字體設定
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
@@ -48,8 +46,6 @@ $deep-brown: #554d49;
     url("../fonts/RobotoFlex.ttf") format("truetype");
 }
 
-// 字體大小設定
-// 不分字型
 $h1-font-size: 80px;
 $h2-font-size: 48px;
 $h3-font-size: 36px;
@@ -59,24 +55,48 @@ $h6-font-size: 20px;
 $h7-font-size: 18px;
 $p-font-size: 16px;
 $ps-font-size: 14px;
-
-// 字體粗細
-// 細字體不用下font-weight，粗字體再用下列變數
-// ex: font-weight: $bold;
 $bold: 900;
 
-// 以下兩種範例
-
-// h2.chinese {
-//   font-family: "GenSenRounded-M";
-//   font-size: 48px;
-//   font-weight: $bold;
-//   color: $coral;
-// }
-
-// h3.english {
-//   font-family: "Roboto";
-//   font-weight: $bold;
-//   font-size: 110px;
-//   color: $lake-green;
-// }
+.footer {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+  .footer-logo {
+    padding-top: 30px;
+    width: 20%;
+    margin: auto;
+  }
+  .footer-nav {
+    ul {
+      margin: 35px 40px 0 40px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid $white;
+      li {
+        a {
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+        }
+      }
+    }
+  }
+  .footer-social {
+    margin: 35px 160px 0 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-c {
+    margin-top: 35px;
+    text-align: center;
+    color: $white;
+    font-family: "Roboto";
+    font-size: $ps-font-size;
+  }
+}
