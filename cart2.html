@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlingBling有禮</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/all.css" />
+    <link rel="stylesheet" href="./styles/cart2.css">
+  </head>
+  <body>
+    <div class="j-cart2-wrap">
+        <div class="j-cart2-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="j-progress-bar">
+                            <div class="j-step-up"></div>
+                            
+                            <div class="j-step">
+                                <div class="j-step-top">
+                                    <div class="j-svg-wrap">
+                                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.2114 0.213808L7.94052 9.48013C7.6553 9.76521 7.19535 9.76521 6.91013 9.48013L2.78859 5.36063C2.50337 5.07555 2.04343 5.07555 1.75821 5.36063L0.213914 6.90415C-0.0713047 7.18922 -0.0713047 7.64895 0.213914 7.93402L6.91013 14.6269C7.19535 14.912 7.6553 14.912 7.94052 14.6269L10.0013 12.5672L19.7861 2.78722C20.0713 2.50214 20.0713 2.04242 19.7861 1.75734L18.2418 0.213808C17.9566 -0.0712695 17.4941 -0.0712695 17.2114 0.213808Z" fill="black"/>
+                                            </svg>
+                                    </div>
+                                </div>
+                                <div class="j-step-text">
+                                    <p>購買明細</p>
+                                </div>
+                            </div>
+                            <div class="j-step">
+                                <div class="j-step-top">
+                                    <div class="j-step2-num">
+                                        <div class="j-num2">2</div>
+                                    </div>
+                                </div>
+                                <div class="j-step-text">
+                                    <p>填寫資料</p>
+                                </div>
+                            </div>
+                            <div class="j-step">
+                                <div class="j-step-top">
+                                    <div class="j-step3-num">
+                                        <div class="j-num3">3</div>
+                                    </div>
+                                </div>
+                                <div class=" j-step3-text">
+                                    <p>訂購完成</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="" onsubmit="return false;" novalidate>
+                            <section class="j-people-wrap">
+                                <div class="j-people">
+                                    <div class="j-orderer">
+                                        <h5 class="">訂購人資料</h5>
+                                        <div class="j-people-info">
+                                            <div class="j-check">
+                                            <label class="j-point">
+                                                <input type="checkbox" />
+                                                <span>同會員資料</span> 
+                                            </label>
+                                            </div>
+                                            <div class="j-space1">
+                                            <label for="ordererName" class="j-label j-label-required"
+                                                >訂購人姓名(本名)</label
+                                            >
+                                            <input
+                                                type="text"
+                                                name="ordererName"
+                                                id="ordererName"
+                                                class="j-input"
+                                                placeholder="訂購人姓名(本名)"
+                                            />
+                                            </div>
+                                            <div class="j-space">
+                                            <label
+                                                for="ordererMobile"
+                                                class="j-label j-label-required"
+                                                >訂購人手機</label
+                                            >
+                                            <input
+                                                type="text"
+                                                name="ordererMobile"
+                                                id="ordererMobile"
+                                                class="j-input"
+                                                placeholder="訂購人手機"
+                                            />
+                                            </div>
+                                            <div class="j-space">
+                                            <label for="ordererTel" class="j-label">訂購人市話</label>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="j-tel-1">
+                                                <input
+                                                    type="text"
+                                                    name="ordererTel"
+                                                    id="ordererTel"
+                                                    class="j-input"
+                                                    placeholder="02"
+                                                />
+                                                </div>
+                                                <div class="j-tel-2">
+                                                <input
+                                                    type="text"
+                                                    name="ordererTel"
+                                                    id="ordererTel"
+                                                    class="j-input"
+                                                    placeholder="12345678"
+                                                />
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="j-recipient">
+                                        <h5 class="">收件人資料</h5>
+                                        <div class="j-people-info">
+                                            <div class="j-check">
+                                            <label class="j-point">
+                                                <input
+                                                type="checkbox"
+                                                id="cb"
+                                                onchange="copyData()"
+                                                />
+                                                <span>同訂購人資料</span> 
+                                            </label>
+                                            </div>
+                                            <div class="j-space1">
+                                            <label
+                                                for="recipientName"
+                                                class="j-label j-label-required"
+                                                >收件人姓名(本名)</label
+                                            >
+                                            <input
+                                                type="text"
+                                                name="recipientName"
+                                                id="recipientName"
+                                                value=""
+                                                class="j-input"
+                                                placeholder="收件人姓名(本名)"
+                                            />
+                                            </div>
+                                            <div class="j-space">
+                                            <label
+                                                for="recipientMobile"
+                                                class="j-label j-label-required"
+                                                >收件人手機</label
+                                            >
+                                            <input
+                                                type="text"
+                                                name="recipientMobile"
+                                                id="recipientMobile"
+                                                class="j-input"
+                                                placeholder="收件人手機"
+                                            />
+                                            </div>
+                                            <div class="j-space">
+                                            <label for="recipientTel" class="j-label"
+                                                >收件人市話</label
+                                            >
+                                            <div class="d-flex justify-content-between">
+                                                <div class="j-tel-1">
+                                                <input
+                                                    type="text"
+                                                    name="recipientTel"
+                                                    id="recipientTel"
+                                                    class="j-input"
+                                                    placeholder="02"
+                                                />
+                                                </div>
+                                                <div class="j-tel-2">
+                                                <input
+                                                    type="text"
+                                                    name="recipientTel"
+                                                    id="recipientTel"
+                                                    class="j-input"
+                                                    placeholder="12345678"
+                                                />
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="j-logistics-wrap">
+                                <div class="j-logistics">
+                                    <h5 class="">配送方式</h5>
+                                    <div>
+                                        <div class="j-home-delivery">
+                                            <div class="j-d-title">
+
+                                                <label class="j-point">
+                                                    <input type="radio" name="delivery" class="j-home" checked>
+                                                    <span>宅配</span> 
+                                                </label>
+                                            </div>
+                                            <ul class="j-home-info">
+                                                <li>
+                                                    <label for="address" class="j-label-required">收件地址</label>
+                                                    <div class="j-select" id="zipcode2">
+                                                    </div>
+                                                    <textarea name="address" id="address" cols="20" rows="1" class="j-input"></textarea>
+                                                </li>
+                                                <li>
+                                                    <label for="time" class="j-label-required">建議配送時段</label>
+                                                    <div class="j-timebox">
+
+                                                        <div class="col-6 px-0">
+                                                            <label class="j-point ">
+                                                                <input type="radio" name="time" checked>
+                                                                <span >上午</span> 
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="col-6 px-0">
+                                                            <label class="j-point ">
+                                                                <input type="radio" name="time">
+                                                                <span >下午</span> 
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label for="remark">備註</label>
+                                                    <textarea name="remark" id="remark" cols="20" rows="3" class="j-input"></textarea>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="j-convenience-store">
+                                            <div class="j-d-title">
+
+                                                <label class="j-point">
+                                                    <input type="radio" name="delivery" class="j-convenience" >
+                                                    <span >超商取貨</span> 
+                                                </label>
+                                            </div>
+                                            <ul class="j-store-info">
+                                                <li class="j-space1">
+                                                    <label for="recipientName"  class="j-label j-label-required">收件人姓名(本名)</label>
+                                                    <input type="text" name="recipientName" id="recipientName" value="" class="j-input" placeholder="收件人姓名(本名)">
+                                                </li>
+                                                <li class="j-space">
+                                                    <label for="recipientMobile"  class="j-label j-label-required">收件人手機</label>
+                                                    <input type="text" name="recipientMobile" id="recipientMobile" class="j-input" placeholder="收件人手機">
+                                                </li>
+                                                <button class="j-store">門市選擇</button>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                
+                            <section class="j-pay-wrap">
+                                <div class="j-pay"></div>
+                                <h5 >支付方式</h5>
+                                <div>
+                                    <div class="j-credit-pay">
+                                        <div class="j-credit-title">
+                                            <label class="j-point">
+                                                <input type="radio" name="pay" class="j-credit" checked>
+                                                <span>信用卡</span> 
+                                            </label>
+                                        </div>
+                                        <div class="j-credit-bg">
+                                            <ul class="j-credit-info ">
+                                            
+                                                <li >
+                                                    <label for="cardHolder"  class="j-label j-label-required j-holder">持卡人姓名</label>
+                                                    <input type="text" name="cardHolder" id="cardHolder" value="" class="j-input" placeholder="持卡人姓名">
+                                                </li>
+                                                <li class="j-space">
+                                                    <label for="cardNumber"  class="j-label j-label-required">卡號</label>
+                                                    <input type="text" name="cardNumber" id="cardNumber" class="j-input" placeholder="**** **** **** ****">
+                                                </li>
+                                                <li class="j-space">
+                                                    <label for="expires"  class="j-label j-label-required">到期日</label>
+                                                    <input type="text" name="expires" id="expires" class="j-input" placeholder="MM/YY">
+                                                </li>
+                                                <li class="j-space">
+                                                    <label for="cvv"  class="j-label j-label-required">安全碼</label>
+                                                    <input type="text" name="cvv" id="cvv" class="j-input j-cvv" placeholder="****">
+                                                </li>
+                                            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="j-bank-pay">
+                                        <div class="j-bank-title">
+                                            
+                                            <label class="j-point">
+                                                <input type="radio" name="pay" class="j-bank" > <span >銀行轉帳</span> 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="j-line-pay">
+                                        <div class="j-line-title">
+                                            
+                                            <label class="j-point">
+                                                <input type="radio" name="pay" class="j-line" > 
+                                                <span >Line Pay</span> 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="j-apple-pay">
+                                        <div class="j-apple-title">
+                                            
+                                            <label class="j-point">
+                                                <input type="radio" name="pay" class="j-apple" > 
+                                                <span >Apple Pay</span> 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="j-money-pay">
+                                        <div class="j-money-title">
+                                            
+                                            <label class="j-point">
+                                                <input type="radio" name="pay" class="j-money"/> 
+                                                <span >貨到付款</span> 
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/jquery.twzipcode.min.js"></script>
+    <script>
+       $("#zipcode2").twzipcode({
+        countySel: "臺北市", // 城市預設值, 字串一定要用繁體的 "臺", 否則抓不到資料
+        districtSel: "大安區", // 地區預設值
+        zipcodeIntoDistrict: true, // 郵遞區號自動顯示在地區
+        css: ["j-city", "j-town"], // 自訂 "城市"、"地區" class 名稱
+        countyName: "city", // 自訂城市 select 標籤的 name 值
+        districtName: "town" // 自訂地區 select 標籤的 name 值
+        });
+
+    </script>
+  </body>
+</html>
