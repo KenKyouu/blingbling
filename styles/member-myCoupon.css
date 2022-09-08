@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+.wrap {
+  width: 100%;
+  height: 100vh;
+}
+.wrap .container .main .row {
+  height: 100vh;
+}
+.wrap .container .main .row .col {
+  background-color: #2d827d;
+  padding: 0;
+}
+.wrap .container .main .row .col .myName {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .container .main .row .col .myName .photo {
+  display: flex;
+  position: relative;
+}
+.wrap .container .main .row .col .myName .photo .photoborder {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #7cb2af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .container .main .row .col .myName .photo .photoborder .myphoto {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.wrap .container .main .row .col .myName .photo .photoborder .myphoto img.photo {
+  width: 110%;
+}
+.wrap .container .main .row .col .myName .photo .photoedit {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #ffcd51;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+}
+.wrap .container .main .row .col .myName h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 24px;
+  color: #000000;
+  padding: 13px 0 13px 0;
+}
+.wrap .container .main .row .col .myName a.coin {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+.wrap .container .main .row .col .myName a.coin svg {
+  margin-right: 10px;
+}
+.wrap .container .main .row .col .memberbutton {
+  width: 100%;
+  padding: 0px 30px;
+}
+.wrap .container .main .row .col .memberbutton ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrap .container .main .row .col .memberbutton ul li.btn {
+  border: none;
+  padding: 10px 0;
+}
+.wrap .container .main .row .col .memberbutton ul li.btn a {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #4c4948;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: center;
+}
+.wrap .container .main .row .col .memberbutton ul li.btn a svg {
+  margin-bottom: 5px;
+}
+.wrap .container .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 19px #4c4948;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+.wrap .container .main .row .col .whiteBg .getcoupon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 25px;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  background-color: rgba(126, 160, 131, 0.1882352941);
+}
+.wrap .container .main .row .col .whiteBg .getcoupon p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #2d827d;
+  padding: 15px 0 15px;
+}
+.wrap .container .main .row .col .whiteBg .getcoupon input.keyCouponCode {
+  width: 280px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #2d827d;
+  color: #c2c2c2;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  text-align: center;
+  background-color: rgba(126, 160, 131, 0);
+}
+.wrap .container .main .row .col .whiteBg .getcoupon button.newcoupon {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #2d827d;
+  border: none;
+  margin: 15px 0 15px;
+}
+.wrap .container .main .row .col .whiteBg .couponbtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.wrap .container .main .row .col .whiteBg .couponbtn button {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup {
+  width: 100%;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle {
+  width: 100%;
+  display: flex;
+  padding-bottom: 5px;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName {
+  width: 70%;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  border-left: 3px solid #d4cfc6;
+  padding-left: 10px;
+  width: 100%;
+  text-align: left;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
+  width: 30%;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate p.couponDate {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  border-left: 3px solid #d4cfc6;
+  padding-left: 10px;
+  width: 100%;
+  text-align: left;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #9fc8e1;
+  padding: 13px 0 13px;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName {
+  width: 70%;
+  text-align: left;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName p {
+  width: 100%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
+  width: 30%;
+  text-align: left;
+}
+.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
+  width: 100%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}/*# sourceMappingURL=member-myCoupon.css.map */
