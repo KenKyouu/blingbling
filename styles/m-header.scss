@@ -58,6 +58,8 @@ $bold: 900;
 
 // Start
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 56.5px;
   background-color: $super-dark;
