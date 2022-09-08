@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-// 顏色設定
 $super-dark: #000000;
 $dark-red: #a31c2d;
 $pink: #ca3f68;
@@ -31,52 +30,83 @@ $white: #ffffff;
 $light-brown: #d4cfc6;
 $deep-brown: #554d49;
 
-// 字體設定
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
     url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"),
     url("../fonts/RobotoFlex.ttf") format("truetype");
 }
 
-// 字體大小設定
-// 不分字型
 $h1-font-size: 80px;
 $h2-font-size: 48px;
 $h3-font-size: 36px;
 $h4-font-size: 32px;
 $h5-font-size: 24px;
 $h6-font-size: 20px;
-$h7-font-size: 18px;
 $p-font-size: 16px;
 $ps-font-size: 14px;
-
-// 字體粗細
-// 細字體不用下font-weight，粗字體再用下列變數
-// ex: font-weight: $bold;
 $bold: 900;
 
-// 以下兩種範例
+// Start
+.header {
+  position: fixed;
+  width: 100%;
+  height: 56.5px;
+  background-color: $super-dark;
+  opacity: 80%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
+  top: 0;
+  z-index: 100;
+  align-items: center;
 
-// h2.chinese {
-//   font-family: "GenSenRounded-M";
-//   font-size: 48px;
-//   font-weight: $bold;
-//   color: $coral;
-// }
+  .left {
+    padding-left: 20px;
+    width: 100%;
 
-// h3.english {
-//   font-family: "Roboto";
-//   font-weight: $bold;
-//   font-size: 110px;
-//   color: $lake-green;
-// }
+    h1.logo {
+      width: 100%;
+
+      a {
+        width: 100%;
+
+        img {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  .right {
+    padding-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      ul {
+        margin: 0 10px;
+      }
+
+      ul.cart {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
