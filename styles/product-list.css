@@ -288,6 +288,178 @@ body {
   font-size: 14px;
 }
 
+.menu-page {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 201;
+}
+
+.menu-page .menu-left {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu-page .menu-left .close {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.menu-page .menu-right {
+  width: 85%;
+  height: 100%;
+}
+
+.menu-page .menu-right .menu-header {
+  width: 100%;
+  height: 56.5px;
+  background-color: #2d827d;
+  -webkit-box-shadow: 5px 5px 15px #000000;
+          box-shadow: 5px 5px 15px #000000;
+}
+
+.menu-page .menu-right .menu-body {
+  width: 100%;
+  height: calc(100vh - 56.5px);
+  background-color: #ffffff;
+  border-radius: 0 0 0 40px;
+}
+
+.menu-page .menu-right .menu-body .member-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-picture {
+  width: 90px;
+  height: 90px;
+  border: 5px solid #7cb2af;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-picture img {
+  width: 100%;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-content {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+  font-family: "Roboto";
+}
+
+.menu-page .menu-right .menu-body .member-info .member-content .member-name {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-content .member-voucher {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.menu-page .menu-right .menu-body .product-class-bar {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #c2c2c2;
+}
+
+.menu-page .menu-right .menu-body .product-class-bar p {
+  color: #554d49;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.menu-page .menu-right .menu-body .product-class {
+  width: 100%;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select .class-image {
+  padding: 10px 0 0 0;
+  margin-left: 20px;
+  width: 8%;
+  position: relative;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select .class-image img {
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select .class-name {
+  width: 100%;
+  margin-left: 10px;
+  padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.menu-page .menu-right .menu-body .menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 60px 30px 0 30px;
+}
+
+.menu-page .menu-right .menu-body .menu-button a .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2d827d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .filter-page {
   background-color: #2d827d;
   width: 100%;
@@ -384,6 +556,32 @@ body {
   right: 10px;
 }
 
+.filter-page .filter-footer {
+  position: absolute;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.filter-page .filter-footer button {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  background-color: black;
+  border: 2px solid #000000;
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.filter-page .filter-footer button svg {
+  width: 20%;
+}
+
 .filter-show {
   right: 0;
   display: block;
@@ -391,5 +589,9 @@ body {
 
 .list-hidden {
   display: none;
+}
+
+.menu-show {
+  right: 0;
 }
 /*# sourceMappingURL=product-list.css.map */
