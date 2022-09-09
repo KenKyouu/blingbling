@@ -234,11 +234,14 @@
   width: 100%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
+  line-height: 20px;
   color: #000000;
 }
 .wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
   width: 30%;
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 .wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
   width: 100%;
