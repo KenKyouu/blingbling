@@ -220,9 +220,88 @@ $bold: 900;
                         padding: 0px 30px;
                         margin-top: 15px;
 
+                        .newFriend {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 20px 0 25px;
+                            width: 100%;
+                            height: 120px;
+                            border-radius: 10px;
+                            background-color: #7ea08330;
 
+                            p {
+                                font-family: "GenSenRounded-B";
+                                font-size: $p-font-size;
+                                color: $lake-green;
+                                padding: 20px 0 20px;
+                            }
+
+                            button.uploadNewFriend {
+                                width: 130px;
+                                height: 38px;
+                                border-radius: 10px;
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                                color: $white;
+                                background-color: $lake-green;
+                                border: none;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .myFriendsGroup {
+                            width: 100%;
+
+                            .friendList {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                padding: 18px 0 18px;
+
+                                .friendName {
+                                    width: 40%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        text-align: left;
+
+                                    }
+                                }
+
+                                .friendBirth {
+                                    width: 20%;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        text-align: left;
+                                    }
+                                }
+
+                                .birthdayIcon {
+                                    width: 10%;
+                                    text-align: center;
+                                }
+
+                                .watchFriendIcon {
+                                    width: 15%;
+                                    text-align: right;
+                                }
+
+                                .deleteFriendIcon {
+                                    width: 15%;
+                                    text-align: right;
+                                }
+                            }
+                        }
                     }
-
                 }
             }
         }
