@@ -220,21 +220,90 @@ $bold: 900;
                         padding: 0px 30px;
                         margin-top: 15px;
 
-                        .couponbtn {
+                        .noticeButton {
                             width: 100%;
                             display: flex;
-                            justify-content: space-around;
-                            margin-bottom: 20px;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            padding: 30px 0;
 
-                            button {
-                                width: 130px;
-                                height: 38px;
+                            .notice {
+                                display: flex;
+                                position: relative;
+                                margin: 9px 12px 9px 12px;
+
+                                .noticebtn {
+                                    button {
+                                        width: 130px;
+                                        height: 38px;
+                                        border-radius: 10px;
+                                        border: 3px solid $super-dark;
+                                        background-color: #00000000;
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $super-dark;
+                                    }
+                                }
+
+                                .noticeNumber {
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: none;
+                                    background-color: $red-pink;
+                                    z-index: 1;
+                                    position: absolute;
+                                    right: -10px;
+                                    top: -10px;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $p-font-size;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .noticeDetails {
+                            width: 100%;
+
+                            .noticeDetail {
+                                width: 100%;
+                                height: auto;
                                 border-radius: 10px;
-                                border: 3px solid $super-dark;
-                                background-color: #ffffff00;
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                color: $super-dark;
+                                // border: 3px solid $lake-green;
+                                // background-color: #00000000;
+                                background-color: $light-brown;
+                                padding: 18px 14px;
+                                text-align: left;
+                                margin-bottom: 20px;
+
+                                p.noticeDate {
+                                    // font-family: "GenSenRounded-B";
+                                    font-family: "GenSenRounded-M";
+                                    font-size: $ps-font-size;
+                                    color: $super-dark;
+                                    padding-bottom: 6px;
+                                }
+
+                                p.notice {
+                                    // font-family: "GenSenRounded-B";
+                                    font-family: "GenSenRounded-M";
+                                    font-size: $ps-font-size;
+                                    color: $super-dark;
+                                    line-height: 20px;
+                                    flex-wrap: wrap;
+
+                                    span {
+                                        color: $red-pink;
+                                    }
+                                }
                             }
                         }
                     }

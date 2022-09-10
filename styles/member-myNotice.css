@@ -129,19 +129,74 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
-.wrap .container .main .row .col .whiteBg .couponbtn {
+.wrap .container .main .row .col .whiteBg .noticeButton {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
 }
-.wrap .container .main .row .col .whiteBg .couponbtn button {
+.wrap .container .main .row .col .whiteBg .noticeButton .notice {
+  display: flex;
+  position: relative;
+  margin: 9px 12px 9px 12px;
+}
+.wrap .container .main .row .col .whiteBg .noticeButton .notice .noticebtn button {
   width: 130px;
   height: 38px;
   border-radius: 10px;
   border: 3px solid #000000;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #000000;
+}
+.wrap .container .main .row .col .whiteBg .noticeButton .notice .noticeNumber {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #d45a6a;
+  z-index: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+.wrap .container .main .row .col .whiteBg .noticeButton .notice .noticeNumber p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #ffffff;
+}
+.wrap .container .main .row .col .whiteBg .noticeDetails {
+  width: 100%;
+}
+.wrap .container .main .row .col .whiteBg .noticeDetails .noticeDetail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #d4cfc6;
+  padding: 18px 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.wrap .container .main .row .col .whiteBg .noticeDetails .noticeDetail p.noticeDate {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #000000;
+  padding-bottom: 6px;
+}
+.wrap .container .main .row .col .whiteBg .noticeDetails .noticeDetail p.notice {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #000000;
+  line-height: 20px;
+  flex-wrap: wrap;
+}
+.wrap .container .main .row .col .whiteBg .noticeDetails .noticeDetail p.notice span {
+  color: #d45a6a;
 }/*# sourceMappingURL=member-mynotice.css.map */
