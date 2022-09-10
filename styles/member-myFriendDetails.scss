@@ -220,84 +220,143 @@ $bold: 900;
                         padding: 0px 30px;
                         margin-top: 15px;
 
-                        .newFriend {
+                        .backToList {
                             display: flex;
-                            flex-direction: column;
                             align-items: center;
-                            justify-content: center;
-                            margin: 20px 0 25px;
-                            width: 100%;
-                            height: 120px;
-                            border-radius: 10px;
-                            background-color: #7ea08330;
+                            text-align: left;
+                            padding-top: 13px;
+
+                            // TODO: backToList要置左
 
                             p {
                                 font-family: "GenSenRounded-B";
-                                font-size: $p-font-size;
-                                color: $lake-green;
-                                padding: 20px 0 20px;
-                            }
-
-                            button.uploadNewFriend {
-                                width: 130px;
-                                height: 38px;
-                                border-radius: 10px;
-                                font-family: "GenSenRounded-B";
                                 font-size: $ps-font-size;
-                                color: $white;
-                                background-color: $lake-green;
-                                border: none;
-                                margin-bottom: 20px;
+                                color: $lake-green;
+                                padding-left: 15px;
                             }
                         }
 
-                        .myFriendsGroup {
+                        .friendDetails {
                             width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
 
-                            .friendList {
+                            .friendName {
                                 width: 100%;
                                 display: flex;
                                 align-items: center;
-                                padding: 18px 0 18px;
+                                padding-top: 18px;
+                                justify-content: center;
+                                padding-bottom: 13px;
 
-                                .friendName {
+                                // TODO: 名字置中，ICON往旁邊放
+
+                                .fn {
+                                    width: 60%;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $p-font-size;
+                                        color: $dark-gray;
+                                        text-align: right;
+                                    }
+                                }
+
+                                .friendEditIcon {
                                     width: 40%;
-                                    display: flex;
-                                    align-items: center;
+                                    margin-left: 20px;
+                                }
+                            }
 
+                            .friendGenderBirth {
+                                display: flex;
+
+                                .friendGender {
                                     p {
                                         font-family: "GenSenRounded-B";
                                         font-size: $ps-font-size;
                                         color: $dark-gray;
-                                        text-align: left;
-
+                                        padding-right: 20px;
                                     }
                                 }
 
                                 .friendBirth {
-                                    width: 20%;
-
                                     p {
                                         font-family: "GenSenRounded-B";
                                         font-size: $ps-font-size;
                                         color: $dark-gray;
-                                        text-align: left;
                                     }
                                 }
+                            }
 
-                                .birthdayIcon {
-                                    width: 10%;
-                                    text-align: center;
+                            .friendEmail {
+                                padding-top: 13px;
+                                padding-bottom: 18px;
+
+                                p {
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
                                 }
+                            }
+                        }
 
-                                .watchFriendIcon {
-                                    width: 15%;
-                                    text-align: right;
+                        .friendtags {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .tagsName {
+                                padding: 10px 0;
+
+                                p {
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $lake-green;
                                 }
+                            }
 
-                                .deleteFriendIcon {
-                                    width: 15%;
-                                    text-align: right;
+                            .tags {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
+                                margin-bottom: 15px;
+
+                                .tag {
+                                    width: auto;
+                                    height: auto;
+                                    border-radius: 100px;
+                                    border: 3px solid $dark-gray;
+                                    padding: 6px 9px 6px 9px;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: 10px;
+                                        color: $dark-gray;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+
+                        .friendWishList {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            margin-bottom: 10px;
+
+                            .wishList {
+                                padding: 9px;
+
+                                img {
+                                    width: 60px;
+                                    height: 86.8px;
+                                    object-fit: cover;
                                 }
                             }
                         }
