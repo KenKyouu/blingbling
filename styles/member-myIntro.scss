@@ -101,87 +101,110 @@ $bold: 900;
                     background-color: $lake-green;
                     padding: 0;
 
-                    .myName {
-                        padding-top: 80px;
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-                        align-items: center;
+                    .left {
 
-                        .photoborder {
-                            width: 80px;
-                            height: 80px;
-                            border-radius: 100%;
-                            background-color: $light-lake-green;
+                        .myName {
+                            padding-top: 80px;
                             display: flex;
                             justify-content: center;
+                            flex-direction: column;
                             align-items: center;
 
-                            .myphoto {
-                                width: 70px;
-                                height: 70px;
-                                border-radius: 100%;
-                                background-color: $white;
-                                overflow: hidden;
+                            .photo {
+                                display: flex;
+                                position: relative;
 
-                                img.photo {
-                                    width: 110%;
+                                .photoborder {
+                                    width: 80px;
+                                    height: 80px;
+                                    border-radius: 100%;
+                                    background-color: $light-lake-green;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    .myphoto {
+                                        width: 70px;
+                                        height: 70px;
+                                        border-radius: 100%;
+                                        background-color: $white;
+                                        overflow: hidden;
+
+                                        img.photo {
+                                            width: 110%;
+                                        }
+                                    }
+
+                                }
+
+                                .photoedit {
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 100%;
+                                    background-color: $yellow;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    z-index: 1;
+                                    position: absolute;
+                                    right: -3px;
+                                    bottom: 0;
+                                }
+                            }
+
+                            h5 {
+                                font-family: "GenSenRounded-B";
+                                font-size: $h5-font-size;
+                                color: $super-dark;
+                                padding: 13px 0 13px 0;
+                            }
+
+                            a.coin {
+                                font-family: "Roboto";
+                                font-size: $p-font-size;
+                                color: $super-dark;
+                                display: flex;
+                                align-items: center;
+                                padding-bottom: 7px;
+                                text-decoration: none;
+
+                                svg {
+                                    margin-right: 10px;
                                 }
                             }
                         }
 
-                        h5 {
-                            font-family: "GenSenRounded-B";
-                            font-size: $h5-font-size;
-                            color: $super-dark;
-                            padding: 13px 0 13px 0;
-                        }
-
-                        a.coin {
-                            font-family: "Roboto";
-                            font-size: $p-font-size;
-                            color: $super-dark;
-                            display: flex;
-                            align-items: center;
-                            padding-bottom: 7px;
-                            text-decoration: none;
-
-                            svg {
-                                margin-right: 10px;
-                            }
-                        }
-                    }
-
-                    .memberbutton {
-                        width: 100%;
-                        padding: 0px 30px;
-
-                        ul {
+                        .memberbutton {
                             width: 100%;
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: space-around;
+                            padding: 0px 30px;
 
-                            li.btn {
-                                border: none;
-                                padding: 10px 0;
+                            ul {
+                                width: 100%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
 
-                                a {
-                                    width: 64px;
-                                    height: 64px;
-                                    border-radius: 10px;
-                                    text-decoration: none;
-                                    font-family: "GenSenRounded-M";
-                                    font-size: $ps-font-size;
-                                    color: $dark-gray;
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    background-color: $white;
-                                    justify-content: center;
+                                li.btn {
+                                    border: none;
+                                    padding: 10px 0;
 
-                                    svg {
-                                        margin-bottom: 5px;
+                                    a {
+                                        width: 64px;
+                                        height: 64px;
+                                        border-radius: 10px;
+                                        text-decoration: none;
+                                        font-family: "GenSenRounded-M";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        background-color: $white;
+                                        justify-content: center;
+
+                                        svg {
+                                            margin-bottom: 5px;
+                                        }
                                     }
                                 }
                             }
@@ -550,6 +573,70 @@ $bold: 900;
                                 padding-left: 5px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .wrap {
+        background-image: url(../images/other_bg_paper.png);
+
+        .container {
+            // padding: 0 300px;
+
+            .main {
+                .row {
+
+                    .col {
+                        background-color: #00000000;
+                        display: flex;
+
+                        .col-md-3 {
+                            height: 700px;
+                            border-radius: 10px;
+                            background-color: $lake-green;
+
+                            .myName {
+                                .photo {}
+                            }
+
+                            .memberbutton {
+                                padding: 0;
+
+                                ul {
+                                    width: 308px;
+
+                                    li.btn {
+                                        padding: 0;
+
+                                        a {
+                                            width: 308px;
+                                            height: 56px;
+                                            background-color: $white;
+                                            border-radius: 100px 0 0 100px;
+                                            font-family: "GenSenRounded-B";
+                                            font-size: $h5-font-size;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                        .col-md-9 {
+                            height: 700px;
+                            box-shadow: none;
+                            margin: 0;
+                            display: flex;
+
+                            .member-card {}
+
+                            .myIntro {}
+                        }
+
                     }
                 }
             }
