@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+// 顏色設定
+$super-dark: #000000;
+$dark-red: #a31c2d;
+$pink: #ca3f68;
+$red-pink: #d45a6a;
+$light-pink: #ee92ad;
+$dark-green: #2f5e36;
+$green: #7ea083;
+$lake-green: #2d827d;
+$light-lake-green: #7cb2af;
+$sky-blue: #5292b9;
+$light-sky-blue: #9fc8e1;
+$dark-blue: #154d7a;
+$blue: #548fbe;
+$brown: #7a482d;
+$khaki: #b28064;
+$orange: #cb6b28;
+$light-orange: #e1a77e;
+$coral: #bd392a;
+$light-coral: #f07f72;
+$dark-gray: #4c4948;
+$gray: #c2c2c2;
+$yellow: #ffcd51;
+$light-yellow: #ffe39f;
+$skin: #d4cfc6;
+$white: #ffffff;
+$light-brown: #d4cfc6;
+$deep-brown: #554d49;
+
+// 字體設定
+@font-face {
+    font-family: "GenSenRounded-M";
+    src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+        url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "GenSenRounded-B";
+    src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+        url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/RobotoFlex.woff") format("woff"),
+        url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+// 字體大小設定
+// 不分字型
+$h1-font-size: 80px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$p-font-size: 16px;
+$ps-font-size: 14px;
+
+// 字體粗細
+// 細字體不用下font-weight，粗字體再用下列變數
+// ex: font-weight: $bold;
+$bold: 900;
+
+// 以下兩種範例
+
+// h2.chinese {
+//   font-family: "GenSenRounded-M";
+//   font-size: 48px;
+//   font-weight: $bold;
+//   color: $coral;
+// }
+
+// h3.english {
+//   font-family: "Roboto";
+//   font-weight: $bold;
+//   font-size: 110px;
+//   color: $lake-green;
+// }
+
+
+
+// body {
+//     background-color: $lake-green;
+// }
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+
+    .container {
+        .main {
+            .row {
+                height: 100vh;
+
+                .col {
+                    background-color: $lake-green;
+                    padding: 0;
+
+                    .myName {
+                        padding-top: 80px;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .photo {
+                            display: flex;
+                            position: relative;
+
+                            .photoborder {
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 100%;
+                                background-color: $light-lake-green;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .myphoto {
+                                    width: 70px;
+                                    height: 70px;
+                                    border-radius: 100%;
+                                    background-color: $white;
+                                    overflow: hidden;
+
+                                    img.photo {
+                                        width: 110%;
+                                    }
+                                }
+
+                            }
+
+                            .photoedit {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 100%;
+                                background-color: $yellow;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 1;
+                                position: absolute;
+                                right: -3px;
+                                bottom: 0;
+                            }
+                        }
+
+                        h5 {
+                            font-family: "GenSenRounded-B";
+                            font-size: $h5-font-size;
+                            color: $super-dark;
+                            padding: 13px 0 13px 0;
+                        }
+
+                        a.coin {
+                            font-family: "Roboto";
+                            font-size: $p-font-size;
+                            color: $super-dark;
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 7px;
+                            text-decoration: none;
+
+                            svg {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
+                    .memberbutton {
+                        width: 100%;
+                        padding: 0px 30px;
+
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+
+                            li.btn {
+                                border: none;
+                                padding: 10px 0;
+
+                                a {
+                                    width: 64px;
+                                    height: 64px;
+                                    border-radius: 10px;
+                                    text-decoration: none;
+                                    font-family: "GenSenRounded-M";
+                                    font-size: $ps-font-size;
+                                    color: $dark-gray;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    background-color: $white;
+                                    justify-content: center;
+
+                                    svg {
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .whiteBg {
+                        width: 100%;
+                        height: auto;
+                        background-color: $white;
+                        border-radius: 10px 10px 0 0;
+                        box-shadow: 0 -10px 19px $dark-gray;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 0px 30px;
+                        margin-top: 15px;
+
+                        .newFriend {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 20px 0 25px;
+                            width: 100%;
+                            height: 120px;
+                            border-radius: 10px;
+                            background-color: #7ea08330;
+
+                            p {
+                                font-family: "GenSenRounded-B";
+                                font-size: $p-font-size;
+                                color: $lake-green;
+                                padding: 20px 0 20px;
+                            }
+
+                            button.uploadNewFriend {
+                                width: 130px;
+                                height: 38px;
+                                border-radius: 10px;
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                                color: $white;
+                                background-color: $lake-green;
+                                border: none;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .myFriendsGroup {
+                            width: 100%;
+
+                            .friendList {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                padding: 18px 0 18px;
+
+                                .friendName {
+                                    width: 40%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        text-align: left;
+
+                                    }
+                                }
+
+                                .friendBirth {
+                                    width: 20%;
+
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        text-align: left;
+                                    }
+                                }
+
+                                .birthdayIcon {
+                                    width: 10%;
+                                    text-align: center;
+                                }
+
+                                .watchFriendIcon {
+                                    width: 15%;
+                                    text-align: right;
+                                }
+
+                                .deleteFriendIcon {
+                                    width: 15%;
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
