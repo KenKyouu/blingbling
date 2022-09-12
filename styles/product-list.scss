@@ -272,7 +272,7 @@ body {
 }
 
 .menu-page {
-  background-color: rgba($color: #000000, $alpha: 0.8);
+  background-color: rgba($color: #000000, $alpha: 0.9);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -297,7 +297,7 @@ body {
       width: 100%;
       height: 56.5px;
       background-color: $lake-green;
-      box-shadow: 5px 5px 15px $super-dark;
+      //   box-shadow: 5px 5px 15px $super-dark;
     }
     .menu-body {
       width: 100%;
@@ -496,4 +496,16 @@ body {
 
 .menu-show {
   right: 0;
+}
+
+.test {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.body-hidden {
+  height: 100vh;
+  overflow: hidden;
 }

@@ -289,7 +289,7 @@ body {
 }
 
 .menu-page {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -326,8 +326,6 @@ body {
   width: 100%;
   height: 56.5px;
   background-color: #2d827d;
-  -webkit-box-shadow: 5px 5px 15px #000000;
-          box-shadow: 5px 5px 15px #000000;
 }
 
 .menu-page .menu-right .menu-body {
@@ -593,5 +591,17 @@ body {
 
 .menu-show {
   right: 0;
+}
+
+.test {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.body-hidden {
+  height: 100vh;
+  overflow: hidden;
 }
 /*# sourceMappingURL=product-list.css.map */

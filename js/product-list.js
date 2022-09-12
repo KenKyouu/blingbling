@@ -10,10 +10,12 @@ $(".filter-header > .back").click(function () {
 
 $("ul.menu > a.menu").click(function () {
   $(".menu-page").addClass("menu-show");
-  //   $(".header, .content, .footer").addClass("list-hidden");
+  //   $(".content").addClass("test");
+  $("body").addClass("body-hidden");
 });
 
 $(".close").click(function () {
   $(".menu-page").removeClass("menu-show");
-  //   $(".header, .content, .footer").removeClass("list-hidden");
+  //   $(".content").removeClass("test");
+  $("body").removeClass("body-hidden");
 });
