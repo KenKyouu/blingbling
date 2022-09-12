@@ -271,6 +271,129 @@ body {
   }
 }
 
+.menu-page {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 201;
+  .menu-left {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .close {
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  }
+  .menu-right {
+    width: 85%;
+    height: 100%;
+    .menu-header {
+      width: 100%;
+      height: 56.5px;
+      background-color: $lake-green;
+      //   box-shadow: 5px 5px 15px $super-dark;
+    }
+    .menu-body {
+      width: 100%;
+      height: calc(100vh - 56.5px);
+      background-color: $white;
+      border-radius: 0 0 0 40px;
+      .member-info {
+        display: flex;
+        padding: 20px;
+        .member-picture {
+          width: 90px;
+          height: 90px;
+          border: 5px solid $light-lake-green;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        .member-content {
+          margin-left: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: $super-dark;
+          font-family: "Roboto";
+          .member-name {
+            font-weight: $bold;
+            font-size: $h6-font-size;
+          }
+          .member-voucher {
+            font-size: $p-font-size;
+            margin-top: 10px;
+          }
+        }
+      }
+      .product-class-bar {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: $gray;
+        p {
+          color: $deep-brown;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+        }
+      }
+      .product-class {
+        width: 100%;
+
+        color: $super-dark;
+        font-family: "GenSenRounded-M";
+        font-size: $p-font-size;
+        .class-select {
+          display: flex;
+          height: 40px;
+          .class-image {
+            padding: 10px 0 0 0;
+            margin-left: 20px;
+            width: 8%;
+            position: relative;
+            img {
+              width: 100%;
+              position: absolute;
+              bottom: 3px;
+            }
+          }
+          .class-name {
+            width: 100%;
+            margin-left: 10px;
+            padding: 10px 0 0 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $gray;
+          }
+        }
+      }
+      .menu-button {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 30px 0 30px;
+        a {
+          .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $lake-green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
 .filter-page {
   background-color: $lake-green;
   width: 100%;
@@ -330,12 +453,32 @@ body {
         font-family: "GenSenRounded-M";
         font-size: $p-font-size;
       }
-      span.content {
+      span.filter-content {
         color: $gray;
       }
       span.arrow {
         position: absolute;
         right: 10px;
+      }
+    }
+  }
+  .filter-footer {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    // padding: 20px 0;
+    button {
+      color: $white;
+      font-family: "GenSenRounded-M";
+      font-size: $p-font-size;
+      background-color: rgba($color: #000000, $alpha: 1);
+      border: 2px solid $super-dark;
+      padding: 10px 8px;
+      border-radius: 10px;
+      svg {
+        width: 20%;
       }
     }
   }
@@ -349,4 +492,20 @@ body {
 
 .list-hidden {
   display: none;
+}
+
+.menu-show {
+  right: 0;
+}
+
+.test {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.body-hidden {
+  height: 100vh;
+  overflow: hidden;
 }
