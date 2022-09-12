@@ -221,12 +221,11 @@ $bold: 900;
                         margin-top: 15px;
 
                         .backToList {
+                            width: 100%;
                             display: flex;
                             align-items: center;
                             text-align: left;
                             padding-top: 13px;
-
-                            // TODO: backToList要置左
 
                             p {
                                 font-family: "GenSenRounded-B";
@@ -261,7 +260,13 @@ $bold: 900;
                                         color: $dark-gray;
                                         text-align: right;
                                     }
+
+                                    // &::after {
+                                    //     display: block;
+                                    //     content: 'hihihihih';
+                                    // }
                                 }
+
 
                                 .friendEditIcon {
                                     width: 40%;
