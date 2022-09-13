@@ -22,13 +22,12 @@ body {
   background-image: url(../images/other_bg_paper.png);
 }
 
-.header {
+.header .up {
   position: fixed;
   z-index: 100;
   width: 100%;
   height: 56.5px;
-  background-color: #000000;
-  opacity: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0 0 20px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,26 +39,34 @@ body {
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 
-.header .left {
+@media screen and (min-width: 768px) {
+  .header .up {
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 0 5%;
+  }
+}
+
+.header .up .left {
   padding-left: 20px;
+  width: 30%;
+}
+
+.header .up .left h1.logo {
   width: 100%;
 }
 
-.header .left h1.logo {
+.header .up .left h1.logo a {
   width: 100%;
 }
 
-.header .left h1.logo a {
-  width: 100%;
+.header .up .left h1.logo a img {
+  width: 150px;
 }
 
-.header .left h1.logo a img {
-  width: 75%;
-}
-
-.header .right {
+.header .up .right-mobile {
   padding-right: 10px;
-  width: 100%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,7 +78,13 @@ body {
           justify-content: flex-end;
 }
 
-.header .right li {
+@media screen and (min-width: 768px) {
+  .header .up .right-mobile {
+    display: none;
+  }
+}
+
+.header .up .right-mobile ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,12 +93,73 @@ body {
           align-items: center;
 }
 
-.header .right li ul {
+.header .up .right-mobile ul li {
   margin: 0 10px;
 }
 
-.header .right li ul.cart {
+.header .up .right-mobile ul li.cart {
   margin-bottom: 5px;
+}
+
+.header .up .right-pc {
+  padding-right: 10px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .header .up .right-pc {
+    display: none;
+  }
+}
+
+.header .up .right-pc .mockup {
+  cursor: pointer;
+  padding-right: 20px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.header .up .right-pc ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+  border-left: 1px solid #ffffff;
+}
+
+.header .up .right-pc ul li {
+  margin: 0 10px;
+}
+
+.header .up .right-pc ul a svg {
+  width: 80%;
+}
+
+.header .down {
+  position: relative;
+}
+
+.header .down .header-mockup {
+  position: fixed;
+  z-index: 205;
+  top: 56.5px;
+  width: 90%;
+  margin: 0 5%;
+  border-radius: 0 0 10px 10px;
+  background-color: #2d827d;
 }
 
 .content .banner {
@@ -129,13 +203,11 @@ body {
 }
 
 .content .slider .slider-bar {
-  width: 650px;
   padding: 0 15px;
   overflow: scroll;
 }
 
 .content .slider .slider-bar ul {
-  width: 150%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,6 +219,8 @@ body {
   margin: 15px 10px;
   border: 2px solid #000000;
   border-radius: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .content .slider .slider-bar ul li a {
@@ -179,6 +253,10 @@ body {
   padding: 0 6px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.content .product-list a {
+  text-decoration: none;
 }
 
 .content .product-list a .product-card {
@@ -248,7 +326,7 @@ body {
 
 .footer .footer-logo {
   padding-top: 30px;
-  width: 20%;
+  width: 85px;
   margin: auto;
 }
 
@@ -295,21 +373,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 100%;
   z-index: 201;
 }
 
 .menu-page .menu-left {
-  width: 15%;
+  width: calc(100% - 320px);
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-right: 10px;
 }
 
 .menu-page .menu-left .close {
@@ -318,7 +391,7 @@ body {
 }
 
 .menu-page .menu-right {
-  width: 85%;
+  width: 320px;
   height: 100%;
 }
 
@@ -458,18 +531,24 @@ body {
           align-items: center;
 }
 
-.filter-page {
+.filter-page,
+.gender-filter-detail,
+.price-filter-detail,
+.color-filter-detail {
   background-color: #2d827d;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   z-index: 200;
   display: none;
 }
 
-.filter-page .filter-header {
+.filter-page .filter-header,
+.gender-filter-detail .filter-header,
+.price-filter-detail .filter-header,
+.color-filter-detail .filter-header {
   width: 100%;
   padding: 5px 0;
   background-color: #2d827d;
@@ -477,7 +556,10 @@ body {
   position: fixed;
 }
 
-.filter-page .filter-header span {
+.filter-page .filter-header span,
+.gender-filter-detail .filter-header span,
+.price-filter-detail .filter-header span,
+.color-filter-detail .filter-header span {
   padding: 10px 10px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
@@ -491,11 +573,17 @@ body {
   cursor: pointer;
 }
 
-.filter-page .filter-class {
+.filter-page .filter-class,
+.gender-filter-detail .filter-class,
+.price-filter-detail .filter-class,
+.color-filter-detail .filter-class {
   margin-top: 50px;
 }
 
-.filter-page .filter-class .button-filter {
+.filter-page .filter-class .button-filter,
+.gender-filter-detail .filter-class .button-filter,
+.price-filter-detail .filter-class .button-filter,
+.color-filter-detail .filter-class .button-filter {
   padding: 20px;
   border-bottom: 1px solid #ffffff;
   display: -webkit-box;
@@ -507,7 +595,16 @@ body {
 
 .filter-page .filter-class .button-filter .new,
 .filter-page .filter-class .button-filter .sale,
-.filter-page .filter-class .button-filter .theme {
+.filter-page .filter-class .button-filter .theme,
+.gender-filter-detail .filter-class .button-filter .new,
+.gender-filter-detail .filter-class .button-filter .sale,
+.gender-filter-detail .filter-class .button-filter .theme,
+.price-filter-detail .filter-class .button-filter .new,
+.price-filter-detail .filter-class .button-filter .sale,
+.price-filter-detail .filter-class .button-filter .theme,
+.color-filter-detail .filter-class .button-filter .new,
+.color-filter-detail .filter-class .button-filter .sale,
+.color-filter-detail .filter-class .button-filter .theme {
   padding: 5px 15px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
@@ -519,7 +616,16 @@ body {
 
 .filter-page .filter-class .gender-filter,
 .filter-page .filter-class .price-filter,
-.filter-page .filter-class .color-filter {
+.filter-page .filter-class .color-filter,
+.gender-filter-detail .filter-class .gender-filter,
+.gender-filter-detail .filter-class .price-filter,
+.gender-filter-detail .filter-class .color-filter,
+.price-filter-detail .filter-class .gender-filter,
+.price-filter-detail .filter-class .price-filter,
+.price-filter-detail .filter-class .color-filter,
+.color-filter-detail .filter-class .gender-filter,
+.color-filter-detail .filter-class .price-filter,
+.color-filter-detail .filter-class .color-filter {
   padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -534,7 +640,16 @@ body {
 
 .filter-page .filter-class .gender-filter span,
 .filter-page .filter-class .price-filter span,
-.filter-page .filter-class .color-filter span {
+.filter-page .filter-class .color-filter span,
+.gender-filter-detail .filter-class .gender-filter span,
+.gender-filter-detail .filter-class .price-filter span,
+.gender-filter-detail .filter-class .color-filter span,
+.price-filter-detail .filter-class .gender-filter span,
+.price-filter-detail .filter-class .price-filter span,
+.price-filter-detail .filter-class .color-filter span,
+.color-filter-detail .filter-class .gender-filter span,
+.color-filter-detail .filter-class .price-filter span,
+.color-filter-detail .filter-class .color-filter span {
   margin-left: 20px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
@@ -543,18 +658,39 @@ body {
 
 .filter-page .filter-class .gender-filter span.filter-content,
 .filter-page .filter-class .price-filter span.filter-content,
-.filter-page .filter-class .color-filter span.filter-content {
+.filter-page .filter-class .color-filter span.filter-content,
+.gender-filter-detail .filter-class .gender-filter span.filter-content,
+.gender-filter-detail .filter-class .price-filter span.filter-content,
+.gender-filter-detail .filter-class .color-filter span.filter-content,
+.price-filter-detail .filter-class .gender-filter span.filter-content,
+.price-filter-detail .filter-class .price-filter span.filter-content,
+.price-filter-detail .filter-class .color-filter span.filter-content,
+.color-filter-detail .filter-class .gender-filter span.filter-content,
+.color-filter-detail .filter-class .price-filter span.filter-content,
+.color-filter-detail .filter-class .color-filter span.filter-content {
   color: #c2c2c2;
 }
 
 .filter-page .filter-class .gender-filter span.arrow,
 .filter-page .filter-class .price-filter span.arrow,
-.filter-page .filter-class .color-filter span.arrow {
+.filter-page .filter-class .color-filter span.arrow,
+.gender-filter-detail .filter-class .gender-filter span.arrow,
+.gender-filter-detail .filter-class .price-filter span.arrow,
+.gender-filter-detail .filter-class .color-filter span.arrow,
+.price-filter-detail .filter-class .gender-filter span.arrow,
+.price-filter-detail .filter-class .price-filter span.arrow,
+.price-filter-detail .filter-class .color-filter span.arrow,
+.color-filter-detail .filter-class .gender-filter span.arrow,
+.color-filter-detail .filter-class .price-filter span.arrow,
+.color-filter-detail .filter-class .color-filter span.arrow {
   position: absolute;
   right: 10px;
 }
 
-.filter-page .filter-footer {
+.filter-page .filter-footer,
+.gender-filter-detail .filter-footer,
+.price-filter-detail .filter-footer,
+.color-filter-detail .filter-footer {
   position: absolute;
   bottom: 10px;
   display: -webkit-box;
@@ -566,7 +702,10 @@ body {
   margin: 0 20px;
 }
 
-.filter-page .filter-footer button {
+.filter-page .filter-footer button,
+.gender-filter-detail .filter-footer button,
+.price-filter-detail .filter-footer button,
+.color-filter-detail .filter-footer button {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
@@ -576,7 +715,10 @@ body {
   border-radius: 10px;
 }
 
-.filter-page .filter-footer button svg {
+.filter-page .filter-footer button svg,
+.gender-filter-detail .filter-footer button svg,
+.price-filter-detail .filter-footer button svg,
+.color-filter-detail .filter-footer button svg {
   width: 20%;
 }
 
@@ -593,15 +735,7 @@ body {
   right: 0;
 }
 
-.test {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
 .body-hidden {
-  height: 100vh;
   overflow: hidden;
 }
 /*# sourceMappingURL=product-list.css.map */
