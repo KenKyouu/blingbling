@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+body {
+  background: url(../images/other_bg_paper.png) center center/cover repeat;
+}
+
+.header {
+  width: 100%;
+  height: 56.5px;
+  background-color: #000000;
+  opacity: 80%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+}
+.header .left {
+  padding-left: 20px;
+  width: 100%;
+}
+.header .left h1.logo {
+  width: 100%;
+}
+.header .left h1.logo a {
+  width: 100%;
+}
+.header .left h1.logo a img {
+  width: 75%;
+}
+.header .right {
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .right li {
+  display: flex;
+  align-items: center;
+}
+.header .right li ul {
+  margin: 0 10px;
+}
+.header .right li ul.cart {
+  margin-bottom: 5px;
+}
+
+.footer {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+}
+.footer .footer-logo {
+  padding-top: 30px;
+  width: 20%;
+  margin: auto;
+}
+.footer .footer-nav ul {
+  margin: 35px 40px 0 40px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+}
+.footer .footer-nav ul li a {
+  color: white;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+.footer .footer-social {
+  margin: 35px 160px 0 160px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-c {
+  margin-top: 35px;
+  text-align: center;
+  color: white;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.s-package-wrap {
+  margin-top: 100px;
+}
+.s-package-wrap .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-package-wrap .container .row {
+  margin: 0 15px;
+}
+.s-package-wrap .container .row .title-text-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: #7cb2af;
+  border: 3px solid #7cb2af;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+.s-package-wrap .container .row .title-text-col h3 {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: white;
+  padding: 12px;
+}
+.s-package-wrap .container .row .package-col {
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #7cb2af;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+}
+.s-package-wrap .container .row .package-col button {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 55%;
+  line-height: 0.8rem;
+  text-align: center;
+  margin-left: 20%;
+}
+.s-package-wrap .container .row .package-col .package-radio label {
+  margin-left: 20%;
+  margin-top: 20px;
+}
+.s-package-wrap .container .row .package-col .package-radio label h3 {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+
+.s-discount-wrap {
+  margin-top: 30px;
+}
+.s-discount-wrap .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-discount-wrap .container .row {
+  margin: 0 15px;
+}
+.s-discount-wrap .container .row .title-text-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: #7cb2af;
+  border: 3px solid #7cb2af;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+.s-discount-wrap .container .row .title-text-col h3 {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: white;
+  padding: 12px;
+}
+.s-discount-wrap .container .row .discount-col {
+  padding-top: 20px;
+  border-left: 3px solid #7cb2af;
+  border-right: 3px solid #7cb2af;
+}
+.s-discount-wrap .container .row .discount-col .col-6 {
+  padding: 0;
+  padding: 10px 0 10px 15px;
+}
+.s-discount-wrap .container .row .discount-col .col-6 .discount-radio {
+  padding-left: 20%;
+}
+.s-discount-wrap .container .row .discount-col .col-6 h3 {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+.s-discount-wrap .container .row .coupon-col {
+  border-left: 3px solid #7cb2af;
+  border-right: 3px solid #7cb2af;
+  border-bottom: 3px solid #7cb2af;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 0;
+}
+.s-discount-wrap .container .row .coupon-col h3 {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+  padding-top: 10px;
+}
+.s-discount-wrap .container .row .coupon-col button {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+  line-height: 0.8rem;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.s-subtitle-list-wrap {
+  margin-top: 50px;
+}
+.s-subtitle-list-wrap .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-subtitle-list-wrap .container .row {
+  padding: 10px 15px;
+}
+.s-subtitle-list-wrap .container .row .subtitle-col {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.s-subtitle-list-wrap .container .row .price-col {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+.s-subtitle-list-wrap .container .row .col {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #000000;
+}
+.s-subtitle-list-wrap .container .subtitle-col-boder {
+  border-bottom: 1px solid #000000;
+}
+.s-subtitle-list-wrap .container .subtitle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.s-subtitle-list-wrap .container .subtitle-btn button {
+  background-color: none;
+  border: 3px solid #7cb2af;
+  color: #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  line-height: 0.8rem;
+  text-align: center;
+}
+.s-subtitle-list-wrap .container .subtitle-btn .cart1-check {
+  background-color: #2d827d;
+  border: 3px solid #2d827d;
+  color: white;
+}
+
+.s-additional-product-wrap {
+  margin-top: 80px;
+}
+.s-additional-product-wrap .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-additional-product-wrap .container .row {
+  padding: 0 15px;
+}
+.s-additional-product-wrap .container .row .col h5 {
+  padding-right: 10px;
+  text-align: center;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #000000;
+}
+.s-additional-product-wrap .container .row .cart1-ribbon-col {
+  margin-top: -50px;
+  margin-left: -30px;
+}
+.s-additional-product-wrap .container .row .cart1-ribbon-col svg {
+  width: 50%;
+}
+
+.additional-product-row {
+  display: flex;
+  margin-top: -100px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background: url(../images/cart1-add-mb-bn.svg) left center no-repeat;
+  background-position-x: 0rem;
+  background-position-y: 7.45rem;
+  background-size: contain;
+}
+.additional-product-row .product-col {
+  padding: 10px;
+}
+.additional-product-row .poduct-card .img-wrap {
+  width: 100%;
+}
+.additional-product-row .poduct-card .img-wrap .img-bg {
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+}
+.additional-product-row .poduct-card .img-wrap .img-bg img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 10px;
+}
+.additional-product-row .poduct-card .info-wrap h3,
+.additional-product-row .poduct-card .info-wrap p {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+.additional-product-row .poduct-card .info-wrap .info-price-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.additional-product-row .poduct-card .info-wrap .info-price-btn button {
+  width: 45px;
+  height: 22px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #2d827d;
+}/*# sourceMappingURL=cart1.css.map */

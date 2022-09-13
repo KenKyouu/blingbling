@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlingBling有禮</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/all.css" />
+    <link rel="stylesheet" href="./styles/cart3.css">
+    <link rel="stylesheet" href="./styles/m-header.css" />
+    <link rel="stylesheet" href="./styles/m-footer.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="left">
+            <h1 class="logo">
+                <a href="#"><img src="./images/header-m-logo.svg" alt="" /></a>
+            </h1>
+        </div>
+        <div class="right">
+            <li>
+                <ul class="cart">
+                    <a class="cart" href="#"><svg width="27" height="24" viewBox="0 0 27 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.2605 16.9011H20.6858V6.65625H2.10381C1.59987 6.65625 1.24941 7.11005 1.42336 7.53747L5.2605 16.9011Z"
+                                fill="white" stroke="white" stroke-miterlimit="10" />
+                            <path
+                                d="M20.5297 7.04603L25.8293 1.58014C25.8945 1.51288 25.8945 1.39632 25.8293 1.32906L25.8291 1.32889L25.8267 1.32642C25.8267 1.3264 25.8267 1.32638 25.8267 1.32637C25.7698 1.26782 25.6831 1.26784 25.6263 1.32642L20.3053 6.8145L20.5297 7.04603Z"
+                                fill="white" stroke="white" />
+                            <path
+                                d="M18.405 22.1437C18.405 22.7084 18.845 23.1396 19.3555 23.1396C19.8659 23.1396 20.3059 22.7084 20.3059 22.1437C20.3059 21.5789 19.8659 21.1477 19.3555 21.1477C18.845 21.1477 18.405 21.5789 18.405 22.1437Z"
+                                fill="white" stroke="white" />
+                            <path
+                                d="M5.7605 22.1437C5.7605 22.7084 6.20047 23.1396 6.71094 23.1396C7.2214 23.1396 7.66138 22.7084 7.66138 22.1437C7.66138 21.5789 7.22139 21.1477 6.71094 21.1477C6.20049 21.1477 5.7605 21.5789 5.7605 22.1437Z"
+                                fill="white" stroke="white" />
+                            <path
+                                d="M5.89735 19.3219H20.1689C20.2301 19.3219 20.3059 19.2663 20.3059 19.165V19.1623C20.3059 19.061 20.2301 19.0054 20.1689 19.0054H5.89735C5.83622 19.0054 5.76039 19.061 5.76039 19.1623V19.165C5.76039 19.2676 5.83493 19.3219 5.89735 19.3219Z"
+                                fill="white" stroke="white" />
+                        </svg>
+                    </a>
+                </ul>
+                <ul class="menu">
+                    <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.0362 3.15483H3.47997C3.22481 3.15483 3.01807 2.62392 3.01807 1.96865C3.01807 1.31339 3.22481 0.782471 3.47997 0.782471H21.0362C21.2913 0.782471 21.4981 1.31339 21.4981 1.96865C21.4981 2.62392 21.2913 3.15483 21.0362 3.15483Z"
+                                fill="white" />
+                            <path
+                                d="M21.0362 12.6509H3.47997C3.22481 12.6509 3.01807 12.12 3.01807 11.4647C3.01807 10.8095 3.22481 10.2786 3.47997 10.2786H21.0362C21.2913 10.2786 21.4981 10.8095 21.4981 11.4647C21.4981 12.12 21.2913 12.6509 21.0362 12.6509Z"
+                                fill="white" />
+                            <path
+                                d="M21.1463 22.147H7.77014C7.57573 22.147 7.41821 21.6161 7.41821 20.9608C7.41821 20.3056 7.57573 19.7747 7.77014 19.7747H21.1463C21.3407 19.7747 21.4982 20.3056 21.4982 20.9608C21.4982 21.6209 21.3407 22.147 21.1463 22.147Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </ul>
+            </li>
+        </div>
+    </div>
+
+    <div class="s-total-list-wrap">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="col col-12 title-text-col d-flex">
+                    <h2>訂單摘要</h2>
+                </div>
+            </div>
+
+            <div class="total-row-wrap">
+                <div class="row total-row no-gutters">
+                    <div class="col total-col">
+                        <h3>商品小計</h3>
+                    </div>
+                    <div class="col price-col">
+                        <h3>NT$ 30,835</h3>
+                    </div>
+                </div>
+
+                <div class="row total-row no-gutters">
+                    <div class="col total-col">
+                        <h3>包裝小計</h3>
+                    </div>
+                    <div class="col price-col">
+                        <h3>NT$ 199</h3>
+                    </div>
+                </div>
+
+                <div class="row total-row no-gutters">
+                    <div class="col total-col">
+                        <h3>運費小計</h3>
+                    </div>
+                    <div class="col price-col">
+                        <h3>NT$ 0</h3>
+                    </div>
+                </div>
+
+                <div class="row total-row no-gutters">
+                    <div class="col total-col">
+                        <h3>購物金折抵</h3>
+                    </div>
+                    <div class="col price-col">
+                        <h3>-NT$ 100</h3>
+                    </div>
+                </div>
+
+                <div class="row total-row no-gutters">
+                    <div class="col total-col">
+                        <h3>優惠券折抵</h3>
+                    </div>
+                    <div class="col price-col">
+                        <h3>-NT$ 999</h3>
+                    </div>
+                </div>
+
+                <div class="row total-row pt-3 no-gutters">
+                    <div class="col-12 total-col-boder">
+                        <div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row total-row pb-3 no-gutters">
+                    <div class="col total-col">
+                        <h3>訂單總計</h3>
+                    </div>
+                    <div class="col price-col">
+                        <h3>NT$ 29,935</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="s-payment-info-wrap">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="col">
+                    <h2>繳費資訊</h2>
+                </div>
+            </div>
+
+            <div class="payment-wrap">
+                <div class="row no-gutters">
+                    <div class="col info-col">
+                        <h3>銀行代碼</h3>
+                    </div>
+
+                    <div class="col account-col">
+                        <h3>812</h3>
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col info-col">
+                        <h3>轉帳帳號</h3>
+                    </div>
+
+                    <div class="col account-col">
+                        <h3>9736010728123</h3>
+                    </div>
+                </div>
+
+                <div class="row pt-2 pb-3 no-gutters">
+                    <div class="col">
+                        <button>複製帳號</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-deadline-wrap">
+                <div class="row no-gutters">
+                    <div class="col info-col">
+                        <h3>繳款金額</h3>
+                    </div>
+
+                    <div class="col account-col">
+                        <h3>NT$ 29,935</h3>
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col info-col">
+                        <h3>繳款期限</h3>
+                    </div>
+
+                    <div class="col account-col">
+                        <h3>2022-10-18 23:59</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="s-order-info-list-wrap">
+        <div class="container">
+            <div class="order-list-section no-gutters">
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h3>訂單資訊</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>訂購日期</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>2022-10-15</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>訂單編號</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>#11299</h6>
+                    </div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col col-6">
+                        <h6>訂單狀態</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>處理中</h6>
+                    </div>
+                </div>
+
+                <div class="row order-boder">
+                    <div class="col col-6">
+                        <h3>配送資訊</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>配送方式</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>禮物配送方式</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>卡片寄送方式</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>Email</h6>
+                    </div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col col-6">
+                        <h6>配送狀態</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>待出貨</h6>
+                    </div>
+                </div>
+
+                <div class="row order-boder">
+                    <div class="col col-6">
+                        <h3>顧客資訊</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>訂購人姓名</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>禮佳在</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>收件人姓名</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>同訂購人</h6>
+                    </div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col col-6">
+                        <h6>收件人手機</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>0987123987</h6>
+                    </div>
+                </div>
+
+                <div class="row order-boder">
+                    <div class="col col-6">
+                        <h3>付款資訊</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>付款方式</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>銀行轉帳</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-6">
+                        <h6>付款狀態</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>未付款</h6>
+                    </div>
+                </div>
+
+                <div class="row pb-2">
+                    <div class="col col-6">
+                        <h6>載具類型</h6>
+                    </div>
+                    <div class="col col-6">
+                        <h6>會員載具</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="footer">
+        <div class="footer-bg">
+            <div class="footer-logo">
+                <img src="./images/logo-footer.svg" alt="" />
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">聯絡我們</a></li>
+                    <li><a href="#">幫助中心</a></li>
+                    <li><a href="#">會員中心</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#">
+                    <div class="send">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.1764 0C5.00142 0 0 5.00142 0 11.1764C0 17.3514 5.00142 22.3528 11.1764 22.3528C17.3514 22.3528 22.3528 17.3514 22.3528 11.1764C22.3528 5.00142 17.3514 0 11.1764 0ZM16.5033 7.26605C16.4712 7.71989 16.2145 9.30146 15.9532 11.0114C15.5635 13.4319 15.1464 16.0816 15.1464 16.0816C15.1464 16.0816 15.0822 16.8242 14.5321 16.9526C13.982 17.0809 13.0789 16.4987 12.9184 16.3704C12.7901 16.2741 10.4979 14.8209 9.65444 14.1103C9.42981 13.9178 9.16851 13.5281 9.68653 13.0789C10.8509 12.0153 12.24 10.6905 13.0789 9.84698C13.4685 9.45732 13.8536 8.55422 12.24 9.65444C9.94783 11.236 7.6878 12.7213 7.6878 12.7213C7.6878 12.7213 7.16978 13.0422 6.2025 12.7534C5.23522 12.4646 4.10291 12.0749 4.10291 12.0749C4.10291 12.0749 3.32817 11.589 4.65302 11.0756C4.65302 11.0756 10.2412 8.78343 12.1804 7.9766C12.923 7.6557 15.4444 6.61967 15.4444 6.61967C15.4444 6.61967 16.6088 6.16583 16.5079 7.26605H16.5033Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="facebook">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.8236 0C5.64864 0 0.647217 5.00142 0.647217 11.1764C0.647217 17.3514 5.64864 22.3528 11.8236 22.3528C17.9986 22.3528 23 17.3514 23 11.1764C23 5.00142 17.994 0 11.8236 0ZM16.2199 5.64322H14.9088C13.6207 5.64322 13.2172 6.44546 13.2172 7.26605V9.21435H16.0962L15.6377 12.217H13.2172V19.4693H9.97159V12.217H7.33565V9.21435H9.97159V6.92681C9.97159 4.32754 11.5211 2.88808 13.8911 2.88808C15.028 2.88808 16.2153 3.08979 16.2153 3.08979V5.64322H16.2199Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-c">
+                <p>&copy;&nbsp;bling&nbsp;bling&nbsp;gift,&nbsp;Inc.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
