@@ -340,6 +340,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+  margin-right: 10px;
   font-family: "Roboto";
   font-size: 14px;
   font-weight: 900;
@@ -365,8 +366,21 @@ body {
 .j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-amount {
   text-align: center;
 }
-.j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-money {
+.j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-amount svg {
+  margin-left: -15px;
+}
+.j-list .j-list-info .j-list-item .j-list-sub .j-money {
   text-align: center;
+}
+.j-list .j-list-info .j-list-item .s-list-icon {
+  width: 25px;
+}
+.j-list .j-list-info .j-list-item .s-list-icon svg {
+  width: 80%;
+  margin-top: 15px;
+}
+.j-list .j-list-info .j-list-item .s-list-icon .s-trash {
+  margin-top: -5px;
 }
 
 .j-list.j-listopen {
@@ -414,6 +428,9 @@ body {
   .j-list .j-list-info .j-list-title .j-product {
     width: calc(100% - 90px);
   }
+  .j-list .j-list-info .j-list-item {
+    width: 100%;
+  }
   .j-list .j-list-info .j-list-item .j-list-img {
     width: 80px;
     height: 80px;
@@ -427,7 +444,7 @@ body {
     height: 100%;
   }
   .j-list .j-list-info .j-list-item .j-list-sub {
-    width: calc(100% - 90px);
+    width: calc(100% - 120px);
     flex-direction: row;
     justify-content: space-evenly;
   }

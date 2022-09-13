@@ -428,6 +428,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 margin-left: 10px;
+                margin-right: 10px;
                 font-family: "Roboto";
                 font-size: $ps-font-size;
                 font-weight: $bold;
@@ -454,16 +455,33 @@ body {
 
                     .j-amount {
                         text-align: center;
-                    }
 
-                    .j-money {
-                        text-align: center;
+                        svg {
+                            margin-left: -15px; // 電腦版要刪掉
+                        }
                     }
+                }
+
+                .j-money {
+                    text-align: center;
+                }
+            }
+
+            .s-list-icon {
+                width: 25px;
+
+                svg {
+                    width: 80%;
+                    margin-top: 15px;
+                }
+
+                .s-trash {
+                    margin-top: -5px;
                 }
             }
         }
-
     }
+
 }
 
 .j-list.j-listopen {
@@ -532,6 +550,8 @@ body {
             }
 
             .j-list-item {
+                width: 100%;
+
                 .j-list-img {
                     width: 80px;
                     height: 80px;
@@ -546,7 +566,7 @@ body {
                 }
 
                 .j-list-sub {
-                    width: calc(100% - 90px);
+                    width: calc(100% - 120px);
                     flex-direction: row;
                     justify-content: space-evenly;
 
