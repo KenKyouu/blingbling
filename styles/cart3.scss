@@ -160,7 +160,7 @@ body {
 }
 
 .s-total-list-wrap {
-    margin-top: 80px;
+    margin-top: 50px;
 
     .container {
         width: 100%;
@@ -319,6 +319,447 @@ body {
     }
 }
 
+
+//--------------------------progress-bar--------
+.j-progress-bar {
+    padding: 3.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .j-step-up {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 2.2rem;
+
+        .j-step {
+            width: 2.2rem;
+            height: 2.2rem;
+
+            .j-svg-wrap {
+                background-color: $white;
+                border: 2px solid $super-dark;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width: 55%;
+                    height: 55%;
+                }
+            }
+        }
+
+        .j-line {
+            width: 30%;
+            height: 0.125rem;
+            background-color: $super-dark;
+            margin: 0 5px;
+        }
+
+        .j-step1-num,
+        .j-step2-num {
+            width: 2.2rem;
+            height: 2.2rem;
+
+            .j-num1 {
+                color: $white;
+                background-color: $super-dark;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Roboto";
+                font-weight: $bold;
+                font-size: $h6-font-size;
+            }
+        }
+
+        .j-dash {
+            width: 30%;
+            height: 0.125rem;
+            margin: 0 0.2rem;
+            display: flex;
+            align-items: center;
+
+            div {
+                width: 10%;
+                height: 100%;
+                background-color: #A4A4A4;
+                margin-right: 5px;
+
+                &:nth-last-child(1) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .j-step2-num,
+        .j-step3-num {
+            width: 2.2rem;
+            height: 2.2rem;
+
+
+            .j-num3 {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $super-dark;
+                border: 2px solid $super-dark;
+                color: white;
+                font-family: "Roboto";
+                font-weight: $bold;
+                font-size: $h6-font-size;
+            }
+        }
+    }
+
+    .j-step-down {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .j-step-text {
+            margin-top: 0.75rem;
+            font-family: "Roboto";
+            font-weight: $bold;
+            font-size: $p-font-size;
+
+        }
+
+        .j-step3-text {
+            color: $super-dark;
+            margin-top: 0.75rem;
+            font-family: "Roboto";
+            font-weight: $bold;
+            font-size: $p-font-size;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .j-progress-bar {
+        margin-top: 5rem;
+        width: 60%;
+        margin-left: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .j-progress-bar {
+        .j-step-up {
+            height: 2.8rem;
+
+            .j-step,
+            .j-step1-num,
+            .j-step2-num,
+            .j-step3-num {
+                width: 2.8rem;
+                height: 2.8rem;
+
+                .j-num1,
+                .j-num2,
+                .j-num3 {
+                    font-size: $h5-font-size;
+                }
+
+                .j-svg-wrap {
+                    border: 3px solid $super-dark;
+                }
+
+                .j-num3 {
+                    border: 3px solid #A4A4A4;
+                }
+            }
+        }
+
+        .j-step-down {
+
+            .j-step-text,
+            .j-step3-text {
+                font-size: $h6-font-size;
+            }
+        }
+    }
+}
+
+//------------------------list--------------------
+.j-list {
+    width: 100%;
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+
+    .j-list-bar {
+        position: relative;
+        transform: translateY(-1rem);
+        width: 100%;
+
+        .j-list-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-height: 90px;
+            position: absolute;
+        }
+
+        .j-list-title {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(50%);
+            cursor: pointer;
+
+            h5 {
+                font-family: "GenSenRounded-B";
+                font-size: $h6-font-size;
+                color: $white;
+                padding-right: 2rem;
+            }
+
+            .j-list-icon {
+                svg {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .j-list-info {
+        // display: none;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+        width: 85%;
+        margin: 0 auto;
+        padding: 4rem 10px 14px 10px;
+
+        .j-list-title {
+            display: none;
+        }
+
+        .j-list-item {
+            padding: 8px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-bottom: 1px solid $light-lake-green;
+
+            &:nth-last-child(1) {
+                border-bottom: none;
+            }
+
+            .j-list-img {
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+                object-fit: cover;
+                background-color: $dark-gray;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .j-list-sub {
+                width: calc(100% - 100px);
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                font-family: "Roboto";
+                font-size: $ps-font-size;
+                font-weight: $bold;
+                color: $super-dark;
+
+                p {
+                    padding-top: 5px;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+
+                .j-list-num {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0;
+                    margin-top: 5px;
+
+                    .j-money-single {
+                        display: none;
+                        text-align: center;
+                    }
+
+                    .j-amount {
+                        text-align: center;
+                    }
+
+                    .j-money {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.j-list.j-listopen {
+    margin-bottom: 3rem;
+
+    .j-list-bar {
+
+        // .j-list-wrap{
+        .j-list-title {
+            .j-list-icon {
+                svg {
+                    &:nth-child(1) {
+                        display: none;
+                    }
+
+                    &:nth-child(2) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .j-list-info {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .j-list {
+        width: 75%;
+        margin-bottom: 10rem;
+
+        .j-list-bar {
+            max-height: 100px;
+
+            .j-list-title {
+                top: 0;
+                transform: translateX(-50%) translateY(40%);
+
+                h5 {
+                    font-size: $h5-font-size;
+                }
+            }
+        }
+
+        .j-list-info {
+            padding-top: 5rem;
+
+            .j-list-title {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                font-family: "Roboto";
+                font-size: $ps-font-size;
+                font-weight: $bold;
+                color: $super-dark;
+                border-bottom: 1px solid $light-lake-green;
+                padding-bottom: 8px;
+
+                .j-product {
+                    width: calc(100% - 90px);
+
+                }
+            }
+
+            .j-list-item {
+                .j-list-img {
+                    width: 80px;
+                    height: 80px;
+                    overflow: hidden;
+                    object-fit: cover;
+                    background-color: $dark-gray;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .j-list-sub {
+                    width: calc(100% - 90px);
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                    p {
+                        width: 40%;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                    }
+
+                    .j-list-num {
+                        width: 60%;
+                        display: inline-flex;
+
+                        .j-money-single {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .j-list {
+        width: 75%;
+        margin-top: 4rem;
+        margin-bottom: 13rem;
+
+        .j-list-bar {
+            max-height: 120px;
+
+            .j-list-title {
+                top: 0;
+                transform: translateX(-50%) translateY(-20%);
+
+                h5 {
+                    font-size: $h4-font-size;
+                }
+
+            }
+        }
+
+        .j-list-info {
+            padding-top: 8rem;
+        }
+    }
+}
+
+// ------------------------訂單摘要-----------------------------
 .s-order-info-list-wrap {
     margin-top: 50px;
     margin-bottom: 100px;
