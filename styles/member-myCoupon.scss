@@ -601,3 +601,53 @@ $bold: 900;
         }
     }
 }
+
+// lightbox-err
+
+.j-lightbox{
+    // display: none;
+    .j-lightbox-black{
+        z-index: 20;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .j-lightbox-bg{
+        z-index: 21;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translateX(-50%) translateY(-50%);
+        width: 90%;
+        max-width: 400px;
+        font-family: "GenSenRounded-B";
+        font-weight: $bold;
+        text-align: center;
+        background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+        padding: 76px 0;
+        .j-warning{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 30px;
+            .j-warn-icon{
+                margin-right: 20px;
+            }
+            .j-warn-text{
+                font-size: $h6-font-size;
+                color: $super-dark;
+            }
+        }
+        button{
+            border: none;
+            background-color: $super-dark;
+            border-radius: 10px;
+            color: $white;
+            font-size: $h6-font-size;
+            padding: 10px 30px;
+        }
+    }
+}
