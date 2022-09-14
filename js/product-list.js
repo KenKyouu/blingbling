@@ -11,7 +11,7 @@ $(".close, .menu-left").click(function () {
   $("body").removeClass("body-hidden");
 });
 
-// filter
+// filter light box
 
 $("button.filter").click(function () {
   $(".filter-page").addClass("filter-show");
@@ -40,3 +40,27 @@ $(".filter-detail-back").click(function () {
     ".gender-filter-detail, .price-filter-detail, .color-filter-detail"
   ).removeClass("filter-show");
 });
+
+// gender-filter-detail
+let genderSelect = $("input[name=gender]:checked").val();
+
+console.log(genderSelect);
+
+// if ($("#male").prop("checked", true)) {
+//   $("#gender-span").text("男").css("color", "#fff");
+//   console.log("male");
+// } else if ($("#female").prop("checked", true)) {
+//   $("#gender-span").text("女").css("color", "#fff");
+//   console.log("female");
+// } else if ($("#all-gender").prop("checked", true)) {
+//   $("#gender-span").text("所有性別").css("color", "#fff");
+//   console.log("all");
+// }
+
+if (genderSelect == "male") {
+  $("#gender-span").text("男").css("color", "#fff");
+} else if (genderSelect == "female") {
+  $("#gender-span").text("女").css("color", "#fff");
+} else if (genderSelect == "all-gender") {
+  $("#gender-span").text("所有性別").css("color", "#fff");
+}

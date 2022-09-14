@@ -76,7 +76,7 @@ body {
     box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
     @media screen and (min-width: 768px) {
       width: 95%;
-      //   height: 90px;
+      height: 90px;
       margin: 0 2.5%;
       padding: 0 5%;
     }
@@ -150,7 +150,7 @@ body {
     .header-mockup {
       position: fixed;
       z-index: 205;
-      top: 56.5px;
+      top: 90px;
       width: 90%;
       //   height: 500px;
       margin: 0 5%;
@@ -283,7 +283,7 @@ body {
   }
 }
 
-.footer {
+.footer-mobile {
   margin-top: 30px;
   background-image: url(../images/footer-bg.svg);
   background-repeat: no-repeat;
@@ -292,6 +292,9 @@ body {
   overflow: hidden;
   width: 100%;
   height: 257px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
   .footer-logo {
     padding-top: 30px;
     width: 85px;
@@ -309,6 +312,7 @@ body {
           color: $white;
           font-family: "GenSenRounded-M";
           font-size: $p-font-size;
+          text-decoration: none;
         }
       }
     }
@@ -324,6 +328,66 @@ body {
     color: $white;
     font-family: "Roboto";
     font-size: $ps-font-size;
+  }
+}
+
+.footer-pc {
+  width: 100%;
+  height: 120px;
+  background-color: $dark-gray;
+  position: relative;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  .footer-pc-up {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $white;
+    .footer-nav {
+      ul {
+        margin: 30px 20px 0 0;
+        display: flex;
+        justify-content: space-between;
+        li {
+          margin-right: 30px;
+          a {
+            color: $white;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .footer-c {
+      margin-top: 30px;
+      text-align: center;
+      color: $white;
+      font-family: "Roboto";
+      font-size: $ps-font-size;
+    }
+    .footer-social {
+      margin: 30px 40px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+  .footer-logo {
+    position: absolute;
+    width: 120px;
+    top: 30px;
+    left: 80px;
+    background-color: $dark-gray;
+    padding: 10px;
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -529,7 +593,6 @@ body {
     margin: 0 20px;
     // padding: 20px 0;
     button {
-      //   width: 100%;
       color: $white;
       font-family: "GenSenRounded-M";
       font-size: $p-font-size;
@@ -539,6 +602,106 @@ body {
       border-radius: 10px;
       svg {
         width: 20%;
+      }
+    }
+  }
+}
+
+.gender-filter-detail {
+  .gender-filter-content {
+    margin-top: 120px;
+    form {
+      .gender-filter-radio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $white;
+        span {
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          height: 46px;
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+        }
+        span.all {
+          padding-left: 17px;
+        }
+        input {
+          margin-right: 30px;
+        }
+      }
+      label.all {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+
+.price-filter-detail {
+  .price-filter-content {
+    margin-top: 120px;
+    form {
+      .price-filter-radio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $white;
+        span {
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          height: 46px;
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+        }
+        span.all {
+          padding-left: 17px;
+        }
+        input {
+          margin-right: 30px;
+        }
+      }
+      label.last {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+
+.color-filter-detail {
+  .color-filter-content {
+    height: calc(100% - 206px);
+    margin-top: 120px;
+    overflow: hidden;
+    form {
+      height: calc(100% - 0px);
+      overflow: scroll;
+      .color-filter-radio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $white;
+        span {
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          height: 46px;
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+        }
+        span.all {
+          padding-left: 17px;
+        }
+        input {
+          margin-right: 30px;
+        }
+      }
+      label.last {
+        border-bottom: 1px solid $white;
       }
     }
   }

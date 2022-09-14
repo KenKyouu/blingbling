@@ -42,6 +42,7 @@ body {
 @media screen and (min-width: 768px) {
   .header .up {
     width: 95%;
+    height: 90px;
     margin: 0 2.5%;
     padding: 0 5%;
   }
@@ -155,7 +156,7 @@ body {
 .header .down .header-mockup {
   position: fixed;
   z-index: 205;
-  top: 56.5px;
+  top: 90px;
   width: 90%;
   margin: 0 5%;
   border-radius: 0 0 10px 10px;
@@ -313,7 +314,7 @@ body {
   content: "NT$";
 }
 
-.footer {
+.footer-mobile {
   margin-top: 30px;
   background-image: url(../images/footer-bg.svg);
   background-repeat: no-repeat;
@@ -324,13 +325,19 @@ body {
   height: 257px;
 }
 
-.footer .footer-logo {
+@media screen and (min-width: 768px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+
+.footer-mobile .footer-logo {
   padding-top: 30px;
   width: 85px;
   margin: auto;
 }
 
-.footer .footer-nav ul {
+.footer-mobile .footer-nav ul {
   margin: 35px 40px 0 40px;
   padding-bottom: 10px;
   display: -webkit-box;
@@ -342,13 +349,14 @@ body {
   border-bottom: 2px solid #ffffff;
 }
 
-.footer .footer-nav ul li a {
+.footer-mobile .footer-nav ul li a {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+  text-decoration: none;
 }
 
-.footer .footer-social {
+.footer-mobile .footer-social {
   margin: 35px 160px 0 160px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,12 +366,96 @@ body {
           justify-content: space-between;
 }
 
-.footer .footer-c {
+.footer-mobile .footer-c {
   margin-top: 35px;
   text-align: center;
   color: #ffffff;
   font-family: "Roboto";
   font-size: 14px;
+}
+
+.footer-pc {
+  width: 100%;
+  height: 120px;
+  background-color: #4c4948;
+  position: relative;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-pc {
+    display: block;
+  }
+}
+
+.footer-pc .footer-pc-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.footer-pc .footer-pc-up .footer-nav ul {
+  margin: 30px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-pc .footer-pc-up .footer-nav ul li {
+  margin-right: 30px;
+}
+
+.footer-pc .footer-pc-up .footer-nav ul li a {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-pc .footer-pc-up .footer-c {
+  margin-top: 30px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.footer-pc .footer-pc-up .footer-social {
+  margin: 30px 40px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-pc .footer-pc-up .footer-social a {
+  margin-right: 10px;
+}
+
+.footer-pc .footer-logo {
+  position: absolute;
+  width: 120px;
+  top: 30px;
+  left: 80px;
+  background-color: #4c4948;
+  padding: 10px;
+}
+
+.footer-pc .footer-logo img {
+  width: 100%;
 }
 
 .menu-page {
@@ -720,6 +812,142 @@ body {
 .price-filter-detail .filter-footer button svg,
 .color-filter-detail .filter-footer button svg {
   width: 20%;
+}
+
+.gender-filter-detail .gender-filter-content {
+  margin-top: 120px;
+}
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ffffff;
+}
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+  height: 46px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio span.all {
+  padding-left: 17px;
+}
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio input {
+  margin-right: 30px;
+}
+
+.gender-filter-detail .gender-filter-content form label.all {
+  border-bottom: 1px solid #ffffff;
+}
+
+.price-filter-detail .price-filter-content {
+  margin-top: 120px;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ffffff;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+  height: 46px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio span.all {
+  padding-left: 17px;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio input {
+  margin-right: 30px;
+}
+
+.price-filter-detail .price-filter-content form label.last {
+  border-bottom: 1px solid #ffffff;
+}
+
+.color-filter-detail .color-filter-content {
+  height: calc(100% - 206px);
+  margin-top: 120px;
+  overflow: hidden;
+}
+
+.color-filter-detail .color-filter-content form {
+  height: calc(100% - 0px);
+  overflow: scroll;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ffffff;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+  height: 46px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio span.all {
+  padding-left: 17px;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio input {
+  margin-right: 30px;
+}
+
+.color-filter-detail .color-filter-content form label.last {
+  border-bottom: 1px solid #ffffff;
 }
 
 .filter-show {

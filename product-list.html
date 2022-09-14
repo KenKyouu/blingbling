@@ -3312,7 +3312,7 @@
         </a>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer-mobile">
       <div class="footer-bg">
         <div class="footer-logo">
           <img src="./images/logo-footer.svg" alt="" />
@@ -3361,6 +3361,57 @@
         <div class="footer-c">
           <p>&copy;&nbsp;bling&nbsp;bling&nbsp;gift,&nbsp;Inc.</p>
         </div>
+      </div>
+    </div>
+    <div class="footer-pc">
+      <div class="footer-pc-up">
+        <div class="footer-nav">
+          <ul>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">幫助中心</a></li>
+            <li><a href="#">會員中心</a></li>
+          </ul>
+        </div>
+        <div class="footer-c">
+          <p>&copy;&nbsp;bling&nbsp;bling&nbsp;gift,&nbsp;Inc.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#">
+            <div class="send">
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.1764 0C5.00142 0 0 5.00142 0 11.1764C0 17.3514 5.00142 22.3528 11.1764 22.3528C17.3514 22.3528 22.3528 17.3514 22.3528 11.1764C22.3528 5.00142 17.3514 0 11.1764 0ZM16.5033 7.26605C16.4712 7.71989 16.2145 9.30146 15.9532 11.0114C15.5635 13.4319 15.1464 16.0816 15.1464 16.0816C15.1464 16.0816 15.0822 16.8242 14.5321 16.9526C13.982 17.0809 13.0789 16.4987 12.9184 16.3704C12.7901 16.2741 10.4979 14.8209 9.65444 14.1103C9.42981 13.9178 9.16851 13.5281 9.68653 13.0789C10.8509 12.0153 12.24 10.6905 13.0789 9.84698C13.4685 9.45732 13.8536 8.55422 12.24 9.65444C9.94783 11.236 7.6878 12.7213 7.6878 12.7213C7.6878 12.7213 7.16978 13.0422 6.2025 12.7534C5.23522 12.4646 4.10291 12.0749 4.10291 12.0749C4.10291 12.0749 3.32817 11.589 4.65302 11.0756C4.65302 11.0756 10.2412 8.78343 12.1804 7.9766C12.923 7.6557 15.4444 6.61967 15.4444 6.61967C15.4444 6.61967 16.6088 6.16583 16.5079 7.26605H16.5033Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </a>
+          <a href="#">
+            <div class="facebook">
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.8236 0C5.64864 0 0.647217 5.00142 0.647217 11.1764C0.647217 17.3514 5.64864 22.3528 11.8236 22.3528C17.9986 22.3528 23 17.3514 23 11.1764C23 5.00142 17.994 0 11.8236 0ZM16.2199 5.64322H14.9088C13.6207 5.64322 13.2172 6.44546 13.2172 7.26605V9.21435H16.0962L15.6377 12.217H13.2172V19.4693H9.97159V12.217H7.33565V9.21435H9.97159V6.92681C9.97159 4.32754 11.5211 2.88808 13.8911 2.88808C15.028 2.88808 16.2153 3.08979 16.2153 3.08979V5.64322H16.2199Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <img src="./images/logo-footer.svg" alt="" />
       </div>
     </div>
     <div class="menu-page">
@@ -3607,7 +3658,7 @@
         </div>
         <div class="gender-filter">
           <span class="filter-title">性別</span>
-          <span class="filter-content">所有性別</span>
+          <span class="filter-content" id="gender-span">所有性別</span>
           <span class="arrow">
             <svg
               width="12"
@@ -3625,7 +3676,7 @@
         </div>
         <div class="price-filter">
           <span class="filter-title">金額</span>
-          <span class="filter-content">所有金額</span>
+          <span class="filter-content" id="price-span">所有金額</span>
           <span class="arrow">
             <svg
               width="12"
@@ -3643,7 +3694,7 @@
         </div>
         <div class="color-filter">
           <span class="filter-title">顏色</span>
-          <span class="filter-content">所有顏色</span>
+          <span class="filter-content" id="color-span">所有顏色</span>
           <span class="arrow">
             <svg
               width="12"
@@ -3702,7 +3753,98 @@
         >
       </div>
       <div class="gender-filter-content">
-        <form action=""></form>
+        <form action="">
+          <label for="male" class="gender-filter-radio">
+            <span>
+              <svg
+                width="10"
+                height="25"
+                viewBox="0 0 10 25"
+                fill="#5292b9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_388_988)">
+                  <path
+                    d="M7.3881 6.33521H1.93183C0.866634 6.33521 0 7.20184 0 8.26703V14.3438C0 15.107 0.62257 15.7296 1.38579 15.7296C1.50575 15.7296 1.60503 15.7296 1.68776 15.7296V23.6141C1.68776 24.3773 2.31033 24.9999 3.07355 24.9999C3.83677 24.9999 4.45934 24.3773 4.45934 23.6141V16.3687C4.45934 16.2736 4.53586 16.197 4.63101 16.197H4.68892C4.78407 16.197 4.86059 16.2736 4.86059 16.3687V23.6141C4.86059 24.3773 5.48316 24.9999 6.24638 24.9999C7.0096 24.9999 7.63217 24.3773 7.63217 23.6141V15.7296C7.7149 15.7296 7.81418 15.7296 7.93414 15.7296C8.69736 15.7296 9.31993 15.107 9.31993 14.3438V8.26703C9.31993 7.20184 8.4533 6.33521 7.3881 6.33521Z"
+                    fill="#5292b9"
+                  />
+                  <path
+                    d="M4.65993 5.80169C6.25876 5.80169 7.56181 4.5007 7.56181 2.89981C7.56181 1.29892 6.25876 0 4.65993 0C3.06111 0 1.75806 1.30098 1.75806 2.90188C1.75806 4.50277 3.05904 5.80376 4.65993 5.80376V5.80169Z"
+                    fill="#5292b9"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_388_988">
+                    <rect width="9.31993" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              &nbsp; &nbsp; 男
+            </span>
+            <input type="radio" name="gender" id="male" value="male" />
+          </label>
+          <label for="female" class="gender-filter-radio">
+            <span>
+              <svg
+                width="10"
+                height="25"
+                viewBox="0 0 10 25"
+                fill="#d45a6a"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_388_985)">
+                  <path
+                    d="M4.92873 5.80376C6.5314 5.80376 7.83061 4.50454 7.83061 2.90188C7.83061 1.29921 6.5314 0 4.92873 0C3.32607 0 2.02686 1.29921 2.02686 2.90188C2.02686 4.50454 3.32607 5.80376 4.92873 5.80376Z"
+                    fill="#d45a6a"
+                  />
+                  <path
+                    d="M9.81829 13.0035L8.71173 7.74374C8.54006 6.92675 7.80993 6.33521 6.97639 6.33521H2.88109C2.04755 6.33521 1.31742 6.92675 1.14575 7.74374L0.0391893 13.0035C-0.0704326 13.5289 0.0598727 14.0708 0.397012 14.4865C0.636939 14.7823 0.9596 14.985 1.31742 15.0801L0.860319 17.256H2.53774V17.345L2.94934 23.8933C2.98864 24.5138 3.50572 24.9999 4.12829 24.9999C4.43648 24.9999 4.71777 24.882 4.92667 24.6876C5.13764 24.882 5.41687 24.9999 5.72505 24.9999C6.34762 24.9999 6.8647 24.5138 6.904 23.8933L7.3156 17.3677V17.256H8.99509L8.53592 15.0801C8.89374 14.985 9.2164 14.7802 9.45633 14.4865C9.79554 14.0687 9.92584 13.5289 9.81415 13.0035H9.81829Z"
+                    fill="#d45a6a"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_388_985">
+                    <rect width="9.85563" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              &nbsp; &nbsp; 女
+            </span>
+            <input type="radio" name="gender" id="female" value="female" />
+          </label>
+          <label for="all-gender" class="gender-filter-radio all">
+            <span class="all">&nbsp;&nbsp;全部</span>
+            <input
+              type="radio"
+              name="gender"
+              id="all-gender"
+              value="all-gender"
+            />
+          </label>
+        </form>
+      </div>
+      <div class="filter-footer">
+        <button type="button">
+          搜尋&nbsp;<svg
+            id="_圖層_2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50.14 5.98"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #fff;
+                }
+              </style>
+            </defs>
+            <g id="_圖層_1-2">
+              <path class="cls-1" d="M0,5.48H50" />
+              <path class="cls-1" d="M50,5.48L33,.48" />
+            </g>
+          </svg>
+        </button>
       </div>
     </div>
     <div class="price-filter-detail">
@@ -3724,7 +3866,46 @@
         >
       </div>
       <div class="price-filter-content">
-        <form action=""></form>
+        <form action="">
+          <label for="price-range-one" class="price-filter-radio">
+            <span>NT$500以下</span>
+            <input type="radio" name="price" id="price-range-one" />
+          </label>
+          <label for="price-range-two" class="price-filter-radio">
+            <span>NT$500 - NT$1,000</span>
+            <input type="radio" name="price" id="price-range-two" />
+          </label>
+          <label for="price-range-three" class="price-filter-radio">
+            <span>NT$1,000 - NT$5,000</span>
+            <input type="radio" name="price" id="price-range-three" />
+          </label>
+          <label for="price-range-four" class="price-filter-radio last">
+            <span>NT$5,000以上</span>
+            <input type="radio" name="price" id="price-range-four" />
+          </label>
+        </form>
+      </div>
+      <div class="filter-footer">
+        <button type="button">
+          搜尋&nbsp;<svg
+            id="_圖層_2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50.14 5.98"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #fff;
+                }
+              </style>
+            </defs>
+            <g id="_圖層_1-2">
+              <path class="cls-1" d="M0,5.48H50" />
+              <path class="cls-1" d="M50,5.48L33,.48" />
+            </g>
+          </svg>
+        </button>
       </div>
     </div>
     <div class="color-filter-detail">
@@ -3746,7 +3927,246 @@
         >
       </div>
       <div class="color-filter-content">
-        <form action=""></form>
+        <form action="">
+          <label for="black" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="black" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;黑色</span
+            >
+            <input type="checkbox" name="color" id="black" />
+          </label>
+          <label for="white" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="white" stroke="white" />
+              </svg>
+
+              &nbsp;&nbsp;白色</span
+            >
+            <input type="checkbox" name="color" id="white" />
+          </label>
+          <label for="gray" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#C2C2C2" stroke="white" />
+              </svg>
+
+              &nbsp;&nbsp;灰色</span
+            >
+            <input type="checkbox" name="color" id="gray" />
+          </label>
+          <label for="brown" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#7A482D" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;棕色</span
+            >
+            <input type="checkbox" name="color" id="brown" />
+          </label>
+          <label for="rice" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#F1DAAD" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;米色</span
+            >
+            <input type="checkbox" name="color" id="rice" />
+          </label>
+          <label for="green" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#7EA083" stroke="white" />
+              </svg>
+
+              &nbsp;&nbsp;綠色</span
+            >
+            <input type="checkbox" name="color" id="green" />
+          </label>
+          <label for="blue" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#548FBE" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;藍色</span
+            >
+            <input type="checkbox" name="color" id="blue" />
+          </label>
+          <label for="purple" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#9149AB" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;紫色</span
+            >
+            <input type="checkbox" name="color" id="purple" />
+          </label>
+          <label for="yellow" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#FFCD51" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;黃色</span
+            >
+            <input type="checkbox" name="color" id="yellow" />
+          </label>
+          <label for="pink" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#EE92AD" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;粉色</span
+            >
+            <input type="checkbox" name="color" id="pink" />
+          </label>
+          <label for="red" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#BD392A" stroke="white" />
+              </svg>
+
+              &nbsp;&nbsp;紅色</span
+            >
+            <input type="checkbox" name="color" id="red" />
+          </label>
+          <label for="orange" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#CB6B28" stroke="white" />
+              </svg>
+
+              &nbsp;&nbsp;橘色</span
+            >
+            <input type="checkbox" name="color" id="orange" />
+          </label>
+          <label for="silver" class="color-filter-radio">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#D4CFC6" stroke="white" />
+              </svg>
+              &nbsp;&nbsp;銀色</span
+            >
+            <input type="checkbox" name="color" id="silver" />
+          </label>
+          <label for="gold" class="color-filter-radio last">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="10" cy="10" r="9.5" fill="#FFE39F" stroke="white" />
+              </svg>
+
+              &nbsp;&nbsp;金色</span
+            >
+            <input type="checkbox" name="color" id="gold" />
+          </label>
+        </form>
+      </div>
+      <div class="filter-footer">
+        <button type="button">
+          搜尋&nbsp;<svg
+            id="_圖層_2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50.14 5.98"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #fff;
+                }
+              </style>
+            </defs>
+            <g id="_圖層_1-2">
+              <path class="cls-1" d="M0,5.48H50" />
+              <path class="cls-1" d="M50,5.48L33,.48" />
+            </g>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
