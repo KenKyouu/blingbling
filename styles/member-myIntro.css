@@ -616,48 +616,4 @@
   .wrap .containerr .main .row .col .col-xl-3 .memberbutton ul li.col-lg-12 .btnP {
     padding-left: 20px;
   }
-}
-.j-lightbox .j-lightbox-black {
-  z-index: 20;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.j-lightbox .j-lightbox-bg {
-  z-index: 21;
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  max-width: 400px;
-  font-family: "GenSenRounded-B";
-  font-weight: 900;
-  text-align: center;
-  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
-  padding: 76px 0;
-}
-.j-lightbox .j-lightbox-bg .j-warning {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 30px;
-}
-.j-lightbox .j-lightbox-bg .j-warning .j-warn-icon {
-  margin-right: 20px;
-}
-.j-lightbox .j-lightbox-bg .j-warning .j-warn-text {
-  font-size: 20px;
-  color: #000000;
-}
-.j-lightbox .j-lightbox-bg button {
-  border: none;
-  background-color: #000000;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 30px;
 }/*# sourceMappingURL=member-myIntro.css.map */
