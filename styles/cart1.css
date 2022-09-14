@@ -58,7 +58,7 @@ body {
 }
 
 .footer {
-  margin-top: 30px;
+  margin-top: 50px;
   background-image: url(../images/footer-bg.svg);
   background-repeat: no-repeat;
   background-size: 160%;
@@ -265,7 +265,7 @@ body {
 .j-list {
   width: 100%;
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 3rem;
 }
 .j-list .j-list-bar {
@@ -396,10 +396,15 @@ body {
   display: block;
 }
 
+@media only screen and (min-width: 446px) {
+  .j-list.j-list-info.j-list-item.s-list-icon svg {
+    margin-left: 0;
+  }
+}
 @media only screen and (min-width: 768px) {
   .j-list {
     width: 75%;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
   }
   .j-list .j-list-bar {
     max-height: 100px;
@@ -417,7 +422,7 @@ body {
   .j-list .j-list-info .j-list-title {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    text-align: justify;
     font-family: "Roboto";
     font-size: 14px;
     font-weight: 900;
@@ -427,6 +432,7 @@ body {
   }
   .j-list .j-list-info .j-list-title .j-product {
     width: calc(100% - 90px);
+    margin-left: 38px;
   }
   .j-list .j-list-info .j-list-item {
     width: 100%;
@@ -461,6 +467,9 @@ body {
   }
   .j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-money-single {
     display: inline-block;
+  }
+  .j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-money {
+    margin-left: 10px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -609,6 +618,51 @@ body {
   margin-left: 10px;
 }
 
+.s-package-card-item {
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.s-package-card-item .s-package-card-icon {
+  width: 60px;
+}
+.s-package-card-item .s-package-card-icon svg {
+  width: 50%;
+}
+.s-package-card-item .s-package-card-title {
+  width: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+.s-package-card-item .s-package-card-title p {
+  padding-top: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.s-package-card-item .s-package-card-title .s-package-card-btn button {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: white;
+  border-radius: 10px;
+  width: 30%;
+  line-height: 0.8rem;
+  padding: 10px;
+  text-align: center;
+}
+.s-package-card-item .s-package-card-title .s-package-card-btn button .s-package-card-radio {
+  text-align: center;
+}
+
 .s-subtitle-list-wrap {
   margin-top: 50px;
 }
@@ -661,8 +715,188 @@ body {
   color: white;
 }
 
+@media only screen and (min-width: 768px) {
+  .s-package-card-area {
+    width: 70%;
+  }
+  .s-discount-area {
+    width: 70%;
+    padding-top: 1.5rem;
+  }
+}
+.j-subtotal {
+  position: relative;
+  width: 100%;
+}
+.j-subtotal .j-subtotal-f {
+  width: 100%;
+  position: fixed;
+  border-radius: 20px 20px 0 0;
+  background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+  box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+}
+.j-subtotal .j-subtotal-f .j-sum-item {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon svg {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%);
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(2) {
+  display: none;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail {
+  padding: 0.5rem;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 900;
+  width: 85%;
+  border-bottom: 1px solid #4c4948;
+  display: none;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail .j-detail {
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail .j-detail .j-pl {
+  padding-left: 0.6rem;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total {
+  padding: 1rem 0 2rem;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a {
+  display: block;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a button {
+  border: none;
+  background-color: #2d827d;
+  color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 18px;
+  font-weight: 900;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a button span {
+  margin-left: 0.5rem;
+}
+.j-subtotal .j-fixed-bg {
+  display: none;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(1) {
+  display: none;
+}
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(2) {
+  display: inline-block;
+}
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-amount-detail {
+  display: flex;
+  flex-direction: column;
+}
+.j-subtotal.j-open .j-fixed-bg {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-subtotal {
+    display: none;
+  }
+}
+.j-summary-list {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-summary-list {
+    display: block;
+    outline: 2px solid #554d49;
+    position: fixed;
+    top: 40vh;
+    right: 3vw;
+    width: 25%;
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+  }
+  .j-summary-list .j-bling-img {
+    position: absolute;
+    transform: translateY(-33%);
+    right: -5vw;
+    z-index: -1;
+  }
+  .j-summary-list .j-summary-title {
+    border-radius: 10px 10px 0 0;
+    padding: 15px 0;
+    text-align: center;
+    font-family: "GenSenRounded-B";
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #554d49;
+  }
+  .j-summary-list .j-summary-info {
+    background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+    padding: 30px 5% 0px;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .j-summary-list .j-summary-info .j-summary-items {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #554d49;
+  }
+  .j-summary-list .j-summary-info .j-summary-items .j-summary-item {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .j-summary-list .j-summary-info .j-summary-items .j-summary-item .j-pl {
+    padding-left: 0.8rem;
+  }
+  .j-summary-list .j-total-kv {
+    background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+    border-radius: 0 0 10px 10px;
+    padding: 30px 5% 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .j-summary-list .j-total-kv .j-pl {
+    padding-left: 0.8rem;
+  }
+}
 .s-additional-product-wrap {
-  margin-top: 80px;
+  margin-top: 100px;
+  margin-bottom: 120px;
 }
 .s-additional-product-wrap .container {
   width: 100%;
@@ -690,14 +924,13 @@ body {
   display: flex;
   margin-top: -100px;
   flex-wrap: nowrap;
-  overflow: hidden;
-  background: url(../images/cart1-add-mb-bn.svg) left center no-repeat;
+  background: url(../images/cart1-add-bn-mb.svg) left center no-repeat;
   background-position-x: 0rem;
-  background-position-y: 7.45rem;
+  background-position-y: 8rem;
   background-size: contain;
 }
 .additional-product-row .product-col {
-  padding: 10px;
+  padding: 5px;
 }
 .additional-product-row .poduct-card .img-wrap {
   width: 100%;
@@ -716,7 +949,7 @@ body {
 .additional-product-row .poduct-card .info-wrap h3,
 .additional-product-row .poduct-card .info-wrap p {
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 13px;
   color: #000000;
   font-weight: 700;
   text-align: left;
@@ -730,9 +963,10 @@ body {
   align-items: center;
 }
 .additional-product-row .poduct-card .info-wrap .info-price-btn button {
-  width: 45px;
-  height: 22px;
   border: 0;
   border-radius: 10px;
+  line-height: 0.8rem;
+  text-align: center;
+  width: 45%;
   background-color: #2d827d;
 }/*# sourceMappingURL=cart1.css.map */

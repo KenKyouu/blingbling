@@ -200,6 +200,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 10px;
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap .info-price-btn button {
   width: 60px;

@@ -158,6 +158,176 @@ body {
   border-bottom: 1px solid #000000;
 }
 
+.j-subtotal {
+  position: relative;
+  width: 100%;
+}
+.j-subtotal .j-subtotal-f {
+  width: 100%;
+  position: fixed;
+  border-radius: 20px 20px 0 0;
+  background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+  box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+}
+.j-subtotal .j-subtotal-f .j-sum-item {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon svg {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%);
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(2) {
+  display: none;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail {
+  padding: 0.5rem;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 900;
+  width: 85%;
+  border-bottom: 1px solid #4c4948;
+  display: none;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail .j-detail {
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail .j-detail .j-pl {
+  padding-left: 0.6rem;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total {
+  padding: 1rem 0 2rem;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a {
+  display: block;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a button {
+  border: none;
+  background-color: #2d827d;
+  color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 18px;
+  font-weight: 900;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a button span {
+  margin-left: 0.5rem;
+}
+.j-subtotal .j-fixed-bg {
+  display: none;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(1) {
+  display: none;
+}
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(2) {
+  display: inline-block;
+}
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-amount-detail {
+  display: flex;
+  flex-direction: column;
+}
+.j-subtotal.j-open .j-fixed-bg {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-subtotal {
+    display: none;
+  }
+}
+.j-summary-list {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-summary-list {
+    display: block;
+    outline: 2px solid #554d49;
+    position: fixed;
+    top: 40vh;
+    right: 3vw;
+    width: 25%;
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+  }
+  .j-summary-list .j-bling-img {
+    position: absolute;
+    transform: translateY(-33%);
+    right: -5vw;
+    z-index: -1;
+  }
+  .j-summary-list .j-summary-title {
+    border-radius: 10px 10px 0 0;
+    padding: 15px 0;
+    text-align: center;
+    font-family: "GenSenRounded-B";
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #554d49;
+  }
+  .j-summary-list .j-summary-info {
+    background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+    padding: 30px 5% 0px;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .j-summary-list .j-summary-info .j-summary-items {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #554d49;
+  }
+  .j-summary-list .j-summary-info .j-summary-items .j-summary-item {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .j-summary-list .j-summary-info .j-summary-items .j-summary-item .j-pl {
+    padding-left: 0.8rem;
+  }
+  .j-summary-list .j-total-kv {
+    background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+    border-radius: 0 0 10px 10px;
+    padding: 30px 5% 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .j-summary-list .j-total-kv .j-pl {
+    padding-left: 0.8rem;
+  }
+}
 .s-payment-info-wrap {
   margin-top: 50px;
 }
@@ -385,7 +555,7 @@ body {
 .j-progress-bar .j-step-up .j-step1-num .j-num3,
 .j-progress-bar .j-step-up .j-step2-num .j-num3,
 .j-progress-bar .j-step-up .j-step3-num .j-num3 {
-    border: 3px solid #A4A4A4;
+    border: 3px solid #000000;
   }
   .j-progress-bar .j-step-down .j-step-text,
 .j-progress-bar .j-step-down .j-step3-text {
@@ -395,7 +565,7 @@ body {
 .j-list {
   width: 100%;
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 3rem;
 }
 .j-list .j-list-bar {
