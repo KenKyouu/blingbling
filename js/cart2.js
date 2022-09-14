@@ -76,3 +76,25 @@ $(".creditcard").on("click", function(){
         $(this).addClass("flipped");
     }
 });
+
+//同訂購人資料
+function copyData(){
+    if($('#cbSameOrderer').prop('checked')){
+        console.log('check');
+
+        const ordererName = document.getElementById('ordererName').value;
+        document.getElementById('recipientName').value = ordererName;
+        const ordererMobile = document.getElementById('ordererMobile').value;
+        document.getElementById('recipientMobile').value = ordererMobile;
+        const ordererTel1 = document.getElementById('ordererTel1').value;
+        document.getElementById('recipientTel1').value = ordererTel1;
+        const ordererTel2 = document.getElementById('ordererTel2').value;
+        document.getElementById('recipientTel2').value = ordererTel2;
+    }else{
+        console.log('not');
+        document.getElementById('recipientName').value ='';
+        document.getElementById('recipientMobile').value = '';
+        document.getElementById('recipientTel1').value = '';
+        document.getElementById('recipientTel2').value = '';
+    }
+}
