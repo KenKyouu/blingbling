@@ -18,25 +18,26 @@
   width: 100%;
   height: 100vh;
 }
-.wrap .container .main .row {
+.wrap .containerr .main .row {
   height: 100vh;
+  margin: 0;
 }
-.wrap .container .main .row .col {
+.wrap .containerr .main .row .col {
   background-color: #2d827d;
   padding: 0;
 }
-.wrap .container .main .row .col .myName {
+.wrap .containerr .main .row .col .left .myName {
   padding-top: 80px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.wrap .container .main .row .col .myName .photo {
+.wrap .containerr .main .row .col .left .myName .photo {
   display: flex;
   position: relative;
 }
-.wrap .container .main .row .col .myName .photo .photoborder {
+.wrap .containerr .main .row .col .left .myName .photo .photoborder {
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -45,17 +46,17 @@
   justify-content: center;
   align-items: center;
 }
-.wrap .container .main .row .col .myName .photo .photoborder .myphoto {
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
   width: 70px;
   height: 70px;
   border-radius: 100%;
   background-color: #ffffff;
   overflow: hidden;
 }
-.wrap .container .main .row .col .myName .photo .photoborder .myphoto img.photo {
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
 }
-.wrap .container .main .row .col .myName .photo .photoedit {
+.wrap .containerr .main .row .col .left .myName .photo .photoedit {
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -68,13 +69,13 @@
   right: -3px;
   bottom: 0;
 }
-.wrap .container .main .row .col .myName h5 {
+.wrap .containerr .main .row .col .left .myName h5 {
   font-family: "GenSenRounded-B";
   font-size: 24px;
   color: #000000;
   padding: 13px 0 13px 0;
 }
-.wrap .container .main .row .col .myName a.coin {
+.wrap .containerr .main .row .col .left .myName a.coin {
   font-family: "Roboto";
   font-size: 16px;
   color: #000000;
@@ -83,41 +84,46 @@
   padding-bottom: 7px;
   text-decoration: none;
 }
-.wrap .container .main .row .col .myName a.coin svg {
+.wrap .containerr .main .row .col .left .myName a.coin svg {
   margin-right: 10px;
 }
-.wrap .container .main .row .col .memberbutton {
+.wrap .containerr .main .row .col .left .memberbutton {
   width: 100%;
   padding: 0px 30px;
 }
-.wrap .container .main .row .col .memberbutton ul {
+.wrap .containerr .main .row .col .left .memberbutton ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.wrap .container .main .row .col .memberbutton ul li.btn {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   padding: 10px 0;
 }
-.wrap .container .main .row .col .memberbutton ul li.btn a {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
   width: 64px;
   height: 64px;
   border-radius: 10px;
   text-decoration: none;
-  font-family: "GenSenRounded-M";
-  font-size: 14px;
-  color: #4c4948;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
   justify-content: center;
 }
-.wrap .container .main .row .col .memberbutton ul li.btn a svg {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
 }
-.wrap .container .main .row .col .whiteBg {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #4c4948;
+}
+.wrap .containerr .main .row .col .whiteBg {
   width: 100%;
   height: auto;
   background-color: #ffffff;
@@ -129,26 +135,31 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
-.wrap .container .main .row .col .whiteBg .backToList {
+.wrap .containerr .main .row .col .whiteBg a.btl {
+  text-decoration: none;
+  text-align: left;
+  justify-content: left;
+}
+.wrap .containerr .main .row .col .whiteBg a.btl .backToList {
   width: 100%;
   display: flex;
   align-items: center;
   text-align: left;
-  padding-top: 13px;
+  padding-top: 25px;
 }
-.wrap .container .main .row .col .whiteBg .backToList p {
+.wrap .containerr .main .row .col .whiteBg a.btl .backToList p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #2d827d;
   padding-left: 15px;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendName {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName {
   width: 100%;
   display: flex;
   align-items: center;
@@ -156,58 +167,58 @@
   justify-content: center;
   padding-bottom: 13px;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendName .fn {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .fn {
   width: 60%;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendName .fn p {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .fn p {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #4c4948;
   text-align: right;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendName .friendEditIcon {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon {
   width: 40%;
   margin-left: 20px;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendGenderBirth {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth {
   display: flex;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendGenderBirth .friendGender p {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth .friendGender p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   padding-right: 20px;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendGenderBirth .friendBirth p {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth .friendBirth p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendEmail {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendEmail {
   padding-top: 13px;
   padding-bottom: 18px;
 }
-.wrap .container .main .row .col .whiteBg .friendDetails .friendEmail p {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendEmail p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
-.wrap .container .main .row .col .whiteBg .friendtags {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.wrap .container .main .row .col .whiteBg .friendtags .tagsName {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tagsName {
   padding: 10px 0;
 }
-.wrap .container .main .row .col .whiteBg .friendtags .tagsName p {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tagsName p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #2d827d;
 }
-.wrap .container .main .row .col .whiteBg .friendtags .tags {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tags {
   width: 100%;
   height: auto;
   display: flex;
@@ -215,31 +226,192 @@
   justify-content: space-around;
   margin-bottom: 15px;
 }
-.wrap .container .main .row .col .whiteBg .friendtags .tags .tag {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tags .tag {
   width: auto;
   height: auto;
   border-radius: 100px;
   border: 3px solid #4c4948;
   padding: 6px 9px 6px 9px;
 }
-.wrap .container .main .row .col .whiteBg .friendtags .tags .tag p {
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tags .tag p {
   font-family: "GenSenRounded-B";
   font-size: 10px;
   color: #4c4948;
   text-align: center;
 }
-.wrap .container .main .row .col .whiteBg .friendWishList {
+.wrap .containerr .main .row .col .whiteBg .friendWishList {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 10px;
+  align-items: center;
 }
-.wrap .container .main .row .col .whiteBg .friendWishList .wishList {
+.wrap .containerr .main .row .col .whiteBg .friendWishList .wishList {
   padding: 9px;
 }
-.wrap .container .main .row .col .whiteBg .friendWishList .wishList img {
-  width: 60px;
-  height: 86.8px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.wrap .containerr .main .row .col .whiteBg .friendWishList .wishList img {
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .wrap .containerr .main .row .col .whiteBg {
+    padding: 0 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrap {
+    background-image: url(../images/other_bg_paper.png);
+  }
+  .wrap .containerr {
+    margin: 0 5%;
+  }
+  .wrap .containerr .main .row {
+    flex-wrap: nowrap;
+  }
+  .wrap .containerr .main .row .col {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 {
+    height: 70%;
+    border-radius: 10px;
+    background-color: #2d827d;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
+    top: -50px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder {
+    width: 100px;
+    height: 100px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto {
+    width: 86px;
+    height: 86px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto img.photo {
+    width: 120%;
+    position: static;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoedit {
+    right: -5px;
+    bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
+    color: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName a.coin {
+    color: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton {
+    padding: 0 0 0 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
+    width: 100%;
+    flex-wrap: none;
+    justify-content: right;
+    padding-top: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
+    width: 100%;
+    padding: 0;
+    margin: 6px 0 6px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
+    width: 100%;
+    height: 50px;
+    border-radius: 100px 0 0 100px;
+    background-color: #ffffff;
+    flex-direction: row;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
+    width: 35%;
+    text-align: right;
+    padding-right: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
+    width: 65%;
+    font-family: "GenSenRounded-B";
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails {
+    justify-content: left;
+    align-items: flex-start;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendName .fn p {
+    text-align: left;
+    font-size: 32px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendName .friendEditIcon svg {
+    width: 15px;
+    height: 15px;
+    text-align: left;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList {
+    width: 100%;
+    overflow: scroll;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 {
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 img.wish {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrap .containerr {
+    margin: 0 10%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .wrap .containerr {
+    margin: 0 15%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .wrap .containerr {
+    margin: 0 18%;
+  }
+  .wrap .containerr .main .row .col .col-xl-3 .memberbutton ul li.col-lg-12 .btnP {
+    padding-left: 20px;
+  }
 }/*# sourceMappingURL=member-myFriendDetails.css.map */
