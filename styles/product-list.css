@@ -1,28 +1,50 @@
 * {
+<<<<<<< HEAD
   box-sizing: border-box;
+=======
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 body {
   background-image: url(../images/other_bg_paper.png);
 }
 
+<<<<<<< HEAD
 .header {
+=======
+.header .up {
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   position: fixed;
   z-index: 100;
   width: 100%;
   height: 56.5px;
+<<<<<<< HEAD
   background-color: #000000;
   opacity: 80%;
   border-radius: 0 0 20px 20px;
@@ -61,16 +83,158 @@ body {
   margin-bottom: 5px;
 }
 
+=======
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .header .up {
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 0 5%;
+  }
+}
+
+.header .up .left {
+  padding-left: 20px;
+  width: 30%;
+}
+
+.header .up .left h1.logo {
+  width: 100%;
+}
+
+.header .up .left h1.logo a {
+  width: 100%;
+}
+
+.header .up .left h1.logo a img {
+  width: 150px;
+}
+
+.header .up .right-mobile {
+  padding-right: 10px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .header .up .right-mobile {
+    display: none;
+  }
+}
+
+.header .up .right-mobile ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .up .right-mobile ul li {
+  margin: 0 10px;
+}
+
+.header .up .right-mobile ul li.cart {
+  margin-bottom: 5px;
+}
+
+.header .up .right-pc {
+  padding-right: 10px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .header .up .right-pc {
+    display: none;
+  }
+}
+
+.header .up .right-pc .mockup {
+  cursor: pointer;
+  padding-right: 20px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.header .up .right-pc ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+  border-left: 1px solid #ffffff;
+}
+
+.header .up .right-pc ul li {
+  margin: 0 10px;
+}
+
+.header .up .right-pc ul a svg {
+  width: 80%;
+}
+
+.header .down {
+  position: relative;
+}
+
+.header .down .header-mockup {
+  position: fixed;
+  z-index: 205;
+  top: 56.5px;
+  width: 90%;
+  margin: 0 5%;
+  border-radius: 0 0 10px 10px;
+  background-color: #2d827d;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .banner {
   width: 100%;
   height: 160px;
   background-image: url("https://picsum.photos/id/1008/375/160");
   position: relative;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .banner .class {
   padding: 5px 15px;
   border: 1px solid #ffffff;
   border-radius: 4px;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,17 +243,40 @@ body {
   bottom: 20px;
   transform: translateX(-50%);
 }
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .banner .class h3 {
   padding-bottom: 3px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .slider {
   width: 100%;
   overflow: hidden;
   border-bottom: 2px solid #c2c2c2;
 }
+<<<<<<< HEAD
 .content .slider .slider-bar {
   width: 650px;
   padding: 0 15px;
@@ -100,20 +287,50 @@ body {
   display: flex;
   overflow: scroll;
 }
+=======
+
+.content .slider .slider-bar {
+  padding: 0 15px;
+  overflow: scroll;
+}
+
+.content .slider .slider-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .slider .slider-bar ul li {
   padding: 5px 15px;
   margin: 15px 10px;
   border: 2px solid #000000;
   border-radius: 15px;
+<<<<<<< HEAD
 }
+=======
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .slider .slider-bar ul li a {
   color: #000000;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
+<<<<<<< HEAD
 .content .filter {
   padding: 15px 0 15px 15px;
 }
+=======
+
+.content .filter {
+  padding: 15px 0 15px 15px;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .filter button.filter {
   padding: 5px 8px;
   border: 2px solid #000000;
@@ -123,6 +340,7 @@ body {
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
+<<<<<<< HEAD
 .content .product-list {
   width: 100%;
   display: flex;
@@ -130,11 +348,34 @@ body {
   padding: 0 6px;
   flex-wrap: wrap;
 }
+=======
+
+.content .product-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 6px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .product-list a {
+  text-decoration: none;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card {
   width: 100%;
   margin: auto;
   margin-bottom: 15px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-image {
   width: 170px;
   height: 170px;
@@ -143,16 +384,28 @@ body {
   background-size: cover;
   position: relative;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-image .heart {
   cursor: default;
   position: absolute;
   right: 3px;
   bottom: 3px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-title {
   width: 170px;
   padding: 5px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-title h3 {
   color: #000000;
   font-family: "GenSenRounded-M";
@@ -162,16 +415,28 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-price {
   width: 170px;
   padding: 5px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-price p {
   color: #554d49;
   font-family: "GenSenRounded-M";
   font-size: 16px;
   font-weight: 900;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .content .product-list a .product-card .product-price p::before {
   display: inline-block;
   content: "NT$";
@@ -187,6 +452,7 @@ body {
   width: 100%;
   height: 257px;
 }
+<<<<<<< HEAD
 .footer .footer-logo {
   padding-top: 30px;
   width: 20%;
@@ -199,16 +465,51 @@ body {
   justify-content: space-between;
   border-bottom: 2px solid #ffffff;
 }
+=======
+
+.footer .footer-logo {
+  padding-top: 30px;
+  width: 85px;
+  margin: auto;
+}
+
+.footer .footer-nav ul {
+  margin: 35px 40px 0 40px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #ffffff;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .footer .footer-nav ul li a {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
+<<<<<<< HEAD
 .footer .footer-social {
   margin: 35px 160px 0 160px;
   display: flex;
   justify-content: space-between;
 }
+=======
+
+.footer .footer-social {
+  margin: 35px 160px 0 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .footer .footer-c {
   margin-top: 35px;
   text-align: center;
@@ -217,28 +518,221 @@ body {
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 .filter-page {
   background-color: #2d827d;
   width: 100%;
   height: 100vh;
   position: absolute;
+=======
+.menu-page {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  z-index: 201;
+}
+
+.menu-page .menu-left {
+  width: calc(100% - 320px);
+  height: 100%;
+  padding-right: 10px;
+}
+
+.menu-page .menu-left .close {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.menu-page .menu-right {
+  width: 320px;
+  height: 100%;
+}
+
+.menu-page .menu-right .menu-header {
+  width: 100%;
+  height: 56.5px;
+  background-color: #2d827d;
+}
+
+.menu-page .menu-right .menu-body {
+  width: 100%;
+  height: calc(100vh - 56.5px);
+  background-color: #ffffff;
+  border-radius: 0 0 0 40px;
+}
+
+.menu-page .menu-right .menu-body .member-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-picture {
+  width: 90px;
+  height: 90px;
+  border: 5px solid #7cb2af;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-picture img {
+  width: 100%;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-content {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+  font-family: "Roboto";
+}
+
+.menu-page .menu-right .menu-body .member-info .member-content .member-name {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.menu-page .menu-right .menu-body .member-info .member-content .member-voucher {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.menu-page .menu-right .menu-body .product-class-bar {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #c2c2c2;
+}
+
+.menu-page .menu-right .menu-body .product-class-bar p {
+  color: #554d49;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.menu-page .menu-right .menu-body .product-class {
+  width: 100%;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select .class-image {
+  padding: 10px 0 0 0;
+  margin-left: 20px;
+  width: 8%;
+  position: relative;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select .class-image img {
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+}
+
+.menu-page .menu-right .menu-body .product-class .class-select .class-name {
+  width: 100%;
+  margin-left: 10px;
+  padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.menu-page .menu-right .menu-body .menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 60px 30px 0 30px;
+}
+
+.menu-page .menu-right .menu-body .menu-button a .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2d827d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-page,
+.gender-filter-detail,
+.price-filter-detail,
+.color-filter-detail {
+  background-color: #2d827d;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   top: 0;
   right: -100%;
   z-index: 200;
   display: none;
 }
+<<<<<<< HEAD
 .filter-page .filter-header {
+=======
+
+.filter-page .filter-header,
+.gender-filter-detail .filter-header,
+.price-filter-detail .filter-header,
+.color-filter-detail .filter-header {
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   width: 100%;
   padding: 5px 0;
   background-color: #2d827d;
   z-index: 120;
   position: fixed;
 }
+<<<<<<< HEAD
 .filter-page .filter-header span {
+=======
+
+.filter-page .filter-header span,
+.gender-filter-detail .filter-header span,
+.price-filter-detail .filter-header span,
+.color-filter-detail .filter-header span {
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   padding: 10px 10px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -255,6 +749,49 @@ body {
 .filter-page .filter-class .button-filter .new,
 .filter-page .filter-class .button-filter .sale,
 .filter-page .filter-class .button-filter .theme {
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.filter-page .filter-class,
+.gender-filter-detail .filter-class,
+.price-filter-detail .filter-class,
+.color-filter-detail .filter-class {
+  margin-top: 50px;
+}
+
+.filter-page .filter-class .button-filter,
+.gender-filter-detail .filter-class .button-filter,
+.price-filter-detail .filter-class .button-filter,
+.color-filter-detail .filter-class .button-filter {
+  padding: 20px;
+  border-bottom: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.filter-page .filter-class .button-filter .new,
+.filter-page .filter-class .button-filter .sale,
+.filter-page .filter-class .button-filter .theme,
+.gender-filter-detail .filter-class .button-filter .new,
+.gender-filter-detail .filter-class .button-filter .sale,
+.gender-filter-detail .filter-class .button-filter .theme,
+.price-filter-detail .filter-class .button-filter .new,
+.price-filter-detail .filter-class .button-filter .sale,
+.price-filter-detail .filter-class .button-filter .theme,
+.color-filter-detail .filter-class .button-filter .new,
+.color-filter-detail .filter-class .button-filter .sale,
+.color-filter-detail .filter-class .button-filter .theme {
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   padding: 5px 15px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
@@ -263,24 +800,64 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .filter-page .filter-class .gender-filter,
 .filter-page .filter-class .price-filter,
 .filter-page .filter-class .color-filter {
   padding: 15px 0;
   display: flex;
   align-items: center;
+=======
+
+.filter-page .filter-class .gender-filter,
+.filter-page .filter-class .price-filter,
+.filter-page .filter-class .color-filter,
+.gender-filter-detail .filter-class .gender-filter,
+.gender-filter-detail .filter-class .price-filter,
+.gender-filter-detail .filter-class .color-filter,
+.price-filter-detail .filter-class .gender-filter,
+.price-filter-detail .filter-class .price-filter,
+.price-filter-detail .filter-class .color-filter,
+.color-filter-detail .filter-class .gender-filter,
+.color-filter-detail .filter-class .price-filter,
+.color-filter-detail .filter-class .color-filter {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   position: relative;
   border-bottom: 1px solid #ffffff;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .filter-page .filter-class .gender-filter span,
 .filter-page .filter-class .price-filter span,
 .filter-page .filter-class .color-filter span {
+=======
+
+.filter-page .filter-class .gender-filter span,
+.filter-page .filter-class .price-filter span,
+.filter-page .filter-class .color-filter span,
+.gender-filter-detail .filter-class .gender-filter span,
+.gender-filter-detail .filter-class .price-filter span,
+.gender-filter-detail .filter-class .color-filter span,
+.price-filter-detail .filter-class .gender-filter span,
+.price-filter-detail .filter-class .price-filter span,
+.price-filter-detail .filter-class .color-filter span,
+.color-filter-detail .filter-class .gender-filter span,
+.color-filter-detail .filter-class .price-filter span,
+.color-filter-detail .filter-class .color-filter span {
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   margin-left: 20px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
+<<<<<<< HEAD
 .filter-page .filter-class .gender-filter span.content,
 .filter-page .filter-class .price-filter span.content,
 .filter-page .filter-class .color-filter span.content {
@@ -289,10 +866,78 @@ body {
 .filter-page .filter-class .gender-filter span.arrow,
 .filter-page .filter-class .price-filter span.arrow,
 .filter-page .filter-class .color-filter span.arrow {
+=======
+
+.filter-page .filter-class .gender-filter span.filter-content,
+.filter-page .filter-class .price-filter span.filter-content,
+.filter-page .filter-class .color-filter span.filter-content,
+.gender-filter-detail .filter-class .gender-filter span.filter-content,
+.gender-filter-detail .filter-class .price-filter span.filter-content,
+.gender-filter-detail .filter-class .color-filter span.filter-content,
+.price-filter-detail .filter-class .gender-filter span.filter-content,
+.price-filter-detail .filter-class .price-filter span.filter-content,
+.price-filter-detail .filter-class .color-filter span.filter-content,
+.color-filter-detail .filter-class .gender-filter span.filter-content,
+.color-filter-detail .filter-class .price-filter span.filter-content,
+.color-filter-detail .filter-class .color-filter span.filter-content {
+  color: #c2c2c2;
+}
+
+.filter-page .filter-class .gender-filter span.arrow,
+.filter-page .filter-class .price-filter span.arrow,
+.filter-page .filter-class .color-filter span.arrow,
+.gender-filter-detail .filter-class .gender-filter span.arrow,
+.gender-filter-detail .filter-class .price-filter span.arrow,
+.gender-filter-detail .filter-class .color-filter span.arrow,
+.price-filter-detail .filter-class .gender-filter span.arrow,
+.price-filter-detail .filter-class .price-filter span.arrow,
+.price-filter-detail .filter-class .color-filter span.arrow,
+.color-filter-detail .filter-class .gender-filter span.arrow,
+.color-filter-detail .filter-class .price-filter span.arrow,
+.color-filter-detail .filter-class .color-filter span.arrow {
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
   position: absolute;
   right: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.filter-page .filter-footer,
+.gender-filter-detail .filter-footer,
+.price-filter-detail .filter-footer,
+.color-filter-detail .filter-footer {
+  position: absolute;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.filter-page .filter-footer button,
+.gender-filter-detail .filter-footer button,
+.price-filter-detail .filter-footer button,
+.color-filter-detail .filter-footer button {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  background-color: black;
+  border: 2px solid #000000;
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.filter-page .filter-footer button svg,
+.gender-filter-detail .filter-footer button svg,
+.price-filter-detail .filter-footer button svg,
+.color-filter-detail .filter-footer button svg {
+  width: 20%;
+}
+
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
 .filter-show {
   right: 0;
   display: block;
@@ -300,4 +945,17 @@ body {
 
 .list-hidden {
   display: none;
+<<<<<<< HEAD
 }/*# sourceMappingURL=product-list.css.map */
+=======
+}
+
+.menu-show {
+  right: 0;
+}
+
+.body-hidden {
+  overflow: hidden;
+}
+/*# sourceMappingURL=product-list.css.map */
+>>>>>>> dd2f51045a2dcf308e4850c575967d53889f8f86
