@@ -21,9 +21,11 @@ $('.j-upicon').on('click',function(){
 //logistics 切換
 if($('.j-convenience').prop("checked")==false){
     $('.j-store-info').hide();
-    }else{
-        $('.j-store-info').show();
-    }
+    $('.j-money-pay').hide();
+}else{
+    $('.j-store-info').show();
+    $('.j-money-pay').show();
+}
 
 $('input:radio[name="delivery"]').change(function(){
     // console.log('check');
@@ -41,11 +43,13 @@ $('input:radio[name="delivery"]').change(function(){
     }
     if($('.j-convenience').prop("checked")==false){
         $('.j-store-info').slideUp(400);
+        $('.j-money-pay').hide();
         setTimeout(function(){
             $('.j-store-info').hide();
         },800);
     }else{
         $('.j-store-info').slideDown(400);
+        $('.j-money-pay').show();
         setTimeout(function(){
             $('.j-store-info').show();
         },800);
@@ -80,7 +84,7 @@ $(".creditcard").on("click", function(){
 //同訂購人資料
 function copyData(){
     if($('#cbSameOrderer').prop('checked')){
-        console.log('check');
+        // console.log('check');
 
         const ordererName = document.getElementById('ordererName').value;
         document.getElementById('recipientName').value = ordererName;
@@ -91,10 +95,22 @@ function copyData(){
         const ordererTel2 = document.getElementById('ordererTel2').value;
         document.getElementById('recipientTel2').value = ordererTel2;
     }else{
-        console.log('not');
+        // console.log('not');
         document.getElementById('recipientName').value ='';
         document.getElementById('recipientMobile').value = '';
         document.getElementById('recipientTel1').value = '';
         document.getElementById('recipientTel2').value = '';
     }
+    if($('#j-convenience').prop('checked')){
+        // console.log('check');
+        const recipientName = document.getElementById('recipientName').value;
+        document.getElementById('storeRecipientName').value = recipientName;
+        const recipientMobile = document.getElementById('recipientMobile').value;
+        document.getElementById('storeRecipientMobile').value = recipientMobile;
+    }else{
+        document.getElementById('storeRecipientName').value ='';
+        document.getElementById('storeRecipientMobile').value ='';
+    }
 }
+
+

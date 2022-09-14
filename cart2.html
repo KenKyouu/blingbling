@@ -403,19 +403,19 @@
                                             <div class="j-d-title">
 
                                                 <label class="j-point">超商取貨
-                                                    <input type="radio" name="delivery" class="j-convenience" >
+                                                    <input type="radio" name="delivery" class="j-convenience" id="j-convenience" onchange="copyData()"  >
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
                                             </div>
                                             <ul class="j-store-info">
                                                 <li class="j-space1">
-                                                    <label for="recipientName"  class="j-label j-label-required">收件人姓名(本名)</label>
-                                                    <input type="text" name="recipientName" id="recipientName" value="" class="j-input" placeholder="收件人姓名(本名)">
+                                                    <label for="storeRecipientName"  class="j-label j-label-required">收件人姓名(本名)</label>
+                                                    <input type="text" name="storeRecipientName" id="storeRecipientName" value="" class="j-input" placeholder="收件人姓名(本名)">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-space">
-                                                    <label for="recipientMobile"  class="j-label j-label-required">收件人手機</label>
-                                                    <input type="text" name="recipientMobile" id="recipientMobile" class="j-input" placeholder="收件人手機">
+                                                    <label for="storeRecipientMobile"  class="j-label j-label-required">收件人手機</label>
+                                                    <input type="text" name="storeRecipientMobile" id="storeRecipientMobile" class="j-input" placeholder="收件人手機">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-store-btn">
@@ -694,7 +694,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <!-- <div class="j-lightbox">
                                 <div class="j-lightbox-black"></div>
                                 <div class="j-lightbox-bg">
