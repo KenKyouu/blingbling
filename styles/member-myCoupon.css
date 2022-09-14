@@ -18,25 +18,25 @@
   width: 100%;
   height: 100vh;
 }
-.wrap .container .main .row {
+.wrap .containerr .main .row {
   height: 100vh;
 }
-.wrap .container .main .row .col {
+.wrap .containerr .main .row .col {
   background-color: #2d827d;
   padding: 0;
 }
-.wrap .container .main .row .col .myName {
+.wrap .containerr .main .row .col .left .myName {
   padding-top: 80px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.wrap .container .main .row .col .myName .photo {
+.wrap .containerr .main .row .col .left .myName .photo {
   display: flex;
   position: relative;
 }
-.wrap .container .main .row .col .myName .photo .photoborder {
+.wrap .containerr .main .row .col .left .myName .photo .photoborder {
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -45,17 +45,17 @@
   justify-content: center;
   align-items: center;
 }
-.wrap .container .main .row .col .myName .photo .photoborder .myphoto {
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
   width: 70px;
   height: 70px;
   border-radius: 100%;
   background-color: #ffffff;
   overflow: hidden;
 }
-.wrap .container .main .row .col .myName .photo .photoborder .myphoto img.photo {
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
 }
-.wrap .container .main .row .col .myName .photo .photoedit {
+.wrap .containerr .main .row .col .left .myName .photo .photoedit {
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -68,13 +68,13 @@
   right: -3px;
   bottom: 0;
 }
-.wrap .container .main .row .col .myName h5 {
+.wrap .containerr .main .row .col .left .myName h5 {
   font-family: "GenSenRounded-B";
   font-size: 24px;
   color: #000000;
   padding: 13px 0 13px 0;
 }
-.wrap .container .main .row .col .myName a.coin {
+.wrap .containerr .main .row .col .left .myName a.coin {
   font-family: "Roboto";
   font-size: 16px;
   color: #000000;
@@ -83,41 +83,46 @@
   padding-bottom: 7px;
   text-decoration: none;
 }
-.wrap .container .main .row .col .myName a.coin svg {
+.wrap .containerr .main .row .col .left .myName a.coin svg {
   margin-right: 10px;
 }
-.wrap .container .main .row .col .memberbutton {
+.wrap .containerr .main .row .col .left .memberbutton {
   width: 100%;
   padding: 0px 30px;
 }
-.wrap .container .main .row .col .memberbutton ul {
+.wrap .containerr .main .row .col .left .memberbutton ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.wrap .container .main .row .col .memberbutton ul li.btn {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   padding: 10px 0;
 }
-.wrap .container .main .row .col .memberbutton ul li.btn a {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
   width: 64px;
   height: 64px;
   border-radius: 10px;
   text-decoration: none;
-  font-family: "GenSenRounded-M";
-  font-size: 14px;
-  color: #4c4948;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
   justify-content: center;
 }
-.wrap .container .main .row .col .memberbutton ul li.btn a svg {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
 }
-.wrap .container .main .row .col .whiteBg {
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #4c4948;
+}
+.wrap .containerr .main .row .col .whiteBg {
   width: 100%;
   height: auto;
   background-color: #ffffff;
@@ -129,7 +134,7 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
-.wrap .container .main .row .col .whiteBg .getcoupon {
+.wrap .containerr .main .row .col .whiteBg .getcoupon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,13 +145,13 @@
   border-radius: 10px;
   background-color: rgba(126, 160, 131, 0.1882352941);
 }
-.wrap .container .main .row .col .whiteBg .getcoupon p {
+.wrap .containerr .main .row .col .whiteBg .getcoupon p {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #2d827d;
   padding: 15px 0 15px;
 }
-.wrap .container .main .row .col .whiteBg .getcoupon input.keyCouponCode {
+.wrap .containerr .main .row .col .whiteBg .getcoupon input.keyCouponCode {
   width: 280px;
   height: 60px;
   border-radius: 10px;
@@ -157,7 +162,7 @@
   text-align: center;
   background-color: rgba(126, 160, 131, 0);
 }
-.wrap .container .main .row .col .whiteBg .getcoupon button.newcoupon {
+.wrap .containerr .main .row .col .whiteBg .getcoupon button.newcoupon {
   width: 130px;
   height: 38px;
   border-radius: 10px;
@@ -168,13 +173,13 @@
   border: none;
   margin: 15px 0 15px;
 }
-.wrap .container .main .row .col .whiteBg .couponbtn {
+.wrap .containerr .main .row .col .whiteBg .couponbtn {
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
 }
-.wrap .container .main .row .col .whiteBg .couponbtn button {
+.wrap .containerr .main .row .col .whiteBg .couponbtn button {
   width: 130px;
   height: 38px;
   border-radius: 10px;
@@ -184,18 +189,18 @@
   font-size: 14px;
   color: #000000;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup {
   width: 100%;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle {
   width: 100%;
   display: flex;
   padding-bottom: 5px;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName {
   width: 70%;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
@@ -204,10 +209,10 @@
   width: 100%;
   text-align: left;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
   width: 30%;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate p.couponDate {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate p.couponDate {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
@@ -216,36 +221,241 @@
   width: 100%;
   text-align: left;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails {
   width: 100%;
   padding-bottom: 20px;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail {
   width: 100%;
   display: flex;
   border-bottom: 2px solid #9fc8e1;
   padding: 13px 0 13px;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName {
   width: 70%;
   text-align: left;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName p {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName p {
   width: 100%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   line-height: 20px;
   color: #000000;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
   width: 30%;
   text-align: left;
   display: flex;
   align-items: center;
 }
-.wrap .container .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
   width: 100%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #000000;
+}
+
+@media screen and (min-width: 700px) {
+  .wrap .containerr .main .row .col .whiteBg {
+    padding: 0 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wrap {
+    background-image: url(../images/other_bg_paper.png);
+  }
+  .wrap .containerr {
+    margin: 0 5%;
+  }
+  .wrap .containerr .main .row .col {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 {
+    height: 70%;
+    border-radius: 10px;
+    background-color: #2d827d;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
+    top: -50px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder {
+    width: 100px;
+    height: 100px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto {
+    width: 86px;
+    height: 86px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto img.photo {
+    width: 120%;
+    position: static;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoedit {
+    right: -5px;
+    bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
+    color: #ffffff;
+    margin-top: -30px;
+    padding: 13px 0 15px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName a.coin {
+    color: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton {
+    padding: 0 0 0 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
+    width: 100%;
+    flex-wrap: none;
+    justify-content: right;
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
+    width: 100%;
+    padding: 0;
+    margin: 6px 0 6px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
+    width: 100%;
+    height: 54px;
+    border-radius: 100px 0 0 100px;
+    background-color: #ffffff;
+    flex-direction: row;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
+    width: 35%;
+    text-align: right;
+    padding-right: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
+    width: 65%;
+    font-family: "GenSenRounded-B";
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    flex-direction: row;
+    justify-content: left;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
+    font-size: 20px;
+    padding-right: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon input.keyCouponCode {
+    font-size: 16px;
+    margin-right: 40px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
+    margin-bottom: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
+    padding-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponName {
+    width: 68%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponDate {
+    width: 32%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
+    width: 100%;
+    height: 360px;
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrap .containerr {
+    margin: 0 10%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .wrap .containerr {
+    margin: 0 15%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .wrap .containerr {
+    margin: 0 18%;
+  }
+  .wrap .containerr .main .row .col .col-xl-3 .memberbutton ul li.col-lg-12 .btnP {
+    padding-left: 20px;
+  }
+}
+.j-lightbox .j-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.j-lightbox .j-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+.j-lightbox .j-lightbox-bg .j-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+.j-lightbox .j-lightbox-bg .j-warning .j-warn-icon {
+  margin-right: 20px;
+}
+.j-lightbox .j-lightbox-bg .j-warning .j-warn-text {
+  font-size: 20px;
+  color: #000000;
+}
+.j-lightbox .j-lightbox-bg button {
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 30px;
 }/*# sourceMappingURL=member-myCoupon.css.map */
