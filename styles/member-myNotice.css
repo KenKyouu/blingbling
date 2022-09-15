@@ -322,7 +322,7 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .noticeborder {
     width: 100%;
-    height: auto;
+    height: 570px;
     overflow: scroll;
   }
 }

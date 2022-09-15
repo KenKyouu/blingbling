@@ -204,11 +204,13 @@ $bold: 900;
                                         align-items: center;
                                         background-color: $white;
                                         justify-content: center;
+
                                         .btnsvg {
                                             svg {
                                                 margin-bottom: 5px;
                                             }
                                         }
+
                                         .btnP {
                                             font-family: "GenSenRounded-M";
                                             font-size: $ps-font-size;
@@ -248,6 +250,7 @@ $bold: 900;
 
                                 .noticebtn {
                                     position: relative;
+
                                     button {
                                         width: 130px;
                                         height: 38px;
@@ -258,6 +261,7 @@ $bold: 900;
                                         font-size: $ps-font-size;
                                         color: $super-dark;
                                     }
+
                                     .noticeNumber {
                                         width: 30px;
                                         height: 30px;
@@ -271,7 +275,7 @@ $bold: 900;
                                         position: absolute;
                                         right: -10px;
                                         top: -10px;
-    
+
                                         p {
                                             font-family: "GenSenRounded-B";
                                             font-size: $p-font-size;
@@ -284,8 +288,10 @@ $bold: 900;
 
                         .noticeborder {
                             overflow: hidden;
+
                             .noticeDetails {
                                 width: 100%;
+
                                 .noticeDetail {
                                     width: 100%;
                                     height: auto;
@@ -434,16 +440,19 @@ $bold: 900;
                                             border-radius: 100px 0 0 100px;
                                             background-color: $white;
                                             flex-direction: row;
+
                                             .btnsvg {
                                                 width: 35%;
                                                 text-align: right;
                                                 padding-right: 20px;
+
                                                 svg {
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
                                                 }
                                             }
+
                                             .btnP {
                                                 width: 65%;
                                                 font-family: "GenSenRounded-B";
@@ -469,8 +478,9 @@ $bold: 900;
 
                             .noticeborder {
                                 width: 100%;
-                                height: auto;
+                                height: 570px;
                                 overflow: scroll;
+
                                 .noticeDetails {
                                     // overflow: scroll;
                                 }
@@ -488,6 +498,7 @@ $bold: 900;
 
 @media screen and (min-width:1200px) {
     .wrap {
+
         // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 10%;
@@ -499,6 +510,7 @@ $bold: 900;
 
 @media screen and (min-width:1400px) {
     .wrap {
+
         // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 15%;
@@ -510,9 +522,11 @@ $bold: 900;
 
 @media screen and (min-width:1600px) {
     .wrap {
+
         // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 18%;
+
             .main {
                 .row {
                     .col {
