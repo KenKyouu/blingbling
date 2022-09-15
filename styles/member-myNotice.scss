@@ -88,6 +88,8 @@ $bold: 900;
 //     background-color: $lake-green;
 // }
 
+// ------------body------------
+
 .wrap {
     width: 100%;
     height: 100vh;
@@ -241,11 +243,11 @@ $bold: 900;
 
                             .notice {
                                 display: flex;
-                                // position: relative;
-                                margin: 9px 12px 9px 12px;
+                                justify-content: center;
+                                margin: 9px 0 9px 0;
 
                                 .noticebtn {
-                                    // position: relative;
+                                    position: relative;
                                     button {
                                         width: 130px;
                                         height: 38px;
@@ -255,28 +257,26 @@ $bold: 900;
                                         font-family: "GenSenRounded-B";
                                         font-size: $ps-font-size;
                                         color: $super-dark;
-                                        position: relative;
                                     }
-                                }
-
-                                .noticeNumber {
-                                    width: 30px;
-                                    height: 30px;
-                                    border-radius: 100%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    border: none;
-                                    background-color: $red-pink;
-                                    z-index: 1;
-                                    position: absolute;
-                                    right: -10px;
-                                    top: -10px;
-
-                                    p {
-                                        font-family: "GenSenRounded-B";
-                                        font-size: $p-font-size;
-                                        color: $white;
+                                    .noticeNumber {
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: none;
+                                        background-color: $red-pink;
+                                        z-index: 1;
+                                        position: absolute;
+                                        right: -10px;
+                                        top: -10px;
+    
+                                        p {
+                                            font-family: "GenSenRounded-B";
+                                            font-size: $p-font-size;
+                                            color: $white;
+                                        }
                                     }
                                 }
                             }
@@ -327,6 +327,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-700-----------------
+
 @media screen and (min-width:700px) {
     .wrap {
         .containerr {
@@ -342,6 +344,8 @@ $bold: 900;
         }
     }
 }
+
+// ----------------RWD-992-----------------
 
 @media screen and (min-width:992px) {
     .wrap {
@@ -480,6 +484,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-1200-----------------
+
 @media screen and (min-width:1200px) {
     .wrap {
         // background-image: url(../images/other_bg_paper.png);
@@ -489,6 +495,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-1400-----------------
+
 @media screen and (min-width:1400px) {
     .wrap {
         // background-image: url(../images/other_bg_paper.png);
@@ -497,6 +505,8 @@ $bold: 900;
         }
     }
 }
+
+// ----------------RWD-1600-----------------
 
 @media screen and (min-width:1600px) {
     .wrap {
