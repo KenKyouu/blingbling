@@ -354,4 +354,199 @@
   .wrap .containerr .main .row .col .col-xl-3 .memberbutton ul li.col-lg-12 .btnP {
     padding-left: 20px;
   }
+}
+.friend-lightbox-warn .friend-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.friend-lightbox-warn .friend-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+.friend-lightbox-warn .friend-lightbox-bg .friend-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+.friend-lightbox-warn .friend-lightbox-bg .friend-warning .friend-warn-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+.friend-lightbox-warn .friend-lightbox-bg .friend-warning .friend-warn-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.friend-lightbox-warn .friend-lightbox-bg .tfBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.friend-lightbox-warn .friend-lightbox-bg .tfBtn button.true {
+  width: 98px;
+  height: 38px;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 30px;
+  margin-top: 10px;
+}
+.friend-lightbox-warn .friend-lightbox-bg .tfBtn button.false {
+  width: 98px;
+  height: 38px;
+  border: 3px solid #000000;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  padding: 8px 30px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.lightbox-friendDetails {
+  width: 700px;
+  height: auto;
+  border-radius: 32px;
+  border: 4px solid #2d827d;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+.lightbox-friendDetails p.editTitle {
+  font-family: "GenSenRounded-B";
+  font-size: 24px;
+  color: #4c4948;
+  padding-bottom: 50px;
+}
+.lightbox-friendDetails .friend-details .detail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.lightbox-friendDetails .friend-details .detail .detail-text {
+  width: 30%;
+  padding-right: 40px;
+}
+.lightbox-friendDetails .friend-details .detail .detail-text p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+  text-align: right;
+}
+.lightbox-friendDetails .friend-details .detail .detail-text p span {
+  color: #d45a6a;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input {
+  width: 70%;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input input {
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input select {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input select option {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+  text-align: center;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input input.birthmd {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  color: #c2c2c2;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  text-align: center;
+  margin-right: 20px;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input .tagsselect {
+  width: 400px;
+  height: 135px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 10px 10px;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags {
+  height: 135px;
+  overflow: scroll;
+}
+.lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags span {
+  display: inline-block;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 100px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  padding: 5px 10px;
+}
+.lightbox-friendDetails .detailsbtn {
+  margin-top: 20px;
+}
+.lightbox-friendDetails .detailsbtn button.true {
+  width: 140px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  margin: 0 20px;
+}
+.lightbox-friendDetails .detailsbtn button.false {
+  width: 140px;
+  height: 48px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  margin: 0 20px;
 }/*# sourceMappingURL=member-myFriend.css.map */
