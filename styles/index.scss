@@ -1458,4 +1458,8 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 }
 
-
+.header {
+  @media screen and (min-width:768px) {
+  display: none;
+  }
+}
