@@ -16,6 +16,7 @@
                             <path d="M5.89735 19.3219H20.1689C20.2301 19.3219 20.3059 19.2663 20.3059 19.165V19.1623C20.3059 19.061 20.2301 19.0054 20.1689 19.0054H5.89735C5.83622 19.0054 5.76039 19.061 5.76039 19.1623V19.165C5.76039 19.2676 5.83493 19.3219 5.89735 19.3219Z" fill="white" stroke="white" />
                         </svg>
                     </a>
+                    <span class="cart-red-point"></span>
                 </li>
                 <li class="menu">
                     <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -178,73 +179,94 @@
                 <p>商品分類</p>
             </div>
             <div class="product-class">
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item08.png" alt="" />
-                    </div>
-                    <span class="class-name">美妝保養</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item01.png" alt="" />
-                    </div>
-                    <span class="class-name">流行時尚</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item02.png" alt="" />
-                    </div>
-                    <span class="class-name">數位家電</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item03.png" alt="" />
-                    </div>
-                    <span class="class-name">母嬰幼兒</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item04.png" alt="" />
-                    </div>
-                    <span class="class-name">居家生活</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item05.png" alt="" />
-                    </div>
-                    <span class="class-name">毛寵物</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item06.png" alt="" />
-                    </div>
-                    <span class="class-name">節慶道具</span>
-                </div>
-                <div class="class-select">
-                    <div class="class-image">
-                        <img src="./images/icon_item07.png" alt="" />
-                    </div>
-                    <span class="class-name">票券</span>
-                </div>
-            </div>
-            <div class="menu-button">
-                <a href="#">
-                    <div class="circle">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.937 20.5902L18.2455 15.8991C19.4044 14.2722 20.0879 12.2825 20.0879 10.1335C20.0879 4.63718 15.6306 0.180176 10.1338 0.180176C4.63704 0.180176 0.179688 4.63718 0.179688 10.1335C0.179688 15.6299 4.63704 20.0869 10.1338 20.0869C12.2829 20.0869 14.2728 19.4034 15.8998 18.2446L20.5913 22.9357C20.8511 23.1956 21.2702 23.1956 21.53 22.9357L22.937 21.5289C23.1945 21.2714 23.1945 20.85 22.937 20.5902ZM10.1338 16.1074C6.83528 16.1074 4.16181 13.4342 4.16181 10.1359C4.16181 6.8376 6.83528 4.16432 10.1338 4.16432C13.4323 4.16432 16.1058 6.8376 16.1058 10.1359C16.1058 13.4342 13.4323 16.1074 10.1338 16.1074Z" fill="white" />
-                        </svg>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item08.png" alt="" />
+                        </div>
+                        <span class="class-name">美妝保養</span>
                     </div>
                 </a>
-                <a href="#">
-                    <div class="circle">
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item01.png" alt="" />
+                        </div>
+                        <span class="class-name">流行時尚</span>
+                    </div>
+                </a>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item02.png" alt="" />
+                        </div>
+                        <span class="class-name">數位家電</span>
+                    </div>
+                </a>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item03.png" alt="" />
+                        </div>
+                        <span class="class-name">母嬰幼兒</span>
+                    </div>
+                </a>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item04.png" alt="" />
+                        </div>
+                        <span class="class-name">居家生活</span>
+                    </div>
+                </a>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item05.png" alt="" />
+                        </div>
+                        <span class="class-name">毛寵物</span>
+                    </div>
+                </a>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item06.png" alt="" />
+                        </div>
+                        <span class="class-name">節慶道具</span>
+                    </div>
+                </a>
+                <a href="./product-list.php">
+                    <div class="class-select">
+                        <div class="class-image">
+                            <img src="./images/icon_item07.png" alt="" />
+                        </div>
+                        <span class="class-name">票券</span>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-button">
+                <div class="circle burger-search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.937 20.5902L18.2455 15.8991C19.4044 14.2722 20.0879 12.2825 20.0879 10.1335C20.0879 4.63718 15.6306 0.180176 10.1338 0.180176C4.63704 0.180176 0.179688 4.63718 0.179688 10.1335C0.179688 15.6299 4.63704 20.0869 10.1338 20.0869C12.2829 20.0869 14.2728 19.4034 15.8998 18.2446L20.5913 22.9357C20.8511 23.1956 21.2702 23.1956 21.53 22.9357L22.937 21.5289C23.1945 21.2714 23.1945 20.85 22.937 20.5902ZM10.1338 16.1074C6.83528 16.1074 4.16181 13.4342 4.16181 10.1359C4.16181 6.8376 6.83528 4.16432 10.1338 4.16432C13.4323 4.16432 16.1058 6.8376 16.1058 10.1359C16.1058 13.4342 13.4323 16.1074 10.1338 16.1074Z" fill="white" />
+                    </svg>
+                </div>
+                <a href="./member-myIntro.php">
+                    <div class="circle burger-member">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.7325 11.6867C14.919 11.6867 17.5021 9.11088 17.5021 5.93344C17.5021 2.756 14.919 0.180176 11.7325 0.180176C8.54603 0.180176 5.96289 2.756 5.96289 5.93344C5.96289 9.11088 8.54603 11.6867 11.7325 11.6867Z" fill="white" />
                             <path d="M23.2068 23.1307C23.2068 16.8114 18.07 11.6868 11.7304 11.6868C5.39083 11.6868 0.256348 16.8114 0.256348 23.1307H23.2068Z" fill="white" />
                         </svg>
                     </div>
                 </a>
-                <a href="#">
-                    <div class="circle">
+                <a href="./member-myNotice.php">
+                    <div class="circle burger-notice">
+                        <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4144 10.1061V13.4064L18.7179 19.9738C18.8724 20.411 18.5468 20.8696 18.0832 20.8696H12.7131C12.7131 22.4472 11.4342 23.7255 9.85569 23.7255C8.27722 23.7255 6.99828 22.4472 6.99828 20.8696H1.62816C1.1646 20.8696 0.838927 20.411 0.993445 19.9738L3.30172 13.4064V10.1061C3.30802 7.1108 5.32537 4.58834 8.07543 3.81319V2.13032C8.07543 1.14713 8.87246 0.350098 9.85565 0.350098C9.85615 0.350098 9.85665 0.350098 9.85715 0.350098C9.85745 0.350098 9.85776 0.350098 9.85806 0.350098C9.85933 0.350098 9.8606 0.350101 9.86186 0.350108C10.8422 0.35346 11.6359 1.1492 11.6359 2.13032V3.811C14.3899 4.58314 16.4081 7.10881 16.4144 10.1061Z" fill="white" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="./cart1.php">
+                    <div class="circle burger-cart">
                         <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.89595 15.7426H19.0566V6.33765H1.99806C1.53543 6.33765 1.2137 6.75424 1.37339 7.14662L4.89595 15.7426Z" fill="white" stroke="white" stroke-width="0.765015" stroke-miterlimit="10" />
                             <path d="M18.9137 6.80527L23.8337 1.73084C23.9224 1.63942 23.9224 1.48526 23.8337 1.39384L23.8336 1.3937L23.8314 1.39141C23.8314 1.3914 23.8313 1.39138 23.8313 1.39137C23.7491 1.30662 23.6198 1.30664 23.5376 1.39141L18.6011 6.48282L18.9137 6.80527Z" fill="white" stroke="white" stroke-width="0.765015" />
@@ -254,20 +276,7 @@
                         </svg>
                     </div>
                 </a>
-                <a href="#">
-                    <div class="circle">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.2659 0.350098C5.81063 0.350098 0.578125 5.5826 0.578125 12.0378C0.578125 18.493 5.81063 23.7255 12.2659 23.7255C18.7211 23.7255 23.9536 18.493 23.9536 12.0378C23.9536 5.5826 18.7211 0.350098 12.2659 0.350098ZM12.2659 20.7287C7.47089 20.7287 3.57498 16.8328 3.57498 12.0378C3.57498 7.24286 7.47089 3.34695 12.2659 3.34695C17.0608 3.34695 20.9567 7.24286 20.9567 12.0378C20.9567 16.8328 17.0608 20.7287 12.2659 20.7287ZM16.1857 7.03907L12.6435 10.5814C12.5236 10.5574 12.3977 10.5394 12.2659 10.5394C12.0741 10.5394 11.8942 10.5754 11.7264 10.6293L8.9813 7.88419C8.62767 7.53056 8.05827 7.53056 7.71063 7.88419C7.35701 8.23781 7.35701 8.80722 7.71063 9.15485L10.5097 11.9539C10.4857 12.0738 10.4677 12.1997 10.4677 12.3315C10.4677 13.3265 11.2709 14.1296 12.2659 14.1296C13.2608 14.1296 14.064 13.3265 14.064 12.3315C14.064 12.1397 14.028 11.9599 13.9741 11.7921L17.4564 8.30974C17.81 7.95611 17.81 7.38671 17.4564 7.03907C17.1028 6.69144 16.5334 6.68544 16.1857 7.03907Z" fill="white" />
-                        </svg>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="circle">
-                        <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4144 10.1061V13.4064L18.7179 19.9738C18.8724 20.411 18.5468 20.8696 18.0832 20.8696H12.7131C12.7131 22.4472 11.4342 23.7255 9.85569 23.7255C8.27722 23.7255 6.99828 22.4472 6.99828 20.8696H1.62816C1.1646 20.8696 0.838927 20.411 0.993445 19.9738L3.30172 13.4064V10.1061C3.30802 7.1108 5.32537 4.58834 8.07543 3.81319V2.13032C8.07543 1.14713 8.87246 0.350098 9.85565 0.350098C9.85615 0.350098 9.85665 0.350098 9.85715 0.350098C9.85745 0.350098 9.85776 0.350098 9.85806 0.350098C9.85933 0.350098 9.8606 0.350101 9.86186 0.350108C10.8422 0.35346 11.6359 1.1492 11.6359 2.13032V3.811C14.3899 4.58314 16.4081 7.10881 16.4144 10.1061Z" fill="white" />
-                        </svg>
-                    </div>
-                </a>
+
             </div>
         </div>
     </div>

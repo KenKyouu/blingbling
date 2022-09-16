@@ -227,6 +227,16 @@ $bold: 900;
         }
         li.cart {
           margin-bottom: 5px;
+          position: relative;
+          span.cart-red-point {
+            position: absolute;
+            right: 0px;
+            top: -2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $coral;
+          }
         }
       }
     }
@@ -392,7 +402,7 @@ $bold: 900;
   }
   .footer-nav {
     ul {
-      margin: 35px 40px 0 40px;
+      margin: 35px 70px 0 70px;
       padding-bottom: 10px;
       display: flex;
       justify-content: space-between;
@@ -555,31 +565,36 @@ $bold: 900;
       }
       .product-class {
         width: 100%;
-
         color: $super-dark;
         font-family: "GenSenRounded-M";
         font-size: $p-font-size;
-        .class-select {
-          display: flex;
-          height: 40px;
-          .class-image {
-            padding: 10px 0 0 0;
-            margin-left: 20px;
-            width: 8%;
-            position: relative;
-            img {
-              width: 100%;
-              position: absolute;
-              bottom: 3px;
-            }
-          }
-          .class-name {
-            width: 100%;
-            margin-left: 10px;
-            padding: 10px 0 0 0;
+        a {
+          color: $deep-brown;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          text-decoration: none;
+          .class-select {
             display: flex;
-            align-items: center;
-            border-bottom: 1px solid $gray;
+            height: 40px;
+            .class-image {
+              padding: 10px 0 0 0;
+              margin-left: 20px;
+              width: 8%;
+              position: relative;
+              img {
+                width: 100%;
+                position: absolute;
+                bottom: 3px;
+              }
+            }
+            .class-name {
+              width: 100%;
+              margin-left: 10px;
+              padding: 10px 0 0 0;
+              display: flex;
+              align-items: center;
+              border-bottom: 1px solid $gray;
+            }
           }
         }
       }
@@ -587,6 +602,15 @@ $bold: 900;
         display: flex;
         justify-content: space-between;
         margin: 60px 30px 0 30px;
+        .circle {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $lake-green;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         a {
           .circle {
             width: 40px;
