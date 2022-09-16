@@ -1,19 +1,23 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+
 .package-lightBoxBg {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
@@ -28,12 +32,14 @@
   width: 375px;
   height: 30px;
 }
+
 .P-closeSection .p-close {
   margin-left: auto;
   width: 15px;
   margin-top: 5px;
   margin-right: 5px;
 }
+
 .P-closeSection .p-close img {
   width: 100%;
 }
@@ -44,19 +50,29 @@
   position: fixed;
   margin-top: 15px;
 }
+
 .packageMainSection .package-container {
   width: 375px;
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .packageMainSection .package-container .package-stepWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepCard {
   text-align: center;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepCard .stepTop1 {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -70,6 +86,7 @@
   background-color: #2d827d;
   color: #ffffff;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepCard .stepTop2 {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -82,8 +99,10 @@
   height: 35px;
   background-color: #ffffff;
   color: #000000;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepCard .stepTop3 {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -96,12 +115,15 @@
   height: 35px;
   background-color: #ffffff;
   color: #000000;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepCard .stepBotton {
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepLine {
   height: 1.5px;
   width: 28%;
@@ -109,6 +131,7 @@
   margin-right: 1%;
   background-color: #000000;
 }
+
 .packageMainSection .package-container .package-stepWrap .stepLine2 {
   height: 1.5px;
   width: 28%;
@@ -121,13 +144,17 @@
   height: 250px;
   margin-top: 50px;
 }
+
 .packageShowSection .packageShow {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   margin-left: 20px;
   width: 100%;
   height: 100%;
 }
+
 .packageShowSection .packageShow img {
   width: 100%;
 }
@@ -137,13 +164,19 @@
   height: 250px;
   margin-top: 50px;
 }
+
 .cardShowSection .cardShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   margin-left: 0px;
   width: 80%;
 }
+
 .cardShowSection .cardShow img {
   width: 100%;
 }
@@ -153,13 +186,17 @@
   height: 330px;
   margin-top: 40px;
 }
+
 .FinishShowSection .FinishShow {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   margin: auto;
   margin-left: 0px;
   width: 80%;
 }
+
 .FinishShowSection .FinishShow img {
   width: 75%;
   margin-bottom: 20px;
@@ -170,56 +207,78 @@
   border-radius: 20px 20px 0 0;
   width: 375px;
   height: 210px;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
 }
+
 .decorateSection .decorateSection-container {
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
 }
+
 .decorateSection .decorateSection-container .mainSector {
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   margin-bottom: 10px;
   position: absolute;
   top: -25px;
   margin: 0 5%;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap {
   width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decorateBox {
   width: 50px;
   height: 50px;
   background-color: #c2c2c2;
   border-radius: 100%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decorateBox svg {
   width: 90%;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decorateBoxClick {
   fill: #ffffff;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decoratePaper {
   width: 50px;
   height: 50px;
   background-color: #c2c2c2;
   border-radius: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decoratePaper svg {
   width: 70%;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decorateRibbon {
   width: 50px;
   height: 50px;
@@ -227,16 +286,23 @@
   border-radius: 100%;
   text-align: center;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .decorateSection .decorateSection-container .mainSector .mainSector-wrap .decorateRibbon svg {
   margin: auto;
   width: 90%;
 }
+
 .decorateSection .decorateSection-container .mainTitle {
   padding: 35px 0px 0px;
 }
+
 .decorateSection .decorateSection-container .mainTitle .mainTitleBox {
   width: 40%;
   background-color: #000000;
@@ -244,57 +310,94 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 14px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   text-align: center;
   padding: 3px;
 }
+
 .decorateSection .decorateSection-container .boxStyle {
   width: 375px;
   height: 100px;
   margin-left: -25px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap {
   width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 20px 20px;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-1 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-1 img {
   width: 100%;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-2 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-2 img {
   width: 80%;
-  opacity: 0.5;
+  opacity: .5;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-3 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-3 img {
   width: 100%;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .cardDecorateSection {
@@ -302,59 +405,82 @@
   border-radius: 20px 20px 0 0;
   width: 375px;
   height: 210px;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
 }
+
 .cardDecorateSection .cardDecorateSection-container {
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector {
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   margin-bottom: 10px;
   position: absolute;
   top: -25px;
   margin: 0 5%;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector .cardMainSector-wrap {
   width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector .cardMainSector-wrap .cardStyle {
   width: 50px;
   height: 50px;
   background-color: #c2c2c2;
   border-radius: 100%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector .cardMainSector-wrap .cardStyle svg {
   width: 90%;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector .cardMainSector-wrap .cardBoxClick {
   fill: #ffffff;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector .cardMainSector-wrap .cardText {
   width: 50px;
   height: 50px;
   background-color: #c2c2c2;
   border-radius: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardMainSector .cardMainSector-wrap .cardText svg {
   width: 85%;
 }
+
 .cardDecorateSection .cardDecorateSection-container .mainTitle {
   padding: 35px 0px 0px;
 }
+
 .cardDecorateSection .cardDecorateSection-container .mainTitle .mainTitleBox {
   width: 40%;
   background-color: #000000;
@@ -362,104 +488,176 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 14px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   text-align: center;
   padding: 3px;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle {
   width: 375px;
   height: 100px;
   margin-left: -25px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap {
   width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 20px 20px;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-1 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-1 img {
   width: 100%;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-2 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-2 img {
   width: 80%;
-  opacity: 0.5;
+  opacity: .5;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-3 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-3 img {
   width: 100%;
-  opacity: 0.5;
+  opacity: .5;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox {
   width: 375px;
   height: 100px;
   margin-left: -25px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap {
   width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 20px 20px;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-1 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-1 img {
   width: 100%;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-2 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-2 img {
   width: 100%;
-  opacity: 0.5;
+  opacity: .5;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-3 {
   margin-right: 10px;
-  flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
   max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-3 img {
   width: 100%;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .FinishDecorateSection {
@@ -467,16 +665,20 @@
   border-radius: 20px 20px 0 0;
   width: 375px;
   height: 130px;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.22);
 }
+
 .FinishDecorateSection .FinishDecorateSection-container {
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
 }
+
 .FinishDecorateSection .FinishDecorateSection-container .FinishMainTitle {
   padding: 12px 0px 0px;
 }
+
 .FinishDecorateSection .FinishDecorateSection-container .FinishMainTitle .FinishMainTitleBox {
   width: 40%;
   background-color: #000000;
@@ -484,18 +686,26 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 14px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   text-align: center;
   padding: 3px;
 }
+
 .FinishDecorateSection .FinishDecorateSection-container .FinishSentSection .FinishSent-wrap {
   padding-top: 5px;
 }
+
 .FinishDecorateSection .FinishDecorateSection-container .FinishSentSection .FinishSent-wrap .FinishForm-check {
   margin-bottom: 10px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 1.25rem;
   font-family: "GenSenRounded-B";
@@ -509,23 +719,38 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .packageBotton .packageBotton-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .packageBotton .packageBotton-box .packageBotton-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 12px;
   text-align: center;
 }
+
 .packageBotton .packageBotton-box .packageBotton-wrap .p-skipBtn {
   width: 90px;
   text-align: center;
   margin-right: 10px;
-  flex: 0 0 33.3%;
+  -ms-flex: 0 0 33.3%;
+  -webkit-box-flex: 0;
+          flex: 0 0 33.3%;
   max-width: 33.3%;
   padding: 2px 5px;
   background-color: #ffffff;
@@ -535,31 +760,36 @@
   font-size: 14px;
   color: #2d827d;
 }
+
 .packageBotton .packageBotton-box .packageBotton-wrap .p-skipBtn:hover {
   color: #ffffff;
   background-color: #2d827d;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .packageSection {
   z-index: 3;
   position: fixed;
   left: 0px;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .cardSection {
   z-index: 4;
   position: fixed;
   left: -400px;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .FinishSection {
   z-index: 5;
   position: fixed;
   left: -400px;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (min-width: 376px) {
@@ -586,42 +816,58 @@
   position: fixed;
   top: 5%;
 }
+
 @media (max-width: 376px) {
   .w-packageSection {
     display: none;
   }
 }
+
 .w-packageSection .w-packageMainSection .w-P-closeSection {
   width: 100%;
   height: 30px;
 }
+
 .w-packageSection .w-packageMainSection .w-P-closeSection .w-p-close {
   margin-left: auto;
   width: 1.2%;
   margin-top: 1%;
   margin-right: 1%;
 }
+
 .w-packageSection .w-packageMainSection .w-P-closeSection .w-p-close img {
   width: 100%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container {
   width: 93%;
   height: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepCard {
   text-align: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepCard .stepTop1 {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -635,6 +881,7 @@
   background-color: #2d827d;
   color: #ffffff;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepCard .stepTop2 {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -647,8 +894,10 @@
   height: 35px;
   background-color: #ffffff;
   color: #000000;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepCard .stepTop3 {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -661,12 +910,15 @@
   height: 35px;
   background-color: #ffffff;
   color: #000000;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepCard .stepBotton {
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepLine {
   height: 1.5px;
   width: 28%;
@@ -674,6 +926,7 @@
   margin-right: 1%;
   background-color: #000000;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-package-stepWrap .stepLine2 {
   height: 1.5px;
   width: 28%;
@@ -681,11 +934,15 @@
   margin-right: 1%;
   background-color: #000000;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox {
   width: 100%;
   height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft {
   width: 25%;
   height: 100%;
@@ -695,57 +952,89 @@
   background-position-y: 43%;
   background-repeat: no-repeat;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector {
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 50%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard1 .w-decorateName {
   margin-right: 10px;
   font-family: "GenSenRounded-B";
   font-size: 16px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard1 .w-decorateBox {
   width: 60px;
   height: 60px;
   background-color: #c2c2c2;
   border-radius: 100%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard1 .w-decorateBox svg {
   width: 90%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .decorateBoxClick {
   fill: #ffffff;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard2 {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 50%;
   margin-left: -30px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard2 .w-decorateName {
   margin-right: 10px;
   font-family: "GenSenRounded-B";
   font-size: 16px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard2 .w-decoratePaper {
   width: 60px;
   height: 60px;
@@ -753,23 +1042,37 @@
   border-radius: 100%;
   padding: 5px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard2 .w-decoratePaper svg {
   width: 70%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 50%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard3 .w-decorateName {
   margin-right: 10px;
   font-family: "GenSenRounded-B";
   font-size: 16px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard3 .w-decorateRibbon {
   width: 60px;
   height: 60px;
@@ -777,47 +1080,63 @@
   border-radius: 100%;
   text-align: center;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageLeft .w-mainSector .w-mainSector-wrap .w-decorateCard3 .w-decorateRibbon svg {
   margin: auto;
   width: 90%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageShowSection {
   width: 45%;
   height: 100%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageShowSection .w-packageShow {
   width: 100%;
   height: 100%;
   margin: auto;
   text-align: center;
   padding-top: 10%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageShowSection .w-packageShow .w-packageShow-top {
   width: 90%;
   margin: auto;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageShowSection .w-packageShow .w-packageShow-top img {
   width: 90%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageShowSection .w-packageShow .w-packageShow-botton {
   padding-top: 50px;
   margin: auto;
   width: 50%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageShowSection .w-packageShow .w-packageShow-botton img {
   width: 55%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection {
   width: 25%;
   height: 100%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-mainTitle {
   padding: 15% 0px 0px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-mainTitle .w-mainTitleBox {
   width: 37%;
   background-color: #000000;
@@ -825,77 +1144,117 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 14px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   text-align: center;
   padding: 3px;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection {
   padding-top: 18%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle {
   width: 100%;
   height: 100%;
   margin: auto;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap {
   width: 60%;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   margin: auto;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap .w-boxStyle-1 {
   width: 60%;
   padding-bottom: 50px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap .w-boxStyle-1 img {
   width: 100%;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap .w-boxStyle-2 {
   width: 60%;
   margin: auto;
   padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap .w-boxStyle-2 img {
   width: 80%;
-  opacity: 0.3;
+  opacity: .3;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap .w-boxStyle-3 {
   margin: auto;
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageMainbox .w-packageStyleSection .w-decorateSection .w-boxStyle .w-boxStyle-wrap .w-boxStyle-3 img {
   width: 100%;
-  opacity: 0.3;
+  opacity: .3;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageBotton {
   margin: auto;
   width: 50%;
   height: 9vh;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageBotton .w-packageBotton-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageBotton .w-packageBotton-box .w-packageBotton-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 12px;
   text-align: center;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageBotton .w-packageBotton-box .w-packageBotton-wrap .w-p-skipBtn {
   width: 130px;
   text-align: center;
   margin-right: 30px;
-  flex: 0 0 33.3%;
+  -ms-flex: 0 0 33.3%;
+  -webkit-box-flex: 0;
+          flex: 0 0 33.3%;
   max-width: 33.3%;
   padding: 6px 5px;
   background-color: #ffffff;
@@ -905,8 +1264,11 @@
   font-size: 16px;
   color: #2d827d;
 }
+
 .w-packageSection .w-packageMainSection .w-package-container .w-packageBotton .w-packageBotton-box .w-packageBotton-wrap .w-p-skipBtn:hover {
   color: #ffffff;
   background-color: #2d827d;
-  transition: 0.5s;
-}/*# sourceMappingURL=package.css.map */
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/*# sourceMappingURL=package.css.map */
