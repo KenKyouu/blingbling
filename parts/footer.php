@@ -6,8 +6,7 @@
         <div class="footer-nav">
             <ul>
                 <li><a href="#">聯絡我們</a></li>
-                <li><a href="#">幫助中心</a></li>
-                <li><a href="#">會員中心</a></li>
+                <li><a href="./member-myIntro.php">會員中心</a></li>
             </ul>
         </div>
         <div class="footer-social">
@@ -36,8 +35,7 @@
         <div class="footer-nav">
             <ul>
                 <li><a href="#">聯絡我們</a></li>
-                <li><a href="#">幫助中心</a></li>
-                <li><a href="#">會員中心</a></li>
+                <li><a href="./member-myIntro.php">會員中心</a></li>
             </ul>
         </div>
         <div class="footer-c">
