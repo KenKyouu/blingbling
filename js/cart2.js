@@ -165,12 +165,22 @@ $(document).on("keypress", "form", function (e) {
         "city":{
             presence: {
                 message: "^縣市/鄉鎮市區 為必填欄位"
-            },
+            }
         },
         "address":{
             presence: {
                 message: "^收件地址 為必填欄位"
             },
+            format: {
+                pattern: "(^$)|(^[\u4E00-\u9FA5a-zA-Z0-9,， ,\/,\\- ]{1,250}$)",
+                message: "^格式輸入錯誤"
+            }
+        },
+        "remark":{
+            format: {
+                pattern: "(^$)|(^[\u4E00-\u9FA5a-zA-Z0-9,， ,\/,\:,\\- ]{1,250}$)",
+                message: "^格式輸入錯誤"
+            }
         },
         "cardHolder":{
             presence: {

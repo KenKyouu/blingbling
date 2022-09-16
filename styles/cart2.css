@@ -164,7 +164,7 @@
 
 @media only screen and (min-width: 768px) {
   .j-progress-bar {
-    margin-top: 5rem;
+    margin-top: 6rem;
     width: 60%;
     margin-left: 4rem;
   }
@@ -556,12 +556,12 @@
   margin-top: 6px;
 }
 
-.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-error .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-error .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-error .j-input, .has-error select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-error .j-input {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-error .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-error .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info .has-error .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-error .j-input, .has-error select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-error .j-input {
   outline: 1px solid #ca3f68;
   box-shadow: none;
 }
 
-.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-success .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-success .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-success .j-input, .has-success select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-success .j-input {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-success .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-success .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info .has-success .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-success .j-input, .has-success select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-success .j-input {
   outline: none;
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1090,12 +1090,10 @@
   }
   .j-cart2-btn li:nth-child(2) {
     text-align: right;
-  }
-  .j-cart2-btn li:nth-child(2) a {
     display: block;
     width: 90%;
   }
-  .j-cart2-btn li:nth-child(2) a button {
+  .j-cart2-btn li:nth-child(2) button {
     width: 100%;
     max-width: 382px;
     border: none;

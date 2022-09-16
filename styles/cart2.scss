@@ -263,7 +263,7 @@ $bold: 900;
 }
 @media only screen and (min-width: 768px) {
     .j-progress-bar{
-        margin-top: 5rem;
+        margin-top: 6rem;
         width: 60%;
         margin-left: 4rem;
     }
@@ -1060,6 +1060,12 @@ $bold: 900;
                             line-height: 2;
                         }
                     }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
+                    }
                 }
             }
         }
@@ -1572,7 +1578,7 @@ $bold: 900;
             }
             &:nth-child(2){
                 text-align: right;
-                a{
+                // a{
                     display: block;
                     width: 90%;
                     button{
@@ -1588,7 +1594,7 @@ $bold: 900;
                         font-size: $h6-font-size;
                         font-weight: $bold;
                     }
-                }
+                // }
                 
             }
         }

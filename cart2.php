@@ -12,7 +12,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                 <div class="row">
                     <div class="col">
                         <div class="j-back">
-                            <a href="#">
+                            <a href="./cart1.php">
                                 <div class="j-back-wrap">
                                     <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.502188 11.103L9.33131 19.5574C9.47632 19.6976 9.64885 19.809 9.83894 19.8849C10.029 19.9609 10.2329 20 10.4388 20C10.6448 20 10.8487 19.9609 11.0388 19.8849C11.2288 19.809 11.4014 19.6976 11.5464 19.5574C11.8369 19.277 12 18.8978 12 18.5024C12 18.1071 11.8369 17.7279 11.5464 17.4475L3.82481 9.96573L11.5464 2.55877C11.8369 2.27841 12 1.89915 12 1.50384C12 1.10852 11.8369 0.729267 11.5464 0.448906C11.4019 0.307518 11.2296 0.195036 11.0395 0.117979C10.8494 0.0409222 10.6452 0.000822067 10.4388 0C10.2325 0.000822067 10.0283 0.0409222 9.83818 0.117979C9.64806 0.195036 9.47578 0.307518 9.33131 0.448906L0.502188 8.90332C0.343848 9.04344 0.217482 9.21351 0.131051 9.40279C0.0446205 9.59208 -9.53674e-07 9.79649 -9.53674e-07 10.0031C-9.53674e-07 10.2098 0.0446205 10.4142 0.131051 10.6035C0.217482 10.7928 0.343848 10.9628 0.502188 11.103Z" fill="black"/>
@@ -499,14 +499,14 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
 
                             <ul class="j-cart2-btn">
                                 <li class="col-md-6 px-0">
-                                    <a href="#">
+                                    <a href="./cart1.php">
                                         <button type="button">回購買明細</button>
                                     </a>
                                 </li>
                                 <li class="col-md-6 px-0">
-                                    <a href="#">
+                                    <!-- <a href="#"> -->
                                         <button type="submit">確認結帳 NT$29,935</button>
-                                    </a>
+                                    <!-- </a> -->
                                 </li>
                             </ul>
                             
@@ -698,7 +698,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
 
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script src="./js/jquery.twzipcode.min.js"></script>
-    <script src="./js/validate.min.js"></script>
-    <script src="./js/underscore-umd-min.js"></script>
-    <script src="./js/cart2.js"></script>
+<script src="./js/validate.min.js"></script>
+<script src="./js/underscore-umd-min.js"></script>
+<script src="./js/cart2.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
