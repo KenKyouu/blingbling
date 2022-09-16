@@ -235,17 +235,15 @@
                         <!------------ white border ------------>
 
                         <div class="whiteBg col-lg-9 col-xl-9">
-                            <a class="btl" href="#">
-                                <div class="backToList">
-                                    <svg width="6" height="10" viewBox="0 0 12 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.502188 11.103L9.33131 19.5574C9.47632 19.6976 9.64885 19.809 9.83894 19.8849C10.029 19.9609 10.2329 20 10.4388 20C10.6448 20 10.8487 19.9609 11.0388 19.8849C11.2288 19.809 11.4014 19.6976 11.5464 19.5574C11.8369 19.277 12 18.8978 12 18.5024C12 18.1071 11.8369 17.7279 11.5464 17.4475L3.82481 9.96573L11.5464 2.55877C11.8369 2.27841 12 1.89915 12 1.50384C12 1.10852 11.8369 0.729267 11.5464 0.448906C11.4019 0.307518 11.2296 0.195036 11.0395 0.117979C10.8494 0.0409222 10.6452 0.000822067 10.4388 0C10.2325 0.000822067 10.0283 0.0409222 9.83818 0.117979C9.64806 0.195036 9.47578 0.307518 9.33131 0.448906L0.502188 8.90332C0.343848 9.04344 0.217482 9.21351 0.131051 9.40279C0.0446205 9.59208 -9.53674e-07 9.79649 -9.53674e-07 10.0031C-9.53674e-07 10.2098 0.0446205 10.4142 0.131051 10.6035C0.217482 10.7928 0.343848 10.9628 0.502188 11.103Z"
-                                            fill="#2d827d" />
-                                    </svg>
-                                    <p>返回好友列表</p>
-                                </div>
-                            </a>
+                            <div class="backToList">
+                                <svg width="6" height="10" viewBox="0 0 12 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.502188 11.103L9.33131 19.5574C9.47632 19.6976 9.64885 19.809 9.83894 19.8849C10.029 19.9609 10.2329 20 10.4388 20C10.6448 20 10.8487 19.9609 11.0388 19.8849C11.2288 19.809 11.4014 19.6976 11.5464 19.5574C11.8369 19.277 12 18.8978 12 18.5024C12 18.1071 11.8369 17.7279 11.5464 17.4475L3.82481 9.96573L11.5464 2.55877C11.8369 2.27841 12 1.89915 12 1.50384C12 1.10852 11.8369 0.729267 11.5464 0.448906C11.4019 0.307518 11.2296 0.195036 11.0395 0.117979C10.8494 0.0409222 10.6452 0.000822067 10.4388 0C10.2325 0.000822067 10.0283 0.0409222 9.83818 0.117979C9.64806 0.195036 9.47578 0.307518 9.33131 0.448906L0.502188 8.90332C0.343848 9.04344 0.217482 9.21351 0.131051 9.40279C0.0446205 9.59208 -9.53674e-07 9.79649 -9.53674e-07 10.0031C-9.53674e-07 10.2098 0.0446205 10.4142 0.131051 10.6035C0.217482 10.7928 0.343848 10.9628 0.502188 11.103Z"
+                                        fill="#2d827d" />
+                                </svg>
+                                <p>返回好友列表</p>
+                            </div>
                             <div class="friendDetailsTop">
                                 <div class="friendDetails">
                                     <div class="friendName">
@@ -290,16 +288,16 @@
                                             <p>沙發馬鈴薯</p>
                                         </div>
                                         <div class="tag">
-                                            <p>熟男</p>
+                                            <p>沙發馬鈴薯</p>
                                         </div>
                                         <div class="tag">
-                                            <p>內向</p>
+                                            <p>沙發馬鈴薯</p>
                                         </div>
                                         <div class="tag">
-                                            <p>科技感</p>
+                                            <p>沙發馬鈴薯</p>
                                         </div>
                                         <div class="tag">
-                                            <p>3C宅</p>
+                                            <p>沙發馬鈴薯</p>
                                         </div>
                                     </div>
                                 </div>
@@ -358,6 +356,89 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- ------------lightbox-friendDetails------------ -->
+
+    <div class="lightbox-friendDetails">
+        <p class="editTitle">編輯好友資訊</p>
+        <div class="friend-details">
+            <div class="detail">
+                <div class="detail-text">
+                    <p><span>*</span> 好友姓名(暱稱)</p>
+                </div>
+                <div class="detail-input">
+                    <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="detail-text">
+                    <p><span>*</span> 好友性別</p>
+                </div>
+                <div class="detail-input">
+                    <select name="gender" placeholder="請選擇" required>
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                        <option value="others">不顯示</option>
+                    </select>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="detail-text">
+                    <p>好友Email</p>
+                </div>
+                <div class="detail-input">
+                    <input type="email" name="email" placeholder="好友的電子郵件地址">
+                </div>
+            </div>
+            <div class="detail">
+                <div class="detail-text">
+                    <p><span>*</span> 好友生日</p>
+                </div>
+                <div class="detail-input">
+                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
+                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="detail-text">
+                    <p>好友印象標籤</p>
+                </div>
+                <div class="detail-input">
+                    <input type="text" name="tags" placeholder="最多選擇五個">
+                </div>
+            </div>
+            <div class="detail">
+                <div class="detail-text"></div>
+                <div class="detail-input">
+                    <div class="tagsselect">
+                        <div class="tags">
+                            <span>沙發馬鈴薯</span>
+                            <span>沙發薯</span>
+                            <span>沙發</span>
+                            <span>沙發馬鈴薯</span>
+                            <span>沙鈴薯</span>
+                            <span>沙發馬鈴薯</span>
+                            <span>沙發</span>
+                            <span>沙發馬鈴薯</span>
+                            <span>沙發馬薯</span>
+                            <span>沙發馬鈴薯</span>
+                            <span>沙發馬薯</span>
+                            <span>沙鈴</span>
+                            <span>沙發馬薯</span>
+                            <span>沙發馬鈴薯</span>
+                            <span>沙發馬薯</span>
+                            <span>沙鈴薯</span>
+                            <span>沙發</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detailsbtn">
+            <button class="true" type="submit" name="btn">儲存</button>
+            <button class="false" name="btn">取消</button>
         </div>
     </div>
 
