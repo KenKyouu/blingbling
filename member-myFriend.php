@@ -838,7 +838,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
 
     <!-- ------------lightbox-d eleteWarning------------ -->
 
-    <!-- <div class="friend-lightbox-warn">
+    <div class="friend-lightbox-warn">
         <div class="friend-lightbox-black"></div>
         <div class="friend-lightbox-bg">
             <div class="friend-warning">
@@ -853,7 +853,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
             <button class="true">確定</button>
             <button class="false">取消</button>
         </div>
-    </div> -->
+    </div>
 
     <!-- ------------lightbox-friendDetails------------ -->
     

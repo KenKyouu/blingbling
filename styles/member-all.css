@@ -933,7 +933,7 @@
     width: 100%;
     flex-wrap: none;
     justify-content: right;
-    padding-top: 10px;
+    padding-top: 30px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
     width: 100%;
@@ -944,7 +944,7 @@
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
     width: 100%;
-    height: 48px;
+    height: 54px;
     border-radius: 100px 0 0 100px;
     background-color: #ffffff;
     flex-direction: row;
@@ -1102,6 +1102,7 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .friendWishList {
     width: 100%;
+    height: 410px;
     overflow: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 {
@@ -1128,7 +1129,7 @@
     background-color: rgba(255, 255, 255, 0);
     flex-direction: row;
     justify-content: left;
-    margin: 20px 0 20px;
+    margin: 20px 0 30px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -1141,10 +1142,7 @@
     padding: 0 10px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
-    margin-bottom: 20px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
     padding-bottom: 10px;
@@ -1157,7 +1155,7 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
     width: 100%;
-    height: 280px;
+    height: 360px;
     overflow: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
@@ -1577,6 +1575,9 @@
   align-items: center;
   justify-content: center;
   padding: 33px 0;
+  z-index: 1;
+  position: absolute;
+  right: 100%;
 }
 .lightbox-myDetails p.editTitle {
   font-family: "GenSenRounded-B";
@@ -1889,6 +1890,9 @@
   align-items: center;
   justify-content: center;
   padding: 33px 0;
+  z-index: 1;
+  position: absolute;
+  right: 100%;
 }
 .lightbox-friendDetails p.editTitle {
   font-family: "GenSenRounded-B";
