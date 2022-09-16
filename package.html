@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>package</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./styles/package.css" />
+</head>
+<body>
+    <div class="package-lightBoxBg d-none"></div>
+    <div class="m-packageSection">
+        <div class="packageSection">
+            <div class="packageMainSection">
+                <div class="P-closeSection">
+                    <div class="p-close">
+                        <img src="./images/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="package-container">
+                    <div class="package-stepWrap">
+                        <div class="stepCard">
+                            <div id="step1"  class="stepTop1">
+                                1
+                            </div>
+                            <div class="stepBotton">
+                                禮物盒
+                            </div>
+                        </div>
+                        <div class="stepLine"></div>
+                        <div class="stepCard">
+                            <div id="step2"  class="stepTop2">
+                                2
+                            </div>
+                            <div class="stepBotton">
+                                禮物卡
+                            </div>
+                        </div>
+                        <div class="stepLine2"></div>
+                        <div  class="stepCard">
+                            <div id="step3" class="stepTop3">
+                                3
+                            </div>
+                            <div class="stepBotton">
+                                完成
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="packageShowSection">
+                        <div class="packageShow">
+                            <img  src="./images/package_01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="decorateSection">
+                    <div class="decorateSection-container">
+                        <div class="mainSector">
+                            <div class="mainSector-wrap">
+                                <div class="decorateBox">
+                                    <svg id="p-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.89 26.89"><defs></defs><g id="_圖層_1-2"><path class="cls-1" d="M12.71,12.14l-4.49-2.06L3.11,7.81,.34,6.54c-.08-.03-.16-.03-.23,.02-.07,.04-.11,.12-.11,.2v14.29c0,.1,.06,.18,.14,.22l12.37,5.6s.07,.02,.1,.02c.05,0,.09-.01,.13-.04,.07-.04,.11-.12,.11-.2V12.36c0-.1-.06-.18-.14-.22h0Z"/><path class="cls-1" d="M26.78,6.56c-.07-.04-.16-.05-.23-.02l-12.37,5.6c-.09,.04-.14,.12-.14,.22v14.3c0,.08,.04,.16,.11,.2,.04,.03,.08,.04,.13,.04,.03,0,.07,0,.1-.02l12.37-5.6c.09-.04,.14-.12,.14-.22V6.76c0-.08-.04-.16-.11-.2h0Z"/><path class="cls-1" d="M25.65,5.49c0-.1-.06-.18-.14-.22l-1.91-.84L15.61,.93l-.78-.34h-.02S13.54,.02,13.54,.02c-.06-.03-.13-.03-.19,0L1.38,5.28c-.09,.04-.14,.12-.14,.22s.06,.18,.14,.22l1.78,.8,.74,.33h0l6.5,2.89,2.93,1.39s.07,.02,.1,.02,.07,0,.1-.02l11.96-5.42c.09-.04,.14-.12,.14-.22h0Z"/></g></svg>
+                                    <!-- <img src="./images/p-box.svg" alt=""> -->
+                                </div>
+                                <div class="decoratePaper">
+                                    <svg version="1.1" id="p-paper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 15.9 20.3" style="enable-background:new 0 0 15.9 20.3;" xml:space="preserve"><g id="_圖層_1-2"><path d="M14.7,20.3L0.5,19.4L1.7,0.1l14.2,0.9L14.7,20.3z M1.2,18.8l12.9,0.8l1.1-18.1L2.3,0.7L1.2,18.8z"/><path class="st0" d="M13.6,0H0v18.7h13.6V0z"/></g>
+                                </svg>
+                                </div>
+                                <div class="decorateRibbon">
+                                    <svg id="p-ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.64 18.76"><g id="_圖層_1-2"><path d="M24.02,.24c-2.09-1.18-6.65,2.28-8.25,3.66-.38,.33-.61,.82-.61,1.33l.22,2.85c0,.15,.02,.29,.06,.43-.11-.1-.22-.2-.34-.3-.04-.03-.08-.07-.12-.1-.03-.02-.06-.05-.09-.07,.23-2.21-.29-3.35-.4-3.55,0-.01,0-.03,0-.04-.56-.18-1.11-.27-1.67-.27s-1.11,.09-1.67,.27c0,0-.83,1.63-.31,3.52-.25,.2-.49,.4-.72,.62,.09-.24,.14-.5,.14-.76l.22-2.57c0-.53-.23-1.03-.63-1.37C8.24,2.49,3.7-.93,1.62,.24-.53,1.46-.54,11.76,1.62,12.98c1.8,1.02,5.28-1.41,7.23-2.99-1.01,1.32-1.77,2.88-2.18,4.51-.26,1-.38,2.04-.35,3.06,.78-1.04,1.69-1.51,2.61-1.87,.28,1.36,.85,2.08,2.01,3.07-.65-2.72,.57-3.06,1.08-5.81,.32-1.7-.09-2.81-.03-3.76v-.1s.02-.07,.02-.1c.27,.04,.54,.06,.81,.06s.54-.02,.81-.06h0c0,.07,.01,.13,.02,.18h0c.06,.95-.34,2.07-.03,3.77,.51,2.75,1.73,3.1,1.08,5.81,1.16-.99,1.73-1.71,2.01-3.07,.92,.36,1.83,.83,2.61,1.87,.03-1.03-.1-2.07-.36-3.08,0,0,0,.02,0,.02h0c-.03-.14-.07-.26-.11-.39,0-.03-.02-.07-.03-.1-.06-.2-.13-.41-.2-.61-.02-.06-.04-.11-.06-.17-.06-.16-.12-.31-.18-.46-.02-.05-.04-.11-.07-.16-.09-.2-.18-.4-.27-.59,0,0,0,0,0-.02-.09-.19-.2-.38-.3-.56-.03-.05-.05-.09-.08-.14-.09-.16-.19-.32-.28-.47-.02-.03-.04-.06-.06-.09-.12-.19-.25-.37-.38-.55-.01-.02-.03-.04-.04-.06-.04-.05-.08-.1-.12-.15,1.95,1.57,5.43,4.01,7.23,2.99,2.17-1.23,2.15-11.52,0-12.74h0Z"/></g></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainTitle">
+                            <div class="mainTitleBox">
+                                選擇包裝盒款式
+                            </div>
+                        </div>
+                        <div class="boxStyle">
+                            <div class="boxStyle-wrap">
+                                <div class="boxStyle-1">
+                                    <img src="./images/package_01.png" alt="">
+                                </div>
+                                <div class="boxStyle-2">
+                                    <img src="./images/package-round-3.png" alt="">
+                                </div>
+                                <div class="boxStyle-3">
+                                    <img src="./images/package-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="packageBotton">
+                    <div class="packageBotton-box">
+                        <div class="packageBotton-wrap">
+                            <div id="step1Btn-Skip" class="p-skipBtn">
+                                略過包裝設計
+                            </div>
+                            <div id="step1Btn-clean" class="p-skipBtn">
+                                清除設計
+                            </div>
+                            <div id="step1Btn-next" class="p-skipBtn">
+                                下一步
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardMainSection">
+                
+            </div>
+        </div>
+    
+        <div class="cardSection">
+            <!-- <div class="package-lightBoxBg"></div> -->
+            <div class="packageMainSection">
+                <div class="P-closeSection">
+                    <div class="p-close">
+                        <img src="./images/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="package-container">
+                    <div class="package-stepWrap">
+                        <div class="stepCard">
+                            <div id="step1"  class="stepTop1">
+                                1
+                            </div>
+                            <div class="stepBotton">
+                                禮物盒
+                            </div>
+                        </div>
+                        <div class="stepLine"></div>
+                        <div class="stepCard">
+                            <div id="step2"  class="stepTop2">
+                                2
+                            </div>
+                            <div class="stepBotton">
+                                禮物卡
+                            </div>
+                        </div>
+                        <div class="stepLine2"></div>
+                        <div  class="stepCard">
+                            <div id="step3" class="stepTop3">
+                                3
+                            </div>
+                            <div class="stepBotton">
+                                完成
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="cardShowSection">
+                        <div class="cardShow">
+                            <img  src="./images/card-01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDecorateSection">
+                    <div class="cardDecorateSection-container">
+                        <div class="cardMainSector">
+                            <div class="cardMainSector-wrap">
+                                <div class="cardStyle">
+                                    <svg id="c-paper" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.3 15.4"><defs></defs><g id="_圖層_2-2"><path d="M0,14.2L.9,0,20.2,1.2l-.9,14.2L0,14.2ZM1.5,.7L.7,13.6l18.1,1.1,.8-12.9L1.5,.7Z"/><path class="cls-1" d="M20.3,14.1V1.22H.41V14.1H20.3Z"/></g></svg>
+                                </div>
+                                <div class="cardText">
+                                    <svg id="c-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.21 10.09"><g id="_圖層_1-2"><g><polygon points="2.97 0 0 0 0 1.73 2.97 1.73 2.97 9.95 5.19 9.95 5.19 1.73 8.22 1.73 8.22 0 5.19 0 2.97 0"/><polygon points="22.49 2.56 20.25 2.56 19.08 4.7 17.94 2.56 15.69 2.56 17.7 6.17 15.59 9.95 17.85 9.95 19.09 7.67 20.33 9.95 22.59 9.95 20.47 6.17 22.49 2.56"/><path d="M26.96,8.39c-.09,0-.2,.01-.33,.01-.18,0-.32-.02-.44-.06-.11-.05-.2-.12-.25-.23s-.08-.27-.08-.47v-3.58h1.24v-1.5h-1.24V.72h-2.14v1.83h-1v1.5h1v3.82c0,.52,.09,.95,.27,1.28,.18,.32,.43,.56,.77,.71,.34,.15,.74,.23,1.2,.23,.24,0,.46-.02,.67-.05,.21-.03,.4-.08,.58-.14v-1.54c-.08,.01-.16,.03-.25,.03Z"/><path d="M14.27,3.41c-.28-.32-.63-.56-1.04-.73-.41-.17-.88-.26-1.4-.26-.56,0-1.06,.1-1.5,.29-.44,.19-.81,.45-1.11,.8-.3,.34-.52,.75-.68,1.21s-.23,.97-.23,1.52v.26c0,.49,.08,.95,.25,1.39,.17,.43,.41,.82,.73,1.15,.32,.33,.72,.59,1.18,.77,.46,.19,.99,.28,1.58,.28,.48,0,.91-.06,1.29-.19,.38-.13,.7-.29,.97-.49,.27-.21,.49-.42,.64-.64l-1-1.14c-.22,.28-.49,.48-.79,.62-.31,.13-.63,.19-.96,.19-.27,0-.52-.05-.73-.14-.21-.1-.4-.23-.55-.4-.15-.17-.26-.37-.34-.61-.04-.12-.07-.24-.09-.37h4.65v-.88c0-.55-.08-1.05-.23-1.49-.15-.45-.36-.83-.64-1.14Zm-1.22,2.13h-2.53s0-.1,.01-.14c.05-.26,.12-.49,.22-.69,.1-.2,.24-.36,.42-.46s.39-.16,.65-.16c.27,0,.5,.05,.68,.16,.18,.1,.32,.26,.41,.45,.1,.2,.14,.42,.14,.68v.16Z"/></g></g></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainTitle">
+                            <div class="mainTitleBox">
+                                選擇卡片樣式
+                            </div>
+                        </div>
+                        <div class="cardStyleBox">
+                            <div class="cardStyle-wrap">
+                                <div class="cardStyle-1">
+                                    <img src="./images/card-01.png" alt="">
+                                </div>
+                                <div class="cardStyle-2">
+                                    <img src="./images/card-01.png" alt="">
+                                </div>
+                                <div class="cardStyle-3">
+                                    <img src="./images/card-01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="packageBotton">
+                    <div class="packageBotton-box">
+                        <div class="packageBotton-wrap">
+                            <div id="step2Btn-Skip" class="p-skipBtn">
+                                不需要卡片
+                            </div>
+                            <div id="step2Btn-clean" class="p-skipBtn">
+                                清除設計
+                            </div>
+                            <div id="step2Btn-next" class="p-skipBtn">
+                                卡片內容確認
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardMainSection">
+                
+            </div>
+        </div>
+        
+        <div class="FinishSection">
+            <!-- <div class="package-lightBoxBg"></div> -->
+            <div class="packageMainSection">
+                <div class="P-closeSection">
+                    <div class="p-close">
+                        <img src="./images/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="package-container">
+                    <div class="package-stepWrap">
+                        <div class="stepCard">
+                            <div id="step1"  class="stepTop1">
+                                1
+                            </div>
+                            <div class="stepBotton">
+                                禮物盒
+                            </div>
+                        </div>
+                        <div class="stepLine"></div>
+                        <div class="stepCard">
+                            <div id="step2"  class="stepTop2">
+                                2
+                            </div>
+                            <div class="stepBotton">
+                                禮物卡
+                            </div>
+                        </div>
+                        <div class="stepLine2"></div>
+                        <div  class="stepCard">
+                            <div id="step3" class="stepTop3">
+                                3
+                            </div>
+                            <div class="stepBotton">
+                                完成
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="FinishShowSection">
+                        <div class="FinishShow">
+                            <img  src="./images/card-01.png" alt="">
+                            <img  src="./images/package_01_all.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="FinishDecorateSection">
+                    <div class="FinishDecorateSection-container">
+                        <div class="FinishMainTitle">
+                            <div class="FinishMainTitleBox">
+                                卡片寄送方式
+                            </div>
+                        </div>
+                        <div class="FinishSentSection">
+                            <div class="FinishSent-wrap">
+                                <div class="FinishForm-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      實體寄送
+                                    </label>
+                                  </div>
+                                  <div class="FinishForm-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label mr-2" for="flexRadioDefault2">
+                                      Email
+                                    </label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="packageBotton">
+                    <div class="packageBotton-box">
+                        <div class="packageBotton-wrap">
+                            <div id="step3Btn-pre" class="p-skipBtn">
+                                上一步
+                            </div>
+                            <div id="step3Btn-clean" class="p-skipBtn">
+                                再做一次
+                            </div>
+                            <div id="step3Btn-next" class="p-skipBtn">
+                                完成
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardMainSection">
+                
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+    <!-- w-packageSection -->
+    <div class="w-package-lightBoxBg"></div>
+    <div class="w-packageSection">
+        <div class="w-packageMainSection">
+            <div class="w-P-closeSection">
+                <div class="w-p-close">
+                    <img src="./images/close.svg" alt="">
+                </div>
+            </div>
+            <div class="w-package-container">
+                <div class="w-package-stepWrap">
+                    <div class="stepCard">
+                        <div id="step1"  class="stepTop1">
+                            1
+                        </div>
+                        <div class="stepBotton">
+                            禮物盒
+                        </div>
+                    </div>
+                    <div class="stepLine"></div>
+                    <div class="stepCard">
+                        <div id="step2"  class="stepTop2">
+                            2
+                        </div>
+                        <div class="stepBotton">
+                            禮物卡
+                        </div>
+                    </div>
+                    <div class="stepLine2"></div>
+                    <div  class="stepCard">
+                        <div id="step3" class="stepTop3">
+                            3
+                        </div>
+                        <div class="stepBotton">
+                            完成
+                        </div>
+                    </div>
+                </div> 
+                <div class="w-packageMainbox">
+                    <div class="w-packageLeft">
+                        <div class="w-mainSector">
+                            <div class="w-mainSector-wrap">
+                                <div class="w-decorateCard1">
+                                    <div class="w-decorateName">
+                                        包裝盒
+                                    </div>
+                                    <div class="w-decorateBox">
+                                        <svg id="p-box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.89 26.89"><defs></defs><g id="_圖層_1-2"><path class="cls-1" d="M12.71,12.14l-4.49-2.06L3.11,7.81,.34,6.54c-.08-.03-.16-.03-.23,.02-.07,.04-.11,.12-.11,.2v14.29c0,.1,.06,.18,.14,.22l12.37,5.6s.07,.02,.1,.02c.05,0,.09-.01,.13-.04,.07-.04,.11-.12,.11-.2V12.36c0-.1-.06-.18-.14-.22h0Z"/><path class="cls-1" d="M26.78,6.56c-.07-.04-.16-.05-.23-.02l-12.37,5.6c-.09,.04-.14,.12-.14,.22v14.3c0,.08,.04,.16,.11,.2,.04,.03,.08,.04,.13,.04,.03,0,.07,0,.1-.02l12.37-5.6c.09-.04,.14-.12,.14-.22V6.76c0-.08-.04-.16-.11-.2h0Z"/><path class="cls-1" d="M25.65,5.49c0-.1-.06-.18-.14-.22l-1.91-.84L15.61,.93l-.78-.34h-.02S13.54,.02,13.54,.02c-.06-.03-.13-.03-.19,0L1.38,5.28c-.09,.04-.14,.12-.14,.22s.06,.18,.14,.22l1.78,.8,.74,.33h0l6.5,2.89,2.93,1.39s.07,.02,.1,.02,.07,0,.1-.02l11.96-5.42c.09-.04,.14-.12,.14-.22h0Z"/></g></svg>
+                                    </div>
+                                </div>
+                                <div class="w-decorateCard2">
+                                    <div class="w-decorateName">
+                                        包裝紙
+                                    </div>
+                                    <div class="w-decoratePaper">
+                                        <svg version="1.1" id="p-paper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 15.9 20.3" style="enable-background:new 0 0 15.9 20.3;" xml:space="preserve"><g id="_圖層_1-2"><path d="M14.7,20.3L0.5,19.4L1.7,0.1l14.2,0.9L14.7,20.3z M1.2,18.8l12.9,0.8l1.1-18.1L2.3,0.7L1.2,18.8z"/><path class="st0" d="M13.6,0H0v18.7h13.6V0z"/></g>
+                                    </svg>
+                                    </div>
+                                </div>
+                                <div class="w-decorateCard3">
+                                    <div class="w-decorateName">
+                                        緞帶
+                                    </div>
+                                    <div class="w-decorateRibbon">
+                                        <svg id="p-ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.64 18.76"><g id="_圖層_1-2"><path d="M24.02,.24c-2.09-1.18-6.65,2.28-8.25,3.66-.38,.33-.61,.82-.61,1.33l.22,2.85c0,.15,.02,.29,.06,.43-.11-.1-.22-.2-.34-.3-.04-.03-.08-.07-.12-.1-.03-.02-.06-.05-.09-.07,.23-2.21-.29-3.35-.4-3.55,0-.01,0-.03,0-.04-.56-.18-1.11-.27-1.67-.27s-1.11,.09-1.67,.27c0,0-.83,1.63-.31,3.52-.25,.2-.49,.4-.72,.62,.09-.24,.14-.5,.14-.76l.22-2.57c0-.53-.23-1.03-.63-1.37C8.24,2.49,3.7-.93,1.62,.24-.53,1.46-.54,11.76,1.62,12.98c1.8,1.02,5.28-1.41,7.23-2.99-1.01,1.32-1.77,2.88-2.18,4.51-.26,1-.38,2.04-.35,3.06,.78-1.04,1.69-1.51,2.61-1.87,.28,1.36,.85,2.08,2.01,3.07-.65-2.72,.57-3.06,1.08-5.81,.32-1.7-.09-2.81-.03-3.76v-.1s.02-.07,.02-.1c.27,.04,.54,.06,.81,.06s.54-.02,.81-.06h0c0,.07,.01,.13,.02,.18h0c.06,.95-.34,2.07-.03,3.77,.51,2.75,1.73,3.1,1.08,5.81,1.16-.99,1.73-1.71,2.01-3.07,.92,.36,1.83,.83,2.61,1.87,.03-1.03-.1-2.07-.36-3.08,0,0,0,.02,0,.02h0c-.03-.14-.07-.26-.11-.39,0-.03-.02-.07-.03-.1-.06-.2-.13-.41-.2-.61-.02-.06-.04-.11-.06-.17-.06-.16-.12-.31-.18-.46-.02-.05-.04-.11-.07-.16-.09-.2-.18-.4-.27-.59,0,0,0,0,0-.02-.09-.19-.2-.38-.3-.56-.03-.05-.05-.09-.08-.14-.09-.16-.19-.32-.28-.47-.02-.03-.04-.06-.06-.09-.12-.19-.25-.37-.38-.55-.01-.02-.03-.04-.04-.06-.04-.05-.08-.1-.12-.15,1.95,1.57,5.43,4.01,7.23,2.99,2.17-1.23,2.15-11.52,0-12.74h0Z"/></g></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-packageShowSection">
+                        <div class="w-packageShow">
+                            <div class="w-packageShow-top">
+                                <img  src="./images/package_01.png" alt="">
+                            </div>
+                            <div class="w-packageShow-botton">
+                                <img  src="./images/w-package-LR.svg" alt="">
+                            </div>
+                        </div>
+                </div>
+
+                <div class="w-packageStyleSection">
+                    <div class="w-mainTitle">
+                        <div class="w-mainTitleBox">
+                            選擇包裝盒款式
+                        </div>
+                    </div>
+                    <div class="w-decorateSection">
+                        <div class="w-boxStyle">
+                            <div class="w-boxStyle-wrap">
+                                <div class="w-boxStyle-1">
+                                    <img src="./images/package_01.png" alt="">
+                                </div>
+                                <div class="w-boxStyle-2">
+                                    <img src="./images/package-round-3.png" alt="">
+                                </div>
+                                <div class="w-boxStyle-3">
+                                    <img src="./images/package-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-packageBotton">
+                <div class="w-packageBotton-box">
+                    <div class="w-packageBotton-wrap">
+                        <div id="step3Btn-pre" class="w-p-skipBtn">
+                            上一步
+                        </div>
+                        <div id="step3Btn-clean" class="w-p-skipBtn">
+                            再做一次
+                        </div>
+                        <div id="step3Btn-next" class="w-p-skipBtn">
+                            完成
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/package.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
