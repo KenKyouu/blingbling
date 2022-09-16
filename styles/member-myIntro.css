@@ -1,0 +1,863 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrap .containerr .main .row {
+  height: 100vh;
+}
+
+.wrap .containerr .main .row .col {
+  background-color: #2d827d;
+  padding: 0;
+}
+
+.wrap .containerr .main .row .col .left .myName {
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #7cb2af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
+  width: 110%;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoedit {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #ffcd51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+}
+
+.wrap .containerr .main .row .col .left .myName h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 24px;
+  color: #000000;
+  padding: 13px 0 13px 0;
+}
+
+.wrap .containerr .main .row .col .left .myName a.coin {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+
+.wrap .containerr .main .row .col .left .myName a.coin svg {
+  margin-right: 10px;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton {
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  padding: 10px 0;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
+  margin-bottom: 5px;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 36px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg {
+  width: 280px;
+  height: 380px;
+  border-radius: 10px;
+  background-color: #f07f72;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel {
+  width: 220px;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .diamondicon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress {
+  width: 204px;
+  height: 8px;
+  background-color: #d4cfc6;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress .progress-bar {
+  background-color: #7cb2af;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info {
+  width: 60%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info p {
+  width: 100%;
+  line-height: 18px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info {
+  width: 60%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info p {
+  width: 100%;
+  line-height: 18px;
+}
+
+.wrap .containerr .main .row .col .whiteBg button.editMyInfo {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  background-color: #ffffff00;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg button.editMyInfo p.edit {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+}
+
+.wrap .containerr .main .row .col .whiteBg button.editMyInfo svg {
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .wrap {
+    background-image: url(../images/other_bg_paper.png);
+  }
+  .wrap .containerr {
+    margin: 0 5%;
+  }
+  .wrap .containerr .main .row .col {
+    background-color: #00000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 90px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 {
+    height: 70%;
+    border-radius: 10px;
+    background-color: #2d827d;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
+    top: -50px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder {
+    width: 100px;
+    height: 100px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto {
+    width: 86px;
+    height: 86px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto img.photo {
+    width: 120%;
+    position: static;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoedit {
+    right: -5px;
+    bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
+    color: #ffffff;
+    margin-top: -30px;
+    padding: 13px 0 15px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName a.coin {
+    color: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton {
+    padding: 0 0 0 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
+    width: 100%;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
+    width: 100%;
+    padding: 0;
+    margin: 6px 0 6px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
+    width: 100%;
+    height: 54px;
+    border-radius: 100px 0 0 100px;
+    background-color: #ffffff;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
+    width: 35%;
+    text-align: right;
+    padding-right: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
+    width: 65%;
+    font-family: "GenSenRounded-B";
+    font-size: 20px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card {
+    width: 90%;
+    padding-top: 0;
+    padding-right: 5%;
+    border: none;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card .membercardimg {
+    width: 90%;
+    height: 90%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 button.editMyInfo {
+    margin: 35px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrap .containerr {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrap .containerr {
+    margin: 0 15%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .wrap .containerr {
+    margin: 0 18%;
+  }
+  .wrap .containerr .main .row .col .col-xl-3 .memberbutton ul li.col-lg-12 .btnP {
+    padding-left: 20px;
+  }
+}
+/*# sourceMappingURL=member-myIntro.css.map */

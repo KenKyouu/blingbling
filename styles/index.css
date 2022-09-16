@@ -1,41 +1,605 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/index-bg_paper.png);
+  background-size: 300%;
+  background-repeat: repeat;
+}
+
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
+>>>>>>> 3177737f2e7b0bb7b519753403c5e19de2b585a5
 .indexBox {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(../images/index-bg_paper.png);
+  background-image: url(../images/index-m-bg-2.png);
+  background-size: 200%;
+  background-position-x: -200px;
+  background-position-y: 350px;
+  background-repeat: no-repeat;
 }
 
 .I-mainSection {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 56.5px;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
-
 .I-mainSection .mainTop {
+  margin: auto;
   width: 100%;
   height: 30%;
 }
-
+<<<<<<< HEAD
 .I-mainSection .mainTop .mainLogo img {
   width: 42%;
+}/*# sourceMappingURL=index.css.map */
+=======
+<<<<<<< HEAD
+.I-mainSection .mainTop .mainLogo img {
+  width: 42%;
+}/*# sourceMappingURL=index.css.map */
+=======
+
+.I-mainSection .mainTop .mainLogo {
+  width: 60%;
+  padding-top: 88px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.I-mainSection .mainTop .mainLogo .mainLogo img {
+  width: 100%;
+}
+
+.I-mainSection .mainBotton {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+}
+
+.I-mainSection .mainBotton .mainRow {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  max-width: 75%;
+  padding: 20px;
+}
+
+.I-mainSection .mainBotton .mainRow .mainCard {
+  width: 100%;
+}
+
+.I-storySection {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  height: 80vh;
+}
+
+.I-storySection .storyTitle h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.I-storySection .storyTitle .I-story-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.I-storySection .storyTitle .I-story-text h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #d4cfc6;
+  background-color: #000000;
+  border-radius: 60px;
+  padding: 0px 15px 3px 15px;
+}
+
+.I-storySection .storyInfor {
+  margin-top: 15px;
+}
+
+.I-storySection .storyInfor .storyInfor-text {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.I-populerSection {
+  width: 100%;
+  height: 80vh;
+}
+
+.I-populerSection .populerTitle {
+  width: 100%;
+  height: 20%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.I-populerSection .populerTitle h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  margin: 0;
+}
+
+.I-populerSection .populerTitle .poupler-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.I-populerSection .populerTitle .poupler-text h3 {
+  margin-top: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+  color: #d4cfc6;
+  background-color: #000000;
+  border-radius: 60px;
+  padding: 0px 15px 3px 15px;
+}
+
+.I-populerSection .populerInfor {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+.I-populerSection .populerInfor .populerInfor-line {
+  margin-left: 30px;
+  width: 50%;
+  position: absolute;
+  top: -15px;
+}
+
+.I-populerSection .populerInfor .populerInforBox {
+  padding-left: -30px;
+  padding-right: -30px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding-top: 0px;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton {
+  overflow-x: scroll;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex: 0 0 58.333333%;
+  -webkit-box-flex: 0;
+          flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+  margin: 0px 5px;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-s {
+  width: 85%;
+  margin: auto;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-s .populerCardTop {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-s .populerCardInfor .populerCardTitle {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-s .populerCardInfor .populerCardPrice {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  width: 48%;
+  margin: 0;
+  border: 1px solid #000000;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-s .populerCardInfor .populerCardPrice::before {
+  content: 'TWD ';
+  color: #000000;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-b {
+  width: 100%;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-b .populerCardTop {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-b .populerCardInfor .populerCardTitle {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-b .populerCardInfor .populerCardPrice {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  width: 40%;
+  margin: 0;
+  border: 1px solid #000000;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
+.I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row .populerCard-b .populerCardInfor .populerCardPrice::before {
+  content: 'TWD ';
+  color: #000000;
+}
+
+.I-FestivalSection {
+  width: 100%;
+  height: 400vh;
+  background-image: url(../images/elf_05_border.png), url(../images/index-w-bg-4.svg), url(../images/index-w-bg-5.svg), url(../images/index-w-bg-3.svg);
+  background-repeat: no-repeat;
+  background-size: 60%,200%,200%,300%;
+  background-position-x: 150px,150px,-500px,-200px;
+  background-position-y: 0px,1700px,1000px ,100px;
+}
+
+.I-FestivalSection .FestivalBox {
+  width: 100%;
+  height: 300vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.I-FestivalSection .FestivalBox .Festival-TextL {
+  margin-top: 100px;
+  width: 10%;
+  top: 20%;
+}
+
+.I-FestivalSection .FestivalBox .Festival-TextR {
+  margin-top: 300px;
+  width: 10%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20%;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox {
+  margin-top: 150px;
+  width: 80%;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow {
+  width: 100%;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow {
+  margin-bottom: 30px;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard {
+  position: relative;
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Top .img-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.293), 9px 11px 3px 1px rgba(12, 13, 15, 0.215);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.293), 9px 11px 3px 1px rgba(12, 13, 15, 0.215);
+  background-color: #000000;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Top .img-wrap img {
+  opacity: 0.85;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Top .Top-text p {
+  position: absolute;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 5px;
+  border-radius: 10px 0 0 0;
+  background-color: #ffffff;
+  top: 0;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Infor {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  bottom: 0px;
+  padding: 10px 15px;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Infor .FestivalCard-InforL {
+  width: 70%;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Infor .FestivalCard-InforL p {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  margin: 0;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard-InforR {
+  width: 30%;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard-InforR .FestivalCard-PriceBox {
+  width: 70px;
+  height: 70px;
+  padding: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.696);
+  margin: auto;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard-InforR .FestivalCard-PriceBox .FestivalCard-Price {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding-top: 13px;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard-InforR .FestivalCard-PriceBox .FestivalCard-Price p {
+  margin: 0;
+  line-height: 16px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard:hover .FestivalCard-PriceBox {
+  background-color: #2d827cc2;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard:hover .img-wrap img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.I-newSection {
+  width: 100%;
+  height: 90vh;
+}
+
+.I-newSection .newSection-Top {
+  overflow: hidden;
+}
+
+.I-newSection .newSection-Top .newTitle {
+  width: 100%;
+  height: 20%;
+  padding-left: 30px;
+  padding-top: 40px;
+  margin-right: 10px;
+}
+
+.I-newSection .newSection-Top .newTitle h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  margin: 0;
+}
+
+.I-newSection .newSection-Top .newTitle .new-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.I-newSection .newSection-Top .newTitle .new-text h3 {
+  margin-top: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+  color: #d4cfc6;
+  background-color: #000000;
+  border-radius: 60px;
+  padding: 0px 15px 3px 15px;
+}
+
+.I-newSection .newSection-Top .newRow-Top {
+  width: 100%;
+  height: 100%;
+}
+
+.I-newSection .newSection-Top .newRow-Top .newCardBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.I-newSection .newSection-Top .newRow-Top .newCardBox .newRow {
+  overflow-x: scroll;
+}
+
+.I-newSection .newSection-Top .newRow-Top .newCardBox .newRow .newCardRow {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  max-width: 75%;
+  margin: 0px 5px;
+}
+
+.I-newSection .newSection-Top .newRow-Top .newCardBox .newRow .newCardInfor {
+  margin-top: 5px;
+}
+
+.I-newSection .newSection-Top .newRow-Top .newCardBox .newRow .newCardInfor p {
+  font-family: "GenSenRounded-M";
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.I-NEWSsection {
+  width: 100%;
+  height: 100vh;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.I-NEWSsection .NEWScontainer {
+  height: 100vh;
+  background-image: url(../images/index-w-bg-6.svg);
+  background-repeat: no-repeat;
+  background-size: 400%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.I-NEWSsection .NEWScontainer .NEWStitle {
+  width: 100%;
+  height: 30%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.I-NEWSsection .NEWScontainer .NEWStitle h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  margin: 0;
+}
+
+.I-NEWSsection .NEWScontainer .NEWStitle .NEWSinfor {
+  margin-top: 10px;
+}
+
+.I-NEWSsection .NEWScontainer .NEWStitle .NEWSinfor p {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton {
+  width: 100%;
+  height: 60%;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton .NEWSbox {
+  width: 100%;
+  height: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow {
+  width: 75%;
+  height: 100%;
+  margin: auto;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow .NEWScard {
+  width: 100%;
+  height: 100%;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow .NEWScard .NEWScardImg {
+  width: 100%;
+  height: 100%;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow .NEWScard .NEWScardImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.I-NEWSsection .NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow .NEWScard .NEWScardInfor p {
+  margin-top: 5px;
+  font-family: "GenSenRounded-M";
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
 }
 /*# sourceMappingURL=index.css.map */
+>>>>>>> c919b03fe42168fe2c4d444fdca58eb345f5a579
+>>>>>>> 3177737f2e7b0bb7b519753403c5e19de2b585a5
