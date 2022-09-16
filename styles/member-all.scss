@@ -2145,6 +2145,11 @@ $bold: 900;
 
 // ------------------lightbox-newFriendDetails-----------------
 
+.lightbox-newFriendDetails-blackbg {
+    z-index: 1;
+    position: absolute;
+    right: 100%;
+}
 .lightbox-newFriendDetails {
     width: 375px;
     height: auto;
@@ -2156,7 +2161,7 @@ $bold: 900;
     align-items: center;
     justify-content: center;
     padding: 33px 0;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     right:100%;
     p.editTitle {

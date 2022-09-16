@@ -1744,6 +1744,12 @@
   margin-left: 30px;
 }
 
+.lightbox-newFriendDetails-blackbg {
+  z-index: 1;
+  position: absolute;
+  right: 100%;
+}
+
 .lightbox-newFriendDetails {
   width: 375px;
   height: auto;
@@ -1755,7 +1761,7 @@
   align-items: center;
   justify-content: center;
   padding: 33px 0;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   right: 100%;
 }

@@ -301,6 +301,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
 
     <!-- ------------lightbox-friendDetails------------ -->
 
+    <div class="lightbox-friendDetails-blackbg"></div>
     <div class="lightbox-friendDetails">
         <p class="editTitle">編輯好友資訊</p>
         <div class="friend-details">
