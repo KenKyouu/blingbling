@@ -437,20 +437,7 @@
     padding-top: 8rem;
   }
 }
-.j-messages {
-  color: #ca3f68;
-  font-family: "Roboto";
-  font-size: 14px;
-  line-height: 1;
-  margin-top: 6px;
-}
-
-.j-error-border {
-  outline: 1px solid #ca3f68;
-  box-shadow: none;
-}
-
-.j-pay-wrap div .j-money-pay .j-money-title .j-point, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point, .j-pay-wrap div .j-line-pay .j-line-title .j-point, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point, .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point {
+.j-pay-wrap div .j-money-pay .j-money-title .j-point, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point, .j-pay-wrap div .j-line-pay .j-line-title .j-point, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point, .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point {
   cursor: pointer;
   font-size: 18px;
   display: block;
@@ -460,7 +447,7 @@
 }
 
 /* Hide the browser's default checkbox */
-.j-pay-wrap div .j-money-pay .j-money-title .j-point input, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point input, .j-pay-wrap div .j-line-pay .j-line-title .j-point input, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point input, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point input, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point input, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point input, .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input {
+.j-pay-wrap div .j-money-pay .j-money-title .j-point input, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point input, .j-pay-wrap div .j-line-pay .j-line-title .j-point input, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point input, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point input, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point input, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point input, .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input {
   position: absolute;
   cursor: pointer;
   opacity: 0;
@@ -557,11 +544,11 @@
   background: black;
 }
 
-.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required {
   position: relative;
 }
 
-.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required::before {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required::before {
   content: "*";
   position: absolute;
   display: block;
@@ -570,7 +557,7 @@
   color: #ca3f68;
 }
 
-.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info .j-input, .j-city, .j-town, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-input {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-form-gtoup .j-input, .j-city, .j-town, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-input {
   margin-top: 0.75rem;
   padding: 10px 25px;
   border-radius: 10px;
@@ -600,6 +587,28 @@
   width: 100%;
 }
 
+.help-block.error {
+  margin-bottom: 5px;
+}
+
+.j-messages {
+  color: #ca3f68;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-error .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-error .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-error .j-input, .has-error select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-error .j-input {
+  outline: 1px solid #ca3f68;
+  box-shadow: none;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-success .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-success .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-success .j-input, .has-success select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-success .j-input {
+  outline: none;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+}
+
 .j-people-wrap .j-people .j-recipient .j-people-info, .j-people-wrap .j-people .j-orderer .j-people-info {
   font-size: 16px;
   font-family: "Roboto";
@@ -619,15 +628,18 @@
   font-family: "GenSenRounded-B";
   font-size: 20px;
 }
+.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point {
+  display: inline-block;
+}
 .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input span {
   display: block;
 }
 .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 {
   margin-right: 10px;
-  width: 25%;
+  width: 30%;
 }
 .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 {
-  width: 75%;
+  width: 70%;
 }
 .j-people-wrap .j-people .j-recipient {
   margin-top: 3rem;
@@ -636,12 +648,15 @@
   font-family: "GenSenRounded-B";
   font-size: 20px;
 }
+.j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point {
+  display: inline-block;
+}
 .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 {
   margin-right: 10px;
-  width: 25%;
+  width: 30%;
 }
 .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 {
-  width: 75%;
+  width: 70%;
 }
 @media only screen and (min-width: 768px) {
   .j-people-wrap {
@@ -718,7 +733,7 @@
     padding: 10px 20px;
   }
 }
-.j-logistics-wrap .j-logistics div .j-home-delivery li, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li {
   margin-top: 20px;
 }
 
@@ -762,20 +777,20 @@
 .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select {
   width: 100%;
 }
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox {
   display: flex;
   width: 70%;
 }
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point {
   font-size: 16px;
 }
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point input {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point input {
   font-size: 16px;
 }
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point {
   margin-right: 20px;
 }
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-input {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input {
   line-height: 2;
 }
 .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-store-btn a {
@@ -816,7 +831,17 @@
   .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info {
     font-size: 14px;
   }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select .j-city {
+    width: calc(50% - 7.5px);
+    float: left;
+    margin-right: 7.5px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select .j-town {
+    width: calc(50% - 7.5px);
+    margin-left: 7.5px;
+  }
   .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input {
+    clear: both;
     font-size: 14px;
   }
   .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox {

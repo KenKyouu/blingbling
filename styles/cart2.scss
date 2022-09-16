@@ -516,17 +516,8 @@ $bold: 900;
 }
 
 //-------------------------------form-----------
-.j-messages{
-    color: $pink;
-    font-family: "Roboto";
-    font-size: $ps-font-size;
-    line-height: 1;
-    margin-top: 6px;
-}
-.j-error-border{
-        outline: 1px solid $pink;
-        box-shadow: none
-    }
+
+
 //-----custom checkbox
 %point-shared {
     cursor: pointer;
@@ -670,6 +661,27 @@ $bold: 900;
 .j-label, .j-input{
     width: 100%;
 }
+
+
+
+.help-block.error {
+    margin-bottom: 5px;
+}
+.j-messages {
+    color: $pink;
+    font-family: "Roboto";
+    font-size: $ps-font-size;
+    line-height: 1;
+    margin-top: 6px;
+    }
+%has-error-shared{
+    outline: 1px solid $pink;
+    box-shadow: none;
+}
+%has-success-shared{
+    outline: none;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+}
 //----------------------------people-------------------------------
 
 %people-info-shared {
@@ -697,6 +709,7 @@ $bold: 900;
                     @extend %check-shared;
                     .j-point {
                         @extend %point-shared;
+                        display: inline-block;
                         input {
                             @extend %point-input-shared;
                             span{
@@ -716,10 +729,7 @@ $bold: 900;
                     .j-input{
                         @extend %input-shared;
                     }
-                    // .j-error-border{
-                    //     outline: 1px solid $pink;
-                    //     box-shadow: none
-                    // }
+                    
                 }
                 .j-space{
                     @extend %space-shared;
@@ -733,22 +743,35 @@ $bold: 900;
                         @extend %input-shared;
                     }
                 }
+                .has-error .j-input{
+                    @extend %has-error-shared;
+                }
+                .has-success .j-input{
+                    @extend %has-success-shared;
+                }
                 .j-space{
                     @extend %space-shared;
                     .j-tel-1{
                         margin-right: 10px;
-                        width: 25%;
+                        width: 30%;
                         .j-input{
                             @extend %input-shared;
                         }
                     }
                     .j-tel-2{
-                        width: 75%;
+                        width: 70%;
                         .j-input{
                             @extend %input-shared;
                         }
                     }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
+                    }
                 }
+                
             }
         }
         .j-recipient{
@@ -763,6 +786,7 @@ $bold: 900;
                     @extend %check-shared;
                     .j-point {
                     @extend %point-shared;
+                    display: inline-block;
                     input {
                         @extend %point-input-shared;
                     }
@@ -792,20 +816,32 @@ $bold: 900;
                         @extend %input-shared;
                     }
                 }
+                .has-error .j-input{
+                    @extend %has-error-shared;
+                }
+                .has-success .j-input{
+                    @extend %has-success-shared;
+                }
                 .j-space{
                     @extend %space-shared;
                     .j-tel-1{
                         margin-right: 10px;
-                        width: 25%;
+                        width: 30%;
                         .j-input{
                             @extend %input-shared;
                         }
                     }
                     .j-tel-2{
-                        width: 75%;
+                        width: 70%;
                         .j-input{
                             @extend %input-shared;
                         }
+                    }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
                     }
                 }
                 }
@@ -928,6 +964,12 @@ $bold: 900;
     font-size: $p-font-size;
 
 }
+.has-error select{
+    @extend %has-error-shared;
+}
+.has-success select{
+    @extend %has-success-shared;
+}
 .j-city{
     margin-right: 15px;
 }
@@ -965,12 +1007,18 @@ $bold: 900;
                             }
                         }
                         .j-select{
-                            // display: flex;
                             width: 100%;
+                        }
+                        .j-form-gtoup{
+                            .j-input{
+                                @extend %input-shared;
                             }
                         }
-                        .j-input{
-                            @extend %input-shared;
+                        .has-error .j-input{
+                            @extend %has-error-shared;
+                        }
+                        .has-success .j-input{
+                            @extend %has-success-shared;
                         }
                     }
                     li{
@@ -1012,6 +1060,7 @@ $bold: 900;
                             line-height: 2;
                         }
                     }
+                }
             }
         }
             .j-convenience-store{
@@ -1049,6 +1098,12 @@ $bold: 900;
                         .j-input{
                             @extend %input-shared;
                         }
+                    }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
                     }
                     .j-store-btn{
                         a{
@@ -1096,7 +1151,19 @@ $bold: 900;
                     .j-home-info{
                         font-size: $ps-font-size;
                         li{
+                            .j-select{
+                                .j-city{
+                                    width: calc(50% - 7.5px);
+                                    float: left;
+                                    margin-right: 7.5px;
+                                }
+                                .j-town{
+                                    width: calc(50% - 7.5px);
+                                    margin-left: 7.5px;
+                                }
+                            }
                             .j-input{
+                                clear: both;
                                 font-size: $ps-font-size;
                             }
                         }
@@ -1214,6 +1281,12 @@ $bold: 900;
                     }
                     .j-space{
                         @extend %space-shared;
+                    }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
                     }
                 }
             }
@@ -1761,3 +1834,5 @@ $bold: 900;
 //     }
     
 // }
+
+
