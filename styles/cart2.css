@@ -1,137 +1,160 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-
 .j-cart2-wrap {
   overflow: hidden;
 }
 
 .j-cart2-bg {
-  background: url("../images/cart2-bg-m1.svg") left 65vh/50% no-repeat, url("../images/cart2-bg-m2.svg") right 160vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+  background: url("../images/cart2-bg-m1.svg") left 100vh/50% no-repeat, url("../images/cart2-bg-m2.svg") right 200vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
 }
 
+@media only screen and (min-width: 768px) {
+  .j-cart2-bg {
+    background: url("../images/cart2-bg-k1.svg") 0vw 80vh/60% no-repeat, url("../images/cart2-bg-k2.svg") 70vw 180vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+  }
+}
+.j-back {
+  margin-top: calc(56.5px + 1rem);
+}
+.j-back a {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.j-back a .j-back-wrap svg {
+  width: 70%;
+}
+.j-back a .j-back-text {
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 16px;
+  color: #4c4948;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-back {
+    display: none;
+  }
+}
 .j-progress-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 1rem 0;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-
-.j-progress-bar .j-step {
-  outline: 1px solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.j-progress-bar .j-step-up {
+  padding: 0 1rem;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 2.2rem;
 }
-
-.j-progress-bar .j-step .j-step-top {
+.j-progress-bar .j-step-up .j-step {
   width: 2.2rem;
   height: 2.2rem;
-  border-radius: 50%;
 }
-
-.j-progress-bar .j-step .j-step-top .j-svg-wrap {
+.j-progress-bar .j-step-up .j-step .j-svg-wrap {
   background-color: #ffffff;
   border: 2px solid #000000;
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
-.j-progress-bar .j-step .j-step-top .j-svg-wrap svg {
+.j-progress-bar .j-step-up .j-step .j-svg-wrap svg {
   width: 55%;
   height: 55%;
 }
-
-.j-progress-bar .j-step .j-step2-num {
+.j-progress-bar .j-step-up .j-line {
+  width: 30%;
+  height: 0.125rem;
   background-color: #000000;
-  border-radius: 50%;
+  margin: 0 5px;
+}
+.j-progress-bar .j-step-up .j-step2-num {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.j-progress-bar .j-step-up .j-step2-num .j-num2 {
+  color: #ffffff;
+  background-color: #000000;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border-radius: 50%;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.j-progress-bar .j-step .j-step2-num .j-num2 {
-  color: #ffffff;
+  align-items: center;
+  justify-content: center;
   font-family: "Roboto";
   font-weight: 900;
   font-size: 20px;
 }
-
-.j-progress-bar .j-step .j-step3-num {
+.j-progress-bar .j-step-up .j-dash {
+  width: 30%;
+  height: 0.125rem;
+  margin: 0 0.2rem;
+  display: flex;
+  align-items: center;
+}
+.j-progress-bar .j-step-up .j-dash div {
+  width: 10%;
+  height: 100%;
+  background-color: #A4A4A4;
+  margin-right: 5px;
+}
+.j-progress-bar .j-step-up .j-dash div:nth-last-child(1) {
+  margin-right: 0;
+}
+.j-progress-bar .j-step-up .j-step3-num {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.j-progress-bar .j-step-up .j-step3-num .j-num3 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   border: 2px solid #A4A4A4;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.j-progress-bar .j-step .j-step3-num .j-num3 {
   color: #A4A4A4;
   font-family: "Roboto";
   font-weight: 900;
   font-size: 20px;
 }
-
-.j-progress-bar .j-step .j-step-text {
+.j-progress-bar .j-step-down {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-progress-bar .j-step-down .j-step-text {
   margin-top: 0.75rem;
   font-family: "Roboto";
   font-weight: 900;
   font-size: 16px;
 }
-
-.j-progress-bar .j-step .j-step3-text {
+.j-progress-bar .j-step-down .j-step3-text {
   color: #A4A4A4;
   margin-top: 0.75rem;
   font-family: "Roboto";
@@ -139,34 +162,355 @@
   font-size: 16px;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point, .j-pay-wrap div .j-line-pay .j-line-title .j-point, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point, .j-pay-wrap div .j-money-pay .j-money-title .j-point {
+@media only screen and (min-width: 768px) {
+  .j-progress-bar {
+    margin-top: 5rem;
+    width: 60%;
+    margin-left: 4rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .j-progress-bar .j-step-up {
+    height: 2.8rem;
+  }
+  .j-progress-bar .j-step-up .j-step, .j-progress-bar .j-step-up .j-step2-num, .j-progress-bar .j-step-up .j-step3-num {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .j-progress-bar .j-step-up .j-step .j-num2, .j-progress-bar .j-step-up .j-step .j-num3, .j-progress-bar .j-step-up .j-step2-num .j-num2, .j-progress-bar .j-step-up .j-step2-num .j-num3, .j-progress-bar .j-step-up .j-step3-num .j-num2, .j-progress-bar .j-step-up .j-step3-num .j-num3 {
+    font-size: 24px;
+  }
+  .j-progress-bar .j-step-up .j-step .j-svg-wrap, .j-progress-bar .j-step-up .j-step2-num .j-svg-wrap, .j-progress-bar .j-step-up .j-step3-num .j-svg-wrap {
+    border: 3px solid #000000;
+  }
+  .j-progress-bar .j-step-up .j-step .j-num3, .j-progress-bar .j-step-up .j-step2-num .j-num3, .j-progress-bar .j-step-up .j-step3-num .j-num3 {
+    border: 3px solid #A4A4A4;
+  }
+  .j-progress-bar .j-step-down .j-step-text, .j-progress-bar .j-step-down .j-step3-text {
+    font-size: 20px;
+  }
+}
+.j-list {
+  width: 100%;
+  position: relative;
+  margin-top: 2.5rem;
+  margin-bottom: 9rem;
+}
+.j-list .j-list-bar {
+  position: relative;
+  transform: translateY(-1rem);
+  width: 100%;
+}
+.j-list .j-list-bar .j-list-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 90px;
+  position: absolute;
+}
+.j-list .j-list-bar .j-list-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
   cursor: pointer;
-  font-size: 1.125rem;
+}
+.j-list .j-list-bar .j-list-title h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 20px;
+  color: #ffffff;
+  padding-right: 2rem;
+}
+.j-list .j-list-bar .j-list-title .j-list-icon svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.j-list .j-list-bar .j-list-title .j-list-icon svg:nth-child(2) {
+  display: none;
+}
+.j-list .j-list-info {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+  width: 85%;
+  margin: 0 auto;
+  padding: 4rem 10px 14px 10px;
+}
+.j-list .j-list-info .j-list-title {
+  display: none;
+}
+.j-list .j-list-info .j-list-item {
+  padding: 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #7cb2af;
+}
+.j-list .j-list-info .j-list-item:nth-last-child(1) {
+  border-bottom: none;
+}
+.j-list .j-list-info .j-list-item .j-list-img {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #4c4948;
+}
+.j-list .j-list-info .j-list-item .j-list-img img {
+  width: 100%;
+  height: 100%;
+}
+.j-list .j-list-info .j-list-item .j-list-sub {
+  width: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 900;
+  color: #000000;
+}
+.j-list .j-list-info .j-list-item .j-list-sub p {
+  padding-top: 5px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.j-list .j-list-info .j-list-item .j-list-sub .j-list-num {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin-top: 5px;
+}
+.j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-money-single {
+  display: none;
+  text-align: center;
+}
+.j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-amount {
+  text-align: center;
+}
+.j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-money {
+  text-align: center;
+}
+
+.j-list.j-listopen {
+  margin-bottom: 3rem;
+}
+.j-list.j-listopen .j-list-bar .j-list-title .j-list-icon svg:nth-child(1) {
+  display: none;
+}
+.j-list.j-listopen .j-list-bar .j-list-title .j-list-icon svg:nth-child(2) {
+  display: block;
+}
+.j-list.j-listopen .j-list-info {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-list {
+    width: 75%;
+    margin-bottom: 10rem;
+  }
+  .j-list .j-list-bar {
+    max-height: 100px;
+  }
+  .j-list .j-list-bar .j-list-title {
+    top: 0;
+    transform: translateX(-50%) translateY(40%);
+  }
+  .j-list .j-list-bar .j-list-title h5 {
+    font-size: 24px;
+  }
+  .j-list .j-list-info {
+    padding-top: 5rem;
+  }
+  .j-list .j-list-info .j-list-title {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+    color: #000000;
+    border-bottom: 1px solid #7cb2af;
+    padding-bottom: 8px;
+  }
+  .j-list .j-list-info .j-list-title .j-product {
+    width: calc(100% - 90px);
+  }
+  .j-list .j-list-info .j-list-item .j-list-img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-color: #4c4948;
+  }
+  .j-list .j-list-info .j-list-item .j-list-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .j-list .j-list-info .j-list-item .j-list-sub {
+    width: calc(100% - 90px);
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .j-list .j-list-info .j-list-item .j-list-sub p {
+    width: 40%;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .j-list .j-list-info .j-list-item .j-list-sub .j-list-num {
+    width: 60%;
+    display: inline-flex;
+  }
+  .j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-money-single {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .j-list {
+    width: 75%;
+    margin-top: 4rem;
+    margin-bottom: 13rem;
+  }
+  .j-list .j-list-bar {
+    max-height: 120px;
+  }
+  .j-list .j-list-bar .j-list-title {
+    top: 0;
+    transform: translateX(-50%) translateY(-20%);
+  }
+  .j-list .j-list-bar .j-list-title h5 {
+    font-size: 32px;
+  }
+  .j-list .j-list-info {
+    padding-top: 8rem;
+  }
+}
+.j-pay-wrap div .j-money-pay .j-money-title .j-point, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point, .j-pay-wrap div .j-line-pay .j-line-title .j-point, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point, .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point {
+  cursor: pointer;
+  font-size: 18px;
   display: block;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding-left: 1.75rem;
 }
 
 /* Hide the browser's default checkbox */
-.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point input, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point input, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point input, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point input, .j-pay-wrap div .j-line-pay .j-line-title .j-point input, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point input, .j-pay-wrap div .j-money-pay .j-money-title .j-point input {
-  margin-right: 0.5rem;
+.j-pay-wrap div .j-money-pay .j-money-title .j-point input, .j-pay-wrap div .j-apple-pay .j-apple-title .j-point input, .j-pay-wrap div .j-line-pay .j-line-title .j-point input, .j-pay-wrap div .j-bank-pay .j-bank-title .j-point input, .j-pay-wrap div .j-credit-pay .j-credit-title .j-point input, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point input, .j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point input, .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input {
+  position: absolute;
   cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 /* Create a custom checkbox */
+.j-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 3px;
+}
+
 /* On mouse-over*/
+.j-point:hover input ~ .j-checkmark {
+  background-color: #d4cfc6;
+}
+
 /* When the checkbox is checked*/
+.j-point input:checked ~ .j-checkmark {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+}
+
 /* Create the checkmark/indicator (hidden when not checked) */
+.j-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
 /* Show the checkmark when checked */
+.j-point input:checked ~ .j-checkmark::after {
+  display: block;
+}
+
 /* Style the checkmark/indicator */
-.j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required {
+.j-point .j-checkmark::after {
+  left: 3.5px;
+  width: 7px;
+  height: 11px;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: rotate(45deg);
+}
+
+/* Create a custom radio button */
+.j-checkmark-r {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+/* On mouse-over */
+.j-point:hover input ~ .j-checkmark-r {
+  background-color: #D4CFC6;
+}
+
+/* When the radio button is checked*/
+.j-point input:checked ~ .j-checkmark-r {
+  background-color: #ffffff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.j-checkmark-r:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.j-point input:checked ~ .j-checkmark-r:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.j-point .j-checkmark-r:after {
+  top: 2.5px;
+  left: 2.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required {
   position: relative;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required::before, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required::before {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-label-required::before, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-label-required::before, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-label-required::before, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-label-required::before {
   content: "*";
   position: absolute;
   display: block;
@@ -175,28 +519,27 @@
   color: #ca3f68;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 .j-input, .j-city, .j-town, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox, .j-logistics-wrap .j-logistics div .j-home-delivery li .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-input, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-input {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-form-gtoup .j-input, .j-city, .j-town, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 .j-input {
   margin-top: 0.75rem;
   padding: 10px 25px;
   border-radius: 10px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
   border: none;
   outline: none;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info .j-space1, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1 {
+.j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space1, .j-people-wrap .j-people .j-recipient .j-people-info .j-space1, .j-people-wrap .j-people .j-orderer .j-people-info .j-space1 {
   margin-top: 1.125rem;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info .j-space, .j-people-wrap .j-people .j-recipient .j-people-info .j-space, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .j-space {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .j-space, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-space, .j-people-wrap .j-people .j-recipient .j-people-info .j-space, .j-people-wrap .j-people .j-orderer .j-people-info .j-space {
   margin-top: 1.5rem;
 }
 
-.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info {
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info {
   padding: 0 15px;
-  margin: 1.5rem  auto;
+  margin: 1.5rem auto;
   font-family: "Roboto";
   font-weight: 900;
   font-size: 16px;
@@ -206,7 +549,29 @@
   width: 100%;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info, .j-people-wrap .j-people .j-recipient .j-people-info {
+.help-block.error {
+  margin-bottom: 5px;
+}
+
+.j-messages {
+  color: #ca3f68;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-error .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-error .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-error .j-input, .has-error select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-error .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-error .j-input {
+  outline: 1px solid #ca3f68;
+  box-shadow: none;
+}
+
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info .has-success .j-input, .j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .has-success .j-input, .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .has-success .j-input, .has-success select, .j-people-wrap .j-people .j-recipient .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-recipient .j-people-info .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .j-space .has-success .j-input, .j-people-wrap .j-people .j-orderer .j-people-info .has-success .j-input {
+  outline: none;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+}
+
+.j-people-wrap .j-people .j-recipient .j-people-info, .j-people-wrap .j-people .j-orderer .j-people-info {
   font-size: 16px;
   font-family: "Roboto";
   font-weight: 900;
@@ -214,62 +579,134 @@
   margin-top: 1.25rem;
 }
 
-.j-people-wrap .j-people .j-orderer .j-people-info .j-check, .j-people-wrap .j-people .j-recipient .j-people-info .j-check {
+.j-people-wrap .j-people .j-recipient .j-people-info .j-check, .j-people-wrap .j-people .j-orderer .j-people-info .j-check {
   margin-top: 8px;
 }
 
 .j-people-wrap .j-people {
-  padding: 15px;
+  padding: 0 15px 15px;
 }
-
 .j-people-wrap .j-people .j-orderer h5 {
   font-family: "GenSenRounded-B";
   font-size: 20px;
 }
-
+.j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point {
+  display: inline-block;
+}
 .j-people-wrap .j-people .j-orderer .j-people-info .j-check .j-point input span {
   display: block;
 }
-
 .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-1 {
   margin-right: 10px;
-  width: 25%;
+  width: 30%;
 }
-
 .j-people-wrap .j-people .j-orderer .j-people-info .j-space .j-tel-2 {
-  width: 75%;
+  width: 70%;
 }
-
 .j-people-wrap .j-people .j-recipient {
-  margin-top: 10vw;
+  margin-top: 3rem;
 }
-
 .j-people-wrap .j-people .j-recipient h5 {
   font-family: "GenSenRounded-B";
   font-size: 20px;
 }
-
+.j-people-wrap .j-people .j-recipient .j-people-info .j-check .j-point {
+  display: inline-block;
+}
 .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-1 {
   margin-right: 10px;
-  width: 25%;
+  width: 30%;
 }
-
 .j-people-wrap .j-people .j-recipient .j-people-info .j-space .j-tel-2 {
-  width: 75%;
+  width: 70%;
 }
-
-.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li, .j-logistics-wrap .j-logistics div .j-home-delivery li {
+@media only screen and (min-width: 768px) {
+  .j-people-wrap {
+    width: 75%;
+    height: 100%;
+    position: relative;
+  }
+  .j-people-wrap .j-people {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+  }
+  .j-people-wrap .j-people .j-orderer-bg {
+    background: url("../images/cart2-people-bg.png") 0 center/100% 100% no-repeat;
+    padding: 3vw;
+  }
+  .j-people-wrap .j-people .j-orderer-bg .j-orderer {
+    padding: 1vw 0 3vw;
+    margin-right: 1rem;
+  }
+  .j-people-wrap .j-people .j-orderer-bg .j-orderer h5 {
+    font-size: 24px;
+  }
+  .j-people-wrap .j-people .j-orderer-bg .j-orderer .j-people-info {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .j-people-wrap .j-people .j-orderer-bg .j-orderer .j-people-info .j-check .j-point {
+    font-size: 16px;
+  }
+  .j-people-wrap .j-people .j-orderer-bg .j-orderer .j-people-info .j-space .j-tel-1 .j-input {
+    padding: 10px 10px;
+  }
+  .j-people-wrap .j-people .j-recipient-bg {
+    background: url("../images/cart2-people-bg.png") 0 center/100% 100% no-repeat;
+    padding: 3vw;
+  }
+  .j-people-wrap .j-people .j-recipient-bg .j-recipient {
+    padding: 1vw 2vw 3vw 0;
+    margin-top: 0;
+  }
+  .j-people-wrap .j-people .j-recipient-bg .j-recipient h5 {
+    font-size: 24px;
+  }
+  .j-people-wrap .j-people .j-recipient-bg .j-recipient .j-people-info {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .j-people-wrap .j-people .j-recipient-bg .j-recipient .j-people-info .j-check .j-point {
+    font-size: 16px;
+  }
+  .j-people-wrap .j-people .j-recipient-bg .j-recipient .j-people-info .j-space .j-tel-1 .j-input {
+    padding: 10px 10px;
+  }
+  .j-checkmark {
+    width: 16px;
+    height: 16px;
+  }
+  .j-point .j-checkmark::after {
+    left: 3px;
+    width: 6px;
+    height: 10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .j-people-wrap .j-people .j-orderer-bg .j-orderer .j-people-info .j-space .j-tel-1 .j-input {
+    padding: 10px 20px;
+  }
+  .j-people-wrap .j-people .j-recipient-bg .j-recipient .j-people-info .j-space .j-tel-1 .j-input {
+    padding: 10px 20px;
+  }
+}
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li {
   margin-top: 20px;
 }
 
-.j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title, .j-pay-wrap div .j-credit-pay .j-credit-title, .j-pay-wrap div .j-bank-pay .j-bank-title, .j-pay-wrap div .j-line-pay .j-line-title, .j-pay-wrap div .j-apple-pay .j-apple-title, .j-pay-wrap div .j-money-pay .j-money-title {
+.j-pay-wrap div .j-money-pay .j-money-title, .j-pay-wrap div .j-apple-pay .j-apple-title, .j-pay-wrap div .j-line-pay .j-line-title, .j-pay-wrap div .j-bank-pay .j-bank-title, .j-pay-wrap div .j-credit-pay .j-credit-title, .j-logistics-wrap .j-logistics .j-convenience-store .j-d-title, .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title {
   border-bottom: 3px solid #2d827d;
   padding: 20px 15px;
   border-radius: 10px;
   margin-top: 10px;
   font-family: "Roboto";
   font-weight: 900;
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 
 .j-city, .j-town {
@@ -277,7 +714,8 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url() 90% center/4% no-repeat;
+  background: url("../images/icons/icon=down.svg") 90% center/0.8rem no-repeat;
+  fill: #000000;
   cursor: pointer;
   background-color: #ffffff;
   font-family: "Roboto";
@@ -289,48 +727,46 @@
 }
 
 .j-logistics-wrap {
-  margin-top: 20vw;
+  margin-top: 5rem;
 }
-
 .j-logistics-wrap .j-logistics h5 {
   font-family: "GenSenRounded-B";
   font-size: 20px;
   margin-left: 15px;
 }
-
 .j-logistics-wrap .j-logistics div .j-home-delivery {
   width: 100%;
   font-size: 16px;
 }
-
 .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select {
   width: 100%;
 }
-
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox {
   display: flex;
   width: 70%;
 }
-
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point {
   font-size: 16px;
 }
-
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point input {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point input {
   font-size: 16px;
 }
-
-.j-logistics-wrap .j-logistics div .j-home-delivery li .j-timebox .col-6 .j-point {
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point {
   margin-right: 20px;
 }
-
-.j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-store {
-  width: 80%;
+.j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input {
+  line-height: 2;
+}
+.j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-store-btn a {
+  display: block;
   margin: 30px 10% 0;
+  width: 80%;
+}
+.j-logistics-wrap .j-logistics .j-convenience-store .j-store-info .j-store-btn a .j-store {
+  width: 100%;
   border-radius: 10px;
-  font-size: 1.125rem;
+  font-family: "GenSenRounded-B";
+  font-size: 18px;
   font-weight: 900;
   padding: 10px 30px;
   border: none;
@@ -338,32 +774,623 @@
   color: #ffffff;
 }
 
+@media only screen and (min-width: 768px) {
+  .j-logistics-wrap {
+    width: 65%;
+  }
+  .j-logistics-wrap .j-logistics h5 {
+    font-size: 24px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery {
+    margin-left: 40px;
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title {
+    font-size: 16px;
+    padding-left: 40px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-d-title .j-point {
+    font-size: 16px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select .j-city {
+    width: calc(50% - 7.5px);
+    float: left;
+    margin-right: 7.5px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-select .j-town {
+    width: calc(50% - 7.5px);
+    margin-left: 7.5px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input {
+    clear: both;
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-timebox .col-6 .j-point input {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-home-delivery .j-home-info li .j-input {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store {
+    width: 100%;
+    margin-left: 40px;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store .j-d-title {
+    font-size: 16px;
+    padding-left: 40px;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store .j-d-title .j-point {
+    font-size: 16px;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store .j-store-info {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store .j-store-info .j-space1 .j-input {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store .j-store-info .j-space .j-input {
+    font-size: 14px;
+  }
+  .j-logistics-wrap .j-logistics div .j-convenience-store .j-store-info .j-store-btn a {
+    font-size: 20px;
+    width: 40%;
+    margin-left: 0;
+  }
+  .j-city, .j-town {
+    font-size: 14px;
+  }
+}
 .j-pay-wrap {
   overflow: hidden;
-  margin-top: 20vw;
-  margin-bottom: 20vw;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
 }
-
 .j-pay-wrap h5 {
   font-family: "GenSenRounded-B";
   font-size: 20px;
   padding: 0 15px;
 }
-
 .j-pay-wrap div .j-credit-pay .j-credit-bg {
-  background: url("../images/cart2-pay-bg.svg") center center/cover no-repeat;
+  background: url("../images/cart2-pay-bg.png") center bottom/100% 100% no-repeat;
+  padding: 0 15px 50px;
   border-radius: 0 0 20px 20px;
 }
-
+.j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers {
+  display: none;
+}
 .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info {
   margin: 0;
 }
-
 .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-holder {
   margin-top: 60px;
 }
-
-.j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-cvv {
-  margin-bottom: 50px;
+@media only screen and (min-width: 768px) {
+  .j-pay-wrap {
+    width: 65%;
+  }
+  .j-pay-wrap h5 {
+    font-size: 24px;
+  }
+  .j-pay-wrap div .j-credit-pay {
+    margin-left: 40px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-title {
+    font-size: 16px;
+    padding-left: 40px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-title .j-point {
+    font-size: 16px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg {
+    padding-top: 5px;
+    background: url("../images/cart2-pay-bg2.png") center bottom/100% 100% no-repeat;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers {
+    display: block;
+    perspective: 1000px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard {
+    font-family: "Roboto";
+    font-weight: 900;
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 100%;
+    max-width: 370px;
+    min-height: 220px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard.flipped {
+    transform: rotateY(180deg);
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front {
+    position: absolute;
+    width: 100%;
+    max-width: 370px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front #j-ccsingle {
+    position: absolute;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-card-wrap {
+    background: url("../images/cart2-card-font.png") center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 370px;
+    height: 220px;
+    padding: 0px 30px;
+    border-radius: 10px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text {
+    width: 100%;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-icon-wrap {
+    width: 16%;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-number {
+    padding: 0 15%;
+    text-align: left;
+    margin-top: 1vw;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 2.1;
+    letter-spacing: 1px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-line3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 1vw;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-cardholder, .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-expiration {
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-cardholder p:nth-child(1), .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-expiration p:nth-child(1) {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-cardholder p:nth-child(2), .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-expiration p:nth-child(2) {
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    max-width: 370px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-card-wrap {
+    background: url("../images/cart2-card-back.png") center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+    height: 220px;
+    padding-top: 30px;
+    border-radius: 10px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-back-text {
+    width: 100%;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-back-text .j-card-black {
+    width: 100%;
+    height: 2rem;
+    background-color: #000000;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-back-text .j-ccv-subtitle {
+    margin-top: 1vw;
+    text-align: right;
+    color: #ffffff;
+    margin-right: 40px;
+    font-size: 14px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-back-text .j-card-sign {
+    overflow: hidden;
+    margin: 0.1vw 30px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 0.5vw 1.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-back-text .j-sign {
+    width: 70%;
+    padding: 0.5rem 1rem;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-back-text .j-cvv {
+    width: 30%;
+    background-color: #c2c2c2;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-credit-info li .j-input {
+    font-size: 14px;
+  }
+  .j-pay-wrap div .j-bank-pay {
+    margin-left: 40px;
+  }
+  .j-pay-wrap div .j-bank-pay .j-bank-title {
+    padding-left: 40px;
+  }
+  .j-pay-wrap div .j-bank-pay .j-bank-title .j-point {
+    font-size: 16px;
+  }
+  .j-pay-wrap div .j-line-pay {
+    margin-left: 40px;
+  }
+  .j-pay-wrap div .j-line-pay .j-line-title {
+    padding-left: 40px;
+  }
+  .j-pay-wrap div .j-line-pay .j-line-title .j-point {
+    font-size: 16px;
+  }
+  .j-pay-wrap div .j-apple-pay {
+    margin-left: 40px;
+  }
+  .j-pay-wrap div .j-apple-pay .j-apple-title {
+    padding-left: 40px;
+  }
+  .j-pay-wrap div .j-apple-pay .j-apple-title .j-point {
+    font-size: 16px;
+  }
+  .j-pay-wrap div .j-money-pay {
+    margin-left: 40px;
+  }
+  .j-pay-wrap div .j-money-pay .j-money-title {
+    padding-left: 40px;
+  }
+  .j-pay-wrap div .j-money-pay .j-money-title .j-point {
+    font-size: 16px;
+  }
 }
-/*# sourceMappingURL=cart2.css.map */
+.j-cart2-btn {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-cart2-btn {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+  }
+  .j-cart2-btn li:nth-child(1) a {
+    display: block;
+    width: 90%;
+  }
+  .j-cart2-btn li:nth-child(1) a button {
+    width: 100%;
+    max-width: 382px;
+    border: none;
+    outline: 3px solid #2d827d;
+    background: none;
+    color: #2d827d;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: "GenSenRounded-B";
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .j-cart2-btn li:nth-child(2) {
+    text-align: right;
+  }
+  .j-cart2-btn li:nth-child(2) a {
+    display: block;
+    width: 90%;
+  }
+  .j-cart2-btn li:nth-child(2) a button {
+    width: 100%;
+    max-width: 382px;
+    border: none;
+    border: 3px solid #2d827d;
+    background: #2d827d;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: "GenSenRounded-B";
+    font-size: 20px;
+    font-weight: 900;
+  }
+}
+.j-subtotal {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+.j-subtotal .j-subtotal-f {
+  width: 100%;
+  position: fixed;
+  border-radius: 20px 20px 0 0;
+  background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+  box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  bottom: 0;
+  left: 0;
+}
+.j-subtotal .j-subtotal-f .j-sum-item {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon svg {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%);
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(2) {
+  display: none;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail {
+  padding: 0.5rem;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 900;
+  width: 85%;
+  border-bottom: 1px solid #4c4948;
+  display: none;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail .j-detail {
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-amount-detail .j-detail .j-pl {
+  padding-left: 0.6rem;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total {
+  padding: 1rem 0 2rem;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a {
+  display: block;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a button {
+  border: none;
+  background-color: #2d827d;
+  color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 18px;
+  font-weight: 900;
+}
+.j-subtotal .j-subtotal-f .j-sum-item .j-total a button span {
+  margin-left: 0.5rem;
+}
+.j-subtotal .j-fixed-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(1) {
+  display: none;
+}
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-upicon svg:nth-child(2) {
+  display: inline-block;
+}
+.j-subtotal.j-open .j-subtotal-f .j-sum-item .j-amount-detail {
+  display: flex;
+  flex-direction: column;
+}
+.j-subtotal.j-open .j-fixed-bg {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-subtotal {
+    display: none;
+  }
+}
+.j-summary-list {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .j-summary-list {
+    display: block;
+    outline: 2px solid #554d49;
+    position: fixed;
+    top: 40vh;
+    right: 3vw;
+    width: 25%;
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+  }
+  .j-summary-list .j-bling-img {
+    position: absolute;
+    transform: translateY(-33%);
+    right: -5vw;
+    z-index: -1;
+  }
+  .j-summary-list .j-summary-title {
+    border-radius: 10px 10px 0 0;
+    padding: 15px 0;
+    text-align: center;
+    font-family: "GenSenRounded-B";
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #554d49;
+  }
+  .j-summary-list .j-summary-info {
+    background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+    padding: 30px 5% 0px;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .j-summary-list .j-summary-info .j-summary-items {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #554d49;
+  }
+  .j-summary-list .j-summary-info .j-summary-items .j-summary-item {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .j-summary-list .j-summary-info .j-summary-items .j-summary-item .j-pl {
+    padding-left: 0.8rem;
+  }
+  .j-summary-list .j-total-kv {
+    background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+    border-radius: 0 0 10px 10px;
+    padding: 30px 5% 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .j-summary-list .j-total-kv .j-pl {
+    padding-left: 0.8rem;
+  }
+}
+.footer-mobile {
+  display: none;
+  padding-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+}
+@media screen and (min-width: 768px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+.footer-mobile .footer-logo {
+  padding-top: 30px;
+  width: 85px;
+  margin: auto;
+}
+.footer-mobile .footer-nav ul {
+  margin: 35px 40px 0 40px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffffff;
+}
+.footer-mobile .footer-nav ul li a {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-mobile .footer-social {
+  margin: 35px 160px 0 160px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-mobile .footer-c {
+  margin-top: 35px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.footer-pc {
+  width: 100%;
+  height: 120px;
+  background-color: #4c4948;
+  position: relative;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer-pc {
+    display: block;
+  }
+}
+.footer-pc .footer-pc-up {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ffffff;
+}
+.footer-pc .footer-pc-up .footer-nav ul {
+  margin: 30px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-pc .footer-pc-up .footer-nav ul li {
+  margin-right: 30px;
+}
+.footer-pc .footer-pc-up .footer-nav ul li a {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-pc .footer-pc-up .footer-c {
+  margin-top: 30px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+.footer-pc .footer-pc-up .footer-social {
+  margin: 30px 40px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-pc .footer-pc-up .footer-social a {
+  margin-right: 10px;
+}
+.footer-pc .footer-logo {
+  position: absolute;
+  width: 120px;
+  top: 30px;
+  left: 80px;
+  background-color: #4c4948;
+  padding: 10px;
+}
+.footer-pc .footer-logo img {
+  width: 100%;
+}/*# sourceMappingURL=cart2.css.map */
