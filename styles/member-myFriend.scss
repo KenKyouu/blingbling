@@ -499,6 +499,141 @@ $bold: 900;
             }
         }
     }
+    // ------------------lightbox-friendDetails-----------------
+
+    .lightbox-friendDetails {
+        width: 700px;
+        height: auto;
+        border-radius: 32px;
+        border: 4px solid $lake-green;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+        p.editTitle {
+            font-family: "GenSenRounded-B";
+            font-size: $h5-font-size;
+            color: $dark-gray;
+            padding-bottom: 50px;
+        }
+        .friend-details {
+            width: 100%;
+            .detail {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                .detail-text {
+                    width: 30%;
+                    padding-right: 40px;
+                    p {
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        color: $dark-gray;
+                        text-align: right;
+                        span {
+                            color: $red-pink;
+                        }
+                    }
+                }
+                .detail-input {
+                    width: 70%;
+                    input {
+                        width: 400px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 0 10px;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                    }
+                    ::-webkit-input-placeholder {
+                        color: $gray;
+                    } 
+                    select {
+                        width: 150px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        color: $dark-gray;
+                        // padding: 0 10px;
+                        option {
+                            font-family: "GenSenRounded-B";
+                            font-size: $p-font-size;
+                            color: $dark-gray;
+                            text-align: center;
+                        }
+                    }
+                    input.birthmd {
+                        width: 100px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 0 10px;
+                        color: $gray;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        text-align: center;
+                        margin-right: 20px;
+                    }
+                    .tagsselect {
+                        width: 400px;
+                        height: 135px;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 10px 10px;
+                        .tags {
+                            height: 135px;
+                            overflow: scroll;
+                            span {
+                                display: inline-block;
+                                margin-bottom: 10px;
+                                border: 2px solid $super-dark;
+                                border-radius: 100px;
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                                padding: 5px 10px;
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .detailsbtn {
+            margin-top: 20px;
+            button.true {
+                width: 140px;
+                height: 48px;
+                border-radius: 10px;
+                background-color: $super-dark;
+                color: $white;
+                font-family: "GenSenRounded-B";
+                font-size: $p-font-size;
+                margin: 0 20px;
+            }
+            button.false {
+                width: 140px;
+                height: 48px;
+                border-radius: 10px;
+                border: 3px solid $super-dark;
+                color: $super-dark;
+                background-color: rgba(255, 255, 255, 0);
+                font-family: "GenSenRounded-B";
+                font-size: $p-font-size;
+                margin: 0 20px;
+            }
+        }
+    }
 }
 
 // ----------------RWD-1200-----------------
@@ -623,21 +758,21 @@ $bold: 900;
 // ------------------lightbox-friendDetails-----------------
 
 .lightbox-friendDetails {
-    width: 700px;
+    width: 375px;
     height: auto;
-    border-radius: 32px;
-    border: 4px solid $lake-green;
+    border-radius: 44px;
+    border: 5px solid $lake-green;
     background-color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
+    padding: 33px 0;
     p.editTitle {
         font-family: "GenSenRounded-B";
-        font-size: $h5-font-size;
+        font-size: $p-font-size;
         color: $dark-gray;
-        padding-bottom: 50px;
+        padding-bottom: 23px;
     }
     .friend-details {
         width: 100%;
@@ -645,13 +780,13 @@ $bold: 900;
             width: 100%;
             display: flex;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             .detail-text {
                 width: 30%;
-                padding-right: 40px;
+                padding-right: 20px;
                 p {
                     font-family: "GenSenRounded-B";
-                    font-size: $p-font-size;
+                    font-size: $ps-font-size;
                     color: $dark-gray;
                     text-align: right;
                     span {
@@ -662,66 +797,66 @@ $bold: 900;
             .detail-input {
                 width: 70%;
                 input {
-                    width: 400px;
-                    height: 50px;
+                    width: 200px;
+                    height: 32px;
                     border-radius: 10px;
                     background-color: rgba(0, 0, 0, 0);
                     border: 2px solid $lake-green;
                     padding: 0 10px;
                     font-family: "GenSenRounded-B";
-                    font-size: $p-font-size;
+                    font-size: $ps-font-size;
                 }
                 ::-webkit-input-placeholder {
                     color: $gray;
                 } 
                 select {
-                    width: 150px;
-                    height: 50px;
+                    width: 100px;
+                    height: 32px;
                     border-radius: 10px;
                     background-color: rgba(0, 0, 0, 0);
                     border: 2px solid $lake-green;
                     font-family: "GenSenRounded-B";
-                    font-size: $p-font-size;
+                    font-size: $ps-font-size;
                     color: $dark-gray;
                     // padding: 0 10px;
                     option {
                         font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
+                        font-size: $ps-font-size;
                         color: $dark-gray;
                         text-align: center;
                     }
                 }
                 input.birthmd {
-                    width: 100px;
-                    height: 50px;
+                    width: 70px;
+                    height: 32px;
                     border-radius: 10px;
                     background-color: rgba(0, 0, 0, 0);
                     border: 2px solid $lake-green;
                     padding: 0 10px;
                     color: $gray;
                     font-family: "GenSenRounded-B";
-                    font-size: $p-font-size;
+                    font-size: $ps-font-size;
                     text-align: center;
-                    margin-right: 20px;
+                    margin-right: 10px;
                 }
                 .tagsselect {
-                    width: 400px;
-                    height: 135px;
+                    width: 200px;
+                    height: 120px;
                     overflow: hidden;
                     border-radius: 10px;
                     background-color: rgba(0, 0, 0, 0);
                     border: 2px solid $lake-green;
                     padding: 10px 10px;
                     .tags {
-                        height: 135px;
+                        height: 120px;
                         overflow: scroll;
                         span {
                             display: inline-block;
-                            margin-bottom: 10px;
+                            margin-bottom: 5px;
                             border: 2px solid $super-dark;
                             border-radius: 100px;
-                            font-family: "GenSenRounded-B";
-                            font-size: $ps-font-size;
+                            font-family: "GenSenRounded-M";
+                            font-size: 9px;
                             padding: 5px 10px;
                            
                         }
@@ -733,25 +868,25 @@ $bold: 900;
     .detailsbtn {
         margin-top: 20px;
         button.true {
-            width: 140px;
-            height: 48px;
+            width: 130px;
+            height: 38px;
             border-radius: 10px;
             background-color: $super-dark;
             color: $white;
             font-family: "GenSenRounded-B";
-            font-size: $p-font-size;
-            margin: 0 20px;
+            font-size: $ps-font-size;
+            margin: 0 10px;
         }
         button.false {
-            width: 140px;
-            height: 48px;
+            width: 130px;
+            height: 38px;
             border-radius: 10px;
             border: 3px solid $super-dark;
             color: $super-dark;
             background-color: rgba(255, 255, 255, 0);
             font-family: "GenSenRounded-B";
-            font-size: $p-font-size;
-            margin: 0 20px;
+            font-size: $ps-font-size;
+            margin: 0 10px;
         }
     }
 }
