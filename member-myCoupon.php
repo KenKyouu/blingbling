@@ -4,7 +4,7 @@ $pageName = 'member-coupon'; // 頁面名稱，可以自定義
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
-<link rel="stylesheet" href="./styles/member-myCoupon.css">
+<link rel="stylesheet" href="./styles/member-all.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
         <div class="containerr">

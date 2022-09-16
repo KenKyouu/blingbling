@@ -1,10 +1,10 @@
 <?php
 // require __DIR__ . '/parts/connect_db.php';
-$pageName = 'member-intro'; // 頁面名稱，可以自定義
+$pageName = 'member-notice'; // 頁面名稱，可以自定義
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
-<link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-myNotice.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
         <div class="containerr">
@@ -401,85 +401,6 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
         </div>
     </div>
 
-    <!-- ------------lightbox-myDetails------------ -->
-
-    <div class="lightbox-myDetails">
-        <p class="editTitle">編輯個人資訊</p>
-        <div class="my-details">
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 密碼</p>
-                </div>
-                <div class="detail-input">
-                    <input type="password" name="password" id="password" minlength="8" maxlength="12" placeholder="請設定8~12位數密碼(可用英文大小寫字母、數字)" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 確認密碼</p>
-                </div>
-                <div class="detail-input">
-                    <input type="password" name="confirmPassword" id="confirmPassword" minlength="8" maxlength="12" placeholder="請再次填入密碼" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 姓名</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="name" id="name" placeholder="您的姓名或暱稱" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 性別</p>
-                </div>
-                <div class="detail-input">
-                    <select name="gender" placeholder="請選擇" id="gender" required>
-                        <option value="male">男</option>
-                        <option value="female">女</option>
-                        <option value="others">不顯示</option>
-                    </select>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> Email</p>
-                </div>
-                <div class="detail-input">
-                    <input type="email" name="email" id="email" placeholder="您的電子郵件地址" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 生日</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
-                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 聯絡電話</p>
-                </div>
-                <div class="detail-input">
-                    <input type="tel" name="phone" id="phone" placeholder="您的聯絡電話" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 聯絡地址</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="address" id="address" placeholder="您的聯絡地址" required>
-                </div>
-            </div>
-        </div>
-        <div class="detailsbtn">
-            <button class="true" type="submit" name="btn">儲存</button>
-            <button class="false" name="btn">取消</button>
-        </div>
-    </div>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<!-- <script src="./js/main.js"></script> -->
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
