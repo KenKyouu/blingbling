@@ -440,6 +440,9 @@
   color: #4c4948;
   padding-bottom: 50px;
 }
+.lightbox-friendDetails .friend-details {
+  width: 100%;
+}
 .lightbox-friendDetails .friend-details .detail {
   width: 100%;
   display: flex;
