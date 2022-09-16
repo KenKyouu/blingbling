@@ -1,23 +1,19 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-
 body {
   background: url(../images/other_bg_paper.png) center center/cover repeat;
 }
@@ -32,19 +28,15 @@ body {
   font-weight: 900;
   text-align: center;
 }
-
 .cart1-no-product-wrap .container .row .col h5 {
   font-family: "GenSenRounded-B";
   font-size: 18px;
   font-weight: 900;
   text-align: center;
 }
-
 .cart1-no-product-wrap .container .row .cta-info-wrap {
   padding: 0 15px 0 0;
 }
-
 .cart1-no-product-wrap .container .row .cta-info-wrap .cta-btn button {
   width: 123px;
-}
-/*# sourceMappingURL=cart1-no-product.css.map */
+}/*# sourceMappingURL=cart1-no-product.css.map */

@@ -1,23 +1,19 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-
 .footer {
   margin-top: 30px;
   background-image: url(../images/footer-bg.svg);
@@ -28,46 +24,32 @@
   width: 100%;
   height: 257px;
 }
-
 .footer .footer-logo {
   padding-top: 30px;
   width: 20%;
   margin: auto;
 }
-
 .footer .footer-nav ul {
   margin: 35px 40px 0 40px;
   padding-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   border-bottom: 2px solid #ffffff;
 }
-
 .footer .footer-nav ul li a {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
-
 .footer .footer-social {
   margin: 35px 160px 0 160px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .footer .footer-c {
   margin-top: 35px;
   text-align: center;
   color: #ffffff;
   font-family: "Roboto";
   font-size: 14px;
-}
-/*# sourceMappingURL=m-footer.css.map */
+}/*# sourceMappingURL=m-footer.css.map */
