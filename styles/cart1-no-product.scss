@@ -159,51 +159,59 @@ body {
     }
 }
 
-.cart1-no-product-wrap {
-    .container {
-        width: 100%;
-        padding: 80px 0 50px;
-    }
-}
+// .cart1-no-product-wrap {
+//     .container {
+//         width: 100%;
+//         padding: 80px 0 50px;
+//     }
+// }
 
 .cart1-no-product-wrap {
     .container {
         width: 100%;
+        padding: 80px 0 50px;
 
         .row {
             margin: 0;
 
             .col {
-                h3 {
-                    font-family: "GenSenRounded-B";
-                    font-size: $h3-font-size;
-                    font-weight: $bold;
-                    text-align: center;
-                }
+                .cta-info-wrap {
+                    width: 100%;
+                    // padding: 0 15px 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
-                h5 {
-                    font-family: "GenSenRounded-B";
-                    font-size: $h7-font-size;
-                    font-weight: $bold;
-                    text-align: center;
-                }
-            }
+                    .top-title {
+                        h3 {
+                            font-family: "GenSenRounded-B";
+                            font-size: $h3-font-size;
+                            font-weight: $bold;
+                            text-align: left;
+                            padding: 0 20px;
+                        }
+                    }
 
-            .cta-info-wrap {
-                padding: 0 15px 0 0;
+                    .middle-sub-title {
+                        h5 {
+                            font-family: "GenSenRounded-B";
+                            font-size: $h7-font-size;
+                            font-weight: $bold;
+                            text-align: left;
+                        }
+                    }
 
-                .cta-btn {
-                    button {
-                        width: 155px;
-                        height: 38px;
-                        background-color: $lake-green;
-                        border: none;
-                        color: white;
-                        border-radius: 10px;
-                        text-align: center;
-                        font-family: "GenSenRounded-B";
-                        font-size: $ps-font-size;
-
+                    .cta-btn {
+                        button {
+                            padding: 15px;
+                            background-color: $lake-green;
+                            border: none;
+                            color: white;
+                            border-radius: 10px;
+                            text-align: center;
+                            font-family: "GenSenRounded-B";
+                            font-size: $ps-font-size;
+                        }
                     }
                 }
             }
@@ -211,6 +219,68 @@ body {
     }
 }
 
+@media (min-width: 425px) and (max-width: 512px) {
+    .cart1-no-product-wrap {
+        .container {
+            .row {
+                padding: 0 15px;
+
+                .cta-info-wrap {
+                    padding-top: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 513px) and (max-width: 767.98px) {
+    .cart1-no-product-wrap {
+        .container {
+            .row {
+                padding: 0 15px;
+
+                .cta-info-wrap {
+                    padding-top: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .cart1-no-product-wrap {
+        .container {
+            .row {
+                padding: 0 15px;
+
+                .cta-info-wrap {
+                    padding-top: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .cart1-no-product-wrap {
+        .container {
+            .row {
+                padding: 0 15px;
+
+                .img-wrap {
+                    margin-left: 30%;
+                }
+
+                .cta-info-wrap {
+                    padding-top: 30%;
+                    margin-right: 20%;
+                }
+            }
+        }
+    }
+}
+
+// -------------------------------------------------------------------- //
 .cart1-no-product-tag-wrap {
     .container {
         width: 100%;
@@ -244,16 +314,34 @@ body {
 .cart1-no-poduct-list-wrap {
     .container {
         width: 100%;
-        // overflow: hidden;
 
+        .product-grey-bg-wrap {
+            background: url(../images/index-w-bg-6-reverse.svg) center center no-repeat;
+            background-size: cover;
+            background-position-y: 3rem;
+        }
+
+        .pc-product-grey-bg-wrap {
+            background: url(../images/index-w-bg-6-pc-reverse.svg) center center no-repeat;
+            background-size: cover;
+            background-position-y: 5rem;
+
+            .info-wrap {
+                button {
+                    color: white;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    text-align: center;
+
+                    svg {
+                        width: 50%;
+                    }
+                }
+            }
+        }
 
         .product-row {
             display: flex;
-
-            .product-grey-bg {
-                background: url(../images/index-w-bg-6-reverse.svg) center center no-repeat;
-                background-size: contain;
-            }
 
             .product-col {
                 padding: 15px;
@@ -265,7 +353,6 @@ body {
 
                     .img-bg {
                         background-color: white;
-                        // aspect-ratio: 3/4;
                         width: 100%;
                         border-radius: 10px;
 
@@ -280,6 +367,8 @@ body {
 
                 .info-wrap {
 
+                    width: 100%;
+
                     h3,
                     p {
                         font-family: "Roboto";
@@ -289,6 +378,11 @@ body {
                         text-align: left;
                         align-items: center;
                         justify-content: center;
+                        min-height: 40px;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
                     }
 
                     .info-price-btn {
@@ -299,21 +393,19 @@ body {
 
                         button {
                             width: 60px;
-                            height: 22px;
+                            height: 25px;
                             border: 0;
                             border-radius: 10px;
                             background-color: $lake-green;
+
+
+                            svg {
+                                width: 100%;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-}
-
-
-@media screen and (max-width:768px) {
-    .product-col {
-        width: 25%;
     }
 }

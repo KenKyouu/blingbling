@@ -609,7 +609,7 @@ body {
     .j-list {
         width: 75%;
         margin-top: 4rem;
-        margin-bottom: 13rem;
+        margin-bottom: 10rem;
 
         .j-list-bar {
             max-height: 120px;
@@ -780,9 +780,91 @@ body {
     }
 }
 
+.s-mb-subtitle-wrap {
+    margin-top: 80px;
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        .s-mb-subtitle-area {
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            margin: 0;
+
+            .col {
+                button {
+                    background-color: none;
+                    border: 3px solid $light-lake-green;
+                    color: $lake-green;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 10px;
+                    line-height: 0.8rem;
+                    text-align: center;
+                }
+
+                .cart1-check {
+                    background-color: $lake-green;
+                    border: 3px solid $lake-green;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.s-pc-btn-wrap {
+    margin-top: 80px;
+    margin-left: 10%;
+
+    .container {
+        width: 100%;
+
+        .s-pc-btn-area {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            margin: 0;
+
+            .col {
+                button {
+                    background-color: none;
+                    border: 3px solid $light-lake-green;
+                    color: $lake-green;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 10px;
+                    line-height: 0.8rem;
+                    text-align: center;
+                }
+
+                .cart1-check {
+                    background-color: $lake-green;
+                    border: 3px solid $lake-green;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
 // --------------------------電腦版卡片包裝展開 ------------------------------ //
 .s-package-card-item {
-    padding: 8px 0px;
+    padding: 30px 0px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -796,32 +878,33 @@ body {
     }
 
     .s-package-card-title {
-        width: calc(100% - 100px);
+        // width: calc(100% - 70px);
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
+        padding: 20px 0 10px;
         margin-left: 10px;
         font-family: "Roboto";
         font-size: $p-font-size;
         font-weight: 700;
         color: $super-dark;
+        white-space: nowrap;
+        align-items: center;
 
         p {
-            padding-top: 5px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
+            padding: 10px 10px 0;
         }
 
         .s-package-card-btn {
+            // width: 60%;
+
             button {
-                display: flex;
                 align-items: center;
-                margin-top: 5px;
+                // margin-top: 5px;
                 background-color: $super-dark;
                 border: 1px solid $super-dark;
                 color: white;
                 border-radius: 10px;
-                width: 30%;
+                width: 50%;
                 line-height: 0.8rem;
                 padding: 10px;
                 text-align: center;
@@ -829,15 +912,75 @@ body {
                 .s-package-card-radio {
                     text-align: center;
                 }
-
             }
 
+            .money-discount {
+                color: $light-lake-green;
+            }
+        }
+
+        .s-package-card-radio {
+            padding-top: 5px;
         }
     }
 }
 
 
+//-----------custom radio -------------------------------- // 
 
+
+/* Create a custom radio button */
+
+// .s-point {
+//     height: 16px;
+//     width: 16px;
+//     background-color: $white;
+//     border: 2px solid $super-dark;
+//     border-radius: 50%;
+// }
+
+.j-checkmark-r {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $white;
+    border: 2px solid $super-dark;
+    border-radius: 50%;
+}
+
+/* On mouse-over */
+.j-point:hover input~.j-checkmark-r {
+    background-color: #D4CFC6;
+}
+
+/* When the radio button is checked*/
+.j-point input:checked~.j-checkmark-r {
+    background-color: $white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.j-checkmark-r:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.j-point input:checked~.j-checkmark-r:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.j-point .j-checkmark-r:after {
+    top: 2.5px;
+    left: 2.5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: black;
+}
 
 // --------------------------小計區 ------------------------------ //
 .s-subtitle-list-wrap {
@@ -1126,7 +1269,7 @@ body {
     }
 }
 
-// ----------------------------------加購商品區-----------------------------------
+// ---------------------------加購商品區------------------------- //
 .s-additional-product-wrap {
     margin-top: 100px;
     margin-bottom: 120px;

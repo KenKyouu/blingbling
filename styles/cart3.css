@@ -399,6 +399,12 @@ body {
   padding-top: 10px;
 }
 
+@media only screen and (min-width: 768px) {
+  .payment-wrap,
+.payment-deadline-wrap {
+    width: 70%;
+  }
+}
 .j-progress-bar {
   padding: 3.5rem 0 0 0;
   display: flex;
@@ -686,7 +692,7 @@ body {
 @media only screen and (min-width: 768px) {
   .j-list {
     width: 75%;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
   .j-list .j-list-bar {
     max-height: 100px;
@@ -768,7 +774,7 @@ body {
   }
 }
 .s-order-info-list-wrap {
-  margin-top: 50px;
+  margin: 50px 15px;
   margin-bottom: 100px;
   background: url(../images/cart3-mb-bg.svg) center top no-repeat;
   background-size: 100%;
@@ -805,4 +811,59 @@ body {
   border-top: 5px solid #DADADA;
   width: 100%;
   padding-top: 20px;
+}
+
+@media only screen and (min-width: 576px) {
+  .s-order-info-list-wrap {
+    margin: 0 30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .s-order-info-list-wrap {
+    margin: 0 60px;
+    width: 85%;
+  }
+  .s-order-info-list-wrap .container {
+    width: 85%;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .s-order-info-list-wrap {
+    width: 70%;
+    margin: 0 30px;
+  }
+  .s-payment-info-wrap .container .row .col h2 {
+    padding-left: 15px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199.98px) {
+  .s-order-info-list-wrap {
+    width: 70%;
+    margin: 0 30px;
+  }
+}
+.s-pcorder-info-list-wrap {
+  margin: 100px 15px;
+  margin-bottom: 100px;
+  margin-left: 30px;
+}
+.s-pcorder-info-list-wrap .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-pcorder-info-list-wrap .container .pc-bg-wrap {
+  background: url(../images/cart3-pc-bg.svg) center center/100% 100% no-repeat;
+  background-size: contain;
+  width: 70%;
+}
+.s-pcorder-info-list-wrap .container .pc-bg-wrap .pcorder-list-section {
+  padding: 20% 15% 0;
+}
+.s-pcorder-info-list-wrap .container .pc-bg-wrap .pcorder-list-section .row {
+  margin: 0;
+}
+.s-pcorder-info-list-wrap .container .pc-bg-wrap .pcorder-list-section .row .col {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
 }/*# sourceMappingURL=cart3.css.map */

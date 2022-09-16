@@ -476,7 +476,7 @@ body {
   .j-list {
     width: 75%;
     margin-top: 4rem;
-    margin-bottom: 13rem;
+    margin-bottom: 10rem;
   }
   .j-list .j-list-bar {
     max-height: 120px;
@@ -618,8 +618,76 @@ body {
   margin-left: 10px;
 }
 
+.s-mb-subtitle-wrap {
+  margin-top: 80px;
+}
+.s-mb-subtitle-wrap .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-mb-subtitle-wrap .container .s-mb-subtitle-area {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s-mb-subtitle-wrap .container .row {
+  margin: 0;
+}
+.s-mb-subtitle-wrap .container .row .col button {
+  background-color: none;
+  border: 3px solid #7cb2af;
+  color: #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  line-height: 0.8rem;
+  text-align: center;
+}
+.s-mb-subtitle-wrap .container .row .col .cart1-check {
+  background-color: #2d827d;
+  border: 3px solid #2d827d;
+  color: white;
+}
+
+.s-pc-btn-wrap {
+  margin-top: 80px;
+  margin-left: 10%;
+}
+.s-pc-btn-wrap .container {
+  width: 100%;
+}
+.s-pc-btn-wrap .container .s-pc-btn-area {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s-pc-btn-wrap .container .row {
+  margin: 0;
+}
+.s-pc-btn-wrap .container .row .col button {
+  background-color: none;
+  border: 3px solid #7cb2af;
+  color: #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  line-height: 0.8rem;
+  text-align: center;
+}
+.s-pc-btn-wrap .container .row .col .cart1-check {
+  background-color: #2d827d;
+  border: 3px solid #2d827d;
+  color: white;
+}
+
 .s-package-card-item {
-  padding: 8px 0px;
+  padding: 30px 0px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -631,36 +699,82 @@ body {
   width: 50%;
 }
 .s-package-card-item .s-package-card-title {
-  width: calc(100% - 100px);
   display: flex;
-  flex-direction: column;
+  padding: 20px 0 10px;
   margin-left: 10px;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 700;
   color: #000000;
+  white-space: nowrap;
+  align-items: center;
 }
 .s-package-card-item .s-package-card-title p {
-  padding-top: 5px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  padding: 10px 10px 0;
 }
 .s-package-card-item .s-package-card-title .s-package-card-btn button {
-  display: flex;
   align-items: center;
-  margin-top: 5px;
   background-color: #000000;
   border: 1px solid #000000;
   color: white;
   border-radius: 10px;
-  width: 30%;
+  width: 50%;
   line-height: 0.8rem;
   padding: 10px;
   text-align: center;
 }
 .s-package-card-item .s-package-card-title .s-package-card-btn button .s-package-card-radio {
   text-align: center;
+}
+.s-package-card-item .s-package-card-title .s-package-card-btn .money-discount {
+  color: #7cb2af;
+}
+.s-package-card-item .s-package-card-title .s-package-card-radio {
+  padding-top: 5px;
+}
+
+/* Create a custom radio button */
+.j-checkmark-r {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+/* On mouse-over */
+.j-point:hover input ~ .j-checkmark-r {
+  background-color: #D4CFC6;
+}
+
+/* When the radio button is checked*/
+.j-point input:checked ~ .j-checkmark-r {
+  background-color: #ffffff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.j-checkmark-r:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.j-point input:checked ~ .j-checkmark-r:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.j-point .j-checkmark-r:after {
+  top: 2.5px;
+  left: 2.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
 }
 
 .s-subtitle-list-wrap {
