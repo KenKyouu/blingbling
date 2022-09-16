@@ -28,8 +28,7 @@ body {
   width: 100%;
 }
 .content .containerr .product-pic img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 266px;
 }

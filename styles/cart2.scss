@@ -56,6 +56,7 @@ $h3-font-size: 36px;
 $h4-font-size: 32px;
 $h5-font-size: 24px;
 $h6-font-size: 20px;
+$h7-font-size: 18px;
 $p-font-size: 16px;
 $ps-font-size: 14px;
 
@@ -65,26 +66,106 @@ $ps-font-size: 14px;
 $bold: 900;
 
 
+// Start
+// .header {
+//     position: fixed;
+//     z-index: 99;
+//     width: 100%;
+//     height: 56.5px;
+//     background-color: $super-dark;
+//     opacity: 80%;
+//     border-radius: 0 0 20px 20px;
+//     display: flex;
+//     align-items: center;
+//     box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
+//     .left {
+//       padding-left: 20px;
+//       width: 100%;
+//       h1.logo {
+//         width: 100%;
+//         a {
+//           width: 100%;
+//           img {
+//             width: 75%;
+//           }
+//         }
+//       }
+//     }
+//     .right {
+//       padding-right: 10px;
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-end;
+//       li {
+//         display: flex;
+//         align-items: center;
+//         ul {
+//           margin: 0 10px;
+//         }
+//         ul.cart {
+//           margin-bottom: 5px;
+//         }
+//       }
+//     }
+// }
+
 //-------------------------------cart2-----------------------------
 .j-cart2-wrap{
     overflow: hidden;
 }
 .j-cart2-bg{
-    background: url("../images/cart2-bg-m1.svg")left 65vh/50% no-repeat, url("../images/cart2-bg-m2.svg")right 160vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+    background: url("../images/cart2-bg-m1.svg")left 100vh/50% no-repeat, url("../images/cart2-bg-m2.svg")right 200vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+}
+@media only screen and (min-width: 768px){
+    .j-cart2-bg{
+        background:  url("../images/cart2-bg-k1.svg")0vw 80vh/60% no-repeat, url("../images/cart2-bg-k2.svg")70vw 180vh/40% no-repeat, url("../images/other_bg_paper.png") center center/cover repeat-y;
+    }
+}
+//------------------------back-page-----------------
+.j-back{
+    margin-top: calc(56.5px + 1rem);
+    a{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        .j-back-wrap{
+            svg{
+                width: 70%;
+            }
+        }
+        .j-back-text{
+            margin-left: 10px;
+            font-family: "Roboto";
+            font-weight: $bold;
+            font-size: $p-font-size;
+            color: $dark-gray;
+        }
+    }
+}
+@media only screen and (min-width: 768px){
+    .j-back{
+        display: none;
+    }
 }
 //--------------------------progress-bar--------
 .j-progress-bar{
+    padding: 1rem 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    .j-step{
-        outline: 1px solid;
+    width: 100%;
+    .j-step-up{
+        padding: 0 1rem;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        .j-step-top{
+        justify-content: space-between;
+        width: 100%;
+        height: 2.2rem;
+        .j-step{
             width: 2.2rem;
             height: 2.2rem;
-            border-radius: 50%;
             .j-svg-wrap{
                 background-color: $white;
                 border: 2px solid $super-dark;
@@ -100,42 +181,76 @@ $bold: 900;
                 }
             }
         }
-        .j-step2-num{
+        .j-line{
+            width: 30%;
+            height: 0.125rem;
             background-color: $super-dark;
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 0 5px;
+        }
+        .j-step2-num{
+            width: 2.2rem;
+            height: 2.2rem;
+            
             .j-num2{
                 color: $white;
+                background-color: $super-dark;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 font-family: "Roboto";
                 font-weight: $bold;
                 font-size: $h6-font-size;
             }
         }
-        .j-step3-num{
-            background-color: $white;
-            border: 2px solid #A4A4A4;
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
+        .j-dash{
+            width: 30%;
+            height: 0.125rem;
+            margin: 0 0.2rem;
             display: flex;
             align-items: center;
-            justify-content: center;
+            div{
+                width: 10%;
+                height: 100%;
+                background-color: #A4A4A4;
+                margin-right: 5px;
+                &:nth-last-child(1){
+                    margin-right: 0;
+                }
+            }
+        }
+        .j-step3-num{
+            width: 2.2rem;
+            height: 2.2rem;
             .j-num3{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                border: 2px solid #A4A4A4;
                 color: #A4A4A4;
                 font-family: "Roboto";
                 font-weight: $bold;
                 font-size: $h6-font-size;
             }
         }
+    }
+    .j-step-down{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         .j-step-text{
             margin-top: 0.75rem;
             font-family: "Roboto";
             font-weight: $bold;
             font-size: $p-font-size;
+
         }
         .j-step3-text{
             color: #A4A4A4;
@@ -144,65 +259,371 @@ $bold: 900;
             font-weight: $bold;
             font-size: $p-font-size;
         }
-
     }
 }
+@media only screen and (min-width: 768px) {
+    .j-progress-bar{
+        margin-top: 5rem;
+        width: 60%;
+        margin-left: 4rem;
+    }
+}
+@media only screen and (min-width: 1400px){
+    .j-progress-bar{
+        .j-step-up{
+            height:  2.8rem;
+            .j-step, .j-step2-num, .j-step3-num{
+                width: 2.8rem;
+                height: 2.8rem;
+                .j-num2, .j-num3{
+                    font-size: $h5-font-size;
+                }
+                .j-svg-wrap{
+                    border: 3px solid $super-dark;
+                }
+                .j-num3{
+                    border: 3px solid #A4A4A4;
+                }
+            }
+        }
+        .j-step-down{
+            .j-step-text, .j-step3-text{
+                font-size: $h6-font-size;
+            }
+        }
+    }
+}
+//------------------------list--------------------
+.j-list{
+    width: 100%;
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 9rem;
+    .j-list-bar{
+        position: relative;
+        transform: translateY(-1rem);
+        width: 100%;
+        .j-list-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-height: 90px;
+                position: absolute;
+        }
+        .j-list-title{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(50%);
+            cursor: pointer;
+            h5{
+                font-family: "GenSenRounded-B";
+                font-size: $h6-font-size;
+                color: $white;
+                padding-right: 2rem;
+            }
+            .j-list-icon{
+                svg{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    &:nth-child(2){
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .j-list-info{
+        display: none;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+        width: 85%;
+        margin: 0 auto;
+        padding: 4rem 10px 14px 10px;
+        .j-list-title{
+            display: none;
+        }
+        .j-list-item{
+            padding: 8px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-bottom: 1px solid $light-lake-green;
+            &:nth-last-child(1){
+                border-bottom: none;
+            }
+            .j-list-img{
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+                object-fit: cover;
+                background-color: $dark-gray;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .j-list-sub{
+                width: calc(100% - 100px);
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                font-family: "Roboto";
+                font-size: $ps-font-size;
+                font-weight: $bold;
+                color: $super-dark;
+                p{
+                    padding-top: 5px;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+                .j-list-num{
+                    display: flex;
+                    align-items: center; 
+                    padding: 5px 0;
+                    margin-top: 5px;
+                    .j-money-single{
+                        display: none;
+                        text-align: center;
+                    }
+                    .j-amount{
+                        text-align: center;
+                    }
+                    .j-money{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.j-list.j-listopen{
+    margin-bottom: 3rem;
+    .j-list-bar{
+        // .j-list-wrap{
+        .j-list-title{
+            .j-list-icon{
+            svg{
+                &:nth-child(1){
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: block;
+                }
+            }
+            }
+        }
+        
+    }
+    .j-list-info{
+        display: block;
+    }
+}
+@media only screen and (min-width: 768px){
+    .j-list{
+        width: 75%;
+        margin-bottom: 10rem;
+        .j-list-bar{
+            max-height: 100px;
+            .j-list-title {
+                top: 0;
+                transform: translateX(-50%) translateY(40%);
+                h5{
+                    font-size: $h5-font-size;
+                }
+            }
+        }
+        .j-list-info{
+            padding-top: 5rem;
+            .j-list-title{
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                font-family: "Roboto";
+                font-size: $ps-font-size;
+                font-weight: $bold;
+                color: $super-dark;
+                border-bottom: 1px solid $light-lake-green;
+                padding-bottom: 8px;
+                .j-product{
+                    width: calc(100% - 90px);
+                    
+                }
+            }
+            .j-list-item{
+                .j-list-img{
+                    width: 80px;
+                    height: 80px;
+                    overflow: hidden;
+                    object-fit: cover;
+                    background-color: $dark-gray;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .j-list-sub{
+                    width: calc(100% - 90px);
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    p{
+                        width: 40%;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                    }
+                    .j-list-num{
+                        width: 60%;
+                        display: inline-flex;
+                        .j-money-single{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px){
+    .j-list{
+        width: 75%;
+        margin-top: 4rem;
+        margin-bottom: 13rem;
+        .j-list-bar{
+            max-height: 120px;
+            .j-list-title {
+                top: 0;
+                transform: translateX(-50%) translateY(-20%);
+                h5{
+                    font-size: $h4-font-size;
+                }
+                
+            }
+        }
+        .j-list-info{
+            padding-top: 8rem;
+        }
+    }
+}
+
 //-------------------------------form-----------
+
+
+//-----custom checkbox
 %point-shared {
     cursor: pointer;
-    font-size: 1.125rem;
+    font-size: $h7-font-size;
     display: block;
     position: relative;
     user-select: none;
+    padding-left: 1.75rem;
 }
 /* Hide the browser's default checkbox */
 %point-input-shared {
-    margin-right: 0.5rem;
-    // position: absolute;
+    // margin-right: 0.5rem;
+    position: absolute;
     cursor: pointer;
-    // opacity: 0;
-    // height: 0;
-    // width: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
 }
 /* Create a custom checkbox */
-// .j-checkmark{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 25px;
-//     width: 25px;
-//     background-color: $white;
-//     border: 2px solid $super-dark;
-// }
+.j-checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: $white;
+    border: 2px solid $super-dark;
+    border-radius: 3px;
+}
 /* On mouse-over*/
-// .j-point:hover input ~ .j-checkmark{
-//     background-color: $skin;
-// }
+.j-point:hover input ~ .j-checkmark{
+    background-color: $skin;
+}
 /* When the checkbox is checked*/
-// .j-point input:checked ~ .j-checkmark{
-//     background-color: $white;
-//     border: 1px solid $super-dark;
-// }
+.j-point input:checked ~ .j-checkmark{
+    background-color: $white;
+    border: 2px solid $super-dark;
+}
 /* Create the checkmark/indicator (hidden when not checked) */
-// .j-checkmark::after{
-//     content: "";
-//     position: absolute;
-//     display: none;
-// }
+.j-checkmark::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
 /* Show the checkmark when checked */
-// .j-point input:checked ~ .j-checkmark::after{
-//     display: block;
-// }
+.j-point input:checked ~ .j-checkmark::after{
+    display: block;
+}
 /* Style the checkmark/indicator */
-// .j-point .j-checkmark::after{
-//     left: 9px;
-//     top: 5px;
-//     width: 5px;
-//     height: 10px;
-//     border: solid $super-dark;
-//     border-width: 0 3px 3px 0;
-//     transform: rotate(45deg);
-// }
+.j-point .j-checkmark::after{
+    left: 3.5px;
+    width: 7px;
+    height: 11px;
+    border-right:2px solid $super-dark;
+    border-bottom: 2px solid $super-dark;
+    transform: rotate(45deg);
+    
+}
+
+
+//-----------custom radio
+
+
+  /* Create a custom radio button */
+.j-checkmark-r {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $white;
+    border: 2px solid $super-dark;
+    border-radius: 50%;
+}
+
+  /* On mouse-over */
+.j-point:hover input ~ .j-checkmark-r {
+    background-color: #D4CFC6;
+}
+
+/* When the radio button is checked*/
+.j-point input:checked ~ .j-checkmark-r {
+    background-color: $white;
+}
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.j-checkmark-r:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+  /* Show the indicator (dot/circle) when checked */
+.j-point input:checked ~ .j-checkmark-r:after {
+    display: block;
+}
+
+  /* Style the indicator (dot/circle) */
+    .j-point .j-checkmark-r:after {
+        top: 2.5px;
+        left: 2.5px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: black;
+    }
 
 %required-shared {
     position: relative;
@@ -240,6 +661,27 @@ $bold: 900;
 .j-label, .j-input{
     width: 100%;
 }
+
+
+
+.help-block.error {
+    margin-bottom: 5px;
+}
+.j-messages {
+    color: $pink;
+    font-family: "Roboto";
+    font-size: $ps-font-size;
+    line-height: 1;
+    margin-top: 6px;
+    }
+%has-error-shared{
+    outline: 1px solid $pink;
+    box-shadow: none;
+}
+%has-success-shared{
+    outline: none;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+}
 //----------------------------people-------------------------------
 
 %people-info-shared {
@@ -255,70 +697,85 @@ $bold: 900;
 
 .j-people-wrap {
     .j-people{
-        padding: 15px;
+        padding: 0 15px 15px;
         .j-orderer{
             h5 {
                 font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
             }
             .j-people-info {
-            @extend %people-info-shared;
-            .j-check {
-                @extend %check-shared;
-                .j-point {
-                @extend %point-shared;
-                input {
-                    @extend %point-input-shared;
-                    span{
-                        display: block;
+                @extend %people-info-shared;
+                .j-check {
+                    @extend %check-shared;
+                    .j-point {
+                        @extend %point-shared;
+                        display: inline-block;
+                        input {
+                            @extend %point-input-shared;
+                            span{
+                                display: block;
+                            }
+                        }
                     }
                 }
-                }
-            }
-            .j-space1 {
-                @extend %space1-shared;
-                .j-label-required {
-                    @extend %required-shared;
-                    &::before{
-                        @extend %required-before;
+                .j-space1 {
+                    @extend %space1-shared;
+                    .j-label-required {
+                        @extend %required-shared;
+                        &::before{
+                            @extend %required-before;
+                        }
                     }
-                }
-                .j-input{
-                    @extend %input-shared;
-                }
-            }
-            .j-space {
-                @extend %space-shared;
-                .j-label-required {
-                    @extend %required-shared;
-                    &::before{
-                        @extend %required-before;
+                    .j-input{
+                        @extend %input-shared;
                     }
+                    
                 }
-                .j-input{
-                    @extend %input-shared;
-                }
-            }
-            .j-space{
-                @extend %space-shared;
-                .j-tel-1{
-                    margin-right: 10px;
-                    width: 25%;
+                .j-space{
+                    @extend %space-shared;
+                    .j-label-required {
+                        @extend %required-shared;
+                        &::before{
+                            @extend %required-before;
+                        }
+                    }
                     .j-input{
                         @extend %input-shared;
                     }
                 }
-                .j-tel-2{
-                    width: 75%;
-                    .j-input{
-                        @extend %input-shared;
+                .has-error .j-input{
+                    @extend %has-error-shared;
+                }
+                .has-success .j-input{
+                    @extend %has-success-shared;
+                }
+                .j-space{
+                    @extend %space-shared;
+                    .j-tel-1{
+                        margin-right: 10px;
+                        width: 30%;
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                    .j-tel-2{
+                        width: 70%;
+                        .j-input{
+                            @extend %input-shared;
+                        }
+                    }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
                     }
                 }
-            }
+                
             }
         }
         .j-recipient{
-            margin-top: 10vw;
+            margin-top: 3rem;
             h5 {
                 font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
@@ -329,6 +786,7 @@ $bold: 900;
                     @extend %check-shared;
                     .j-point {
                     @extend %point-shared;
+                    display: inline-block;
                     input {
                         @extend %point-input-shared;
                     }
@@ -358,20 +816,32 @@ $bold: 900;
                         @extend %input-shared;
                     }
                 }
+                .has-error .j-input{
+                    @extend %has-error-shared;
+                }
+                .has-success .j-input{
+                    @extend %has-success-shared;
+                }
                 .j-space{
                     @extend %space-shared;
                     .j-tel-1{
                         margin-right: 10px;
-                        width: 25%;
+                        width: 30%;
                         .j-input{
                             @extend %input-shared;
                         }
                     }
                     .j-tel-2{
-                        width: 75%;
+                        width: 70%;
                         .j-input{
                             @extend %input-shared;
                         }
+                    }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
                     }
                 }
                 }
@@ -379,7 +849,95 @@ $bold: 900;
     }
 }
 
+@media only screen and (min-width: 768px){
+    .j-people-wrap{
+        width: 75%;
+        height: 100%;
+        position: relative;
+        .j-people{
+            position:relative;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            vertical-align: top;
+            align-items: center;
+            justify-content: center;
+            .j-orderer-bg{
+                background: url("../images/cart2-people-bg.png")0 center/100% 100% no-repeat;
+                padding:3vw ;
+                .j-orderer{
+                    // outline: 1px solid;
+                    padding: 1vw 0 3vw;
+                    margin-right: 1rem;
+                    h5{
+                        font-size: $h5-font-size;
+                    }
+                    .j-people-info{
+                        font-size: $ps-font-size;
+                        margin-left: 20px;
+                        .j-check{
+                            .j-point{
+                                font-size: $p-font-size;
+                            }
+                        }
+                        .j-space{
+                            .j-tel-1 .j-input{
+                                padding:10px 10px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+            .j-recipient-bg{
+                background: url("../images/cart2-people-bg.png")0 center/100% 100% no-repeat;
+                padding:3vw ;
+                .j-recipient{
+                    padding: 1vw 2vw 3vw 0;
+                    margin-top: 0;
+                    h5{
+                        font-size: $h5-font-size;
+                    }
+                    .j-people-info{
+                        font-size: $ps-font-size;
+                        margin-left: 20px;
+                        .j-check{
+                            .j-point{
+                                font-size: $p-font-size;
+                            }
+                        }
+                        .j-space{
+                            .j-tel-1 .j-input{
+                                padding:10px 10px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
 
+    .j-checkmark{
+        width: 16px;
+        height: 16px;
+    }
+    .j-point .j-checkmark::after{
+        left: 3px;
+        width: 6px;
+        height: 10px;
+    }
+}
+@media only screen and (min-width: 992px){
+    .j-people-wrap .j-people .j-orderer-bg .j-orderer .j-people-info .j-space .j-tel-1 .j-input{
+        padding:10px 20px;
+    }
+    .j-people-wrap .j-people .j-recipient-bg .j-recipient .j-people-info .j-space .j-tel-1 .j-input{
+        padding:10px 20px;
+    }
+}
 //---------------------------------logistics----------------------------
 
 %info-li-shared{
@@ -392,12 +950,13 @@ $bold: 900;
     margin-top: 10px;
     font-family: "Roboto";
     font-weight: $bold;
-    font-size: 1.125rem;
+    font-size: $h7-font-size;
 }
 .j-city, .j-town{
     width: 100%;
     appearance: none;
-    background: url() 90% center/4% no-repeat;
+    background: url("../images/icons/icon=down.svg") 90% center/0.8rem no-repeat;
+    fill: $super-dark;
     cursor: pointer;
     @extend %input-shared;
     background-color: $white;
@@ -405,13 +964,19 @@ $bold: 900;
     font-size: $p-font-size;
 
 }
+.has-error select{
+    @extend %has-error-shared;
+}
+.has-success select{
+    @extend %has-success-shared;
+}
 .j-city{
     margin-right: 15px;
 }
 
 
 .j-logistics-wrap{
-    margin-top: 20vw;
+    margin-top: 5rem;
     .j-logistics{
         h5{
             font-family: "GenSenRounded-B";
@@ -442,12 +1007,18 @@ $bold: 900;
                             }
                         }
                         .j-select{
-                            // display: flex;
                             width: 100%;
+                        }
+                        .j-form-gtoup{
+                            .j-input{
+                                @extend %input-shared;
                             }
                         }
-                        .j-input{
-                            @extend %input-shared;
+                        .has-error .j-input{
+                            @extend %has-error-shared;
+                        }
+                        .has-success .j-input{
+                            @extend %has-success-shared;
                         }
                     }
                     li{
@@ -486,8 +1057,10 @@ $bold: 900;
                     li{
                         .j-input{
                             @extend %input-shared;
+                            line-height: 2;
                         }
                     }
+                }
             }
         }
             .j-convenience-store{
@@ -526,23 +1099,134 @@ $bold: 900;
                             @extend %input-shared;
                         }
                     }
-                    .j-store{
-                        width: 80%;
-                        margin: 30px 10% 0;
-                        border-radius: 10px;
-                        font-size: 1.125rem;
-                        font-weight: $bold;
-                        padding: 10px 30px;
-                        border: none;
-                        background-color: $super-dark;
-                        color: $white;
+                    .has-error .j-input{
+                        @extend %has-error-shared;
                     }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
+                    }
+                    .j-store-btn{
+                        a{
+                            display: block;
+                            margin: 30px 10% 0;
+                            width: 80%;
+                            .j-store{
+                                width: 100%;
+                                border-radius: 10px;
+                                font-family: "GenSenRounded-B";
+                                font-size: $h7-font-size;
+                                font-weight: $bold;
+                                padding: 10px 30px;
+                                border: none;
+                                background-color: $super-dark;
+                                color: $white;
+                            }
+                        }
+                        
+                    }
+                    
                 }
             }
     }
 }
 
-//-------------------------------------------------------------------------
+@media only screen and (min-width: 768px){
+    .j-logistics-wrap{
+        width: 65%;
+        .j-logistics{
+            h5{
+                font-size: $h5-font-size;
+            }
+            div{
+                .j-home-delivery{
+                    margin-left: 40px;
+                    font-size: $ps-font-size;
+                    .j-d-title{
+                        font-size: $p-font-size;
+                        padding-left: 40px;
+                        .j-point{
+                            font-size: $p-font-size;
+                        }
+                    }
+                    .j-home-info{
+                        font-size: $ps-font-size;
+                        li{
+                            .j-select{
+                                .j-city{
+                                    width: calc(50% - 7.5px);
+                                    float: left;
+                                    margin-right: 7.5px;
+                                }
+                                .j-town{
+                                    width: calc(50% - 7.5px);
+                                    margin-left: 7.5px;
+                                }
+                            }
+                            .j-input{
+                                clear: both;
+                                font-size: $ps-font-size;
+                            }
+                        }
+                        li{
+                            @extend %info-li-shared;
+                            
+                            .j-timebox{
+                                font-size: $ps-font-size;
+                                .col-6{
+                                    .j-point{
+                                        font-size: $ps-font-size;
+                                        input{
+                                        font-size: $ps-font-size;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        li{
+                            .j-input{
+                                font-size: $ps-font-size;
+                                line-height: 2;
+                            }
+                        }
+                    }
+                }
+                .j-convenience-store{
+                    width: 100%;
+                    margin-left: 40px;
+                    .j-d-title{
+                        font-size: $p-font-size;
+                        padding-left: 40px;
+                        .j-point{
+                            font-size: $p-font-size;
+                        }
+                    }
+                    .j-store-info{
+                        font-size: $ps-font-size;
+                        .j-space1{
+                            .j-input{
+                                font-size: $ps-font-size;
+                            }
+                        }
+                        .j-space{
+                            .j-input{
+                                font-size: $ps-font-size;
+                            }
+                        }
+                        .j-store-btn a {
+                            font-size: $h6-font-size;
+                            width: 40%;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .j-city, .j-town{
+        font-size: $ps-font-size;
+    }
+}
+//--------------------------------pay----------------------------------
 %pay-title-shared{
     @extend %d-title-shared;
 }
@@ -550,8 +1234,8 @@ $bold: 900;
 
 .j-pay-wrap{
     overflow: hidden;
-    margin-top: 20vw;
-    margin-bottom: 20vw;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
     h5{
         font-family: "GenSenRounded-B";
         font-size: $h6-font-size;
@@ -569,8 +1253,12 @@ $bold: 900;
                 }
             }
             .j-credit-bg{
-                background: url("../images/cart2-pay-bg.svg") center center/cover no-repeat;
+                background: url("../images/cart2-pay-bg.png") center bottom/100% 100% no-repeat;
+                padding: 0 15px 50px;
                 border-radius: 0 0 20px 20px;
+                .j-card-pers{
+                    display: none;
+                }
                 .j-credit-info{
                     @extend %info-shared;
                     margin: 0;
@@ -587,12 +1275,18 @@ $bold: 900;
                         .j-input{
                             @extend %input-shared;
                         }
-                        .j-cvv{
-                            margin-bottom: 50px;
-                        }
+                        // .j-cvv{
+                        //     margin-bottom: 50px;
+                        // }
                     }
                     .j-space{
                         @extend %space-shared;
+                    }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
                     }
                 }
             }
@@ -643,3 +1337,611 @@ $bold: 900;
         }
     }
 }
+
+@media only screen and (min-width: 768px){
+    .j-pay-wrap{
+        width: 65%;
+        h5{
+            font-size: $h5-font-size;
+        }
+        div{
+            .j-credit-pay{
+                margin-left: 40px;
+                .j-credit-title{
+                    font-size: $p-font-size;
+                    padding-left: 40px;
+                    .j-point{
+                        font-size: $p-font-size;
+                    }
+                }
+                .j-credit-bg{
+                    padding-top: 5px;
+                    background: url("../images/cart2-pay-bg2.png") center bottom/ 100% 100% no-repeat;
+                    .j-card-pers{
+                        display: block;
+                        perspective: 1000px;
+                        .creditcard{
+                            font-family: "Roboto";
+                            font-weight: $bold;
+                            margin: 0 auto;
+                            margin-top: 45px;
+                            width: 100%;
+                            max-width: 370px;
+                            min-height: 220px;
+                            transform-style: preserve-3d;
+                            transition: transform 0.6s;
+                            cursor: pointer;
+                            &.flipped{
+                                transform: rotateY(180deg);
+                            }
+                            .j-credit-front{
+                                position: absolute;
+                                width: 100%;
+                                max-width: 370px;
+                                backface-visibility: hidden;
+                                #j-ccsingle{
+                                    position: absolute;
+                                }
+                                .j-card-wrap{
+                                    background: url("../images/cart2-card-font.png") center center/cover no-repeat;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-around;
+                                    width: 370px;
+                                    height: 220px;
+                                    // outline: 1px solid;
+                                    padding: 0px 30px;
+                                    border-radius: 10px;
+                                }
+                                .j-font-text{
+                                    width: 100%;
+                                    .j-card-icon-wrap{
+                                        width: 16%;
+                                    }
+                                    .j-card-number{
+                                        padding:0 15%;
+                                        text-align: left;
+                                        margin-top: 1vw;
+                                        color: $white;
+                                        font-size: $h6-font-size;
+                                        line-height: 2.1;
+                                        letter-spacing: 1px;
+                                    }
+                                    .j-card-line3{
+                                        width: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        text-align: center;
+                                        justify-content: space-between;
+                                        margin-top: 1vw;
+                                    }
+                                    .j-cardholder, .j-expiration{
+                                        text-align: left;
+                                        line-height: 1.5;
+                                        letter-spacing: 1px;
+                                        p{
+                                            &:nth-child(1){
+                                                color: rgba(255, 255, 255, 0.6);
+                                                font-size: $ps-font-size;
+                                            }
+                                            &:nth-child(2){
+                                                color: $white;
+                                                font-size: $h6-font-size;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .j-credit-back{
+                                transform: rotateY(180deg);
+                                position: absolute;
+                                width: 100%;
+                                max-width: 370px;
+                                backface-visibility: hidden;
+                                .j-card-wrap{
+                                    background: url("../images/cart2-card-back.png") center center/cover no-repeat;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    width: 370px;
+                                    height: 220px;
+                                    padding-top: 30px;
+                                    border-radius: 10px;
+                                }
+                                .j-back-text{
+                                    width: 100%;
+                                    .j-card-black{
+                                        width: 100%;
+                                        height: 2rem;
+                                        background-color: $super-dark;
+                                    }
+                                    .j-ccv-subtitle{
+                                        margin-top: 1vw;
+                                        text-align: right;
+                                        color: $white;
+                                        margin-right: 40px;
+                                        font-size: $ps-font-size;
+                                    }
+                                    .j-card-sign{
+                                        overflow: hidden;
+                                        margin: 0.1vw 30px 0;
+                                        background-color: $white;
+                                        border-radius: 10px;
+                                        margin: 0.5vw 1.8vw;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                    }
+                                    .j-sign{
+                                        width: 70%;
+                                        padding: 0.5rem 1rem;
+                                    }
+                                    .j-cvv{
+                                        width: 30%;
+                                        background-color: $gray;
+                                        padding: 0.5rem 1rem;
+                                        font-size: $h6-font-size;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .j-credit-info{
+                        width: 65%;
+                        margin: 0 auto;
+                        font-size: $ps-font-size;
+                        li{
+                            .j-input{
+                                font-size: $ps-font-size;
+                            }
+                        }
+                    }
+                }
+            }
+            .j-bank-pay{
+                margin-left: 40px;
+                .j-bank-title{
+                    padding-left: 40px;
+                    .j-point{
+                        font-size: $p-font-size;
+                    }
+                }
+            }
+            .j-line-pay{
+                margin-left: 40px;
+                .j-line-title{
+                    padding-left: 40px;
+                    .j-point{
+                        font-size: $p-font-size;
+                    }
+                }
+            }
+            .j-apple-pay{
+                margin-left: 40px;
+                .j-apple-title{
+                    padding-left: 40px;
+                    .j-point{
+                        font-size: $p-font-size;
+                    }
+                }
+            }
+            .j-money-pay{
+                margin-left: 40px;
+                .j-money-title{
+                    padding-left: 40px;
+                    .j-point{
+                        font-size: $p-font-size;
+                    }
+                }
+            }
+        }
+    }
+}
+//-------------------------kv-bottom-----------------------------
+.j-cart2-btn{
+    display: none;
+}
+@media only screen and (min-width: 768px){
+    .j-cart2-btn{
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10rem;
+        li{
+            &:nth-child(1){
+                a{
+                    display: block;
+                    width: 90%;
+                    button{
+                        width: 100%;
+                        max-width: 382px;
+                        border: none;
+                        outline: 3px solid $lake-green;
+                        background: none;
+                        color: $lake-green;
+                        padding: 15px 20px;
+                        border-radius: 10px;
+                        font-family: "GenSenRounded-B";
+                        font-size: $h6-font-size;
+                        font-weight: $bold;
+                    }
+                }
+                
+            }
+            &:nth-child(2){
+                text-align: right;
+                a{
+                    display: block;
+                    width: 90%;
+                    button{
+                        width: 100%;
+                        max-width: 382px;
+                        border: none;
+                        border: 3px solid $lake-green;
+                        background: $lake-green;
+                        color: $white;
+                        padding: 15px 20px;
+                        border-radius: 10px;
+                        font-family: "GenSenRounded-B";
+                        font-size: $h6-font-size;
+                        font-weight: $bold;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+//--------------------------------------fixed subtotal-----------
+.j-subtotal{
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    .j-subtotal-f{
+        width: 100%;
+        position: fixed;
+        border-radius: 20px 20px 0 0;
+        background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+        box-shadow: 0px -1px 14px rgba($color: $super-dark, $alpha: 0.25);
+        z-index: 30;
+        bottom: 0;
+        left: 0;
+        .j-sum-item{
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .j-upicon{
+                position: relative;
+                margin-top: 1rem;
+                width: 100%;
+                min-height: 1rem;
+                text-align: center;
+                cursor: pointer;
+                svg{
+                    width: 100%;
+                    position: absolute;
+                    transform: translate(-50%);
+                    &:nth-child(2){
+                        display: none;
+                    }
+                }
+            }
+            .j-amount-detail{
+                padding: 0.5rem ;
+                font-family: "Roboto";
+                font-size: $p-font-size;
+                font-weight: $bold;
+                width: 85%;
+                border-bottom: 1px solid $dark-gray;
+                display: none;
+                .j-detail{
+                    padding: 0.3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .j-pl{
+                        padding-left: 0.6rem;
+                    }
+                }
+            }
+            .j-total{
+                padding: 1rem 0 2rem;
+                a{
+                    display: block;
+                    button{
+                        border: none;
+                        background-color: $lake-green;
+                        color: $white;
+                        padding: 10px 30px;
+                        border-radius: 10px;
+                        font-family: "GenSenRounded-B";
+                        font-size: $h7-font-size;
+                        font-weight: $bold;
+                        span{
+                            margin-left: 0.5rem;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .j-fixed-bg{
+        display: none;
+        // z-index: 30;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+.j-subtotal.j-open{
+    .j-subtotal-f{
+        .j-sum-item{
+            .j-upicon{
+                svg{
+                    &:nth-child(1){
+                        display: none;
+                    }
+                    &:nth-child(2){
+                        display: inline-block;
+                    }
+                }
+            }
+            .j-amount-detail{
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+    }
+    
+    .j-fixed-bg{
+        display: block;
+    }
+}
+@media only screen and (min-width: 768px){
+    .j-subtotal{
+        display: none;
+    }
+}
+
+//-------------------------------fixed subtotal-kv-------
+.j-summary-list{
+    display: none;
+}
+@media only screen and (min-width: 768px){
+    .j-summary-list{
+        display: block;
+        outline: 2px solid $deep-brown;
+        position: fixed;
+        top: 40vh;
+        right: 3vw;
+        width: 25%;
+        max-width: 320px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+        // overflow: hidden;
+        .j-bling-img{
+            position: absolute;
+            transform: translateY(-33%);
+            right: -5vw;
+            z-index: -1;
+        }
+        .j-summary-title{
+            border-radius: 10px 10px 0 0;
+            padding: 15px 0;
+            text-align: center;
+            font-family: "GenSenRounded-B";
+            font-size: $h5-font-size;
+            color: $white;
+            background-color: $deep-brown;
+        }
+        .j-summary-info{
+            background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+            padding: 30px 5% 0px;
+            // margin: 0 5%;
+            font-family: "Roboto";
+            font-size: $ps-font-size;
+            font-weight: $bold;
+            .j-summary-items{
+                padding-bottom: 30px;
+                border-bottom: 2px solid $deep-brown;
+                .j-summary-item{
+                    padding: 0.5rem 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    .j-pl{
+                        padding-left: 0.8rem;
+                    }
+                }
+            }
+            
+        }
+        .j-total-kv{
+            background: url("../images/other_bg_paper.png") center center/cover no-repeat;
+            border-radius: 0 0 10px 10px;
+            padding: 30px 5% 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-family: "Roboto";
+            font-size: $ps-font-size;
+            font-weight: $bold;
+            .j-pl{
+                padding-left: 0.8rem;
+            }
+        }
+
+        
+    }
+}
+
+
+//---------------lightbox-error------
+// .j-lightbox{
+//     // display: none;
+//     .j-lightbox-black{
+//         z-index: 20;
+//         position: fixed;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         background-color: rgba(0, 0, 0, 0.7);
+//     }
+//     .j-lightbox-bg{
+//         z-index: 21;
+//         position: fixed;
+//         top: 50vh;
+//         left: 50vw;
+//         transform: translateX(-50%) translateY(-50%);
+//         width: 90%;
+//         max-width: 400px;
+//         font-family: "GenSenRounded-B";
+//         font-weight: $bold;
+//         text-align: center;
+//         background: url("../images/cart2-error-bg.png")center center/100% 100% no-repeat;
+//         padding: 76px 0;
+//         .j-warning{
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             margin: 10px 30px;
+//             .j-warn-icon{
+//                 margin-right: 20px;
+//             }
+//             .j-warn-text{
+//                 font-size: $h6-font-size;
+//                 color: $super-dark;
+//             }
+//         }
+//         button{
+//             border: none;
+//             background-color: $super-dark;
+//             border-radius: 10px;
+//             color: $white;
+//             font-size: $h7-font-size;
+//             padding: 10px 30px;
+//         }
+//     }
+    
+// }
+
+// footer
+
+.footer-mobile {
+    display: none;
+    padding-top: 30px;
+    background-image: url(../images/footer-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+    height: 257px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    .footer-logo {
+      padding-top: 30px;
+      width: 85px;
+      margin: auto;
+    }
+    .footer-nav {
+      ul {
+        margin: 35px 40px 0 40px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $white;
+        li {
+          a {
+            color: $white;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .footer-social {
+      margin: 35px 160px 0 160px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer-c {
+      margin-top: 35px;
+      text-align: center;
+      color: $white;
+      font-family: "Roboto";
+      font-size: $ps-font-size;
+    }
+  }
+  
+  .footer-pc {
+    width: 100%;
+    height: 120px;
+    background-color: $dark-gray;
+    position: relative;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    .footer-pc-up {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 30px;
+      border-bottom: 2px solid $white;
+      .footer-nav {
+        ul {
+          margin: 30px 20px 0 0;
+          display: flex;
+          justify-content: space-between;
+          li {
+            margin-right: 30px;
+            a {
+              color: $white;
+              font-family: "GenSenRounded-M";
+              font-size: $p-font-size;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .footer-c {
+        margin-top: 30px;
+        text-align: center;
+        color: $white;
+        font-family: "Roboto";
+        font-size: $ps-font-size;
+      }
+      .footer-social {
+        margin: 30px 40px 0 20px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+    .footer-logo {
+      position: absolute;
+      width: 120px;
+      top: 30px;
+      left: 80px;
+      background-color: $dark-gray;
+      padding: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
