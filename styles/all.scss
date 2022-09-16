@@ -193,7 +193,7 @@ $bold: 900;
     box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.25);
     @media screen and (min-width: 768px) {
       width: 95%;
-      height: 90px;
+      height: 70px;
       margin: 0 2.5%;
       padding: 0 5%;
     }
@@ -205,7 +205,7 @@ $bold: 900;
         a {
           width: 100%;
           img {
-            width: 150px;
+            width: 180px;
           }
         }
       }
@@ -227,6 +227,16 @@ $bold: 900;
         }
         li.cart {
           margin-bottom: 5px;
+          position: relative;
+          span.cart-red-point {
+            position: absolute;
+            right: 0px;
+            top: -2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $coral;
+          }
         }
       }
     }
@@ -285,7 +295,7 @@ $bold: 900;
       display: none;
       position: fixed;
       z-index: 205;
-      top: 90px;
+      top: 70px;
       width: 80%;
       height: 500px;
       margin: 0 10%;
@@ -297,7 +307,7 @@ $bold: 900;
       display: none;
       position: fixed;
       z-index: 205;
-      top: 90px;
+      top: 70px;
       right: 5%;
       width: 350px;
       height: 200px;
@@ -333,7 +343,7 @@ $bold: 900;
       display: none;
       position: fixed;
       z-index: 205;
-      top: 90px;
+      top: 70px;
       right: 10%;
       width: 200px;
       border-radius: 0 0 10px 10px;
@@ -370,6 +380,54 @@ $bold: 900;
         }
       }
     }
+  }
+}
+
+.footer-mobile {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  .footer-logo {
+    padding-top: 30px;
+    width: 85px;
+    margin: auto;
+  }
+  .footer-nav {
+    ul {
+      margin: 35px 70px 0 70px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid $white;
+      li {
+        a {
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .footer-social {
+    margin: 35px 160px 0 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-c {
+    margin-top: 35px;
+    text-align: center;
+    color: $white;
+    font-family: "Roboto";
+    font-size: $ps-font-size;
   }
 }
 
@@ -507,31 +565,36 @@ $bold: 900;
       }
       .product-class {
         width: 100%;
-
         color: $super-dark;
         font-family: "GenSenRounded-M";
         font-size: $p-font-size;
-        .class-select {
-          display: flex;
-          height: 40px;
-          .class-image {
-            padding: 10px 0 0 0;
-            margin-left: 20px;
-            width: 8%;
-            position: relative;
-            img {
-              width: 100%;
-              position: absolute;
-              bottom: 3px;
-            }
-          }
-          .class-name {
-            width: 100%;
-            margin-left: 10px;
-            padding: 10px 0 0 0;
+        a {
+          color: $deep-brown;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          text-decoration: none;
+          .class-select {
             display: flex;
-            align-items: center;
-            border-bottom: 1px solid $gray;
+            height: 40px;
+            .class-image {
+              padding: 10px 0 0 0;
+              margin-left: 20px;
+              width: 8%;
+              position: relative;
+              img {
+                width: 100%;
+                position: absolute;
+                bottom: 3px;
+              }
+            }
+            .class-name {
+              width: 100%;
+              margin-left: 10px;
+              padding: 10px 0 0 0;
+              display: flex;
+              align-items: center;
+              border-bottom: 1px solid $gray;
+            }
           }
         }
       }
@@ -539,6 +602,15 @@ $bold: 900;
         display: flex;
         justify-content: space-between;
         margin: 60px 30px 0 30px;
+        .circle {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $lake-green;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         a {
           .circle {
             width: 40px;

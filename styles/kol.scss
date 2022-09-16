@@ -62,101 +62,6 @@ body {
     background: url(../images/index-bg_paper.png) center center / cover repeat-y;
 }
 
-.header {
-    width: 100%;
-    height: 56.5px;
-    background-color: $super-dark;
-    opacity: 80%;
-    border-radius: 0 0 20px 20px;
-    display: flex;
-
-    .left {
-        padding-left: 20px;
-        width: 100%;
-
-        h1.logo {
-            width: 100%;
-
-            a {
-                width: 100%;
-
-                img {
-                    width: 75%;
-                }
-            }
-        }
-    }
-
-    .right {
-        padding-right: 10px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        li {
-            display: flex;
-            align-items: center;
-
-            ul {
-                margin: 0 10px;
-            }
-
-            ul.cart {
-                margin-bottom: 5px;
-            }
-        }
-    }
-}
-
-.footer {
-    margin-top: 30px;
-    background-image: url(../images/footer-bg.svg);
-    background-repeat: no-repeat;
-    background-size: 160%;
-    background-position: center;
-    overflow: hidden;
-    width: 100%;
-    height: 257px;
-
-    .footer-logo {
-        padding-top: 30px;
-        width: 20%;
-        margin: auto;
-    }
-
-    .footer-nav {
-        ul {
-            margin: 35px 40px 0 40px;
-            padding-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 2px solid $white;
-
-            li {
-                a {
-                    color: $white;
-                    font-family: "GenSenRounded-M";
-                    font-size: $p-font-size;
-                }
-            }
-        }
-    }
-
-    .footer-social {
-        margin: 35px 160px 0 160px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer-c {
-        margin-top: 35px;
-        text-align: center;
-        color: $white;
-        font-family: "Roboto";
-        font-size: $ps-font-size;
-    }
-}
 
 
 .container {
@@ -337,4 +242,3 @@ body {
         }
     }
 }
-//

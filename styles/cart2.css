@@ -257,7 +257,8 @@
   width: 60px;
   height: 60px;
   overflow: hidden;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #4c4948;
 }
 .j-list .j-list-info .j-list-item .j-list-img img {
@@ -347,7 +348,8 @@
     width: 80px;
     height: 80px;
     overflow: hidden;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     background-color: #4c4948;
   }
   .j-list .j-list-info .j-list-item .j-list-img img {
@@ -399,7 +401,10 @@
   font-size: 18px;
   display: block;
   position: relative;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding-left: 1.75rem;
 }
 
@@ -706,7 +711,9 @@
 
 .j-city, .j-town {
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("../images/icons/icon=down.svg") 90% center/0.8rem no-repeat;
   fill: #000000;
   cursor: pointer;
@@ -911,7 +918,8 @@
     position: absolute;
     width: 100%;
     max-width: 370px;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front #j-ccsingle {
     position: absolute;
@@ -967,7 +975,8 @@
     position: absolute;
     width: 100%;
     max-width: 370px;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-card-wrap {
     background: url("../images/cart2-card-back.png") center center/cover no-repeat;

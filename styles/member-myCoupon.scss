@@ -88,6 +88,8 @@ $bold: 900;
 //     background-color: $lake-green;
 // }
 
+// ------------body------------
+
 .wrap {
     width: 100%;
     height: 100vh;
@@ -96,13 +98,15 @@ $bold: 900;
         .main {
             .row {
                 height: 100vh;
+                margin: 0;
 
                 .col {
                     background-color: $lake-green;
                     padding: 0;
 
-                    .left {
+                    // ---------------green border---------------
 
+                    .left {
                         .myName {
                             padding-top: 80px;
                             display: flex;
@@ -217,6 +221,8 @@ $bold: 900;
                             }
                         }
                     }
+
+                    // ---------------white border---------------
 
                     .whiteBg {
                         width: 100%;
@@ -378,6 +384,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-700-----------------
+
 @media screen and (min-width:700px) {
     .wrap {
         .containerr {
@@ -394,6 +402,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-992-----------------
+
 @media screen and (min-width:992px) {
     .wrap {
         background-image: url(../images/other_bg_paper.png);
@@ -403,12 +413,14 @@ $bold: 900;
 
             .main {
                 .row {
-
+                    overflow: hidden;
                     .col {
                         background-color: #00000000;
                         display: flex;
                         align-items: center;
-                        padding-top: 90px;
+                        padding-top: 50px;
+
+                        // ---------------green border---------------
 
                         .col-lg-3 {
                             height: 70%;
@@ -466,7 +478,7 @@ $bold: 900;
                                     width: 100%;
                                     flex-wrap: none;
                                     justify-content: right;
-                                    padding-top: 30px;
+                                    padding-top: 10px;
 
                                     li.btn {
                                         width: 100%;
@@ -477,20 +489,23 @@ $bold: 900;
 
                                         a {
                                             width: 100%;
-                                            height: 54px;
+                                            height: 48px;
                                             border-radius: 100px 0 0 100px;
                                             background-color: $white;
                                             flex-direction: row;
+
                                             .btnsvg {
                                                 width: 35%;
                                                 text-align: right;
                                                 padding-right: 20px;
+
                                                 svg {
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
                                                 }
                                             }
+
                                             .btnP {
                                                 width: 65%;
                                                 font-family: "GenSenRounded-B";
@@ -503,6 +518,8 @@ $bold: 900;
                                 }
                             }
                         }
+
+                        // ---------------white border---------------
 
                         .col-lg-9 {
                             height: 70%;
@@ -519,6 +536,7 @@ $bold: 900;
                                 background-color: rgba(255, 255, 255, 0);
                                 flex-direction: row;
                                 justify-content: left;
+                                margin: 20px 0 20px;
                                 p {
                                     font-size: $h6-font-size;
                                     padding-right: 30px;
@@ -531,9 +549,10 @@ $bold: 900;
                                 }
                             }
                             .couponbtn {
-                                margin-bottom: 30px;
+                                margin-bottom: 20px;
                             }
                             .invalidCouponGroup {
+                                margin-bottom: 20px;
                                 .invalidCouponTitle {
                                     padding-bottom: 10px;
                                     .couponName {
@@ -545,7 +564,7 @@ $bold: 900;
                                 }
                                 .invalidCouponDetails {
                                     width: 100%;
-                                    height: 360px;
+                                    height: 280px;
                                     overflow: scroll;
                                 }
                             }
@@ -558,27 +577,30 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-1200-----------------
+
 @media screen and (min-width:1200px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 10%;
         }
     }
 }
 
+// ----------------RWD-1400-----------------
+
 @media screen and (min-width:1400px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 15%;
         }
     }
 }
 
+// ----------------RWD-1600-----------------
+
 @media screen and (min-width:1600px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 18%;
             .main {
@@ -602,11 +624,11 @@ $bold: 900;
     }
 }
 
-// lightbox-err
+// ------------------lightbox-err-----------------
 
-.j-lightbox{
+.coupon-lightbox-err{
     // display: none;
-    .j-lightbox-black{
+    .coupon-lightbox-black{
         z-index: 20;
         position: fixed;
         top: 0;
@@ -615,7 +637,7 @@ $bold: 900;
         right: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
-    .j-lightbox-bg{
+    .coupon-lightbox-bg{
         z-index: 21;
         position: fixed;
         top: 50vh;
@@ -628,17 +650,19 @@ $bold: 900;
         text-align: center;
         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
         padding: 76px 0;
-        .j-warning{
+        .coupon-warning{
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 30px;
-            .j-warn-icon{
+            .coupon-warn-icon{
                 margin-right: 20px;
+                padding-bottom: 10px;
             }
-            .j-warn-text{
+            .coupon-warn-text{
                 font-size: $h6-font-size;
                 color: $super-dark;
+                padding-bottom: 10px;
             }
         }
         button{
@@ -646,8 +670,62 @@ $bold: 900;
             background-color: $super-dark;
             border-radius: 10px;
             color: $white;
-            font-size: $h6-font-size;
+            font-size: $p-font-size;
             padding: 10px 30px;
+            margin-top: 10px;
+        }
+    }
+}
+
+// ------------------lightbox-success-----------------
+
+.coupon-lightbox-success{
+    // display: none;
+    .coupon-lightbox-black{
+        z-index: 20;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .coupon-lightbox-bg{
+        z-index: 21;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translateX(-50%) translateY(-50%);
+        width: 90%;
+        max-width: 400px;
+        font-family: "GenSenRounded-B";
+        font-weight: $bold;
+        text-align: center;
+        background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+        padding: 76px 0;
+        .coupon-warning{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 30px;
+            .coupon-true-icon{
+                margin-right: 20px;
+                padding-bottom: 10px;
+            }
+            .coupon-true-text{
+                font-size: $h6-font-size;
+                color: $super-dark;
+                padding-bottom: 10px;
+            }
+        }
+        button{
+            border: none;
+            background-color: $super-dark;
+            border-radius: 10px;
+            color: $white;
+            font-size: $p-font-size;
+            padding: 10px 30px;
+            margin-top: 10px;
         }
     }
 }

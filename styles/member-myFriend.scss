@@ -88,6 +88,8 @@ $bold: 900;
 //     background-color: $lake-green;
 // }
 
+// ------------body------------
+
 .wrap {
     width: 100%;
     height: 100vh;
@@ -96,13 +98,15 @@ $bold: 900;
         .main {
             .row {
                 height: 100vh;
+                margin: 0;
 
                 .col {
                     background-color: $lake-green;
                     padding: 0;
 
-                    .left {
+                    // ---------------green border---------------
 
+                    .left {
                         .myName {
                             padding-top: 80px;
                             display: flex;
@@ -218,6 +222,8 @@ $bold: 900;
                         }
                     }
 
+                    // ---------------white border---------------
+
                     .whiteBg {
                         width: 100%;
                         height: auto;
@@ -328,6 +334,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-700-----------------
+
 @media screen and (min-width:700px) {
     .wrap {
         .containerr {
@@ -344,6 +352,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-992-----------------
+
 @media screen and (min-width:992px) {
     .wrap {
         background-image: url(../images/other_bg_paper.png);
@@ -359,6 +369,8 @@ $bold: 900;
                         display: flex;
                         align-items: center;
                         padding-top: 90px;
+
+                        // ---------------green border---------------
 
                         .col-lg-3 {
                             height: 70%;
@@ -454,6 +466,8 @@ $bold: 900;
                             }
                         }
 
+                        // ---------------white border---------------
+
                         .col-lg-9 {
                             height: 70%;
                             box-shadow: none;
@@ -486,29 +500,167 @@ $bold: 900;
             }
         }
     }
+    // ------------------lightbox-newFriendDetails-----------------
+
+    .lightbox-newFriendDetails {
+        width: 700px;
+        height: auto;
+        border-radius: 32px;
+        border: 4px solid $lake-green;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+        p.editTitle {
+            font-family: "GenSenRounded-B";
+            font-size: $h5-font-size;
+            color: $dark-gray;
+            padding-bottom: 50px;
+        }
+        .friend-details {
+            width: 100%;
+            .detail {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                .detail-text {
+                    width: 30%;
+                    padding-right: 40px;
+                    p {
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        color: $dark-gray;
+                        text-align: right;
+                        span {
+                            color: $red-pink;
+                        }
+                    }
+                }
+                .detail-input {
+                    width: 70%;
+                    input {
+                        width: 400px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 0 10px;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                    }
+                    ::-webkit-input-placeholder {
+                        color: $gray;
+                    } 
+                    select {
+                        width: 150px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        color: $dark-gray;
+                        // padding: 0 10px;
+                        option {
+                            font-family: "GenSenRounded-B";
+                            font-size: $p-font-size;
+                            color: $dark-gray;
+                            text-align: center;
+                        }
+                    }
+                    input.birthmd {
+                        width: 100px;
+                        height: 50px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 0 10px;
+                        color: $gray;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        text-align: center;
+                        margin-right: 20px;
+                    }
+                    .tagsselect {
+                        width: 400px;
+                        height: 135px;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 10px 10px;
+                        .tags {
+                            height: 135px;
+                            overflow: scroll;
+                            span {
+                                display: inline-block;
+                                margin-bottom: 10px;
+                                border: 2px solid $super-dark;
+                                border-radius: 100px;
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                                padding: 5px 10px;
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .detailsbtn {
+            margin-top: 20px;
+            button.true {
+                width: 140px;
+                height: 48px;
+                border-radius: 10px;
+                background-color: $super-dark;
+                color: $white;
+                font-family: "GenSenRounded-B";
+                font-size: $p-font-size;
+                margin: 0 20px;
+            }
+            button.false {
+                width: 140px;
+                height: 48px;
+                border-radius: 10px;
+                border: 3px solid $super-dark;
+                color: $super-dark;
+                background-color: rgba(255, 255, 255, 0);
+                font-family: "GenSenRounded-B";
+                font-size: $p-font-size;
+                margin: 0 20px;
+            }
+        }
+    }
 }
+
+// ----------------RWD-1200-----------------
 
 @media screen and (min-width:1200px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 10%;
         }
     }
 }
 
+// ----------------RWD-1400-----------------
+
 @media screen and (min-width:1400px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 15%;
         }
     }
 }
 
+// ----------------RWD-1600-----------------
+
 @media screen and (min-width:1600px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 18%;
             .main {
@@ -528,6 +680,217 @@ $bold: 900;
                     }
                 }
             }
+        }
+    }
+}
+
+// ------------------lightbox-deleteWarning-----------------
+
+.friend-lightbox-warn{
+    // display: none;
+    .friend-lightbox-black{
+        z-index: 20;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .friend-lightbox-bg{
+        z-index: 21;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translateX(-50%) translateY(-50%);
+        width: 90%;
+        max-width: 400px;
+        font-family: "GenSenRounded-B";
+        font-weight: $bold;
+        text-align: center;
+        background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+        padding: 76px 0;
+        .friend-warning{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 30px;
+            .friend-warn-icon{
+                margin-right: 20px;
+                padding-bottom: 10px;
+            }
+            .friend-warn-text{
+                font-size: $h6-font-size;
+                color: $super-dark;
+                padding-bottom: 10px;
+            }
+        }
+        .tfBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button.true {
+                width: 98px;
+                height: 38px;
+                border: none;
+                background-color: $super-dark;
+                border-radius: 10px;
+                color: $white;
+                font-size: $p-font-size;
+                padding: 8px 30px;
+                margin-top: 10px;
+            }
+            button.false {
+                width: 98px;
+                height: 38px;
+                border: 3px solid $super-dark;
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 10px;
+                color: $super-dark;
+                font-size: $p-font-size;
+                padding: 8px 30px;
+                margin-top: 10px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+// ------------------lightbox-friendDetails-----------------
+
+.lightbox-friendDetails {
+    width: 375px;
+    height: auto;
+    border-radius: 44px;
+    border: 5px solid $lake-green;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    z-index: 1;
+    position: absolute;
+    right:100%;
+    p.editTitle {
+        font-family: "GenSenRounded-B";
+        font-size: $p-font-size;
+        color: $dark-gray;
+        padding-bottom: 23px;
+    }
+    .friend-details {
+        width: 100%;
+        .detail {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .detail-text {
+                width: 30%;
+                padding-right: 20px;
+                p {
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    color: $dark-gray;
+                    text-align: right;
+                    span {
+                        color: $red-pink;
+                    }
+                }
+            }
+            .detail-input {
+                width: 70%;
+                input {
+                    width: 200px;
+                    height: 32px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0);
+                    border: 2px solid $lake-green;
+                    padding: 0 10px;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                }
+                ::-webkit-input-placeholder {
+                    color: $gray;
+                } 
+                select {
+                    width: 100px;
+                    height: 32px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0);
+                    border: 2px solid $lake-green;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    color: $dark-gray;
+                    // padding: 0 10px;
+                    option {
+                        font-family: "GenSenRounded-B";
+                        font-size: $ps-font-size;
+                        color: $dark-gray;
+                        text-align: center;
+                    }
+                }
+                input.birthmd {
+                    width: 70px;
+                    height: 32px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0);
+                    border: 2px solid $lake-green;
+                    padding: 0 10px;
+                    color: $gray;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+                .tagsselect {
+                    width: 200px;
+                    height: 120px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0);
+                    border: 2px solid $lake-green;
+                    padding: 10px 10px;
+                    .tags {
+                        height: 120px;
+                        overflow: scroll;
+                        span {
+                            display: inline-block;
+                            margin-bottom: 5px;
+                            border: 2px solid $super-dark;
+                            border-radius: 100px;
+                            font-family: "GenSenRounded-M";
+                            font-size: 9px;
+                            padding: 5px 10px;
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detailsbtn {
+        margin-top: 20px;
+        button.true {
+            width: 130px;
+            height: 38px;
+            border-radius: 10px;
+            background-color: $super-dark;
+            color: $white;
+            font-family: "GenSenRounded-B";
+            font-size: $ps-font-size;
+            margin: 0 10px;
+        }
+        button.false {
+            width: 130px;
+            height: 38px;
+            border-radius: 10px;
+            border: 3px solid $super-dark;
+            color: $super-dark;
+            background-color: rgba(255, 255, 255, 0);
+            font-family: "GenSenRounded-B";
+            font-size: $ps-font-size;
+            margin: 0 10px;
         }
     }
 }

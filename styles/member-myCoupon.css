@@ -1,50 +1,78 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+
 .wrap {
   width: 100%;
   height: 100vh;
 }
+
 .wrap .containerr .main .row {
   height: 100vh;
+  margin: 0;
 }
+
 .wrap .containerr .main .row .col {
   background-color: #2d827d;
   padding: 0;
 }
+
 .wrap .containerr .main .row .col .left .myName {
   padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder {
   width: 80px;
   height: 80px;
   border-radius: 100%;
   background-color: #7cb2af;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
   width: 70px;
   height: 70px;
@@ -52,105 +80,166 @@
   background-color: #ffffff;
   overflow: hidden;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoedit {
   width: 24px;
   height: 24px;
   border-radius: 100%;
   background-color: #ffcd51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 1;
   position: absolute;
   right: -3px;
   bottom: 0;
 }
+
 .wrap .containerr .main .row .col .left .myName h5 {
   font-family: "GenSenRounded-B";
   font-size: 24px;
   color: #000000;
   padding: 13px 0 13px 0;
 }
+
 .wrap .containerr .main .row .col .left .myName a.coin {
   font-family: "Roboto";
   font-size: 16px;
   color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 7px;
   text-decoration: none;
 }
+
 .wrap .containerr .main .row .col .left .myName a.coin svg {
   margin-right: 10px;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton {
   width: 100%;
   padding: 0px 30px;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
   padding: 10px 0;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
   width: 64px;
   height: 64px;
   border-radius: 10px;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
   font-family: "GenSenRounded-M";
   font-size: 14px;
   color: #4c4948;
 }
+
 .wrap .containerr .main .row .col .whiteBg {
   width: 100%;
   height: auto;
   background-color: #ffffff;
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 -10px 19px #4c4948;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0px 30px;
   margin-top: 15px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .getcoupon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 20px 0 25px;
   width: 100%;
   height: 180px;
   border-radius: 10px;
-  background-color: rgba(126, 160, 131, 0.1882352941);
+  background-color: #7ea08330;
 }
+
 .wrap .containerr .main .row .col .whiteBg .getcoupon p {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #2d827d;
   padding: 15px 0 15px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .getcoupon input.keyCouponCode {
   width: 280px;
   height: 60px;
@@ -160,8 +249,9 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
   text-align: center;
-  background-color: rgba(126, 160, 131, 0);
+  background-color: #7ea08300;
 }
+
 .wrap .containerr .main .row .col .whiteBg .getcoupon button.newcoupon {
   width: 130px;
   height: 38px;
@@ -173,33 +263,44 @@
   border: none;
   margin: 15px 0 15px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .couponbtn {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 20px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .couponbtn button {
   width: 130px;
   height: 38px;
   border-radius: 10px;
   border: 3px solid #000000;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #ffffff00;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #000000;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup {
   width: 100%;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 5px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName {
   width: 70%;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
   font-family: "GenSenRounded-B";
   font-size: 14px;
@@ -209,9 +310,11 @@
   width: 100%;
   text-align: left;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
   width: 30%;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate p.couponDate {
   font-family: "GenSenRounded-B";
   font-size: 14px;
@@ -221,20 +324,26 @@
   width: 100%;
   text-align: left;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails {
   width: 100%;
   padding-bottom: 20px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 2px solid #9fc8e1;
   padding: 13px 0 13px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName {
   width: 70%;
   text-align: left;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName p {
   width: 100%;
   font-family: "GenSenRounded-B";
@@ -242,12 +351,18 @@
   line-height: 20px;
   color: #000000;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
   width: 30%;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
   width: 100%;
   font-family: "GenSenRounded-B";
@@ -260,6 +375,7 @@
     padding: 0 100px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .wrap {
     background-image: url(../images/other_bg_paper.png);
@@ -267,11 +383,18 @@
   .wrap .containerr {
     margin: 0 5%;
   }
+  .wrap .containerr .main .row {
+    overflow: hidden;
+  }
   .wrap .containerr .main .row .col {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    padding-top: 90px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 50px;
   }
   .wrap .containerr .main .row .col .col-lg-3 {
     height: 70%;
@@ -281,9 +404,15 @@
     padding-left: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
@@ -318,23 +447,34 @@
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
     width: 100%;
-    flex-wrap: none;
-    justify-content: right;
-    padding-top: 30px;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-top: 10px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
     width: 100%;
     padding: 0;
     margin: 6px 0 6px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
     width: 100%;
-    height: 54px;
+    height: 48px;
     border-radius: 100px 0 0 100px;
     background-color: #ffffff;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
     width: 35%;
@@ -351,23 +491,41 @@
     font-family: "GenSenRounded-B";
     font-size: 20px;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
     height: 70%;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 5%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon {
     height: auto;
     background-color: rgba(255, 255, 255, 0);
-    flex-direction: row;
-    justify-content: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin: 20px 0 20px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -380,7 +538,10 @@
     padding: 0 10px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup {
+    margin-bottom: 20px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
     padding-bottom: 10px;
@@ -393,20 +554,23 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
     width: 100%;
-    height: 360px;
+    height: 280px;
     overflow: scroll;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .wrap .containerr {
     margin: 0 10%;
   }
 }
+
 @media screen and (min-width: 1400px) {
   .wrap .containerr {
     margin: 0 15%;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .wrap .containerr {
     margin: 0 18%;
@@ -415,7 +579,8 @@
     padding-left: 20px;
   }
 }
-.j-lightbox .j-lightbox-black {
+
+.coupon-lightbox-err .coupon-lightbox-black {
   z-index: 20;
   position: fixed;
   top: 0;
@@ -424,12 +589,14 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.j-lightbox .j-lightbox-bg {
+
+.coupon-lightbox-err .coupon-lightbox-bg {
   z-index: 21;
   position: fixed;
   top: 50vh;
   left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   width: 90%;
   max-width: 400px;
   font-family: "GenSenRounded-B";
@@ -438,24 +605,98 @@
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
 }
-.j-lightbox .j-lightbox-bg .j-warning {
+
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 10px 30px;
 }
-.j-lightbox .j-lightbox-bg .j-warning .j-warn-icon {
+
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-icon {
   margin-right: 20px;
+  padding-bottom: 10px;
 }
-.j-lightbox .j-lightbox-bg .j-warning .j-warn-text {
+
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-text {
   font-size: 20px;
   color: #000000;
+  padding-bottom: 10px;
 }
-.j-lightbox .j-lightbox-bg button {
+
+.coupon-lightbox-err .coupon-lightbox-bg button {
   border: none;
   background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 30px;
-}/*# sourceMappingURL=member-myCoupon.css.map */
+  margin-top: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 30px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg button {
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=member-myCoupon.css.map */

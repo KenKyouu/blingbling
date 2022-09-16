@@ -1,0 +1,2788 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrap .containerr .main .row {
+  height: 100vh;
+  margin: 0;
+}
+
+.wrap .containerr .main .row .col {
+  background-color: #2d827d;
+  padding: 0;
+}
+
+.wrap .containerr .main .row .col .left .myName {
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #7cb2af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
+  width: 110%;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoedit {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #ffcd51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+}
+
+.wrap .containerr .main .row .col .left .myName h5 {
+  font-family: "GenSenRounded-B";
+  font-size: 24px;
+  color: #000000;
+  padding: 13px 0 13px 0;
+}
+
+.wrap .containerr .main .row .col .left .myName a.coin {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+
+.wrap .containerr .main .row .col .left .myName a.coin svg {
+  margin-right: 10px;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton {
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  padding: 10px 0;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
+  margin-bottom: 5px;
+}
+
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 36px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg {
+  width: 280px;
+  height: 380px;
+  border-radius: 10px;
+  background-color: #f07f72;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel {
+  width: 220px;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .diamondicon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress {
+  width: 204px;
+  height: 8px;
+  background-color: #d4cfc6;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress .progress-bar {
+  background-color: #7cb2af;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info {
+  width: 60%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info p {
+  width: 100%;
+  line-height: 18px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title {
+  width: 40%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch {
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #d4cfc6;
+  padding-top: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en p {
+  border-left: 2px solid #c2c2c2;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info {
+  width: 60%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info p {
+  width: 100%;
+  line-height: 18px;
+}
+
+.wrap .containerr .main .row .col .whiteBg button.editMyInfo {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  background-color: #ffffff00;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg button.editMyInfo p.edit {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+}
+
+.wrap .containerr .main .row .col .whiteBg button.editMyInfo svg {
+  padding-left: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 19px #4c4948;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .newFriend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 25px;
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #7ea08330;
+}
+
+.wrap .containerr .main .row .col .whiteBg .newFriend p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #2d827d;
+  padding: 20px 0 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .newFriend button.uploadNewFriend {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #2d827d;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 0 18px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendName {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendName p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendBirth {
+  width: 20%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendBirth p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .birthdayIcon {
+  width: 10%;
+  text-align: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon {
+  width: 15%;
+  text-align: right;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon {
+  width: 15%;
+  text-align: right;
+}
+
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .backToList {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  padding-top: 25px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .backToList p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #2d827d;
+  padding-left: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 13px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .fn {
+  width: 60%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .fn p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+  text-align: right;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon {
+  width: 40%;
+  margin-left: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth .friendGender p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  padding-right: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth .friendBirth p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendEmail {
+  padding-top: 13px;
+  padding-bottom: 18px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendEmail p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tagsName {
+  padding: 10px 0;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tagsName p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #2d827d;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tags {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tags .tag {
+  width: auto;
+  height: auto;
+  border-radius: 100px;
+  border: 3px solid #4c4948;
+  padding: 6px 9px 6px 9px;
+  margin-bottom: 8px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendtags .tags .tag p {
+  font-family: "GenSenRounded-B";
+  font-size: 10px;
+  color: #4c4948;
+  text-align: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .wishList {
+  padding: 9px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .wishList img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .getcoupon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 25px;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  background-color: #7ea08330;
+}
+
+.wrap .containerr .main .row .col .whiteBg .getcoupon p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #2d827d;
+  padding: 15px 0 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .getcoupon input.keyCouponCode {
+  width: 280px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #2d827d;
+  color: #c2c2c2;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  text-align: center;
+  background-color: #7ea08300;
+}
+
+.wrap .containerr .main .row .col .whiteBg .getcoupon button.newcoupon {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #2d827d;
+  border: none;
+  margin: 15px 0 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .couponbtn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .couponbtn button {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  background-color: #ffffff00;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName {
+  width: 70%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  border-left: 3px solid #d4cfc6;
+  padding-left: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
+  width: 30%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate p.couponDate {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  border-left: 3px solid #d4cfc6;
+  padding-left: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid #9fc8e1;
+  padding: 13px 0 13px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName {
+  width: 70%;
+  text-align: left;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName p {
+  width: 100%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
+  width: 30%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
+  width: 100%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeButton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 9px 0 9px 0;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn {
+  position: relative;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn button {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  background-color: #00000000;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn .noticeNumber {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background-color: #d45a6a;
+  z-index: 1;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn .noticeNumber p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder {
+  overflow: hidden;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails .noticeDetail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #d4cfc6;
+  padding: 18px 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails .noticeDetail p.noticeDate {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #000000;
+  padding-bottom: 6px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails .noticeDetail p.notice {
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  color: #000000;
+  line-height: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails .noticeDetail p.notice span {
+  color: #d45a6a;
+}
+
+@media screen and (min-width: 700px) {
+  .wrap .containerr .main .row .col .whiteBg {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrap {
+    background-image: url(../images/other_bg_paper.png);
+  }
+  .wrap .containerr {
+    margin: 0 5%;
+  }
+  .wrap .containerr .main .row {
+    overflow: hidden;
+  }
+  .wrap .containerr .main .row .col {
+    background-color: #00000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 50px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 {
+    height: 70%;
+    border-radius: 10px;
+    background-color: #2d827d;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
+    top: -50px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder {
+    width: 100px;
+    height: 100px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto {
+    width: 86px;
+    height: 86px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto img.photo {
+    width: 120%;
+    position: static;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoedit {
+    right: -5px;
+    bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
+    color: #ffffff;
+    margin-top: -30px;
+    padding: 13px 0 15px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName a.coin {
+    color: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton {
+    padding: 0 0 0 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
+    width: 100%;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
+    width: 100%;
+    padding: 0;
+    margin: 6px 0 6px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
+    width: 100%;
+    height: 54px;
+    border-radius: 100px 0 0 100px;
+    background-color: #ffffff;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
+    width: 35%;
+    text-align: right;
+    padding-right: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
+    width: 65%;
+    font-family: "GenSenRounded-B";
+    font-size: 20px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card {
+    width: 90%;
+    padding-top: 0;
+    padding-right: 5%;
+    border: none;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card .membercardimg {
+    width: 90%;
+    height: 90%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address {
+    padding-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-title {
+    width: 35%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-info {
+    width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 button.editMyInfo {
+    margin: 35px 0 0 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-bottom: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend p {
+    font-size: 20px;
+    padding-right: 40px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.uploadNewFriend {
+    margin-bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendName .fn p {
+    text-align: left;
+    font-size: 32px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendName .friendEditIcon svg {
+    width: 15px;
+    height: 15px;
+    text-align: left;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList {
+    width: 100%;
+    height: 410px;
+    overflow: scroll;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 {
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 img.wish {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin: 20px 0 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
+    font-size: 20px;
+    padding-right: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon input.keyCouponCode {
+    font-size: 16px;
+    margin-right: 40px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
+    margin-bottom: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
+    padding-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponName {
+    width: 68%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponDate {
+    width: 32%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
+    width: 100%;
+    height: 360px;
+    overflow: scroll;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .noticeborder {
+    width: 100%;
+    height: 570px;
+    overflow: scroll;
+    margin-bottom: 20px;
+  }
+  .lightbox-myDetails {
+    width: 700px;
+    height: auto;
+    border-radius: 32px;
+    border: 4px solid #2d827d;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 50px 0;
+  }
+  .lightbox-myDetails p.editTitle {
+    font-family: "GenSenRounded-B";
+    font-size: 24px;
+    color: #4c4948;
+    padding-bottom: 50px;
+  }
+  .lightbox-myDetails .my-details {
+    width: 100%;
+  }
+  .lightbox-myDetails .my-details .detail {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .lightbox-myDetails .my-details .detail .detail-text {
+    width: 30%;
+    padding-right: 40px;
+  }
+  .lightbox-myDetails .my-details .detail .detail-text p {
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+    text-align: right;
+  }
+  .lightbox-myDetails .my-details .detail .detail-text p span {
+    color: #d45a6a;
+  }
+  .lightbox-myDetails .my-details .detail .detail-input {
+    width: 70%;
+  }
+  .lightbox-myDetails .my-details .detail .detail-input input {
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 0 10px;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+  }
+  .lightbox-myDetails .my-details .detail .detail-input ::-webkit-input-placeholder {
+    color: #c2c2c2;
+  }
+  .lightbox-myDetails .my-details .detail .detail-input select {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+  }
+  .lightbox-myDetails .my-details .detail .detail-input select option {
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+    text-align: center;
+  }
+  .lightbox-myDetails .my-details .detail .detail-input input.birthmd {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 0 10px;
+    color: #c2c2c2;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  .lightbox-myDetails .detailsbtn {
+    margin-top: 20px;
+  }
+  .lightbox-myDetails .detailsbtn button.true {
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    margin: 0 20px;
+  }
+  .lightbox-myDetails .detailsbtn button.false {
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    margin: 0 20px;
+  }
+  .lightbox-newFriendDetails {
+    width: 700px;
+    height: auto;
+    border-radius: 32px;
+    border: 4px solid #2d827d;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 50px 0;
+  }
+  .lightbox-newFriendDetails p.editTitle {
+    font-family: "GenSenRounded-B";
+    font-size: 24px;
+    color: #4c4948;
+    padding-bottom: 50px;
+  }
+  .lightbox-newFriendDetails .friend-details {
+    width: 100%;
+  }
+  .lightbox-newFriendDetails .friend-details .detail {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-text {
+    width: 30%;
+    padding-right: 40px;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-text p {
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+    text-align: right;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-text p span {
+    color: #d45a6a;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input {
+    width: 70%;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input input {
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 0 10px;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
+    color: #c2c2c2;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input select {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input select option {
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+    text-align: center;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input input.birthmd {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 0 10px;
+    color: #c2c2c2;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect {
+    width: 400px;
+    height: 135px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 10px 10px;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect .tags {
+    height: 135px;
+    overflow: scroll;
+  }
+  .lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect .tags span {
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    font-family: "GenSenRounded-B";
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .lightbox-newFriendDetails .detailsbtn {
+    margin-top: 20px;
+  }
+  .lightbox-newFriendDetails .detailsbtn button.true {
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    margin: 0 20px;
+  }
+  .lightbox-newFriendDetails .detailsbtn button.false {
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    margin: 0 20px;
+  }
+  .lightbox-friendDetails {
+    width: 700px;
+    height: auto;
+    border-radius: 32px;
+    border: 4px solid #2d827d;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 50px 0;
+  }
+  .lightbox-friendDetails p.editTitle {
+    font-family: "GenSenRounded-B";
+    font-size: 24px;
+    color: #4c4948;
+    padding-bottom: 50px;
+  }
+  .lightbox-friendDetails .friend-details {
+    width: 100%;
+  }
+  .lightbox-friendDetails .friend-details .detail {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-text {
+    width: 30%;
+    padding-right: 40px;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-text p {
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+    text-align: right;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-text p span {
+    color: #d45a6a;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input {
+    width: 70%;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input input {
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 0 10px;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
+    color: #c2c2c2;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input select {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input select option {
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    color: #4c4948;
+    text-align: center;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input input.birthmd {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 0 10px;
+    color: #c2c2c2;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect {
+    width: 400px;
+    height: 135px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #2d827d;
+    padding: 10px 10px;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags {
+    height: 135px;
+    overflow: scroll;
+  }
+  .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags span {
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    font-family: "GenSenRounded-B";
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .lightbox-friendDetails .detailsbtn {
+    margin-top: 20px;
+  }
+  .lightbox-friendDetails .detailsbtn button.true {
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    margin: 0 20px;
+  }
+  .lightbox-friendDetails .detailsbtn button.false {
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "GenSenRounded-B";
+    font-size: 16px;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrap .containerr {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrap .containerr {
+    margin: 0 15%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .wrap .containerr {
+    margin: 0 18%;
+  }
+  .wrap .containerr .main .row .col .col-xl-3 .memberbutton ul li.col-lg-12 .btnP {
+    padding-left: 20px;
+  }
+}
+
+.lightbox-myDetails {
+  width: 375px;
+  height: auto;
+  border-radius: 44px;
+  border: 5px solid #2d827d;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 33px 0;
+  z-index: 1;
+  position: absolute;
+  right: 100%;
+}
+
+.lightbox-myDetails p.editTitle {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+  padding-bottom: 23px;
+}
+
+.lightbox-myDetails .my-details {
+  width: 100%;
+}
+
+.lightbox-myDetails .my-details .detail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.lightbox-myDetails .my-details .detail .detail-text {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.lightbox-myDetails .my-details .detail .detail-text p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: right;
+}
+
+.lightbox-myDetails .my-details .detail .detail-text p span {
+  color: #d45a6a;
+}
+
+.lightbox-myDetails .my-details .detail .detail-input {
+  width: 70%;
+}
+
+.lightbox-myDetails .my-details .detail .detail-input input {
+  width: 200px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+}
+
+.lightbox-myDetails .my-details .detail .detail-input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+
+.lightbox-myDetails .my-details .detail .detail-input select {
+  width: 100px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.lightbox-myDetails .my-details .detail .detail-input select option {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: center;
+}
+
+.lightbox-myDetails .my-details .detail .detail-input input.birthmd {
+  width: 70px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  color: #c2c2c2;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.lightbox-myDetails .detailsbtn {
+  margin-top: 20px;
+}
+
+.lightbox-myDetails .detailsbtn button.true {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.lightbox-myDetails .detailsbtn button.false {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.friend-lightbox-warn .friend-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.friend-lightbox-warn .friend-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+
+.friend-lightbox-warn .friend-lightbox-bg .friend-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 30px;
+}
+
+.friend-lightbox-warn .friend-lightbox-bg .friend-warning .friend-warn-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.friend-lightbox-warn .friend-lightbox-bg .friend-warning .friend-warn-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+
+.friend-lightbox-warn .friend-lightbox-bg .tfBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.friend-lightbox-warn .friend-lightbox-bg .tfBtn button.true {
+  width: 98px;
+  height: 38px;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 30px;
+  margin-top: 10px;
+}
+
+.friend-lightbox-warn .friend-lightbox-bg .tfBtn button.false {
+  width: 98px;
+  height: 38px;
+  border: 3px solid #000000;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  padding: 8px 30px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.lightbox-newFriendDetails-blackbg {
+  z-index: 1;
+  position: absolute;
+  right: 100%;
+}
+
+.lightbox-newFriendDetails {
+  width: 375px;
+  height: auto;
+  border-radius: 44px;
+  border: 5px solid #2d827d;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 33px 0;
+  z-index: 2;
+  position: absolute;
+  right: 100%;
+}
+
+.lightbox-newFriendDetails p.editTitle {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+  padding-bottom: 23px;
+}
+
+.lightbox-newFriendDetails .friend-details {
+  width: 100%;
+}
+
+.lightbox-newFriendDetails .friend-details .detail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-text {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-text p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: right;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-text p span {
+  color: #d45a6a;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input {
+  width: 70%;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input input {
+  width: 200px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input select {
+  width: 100px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input select option {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: center;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input input.birthmd {
+  width: 70px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  color: #c2c2c2;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect {
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 10px 10px;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect .tags {
+  height: 120px;
+  overflow: scroll;
+}
+
+.lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect .tags span {
+  display: inline-block;
+  margin-bottom: 5px;
+  border: 2px solid #000000;
+  border-radius: 100px;
+  font-family: "GenSenRounded-M";
+  font-size: 9px;
+  padding: 5px 10px;
+}
+
+.lightbox-newFriendDetails .detailsbtn {
+  margin-top: 20px;
+}
+
+.lightbox-newFriendDetails .detailsbtn button.true {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.lightbox-newFriendDetails .detailsbtn button.false {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.lightbox-friendDetails {
+  width: 375px;
+  height: auto;
+  border-radius: 44px;
+  border: 5px solid #2d827d;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 33px 0;
+  z-index: 1;
+  position: absolute;
+  right: 100%;
+}
+
+.lightbox-friendDetails p.editTitle {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #4c4948;
+  padding-bottom: 23px;
+}
+
+.lightbox-friendDetails .friend-details {
+  width: 100%;
+}
+
+.lightbox-friendDetails .friend-details .detail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-text {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-text p {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: right;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-text p span {
+  color: #d45a6a;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input {
+  width: 70%;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input input {
+  width: 200px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input select {
+  width: 100px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input select option {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  text-align: center;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input input.birthmd {
+  width: 70px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 0 10px;
+  color: #c2c2c2;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input .tagsselect {
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #2d827d;
+  padding: 10px 10px;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags {
+  height: 120px;
+  overflow: scroll;
+}
+
+.lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags span {
+  display: inline-block;
+  margin-bottom: 5px;
+  border: 2px solid #000000;
+  border-radius: 100px;
+  font-family: "GenSenRounded-M";
+  font-size: 9px;
+  padding: 5px 10px;
+}
+
+.lightbox-friendDetails .detailsbtn {
+  margin-top: 20px;
+}
+
+.lightbox-friendDetails .detailsbtn button.true {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.lightbox-friendDetails .detailsbtn button.false {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid #000000;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.coupon-lightbox-err .coupon-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.coupon-lightbox-err .coupon-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 30px;
+}
+
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+
+.coupon-lightbox-err .coupon-lightbox-bg button {
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 30px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-bg button {
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=member-all.css.map */
