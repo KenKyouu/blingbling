@@ -98,6 +98,7 @@ $bold: 900;
         .main {
             .row {
                 height: 100vh;
+                margin: 0;
 
                 .col {
                     background-color: $lake-green;
@@ -768,6 +769,9 @@ $bold: 900;
     align-items: center;
     justify-content: center;
     padding: 33px 0;
+    z-index: 1;
+    position: absolute;
+    right:100%;
     p.editTitle {
         font-family: "GenSenRounded-B";
         font-size: $p-font-size;

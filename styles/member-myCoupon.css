@@ -20,6 +20,7 @@
 }
 .wrap .containerr .main .row {
   height: 100vh;
+  margin: 0;
 }
 .wrap .containerr .main .row .col {
   background-color: #2d827d;

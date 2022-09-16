@@ -20,6 +20,7 @@
 }
 .wrap .containerr .main .row {
   height: 100vh;
+  margin: 0;
 }
 .wrap .containerr .main .row .col {
   background-color: #2d827d;
@@ -564,6 +565,9 @@
   align-items: center;
   justify-content: center;
   padding: 33px 0;
+  z-index: 1;
+  position: absolute;
+  right: 100%;
 }
 .lightbox-friendDetails p.editTitle {
   font-family: "GenSenRounded-B";
