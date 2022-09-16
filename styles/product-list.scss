@@ -397,6 +397,7 @@ body {
     height: 160px;
     background-image: url("https://picsum.photos/id/1008/1920/375");
     position: relative;
+    box-shadow: 5px 10px 12px $gray;
     @media screen and (min-width: 768px) {
       height: 375px;
     }
