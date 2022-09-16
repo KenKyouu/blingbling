@@ -103,8 +103,9 @@ $bold: 900;
                     background-color: $lake-green;
                     padding: 0;
 
-                    .left {
+                    // ---------------green border---------------
 
+                    .left {
                         .myName {
                             padding-top: 80px;
                             display: flex;
@@ -219,6 +220,8 @@ $bold: 900;
                             }
                         }
                     }
+
+                    // ---------------white border---------------
 
                     .whiteBg {
                         width: 100%;
@@ -416,6 +419,8 @@ $bold: 900;
                         align-items: center;
                         padding-top: 90px;
 
+                        // ---------------green border---------------
+
                         .col-lg-3 {
                             height: 70%;
                             border-radius: 10px;
@@ -510,6 +515,8 @@ $bold: 900;
                             }
                         }
 
+                        // ---------------white border---------------
+
                         .col-lg-9 {
                             height: 70%;
                             box-shadow: none;
@@ -568,7 +575,6 @@ $bold: 900;
 
 @media screen and (min-width:1200px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 10%;
         }
@@ -579,7 +585,6 @@ $bold: 900;
 
 @media screen and (min-width:1400px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 15%;
         }
@@ -590,7 +595,6 @@ $bold: 900;
 
 @media screen and (min-width:1600px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 18%;
             .main {
