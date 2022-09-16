@@ -4,7 +4,7 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
-<link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-myNotice.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
         <div class="containerr">
@@ -175,279 +175,225 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
                         <!------------ white border ------------>
 
                         <div class="whiteBg col-lg-9 col-xl-9">
-                            <div class="noticeButton">
-                                <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                    <div class="noticebtn">
-                                        <button class="noticebtn">訂單進度通知</button>
-                                        <div class="noticeNumber">
-                                            <p>0</p>
+                            <div class="mydetailstop">
+                                <div class="member-card">
+                                    <div class="membercardimg">
+                                        <img src="" alt="" class="memberCard">
+                                    </div>
+                                    <div class="memberLevel">
+                                        <div class="diamondicon">
+                                            <svg width="15" height="13" viewBox="0 0 25 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_388_1010)">
+                                                    <path d="M9.589 0H4.70107L0 5.33834L5.73767 6.34208L9.589 0Z"
+                                                        fill="#e1a77e" />
+                                                    <path
+                                                        d="M0.186768 6.27686L10.8364 20.3019L5.48743 7.20393L0.186768 6.27686Z"
+                                                        fill="#e1a77e" />
+                                                    <path
+                                                        d="M12.4821 6.3788H12.5001H12.5183H18.1957L14.3233 0H12.5183H12.4821H10.6771L6.80469 6.3788H12.4821Z"
+                                                        fill="#e1a77e" />
+                                                    <path
+                                                        d="M12.5 7.26904H6.52734L12.5423 21.9999L12.8284 21.3081L18.4759 7.26904H12.5Z"
+                                                        fill="#e1a77e" />
+                                                    <path
+                                                        d="M14.3022 20.1175L24.8132 6.27686L19.5125 7.20393L14.3022 20.1175Z"
+                                                        fill="#e1a77e" />
+                                                    <path
+                                                        d="M15.4109 0L19.2622 6.34208L24.9999 5.33834L20.2988 0H15.4109Z"
+                                                        fill="#e1a77e" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_388_1010">
+                                                        <rect width="25" height="22" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <svg width="15" height="13" viewBox="0 0 25 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_388_1010)">
+                                                    <path d="M9.589 0H4.70107L0 5.33834L5.73767 6.34208L9.589 0Z"
+                                                        fill="#c2c2c2" />
+                                                    <path
+                                                        d="M0.186768 6.27686L10.8364 20.3019L5.48743 7.20393L0.186768 6.27686Z"
+                                                        fill="#c2c2c2" />
+                                                    <path
+                                                        d="M12.4821 6.3788H12.5001H12.5183H18.1957L14.3233 0H12.5183H12.4821H10.6771L6.80469 6.3788H12.4821Z"
+                                                        fill="#c2c2c2" />
+                                                    <path
+                                                        d="M12.5 7.26904H6.52734L12.5423 21.9999L12.8284 21.3081L18.4759 7.26904H12.5Z"
+                                                        fill="#c2c2c2" />
+                                                    <path
+                                                        d="M14.3022 20.1175L24.8132 6.27686L19.5125 7.20393L14.3022 20.1175Z"
+                                                        fill="#c2c2c2" />
+                                                    <path
+                                                        d="M15.4109 0L19.2622 6.34208L24.9999 5.33834L20.2988 0H15.4109Z"
+                                                        fill="#c2c2c2" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_388_1010">
+                                                        <rect width="25" height="22" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <svg width="15" height="13" viewBox="0 0 25 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" opacity="30%">
+                                                <g clip-path="url(#clip0_388_1010)">
+                                                    <path d="M9.589 0H4.70107L0 5.33834L5.73767 6.34208L9.589 0Z"
+                                                        fill="#ffcd51" />
+                                                    <path
+                                                        d="M0.186768 6.27686L10.8364 20.3019L5.48743 7.20393L0.186768 6.27686Z"
+                                                        fill="#ffcd51" />
+                                                    <path
+                                                        d="M12.4821 6.3788H12.5001H12.5183H18.1957L14.3233 0H12.5183H12.4821H10.6771L6.80469 6.3788H12.4821Z"
+                                                        fill="#ffcd51" />
+                                                    <path
+                                                        d="M12.5 7.26904H6.52734L12.5423 21.9999L12.8284 21.3081L18.4759 7.26904H12.5Z"
+                                                        fill="#ffcd51" />
+                                                    <path
+                                                        d="M14.3022 20.1175L24.8132 6.27686L19.5125 7.20393L14.3022 20.1175Z"
+                                                        fill="#ffcd51" />
+                                                    <path
+                                                        d="M15.4109 0L19.2622 6.34208L24.9999 5.33834L20.2988 0H15.4109Z"
+                                                        fill="#ffcd51" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_388_1010">
+                                                        <rect width="25" height="22" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%"
+                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                    <div class="noticebtn">
-                                        <button class="noticebtn">好友生日通知</button>
-                                        <div class="noticeNumber">
-                                            <p>0</p>
+
+                                <div class="myIntro">
+                                    <div class="userName">
+                                        <div class="myIntro-title">
+                                            <div class="myIntro-title-ch">
+                                                <p class="myIntro-title-ch">
+                                                    姓名
+                                                </p>
+                                            </div>
+                                            <div class="myIntro-title-en">
+                                                <p class="myIntro-title-en">
+                                                    User Name
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="myIntro-info">
+                                            <p class="myIntro-info">Bling Bling</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                    <div class="noticebtn">
-                                        <button class="noticebtn">收到禮物通知</button>
-                                        <div class="noticeNumber">
-                                            <p>0</p>
+                                    <div class="gender">
+                                        <div class="myIntro-title">
+                                            <div class="myIntro-title-ch">
+                                                <p class="myIntro-title-ch">
+                                                    性別
+                                                </p>
+                                            </div>
+                                            <div class="myIntro-title-en">
+                                                <p class="myIntro-title-en">
+                                                    Gender
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="myIntro-info">
+                                            <p class="myIntro-info">不顯示</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                    <div class="noticebtn">
-                                        <button class="noticebtn">活動優惠通知</button>
-                                        <div class="noticeNumber">
-                                            <p>0</p>
+                                    <div class="birthday">
+                                        <div class="myIntro-title">
+                                            <div class="myIntro-title-ch">
+                                                <p class="myIntro-title-ch">
+                                                    生日
+                                                </p>
+                                            </div>
+                                            <div class="myIntro-title-en">
+                                                <p class="myIntro-title-en">
+                                                    Birthday
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="myIntro-info">
+                                            <p class="myIntro-info">08-24</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                    <div class="noticebtn">
-                                        <button class="noticebtn">關注品牌動態</button>
-                                        <div class="noticeNumber">
-                                            <p>0</p>
+                                    <div class="email">
+                                        <div class="myIntro-title">
+                                            <div class="myIntro-title-ch">
+                                                <p class="myIntro-title-ch">
+                                                    Email
+                                                </p>
+                                            </div>
+                                            <div class="myIntro-title-en">
+                                                <p class="myIntro-title-en">
+                                                    Email
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="myIntro-info">
+                                            <p class="myIntro-info" style="word-wrap: break-word;">
+                                                blingbling2022@gmail.com</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                    <div class="noticebtn">
-                                        <button class="noticebtn">關注禮物動態</button>
-                                        <div class="noticeNumber">
-                                            <p>0</p>
+                                    <div class="phone">
+                                        <div class="myIntro-title">
+                                            <div class="myIntro-title-ch">
+                                                <p class="myIntro-title-ch">
+                                                    聯絡電話
+                                                </p>
+                                            </div>
+                                            <div class="myIntro-title-en">
+                                                <p class="myIntro-title-en">
+                                                    Phone Number
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="myIntro-info">
+                                            <p class="myIntro-info">0912-345-678</p>
+                                        </div>
+                                    </div>
+                                    <div class="address">
+                                        <div class="myIntro-title">
+                                            <div class="myIntro-title-ch">
+                                                <p class="myIntro-title-ch">
+                                                    聯絡地址
+                                                </p>
+                                            </div>
+                                            <div class="myIntro-title-en">
+                                                <p class="myIntro-title-en">
+                                                    Address
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="myIntro-info">
+                                            <p class="myIntro-info">台北市大安區信義路二段100號3樓</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!------------ notice details ------------>
-
-                            <div class="noticeborder">
-                                <div class="noticeDetails">
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-28</p>
-                                        <p class="notice">
-                                            訂單編號 <span>Bling919830oqfv82</span> 的訂單已出貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-20</p>
-                                        <p class="notice">
-                                            訂單編號 <span>Bling2398lfjq2100</span> 的訂單已出貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-08</p>
-                                        <p class="notice">
-                                            訂單編號 <span>Blingwelof293109ek</span> 的訂單已出貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-26</p>
-                                        <p class="notice">
-                                            訂單編號 <span>Bling98fkwk1909fz1</span> 的訂單已出貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-02</p>
-                                        <p class="notice">
-                                            訂單編號 <span>Bling389sfheeho249</span> 的訂單已出貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-06-15</p>
-                                        <p class="notice">
-                                            訂單編號 <span>Bling3289fqk29fek1</span> 的訂單已出貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-09-23</p>
-                                        <p class="notice">
-                                            您的好友 <span>李曉華</span> 的生日快到了，來看看他的願望清單吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-06-11</p>
-                                        <p class="notice">
-                                            您的好友 <span>Jasmine</span> 的生日快到了，來看看他的願望清單吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-03-30</p>
-                                        <p class="notice">
-                                            您的好友 <span>嬛嬛</span> 的生日快到了，來看看他的願望清單吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-03-14</p>
-                                        <p class="notice">
-                                            您的好友 <span>李奧納多・皮卡丘</span> 的生日快到了，來看看他的願望清單吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-02-20</p>
-                                        <p class="notice">
-                                            您的好友 <span>Kenny</span> 的生日快到了，來看看他的願望清單吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2021-12-25</p>
-                                        <p class="notice">
-                                            您的好友 <span>王大明</span> 的生日快到了，來看看他的願望清單吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-28</p>
-                                        <p class="notice">
-                                            您收到來自 <span>Jasmine</span> 的禮物！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-20</p>
-                                        <p class="notice">
-                                            您收到來自 <span>李曉華</span> 的禮物！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-08</p>
-                                        <p class="notice">
-                                            您收到來自 <span>Little Prince</span> 的禮物！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-26</p>
-                                        <p class="notice">
-                                            您收到來自 <span>王大明</span> 的禮物！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-02</p>
-                                        <p class="notice">
-                                            您收到來自 <span>李奧納多・皮卡丘</span> 的禮物！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-06-15</p>
-                                        <p class="notice">
-                                            您收到來自 <span>Emily</span> 的禮物！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-28</p>
-                                        <p class="notice">
-                                            中秋精選禮物特輯！前往活動頁面查看詳細優惠！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-01</p>
-                                        <p class="notice">
-                                            父親節限定優惠！相關禮品滿額折扣，前往活動詳情
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-20</p>
-                                        <p class="notice">
-                                            一年一度的七夕即將到來，選個禮物送給最愛的他/她
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-15</p>
-                                        <p class="notice">
-                                            Bling Bling的一歲生日快到了！點擊領取3張限時免運券
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-06-01</p>
-                                        <p class="notice">
-                                            鳳凰花開的畢業季，進入畢業禮物特輯尋找給同學們最好的祝福吧！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-05-01</p>
-                                        <p class="notice">
-                                            母親像月亮一樣，照耀我家門窗～挑個禮物送給親愛的她
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-28</p>
-                                        <p class="notice">
-                                            您關注的品牌 <span>Jo Malone</span> 上架新的商品！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-20</p>
-                                        <p class="notice">
-                                            您關注的品牌 <span>Dior</span> 上架新的商品！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-08</p>
-                                        <p class="notice">
-                                            您關注的品牌 <span>Olivia Burton</span> 上架新的商品！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-26</p>
-                                        <p class="notice">
-                                            您關注的品牌 <span>NIKE</span> 上架新的商品！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-02</p>
-                                        <p class="notice">
-                                            您關注的品牌 <span>SABON</span> 上架新的商品！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-06-15</p>
-                                        <p class="notice">
-                                            您關注的品牌 <span>CHARLES & KEITH</span> 上架新的商品！
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-28</p>
-                                        <p class="notice">
-                                            您關注的禮物 <span>Miss Dior花漾迪奧淡香水</span> 已補貨
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-20</p>
-                                        <p class="notice">
-                                            您關注的禮物 <span>大馬士革玫瑰花禮花束 畢業季 情人節 永生花</span> 已更新庫存
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-08-08</p>
-                                        <p class="notice">
-                                            您關注的禮物 <span>SABON香芒奇異果極潤身體乳</span> 已更新商品介紹
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-26</p>
-                                        <p class="notice">
-                                            您關注的禮物 <span>Olivia Burton質感時尚經典蜜蜂手錶</span> 已下架
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-07-02</p>
-                                        <p class="notice">
-                                            您關注的禮物 <span>NIKE Air Jordan Elevate低筒女鞋</span> 已更新商品介紹
-                                        </p>
-                                    </div>
-                                    <div class="noticeDetail">
-                                        <p class="noticeDate">2022-06-15</p>
-                                        <p class="notice">
-                                            您關注的禮物 <span>CHARLES & KEITH Tiaret劍橋信封包</span> 已更新庫存
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <button class="editMyInfo">
+                                <p class="edit">編輯資訊</p>
+                                <svg width="17" height="18" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z"
+                                        fill="#000000" />
+                                    <path
+                                        d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z"
+                                        fill="#000000" />
+                                    <path
+                                        d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z"
+                                        fill="#000000" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>

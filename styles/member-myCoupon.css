@@ -268,11 +268,14 @@
   .wrap .containerr {
     margin: 0 5%;
   }
+  .wrap .containerr .main .row {
+    overflow: hidden;
+  }
   .wrap .containerr .main .row .col {
     background-color: rgba(0, 0, 0, 0);
     display: flex;
     align-items: center;
-    padding-top: 90px;
+    padding-top: 50px;
   }
   .wrap .containerr .main .row .col .col-lg-3 {
     height: 70%;
@@ -321,7 +324,7 @@
     width: 100%;
     flex-wrap: none;
     justify-content: right;
-    padding-top: 30px;
+    padding-top: 10px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
     width: 100%;
@@ -332,7 +335,7 @@
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
     width: 100%;
-    height: 54px;
+    height: 48px;
     border-radius: 100px 0 0 100px;
     background-color: #ffffff;
     flex-direction: row;
@@ -369,6 +372,7 @@
     background-color: rgba(255, 255, 255, 0);
     flex-direction: row;
     justify-content: left;
+    margin: 20px 0 20px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -381,7 +385,10 @@
     padding: 0 10px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup {
+    margin-bottom: 20px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
     padding-bottom: 10px;
@@ -394,7 +401,7 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
     width: 100%;
-    height: 360px;
+    height: 280px;
     overflow: scroll;
   }
 }

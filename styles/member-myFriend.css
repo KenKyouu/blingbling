@@ -337,7 +337,7 @@
   .wrap .containerr .main .row .col .col-lg-9 .newFriend button.uploadNewFriend {
     margin-bottom: 0;
   }
-  .lightbox-friendDetails {
+  .lightbox-newFriendDetails {
     width: 700px;
     height: auto;
     border-radius: 32px;
@@ -349,38 +349,38 @@
     justify-content: center;
     padding: 50px 0;
   }
-  .lightbox-friendDetails p.editTitle {
+  .lightbox-newFriendDetails p.editTitle {
     font-family: "GenSenRounded-B";
     font-size: 24px;
     color: #4c4948;
     padding-bottom: 50px;
   }
-  .lightbox-friendDetails .friend-details {
+  .lightbox-newFriendDetails .friend-details {
     width: 100%;
   }
-  .lightbox-friendDetails .friend-details .detail {
+  .lightbox-newFriendDetails .friend-details .detail {
     width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-text {
+  .lightbox-newFriendDetails .friend-details .detail .detail-text {
     width: 30%;
     padding-right: 40px;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-text p {
+  .lightbox-newFriendDetails .friend-details .detail .detail-text p {
     font-family: "GenSenRounded-B";
     font-size: 16px;
     color: #4c4948;
     text-align: right;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-text p span {
+  .lightbox-newFriendDetails .friend-details .detail .detail-text p span {
     color: #d45a6a;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input {
     width: 70%;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input input {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input input {
     width: 400px;
     height: 50px;
     border-radius: 10px;
@@ -390,10 +390,10 @@
     font-family: "GenSenRounded-B";
     font-size: 16px;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
     color: #c2c2c2;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input select {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input select {
     width: 150px;
     height: 50px;
     border-radius: 10px;
@@ -403,13 +403,13 @@
     font-size: 16px;
     color: #4c4948;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input select option {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input select option {
     font-family: "GenSenRounded-B";
     font-size: 16px;
     color: #4c4948;
     text-align: center;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input input.birthmd {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input input.birthmd {
     width: 100px;
     height: 50px;
     border-radius: 10px;
@@ -422,7 +422,7 @@
     text-align: center;
     margin-right: 20px;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect {
     width: 400px;
     height: 135px;
     overflow: hidden;
@@ -431,11 +431,11 @@
     border: 2px solid #2d827d;
     padding: 10px 10px;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect .tags {
     height: 135px;
     overflow: scroll;
   }
-  .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags span {
+  .lightbox-newFriendDetails .friend-details .detail .detail-input .tagsselect .tags span {
     display: inline-block;
     margin-bottom: 10px;
     border: 2px solid #000000;
@@ -444,10 +444,10 @@
     font-size: 14px;
     padding: 5px 10px;
   }
-  .lightbox-friendDetails .detailsbtn {
+  .lightbox-newFriendDetails .detailsbtn {
     margin-top: 20px;
   }
-  .lightbox-friendDetails .detailsbtn button.true {
+  .lightbox-newFriendDetails .detailsbtn button.true {
     width: 140px;
     height: 48px;
     border-radius: 10px;
@@ -457,7 +457,7 @@
     font-size: 16px;
     margin: 0 20px;
   }
-  .lightbox-friendDetails .detailsbtn button.false {
+  .lightbox-newFriendDetails .detailsbtn button.false {
     width: 140px;
     height: 48px;
     border-radius: 10px;
