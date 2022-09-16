@@ -20,6 +20,7 @@
 }
 .wrap .containerr .main .row {
   height: 100vh;
+  margin: 0;
 }
 .wrap .containerr .main .row .col {
   background-color: #2d827d;
@@ -415,7 +416,7 @@
     padding-left: 20px;
   }
 }
-.j-lightbox .j-lightbox-black {
+.coupon-lightbox-err .coupon-lightbox-black {
   z-index: 20;
   position: fixed;
   top: 0;
@@ -424,7 +425,7 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.j-lightbox .j-lightbox-bg {
+.coupon-lightbox-err .coupon-lightbox-bg {
   z-index: 21;
   position: fixed;
   top: 50vh;
@@ -438,24 +439,75 @@
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
 }
-.j-lightbox .j-lightbox-bg .j-warning {
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px 30px;
 }
-.j-lightbox .j-lightbox-bg .j-warning .j-warn-icon {
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-icon {
   margin-right: 20px;
+  padding-bottom: 10px;
 }
-.j-lightbox .j-lightbox-bg .j-warning .j-warn-text {
+.coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-text {
   font-size: 20px;
   color: #000000;
+  padding-bottom: 10px;
 }
-.j-lightbox .j-lightbox-bg button {
+.coupon-lightbox-err .coupon-lightbox-bg button {
   border: none;
   background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 30px;
+  margin-top: 10px;
+}
+
+.coupon-lightbox-success .coupon-lightbox-black {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.coupon-lightbox-success .coupon-lightbox-bg {
+  z-index: 21;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+}
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+.coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.coupon-lightbox-success .coupon-lightbox-bg button {
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-top: 10px;
 }/*# sourceMappingURL=member-myCoupon.css.map */

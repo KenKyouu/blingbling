@@ -20,6 +20,7 @@
 }
 .wrap .containerr .main .row {
   height: 100vh;
+  margin: 0;
 }
 .wrap .containerr .main .row .col {
   background-color: #2d827d;
@@ -145,7 +146,11 @@
 }
 .wrap .containerr .main .row .col .whiteBg .noticeButton .notice {
   display: flex;
-  margin: 9px 12px 9px 12px;
+  justify-content: center;
+  margin: 9px 0 9px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn {
+  position: relative;
 }
 .wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn button {
   width: 130px;
@@ -156,9 +161,8 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #000000;
-  position: relative;
 }
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticeNumber {
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn .noticeNumber {
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -172,7 +176,7 @@
   right: -10px;
   top: -10px;
 }
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticeNumber p {
+.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn .noticeNumber p {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #ffffff;
@@ -319,8 +323,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .noticeborder {
     width: 100%;
-    height: auto;
+    height: 570px;
     overflow: scroll;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1200px) {

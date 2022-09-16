@@ -88,6 +88,8 @@ $bold: 900;
 //     background-color: $lake-green;
 // }
 
+// ------------body------------
+
 .wrap {
     width: 100%;
     height: 100vh;
@@ -96,13 +98,15 @@ $bold: 900;
         .main {
             .row {
                 height: 100vh;
+                margin: 0;
 
                 .col {
                     background-color: $lake-green;
                     padding: 0;
 
-                    .left {
+                    // ---------------green border---------------
 
+                    .left {
                         .myName {
                             padding-top: 80px;
                             display: flex;
@@ -202,11 +206,13 @@ $bold: 900;
                                         align-items: center;
                                         background-color: $white;
                                         justify-content: center;
+
                                         .btnsvg {
                                             svg {
                                                 margin-bottom: 5px;
                                             }
                                         }
+
                                         .btnP {
                                             font-family: "GenSenRounded-M";
                                             font-size: $ps-font-size;
@@ -217,6 +223,8 @@ $bold: 900;
                             }
                         }
                     }
+
+                    // ---------------white border---------------
 
                     .whiteBg {
                         width: 100%;
@@ -241,11 +249,12 @@ $bold: 900;
 
                             .notice {
                                 display: flex;
-                                // position: relative;
-                                margin: 9px 12px 9px 12px;
+                                justify-content: center;
+                                margin: 9px 0 9px 0;
 
                                 .noticebtn {
-                                    // position: relative;
+                                    position: relative;
+
                                     button {
                                         width: 130px;
                                         height: 38px;
@@ -255,28 +264,27 @@ $bold: 900;
                                         font-family: "GenSenRounded-B";
                                         font-size: $ps-font-size;
                                         color: $super-dark;
-                                        position: relative;
                                     }
-                                }
 
-                                .noticeNumber {
-                                    width: 30px;
-                                    height: 30px;
-                                    border-radius: 100%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    border: none;
-                                    background-color: $red-pink;
-                                    z-index: 1;
-                                    position: absolute;
-                                    right: -10px;
-                                    top: -10px;
+                                    .noticeNumber {
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: none;
+                                        background-color: $red-pink;
+                                        z-index: 1;
+                                        position: absolute;
+                                        right: -10px;
+                                        top: -10px;
 
-                                    p {
-                                        font-family: "GenSenRounded-B";
-                                        font-size: $p-font-size;
-                                        color: $white;
+                                        p {
+                                            font-family: "GenSenRounded-B";
+                                            font-size: $p-font-size;
+                                            color: $white;
+                                        }
                                     }
                                 }
                             }
@@ -284,8 +292,10 @@ $bold: 900;
 
                         .noticeborder {
                             overflow: hidden;
+
                             .noticeDetails {
                                 width: 100%;
+
                                 .noticeDetail {
                                     width: 100%;
                                     height: auto;
@@ -327,6 +337,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-700-----------------
+
 @media screen and (min-width:700px) {
     .wrap {
         .containerr {
@@ -343,6 +355,8 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-992-----------------
+
 @media screen and (min-width:992px) {
     .wrap {
         background-image: url(../images/other_bg_paper.png);
@@ -358,6 +372,8 @@ $bold: 900;
                         display: flex;
                         align-items: center;
                         padding-top: 90px;
+
+                        // ---------------green border---------------
 
                         .col-lg-3 {
                             height: 70%;
@@ -430,16 +446,19 @@ $bold: 900;
                                             border-radius: 100px 0 0 100px;
                                             background-color: $white;
                                             flex-direction: row;
+
                                             .btnsvg {
                                                 width: 35%;
                                                 text-align: right;
                                                 padding-right: 20px;
+
                                                 svg {
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
                                                 }
                                             }
+
                                             .btnP {
                                                 width: 65%;
                                                 font-family: "GenSenRounded-B";
@@ -453,6 +472,8 @@ $bold: 900;
                             }
                         }
 
+                        // ---------------white border---------------
+
                         .col-lg-9 {
                             height: 70%;
                             box-shadow: none;
@@ -465,11 +486,9 @@ $bold: 900;
 
                             .noticeborder {
                                 width: 100%;
-                                height: auto;
+                                height: 570px;
                                 overflow: scroll;
-                                .noticeDetails {
-                                    // overflow: scroll;
-                                }
+                                margin-bottom: 20px;
                             }
                         }
 
@@ -480,29 +499,33 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-1200-----------------
+
 @media screen and (min-width:1200px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 10%;
         }
     }
 }
 
+// ----------------RWD-1400-----------------
+
 @media screen and (min-width:1400px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 15%;
         }
     }
 }
 
+// ----------------RWD-1600-----------------
+
 @media screen and (min-width:1600px) {
     .wrap {
-        // background-image: url(../images/other_bg_paper.png);
         .containerr {
             margin: 0 18%;
+
             .main {
                 .row {
                     .col {
