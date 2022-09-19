@@ -107,6 +107,7 @@ $bold: 900;
                     // ---------------green border---------------
 
                     .left {
+                        // background-color: $lake-green;
                         .myName {
                             padding-top: 80px;
                             display: flex;
@@ -1143,6 +1144,26 @@ $bold: 900;
                     .col {
                         .whiteBg {
                             padding: 0 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ----------------RWD-768-----------------
+
+@media screen and (min-width:768px) {
+    .wrap {
+        .containerr {
+            .main {
+                .row {
+                    .col {
+                        .left {
+                            .myName {
+                                padding-top: 120px;
+                            }
                         }
                     }
                 }
