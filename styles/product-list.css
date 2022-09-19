@@ -22,6 +22,7 @@ body {
   background-image: url(../images/other_bg_paper.png);
 }
 
+<<<<<<< HEAD
 .header {
   position: fixed;
   z-index: 100;
@@ -88,13 +89,26 @@ body {
   margin-bottom: 5px;
 }
 
+=======
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 .content .banner {
   width: 100%;
   height: 160px;
-  background-image: url("https://picsum.photos/id/1008/375/160");
+  background-image: url("https://picsum.photos/id/1008/1920/375");
   position: relative;
+  -webkit-box-shadow: 5px 10px 12px #c2c2c2;
+          box-shadow: 5px 10px 12px #c2c2c2;
 }
 
+<<<<<<< HEAD
+=======
+@media screen and (min-width: 768px) {
+  .content .banner {
+    height: 375px;
+  }
+}
+
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 .content .banner .class {
   padding: 5px 15px;
   border: 1px solid #ffffff;
@@ -115,31 +129,60 @@ body {
           transform: translateX(-50%);
 }
 
+<<<<<<< HEAD
+=======
+@media screen and (min-width: 768px) {
+  .content .banner .class {
+    border: 2px solid #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content .banner .class {
+    bottom: 40px;
+  }
+}
+
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 .content .banner .class h3 {
   padding-bottom: 3px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+<<<<<<< HEAD
+=======
+}
+
+@media screen and (min-width: 768px) {
+  .content .banner .class h3 {
+    font-size: 24px;
+  }
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 }
 
 .content .slider {
   width: 100%;
   overflow: hidden;
-  border-bottom: 2px solid #c2c2c2;
 }
 
 .content .slider .slider-bar {
-  width: 650px;
   padding: 0 15px;
   overflow: scroll;
 }
 
 .content .slider .slider-bar ul {
-  width: 150%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: scroll;
+}
+
+@media screen and (min-width: 768px) {
+  .content .slider .slider-bar ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .content .slider .slider-bar ul li {
@@ -147,26 +190,79 @@ body {
   margin: 15px 10px;
   border: 2px solid #000000;
   border-radius: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .content .slider .slider-bar ul li {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .content .slider .slider-bar ul li a {
   color: #000000;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+  text-decoration: none;
 }
 
-.content .filter {
+@media screen and (min-width: 992px) {
+  .content .slider .slider-bar ul li a {
+    font-size: 20px;
+  }
+}
+
+.content .filter-button-mobile {
   padding: 15px 0 15px 15px;
 }
 
-.content .filter button.filter {
+@media screen and (min-width: 768px) {
+  .content .filter-button-mobile {
+    display: none;
+  }
+}
+
+.content .filter-button-mobile button.filter {
   padding: 5px 8px;
-  border: 2px solid #000000;
+  border: 2px solid #4c4948;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
   color: #000000;
   font-family: "GenSenRounded-M";
   font-size: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .content .filter-button-mobile button.filter {
+    font-size: 18px;
+  }
+}
+
+.content .filter-button-pc {
+  position: fixed;
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .content .filter-button-pc {
+    display: none;
+  }
+}
+
+.content .filter-button-pc button.filter-pc {
+  padding: 10px;
+  border-top: 2px solid #4c4948;
+  border-right: 2px solid #4c4948;
+  border-bottom: 2px solid #4c4948;
+  border-left: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(45, 130, 125, 0.3);
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
 }
 
 .content .product-list {
@@ -179,12 +275,44 @@ body {
   padding: 0 6px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .content .product-list {
+    width: 85%;
+    margin: 0 7.5%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content .product-list {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content .product-list {
+    width: calc(100% - 600px);
+    margin: 0 300px;
+  }
+}
+
+.content .product-list a {
+  text-decoration: none;
 }
 
 .content .product-list a .product-card {
   width: 100%;
   margin: auto;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .content .product-list a .product-card {
+    margin-bottom: 30px;
+  }
 }
 
 .content .product-list a .product-card .product-image {
@@ -196,16 +324,42 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 992px) {
+  .content .product-list a .product-card .product-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content .product-list a .product-card .product-image {
+    width: 275px;
+    height: 350px;
+    background-position: center center;
+  }
+}
+
 .content .product-list a .product-card .product-image .heart {
+  width: 30px;
+  height: 30px;
   cursor: default;
   position: absolute;
   right: 3px;
   bottom: 3px;
+  background-image: url(../images/icons/addlike0.svg);
 }
 
 .content .product-list a .product-card .product-title {
   width: 170px;
   padding: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .content .product-list a .product-card .product-title {
+    width: 250px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .content .product-list a .product-card .product-title h3 {
@@ -218,9 +372,21 @@ body {
   -webkit-line-clamp: 2;
 }
 
+@media screen and (min-width: 992px) {
+  .content .product-list a .product-card .product-title h3 {
+    font-size: 18px;
+  }
+}
+
 .content .product-list a .product-card .product-price {
   width: 170px;
   padding: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .content .product-list a .product-card .product-price {
+    width: 250px;
+  }
 }
 
 .content .product-list a .product-card .product-price p {
@@ -232,59 +398,383 @@ body {
 
 .content .product-list a .product-card .product-price p::before {
   display: inline-block;
-  content: "NT$";
+  content: "NT$ ";
 }
 
-.footer {
-  margin-top: 30px;
-  background-image: url(../images/footer-bg.svg);
-  background-repeat: no-repeat;
-  background-size: 160%;
-  background-position: center;
-  overflow: hidden;
+@media screen and (min-width: 992px) {
+  .content .product-list a .product-card .product-price p {
+    font-size: 18px;
+  }
+}
+
+.filter-page-pc {
+  position: fixed;
+  top: 0;
+  z-index: 205;
   width: 100%;
-  height: 257px;
+  height: 100vh;
+  background-color: rgba(45, 130, 125, 0.95);
 }
 
-.footer .footer-logo {
-  padding-top: 30px;
-  width: 20%;
-  margin: auto;
+.filter-page-pc .filter-page-pc-back {
+  padding: 100px 0 0 30px;
 }
 
-.footer .footer-nav ul {
-  margin: 35px 40px 0 40px;
-  padding-bottom: 10px;
+.filter-page-pc .filter-page-pc-back span.filter-pc-back {
+  cursor: pointer;
+}
+
+.filter-page,
+.gender-filter-detail,
+.price-filter-detail,
+.color-filter-detail {
+  background-color: #2d827d;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 200;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-page,
+  .gender-filter-detail,
+  .price-filter-detail,
+  .color-filter-detail {
+    display: none;
+  }
+}
+
+.filter-page .filter-header,
+.gender-filter-detail .filter-header,
+.price-filter-detail .filter-header,
+.color-filter-detail .filter-header {
+  width: 100%;
+  padding: 5px 0;
+  background-color: #2d827d;
+  z-index: 120;
+  position: fixed;
+}
+
+.filter-page .filter-header span,
+.gender-filter-detail .filter-header span,
+.price-filter-detail .filter-header span,
+.color-filter-detail .filter-header span {
+  padding: 10px 10px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 2px solid #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
-.footer .footer-nav ul li a {
+.filter-page .filter-class,
+.gender-filter-detail .filter-class,
+.price-filter-detail .filter-class,
+.color-filter-detail .filter-class {
+  margin-top: 50px;
+}
+
+.filter-page .filter-class .button-filter,
+.gender-filter-detail .filter-class .button-filter,
+.price-filter-detail .filter-class .button-filter,
+.color-filter-detail .filter-class .button-filter {
+  padding: 20px;
+  border-bottom: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.filter-page .filter-class .button-filter .new,
+.filter-page .filter-class .button-filter .sale,
+.filter-page .filter-class .button-filter .theme,
+.gender-filter-detail .filter-class .button-filter .new,
+.gender-filter-detail .filter-class .button-filter .sale,
+.gender-filter-detail .filter-class .button-filter .theme,
+.price-filter-detail .filter-class .button-filter .new,
+.price-filter-detail .filter-class .button-filter .sale,
+.price-filter-detail .filter-class .button-filter .theme,
+.color-filter-detail .filter-class .button-filter .new,
+.color-filter-detail .filter-class .button-filter .sale,
+.color-filter-detail .filter-class .button-filter .theme {
+  padding: 5px 15px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter-page .filter-class .gender-filter,
+.filter-page .filter-class .price-filter,
+.filter-page .filter-class .color-filter,
+.gender-filter-detail .filter-class .gender-filter,
+.gender-filter-detail .filter-class .price-filter,
+.gender-filter-detail .filter-class .color-filter,
+.price-filter-detail .filter-class .gender-filter,
+.price-filter-detail .filter-class .price-filter,
+.price-filter-detail .filter-class .color-filter,
+.color-filter-detail .filter-class .gender-filter,
+.color-filter-detail .filter-class .price-filter,
+.color-filter-detail .filter-class .color-filter {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.filter-page .filter-class .gender-filter span,
+.filter-page .filter-class .price-filter span,
+.filter-page .filter-class .color-filter span,
+.gender-filter-detail .filter-class .gender-filter span,
+.gender-filter-detail .filter-class .price-filter span,
+.gender-filter-detail .filter-class .color-filter span,
+.price-filter-detail .filter-class .gender-filter span,
+.price-filter-detail .filter-class .price-filter span,
+.price-filter-detail .filter-class .color-filter span,
+.color-filter-detail .filter-class .gender-filter span,
+.color-filter-detail .filter-class .price-filter span,
+.color-filter-detail .filter-class .color-filter span {
+  margin-left: 20px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
 
-.footer .footer-social {
-  margin: 35px 160px 0 160px;
+.filter-page .filter-class .gender-filter span.filter-content,
+.filter-page .filter-class .price-filter span.filter-content,
+.filter-page .filter-class .color-filter span.filter-content,
+.gender-filter-detail .filter-class .gender-filter span.filter-content,
+.gender-filter-detail .filter-class .price-filter span.filter-content,
+.gender-filter-detail .filter-class .color-filter span.filter-content,
+.price-filter-detail .filter-class .gender-filter span.filter-content,
+.price-filter-detail .filter-class .price-filter span.filter-content,
+.price-filter-detail .filter-class .color-filter span.filter-content,
+.color-filter-detail .filter-class .gender-filter span.filter-content,
+.color-filter-detail .filter-class .price-filter span.filter-content,
+.color-filter-detail .filter-class .color-filter span.filter-content {
+  color: #c2c2c2;
+}
+
+.filter-page .filter-class .gender-filter span.arrow,
+.filter-page .filter-class .price-filter span.arrow,
+.filter-page .filter-class .color-filter span.arrow,
+.gender-filter-detail .filter-class .gender-filter span.arrow,
+.gender-filter-detail .filter-class .price-filter span.arrow,
+.gender-filter-detail .filter-class .color-filter span.arrow,
+.price-filter-detail .filter-class .gender-filter span.arrow,
+.price-filter-detail .filter-class .price-filter span.arrow,
+.price-filter-detail .filter-class .color-filter span.arrow,
+.color-filter-detail .filter-class .gender-filter span.arrow,
+.color-filter-detail .filter-class .price-filter span.arrow,
+.color-filter-detail .filter-class .color-filter span.arrow {
+  position: absolute;
+  right: 10px;
+}
+
+.filter-page .filter-footer,
+.gender-filter-detail .filter-footer,
+.price-filter-detail .filter-footer,
+.color-filter-detail .filter-footer {
+  position: absolute;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.filter-page .filter-footer button,
+.gender-filter-detail .filter-footer button,
+.price-filter-detail .filter-footer button,
+.color-filter-detail .filter-footer button {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  background-color: black;
+  border: 2px solid #000000;
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.filter-page .filter-footer button svg,
+.gender-filter-detail .filter-footer button svg,
+.price-filter-detail .filter-footer button svg,
+.color-filter-detail .filter-footer button svg {
+  width: 20%;
+}
+
+.gender-filter-detail .gender-filter-content {
+  margin-top: 120px;
+}
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ffffff;
 }
 
-.footer .footer-c {
-  margin-top: 35px;
-  text-align: center;
+.gender-filter-detail .gender-filter-content form .gender-filter-radio span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+  height: 46px;
   color: #ffffff;
-  font-family: "Roboto";
-  font-size: 14px;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
 }
+<<<<<<< HEAD
+=======
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio span.all {
+  padding-left: 17px;
+}
+
+.gender-filter-detail .gender-filter-content form .gender-filter-radio input {
+  margin-right: 30px;
+}
+
+.gender-filter-detail .gender-filter-content form label.all {
+  border-bottom: 1px solid #ffffff;
+}
+
+.price-filter-detail .price-filter-content {
+  margin-top: 120px;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ffffff;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+  height: 46px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio span.all {
+  padding-left: 17px;
+}
+
+.price-filter-detail .price-filter-content form .price-filter-radio input {
+  margin-right: 30px;
+}
+
+.price-filter-detail .price-filter-content form label.last {
+  border-bottom: 1px solid #ffffff;
+}
+
+.color-filter-detail .color-filter-content {
+  height: calc(100% - 206px);
+  margin-top: 120px;
+  overflow: hidden;
+}
+
+.color-filter-detail .color-filter-content form {
+  height: calc(100% - 0px);
+  overflow: scroll;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #ffffff;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
+  height: 46px;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio span.all {
+  padding-left: 17px;
+}
+
+.color-filter-detail .color-filter-content form .color-filter-radio input {
+  margin-right: 30px;
+}
+
+.color-filter-detail .color-filter-content form label.last {
+  border-bottom: 1px solid #ffffff;
+}
+
+.filter-show {
+  right: 0;
+}
+
+.list-hidden {
+  display: none;
+}
+
+.menu-show {
+  right: 0;
+}
+
+.body-hidden {
+  overflow: hidden;
+}
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 /*# sourceMappingURL=product-list.css.map */
