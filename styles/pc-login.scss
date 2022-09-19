@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  // 顏色設定
+  $super-dark: #000000;
+  $dark-red: #a31c2d;
+  $pink: #ca3f68;
+  $red-pink: #d45a6a;
+  $light-pink: #ee92ad;
+  $dark-green: #2f5e36;
+  $green: #7ea083;
+  $lake-green: #2d827d;
+  $light-lake-green: #7cb2af;
+  $sky-blue: #5292b9;
+  $light-sky-blue: #9fc8e1;
+  $dark-blue: #154d7a;
+  $blue: #548fbe;
+  $brown: #7a482d;
+  $khaki: #b28064;
+  $orange: #cb6b28;
+  $light-orange: #e1a77e;
+  $coral: #bd392a;
+  $light-coral: #f07f72;
+  $dark-gray: #4c4948;
+  $gray: #c2c2c2;
+  $yellow: #ffcd51;
+  $light-yellow: #ffe39f;
+  $skin: #d4cfc6;
+  $white: #ffffff;
+  $light-brown: #d4cfc6;
+  $deep-brown: #554d49;
+  
+  // 字體設定
+  @font-face {
+    font-family: "GenSenRounded-M";
+    src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+      url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "GenSenRounded-B";
+    src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+      url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/RobotoFlex.woff") format("woff"),
+      url("../fonts/RobotoFlex.ttf") format("truetype");
+  }
+  
+  // 字體大小設定
+  // 不分字型
+  $h1-font-size: 80px;
+  $h2-font-size: 48px;
+  $h3-font-size: 36px;
+  $h4-font-size: 32px;
+  $h5-font-size: 24px;
+  $h6-font-size: 20px;
+  $p-font-size: 16px;
+  $ps-font-size: 14px;
+  
+  // 字體粗細
+  // 細字體不用下font-weight，粗字體再用下列變數
+  // ex: font-weight: $bold;
+  $bold: 900;
+  
+  // 以下兩種範例
+  
+  // h2.chinese {
+  //   font-family: "GenSenRounded-M";
+  //   font-size: 48px;
+  //   font-weight: $bold;
+  //   color: $coral;
+  // }
+  
+  // h3.english {
+  //   font-family: "Roboto";
+  //   font-weight: $bold;
+  //   font-size: 110px;
+  //   color: $lake-green;
+  // }
+
+.pc-login{
+  .login-bg{
+    z-index: 1;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .login-box{
+    position: fixed;
+    z-index: 2;
+    width: 90%;
+    height: 550px;
+    max-width: 933px;
+    top:50vh;
+    left: 50vw;
+    transform: translateX(-50%)translateY(-50%);
+    background: url(../images/pc-login.svg)no-repeat ;
+    background-size: 100% 100%;
+    // padding-bottom: 200px;
+    .pc-login-info{
+      width: 30%;
+      position: absolute;
+      top:25%;
+      left: 45%;
+      .pc-login-container{
+        width: 130%;
+        padding-top: 15%;
+        input{
+          width: 90%;
+          font-family: "GenSenRounded-B";
+          font-size:$ps-font-size;
+          color: $gray;
+          border: none;
+          border-bottom: 2px solid $dark-gray;
+          outline: none;
+          padding-bottom: 2%;
+          @media screen and (max-width:864px) {
+            width: 85%;
+          }
+        }
+        .mail-input{
+          padding-top: 5%;
+        }
+        .password-input{
+          padding-top: 10%;
+          position: relative;
+          .eye-close{
+            position: absolute;
+            top: 30px;
+            right: 5px;
+            @media screen and (max-width:864px) {
+              top: 25px;
+              right: 10px;
+            }
+          }
+          p{
+            padding-top: 2px;
+            padding-left: 30px;
+            font-weight: bold;
+            a{
+              text-align: left;
+              font-family: "Roboto";
+              font-size: 12px;
+              color: $light-lake-green;
+            };
+          }
+        }
+        .login-button{
+          padding-top: 20%;
+          .login-btn{
+            width: 263px;
+            height: 35px;
+            border: 0;
+            border-radius: 10px;
+            background-color: $lake-green;
+            color: $white;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .or{
+        text-align: center;
+        padding-top: 10%;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        color: $dark-gray;
+        padding-bottom: 10px;
+      }
+      .orwith-icon{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .fb-icon{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+        .google-icon{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          // margin-right: 10px;
+        }
+      }
+      .not-member{
+        padding-top: 20px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        text-align: center;
+        color: $dark-gray;
+        a{
+          color: $light-lake-green;
+        }
+      }
+    }
+  }
+}
+
