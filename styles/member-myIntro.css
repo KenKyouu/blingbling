@@ -1,97 +1,90 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-
 .wrap {
   width: 100%;
   height: 100vh;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   height: 100vh;
   margin: 0;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   background-color: #2d827d;
   padding: 0;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .myName {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .myName {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   padding-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .myName .photoborder {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .myName .photo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-
 .wrap .containerr .main .row .col .left .myName .photo .photoborder {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 80px;
   height: 80px;
   border-radius: 100%;
   background-color: #7cb2af;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .myName .photoborder .myphoto {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 70px;
@@ -100,6 +93,8 @@
   background-color: #ffffff;
   overflow: hidden;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .myName .photoborder .myphoto img.photo {
@@ -108,30 +103,23 @@
 
 .wrap .container .main .row .col .myName h5 {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
 }
-
 .wrap .containerr .main .row .col .left .myName .photo .photoedit {
   width: 24px;
   height: 24px;
   border-radius: 100%;
   background-color: #ffcd51;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   position: absolute;
   right: -3px;
   bottom: 0;
 }
-
 .wrap .containerr .main .row .col .left .myName h5 {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-B";
@@ -139,24 +127,25 @@
   color: #000000;
   padding: 13px 0 13px 0;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .myName a.coin {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .myName a.coin {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 16px;
   color: #000000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-bottom: 7px;
   text-decoration: none;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .myName a.coin svg {
@@ -165,38 +154,45 @@
 
 .wrap .container .main .row .col .memberbutton {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .myName a.coin svg {
   margin-right: 10px;
 }
-
 .wrap .containerr .main .row .col .left .memberbutton {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   padding: 0px 30px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .memberbutton ul {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .memberbutton ul {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .memberbutton ul li.btn {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px 0;
+}
+=======
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -211,32 +207,22 @@
 <<<<<<< HEAD
 .wrap .container .main .row .col .memberbutton ul li.btn a {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 64px;
   height: 64px;
   border-radius: 10px;
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #ffffff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
 }
-
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
   font-family: "GenSenRounded-M";
   font-size: 14px;
@@ -265,28 +251,22 @@
 .wrap .container .main .row .col .whiteBg {
 =======
 }
-
 .wrap .containerr .main .row .col .whiteBg {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   height: auto;
   background-color: #ffffff;
   border-radius: 10px 10px 0 0;
-  -webkit-box-shadow: 0 -10px 19px #4c4948;
-          box-shadow: 0 -10px 19px #4c4948;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 -10px 19px #4c4948;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 0px 30px;
   margin-top: 15px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card {
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .member-card {
@@ -295,20 +275,19 @@
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   padding-top: 36px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .member-card img.memberCard {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 280px;
@@ -316,51 +295,51 @@
   border-radius: 10px;
   background-color: #f07f72;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .member-card .memberLevel {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 220px;
   height: 26px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 15px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .member-card .memberLevel .diamondicon {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .diamondicon {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-bottom: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .member-card .memberLevel .progress {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 204px;
   height: 8px;
   background-color: #d4cfc6;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .member-card .memberLevel .progress .progress-bar {
@@ -373,46 +352,52 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .userName {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress .progress-bar {
   background-color: #7cb2af;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro {
   width: 100%;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName {
+<<<<<<< HEAD
+=======
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-ch {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-ch p {
@@ -421,10 +406,10 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-en {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
@@ -432,30 +417,36 @@
   color: #d4cfc6;
   padding-top: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-en p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-info {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-info p {
@@ -464,42 +455,49 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .gender {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info p {
   width: 100%;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender {
+<<<<<<< HEAD
+=======
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-ch {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-ch p {
@@ -508,10 +506,10 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-en {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
@@ -519,30 +517,36 @@
   color: #d4cfc6;
   padding-top: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-en p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-info {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-info p {
@@ -551,42 +555,44 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .birthday {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info p {
   width: 100%;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-ch {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-ch p {
@@ -595,10 +601,10 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-en {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
@@ -606,30 +612,36 @@
   color: #d4cfc6;
   padding-top: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-en p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-info {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-info p {
@@ -638,42 +650,49 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .email {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info p {
   width: 100%;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email {
+<<<<<<< HEAD
+=======
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-ch {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-ch p {
@@ -682,10 +701,10 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-en {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
@@ -693,16 +712,21 @@
   color: #d4cfc6;
   padding-top: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-en p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-info {
@@ -711,6 +735,7 @@
       -ms-flex-align: left;
           align-items: left;
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info {
   width: 60%;
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
@@ -718,15 +743,21 @@
   font-size: 14px;
   color: #4c4948;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-info p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   line-height: 18px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone {
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone {
@@ -735,34 +766,39 @@
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-ch {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-ch p {
@@ -771,10 +807,10 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-en {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
@@ -782,30 +818,36 @@
   color: #d4cfc6;
   padding-top: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-en p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-info {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-info p {
@@ -814,42 +856,49 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .address {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info p {
   width: 100%;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address {
+<<<<<<< HEAD
+=======
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  align-items: left;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-ch {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-ch p {
@@ -858,10 +907,10 @@
 
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-en {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
-
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
@@ -869,20 +918,26 @@
   color: #d4cfc6;
   padding-top: 5px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-en p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-info {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
@@ -890,56 +945,59 @@
   font-size: 14px;
   color: #4c4948;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-info p {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info p {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   line-height: 18px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg button.editMyInfo {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg button.editMyInfo {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 130px;
   height: 38px;
   border-radius: 10px;
   border: 3px solid #000000;
-  background-color: #ffffff00;
+  background-color: rgba(255, 255, 255, 0);
   margin: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg button.editMyInfo p.edit {
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg button.editMyInfo p.edit {
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 .wrap .container .main .row .col .whiteBg button.editMyInfo svg {
   padding-left: 5px;
 }
 =======
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
 .wrap .containerr .main .row .col .whiteBg button.editMyInfo svg {
   padding-left: 5px;
 }
@@ -955,13 +1013,9 @@
     overflow: hidden;
   }
   .wrap .containerr .main .row .col {
-    background-color: #00000000;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     padding-top: 50px;
   }
   .wrap .containerr .main .row .col .col-lg-3 {
@@ -972,15 +1026,9 @@
     padding-left: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     padding-top: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
@@ -1015,34 +1063,23 @@
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
     width: 100%;
-    -ms-flex-wrap: none;
-        flex-wrap: none;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    flex-wrap: none;
+    justify-content: right;
     padding-top: 10px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
     width: 100%;
     padding: 0;
     margin: 6px 0 6px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
     width: 100%;
     height: 48px;
     border-radius: 100px 0 0 100px;
     background-color: #ffffff;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
     width: 35%;
@@ -1059,34 +1096,20 @@
     font-family: "GenSenRounded-B";
     font-size: 20px;
     text-align: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
     height: 70%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0 5%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card {
@@ -1162,19 +1185,10 @@
     border-radius: 32px;
     border: 4px solid #2d827d;
     background-color: #ffffff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 50px 0;
   }
   .lightbox-myDetails p.editTitle {
@@ -1188,12 +1202,8 @@
   }
   .lightbox-myDetails .my-details .detail {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     margin-bottom: 30px;
   }
   .lightbox-myDetails .my-details .detail .detail-text {
@@ -1279,19 +1289,16 @@
     margin: 0 20px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .wrap .containerr {
     margin: 0 10%;
   }
 }
-
 @media screen and (min-width: 1400px) {
   .wrap .containerr {
     margin: 0 15%;
   }
 }
-
 @media screen and (min-width: 1600px) {
   .wrap .containerr {
     margin: 0 18%;
@@ -1300,71 +1307,49 @@
     padding-left: 20px;
   }
 }
-
 .lightbox-myDetails {
   width: 375px;
   height: auto;
   border-radius: 44px;
   border: 5px solid #2d827d;
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 33px 0;
 }
-
 .lightbox-myDetails p.editTitle {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #4c4948;
   padding-bottom: 23px;
 }
-
 .lightbox-myDetails .my-details {
   width: 100%;
 }
-
 .lightbox-myDetails .my-details .detail {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 20px;
 }
-
 .lightbox-myDetails .my-details .detail .detail-text {
   width: 30%;
   padding-right: 20px;
 }
-
 .lightbox-myDetails .my-details .detail .detail-text p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   text-align: right;
 }
-
 .lightbox-myDetails .my-details .detail .detail-text p span {
   color: #d45a6a;
 }
-
 .lightbox-myDetails .my-details .detail .detail-input {
   width: 70%;
 }
-
 .lightbox-myDetails .my-details .detail .detail-input input {
   width: 200px;
   height: 32px;
@@ -1375,11 +1360,9 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
-
 .lightbox-myDetails .my-details .detail .detail-input ::-webkit-input-placeholder {
   color: #c2c2c2;
 }
-
 .lightbox-myDetails .my-details .detail .detail-input select {
   width: 100px;
   height: 32px;
@@ -1390,14 +1373,12 @@
   font-size: 14px;
   color: #4c4948;
 }
-
 .lightbox-myDetails .my-details .detail .detail-input select option {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   text-align: center;
 }
-
 .lightbox-myDetails .my-details .detail .detail-input input.birthmd {
   width: 70px;
   height: 32px;
@@ -1411,11 +1392,9 @@
   text-align: center;
   margin-right: 10px;
 }
-
 .lightbox-myDetails .detailsbtn {
   margin-top: 20px;
 }
-
 .lightbox-myDetails .detailsbtn button.true {
   width: 130px;
   height: 38px;
@@ -1426,7 +1405,6 @@
   font-size: 14px;
   margin: 0 10px;
 }
-
 .lightbox-myDetails .detailsbtn button.false {
   width: 130px;
   height: 38px;
@@ -1437,6 +1415,10 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
   margin: 0 10px;
+<<<<<<< HEAD
+}/*# sourceMappingURL=member-myIntro.css.map */
+=======
 }
 >>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 /*# sourceMappingURL=member-myIntro.css.map */
+>>>>>>> 0a310ecbe821454d3990c18907855159cb53e70f
