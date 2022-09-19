@@ -257,8 +257,7 @@
   width: 60px;
   height: 60px;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: #4c4948;
 }
 .j-list .j-list-info .j-list-item .j-list-img img {
@@ -348,8 +347,7 @@
     width: 80px;
     height: 80px;
     overflow: hidden;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     background-color: #4c4948;
   }
   .j-list .j-list-info .j-list-item .j-list-img img {
@@ -401,10 +399,7 @@
   font-size: 18px;
   display: block;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   padding-left: 1.75rem;
 }
 
@@ -498,10 +493,11 @@
 
 /* Style the indicator (dot/circle) */
 .j-point .j-checkmark-r:after {
-  top: 2.5px;
-  left: 2.5px;
-  width: 7px;
-  height: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: black;
 }
@@ -711,9 +707,7 @@
 
 .j-city, .j-town {
   width: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: url("../images/icons/icon=down.svg") 90% center/0.8rem no-repeat;
   fill: #000000;
   cursor: pointer;
@@ -918,11 +912,7 @@
     position: absolute;
     width: 100%;
     max-width: 370px;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-  }
-  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front #j-ccsingle {
-    position: absolute;
+    backface-visibility: hidden;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-card-wrap {
     background: url("../images/cart2-card-font.png") center center/cover no-repeat;
@@ -937,7 +927,12 @@
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text {
     width: 100%;
   }
-  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-icon-wrap {
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-icons .j-card-icon-wrap {
     width: 16%;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-font-text .j-card-number {
@@ -975,8 +970,7 @@
     position: absolute;
     width: 100%;
     max-width: 370px;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-card-wrap {
     background: url("../images/cart2-card-back.png") center center/cover no-repeat;
