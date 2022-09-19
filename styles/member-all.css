@@ -135,6 +135,9 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
+.wrap .containerr .main .row .col .whiteBg .mydetailstop {
+  padding-top: 20px;
+}
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card {
   display: flex;
   align-items: center;
@@ -143,9 +146,12 @@
 }
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg {
   width: 280px;
-  height: 380px;
+  height: 420px;
   border-radius: 10px;
-  background-color: #f07f72;
+  box-shadow: 5px 0 20px #4c4948;
+}
+.wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg img.memberCard {
+  width: 100%;
 }
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel {
   width: 220px;
@@ -153,7 +159,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .diamondicon {
   width: 100%;
@@ -985,10 +991,6 @@
     padding-top: 0;
     padding-right: 5%;
     border: none;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card .membercardimg {
-    width: 90%;
-    height: 90%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName {
     padding-top: 30px;
