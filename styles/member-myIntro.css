@@ -23,17 +23,29 @@
   height: 100vh;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row {
+=======
 .wrap .containerr .main .row {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   height: 100vh;
   margin: 0;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col {
+=======
 .wrap .containerr .main .row .col {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   background-color: #2d827d;
   padding: 0;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .myName {
+=======
 .wrap .containerr .main .row .col .left .myName {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   padding-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +62,9 @@
           align-items: center;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .myName .photoborder {
+=======
 .wrap .containerr .main .row .col .left .myName .photo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +73,7 @@
 }
 
 .wrap .containerr .main .row .col .left .myName .photo .photoborder {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -73,7 +89,11 @@
           align-items: center;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .myName .photoborder .myphoto {
+=======
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 70px;
   height: 70px;
   border-radius: 100%;
@@ -81,6 +101,13 @@
   overflow: hidden;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .myName .photoborder .myphoto img.photo {
+  width: 110%;
+}
+
+.wrap .container .main .row .col .myName h5 {
+=======
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
 }
@@ -106,13 +133,18 @@
 }
 
 .wrap .containerr .main .row .col .left .myName h5 {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-B";
   font-size: 24px;
   color: #000000;
   padding: 13px 0 13px 0;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .myName a.coin {
+=======
 .wrap .containerr .main .row .col .left .myName a.coin {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 16px;
   color: #000000;
@@ -126,16 +158,28 @@
   text-decoration: none;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .myName a.coin svg {
+  margin-right: 10px;
+}
+
+.wrap .container .main .row .col .memberbutton {
+=======
 .wrap .containerr .main .row .col .left .myName a.coin svg {
   margin-right: 10px;
 }
 
 .wrap .containerr .main .row .col .left .memberbutton {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   padding: 0px 30px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .memberbutton ul {
+=======
 .wrap .containerr .main .row .col .left .memberbutton ul {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,6 +190,9 @@
       justify-content: space-around;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .memberbutton ul li.btn {
+=======
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,11 +203,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border: none;
   padding: 10px 0;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .memberbutton ul li.btn a {
+=======
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 64px;
   height: 64px;
   border-radius: 10px;
@@ -189,9 +241,33 @@
   font-family: "GenSenRounded-M";
   font-size: 14px;
   color: #4c4948;
+<<<<<<< HEAD
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .container .main .row .col .memberbutton ul li.btn a svg {
+  margin-bottom: 5px;
+}
+
+.wrap .container .main .row .col .whiteBg {
+=======
 }
 
 .wrap .containerr .main .row .col .whiteBg {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   height: auto;
   background-color: #ffffff;
@@ -212,7 +288,11 @@
   margin-top: 15px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .member-card {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,14 +306,22 @@
   padding-top: 36px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .member-card img.memberCard {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 280px;
   height: 380px;
   border-radius: 10px;
   background-color: #f07f72;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .member-card .memberLevel {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 220px;
   height: 26px;
   display: -webkit-box;
@@ -249,7 +337,11 @@
   margin-top: 15px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .member-card .memberLevel .diamondicon {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .diamondicon {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,12 +352,27 @@
   padding-bottom: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .member-card .memberLevel .progress {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 204px;
   height: 8px;
   background-color: #d4cfc6;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .member-card .memberLevel .progress .progress-bar {
+  background-color: #7cb2af;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro {
+  width: 100%;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .userName {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .memberLevel .progress .progress-bar {
   background-color: #7cb2af;
 }
@@ -275,6 +382,7 @@
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,37 +393,61 @@
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-ch {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-en {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 14px;
   color: #d4cfc6;
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-title .myIntro-title-en p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-title .myIntro-title-en p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-info {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
   -webkit-box-align: left;
       -ms-flex-align: left;
@@ -325,11 +457,19 @@
   color: #4c4948;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .userName .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .gender {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .userName .myIntro-info p {
   width: 100%;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,37 +480,61 @@
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-ch {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-en {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 14px;
   color: #d4cfc6;
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-title .myIntro-title-en p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-title .myIntro-title-en p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-info {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
   -webkit-box-align: left;
       -ms-flex-align: left;
@@ -380,11 +544,19 @@
   color: #4c4948;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .gender .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .birthday {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .gender .myIntro-info p {
   width: 100%;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,37 +567,61 @@
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-ch {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-en {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 14px;
   color: #d4cfc6;
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-title .myIntro-title-en p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-title .myIntro-title-en p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-info {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
   -webkit-box-align: left;
       -ms-flex-align: left;
@@ -435,11 +631,19 @@
   color: #4c4948;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .birthday .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .email {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .birthday .myIntro-info p {
   width: 100%;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,49 +654,85 @@
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-ch {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-en {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 14px;
   color: #d4cfc6;
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-title .myIntro-title-en p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-title .myIntro-title-en p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-info {
+  width: 60%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info {
   width: 60%;
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .email .myIntro-info p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .email .myIntro-info p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   line-height: 18px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,37 +743,61 @@
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-ch {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-en {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 14px;
   color: #d4cfc6;
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-title .myIntro-title-en p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-title .myIntro-title-en p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-info {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
   -webkit-box-align: left;
       -ms-flex-align: left;
@@ -543,11 +807,19 @@
   color: #4c4948;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .phone .myIntro-info p {
+  width: 100%;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .address {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .phone .myIntro-info p {
   width: 100%;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,49 +830,81 @@
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 40%;
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-ch {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-M";
   font-size: 16px;
   color: #2d827d;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-ch p {
+  padding: 0 12px;
+}
+
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-en {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-ch p {
   padding: 0 12px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "Roboto";
   font-size: 14px;
   color: #d4cfc6;
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-title .myIntro-title-en p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-title .myIntro-title-en p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   border-left: 2px solid #c2c2c2;
   display: inline-block;
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-info {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 60%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg .myIntro .address .myIntro-info p {
+=======
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .myIntro .address .myIntro-info p {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 100%;
   line-height: 18px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg button.editMyInfo {
+=======
 .wrap .containerr .main .row .col .whiteBg button.editMyInfo {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   width: 130px;
   height: 38px;
   border-radius: 10px;
@@ -622,11 +926,20 @@
           justify-content: center;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg button.editMyInfo p.edit {
+=======
 .wrap .containerr .main .row .col .whiteBg button.editMyInfo p.edit {
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
 
+<<<<<<< HEAD
+.wrap .container .main .row .col .whiteBg button.editMyInfo svg {
+  padding-left: 5px;
+}
+=======
 .wrap .containerr .main .row .col .whiteBg button.editMyInfo svg {
   padding-left: 5px;
 }
@@ -1125,4 +1438,5 @@
   font-size: 14px;
   margin: 0 10px;
 }
+>>>>>>> 3cd30f33264dc93b88ccae637d61407ed1476c8d
 /*# sourceMappingURL=member-myIntro.css.map */
