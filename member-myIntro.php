@@ -178,7 +178,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                             <div class="mydetailstop">
                                 <div class="member-card">
                                     <div class="membercardimg">
-                                        <img src="" alt="" class="memberCard">
+                                        <img src="./images/memberCard/memberCard-5.png" alt="" class="memberCard">
                                     </div>
                                     <div class="memberLevel">
                                         <div class="diamondicon">
