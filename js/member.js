@@ -1,9 +1,6 @@
 // greenBorder - memberButton
 
-$("li.myIntro > a").click(function(){
-    if($(this).prop("checked")){
-        $("li.myIntro").css("opacity", "1");
-    } else {
-        $("li.myCollect").css("opacity", "0");
-    }
+$("li.btn > a").click(function(){
+    console.log($(this));
+    $(this).css('background-color', 'white').parent().siblings().children().css('background-color', 'rgba(255, 255, 255, 0)');
 });
