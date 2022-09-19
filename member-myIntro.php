@@ -51,7 +51,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
 
                             <div class="memberbutton">
                                 <ul class="memberbutton">
-                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                    <li class="btn col-4 col-md-2 col-lg-12 myIntro"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="14" height="14" viewBox="0 0 25 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 個人資訊
                                             </div>
                                         </a></li>
-                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                    <li class="btn col-4 col-md-2 col-lg-12 myCollect"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="13" height="13" viewBox="0 0 25 23" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 我的收藏
                                             </div>
                                         </a></li>
-                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                    <li class="btn col-4 col-md-2 col-lg-12 myOrder"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="15" height="13" viewBox="0 0 26 23" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +105,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 訂單管理
                                             </div>
                                         </a></li>
-                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                    <li class="btn col-4 col-md-2 col-lg-12 myFriend"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="15" height="10.5" viewBox="0 0 27 20" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 關注好友
                                             </div>
                                         </a></li>
-                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                    <li class="btn col-4 col-md-2 col-lg-12 myCoupon"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="20" height="17.5" viewBox="0 0 24 21" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 優惠券
                                             </div>
                                         </a></li>
-                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                    <li class="btn col-4 col-md-2 col-lg-12 myNotice"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="13" height="17" viewBox="0 0 20 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -482,4 +482,5 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
         </div>
     </div>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script src="./js/member.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
