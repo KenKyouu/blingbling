@@ -1,0 +1,231 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mb-signup .login {
+  width: 100%;
+  height: 165px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mb-signup .login .login-bg {
+  width: 100%;
+  height: 165px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.mb-signup .login .login-logo {
+  width: 200px;
+  height: 117px;
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+}
+
+.mb-signup .mb-login-bg2 {
+  width: 100%;
+  height: 502px;
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  z-index: 3;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr {
+  text-align: left;
+  margin: 0 8%;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-title {
+  width: 100%;
+  margin-left: 10%;
+  padding-top: 50px;
+  font-family: "GenSenRounded-B";
+  font-size: 24px;
+  color: #000000;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info input {
+  width: 80%;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #c2c2c2;
+  border: none;
+  border-bottom: 2px solid #4c4948;
+  outline: none;
+  padding-bottom: 8px;
+  padding-top: 20px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .password-input {
+  position: relative;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .password-input .eye-close {
+  position: absolute;
+  top: 19px;
+  right: 8.3%;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .password-corret-input {
+  width: 100%;
+  margin-left: 15px;
+  position: relative;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .password-corret-input .eye-close {
+  position: absolute;
+  top: 19px;
+  right: 11%;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .bd-input input {
+  width: 25.5%;
+  margin: 0 5px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .bd-input .bd-input-1 {
+  margin-left: 0;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .bd-input p {
+  padding-left: 12%;
+  padding-top: 3px;
+  text-align: left;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 11px;
+  color: #4c4948;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .sign-p {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 11px;
+  color: #4c4948;
+  text-align: left;
+  padding: 5px 30px 8px 0px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .sign-p a {
+  color: #154d7a;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .bg2-info .login-btn {
+  width: 263px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #2d827d;
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .or {
+  text-align: center;
+  padding-top: 20px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #4c4948;
+  padding-bottom: 10px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .orwith-icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .orwith-icon .fb-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #c2c2c24a;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .orwith-icon .google-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #c2c2c24a;
+  border-radius: 10px;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .not-member {
+  padding-top: 15px;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  text-align: center;
+  color: #4c4948;
+}
+
+.mb-signup .mb-login-bg2 .login-containerr .not-member a {
+  color: #7cb2af;
+}
+/*# sourceMappingURL=signup.css.map */
