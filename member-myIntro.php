@@ -5,6 +5,10 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
         <div class="containerr">
@@ -51,7 +55,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
 
                             <div class="memberbutton">
                                 <ul class="memberbutton">
-                                    <li id="tab01" class="btn col-4 col-md-2 col-lg-12 myIntro"><a href="#tab01">
+                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="14" height="14" viewBox="0 0 25 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +71,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 個人資訊
                                             </div>
                                         </a></li>
-                                    <li id="tab02" class="btn col-4 col-md-2 col-lg-12 myCollect"><a href="#tab02">
+                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="13" height="13" viewBox="0 0 25 23" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +84,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 我的收藏
                                             </div>
                                         </a></li>
-                                    <li id="tab03" class="btn col-4 col-md-2 col-lg-12 myOrder"><a href="#tab03">
+                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="15" height="13" viewBox="0 0 26 23" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +109,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 訂單管理
                                             </div>
                                         </a></li>
-                                    <li id="tab04" class="btn col-4 col-md-2 col-lg-12 myFriend"><a href="#tab04">
+                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="15" height="10.5" viewBox="0 0 27 20" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +146,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 關注好友
                                             </div>
                                         </a></li>
-                                    <li id="tab05" class="btn col-4 col-md-2 col-lg-12 myCoupon"><a href="#tab05">
+                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="20" height="17.5" viewBox="0 0 24 21" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +159,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                                 優惠券
                                             </div>
                                         </a></li>
-                                    <li id="tab06" class="btn col-4 col-md-2 col-lg-12 myNotice"><a href="#tab06">
+                                    <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
                                                 <svg width="13" height="17" viewBox="0 0 20 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -379,7 +383,8 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                 </div>
                             </div>
 
-                            <button class="editMyInfo">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn editMyInfo" data-toggle="modal" data-target="#exampleModalCenter">
                                 <p class="edit">編輯資訊</p>
                                 <svg width="17" height="18" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -394,91 +399,98 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                                         fill="#000000" />
                                 </svg>
                             </button>
+
+                            <!-- Modal -->
+                            <div class="modal modal-lg fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p class="editTitle">編輯個人資訊</p>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="my-details">
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 密碼</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="password" name="password" id="password" minlength="8" maxlength="12" placeholder="請設定8~12位數密碼(可用英文大小寫字母、數字)" required>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 確認密碼</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="password" name="confirmPassword" id="confirmPassword" minlength="8" maxlength="12" placeholder="請再次填入密碼" required>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 姓名</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="text" name="name" id="name" placeholder="您的姓名或暱稱" required>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 性別</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <select name="gender" placeholder="請選擇" id="gender" required>
+                                                            <option value="male">男</option>
+                                                            <option value="female">女</option>
+                                                            <option value="others">不顯示</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> Email</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="email" name="email" id="email" placeholder="您的電子郵件地址" required>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 生日</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
+                                                        <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 聯絡電話</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="tel" name="phone" id="phone" placeholder="您的聯絡電話" required>
+                                                    </div>
+                                                </div>
+                                                <div class="detail">
+                                                    <div class="detail-text">
+                                                        <p><span>*</span> 聯絡地址</p>
+                                                    </div>
+                                                    <div class="detail-input">
+                                                        <input type="text" name="address" id="address" placeholder="您的聯絡地址" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn true" data-dismiss="modal">儲存</button>
+                                            <button type="button" class="btn false" data-dismiss="modal">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- ------------lightbox-myDetails------------ -->
-
-    <div class="lightbox-myDetails">
-        <p class="editTitle">編輯個人資訊</p>
-        <div class="my-details">
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 密碼</p>
-                </div>
-                <div class="detail-input">
-                    <input type="password" name="password" id="password" minlength="8" maxlength="12" placeholder="請設定8~12位數密碼(可用英文大小寫字母、數字)" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 確認密碼</p>
-                </div>
-                <div class="detail-input">
-                    <input type="password" name="confirmPassword" id="confirmPassword" minlength="8" maxlength="12" placeholder="請再次填入密碼" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 姓名</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="name" id="name" placeholder="您的姓名或暱稱" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 性別</p>
-                </div>
-                <div class="detail-input">
-                    <select name="gender" placeholder="請選擇" id="gender" required>
-                        <option value="male">男</option>
-                        <option value="female">女</option>
-                        <option value="others">不顯示</option>
-                    </select>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> Email</p>
-                </div>
-                <div class="detail-input">
-                    <input type="email" name="email" id="email" placeholder="您的電子郵件地址" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 生日</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
-                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 聯絡電話</p>
-                </div>
-                <div class="detail-input">
-                    <input type="tel" name="phone" id="phone" placeholder="您的聯絡電話" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 聯絡地址</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="address" id="address" placeholder="您的聯絡地址" required>
-                </div>
-            </div>
-        </div>
-        <div class="detailsbtn">
-            <button class="true" type="submit" name="btn">儲存</button>
-            <button class="false" name="btn">取消</button>
         </div>
     </div>
 <?php include __DIR__ . '/parts/scripts.php'; ?>

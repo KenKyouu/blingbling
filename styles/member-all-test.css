@@ -453,7 +453,6 @@
 }
 .wrap .containerr .main .row .col .whiteBg .modal {
   height: auto;
-  padding-right: 0;
 }
 .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
   width: 375px;
@@ -2268,4 +2267,4 @@
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;
-}/*# sourceMappingURL=member-all.css.map */
+}/*# sourceMappingURL=member-all-test.css.map */
