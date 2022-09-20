@@ -63,104 +63,8 @@ body {
     background: url(../images/other_bg_paper.png) center center / cover repeat;
 }
 
-// .header {
-//     width: 100%;
-//     height: 56.5px;
-//     background-color: $super-dark;
-//     opacity: 80%;
-//     border-radius: 0 0 20px 20px;
-//     display: flex;
-
-//     .left {
-//         padding-left: 20px;
-//         width: 100%;
-
-//         h1.logo {
-//             width: 100%;
-
-//             a {
-//                 width: 100%;
-
-//                 img {
-//                     width: 75%;
-//                 }
-//             }
-//         }
-//     }
-
-//     .right {
-//         padding-right: 10px;
-//         width: 100%;
-//         display: flex;
-//         align-items: center;
-//         justify-content: flex-end;
-
-//         li {
-//             display: flex;
-//             align-items: center;
-
-//             ul {
-//                 margin: 0 10px;
-//             }
-
-//             ul.cart {
-//                 margin-bottom: 5px;
-//             }
-//         }
-//     }
-// }
-
-// .footer {
-//     margin-top: 30px;
-//     background-image: url(../images/footer-bg.svg);
-//     background-repeat: no-repeat;
-//     background-size: 160%;
-//     background-position: center;
-//     overflow: hidden;
-//     width: 100%;
-//     height: 257px;
-
-//     .footer-logo {
-//         padding-top: 30px;
-//         width: 20%;
-//         margin: auto;
-//     }
-
-//     .footer-nav {
-//         ul {
-//             margin: 35px 40px 0 40px;
-//             padding-bottom: 10px;
-//             display: flex;
-//             justify-content: space-between;
-//             border-bottom: 2px solid white;
-
-//             li {
-//                 a {
-//                     color: white;
-//                     font-family: "GenSenRounded-M";
-//                     font-size: $p-font-size;
-//                 }
-//             }
-//         }
-//     }
-
-//     .footer-social {
-//         margin: 35px 160px 0 160px;
-//         display: flex;
-//         justify-content: space-between;
-//     }
-
-//     .footer-c {
-//         margin-top: 35px;
-//         text-align: center;
-//         color: white;
-//         font-family: "Roboto";
-//         font-size: $ps-font-size;
-//     }
-// }
-
 .s-total-list-wrap {
-    // margin-top: 50px;
+    // padding-top: 50px;
 
     .container {
         width: 100%;
@@ -232,6 +136,23 @@ body {
     }
 }
 
+.s-total-list-wrap {
+    .container {
+        .s-list-info {
+            padding-top: 5rem;
+        }
+    }
+}
+
+@media (min-width: 482px) and (max-width: 767.98px) {
+    .s-total-list-wrap {
+        .container {
+            .s-list-info {
+                padding-top: 7rem;
+            }
+        }
+    }
+}
 
 //--------------------------------------fixed subtotal-----------
 .j-subtotal {
@@ -447,7 +368,7 @@ body {
 
 // ---------------------繳費資訊---------------------- // 
 .s-payment-info-wrap {
-    margin-top: 50px;
+    padding-top: 3.5rem;
 
     .container {
         width: 100%;
@@ -542,9 +463,122 @@ body {
     }
 }
 
+
+@media only screen and (min-width: 1400px) {
+
+    .payment-wrap,
+    .payment-deadline-wrap {
+        width: 75%;
+    }
+}
+
+// --------------------------訂單留言備註 -------------------------------//
+.s-order-remark-section {
+    padding-top: 3.5rem;
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        .row {
+            padding: 0 15px;
+
+            .col {
+                h2 {
+                    font-family: "GenSenRounded-B";
+                    font-size: $h6-font-size;
+                    color: $super-dark;
+                }
+            }
+        }
+
+        .s-remark-wrap {
+            width: 100%;
+
+            .s-input {
+                width: 100%;
+                margin-top: 1.5rem;
+                padding: 65px 25px;
+                border-radius: 10px;
+                background-color: $white;
+                box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.25);
+                border: none;
+                outline: none;
+            }
+        }
+
+        .row {
+            text-align: right;
+
+            .col {
+
+                text-align: right;
+
+                .s-order-text {
+                    color: $super-dark;
+                    font-family: "Roboto";
+                    font-size: $p-font-size;
+                    font-weight: 700;
+                    padding-top: 10px;
+                    border: 2px solid $super-dark;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    align-items: flex-end;
+                }
+
+                button {
+                    padding: 10px 30px;
+                    background-color: $super-dark;
+                    border: 1px solid $super-dark;
+                    color: white;
+                    border-radius: 10px;
+                    font-family: "Roboto";
+                    font-size: $ps-font-size;
+
+                }
+            }
+
+            .text-col {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .s-order-remark-section {
+        .container {
+            .s-order-remark-wrap {
+                width: 70%;
+                margin: 0 15px;
+
+                .s-remark-wrap {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .s-order-remark-section {
+        .container {
+            .s-order-remark-wrap {
+                width: 75%;
+
+                .s-remark-wrap {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
 //--------------------------progress-bar--------
 .j-progress-bar {
-    padding: 3.5rem 0 0 0;
+    padding-top: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -723,7 +757,7 @@ body {
     width: 100%;
     position: relative;
     margin-top: 3.5rem;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
 
     .j-list-bar {
         position: relative;
@@ -770,7 +804,7 @@ body {
     }
 
     .j-list-info {
-        // display: none;
+        display: none;
         background-color: $white;
         border-radius: 10px;
         box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
@@ -850,7 +884,7 @@ body {
 }
 
 .j-list.j-listopen {
-    margin-bottom: 3rem;
+    // margin-bottom: 2.5rem;
 
     .j-list-bar {
 
@@ -879,7 +913,7 @@ body {
 @media only screen and (min-width: 768px) {
     .j-list {
         width: 75%;
-        margin-bottom: 5rem;
+        // margin-bottom: 5rem;
 
         .j-list-bar {
             max-height: 100px;
@@ -959,7 +993,7 @@ body {
     .j-list {
         width: 75%;
         margin-top: 4rem;
-        margin-bottom: 13rem;
+        margin-bottom: 8rem;
 
         .j-list-bar {
             max-height: 120px;
@@ -981,7 +1015,7 @@ body {
     }
 }
 
-// ------------------------訂單摘要-----------------------------
+// ------------------------手機版訂單資訊-----------------------------
 .s-order-info-list-wrap {
     margin: 50px 15px;
     margin-bottom: 100px;
@@ -993,7 +1027,7 @@ body {
         margin: 0 auto;
 
         .order-list-section {
-            padding: 20% 15% 0;
+            padding: 20% 10% 0;
 
             .row {
                 margin: 0;
@@ -1029,9 +1063,98 @@ body {
     }
 }
 
+// ------------------- 電腦版訂單資訊--------------------------//
+.s-pcorder-info-list-section {
+    // margin-top: 2.5rem;
+
+    .container {
+        width: 100%;
+
+        .pcorder-list-wrap {
+            width: 75%;
+            height: 600px;
+            background: url(../images/cart3-pc-bg.svg) center center no-repeat;
+            background-size: contain;
+            justify-content: center;
+            align-items: center;
+            margin-left: -15px;
+
+            .pcorder-list-box {
+                display: flex;
+                width: 90%;
+                flex-wrap: wrap;
+                padding-left: 5.5rem;
+
+                .list-info {
+                    flex-direction: column;
+                    width: 40%;
+                    margin-top: -7.5rem;
+
+                    .row {
+                        .col {
+                            h3 {
+                                font-family: "GenSenRounded-B";
+                                font-size: $h6-font-size;
+                                color: $super-dark;
+                                font-weight: 700;
+                                margin: 1.6rem 0;
+                            }
+
+                            p {
+                                font-family: "Roboto";
+                                font-size: $ps-font-size;
+                                color: $super-dark;
+                                font-weight: 700;
+                                line-height: 1.875rem;
+                            }
+                        }
+                    }
+                }
+
+                .list-line {
+                    border-top: 5px solid #DADADA;
+                    width: 40%;
+                    height: 0.125rem;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .s-pcorder-info-list-section {
+        .container {
+            .pcorder-list-wrap {
+                .pcorder-list-box {
+                    padding-left: 8rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .s-pcorder-info-list-section {
+        .container {
+            .pcorder-list-wrap {
+                width: 75%;
+            }
+        }
+    }
+}
+
+// ------------------------------------------------------- //
+
 @media only screen and (min-width: 576px) {
     .s-order-info-list-wrap {
         margin: 0 30px;
+
+        .container {
+            .order-list-section {
+                padding: 20% 20% 0;
+            }
+        }
     }
 }
 
@@ -1053,50 +1176,13 @@ body {
     }
 
     .s-payment-info-wrap {
+        padding-top: 2rem;
+
         .container {
             .row {
                 .col {
                     h2 {
                         padding-left: 15px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 991px) and (max-width: 1199.98px) {
-    .s-order-info-list-wrap {
-        width: 70%;
-        margin: 0 30px;
-    }
-}
-
-.s-pcorder-info-list-wrap {
-    margin: 100px 15px;
-    margin-bottom: 100px;
-    margin-left: 30px;
-
-    .container {
-        width: 100%;
-        margin: 0 auto;
-
-        .pc-bg-wrap {
-
-            background: url(../images/cart3-pc-bg.svg) center center/100% 100% no-repeat;
-            background-size: contain;
-            width: 70%;
-
-            .pcorder-list-section {
-                padding: 20% 15% 0;
-
-                .row {
-                    margin: 0;
-
-                    .col {
-                        display: flex;
-                        justify-content: start;
-                        align-items: flex-start;
                     }
                 }
             }

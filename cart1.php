@@ -11,17 +11,6 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
     <div class="container">
         <div class="j-progress-bar">
             <div class="j-step-up">
-                <!-- <div class="j-step">
-                        <div class="j-svg-wrap">
-                            <svg width="20" height="15" viewBox="0 0 20 15" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M17.2114 0.213808L7.94052 9.48013C7.6553 9.76521 7.19535 9.76521 6.91013 9.48013L2.78859 5.36063C2.50337 5.07555 2.04343 5.07555 1.75821 5.36063L0.213914 6.90415C-0.0713047 7.18922 -0.0713047 7.64895 0.213914 7.93402L6.91013 14.6269C7.19535 14.912 7.6553 14.912 7.94052 14.6269L10.0013 12.5672L19.7861 2.78722C20.0713 2.50214 20.0713 2.04242 19.7861 1.75734L18.2418 0.213808C17.9566 -0.0712695 17.4941 -0.0712695 17.2114 0.213808Z"
-                                    fill="black" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="j-line"></div> -->
                 <div class="j-step1-num">
                     <div class="j-num1">1</div>
                 </div>
@@ -71,20 +60,6 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                 </div>
                 <div class="j-list-title">
                     <h5>訂購清單</h5>
-                    <!-- <div class="j-list-icon">
-                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11.103 11.4978L19.5574 2.66869C19.6976 2.52368 19.809 2.35115 19.8849 2.16106C19.9609 1.97097 20 1.76708 20 1.56115C20 1.35522 19.9609 1.15133 19.8849 0.961244C19.809 0.771154 19.6976 0.598626 19.5574 0.453612C19.277 0.163076 18.8978 0 18.5024 0C18.1071 0 17.7279 0.163076 17.4475 0.453612L9.96573 8.17519L2.55877 0.453612C2.27841 0.163076 1.89915 0 1.50384 0C1.10852 0 0.729267 0.163076 0.448906 0.453612C0.307518 0.598083 0.195036 0.770368 0.117979 0.960483C0.0409222 1.1506 0.000822067 1.35476 0 1.56115C0.000822067 1.76754 0.0409222 1.97171 0.117979 2.16182C0.195036 2.35194 0.307518 2.52422 0.448906 2.66869L8.90332 11.4978C9.04344 11.6562 9.21351 11.7825 9.40279 11.8689C9.59208 11.9554 9.79649 12 10.0031 12C10.2098 12 10.4142 11.9554 10.6035 11.8689C10.7928 11.7825 10.9628 11.6562 11.103 11.4978Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M8.89704 0.502188L0.44262 9.33131C0.302369 9.47632 0.191049 9.64885 0.115081 9.83894C0.0391125 10.029 0 10.2329 0 10.4388C0 10.6448 0.0391125 10.8487 0.115081 11.0388C0.191049 11.2288 0.302369 11.4014 0.44262 11.5464C0.722981 11.8369 1.10224 12 1.49755 12C1.89287 12 2.27212 11.8369 2.55248 11.5464L10.0343 3.82481L17.4412 11.5464C17.7216 11.8369 18.1008 12 18.4962 12C18.8915 12 19.2707 11.8369 19.5511 11.5464C19.6925 11.4019 19.805 11.2296 19.882 11.0395C19.9591 10.8494 19.9992 10.6452 20 10.4388C19.9992 10.2325 19.9591 10.0283 19.882 9.83818C19.805 9.64806 19.6925 9.47578 19.5511 9.33131L11.0967 0.502188C10.9566 0.343848 10.7865 0.217482 10.5972 0.131051C10.4079 0.0446205 10.2035 -9.53674e-07 9.99686 -9.53674e-07C9.79021 -9.53674e-07 9.5858 0.0446205 9.39651 0.131051C9.20722 0.217482 9.03716 0.343848 8.89704 0.502188Z"
-                                    fill="white" />
-                            </svg>
-                        </div> -->
                 </div>
             </div>
 
@@ -98,7 +73,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-01.jpeg" alt="">
+                        <img src="./images/products/populer-01.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>Roborock 石頭科技 掃地機器人S7+(小米生態鏈-台灣公司貨)</p>
@@ -150,7 +125,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-02.jpeg" alt="">
+                        <img src="./images/products/populer-02.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>Jo Malone 香水禮盒(英國梨與小蒼蘭香水+鼠尾草與海鹽)</p>
@@ -202,7 +177,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-03.jpeg" alt="">
+                        <img src="./images/products/populer-03.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>COACH 立體馬車緹花LOGO卡夾鑰匙零錢包-櫻花卡其粉</p>
@@ -254,7 +229,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-04.jpeg" alt="">
+                        <img src="./images/products/populer-04.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>SNUGGLE香氛室內擴香100mlX3入組(/小蒼蘭/雪松/茉莉)</p>
@@ -306,7 +281,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-05.jpeg" alt="">
+                        <img src="./images/products/populer-05.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>ONE BOY UPF50+防曬冰感A+級機能冰鋒衣 - 扶桑花S</p>
@@ -377,13 +352,16 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                         <p>加購包裝 & 卡片服務：</p>
                         <div class="s-package-card-btn d-flex">
                             <button>客製化包裝</button>
-                            <div class="s-package-card-radio d-flex pl-4">
-                                <label class="s-point d-flex">
+                            <div class="s-package-card-radio d-flex pl-3">
+                                <label class="j-point d-flex">
                                     <input type="radio" name="default-package" class="default-package">
+                                    <!-- <span class="j-checkmark-r"></span> -->
                                     <h3 class="pl-2 pt-2">Bling 幫我選</h3>
                                 </label>
-                                <label class="d-flex pl-3">
+
+                                <label class="j-point d-flex pl-3">
                                     <input type="radio" name="default-package" class="default-package">
+                                    <!-- <span class="j-checkmark-r"></span> -->
                                     <h3 class="pl-2 pt-2">不需要包裝</h3>
                                 </label>
                             </div>
@@ -399,11 +377,11 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                         <div class="s-package-card-btn d-flex">
                             <p class="money-discount">NT$ 100</p>
                             <div class="s-package-card-radio d-flex pl-4">
-                                <label class="d-flex">
+                                <label class="d-flex j-point">
                                     <input type="radio" name="default-package" class="default-package">
                                     <h3 class="pl-2 pt-1">全部折抵</h3>
                                 </label>
-                                <label class="d-flex pl-3">
+                                <label class="d-flex pl-3 j-point">
                                     <input type="radio" name="default-package" class="default-package">
                                     <h3 class="pl-2 pt-1">不使用</h3>
                                 </label>
@@ -418,7 +396,36 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 
                         <p>我專屬的優惠券：</p>
                         <div class="s-package-card-btn d-flex">
-                            <button class="w-100">選擇優惠券</button>
+                            <button class="coupon-pc-btn w-100">選擇優惠券</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="s-coupon-pc-lightbox">
+                    <div class="s-coupon-lightbox-black">
+                    </div>
+
+                    <div class="s-coupon-lightbox-bg">
+                        <div class="s-coupon-select">
+                            <div class="coupon-radio-card w-100">
+                                <div class="coupon-close-icon">
+                                    <svg class="coupon-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.329 7.44126L15.7695 3.00293C16.0768 2.69579 16.0768 2.20049 15.7695 1.89335L14.1057 0.230356C13.7984 -0.0767853 13.3029 -0.0767853 12.9956 0.230356L8.55507 4.6687C8.24777 4.97584 7.75223 4.97584 7.44493 4.6687L3.00441 0.230356C2.69712 -0.0767853 2.20158 -0.0767853 1.89428 0.230356L0.23047 1.89335C-0.0768233 2.20049 -0.0768233 2.69579 0.23047 3.00293L4.67099 7.44126C4.97829 7.7484 4.97829 8.2437 4.67099 8.55084L0.23047 12.9892C-0.0768233 13.2963 -0.0768233 13.7916 0.23047 14.0988L1.89428 15.7617C2.20158 16.0689 2.69712 16.0689 3.00441 15.7617L7.44493 11.3234C7.75223 11.0163 8.24777 11.0163 8.55507 11.3234L12.9956 15.7617C13.3029 16.0689 13.7984 16.0689 14.1057 15.7617L15.7695 14.0988C16.0768 13.7916 16.0768 13.2963 15.7695 12.9892L11.329 8.55084C11.0245 8.2437 11.0245 7.74563 11.329 7.44126Z" fill="#000" />
+                                    </svg>
+
+                                </div>
+                                <label class="d-flex j-point">
+                                    <input type="radio" name="coupon-radio" class="coupon-radio">
+                                    <img class="w-100" src="./images/cart1-coupon-01.png" alt="">
+                                </label>
+
+                                <label class="d-flex j-point">
+                                    <input type="radio" name="coupon-radio" class="coupon-radio">
+                                    <img class="w-100" src="./images/cart1-coupon-02.png" alt="">
+                                </label>
+                            </div>
+                            <button class="coupon-apply-btn">確定使用！Bling</button>
                         </div>
                     </div>
                 </div>
@@ -450,7 +457,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                 <button>客製化包裝</button>
 
                 <div class="package-radio">
-                    <label class="d-flex">
+                    <label class="d-flex j-point">
                         <input type="radio" name="default-package" class="default-package">
                         <h3 class="pl-3">Bling Bling
                             幫我選</h3>
@@ -458,7 +465,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                 </div>
 
                 <div class="package-radio">
-                    <label class="d-flex">
+                    <label class="d-flex j-point">
                         <input type="radio" name="default-package" class="default-package">
                         <h3 class="pl-3">不需要包裝</h3>
                     </label>
@@ -471,6 +478,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 <!------------------------ 折抵優惠區------------------------------ -->
 <div class="s-discount-wrap d-lg-none">
     <div class="container">
+
         <div class="row no-gutters s-discount-area">
             <div class="col col-12 title-text-col">
                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -485,7 +493,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                 </div>
 
                 <div class="col-6 d-flex">
-                    <label class="discount-radio d-flex">
+                    <label class="discount-radio j-point d-flex">
                         <input type="radio" name="discount-radio" class="discount-radio">
                         <h3 class="pl-2">全部折抵</h3>
                     </label>
@@ -495,10 +503,39 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
             <div class="col-12 coupon-col">
                 <div class="col-12 d-flex ml-3">
                     <h3>優惠券有：</h3>
-                    <button>選擇優惠券</button>
+                    <button class="coupon-btn">選擇優惠券</button>
                 </div>
             </div>
         </div>
+
+        <div class="s-coupon-lightbox">
+            <div class="s-coupon-lightbox-black">
+            </div>
+
+            <div class="s-coupon-lightbox-bg">
+                <div class="s-coupon-select">
+                    <div class="coupon-radio-card w-100">
+                        <div class="coupon-close-icon">
+                            <svg class="coupon-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.329 7.44126L15.7695 3.00293C16.0768 2.69579 16.0768 2.20049 15.7695 1.89335L14.1057 0.230356C13.7984 -0.0767853 13.3029 -0.0767853 12.9956 0.230356L8.55507 4.6687C8.24777 4.97584 7.75223 4.97584 7.44493 4.6687L3.00441 0.230356C2.69712 -0.0767853 2.20158 -0.0767853 1.89428 0.230356L0.23047 1.89335C-0.0768233 2.20049 -0.0768233 2.69579 0.23047 3.00293L4.67099 7.44126C4.97829 7.7484 4.97829 8.2437 4.67099 8.55084L0.23047 12.9892C-0.0768233 13.2963 -0.0768233 13.7916 0.23047 14.0988L1.89428 15.7617C2.20158 16.0689 2.69712 16.0689 3.00441 15.7617L7.44493 11.3234C7.75223 11.0163 8.24777 11.0163 8.55507 11.3234L12.9956 15.7617C13.3029 16.0689 13.7984 16.0689 14.1057 15.7617L15.7695 14.0988C16.0768 13.7916 16.0768 13.2963 15.7695 12.9892L11.329 8.55084C11.0245 8.2437 11.0245 7.74563 11.329 7.44126Z" fill="#000" />
+                            </svg>
+
+                        </div>
+                        <label class="d-flex j-point">
+                            <input type="radio" name="coupon-radio" class="coupon-radio">
+                            <img class="w-100" src="./images/cart1-coupon-01.png" alt="">
+                        </label>
+
+                        <label class="d-flex j-point">
+                            <input type="radio" name="coupon-radio" class="coupon-radio">
+                            <img class="w-100" src="./images/cart1-coupon-02.png" alt="">
+                        </label>
+                    </div>
+                    <button class="coupon-apply-btn">確定使用！Bling</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -661,19 +698,20 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
     </div>
 </div>
 
-
-<div class="s-additional-product-wrap">
+<!-- --------------------------------商品加購區---------------------------- -->
+<div class="s-additional-title-wrap">
     <div class="container">
         <div class="row">
-            <div class="col col-12 d-flex">
-                <h5>節慶禮品加購區</h5>
-                <svg width="100" height="15" id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
+            <div class="col">
+                <h3>節慶禮品加購區</h3>
+            </div>
+            <div class="col">
+                <svg class="w-50 svg-col" id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                     <defs>
                         <style>
                             .cls-1 {
-                                fill: #000;
+                                fill: none;
                                 stroke: #000;
-                                stroke-width: 0.05rem;
                             }
                         </style>
                     </defs>
@@ -683,148 +721,306 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                     </g>
                 </svg>
             </div>
-            <div class="col col-12 cart1-ribbon-col">
-                <svg width="334" height="210" viewBox="0 0 334 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M322.612 66.9011C307.178 66.9046 297.942 62.3825 257.325 49.262C241.464 43.2415 223.701 40.0623 214.286 46.0089C214.286 46.0089 214.182 46.0715 213.998 46.1896C213.952 46.2191 213.906 46.2486 213.849 46.2817L213.862 46.2628C213.862 46.2628 213.853 46.2754 213.849 46.2817C210.179 48.7672 207.868 52.7225 207.589 58.5602C210.922 58.8462 213.347 59.5363 213.347 59.5363C247.87 71.1154 274.062 73.6074 290.229 73.6093C293.541 73.6073 296.874 73.4066 300.196 72.9935C307.867 72.0433 315.472 70.0044 322.636 66.903C322.632 66.9093 322.623 66.8976 322.607 66.9074L322.612 66.9011Z" fill="#D8B9C2" />
-                    <path d="M211.804 54.6255C209.379 56.1454 196.553 64.3556 192.693 69.3096C189.802 72.0523 188.137 76.7595 189.397 84.6507C191.326 96.7511 197.689 112.624 198.492 123.851C198.69 126.617 198.543 129.099 197.921 131.171C197.357 133.041 196.404 134.587 194.925 135.704C200.31 132.192 211.521 122.708 212.939 121.494C213.049 121.414 213.096 121.367 213.096 121.367C218.93 116.844 219.916 106.471 211.48 87.4185C207.419 78.2619 205.83 71.1952 206.092 65.847C206.346 60.5103 208.459 56.8945 211.815 54.6223L211.804 54.6255Z" fill="#FF8080" />
-                    <path d="M199.444 122.397C193.777 121.585 187.413 119.408 181.23 116.411C166.241 109.133 145.242 98.3738 130.037 102.557L129.991 102.568C124.406 104.117 119.602 107.691 116.169 114.199C129.502 115.524 147.258 122.772 169.958 131.507C183.999 136.904 191.881 137.121 195.903 134.09C195.903 134.09 195.911 134.086 195.927 134.078C195.927 134.078 195.931 134.073 195.935 134.067C197.385 132.964 198.331 131.444 198.886 129.602C199.503 127.555 199.638 125.114 199.448 122.392L199.444 122.397Z" fill="#D8B9C2" />
-                    <path d="M120.523 112.215C119.675 112.389 106.982 115.159 89.0311 127.351C88.9569 127.402 88.8726 127.456 88.7984 127.507C83.6896 131.011 79.9583 137.225 77.4933 146.966C74.4945 158.828 72.6571 168.849 69.7359 176.338C69.6757 176.496 69.6132 176.647 69.5468 176.803C68.4288 179.598 67.1423 182.032 65.5849 184.059C64.5633 185.377 63.4231 186.531 62.1307 187.5C61.6043 187.889 61.0545 188.255 60.4751 188.594L86.2256 174.478L87.0596 174.021C95.334 169.162 98.09 157.284 102.406 136.027C103.381 131.243 104.74 127.287 106.458 124.052C109.951 117.429 114.836 113.798 120.523 112.215Z" fill="#FF8080" />
-                    <path d="M47.3834 172.467C45.8849 181.364 44.9129 181.732 45.0391 181.763C45.1653 181.794 36.2603 185.035 26.8754 184.704C45.232 190.948 55.6833 191.641 62.2085 188.031L62.3865 187.934L62.4293 187.912C62.9378 187.618 63.4235 187.295 63.8885 186.95C65.0304 186.095 66.0378 185.075 66.9403 183.91C68.3253 182.117 69.4585 179.971 70.4407 177.5C70.4994 177.362 70.5491 177.227 70.6077 177.089C68.2783 176.862 65.7129 176.477 62.8889 175.956C58.4184 175.132 53.2954 173.957 47.3854 172.474L47.3834 172.467Z" fill="#D8B9C2" />
-                </svg>
-            </div>
         </div>
-
-        <div class="row additional-product-row no-gutters">
-            <div class="col col-12">
-                <div class="row no-gutters">
-                    <div class="col product-col d-flex ml-3">
-                        <div class="poduct-card">
-                            <div class="img-wrap">
-                                <div class="img-bg">
-                                    <img src="../images/products/festival-01.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="info-wrap">
-                                <h3 class="info-title">創意小物館 夜光月球遙控小夜燈</h3>
-                                <div class="info-price-btn">
-                                    <p class="pt-2">NT$ 296</p>
-                                    <button>
-                                        <svg width="30" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
-                                            <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
-                                            <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="#fff" />
-                                            <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
-                                            <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col product-col d-flex">
-                        <div class="poduct-card">
-                            <div class="img-wrap">
-                                <div class="img-bg">
-                                    <img src="../images/products/festival-02.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="info-wrap">
-                                <h3 class="info-title">怦然心動 永生花小夜燈</h3>
-                                <div class="info-price-btn">
-                                    <p class="pt-2">NT$ 1,480</p>
-                                    <button>
-                                        <svg width="30" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
-                                            <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
-                                            <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="#fff" />
-                                            <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
-                                            <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col product-col d-flex">
-                            <div class="poduct-card">
-                                <div class="img-wrap">
-                                    <div class="img-bg">
-                                        <img src="../images/products/festival-03.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <div class="info-wrap">
-                                    <h3 class="info-title">太空人磁懸浮藍芽音箱 坐姿款 - 銀色</h3>
-                                    <div class="info-price-btn">
-                                        <p class="pt-2">NT$ 1,052</p>
-                                        <button>
-                                            <svg width="15" height="15" viewBox="0 0 26 23" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z"
-                                                    fill="#fff" stroke="#fff" stroke-miterlimit="10" />
-                                                <path
-                                                    d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z"
-                                                    fill="#fff" stroke="#fff" />
-                                                <path
-                                                    d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z"
-                                                    fill="#fff" stroke="#fff" />
-                                                <path
-                                                    d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z"
-                                                    fill="#fff" stroke="#fff" />
-                                                <path
-                                                    d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z"
-                                                    fill="#fff" stroke="#fff" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="col product-col d-flex">
-                            <div class="poduct-card">
-                                <div class="img-wrap">
-                                    <div class="img-bg">
-                                        <img src="../images/products/festival-04.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <div class="info-wrap">
-                                    <h3 class="info-title">Light光印樣 月亮與小兔 中秋小夜燈</h3>
-                                    <div class="info-price-btn">
-                                        <p class="pt-2">NT$ 856</p>
-                                        <button>
-                                            <svg width="15" height="15" viewBox="0 0 26 23" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z"
-                                                    fill="#fff" stroke="#fff" stroke-miterlimit="10" />
-                                                <path
-                                                    d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z"
-                                                    fill="#fff" stroke="#fff" />
-                                                <path
-                                                    d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z"
-                                                    fill="#fff" stroke="#fff" />
-                                                <path
-                                                    d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z"
-                                                    fill="#fff" stroke="#fff" />
-                                                <path
-                                                    d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z"
-                                                    fill="#fff" stroke="#fff" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
+<div class="s-additional-product-section">
+    <div class="additional-product-wrap">
+
+        <div class="additional-product-box">
+            <div class="additional-product-item">
+                <div class="additional-product-row d-flex">
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-01.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>創意小物館 夜光月球遙控小夜燈</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice">296</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-02.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>怦然心動 永生花小夜燈</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">1480</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-03.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>太空人磁懸浮藍芽音箱 坐姿款 - 銀色</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">1052</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-04.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>Light光印樣 月亮與小兔 中秋小夜燈</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">864</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-05.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>La Millou 豆豆安撫兔禮盒組</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice">1998</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-06.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>mamaway 無袖傘狀背心+寬褲兩件式套裝 綠-S</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">1680</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-07.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>Lassig 時尚完美大開口後背媽媽包 粉色-M</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">2,129</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-08.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>小王子聯名 閃耀星空8結彌月提盒</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">300</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/populer-01.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>La Millou 豆豆安撫兔禮盒組</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice">1998</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/populer-02.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>mamaway 無袖傘狀背心+寬褲兩件式套裝 綠-S</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">1680</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/populer-03.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>Lassig 時尚完美大開口後背媽媽包 粉色-M</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">2,129</p>
+                                <button>
+                                    <svg width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" />
+                                        <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#fff" stroke="#fff" />
+                                        <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#fff" stroke="fff" />
+                                        <path d="M5.38233 20.701C5.38233 21.2252 5.80761 21.6507 6.33276 21.6507C6.85792 21.6507 7.2832 21.2252 7.2832 20.701C7.2832 20.1767 6.8579 19.7512 6.33276 19.7512C5.80762 19.7512 5.38233 20.1767 5.38233 20.701Z" fill="#fff" stroke="#fff" />
+                                        <path d="M5.51918 17.9509H19.7908C19.8666 17.9509 19.9277 17.8895 19.9277 17.8143V17.8117C19.9277 17.7365 19.8666 17.675 19.7908 17.675H5.51918C5.44338 17.675 5.38221 17.7365 5.38221 17.8117V17.8143C5.38221 17.8907 5.44207 17.9509 5.51918 17.9509Z" fill="#fff" stroke="#fff" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 <?php include __DIR__ . '/parts/footer.php'; ?>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script src="./js/cart1.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
