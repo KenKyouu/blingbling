@@ -138,6 +138,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                         <div class="j-orderer">
                                             <h5 class="">訂購人資料</h5>
                                             <div class="j-people-info">
+                                                
                                                 <div class="j-check j-form-group">
                                                     <label class="j-point">同會員資料
                                                         <input type="checkbox" />

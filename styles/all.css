@@ -336,7 +336,11 @@ body {
 }
 
 .footer-mobile .footer-nav ul {
+<<<<<<< HEAD
+  margin: 35px 40px 0 40px;
+=======
   margin: 35px 70px 0 70px;
+>>>>>>> a6fc11ca463878b3b1229ad303a34474f1b8503c
   padding-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
