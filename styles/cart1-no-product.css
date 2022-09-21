@@ -232,7 +232,8 @@ body {
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding: 15px;
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap {

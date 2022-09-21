@@ -815,10 +815,15 @@ $bold: 900;
                                 border-radius: 10px;
                                 font-family: "GenSenRounded-B";
                                 font-size: $ps-font-size;
-                                color: $white;
-                                background-color: $lake-green;
-                                border: none;
+                                color: $lake-green;
+                                background-color: rgba(255, 255, 255, 0);
+                                border: 3px solid $light-lake-green;
                                 margin-bottom: 20px;
+                            }
+                            .uploadNewFriend:hover {
+                                background-color: $lake-green;
+                                color: $white;
+                                border: none;
                             }
 
                             .modal {
@@ -1038,14 +1043,21 @@ $bold: 900;
                                 .deleteFriendIcon {
                                     width: 15%;
                                     text-align: right;
+
+                                    button {
+                                        // width: 20px;
+                                        // height: 20px;
+                                    }
                                     .modal {
+                                        display: flex !important;
+                                        justify-content: center;
+                                        align-items: center;
                                         .modal-dialog {
-                                            // width: 90%;
                                                 max-width: 400px;
                                                 font-family: "GenSenRounded-B";
                                                 font-weight: $bold;
                                                 text-align: center;
-                                                background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+                                                background: url("../images/error-bg.png")center center/100% auto no-repeat;
                                                 padding: 76px 0;
                                                 border: none;
                                             .modal-content {
@@ -1588,9 +1600,10 @@ $bold: 900;
                                         .modal {
                                             width: auto;
                                             left: 0;
-                                            // padding-top: 1.4rem;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
                                             .modal-dialog {
-                                                // width: auto;
                                                 margin: 0;
                                                 display: flex;
                                                 align-items: center;
@@ -1776,6 +1789,16 @@ $bold: 900;
                                                     fill: $white;
                                                     path {
                                                         fill: $white;
+                                                    }
+                                                }
+                                                svg.ordersvg {
+                                                    width: 16px;
+                                                    height: 16px;
+                                                    margin-bottom: 2px;
+                                                    fill: $white;
+                                                    path {
+                                                        fill: $white;
+                                                        stroke: $white;
                                                     }
                                                 }
                                             }
@@ -2058,8 +2081,13 @@ $bold: 900;
                                     padding-right: 40px;
                                 }
 
-                                button.uploadNewFriend {
+                                button.btn {
                                     margin-bottom: 0;
+                                }
+                                button.btn:hover {
+                                    background-color: $lake-green;
+                                    color: $white;
+                                    border: none;
                                 }
 
                                 .modal {

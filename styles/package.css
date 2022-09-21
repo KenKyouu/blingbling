@@ -266,7 +266,6 @@
 }
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-1 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -277,7 +276,6 @@
 }
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-2 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -289,7 +287,6 @@
 }
 .decorateSection .decorateSection-container .boxStyle .boxStyle-wrap .boxStyle-3 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -387,7 +384,6 @@
 }
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-1 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -398,7 +394,6 @@
 }
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-2 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -410,7 +405,6 @@
 }
 .cardDecorateSection .cardDecorateSection-container .boxStyle .boxStyle-wrap .boxStyle-3 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -437,7 +431,6 @@
 }
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-1 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -448,7 +441,6 @@
 }
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-2 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -460,7 +452,6 @@
 }
 .cardDecorateSection .cardDecorateSection-container .cardStyleBox .cardStyle-wrap .cardStyle-3 {
   margin-right: 10px;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   display: flex;
@@ -534,7 +525,6 @@
   width: 90px;
   text-align: center;
   margin-right: 10px;
-  -ms-flex: 0 0 33.3%;
   flex: 0 0 33.3%;
   max-width: 33.3%;
   padding: 2px 5px;
@@ -905,7 +895,6 @@
   width: 130px;
   text-align: center;
   margin-right: 30px;
-  -ms-flex: 0 0 33.3%;
   flex: 0 0 33.3%;
   max-width: 33.3%;
   padding: 6px 5px;
