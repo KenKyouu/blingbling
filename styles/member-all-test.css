@@ -117,7 +117,6 @@
 }
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
-  color: #4c4948;
 }
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
   font-family: "GenSenRounded-M";
@@ -810,6 +809,60 @@
   width: 15%;
   text-align: right;
 }
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  padding: 76px 0;
+  border: none;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content {
+  width: auto;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning .friend-warn-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning .friend-warn-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-footer button.true {
+  width: 98px;
+  height: 38px;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-footer button.false {
+  width: 98px;
+  height: 38px;
+  border: 3px solid #000000;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .wrap .containerr .main .row .col .whiteBg {
   width: 100%;
   height: auto;
@@ -1171,6 +1224,27 @@
     align-items: center;
     justify-content: center;
   }
+  .wrap .containerr .main .row .col .whiteBg .newFriend .modal {
+    width: auto;
+    left: auto;
+    padding-top: 1.4rem;
+  }
+  .wrap .containerr .main .row .col .whiteBg .newFriend .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
+    width: auto;
+    left: 0;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 576px) {
   .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
@@ -1271,14 +1345,16 @@
     width: 35%;
     text-align: right;
     padding-right: 20px;
+    fill: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
     width: 16px;
     height: 16px;
     margin-bottom: 2px;
+    fill: #ffffff;
   }
-  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg :target {
-    color: #4c4948;
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg path {
+    fill: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
     width: 65%;
@@ -2175,4 +2251,4 @@
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;
-}/*# sourceMappingURL=member-all.css.map */
+}/*# sourceMappingURL=member-all-test.css.map */

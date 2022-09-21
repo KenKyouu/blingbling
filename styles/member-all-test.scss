@@ -212,7 +212,6 @@ $bold: 900;
                                         .btnsvg {
                                             svg {
                                                 margin-bottom: 5px;
-                                                color: $dark-gray;
                                             }
                                         }
 
@@ -1039,6 +1038,72 @@ $bold: 900;
                                 .deleteFriendIcon {
                                     width: 15%;
                                     text-align: right;
+                                    .modal {
+                                        .modal-dialog {
+                                            // width: 90%;
+                                                max-width: 400px;
+                                                font-family: "GenSenRounded-B";
+                                                font-weight: $bold;
+                                                text-align: center;
+                                                background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+                                                padding: 76px 0;
+                                                border: none;
+                                            .modal-content {
+                                                width: auto;
+                                                .modal-body {
+                                                    .friend-warning {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 10px 30px;
+                                            
+                                                        .friend-warn-icon {
+                                                            margin-right: 20px;
+                                                            padding-bottom: 10px;
+                                                        }
+                                            
+                                                        .friend-warn-text {
+                                                            font-size: $h6-font-size;
+                                                            color: $super-dark;
+                                                            padding-bottom: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                .modal-footer {
+                                                    button.true {
+                                                        width: 98px;
+                                                        height: 38px;
+                                                        border: none;
+                                                        background-color: $super-dark;
+                                                        border-radius: 10px;
+                                                        color: $white;
+                                                        font-size: $p-font-size;
+                                                        // padding: 8px 30px;
+                                                        margin-top: 10px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                        
+                                                    button.false {
+                                                        width: 98px;
+                                                        height: 38px;
+                                                        border: 3px solid $super-dark;
+                                                        background-color: rgba(0, 0, 0, 0);
+                                                        border-radius: 10px;
+                                                        color: $super-dark;
+                                                        font-size: $p-font-size;
+                                                        // padding: 8px 30px;
+                                                        margin-top: 10px;
+                                                        margin-left: 30px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
                         }
@@ -1484,6 +1549,9 @@ $bold: 900;
             .main {
                 .row {
                     .col {
+
+                        // -----MYINTRO-----
+
                         .whiteBg {
                             .modal {
                                 width: auto;
@@ -1494,6 +1562,42 @@ $bold: 900;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                }
+                            }
+                        }
+
+                        // -----FRIEND-----
+                        .whiteBg {
+                            .newFriend {
+                                .modal {
+                                    width: auto;
+                                    left: auto;
+                                    padding-top: 1.4rem;
+                                    .modal-dialog {
+                                        margin: 0;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+
+                            .myFriendsGroup {
+                                .friendList {
+                                    .deleteFriendIcon {
+                                        .modal {
+                                            width: auto;
+                                            left: 0;
+                                            // padding-top: 1.4rem;
+                                            .modal-dialog {
+                                                // width: auto;
+                                                margin: 0;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1663,14 +1767,15 @@ $bold: 900;
                                                 width: 35%;
                                                 text-align: right;
                                                 padding-right: 20px;
+                                                fill: $white;
 
                                                 svg {
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
-
-                                                    :target {
-                                                        color: $dark-gray;
+                                                    fill: $white;
+                                                    path {
+                                                        fill: $white;
                                                     }
                                                 }
                                             }
