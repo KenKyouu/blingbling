@@ -2,7 +2,7 @@
 if (!isset($title)) {
     $title = 'BlingBling有禮';
 } else {
-    $title = $title . '｜K';
+    $title = $title . '｜BlingBling有禮';
 }
 ?>
 <!DOCTYPE html>
@@ -17,6 +17,7 @@ if (!isset($title)) {
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/all.css" />
     <link rel="stylesheet" href="./styles/product-list.css" />
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body>

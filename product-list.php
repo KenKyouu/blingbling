@@ -1,6 +1,17 @@
 <?php
 require __DIR__ . '/parts/connect_db.php';
 $pageName = 'product_list'; // 頁面名稱，可以自定義
+
+$perPage = 4; // 每頁最多有幾筆
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+$cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
+$lowp = isset($_GET['lowp']) ? intval($_GET['lowp']) : 0; // 篩選的最低價格
+$highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高價格
+
+$qsp = []; // query string parameters
+
+$cates = $pdo->query("SELECT * FROM class WHERE parent=0")->fetchAll();
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -8,20 +19,23 @@ $pageName = 'product_list'; // 頁面名稱，可以自定義
 <div class="content">
     <div class="banner">
         <div class="class">
-            <h3>男裝</h3>
+            <?php foreach ($cates as $c) :
+                $title = $c['sid'] == $cate ? $c['name'] : ''; ?>
+                <h3>
+                    <?= $title ?></h3>
+            <?php endforeach ?>
         </div>
     </div>
     <div class="slider">
         <div class="slider-bar">
             <ul>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
-                <li><a href="#">上衣</a></li>
+                <?php foreach ($cates as $c) : ?>
+                    <li><a href="?<?php $tmp['cate'] = $c['sid'];
+                                    echo http_build_query($tmp); ?>">
+                            <?= $c['name'] ?>
+                        </a>
+                    </li>
+                <?php endforeach ?>
             </ul>
         </div>
     </div>
