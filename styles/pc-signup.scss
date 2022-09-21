@@ -1,157 +1,162 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  // 顏色設定
-  $super-dark: #000000;
-  $dark-red: #a31c2d;
-  $pink: #ca3f68;
-  $red-pink: #d45a6a;
-  $light-pink: #ee92ad;
-  $dark-green: #2f5e36;
-  $green: #7ea083;
-  $lake-green: #2d827d;
-  $light-lake-green: #7cb2af;
-  $sky-blue: #5292b9;
-  $light-sky-blue: #9fc8e1;
-  $dark-blue: #154d7a;
-  $blue: #548fbe;
-  $brown: #7a482d;
-  $khaki: #b28064;
-  $orange: #cb6b28;
-  $light-orange: #e1a77e;
-  $coral: #bd392a;
-  $light-coral: #f07f72;
-  $dark-gray: #4c4948;
-  $gray: #c2c2c2;
-  $yellow: #ffcd51;
-  $light-yellow: #ffe39f;
-  $skin: #d4cfc6;
-  $white: #ffffff;
-  $light-brown: #d4cfc6;
-  $deep-brown: #554d49;
-  
-  // 字體設定
-  @font-face {
-    font-family: "GenSenRounded-M";
-    src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
-      url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "GenSenRounded-B";
-    src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
-      url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/RobotoFlex.woff") format("woff"),
-      url("../fonts/RobotoFlex.ttf") format("truetype");
-  }
-  
-  // 字體大小設定
-  // 不分字型
-  $h1-font-size: 80px;
-  $h2-font-size: 48px;
-  $h3-font-size: 36px;
-  $h4-font-size: 32px;
-  $h5-font-size: 24px;
-  $h6-font-size: 20px;
-  $p-font-size: 16px;
-  $ps-font-size: 14px;
-  
-  // 字體粗細
-  // 細字體不用下font-weight，粗字體再用下列變數
-  // ex: font-weight: $bold;
-  $bold: 900;
-  
-  // 以下兩種範例
-  
-  // h2.chinese {
-  //   font-family: "GenSenRounded-M";
-  //   font-size: 48px;
-  //   font-weight: $bold;
-  //   color: $coral;
-  // }
-  
-  // h3.english {
-  //   font-family: "Roboto";
-  //   font-weight: $bold;
-  //   font-size: 110px;
-  //   color: $lake-green;
-  // }
+  box-sizing: border-box;
+}
 
-.pc-login{
-  .login-bg{
+// 顏色設定
+$super-dark: #000000;
+$dark-red: #a31c2d;
+$pink: #ca3f68;
+$red-pink: #d45a6a;
+$light-pink: #ee92ad;
+$dark-green: #2f5e36;
+$green: #7ea083;
+$lake-green: #2d827d;
+$light-lake-green: #7cb2af;
+$sky-blue: #5292b9;
+$light-sky-blue: #9fc8e1;
+$dark-blue: #154d7a;
+$blue: #548fbe;
+$brown: #7a482d;
+$khaki: #b28064;
+$orange: #cb6b28;
+$light-orange: #e1a77e;
+$coral: #bd392a;
+$light-coral: #f07f72;
+$dark-gray: #4c4948;
+$gray: #c2c2c2;
+$yellow: #ffcd51;
+$light-yellow: #ffe39f;
+$skin: #d4cfc6;
+$white: #ffffff;
+$light-brown: #d4cfc6;
+$deep-brown: #554d49;
+
+// 字體設定
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"),
+    url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+// 字體大小設定
+// 不分字型
+$h1-font-size: 80px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$p-font-size: 16px;
+$ps-font-size: 14px;
+
+// 字體粗細
+// 細字體不用下font-weight，粗字體再用下列變數
+// ex: font-weight: $bold;
+$bold: 900;
+
+// 以下兩種範例
+
+// h2.chinese {
+//   font-family: "GenSenRounded-M";
+//   font-size: 48px;
+//   font-weight: $bold;
+//   color: $coral;
+// }
+
+// h3.english {
+//   font-family: "Roboto";
+//   font-weight: $bold;
+//   font-size: 110px;
+//   color: $lake-green;
+// }
+
+.pc-signup {
+  width: 100%;
+  height: 100vh;
+  // position: absolute;
+  // top: 0;
+  // left: -100%;
+  .signup-bg {
     z-index: 1;
-    background-color: rgba(0,0,0,.8);
-    position: fixed;
-    top:0;
+    background-color: rgba(0, 0, 0, 0.8);
+    // position: fixed;
+    top: 0;
     bottom: 0;
-    left: 0;
+    left: 0%;
     right: 0;
   }
-  .login-box{
-    position: fixed;
+  .signup-box {
+    // position: fixed;
     z-index: 2;
     width: 90%;
     height: 550px;
     max-width: 933px;
-    top:50vh;
+    top: 50vh;
     left: 50vw;
-    transform: translateX(-50%)translateY(-50%);
-    background: url(../images/pc-signup.svg)no-repeat ;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../images/pc-signup.svg) no-repeat;
     background-size: 100% 100%;
     // padding-bottom: 200px;
-    .pc-login-info{
+    .pc-signup-info {
       width: 28.5%;
       position: absolute;
-      top:25%;
+      top: 25%;
       left: 45%;
-      .pc-login-container{
+      .pc-signup-container {
         width: 130%;
         padding-top: 15%;
-        input{
+        input {
           width: 90%;
           font-family: "GenSenRounded-B";
-          font-size:$ps-font-size;
+          font-size: $ps-font-size;
           color: $gray;
           border: none;
           border-bottom: 2px solid $dark-gray;
           outline: none;
           padding-bottom: 2%;
-          @media screen and (max-width:864px) {
+          @media screen and (max-width: 864px) {
             width: 85%;
           }
-          @media screen and (max-width:909px) {
+          @media screen and (max-width: 909px) {
             width: 80%;
           }
         }
-        .mail-input{
+        .mail-input {
           padding-top: 2%;
         }
-        .password-input{
+        .password-input {
           padding-top: 5%;
           position: relative;
-          .eye-close{
+          .eye-close {
             position: absolute;
             top: 20px;
             right: 5px;
-            @media screen and (max-width:864px) {
+            @media screen and (max-width: 864px) {
               top: 20px;
               right: 22px;
             }
-            @media screen and (max-width:909px) {
+            @media screen and (max-width: 909px) {
               top: 16px;
               right: 30px;
             }
           }
-          p{
+          p {
             padding-top: 2px;
             padding-left: 30px;
             font-weight: bold;
           }
         }
-        .password-corret-input{
+        .password-corret-input {
           padding-top: 5%;
           width: 100%;
           margin-left: 30px;
@@ -159,67 +164,67 @@
           // @media screen and (max-width:864px) {
           //   width: 85%;
           // }
-          @media screen and (max-width:909px) {
+          @media screen and (max-width: 909px) {
             width: 100%;
           }
-          .eye-close{
+          .eye-close {
             position: absolute;
             top: 20px;
             right: 35px;
-            @media screen and (max-width:864px) {
+            @media screen and (max-width: 864px) {
               top: 15px;
               right: 50px;
             }
-            @media screen and (max-width:909px) {
+            @media screen and (max-width: 909px) {
               top: 16px;
               right: 60px;
             }
           }
-          p{
+          p {
             padding-top: 2px;
             padding-left: 30px;
             font-weight: bold;
           }
         }
-        .bd-input{
+        .bd-input {
           padding-top: 5%;
-          input{
+          input {
             text-align: center;
             width: 28%;
             margin: 0 3px;
-            @media screen and (max-width:864px) {
+            @media screen and (max-width: 864px) {
               width: 26%;
             }
-            @media screen and (max-width:909px) {
+            @media screen and (max-width: 909px) {
               width: 25%;
             }
-           }
-           .bd-input-1{
+          }
+          .bd-input-1 {
             text-align: left;
-             margin-left: 0;
-           }
-           p{
-             padding-left: 12%;
-             padding-top: 3px;
-             padding-left: 30px;
-             font-family: "Roboto";
-             font-weight: bold;
-             font-size: 11px;
-             color: $dark-gray;
-           }
+            margin-left: 0;
+          }
+          p {
+            padding-left: 12%;
+            padding-top: 3px;
+            padding-left: 30px;
+            font-family: "Roboto";
+            font-weight: bold;
+            font-size: 11px;
+            color: $dark-gray;
+          }
         }
-        .sign-p{
+        .sign-p {
           font-family: "Roboto";
           font-weight: bold;
           font-size: 11px;
           color: $dark-gray;
           text-align: left;
           padding: 5px 5px 8px 0px;
-          a{
-            color:$dark-blue ;
+          a {
+            color: $dark-blue;
           }
         }
-        .login-btn{
+        .signup-btn {
           width: 150px;
           height: 35px;
           border: 0;
@@ -232,25 +237,25 @@
           justify-content: center;
         }
       }
-      .or{
+      .or {
         text-align: center;
         // padding-top: 3%;
         font-family: "GenSenRounded-B";
         font-size: $ps-font-size;
         color: $dark-gray;
         padding-bottom: 10px;
-        @media screen and (max-width:864px) {
+        @media screen and (max-width: 864px) {
           padding-top: 5%;
         }
-        @media screen and (min-width:910px) {
+        @media screen and (min-width: 910px) {
           padding-top: 8%;
         }
       }
-      .orwith-icon{
+      .orwith-icon {
         width: 100%;
         display: flex;
         justify-content: center;
-        .fb-icon{
+        .fb-icon {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -260,7 +265,7 @@
           border-radius: 10px;
           margin-right: 10px;
         }
-        .google-icon{
+        .google-icon {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -271,13 +276,13 @@
           // margin-right: 10px;
         }
       }
-      .not-member{
+      .not-member {
         padding-top: 20px;
         font-family: "GenSenRounded-B";
         font-size: $ps-font-size;
         text-align: center;
         color: $dark-gray;
-        a{
+        a {
           color: $light-lake-green;
         }
       }
@@ -285,3 +290,6 @@
   }
 }
 
+.signup-show {
+  position: fixed;
+}

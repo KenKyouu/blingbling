@@ -608,20 +608,20 @@ body {
   }
 }
 
-.filter-page-pc {
-  position: fixed;
-  top: 0;
-  z-index: 205;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba($color: $lake-green, $alpha: 0.95);
-  .filter-page-pc-back {
-    padding: 100px 0 0 30px;
-    span.filter-pc-back {
-      cursor: pointer;
-    }
-  }
-}
+// .filter-page-pc {
+//   position: fixed;
+//   top: 0;
+//   z-index: 205;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: rgba($color: $lake-green, $alpha: 0.95);
+//   .filter-page-pc-back {
+//     padding: 100px 0 0 30px;
+//     span.filter-pc-back {
+//       cursor: pointer;
+//     }
+//   }
+// }
 
 .filter-page,
 .gender-filter-detail,
