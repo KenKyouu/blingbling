@@ -453,7 +453,6 @@
 }
 .wrap .containerr .main .row .col .whiteBg .modal {
   height: auto;
-  padding-right: 0;
 }
 .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
   width: 375px;
@@ -1160,6 +1159,24 @@
   color: #d45a6a;
 }
 
+@media screen and (max-width: 575px) {
+  .wrap .containerr .main .row .col .whiteBg .modal {
+    width: auto;
+    left: auto;
+    padding-top: 1.4rem;
+  }
+  .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 576px) {
+  .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
+    max-width: 1000px;
+  }
+}
 @media screen and (min-width: 700px) {
   .wrap .containerr .main .row .col .whiteBg {
     padding: 0 100px;

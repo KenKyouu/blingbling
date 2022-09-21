@@ -401,7 +401,7 @@ $pageName = 'member-intro'; // 頁面名稱，可以自定義
                             </button>
 
                             <!-- Modal -->
-                            <div class="modal modal-lg fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">

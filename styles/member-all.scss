@@ -623,7 +623,7 @@ $bold: 900;
 
                         .modal {
                             height: auto;
-                            padding-right: 0;
+                            // padding-right: 0;
 
                             .modal-dialog {
                                 width: 375px;
@@ -636,7 +636,6 @@ $bold: 900;
                                 align-items: center;
                                 justify-content: center;
                                 padding: 33px 0;
-
                                 // margin: 0;
                                 .modal-content {
                                     border: none;
@@ -1467,6 +1466,56 @@ $bold: 900;
                                             color: $red-pink;
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ----------------RWD-575-----------------
+
+@media screen and (max-width:575px) {
+    .wrap {
+        .containerr {
+            .main {
+                .row {
+                    .col {
+                        .whiteBg {
+                            .modal {
+                                width: auto;
+                                left: auto;
+                                padding-top: 1.4rem;
+                                .modal-dialog {
+                                    margin: 0;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ----------------RWD-576-----------------
+
+@media screen and (min-width:576px) {
+    .wrap {
+        .containerr {
+            .main {
+                .row {
+                    .col {
+                        .whiteBg {
+                            .modal {
+                                .modal-dialog {
+                                    max-width: 1000px;
                                 }
                             }
                         }

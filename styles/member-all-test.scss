@@ -107,6 +107,7 @@ $bold: 900;
                     // ---------------green border---------------
 
                     .left {
+
                         // background-color: $lake-green;
                         .myName {
                             padding-top: 80px;
@@ -211,7 +212,6 @@ $bold: 900;
                                         .btnsvg {
                                             svg {
                                                 margin-bottom: 5px;
-                                                color: $dark-gray;
                                             }
                                         }
 
@@ -244,16 +244,19 @@ $bold: 900;
 
                         .mydetailstop {
                             padding-top: 20px;
+
                             .member-card {
                                 display: flex;
                                 align-items: center;
                                 flex-direction: column;
                                 padding-top: 36px;
+
                                 .membercardimg {
                                     width: 280px;
                                     height: 420px;
                                     border-radius: 10px;
                                     box-shadow: 5px 0 20px $dark-gray;
+
                                     img.memberCard {
                                         width: 100%;
                                     }
@@ -616,8 +619,11 @@ $bold: 900;
                                 padding-left: 5px;
                             }
                         }
+
                         .modal {
                             height: auto;
+                            // padding-right: 0;
+
                             .modal-dialog {
                                 width: 375px;
                                 height: auto;
@@ -632,41 +638,51 @@ $bold: 900;
                                 // margin: 0;
                                 .modal-content {
                                     border: none;
+
                                     .modal-header {
                                         border: none;
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
+
                                         p.editTitle {
                                             font-family: "GenSenRounded-B";
                                             font-size: $p-font-size;
                                             color: $dark-gray;
                                         }
                                     }
+
                                     .modal-body {
                                         border: none;
+
                                         .my-details {
                                             width: 100%;
+
                                             .detail {
                                                 width: 100%;
                                                 display: flex;
                                                 align-items: center;
                                                 margin-bottom: 20px;
+
                                                 .detail-text {
                                                     width: 30%;
                                                     padding-right: 20px;
+
                                                     p {
                                                         font-family: "GenSenRounded-B";
                                                         font-size: $ps-font-size;
                                                         color: $dark-gray;
                                                         text-align: right;
+
                                                         span {
                                                             color: $red-pink;
                                                         }
                                                     }
                                                 }
+
                                                 .detail-input {
                                                     width: 70%;
+
                                                     input {
                                                         width: 200px;
                                                         height: 32px;
@@ -677,9 +693,11 @@ $bold: 900;
                                                         font-family: "GenSenRounded-B";
                                                         font-size: $ps-font-size;
                                                     }
+
                                                     ::-webkit-input-placeholder {
                                                         color: $gray;
-                                                    } 
+                                                    }
+
                                                     select {
                                                         width: 100px;
                                                         height: 32px;
@@ -689,6 +707,7 @@ $bold: 900;
                                                         font-family: "GenSenRounded-B";
                                                         font-size: $ps-font-size;
                                                         color: $dark-gray;
+
                                                         // padding: 0 10px;
                                                         option {
                                                             font-family: "GenSenRounded-B";
@@ -697,6 +716,7 @@ $bold: 900;
                                                             text-align: center;
                                                         }
                                                     }
+
                                                     input.birthmd {
                                                         width: 70px;
                                                         height: 32px;
@@ -714,10 +734,12 @@ $bold: 900;
                                             }
                                         }
                                     }
+
                                     .modal-footer {
                                         border: none;
                                         display: flex;
                                         justify-content: center;
+
                                         button.true {
                                             width: 130px;
                                             height: 38px;
@@ -728,6 +750,7 @@ $bold: 900;
                                             font-size: $ps-font-size;
                                             margin: 0 10px;
                                         }
+
                                         button.false {
                                             width: 130px;
                                             height: 38px;
@@ -797,6 +820,175 @@ $bold: 900;
                                 border: none;
                                 margin-bottom: 20px;
                             }
+
+                            .modal {
+                                .modal-dialog {
+                                    width: 375px;
+                                    height: auto;
+                                    border-radius: 44px;
+                                    border: 5px solid $lake-green;
+                                    background-color: $white;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 33px 0;
+                                    z-index: 2;
+                                    position: absolute;
+                                    right: 100%;
+
+                                    .modal-content {
+                                        border: none;
+
+                                        .modal-header {
+                                            border: none;
+
+                                            p.editTitle {
+                                                font-family: "GenSenRounded-B";
+                                                font-size: $p-font-size;
+                                                color: $dark-gray;
+                                                padding-bottom: 23px;
+                                            }
+                                        }
+
+                                        .modal-body {
+                                            border: none;
+
+                                            .friend-details {
+                                                width: 100%;
+
+                                                .detail {
+                                                    width: 100%;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    margin-bottom: 20px;
+
+                                                    .detail-text {
+                                                        width: 30%;
+                                                        padding-right: 20px;
+
+                                                        p {
+                                                            font-family: "GenSenRounded-B";
+                                                            font-size: $ps-font-size;
+                                                            color: $dark-gray;
+                                                            text-align: right;
+
+                                                            span {
+                                                                color: $red-pink;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    .detail-input {
+                                                        width: 70%;
+
+                                                        input {
+                                                            width: 200px;
+                                                            height: 32px;
+                                                            border-radius: 10px;
+                                                            background-color: rgba(0, 0, 0, 0);
+                                                            border: 2px solid $lake-green;
+                                                            padding: 0 10px;
+                                                            font-family: "GenSenRounded-B";
+                                                            font-size: $ps-font-size;
+                                                        }
+
+                                                        ::-webkit-input-placeholder {
+                                                            color: $gray;
+                                                        }
+
+                                                        select {
+                                                            width: 100px;
+                                                            height: 32px;
+                                                            border-radius: 10px;
+                                                            background-color: rgba(0, 0, 0, 0);
+                                                            border: 2px solid $lake-green;
+                                                            font-family: "GenSenRounded-B";
+                                                            font-size: $ps-font-size;
+                                                            color: $dark-gray;
+
+                                                            // padding: 0 10px;
+                                                            option {
+                                                                font-family: "GenSenRounded-B";
+                                                                font-size: $ps-font-size;
+                                                                color: $dark-gray;
+                                                                text-align: center;
+                                                            }
+                                                        }
+
+                                                        input.birthmd {
+                                                            width: 70px;
+                                                            height: 32px;
+                                                            border-radius: 10px;
+                                                            background-color: rgba(0, 0, 0, 0);
+                                                            border: 2px solid $lake-green;
+                                                            padding: 0 10px;
+                                                            color: $gray;
+                                                            font-family: "GenSenRounded-B";
+                                                            font-size: $ps-font-size;
+                                                            text-align: center;
+                                                            margin-right: 10px;
+                                                        }
+
+                                                        .tagsselect {
+                                                            width: 200px;
+                                                            height: 120px;
+                                                            overflow: hidden;
+                                                            border-radius: 10px;
+                                                            background-color: rgba(0, 0, 0, 0);
+                                                            border: 2px solid $lake-green;
+                                                            padding: 10px 10px;
+
+                                                            .tags {
+                                                                height: 120px;
+                                                                overflow: scroll;
+
+                                                                span {
+                                                                    display: inline-block;
+                                                                    margin-bottom: 5px;
+                                                                    border: 2px solid $super-dark;
+                                                                    border-radius: 100px;
+                                                                    font-family: "GenSenRounded-M";
+                                                                    font-size: 9px;
+                                                                    padding: 5px 10px;
+
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .modal-footer {
+                                            border: none;
+
+                                            button.true {
+                                                width: 130px;
+                                                height: 38px;
+                                                border-radius: 10px;
+                                                background-color: $super-dark;
+                                                color: $white;
+                                                font-family: "GenSenRounded-B";
+                                                font-size: $ps-font-size;
+                                                margin: 0 10px;
+                                            }
+
+                                            button.false {
+                                                width: 130px;
+                                                height: 38px;
+                                                border-radius: 10px;
+                                                border: 3px solid $super-dark;
+                                                color: $super-dark;
+                                                background-color: rgba(255, 255, 255, 0);
+                                                font-family: "GenSenRounded-B";
+                                                font-size: $ps-font-size;
+                                                margin: 0 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         .myFriendsGroup {
@@ -846,6 +1038,72 @@ $bold: 900;
                                 .deleteFriendIcon {
                                     width: 15%;
                                     text-align: right;
+                                    .modal {
+                                        .modal-dialog {
+                                            // width: 90%;
+                                                max-width: 400px;
+                                                font-family: "GenSenRounded-B";
+                                                font-weight: $bold;
+                                                text-align: center;
+                                                background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+                                                padding: 76px 0;
+                                                border: none;
+                                            .modal-content {
+                                                width: auto;
+                                                .modal-body {
+                                                    .friend-warning {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 10px 30px;
+                                            
+                                                        .friend-warn-icon {
+                                                            margin-right: 20px;
+                                                            padding-bottom: 10px;
+                                                        }
+                                            
+                                                        .friend-warn-text {
+                                                            font-size: $h6-font-size;
+                                                            color: $super-dark;
+                                                            padding-bottom: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                .modal-footer {
+                                                    button.true {
+                                                        width: 98px;
+                                                        height: 38px;
+                                                        border: none;
+                                                        background-color: $super-dark;
+                                                        border-radius: 10px;
+                                                        color: $white;
+                                                        font-size: $p-font-size;
+                                                        // padding: 8px 30px;
+                                                        margin-top: 10px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                        
+                                                    button.false {
+                                                        width: 98px;
+                                                        height: 38px;
+                                                        border: 3px solid $super-dark;
+                                                        background-color: rgba(0, 0, 0, 0);
+                                                        border-radius: 10px;
+                                                        color: $super-dark;
+                                                        font-size: $p-font-size;
+                                                        // padding: 8px 30px;
+                                                        margin-top: 10px;
+                                                        margin-left: 30px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    } 
                                 }
                             }
                         }
@@ -863,12 +1121,14 @@ $bold: 900;
                         align-items: center;
                         padding: 0px 30px;
                         margin-top: 15px;
+
                         .backToList {
                             width: 100%;
                             display: flex;
                             align-items: center;
                             text-align: left;
                             padding-top: 25px;
+
                             p {
                                 font-family: "GenSenRounded-B";
                                 font-size: $ps-font-size;
@@ -1005,7 +1265,7 @@ $bold: 900;
 
                             .wishList {
                                 padding: 9px;
-                                
+
 
                                 img {
                                     width: 100%;
@@ -1281,6 +1541,95 @@ $bold: 900;
     }
 }
 
+// ----------------RWD-575-----------------
+
+@media screen and (max-width:575px) {
+    .wrap {
+        .containerr {
+            .main {
+                .row {
+                    .col {
+
+                        // -----MYINTRO-----
+
+                        .whiteBg {
+                            .modal {
+                                width: auto;
+                                left: auto;
+                                padding-top: 1.4rem;
+                                .modal-dialog {
+                                    margin: 0;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                        }
+
+                        // -----FRIEND-----
+                        .whiteBg {
+                            .newFriend {
+                                .modal {
+                                    width: auto;
+                                    left: auto;
+                                    padding-top: 1.4rem;
+                                    .modal-dialog {
+                                        margin: 0;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+
+                            .myFriendsGroup {
+                                .friendList {
+                                    .deleteFriendIcon {
+                                        .modal {
+                                            width: auto;
+                                            left: 0;
+                                            // padding-top: 1.4rem;
+                                            .modal-dialog {
+                                                // width: auto;
+                                                margin: 0;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ----------------RWD-576-----------------
+
+@media screen and (min-width:576px) {
+    .wrap {
+        .containerr {
+            .main {
+                .row {
+                    .col {
+                        .whiteBg {
+                            .modal {
+                                .modal-dialog {
+                                    max-width: 1000px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ----------------RWD-700-----------------
 
 @media screen and (min-width:700px) {
@@ -1331,6 +1680,7 @@ $bold: 900;
             .main {
                 .row {
                     overflow: hidden;
+
                     .col {
                         background-color: #00000000;
                         display: flex;
@@ -1417,15 +1767,16 @@ $bold: 900;
                                                 width: 35%;
                                                 text-align: right;
                                                 padding-right: 20px;
+                                                fill: $white;
 
                                                 svg {
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
-
-                                                    :target {
-                                                        color: $dark-gray;
-                                                    } 
+                                                    fill: $white;
+                                                    path {
+                                                        fill: $white;
+                                                    }
                                                 }
                                             }
 
@@ -1436,10 +1787,11 @@ $bold: 900;
                                                 text-align: left;
                                                 display: flex;
                                                 color: $white;
-                 
+
                                             }
                                         }
                                     }
+
                                     :target {
                                         background-color: $white;
                                         border-radius: 100px 0 0 100px;
@@ -1476,10 +1828,11 @@ $bold: 900;
                                 .myIntro {
                                     .userName {
                                         padding-top: 30px;
+
                                         .myIntro-title {
                                             width: 35%;
                                         }
-    
+
                                         .myIntro-info {
                                             width: 65%;
                                         }
@@ -1487,10 +1840,11 @@ $bold: 900;
 
                                     .gender {
                                         padding-top: 30px;
+
                                         .myIntro-title {
                                             width: 35%;
                                         }
-    
+
                                         .myIntro-info {
                                             width: 65%;
                                         }
@@ -1498,10 +1852,11 @@ $bold: 900;
 
                                     .birthday {
                                         padding-top: 30px;
+
                                         .myIntro-title {
                                             width: 35%;
                                         }
-    
+
                                         .myIntro-info {
                                             width: 65%;
                                         }
@@ -1509,10 +1864,11 @@ $bold: 900;
 
                                     .email {
                                         padding-top: 30px;
+
                                         .myIntro-title {
                                             width: 35%;
                                         }
-    
+
                                         .myIntro-info {
                                             width: 65%;
                                         }
@@ -1520,10 +1876,11 @@ $bold: 900;
 
                                     .phone {
                                         padding-top: 30px;
+
                                         .myIntro-title {
                                             width: 35%;
                                         }
-    
+
                                         .myIntro-info {
                                             width: 65%;
                                         }
@@ -1531,10 +1888,11 @@ $bold: 900;
 
                                     .address {
                                         padding-top: 30px;
+
                                         .myIntro-title {
                                             width: 35%;
                                         }
-    
+
                                         .myIntro-info {
                                             width: 65%;
                                         }
@@ -1545,6 +1903,7 @@ $bold: 900;
                             button.editMyInfo {
                                 margin: 35px 0 0 0;
                             }
+
                             .modal {
                                 .modal-dialog {
                                     width: 700px;
@@ -1556,6 +1915,7 @@ $bold: 900;
                                     flex-direction: column;
                                     align-items: center;
                                     justify-content: center;
+
                                     .modal-content {
                                         .modal-header {
                                             p.editTitle {
@@ -1564,29 +1924,36 @@ $bold: 900;
                                                 color: $dark-gray;
                                             }
                                         }
+
                                         .modal-body {
                                             .my-details {
                                                 width: 100%;
+
                                                 .detail {
                                                     width: 100%;
                                                     display: flex;
                                                     align-items: center;
                                                     margin-bottom: 30px;
+
                                                     .detail-text {
                                                         width: 30%;
                                                         padding-right: 40px;
+
                                                         p {
                                                             font-family: "GenSenRounded-B";
                                                             font-size: $p-font-size;
                                                             color: $dark-gray;
                                                             text-align: right;
+
                                                             span {
                                                                 color: $red-pink;
                                                             }
                                                         }
                                                     }
+
                                                     .detail-input {
                                                         width: 70%;
+
                                                         input {
                                                             width: 400px;
                                                             height: 50px;
@@ -1597,9 +1964,11 @@ $bold: 900;
                                                             font-family: "GenSenRounded-B";
                                                             font-size: $p-font-size;
                                                         }
+
                                                         ::-webkit-input-placeholder {
                                                             color: $gray;
-                                                        } 
+                                                        }
+
                                                         select {
                                                             width: 150px;
                                                             height: 50px;
@@ -1609,6 +1978,7 @@ $bold: 900;
                                                             font-family: "GenSenRounded-B";
                                                             font-size: $p-font-size;
                                                             color: $dark-gray;
+
                                                             // padding: 0 10px;
                                                             option {
                                                                 font-family: "GenSenRounded-B";
@@ -1617,6 +1987,7 @@ $bold: 900;
                                                                 text-align: center;
                                                             }
                                                         }
+
                                                         input.birthmd {
                                                             width: 100px;
                                                             height: 50px;
@@ -1634,6 +2005,7 @@ $bold: 900;
                                                 }
                                             }
                                         }
+
                                         .modal-footer {
                                             button.true {
                                                 width: 140px;
@@ -1645,6 +2017,7 @@ $bold: 900;
                                                 font-size: $p-font-size;
                                                 margin: 0 20px;
                                             }
+
                                             button.false {
                                                 width: 140px;
                                                 height: 48px;
@@ -1679,15 +2052,175 @@ $bold: 900;
                                 flex-direction: row;
                                 justify-content: left;
                                 margin-bottom: 20px;
+
                                 p {
                                     font-size: $h6-font-size;
                                     padding-right: 40px;
                                 }
+
                                 button.uploadNewFriend {
                                     margin-bottom: 0;
                                 }
+
+                                .modal {
+                                    .modal-dialog {
+                                        width: 700px;
+                                        height: auto;
+                                        border-radius: 32px;
+                                        border: 4px solid $lake-green;
+                                        background-color: $white;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        padding: 50px 0;
+
+                                        .modal-content {
+                                            .modal-header {
+                                                p.editTitle {
+                                                    font-family: "GenSenRounded-B";
+                                                    font-size: $h5-font-size;
+                                                    color: $dark-gray;
+                                                    padding-bottom: 50px;
+                                                }
+                                            }
+
+                                            .modal-body {
+                                                .friend-details {
+                                                    width: 100%;
+
+                                                    .detail {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-bottom: 30px;
+
+                                                        .detail-text {
+                                                            width: 30%;
+                                                            padding-right: 40px;
+
+                                                            p {
+                                                                font-family: "GenSenRounded-B";
+                                                                font-size: $p-font-size;
+                                                                color: $dark-gray;
+                                                                text-align: right;
+
+                                                                span {
+                                                                    color: $red-pink;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        .detail-input {
+                                                            width: 70%;
+
+                                                            input {
+                                                                width: 400px;
+                                                                height: 50px;
+                                                                border-radius: 10px;
+                                                                background-color: rgba(0, 0, 0, 0);
+                                                                border: 2px solid $lake-green;
+                                                                padding: 0 10px;
+                                                                font-family: "GenSenRounded-B";
+                                                                font-size: $p-font-size;
+                                                            }
+
+                                                            ::-webkit-input-placeholder {
+                                                                color: $gray;
+                                                            }
+
+                                                            select {
+                                                                width: 150px;
+                                                                height: 50px;
+                                                                border-radius: 10px;
+                                                                background-color: rgba(0, 0, 0, 0);
+                                                                border: 2px solid $lake-green;
+                                                                font-family: "GenSenRounded-B";
+                                                                font-size: $p-font-size;
+                                                                color: $dark-gray;
+
+                                                                // padding: 0 10px;
+                                                                option {
+                                                                    font-family: "GenSenRounded-B";
+                                                                    font-size: $p-font-size;
+                                                                    color: $dark-gray;
+                                                                    text-align: center;
+                                                                }
+                                                            }
+
+                                                            input.birthmd {
+                                                                width: 100px;
+                                                                height: 50px;
+                                                                border-radius: 10px;
+                                                                background-color: rgba(0, 0, 0, 0);
+                                                                border: 2px solid $lake-green;
+                                                                padding: 0 10px;
+                                                                color: $gray;
+                                                                font-family: "GenSenRounded-B";
+                                                                font-size: $p-font-size;
+                                                                text-align: center;
+                                                                margin-right: 20px;
+                                                            }
+
+                                                            .tagsselect {
+                                                                width: 400px;
+                                                                height: 135px;
+                                                                overflow: hidden;
+                                                                border-radius: 10px;
+                                                                background-color: rgba(0, 0, 0, 0);
+                                                                border: 2px solid $lake-green;
+                                                                padding: 10px 10px;
+
+                                                                .tags {
+                                                                    height: 135px;
+                                                                    overflow: scroll;
+
+                                                                    span {
+                                                                        display: inline-block;
+                                                                        margin-bottom: 10px;
+                                                                        border: 2px solid $super-dark;
+                                                                        border-radius: 100px;
+                                                                        font-family: "GenSenRounded-B";
+                                                                        font-size: $ps-font-size;
+                                                                        padding: 5px 10px;
+
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .modal-footer {
+                                                button.true {
+                                                    width: 140px;
+                                                    height: 48px;
+                                                    border-radius: 10px;
+                                                    background-color: $super-dark;
+                                                    color: $white;
+                                                    font-family: "GenSenRounded-B";
+                                                    font-size: $p-font-size;
+                                                    margin: 0 20px;
+                                                }
+
+                                                button.false {
+                                                    width: 140px;
+                                                    height: 48px;
+                                                    border-radius: 10px;
+                                                    border: 3px solid $super-dark;
+                                                    color: $super-dark;
+                                                    background-color: rgba(255, 255, 255, 0);
+                                                    font-family: "GenSenRounded-B";
+                                                    font-size: $p-font-size;
+                                                    margin: 0 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            
+
                         }
 
                         // -----FRIENDDETAILS-----
@@ -1706,9 +2239,11 @@ $bold: 900;
                                 display: flex;
                                 justify-content: space-between;
                                 padding: 20px 0;
+
                                 .friendDetails {
                                     justify-content: left;
                                     align-items: flex-start;
+
                                     .friendName {
                                         .fn {
                                             p {
@@ -1716,6 +2251,7 @@ $bold: 900;
                                                 font-size: $h4-font-size;
                                             }
                                         }
+
                                         .friendEditIcon {
                                             svg {
                                                 width: 15px;
@@ -1724,16 +2260,19 @@ $bold: 900;
                                             }
                                         }
                                     }
-                                } 
+                                }
                             }
+
                             .friendWishList {
                                 width: 100%;
                                 height: 410px;
                                 overflow: scroll;
+
                                 .col-lg-3 {
                                     width: 100%;
                                     height: auto;
                                     background-color: rgba(255, 255, 255, 0);
+
                                     img.wish {
                                         width: 100%;
                                         height: 100%;
@@ -1759,10 +2298,12 @@ $bold: 900;
                                 flex-direction: row;
                                 justify-content: left;
                                 margin: 20px 0 30px;
+
                                 p {
                                     font-size: $h6-font-size;
                                     padding-right: 30px;
                                 }
+
                                 input.keyCouponCode {
                                     font-size: $p-font-size;
                                     margin-right: 40px;
@@ -1770,20 +2311,26 @@ $bold: 900;
                                     padding: 0 10px;
                                 }
                             }
+
                             .couponbtn {
                                 margin-bottom: 30px;
                             }
+
                             .invalidCouponGroup {
+
                                 // margin-bottom: 20px;
                                 .invalidCouponTitle {
                                     padding-bottom: 10px;
+
                                     .couponName {
                                         width: 68%;
                                     }
+
                                     .couponDate {
                                         width: 32%;
                                     }
                                 }
+
                                 .invalidCouponDetails {
                                     width: 100%;
                                     height: 360px;
@@ -1816,255 +2363,6 @@ $bold: 900;
         }
     }
 
-    // ------------------lightbox-myDetails-----------------
-
-    .lightbox-myDetails {
-        width: 700px;
-        height: auto;
-        border-radius: 32px;
-        border: 4px solid $lake-green;
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 50px 0;
-        p.editTitle {
-            font-family: "GenSenRounded-B";
-            font-size: $h5-font-size;
-            color: $dark-gray;
-            padding-bottom: 50px;
-        }
-        .my-details {
-            width: 100%;
-            .detail {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                margin-bottom: 30px;
-                .detail-text {
-                    width: 30%;
-                    padding-right: 40px;
-                    p {
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        color: $dark-gray;
-                        text-align: right;
-                        span {
-                            color: $red-pink;
-                        }
-                    }
-                }
-                .detail-input {
-                    width: 70%;
-                    input {
-                        width: 400px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 0 10px;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                    }
-                    ::-webkit-input-placeholder {
-                        color: $gray;
-                    } 
-                    select {
-                        width: 150px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        color: $dark-gray;
-                        // padding: 0 10px;
-                        option {
-                            font-family: "GenSenRounded-B";
-                            font-size: $p-font-size;
-                            color: $dark-gray;
-                            text-align: center;
-                        }
-                    }
-                    input.birthmd {
-                        width: 100px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 0 10px;
-                        color: $gray;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        text-align: center;
-                        margin-right: 20px;
-                    }
-                }
-            }
-        }
-        .detailsbtn {
-            margin-top: 20px;
-            button.true {
-                width: 140px;
-                height: 48px;
-                border-radius: 10px;
-                background-color: $super-dark;
-                color: $white;
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                margin: 0 20px;
-            }
-            button.false {
-                width: 140px;
-                height: 48px;
-                border-radius: 10px;
-                border: 3px solid $super-dark;
-                color: $super-dark;
-                background-color: rgba(255, 255, 255, 0);
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                margin: 0 20px;
-            }
-        }
-    }
-
-    // ------------------lightbox-newFriendDetails-----------------
-
-    .lightbox-newFriendDetails {
-        width: 700px;
-        height: auto;
-        border-radius: 32px;
-        border: 4px solid $lake-green;
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 50px 0;
-        p.editTitle {
-            font-family: "GenSenRounded-B";
-            font-size: $h5-font-size;
-            color: $dark-gray;
-            padding-bottom: 50px;
-        }
-        .friend-details {
-            width: 100%;
-            .detail {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                margin-bottom: 30px;
-                .detail-text {
-                    width: 30%;
-                    padding-right: 40px;
-                    p {
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        color: $dark-gray;
-                        text-align: right;
-                        span {
-                            color: $red-pink;
-                        }
-                    }
-                }
-                .detail-input {
-                    width: 70%;
-                    input {
-                        width: 400px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 0 10px;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                    }
-                    ::-webkit-input-placeholder {
-                        color: $gray;
-                    } 
-                    select {
-                        width: 150px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        color: $dark-gray;
-                        // padding: 0 10px;
-                        option {
-                            font-family: "GenSenRounded-B";
-                            font-size: $p-font-size;
-                            color: $dark-gray;
-                            text-align: center;
-                        }
-                    }
-                    input.birthmd {
-                        width: 100px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 0 10px;
-                        color: $gray;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        text-align: center;
-                        margin-right: 20px;
-                    }
-                    .tagsselect {
-                        width: 400px;
-                        height: 135px;
-                        overflow: hidden;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 10px 10px;
-                        .tags {
-                            height: 135px;
-                            overflow: scroll;
-                            span {
-                                display: inline-block;
-                                margin-bottom: 10px;
-                                border: 2px solid $super-dark;
-                                border-radius: 100px;
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                padding: 5px 10px;
-                            
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .detailsbtn {
-            margin-top: 20px;
-            button.true {
-                width: 140px;
-                height: 48px;
-                border-radius: 10px;
-                background-color: $super-dark;
-                color: $white;
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                margin: 0 20px;
-            }
-            button.false {
-                width: 140px;
-                height: 48px;
-                border-radius: 10px;
-                border: 3px solid $super-dark;
-                color: $super-dark;
-                background-color: rgba(255, 255, 255, 0);
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                margin: 0 20px;
-            }
-        }
-    }
-
     // ------------------lightbox-friendDetails-----------------
 
     .lightbox-friendDetails {
@@ -2078,34 +2376,42 @@ $bold: 900;
         align-items: center;
         justify-content: center;
         padding: 50px 0;
+
         p.editTitle {
             font-family: "GenSenRounded-B";
             font-size: $h5-font-size;
             color: $dark-gray;
             padding-bottom: 50px;
         }
+
         .friend-details {
             width: 100%;
+
             .detail {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 margin-bottom: 30px;
+
                 .detail-text {
                     width: 30%;
                     padding-right: 40px;
+
                     p {
                         font-family: "GenSenRounded-B";
                         font-size: $p-font-size;
                         color: $dark-gray;
                         text-align: right;
+
                         span {
                             color: $red-pink;
                         }
                     }
                 }
+
                 .detail-input {
                     width: 70%;
+
                     input {
                         width: 400px;
                         height: 50px;
@@ -2116,9 +2422,11 @@ $bold: 900;
                         font-family: "GenSenRounded-B";
                         font-size: $p-font-size;
                     }
+
                     ::-webkit-input-placeholder {
                         color: $gray;
-                    } 
+                    }
+
                     select {
                         width: 150px;
                         height: 50px;
@@ -2128,6 +2436,7 @@ $bold: 900;
                         font-family: "GenSenRounded-B";
                         font-size: $p-font-size;
                         color: $dark-gray;
+
                         // padding: 0 10px;
                         option {
                             font-family: "GenSenRounded-B";
@@ -2136,6 +2445,7 @@ $bold: 900;
                             text-align: center;
                         }
                     }
+
                     input.birthmd {
                         width: 100px;
                         height: 50px;
@@ -2149,6 +2459,7 @@ $bold: 900;
                         text-align: center;
                         margin-right: 20px;
                     }
+
                     .tagsselect {
                         width: 400px;
                         height: 135px;
@@ -2157,9 +2468,11 @@ $bold: 900;
                         background-color: rgba(0, 0, 0, 0);
                         border: 2px solid $lake-green;
                         padding: 10px 10px;
+
                         .tags {
                             height: 135px;
                             overflow: scroll;
+
                             span {
                                 display: inline-block;
                                 margin-bottom: 10px;
@@ -2168,15 +2481,17 @@ $bold: 900;
                                 font-family: "GenSenRounded-B";
                                 font-size: $ps-font-size;
                                 padding: 5px 10px;
-                            
+
                             }
                         }
                     }
                 }
             }
         }
+
         .detailsbtn {
             margin-top: 20px;
+
             button.true {
                 width: 140px;
                 height: 48px;
@@ -2187,6 +2502,7 @@ $bold: 900;
                 font-size: $p-font-size;
                 margin: 0 20px;
             }
+
             button.false {
                 width: 140px;
                 height: 48px;
@@ -2252,9 +2568,10 @@ $bold: 900;
 
 // ------------------lightbox-deleteWarning-----------------
 
-.friend-lightbox-warn{
+.friend-lightbox-warn {
+
     // display: none;
-    .friend-lightbox-black{
+    .friend-lightbox-black {
         z-index: 20;
         position: fixed;
         top: 0;
@@ -2263,7 +2580,8 @@ $bold: 900;
         right: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
-    .friend-lightbox-bg{
+
+    .friend-lightbox-bg {
         z-index: 21;
         position: fixed;
         top: 50vh;
@@ -2276,25 +2594,30 @@ $bold: 900;
         text-align: center;
         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
         padding: 76px 0;
-        .friend-warning{
+
+        .friend-warning {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 30px;
-            .friend-warn-icon{
+
+            .friend-warn-icon {
                 margin-right: 20px;
                 padding-bottom: 10px;
             }
-            .friend-warn-text{
+
+            .friend-warn-text {
                 font-size: $h6-font-size;
                 color: $super-dark;
                 padding-bottom: 10px;
             }
         }
+
         .tfBtn {
             display: flex;
             align-items: center;
             justify-content: center;
+
             button.true {
                 width: 98px;
                 height: 38px;
@@ -2306,6 +2629,7 @@ $bold: 900;
                 padding: 8px 30px;
                 margin-top: 10px;
             }
+
             button.false {
                 width: 98px;
                 height: 38px;
@@ -2318,150 +2642,6 @@ $bold: 900;
                 margin-top: 10px;
                 margin-left: 30px;
             }
-        }
-    }
-}
-
-// ------------------lightbox-newFriendDetails-----------------
-
-.lightbox-newFriendDetails-blackbg {
-    z-index: 1;
-    position: absolute;
-    right: 100%;
-}
-.lightbox-newFriendDetails {
-    width: 375px;
-    height: auto;
-    border-radius: 44px;
-    border: 5px solid $lake-green;
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 33px 0;
-    z-index: 2;
-    position: absolute;
-    right:100%;
-    p.editTitle {
-        font-family: "GenSenRounded-B";
-        font-size: $p-font-size;
-        color: $dark-gray;
-        padding-bottom: 23px;
-    }
-    .friend-details {
-        width: 100%;
-        .detail {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            .detail-text {
-                width: 30%;
-                padding-right: 20px;
-                p {
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                    color: $dark-gray;
-                    text-align: right;
-                    span {
-                        color: $red-pink;
-                    }
-                }
-            }
-            .detail-input {
-                width: 70%;
-                input {
-                    width: 200px;
-                    height: 32px;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    padding: 0 10px;
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                }
-                ::-webkit-input-placeholder {
-                    color: $gray;
-                } 
-                select {
-                    width: 100px;
-                    height: 32px;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                    color: $dark-gray;
-                    // padding: 0 10px;
-                    option {
-                        font-family: "GenSenRounded-B";
-                        font-size: $ps-font-size;
-                        color: $dark-gray;
-                        text-align: center;
-                    }
-                }
-                input.birthmd {
-                    width: 70px;
-                    height: 32px;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    padding: 0 10px;
-                    color: $gray;
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                    text-align: center;
-                    margin-right: 10px;
-                }
-                .tagsselect {
-                    width: 200px;
-                    height: 120px;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    padding: 10px 10px;
-                    .tags {
-                        height: 120px;
-                        overflow: scroll;
-                        span {
-                            display: inline-block;
-                            margin-bottom: 5px;
-                            border: 2px solid $super-dark;
-                            border-radius: 100px;
-                            font-family: "GenSenRounded-M";
-                            font-size: 9px;
-                            padding: 5px 10px;
-                           
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .detailsbtn {
-        margin-top: 20px;
-        button.true {
-            width: 130px;
-            height: 38px;
-            border-radius: 10px;
-            background-color: $super-dark;
-            color: $white;
-            font-family: "GenSenRounded-B";
-            font-size: $ps-font-size;
-            margin: 0 10px;
-        }
-        button.false {
-            width: 130px;
-            height: 38px;
-            border-radius: 10px;
-            border: 3px solid $super-dark;
-            color: $super-dark;
-            background-color: rgba(255, 255, 255, 0);
-            font-family: "GenSenRounded-B";
-            font-size: $ps-font-size;
-            margin: 0 10px;
         }
     }
 }
@@ -2482,34 +2662,42 @@ $bold: 900;
     z-index: 1;
     position: absolute;
     right: 100%;
+
     p.editTitle {
         font-family: "GenSenRounded-B";
         font-size: $p-font-size;
         color: $dark-gray;
         padding-bottom: 23px;
     }
+
     .friend-details {
         width: 100%;
+
         .detail {
             width: 100%;
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+
             .detail-text {
                 width: 30%;
                 padding-right: 20px;
+
                 p {
                     font-family: "GenSenRounded-B";
                     font-size: $ps-font-size;
                     color: $dark-gray;
                     text-align: right;
+
                     span {
                         color: $red-pink;
                     }
                 }
             }
+
             .detail-input {
                 width: 70%;
+
                 input {
                     width: 200px;
                     height: 32px;
@@ -2520,9 +2708,11 @@ $bold: 900;
                     font-family: "GenSenRounded-B";
                     font-size: $ps-font-size;
                 }
+
                 ::-webkit-input-placeholder {
                     color: $gray;
-                } 
+                }
+
                 select {
                     width: 100px;
                     height: 32px;
@@ -2532,6 +2722,7 @@ $bold: 900;
                     font-family: "GenSenRounded-B";
                     font-size: $ps-font-size;
                     color: $dark-gray;
+
                     // padding: 0 10px;
                     option {
                         font-family: "GenSenRounded-B";
@@ -2540,6 +2731,7 @@ $bold: 900;
                         text-align: center;
                     }
                 }
+
                 input.birthmd {
                     width: 70px;
                     height: 32px;
@@ -2553,6 +2745,7 @@ $bold: 900;
                     text-align: center;
                     margin-right: 10px;
                 }
+
                 .tagsselect {
                     width: 200px;
                     height: 120px;
@@ -2561,9 +2754,11 @@ $bold: 900;
                     background-color: rgba(0, 0, 0, 0);
                     border: 2px solid $lake-green;
                     padding: 10px 10px;
+
                     .tags {
                         height: 120px;
                         overflow: scroll;
+
                         span {
                             display: inline-block;
                             margin-bottom: 5px;
@@ -2572,15 +2767,17 @@ $bold: 900;
                             font-family: "GenSenRounded-M";
                             font-size: 9px;
                             padding: 5px 10px;
-                           
+
                         }
                     }
                 }
             }
         }
     }
+
     .detailsbtn {
         margin-top: 20px;
+
         button.true {
             width: 130px;
             height: 38px;
@@ -2591,6 +2788,7 @@ $bold: 900;
             font-size: $ps-font-size;
             margin: 0 10px;
         }
+
         button.false {
             width: 130px;
             height: 38px;
@@ -2607,9 +2805,10 @@ $bold: 900;
 
 // ------------------lightbox-err-----------------
 
-.coupon-lightbox-err{
+.coupon-lightbox-err {
+
     // display: none;
-    .coupon-lightbox-black{
+    .coupon-lightbox-black {
         z-index: 20;
         position: fixed;
         top: 0;
@@ -2618,7 +2817,8 @@ $bold: 900;
         right: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
-    .coupon-lightbox-bg{
+
+    .coupon-lightbox-bg {
         z-index: 21;
         position: fixed;
         top: 50vh;
@@ -2631,22 +2831,26 @@ $bold: 900;
         text-align: center;
         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
         padding: 76px 0;
-        .coupon-warning{
+
+        .coupon-warning {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 30px;
-            .coupon-warn-icon{
+
+            .coupon-warn-icon {
                 margin-right: 20px;
                 padding-bottom: 10px;
             }
-            .coupon-warn-text{
+
+            .coupon-warn-text {
                 font-size: $h6-font-size;
                 color: $super-dark;
                 padding-bottom: 10px;
             }
         }
-        button{
+
+        button {
             border: none;
             background-color: $super-dark;
             border-radius: 10px;
@@ -2660,9 +2864,10 @@ $bold: 900;
 
 // ------------------lightbox-success-----------------
 
-.coupon-lightbox-success{
+.coupon-lightbox-success {
+
     // display: none;
-    .coupon-lightbox-black{
+    .coupon-lightbox-black {
         z-index: 20;
         position: fixed;
         top: 0;
@@ -2671,7 +2876,8 @@ $bold: 900;
         right: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
-    .coupon-lightbox-bg{
+
+    .coupon-lightbox-bg {
         z-index: 21;
         position: fixed;
         top: 50vh;
@@ -2684,22 +2890,26 @@ $bold: 900;
         text-align: center;
         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
         padding: 76px 0;
-        .coupon-warning{
+
+        .coupon-warning {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 30px;
-            .coupon-true-icon{
+
+            .coupon-true-icon {
                 margin-right: 20px;
                 padding-bottom: 10px;
             }
-            .coupon-true-text{
+
+            .coupon-true-text {
                 font-size: $h6-font-size;
                 color: $super-dark;
                 padding-bottom: 10px;
             }
         }
-        button{
+
+        button {
             border: none;
             background-color: $super-dark;
             border-radius: 10px;
