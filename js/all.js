@@ -14,13 +14,11 @@ $(".close, .menu-left").click(function () {
 // header-class
 
 $(".mockup, .header-class").mouseenter(function () {
-  console.log("show");
   $(".mockup > h6").addClass("header-margin");
   $(".header-class").show();
 });
 
 $(".mockup, .header-class").mouseleave(function () {
-  console.log("hide");
   $(".mockup > h6").removeClass("header-margin");
   $(".header-class").hide();
 });
@@ -28,13 +26,11 @@ $(".mockup, .header-class").mouseleave(function () {
 // header-search
 
 $("li.search, .header-search").mouseenter(function () {
-  console.log("search");
   $("li.search").addClass("header-icon-height");
   $(".header-search").show();
 });
 
 $("li.search, .header-search").mouseleave(function () {
-  console.log("search");
   $("li.search").removeClass("header-icon-height");
   $(".header-search").hide();
 });
@@ -42,13 +38,23 @@ $("li.search, .header-search").mouseleave(function () {
 // header-member
 
 $("li.member, .header-member").mouseenter(function () {
-  console.log("member");
   $("li.member").addClass("header-icon-height");
   $(".header-member").show();
 });
 
 $("li.member, .header-member").mouseleave(function () {
-  console.log("member");
   $("li.member").removeClass("header-icon-height");
   $(".header-member").hide();
+});
+
+$(".switchtosignup").click(function () {
+  console.log("eeennn");
+  $(".pc-login").removeClass("loginandsignup-show");
+  $(".pc-signup").addClass("loginandsignup-show");
+});
+
+$(".switchtologin").click(function () {
+  console.log("hellohello");
+  $(".pc-signup").removeClass("loginandsignup-show");
+  $(".pc-login").addClass("loginandsignup-show");
 });

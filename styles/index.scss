@@ -261,28 +261,61 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     height: 100%;
 }
 .I-mainSection{
-  // padding-left:30px;
-  // padding-right:30px;
-  // padding-bottom: 100px;
   padding-top: 56.5px;
   width: 100%;
   overflow: hidden;
+  .w-indexHeader{
+    display: none;
+    // background-color: #154d7a;
+  }
+  @media (min-width:768px) {
+    .w-indexHeader{
+      display: flex;
+      width: 100%;
+      .w-indexHeaderBox{
+          width: 15%;
+          margin-left: auto;
+          display: flex;
+          margin-right: 150px;
+          align-items: center;
+          // padding: 20px;
+        .w-indexHeader-item1{
+          margin-right: 30px;
+          width: 60%;
+          transition: .5s;
+          img{
+            width: 100%;
+          }
+        }
+        .w-indexHeader-item1:hover img{
+          filter:drop-shadow(0 1px 4px  rgba(0,0,0,0.16),inset 0 -9px 0 -3px #000000);
+        }
+        .w-indexHeader-menu{
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
+        .w-indexHeader-menu:hover img{
+          
+        }
+      }
+    }
+  }
     .mainTop{
       // display: flex;
         margin: auto;
         width: 100%;
         height: 30%;
         .mainLogo{
-          width: 20%;
-          padding-top: 88px;
+          width: 40%;
+          padding-top: 80px;
           margin-left: auto;
           margin-right: auto;
           justify-content: center;
-          @media (max-width:768px) {
-            width: 30%;
-          }
-          @media  (max-width:375px) {
-            width: 45%;
+          @media (min-width:768px) {
+            width: 20%;
+            padding-top: 0px;
           }
             .mainLogo img{
               width:100% ;

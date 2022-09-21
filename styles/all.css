@@ -28,7 +28,7 @@
 @media screen and (min-width: 768px) {
   .header .up {
     width: 95%;
-    height: 90px;
+    height: 70px;
     margin: 0 2.5%;
     padding: 0 5%;
   }
@@ -44,7 +44,7 @@
   width: 100%;
 }
 .header .up .left h1.logo a img {
-  width: 150px;
+  width: 180px;
 }
 .header .up .right-mobile {
   padding-right: 10px;
@@ -67,6 +67,16 @@
 }
 .header .up .right-mobile ul li.cart {
   margin-bottom: 5px;
+  position: relative;
+}
+.header .up .right-mobile ul li.cart span.cart-red-point {
+  position: absolute;
+  right: 0px;
+  top: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bd392a;
 }
 .header .up .right-pc {
   padding-right: 10px;
@@ -123,7 +133,7 @@
   display: none;
   position: fixed;
   z-index: 205;
-  top: 90px;
+  top: 70px;
   width: 80%;
   height: 500px;
   margin: 0 10%;
@@ -135,7 +145,7 @@
   display: none;
   position: fixed;
   z-index: 205;
-  top: 90px;
+  top: 70px;
   right: 5%;
   width: 350px;
   height: 200px;
@@ -181,7 +191,7 @@
   display: none;
   position: fixed;
   z-index: 205;
-  top: 90px;
+  top: 70px;
   right: 10%;
   width: 200px;
   border-radius: 0 0 10px 10px;
@@ -246,7 +256,11 @@
   margin: auto;
 }
 .footer-mobile .footer-nav ul {
+<<<<<<< HEAD
   margin: 35px 40px 0 40px;
+=======
+  margin: 35px 70px 0 70px;
+>>>>>>> a6fc11ca463878b3b1229ad303a34474f1b8503c
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -411,22 +425,28 @@
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
-.menu-page .menu-right .menu-body .product-class .class-select {
+.menu-page .menu-right .menu-body .product-class a {
+  color: #554d49;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  text-decoration: none;
+}
+.menu-page .menu-right .menu-body .product-class a .class-select {
   display: flex;
   height: 40px;
 }
-.menu-page .menu-right .menu-body .product-class .class-select .class-image {
+.menu-page .menu-right .menu-body .product-class a .class-select .class-image {
   padding: 10px 0 0 0;
   margin-left: 20px;
   width: 8%;
   position: relative;
 }
-.menu-page .menu-right .menu-body .product-class .class-select .class-image img {
+.menu-page .menu-right .menu-body .product-class a .class-select .class-image img {
   width: 100%;
   position: absolute;
   bottom: 3px;
 }
-.menu-page .menu-right .menu-body .product-class .class-select .class-name {
+.menu-page .menu-right .menu-body .product-class a .class-select .class-name {
   width: 100%;
   margin-left: 10px;
   padding: 10px 0 0 0;
@@ -438,6 +458,15 @@
   display: flex;
   justify-content: space-between;
   margin: 60px 30px 0 30px;
+}
+.menu-page .menu-right .menu-body .menu-button .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2d827d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu-page .menu-right .menu-body .menu-button a .circle {
   width: 40px;

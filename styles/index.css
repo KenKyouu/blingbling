@@ -158,26 +158,55 @@
   width: 100%;
   overflow: hidden;
 }
+.I-mainSection .w-indexHeader {
+  display: none;
+}
+@media (min-width: 768px) {
+  .I-mainSection .w-indexHeader {
+    display: flex;
+    width: 100%;
+  }
+  .I-mainSection .w-indexHeader .w-indexHeaderBox {
+    width: 15%;
+    margin-left: auto;
+    display: flex;
+    margin-right: 150px;
+    align-items: center;
+  }
+  .I-mainSection .w-indexHeader .w-indexHeaderBox .w-indexHeader-item1 {
+    margin-right: 30px;
+    width: 60%;
+    transition: 0.5s;
+  }
+  .I-mainSection .w-indexHeader .w-indexHeaderBox .w-indexHeader-item1 img {
+    width: 100%;
+  }
+  .I-mainSection .w-indexHeader .w-indexHeaderBox .w-indexHeader-item1:hover img {
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.16), inset 0 -9px 0 -3px #000000);
+  }
+  .I-mainSection .w-indexHeader .w-indexHeaderBox .w-indexHeader-menu {
+    width: 100%;
+  }
+  .I-mainSection .w-indexHeader .w-indexHeaderBox .w-indexHeader-menu img {
+    width: 100%;
+  }
+}
 .I-mainSection .mainTop {
   margin: auto;
   width: 100%;
   height: 30%;
 }
 .I-mainSection .mainTop .mainLogo {
-  width: 20%;
-  padding-top: 88px;
+  width: 40%;
+  padding-top: 80px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .I-mainSection .mainTop .mainLogo {
-    width: 30%;
-  }
-}
-@media (max-width: 375px) {
-  .I-mainSection .mainTop .mainLogo {
-    width: 45%;
+    width: 20%;
+    padding-top: 0px;
   }
 }
 .I-mainSection .mainTop .mainLogo .mainLogo img {
@@ -236,34 +265,16 @@
   background-size: 50px, 90px, 23px;
   background-position-y: 80px, 280px, 230px;
   background-position-x: 20px, -30px, 360px;
-  -webkit-animation-name: mainBg;
-          animation-name: mainBg;
-  -webkit-animation-duration: 3.5s;
-          animation-duration: 3.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: mainBg;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
 }
 @media (min-width: 768px) {
   .I-mainSection {
     background-size: 150px, 240px, 90px;
     background-position-y: 150px, 600px, 500px;
     background-position-x: 60px, -40px, 1800px;
-    -webkit-animation-name: mainBg2;
-            animation-name: mainBg2;
-  }
-  @-webkit-keyframes mainBg2 {
-    0% {
-      background-position-y: 150px, 600px, 500px;
-      background-position-x: 60px, -40px, 1800px;
-    }
-    50% {
-      background-position-y: 200px, 580px, 520px;
-      background-position-x: 60px, -40px, 1800px;
-    }
-    100% {
-      background-position-y: 150px, 600px, 500px;
-      background-position-x: 60px, -40px, 1800px;
-    }
+    animation-name: mainBg2;
   }
   @keyframes mainBg2 {
     0% {
@@ -296,12 +307,12 @@
   display: flex;
   width: 90%;
   margin: auto;
-  -webkit-animation: mainCard 10s linear infinite;
-          animation: mainCard 10s linear infinite;
+  animation: mainCard 10s linear infinite;
 }
 @media (max-width: 375px) {
   .mainBotton .mainRow {
     width: 100%;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     flex: 0 0 80%;
     max-width: 80%;
@@ -365,18 +376,21 @@
 }
 @media (min-width: 768px) {
   .I-storySection .storyTitle {
+    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (min-width: 1400px) {
   .I-storySection .storyTitle {
+    -ms-flex: 0 0 45%;
     flex: 0 0 45%;
     max-width: 45%;
   }
 }
 @media (min-width: 1600px) {
   .I-storySection .storyTitle {
+    -ms-flex: 0 0 35%;
     flex: 0 0 35%;
     max-width: 35%;
   }
@@ -516,13 +530,16 @@
   align-items: flex-end;
 }
 .I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex: 0 0 58.333333%;
   flex: 0 0 58.333333%;
   max-width: 58.333333%;
   margin: 0px 5px;
 }
 @media (min-width: 1400px) {
   .I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row {
+    -ms-flex: 0 0 17%;
     flex: 0 0 17%;
     max-width: 17%;
   }
@@ -661,6 +678,7 @@
 }
 @media (min-width: 1400px) {
   .I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow {
+    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
     padding-bottom: 0px;
@@ -691,8 +709,7 @@
 }
 .I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Top .Top-text p {
   position: absolute;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -895,8 +912,7 @@
 .I-newSection .newSection-Top .newRow-Top .newCardBox .newCardRow .newCard .newCardImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .I-newSection .newSection-Top .newRow-Top .newCardBox .newCardRow .newCard .newCardInfor {
   padding-top: 5px;
@@ -960,8 +976,7 @@
 .I-newSection .newSection-botton .newRow-botton .newCardBox .newCardRow-botton .newCard .newCardImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .I-newSection .newSection-botton .newRow-botton .newCardBox .newCardRow-botton .newCard .newCardInfor {
   padding-top: 5px;
@@ -1113,8 +1128,7 @@
 .I-NEWSsection .w-NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow .NEWScard .NEWScardImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .I-NEWSsection .w-NEWScontainer .NEWSbotton .NEWSbox .NEWScardRow .NEWScard .NEWScardInfor {
   width: 100%;
@@ -1240,8 +1254,7 @@
 .I-NEWSsection .p-NEWScontainer .p-NEWScards .p-NEWScard img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .I-NEWSsection #item-1:checked ~ .p-NEWScards #song-3, .I-NEWSsection #item-2:checked ~ .p-NEWScards #song-1, .I-NEWSsection #item-3:checked ~ .p-NEWScards #song-2 {
   transform: translatex(-40%) scale(0.8);
@@ -1294,16 +1307,7 @@
 .I-brandSection .brandBox .brandSlide .brandTop {
   width: 100%;
   overflow-x: scroll;
-  -webkit-animation: brandSlide 10s linear infinite;
-          animation: brandSlide 10s linear infinite;
-}
-@-webkit-keyframes brandSlide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  animation: brandSlide 10s linear infinite;
 }
 @keyframes brandSlide {
   0% {
@@ -1315,6 +1319,7 @@
 }
 .I-brandSection .brandBox .brandSlide .brandTop .brandImgWarp {
   width: 100%;
+  -ms-flex: 0 0 22%;
   flex: 0 0 22%;
   max-width: 22%;
   margin: 0 -5px;
@@ -1341,16 +1346,7 @@
 .I-brandSection .brandBox .brandSlide .brandTop2 {
   width: 100%;
   overflow-x: scroll;
-  -webkit-animation: brandSlide2 10s linear infinite;
-          animation: brandSlide2 10s linear infinite;
-}
-@-webkit-keyframes brandSlide2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  animation: brandSlide2 10s linear infinite;
 }
 @keyframes brandSlide2 {
   0% {
@@ -1362,6 +1358,7 @@
 }
 .I-brandSection .brandBox .brandSlide .brandTop2 .brandImgWarp {
   width: 100%;
+  -ms-flex: 0 0 22%;
   flex: 0 0 22%;
   max-width: 22%;
   margin: 0 -5px;

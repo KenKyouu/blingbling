@@ -76,6 +76,11 @@ const app = new Vue({
   el: '#app'
 });
 
+
+
+
+
+
 //-------各元素滑動出現---------------
 
 $(window).scroll(function () {
@@ -108,14 +113,14 @@ $(window).scroll(function () {
       })
   }
 
-  if ($(window).scrollTop() >= 880) {
-      $('.I-FestivalSection').css({
+  if ($(window).scrollTop() >= 2  000) {
+      $('.FestivalMainBox').css({
           transform: 'translateY(0px)',
           opacity: 1,
       })
   }
   else{
-      $('.I-FestivalSection').css({
+      $('.FestivalMainBox').css({
           transform: 'translateY(200px)',
           opacity: 0,
       })

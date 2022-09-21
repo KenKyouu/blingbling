@@ -153,6 +153,7 @@ body {
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg img {
   width: 100%;
+<<<<<<< HEAD
   -o-object-fit: cover;
      object-fit: cover;
   padding: 12px;
@@ -161,6 +162,10 @@ body {
   -webkit-animation: swing 1s 1;
           animation: swing 1s 1;
   cursor: pointer;
+=======
+  object-fit: cover;
+  padding: 15px;
+>>>>>>> a6fc11ca463878b3b1229ad303a34474f1b8503c
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap {
   width: 100%;
