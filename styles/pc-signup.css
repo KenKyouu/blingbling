@@ -1,51 +1,63 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-.pc-login .login-bg {
+
+.pc-signup {
+  width: 100%;
+  height: 100vh;
+}
+
+.pc-signup .signup-bg {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 0%;
   right: 0;
 }
-.pc-login .login-box {
-  position: fixed;
+
+.pc-signup .signup-box {
   z-index: 2;
   width: 90%;
   height: 550px;
   max-width: 933px;
   top: 50vh;
   left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   background: url(../images/pc-signup.svg) no-repeat;
   background-size: 100% 100%;
 }
-.pc-login .login-box .pc-login-info {
+
+.pc-signup .signup-box .pc-signup-info {
   width: 28.5%;
   position: absolute;
   top: 25%;
   left: 45%;
 }
-.pc-login .login-box .pc-login-info .pc-login-container {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container {
   width: 130%;
   padding-top: 15%;
 }
-.pc-login .login-box .pc-login-info .pc-login-container input {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container input {
   width: 90%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
@@ -55,101 +67,121 @@
   outline: none;
   padding-bottom: 2%;
 }
+
 @media screen and (max-width: 864px) {
-  .pc-login .login-box .pc-login-info .pc-login-container input {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
     width: 85%;
   }
 }
+
 @media screen and (max-width: 909px) {
-  .pc-login .login-box .pc-login-info .pc-login-container input {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
     width: 80%;
   }
 }
-.pc-login .login-box .pc-login-info .pc-login-container .mail-input {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .mail-input {
   padding-top: 2%;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .password-input {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input {
   padding-top: 5%;
   position: relative;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .password-input .eye-close {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input .eye-close {
   position: absolute;
   top: 20px;
   right: 5px;
 }
+
 @media screen and (max-width: 864px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .password-input .eye-close {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input .eye-close {
     top: 20px;
     right: 22px;
   }
 }
+
 @media screen and (max-width: 909px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .password-input .eye-close {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input .eye-close {
     top: 16px;
     right: 30px;
   }
 }
-.pc-login .login-box .pc-login-info .pc-login-container .password-input p {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input p {
   padding-top: 2px;
   padding-left: 30px;
   font-weight: bold;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .password-corret-input {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input {
   padding-top: 5%;
   width: 100%;
   margin-left: 30px;
   position: relative;
 }
+
 @media screen and (max-width: 909px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .password-corret-input {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input {
     width: 100%;
   }
 }
-.pc-login .login-box .pc-login-info .pc-login-container .password-corret-input .eye-close {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input .eye-close {
   position: absolute;
   top: 20px;
   right: 35px;
 }
+
 @media screen and (max-width: 864px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .password-corret-input .eye-close {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input .eye-close {
     top: 15px;
     right: 50px;
   }
 }
+
 @media screen and (max-width: 909px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .password-corret-input .eye-close {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input .eye-close {
     top: 16px;
     right: 60px;
   }
 }
-.pc-login .login-box .pc-login-info .pc-login-container .password-corret-input p {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input p {
   padding-top: 2px;
   padding-left: 30px;
   font-weight: bold;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .bd-input {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input {
   padding-top: 5%;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .bd-input input {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input input {
   text-align: center;
   width: 28%;
   margin: 0 3px;
 }
+
 @media screen and (max-width: 864px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .bd-input input {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input input {
     width: 26%;
   }
 }
+
 @media screen and (max-width: 909px) {
-  .pc-login .login-box .pc-login-info .pc-login-container .bd-input input {
+  .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input input {
     width: 25%;
   }
 }
-.pc-login .login-box .pc-login-info .pc-login-container .bd-input .bd-input-1 {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input .bd-input-1 {
   text-align: left;
   margin-left: 0;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .bd-input p {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input p {
   padding-left: 12%;
   padding-top: 3px;
   padding-left: 30px;
@@ -158,7 +190,8 @@
   font-size: 11px;
   color: #4c4948;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .sign-p {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .sign-p {
   font-family: "Roboto";
   font-weight: bold;
   font-size: 11px;
@@ -166,10 +199,12 @@
   text-align: left;
   padding: 5px 5px 8px 0px;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .sign-p a {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .sign-p a {
   color: #154d7a;
 }
-.pc-login .login-box .pc-login-info .pc-login-container .login-btn {
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container .signup-btn {
   width: 150px;
   height: 35px;
   border: 0;
@@ -178,57 +213,90 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.pc-login .login-box .pc-login-info .or {
+
+.pc-signup .signup-box .pc-signup-info .or {
   text-align: center;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   padding-bottom: 10px;
 }
+
 @media screen and (max-width: 864px) {
-  .pc-login .login-box .pc-login-info .or {
+  .pc-signup .signup-box .pc-signup-info .or {
     padding-top: 5%;
   }
 }
+
 @media screen and (min-width: 910px) {
-  .pc-login .login-box .pc-login-info .or {
+  .pc-signup .signup-box .pc-signup-info .or {
     padding-top: 8%;
   }
 }
-.pc-login .login-box .pc-login-info .orwith-icon {
+
+.pc-signup .signup-box .pc-signup-info .orwith-icon {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.pc-login .login-box .pc-login-info .orwith-icon .fb-icon {
+
+.pc-signup .signup-box .pc-signup-info .orwith-icon .fb-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: rgba(194, 194, 194, 0.2901960784);
+  background-color: #c2c2c24a;
   border-radius: 10px;
   margin-right: 10px;
 }
-.pc-login .login-box .pc-login-info .orwith-icon .google-icon {
+
+.pc-signup .signup-box .pc-signup-info .orwith-icon .google-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: rgba(194, 194, 194, 0.2901960784);
+  background-color: #c2c2c24a;
   border-radius: 10px;
 }
-.pc-login .login-box .pc-login-info .not-member {
+
+.pc-signup .signup-box .pc-signup-info .not-member {
   padding-top: 20px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   text-align: center;
   color: #4c4948;
 }
-.pc-login .login-box .pc-login-info .not-member a {
+
+.pc-signup .signup-box .pc-signup-info .not-member a {
   color: #7cb2af;
-}/*# sourceMappingURL=pc-signup.css.map */
+}
+
+.signup-show {
+  position: fixed;
+}
+/*# sourceMappingURL=pc-signup.css.map */
