@@ -6,7 +6,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/cart1.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
-
+<!--TODO 購物車內沒有商品判斷 -->
 <div class="s-package-wrap">
     <div class="container">
         <div class="j-progress-bar">
@@ -88,7 +88,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                                     </svg>
                                 </div>
 
-                                <div class="j-amount col-4 px-0 col-md-4 pt-1"><span class="amountNumber" value="1">1</span>
+                                <div class="j-amount col-4 px-0 col-md-4 pt-1"><span class="amountNumber">1</span>
                                 </div>
 
                                 <div class="col-4">
@@ -130,7 +130,7 @@ $pageName = 'cart1'; // 頁面名稱，可以自定義
                             </div> <!-- 單價 -->
 
                             <div class="j-amount col-6 px-0 col-md-4 d-flex ">
-                                <div class="col-4">
+                                <div class="col-4 " >
                                     <svg width="35" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="#e1a77e">
                                         <path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z" />
                                     </svg>
