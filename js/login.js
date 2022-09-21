@@ -13,7 +13,7 @@ function loginCheckForm() {
     $(document.login).serialize(),
     function (data) {
       if (data.success) {
-        location.href = "index.php";
+        location.href = "member-myIntro.php";
       } else {
         alert(data.error);
       }
