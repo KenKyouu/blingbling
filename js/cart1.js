@@ -31,6 +31,26 @@ $(window).scroll(function () {
     console.log('percentage: ', percentage);
 })
 
+
+(function(){
+    let t = $('.amountNumber');
+    $('.rightIncrease').click(function(){
+        console.log('click');
+        
+        
+    })
+    $('.leftDecrease').click(function(){
+        
+    })
+})
+
+
+
+
+
+
+
+
 // // 訂購清單金額計算
 // window.onload = function () {
 //     var decrease = document.getElementsByClassName("leftDecrease");  //減號

@@ -92,15 +92,18 @@ body{
     @media (max-width:768px) {
         height: auto;
     }
-    // margin-bottom: 120px;
     .containerr{
         ::-webkit-scrollbar {
             display: none;
         }
-        @media (min-width:992px) {
-            margin: 56.5px 100px;
+        @media (min-width:768px) {
+            padding: 70px 50px;
         }
-        margin: 56.5px 50px;
+        @media (min-width:992px) {
+            padding: 70px 100px;
+        }
+
+        padding: 56.5px 50px;
         .product-info1{
             width: 100%;
             @media(min-width:768px)  {
@@ -227,9 +230,11 @@ body{
                         font-family: "GenSenRounded-B";
                         $ps-font-size: 14px;
                         .describe{
+                            cursor: pointer;
                             color:  $super-dark;
                         }
                         .specification{
+                            cursor: pointer;
                             color: $light-lake-green;
                         }
                     }
@@ -317,18 +322,24 @@ body{
                     align-items: center;
                     justify-content: space-between;
                     .quantity{
+                        @media (max-width:992px) {
+                            width: 40%;
+                        }
                         display: flex;
                         width: 30%;
                         .quantity-reduce{
                             padding: 0;
-                            width: 33.33%;
+                            width: 32%;
                             padding:8px 0;
                             border: 3px solid $light-lake-green;
                             border-radius: 10px;
                             background-color: transparent;
                         }
                         .quantity-num{
-                            width: 33.33%;
+                            border: 0;
+                            background-color: transparent;
+                            text-align: center;
+                            width: 32px;
                             font-family: "GenSenRounded-B";
                             color: $lake-green;
                             display: flex;
@@ -338,7 +349,7 @@ body{
                         }
                         .quantity-add{
                             padding: 0;
-                            width: 33.33%;
+                            width: 32%;
                             padding:8px 0;
                             border: 0;
                             border-radius: 10px;
@@ -346,14 +357,21 @@ body{
                         }
                     }
                     .cartbtn{
+                        @media (max-width:1150px) {
+                            width: 50%;
+                        }
                         width: 60%;
                         // padding: 0 10px;
                         display: flex;
                         align-items: center;
                         justify-content: right;
                         .add-cartbtn{
-                            @media (min-width:768px) and (max-width:815px) {
+                            @media (min-width:768px) and (max-width:870px) {
                                 font-size: $ps-font-size;    
+                            }
+                            @media (max-width:1150px) {
+                                width: 100%;
+                                margin-left: 5px;
                             }
                             width: 80%;
                             padding:8px 0;
@@ -371,6 +389,7 @@ body{
                         }
                     }
                     .heart-icon{
+                        cursor: pointer;
                         width: 10%;
                         text-align: right;
                     }    
@@ -389,7 +408,10 @@ body{
     }
     margin:0 30px 50px 30px;
     .mightlike{
-        padding-top: 4%;
+        @media (min-width:769px) {
+            padding-top: 12%;
+        }
+        // padding-top: 5%;
         .mightlike-title{
             width: 100%;
             text-align: right;
@@ -411,21 +433,48 @@ body{
                 border-radius: 20px;
             }
         }
+        
         .product-list{
-            padding-top: 20px;
-            padding-bottom: 80px;
+            padding-top: 25px;
+            padding-bottom: 90px;
             width: 100%;
             display: flex;
             justify-content: center;
-            overflow: hidden;
+            align-items: center;
+            overflow: hidden;  
+            .slick-prev{
+                // border-radius: 10px 0 0 10px;
+                border: 0;
+                width: 25px;
+                height: 25px;
+                background-color: $super-dark;
+                i{
+                    color: $white;
+                }
+            }
+            .slick-next{
+                // margin: 10px 0;
+                // border-radius: 0 10px 10px 0;
+                border: 0;
+                width: 25px;
+                height: 25px;
+                background-color: $super-dark;
+                i{
+                    color: $white;
+                }
+            }   
             .product-list-scroll{
-                max-width: 960px;
+                // max-width: 960px;
+                width: auto;
                 margin: 0 auto;
-                overflow-x:scroll;
+                overflow-x:scroll;  
                 .product-list-row{
                     display: flex;
+                    .firsr-card{
+                        margin-left: 0;
+                    }
                     a {
-                        margin:0 1.5%;
+                        margin:0 1%;
                         .product-card {
                             width: 100%;
                             margin: auto;
@@ -470,8 +519,8 @@ body{
                                     width: 150px;
                                     
                                 }
-                            width: 190px;
-                            padding: 0 0 5px 0;
+                                width: 190px;
+                                padding: 0 0 5px 0;
                                 p {
                                     color: $deep-brown;
                                     font-family: "GenSenRounded-M";
@@ -536,7 +585,7 @@ body{
             display: flex;
             justify-content: center;
             .quantity{
-                padding: 0 10px;
+                // padding: 0 10px;
                 .quantity-reduce{
                     width: 35px;
                     height: 35px;
@@ -545,23 +594,28 @@ body{
                     background-color: transparent;
                 }
                 .quantity-num{
+                    width: 40px;
+                    border: 0;
+                    background-color: transparent;
+                    text-align: center;
                     font-family: "GenSenRounded-B";
                     color: $lake-green;
                     display: flex;
                     align-items: center;
-                    padding: 0 10px;
+                    justify-content: center;
+                    // padding: 0 10px;
                     font-size: $h6-font-size;
-                   }
+                }
                    .quantity-add{
                     width: 35px;
                     height: 35px;
                     border: 0;
                     border-radius: 10px;
                     background-color: $lake-green;
-                   }
+                }
             }
             .cartbtn{
-                padding: 0 10px;
+                padding: 0 8px;
                 .add-cartbtn{
                     width: 130px;
                     height: 35px;
@@ -579,6 +633,7 @@ body{
                 padding: 0 10px;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
             }
         }
     }
