@@ -27,16 +27,13 @@ $total = 0;
 foreach($_SESSION['cart'] as $k=>$v){
     $total += $v['price']*$v['qty'];
 }
-$od_sql = "INSERT INTO `order_list`(
+$od_sql = "INSERT INTO `orders`(
     `member_sid`, `amount`, 
     `ordererName`,
     `ordererMobile`, 
     `recipientName`, 
     `recipientMobile`, 
     `delivery`,
-    `city`, 
-    `town`,
-    `zipcode`,
     `address`,
     `pay`,
     `order_date`
@@ -48,10 +45,7 @@ $od_sql = "INSERT INTO `order_list`(
     ?,
     ?,
     ?,
-    ?,
-    ?,
-    ?,
-    ?,
+    CONCAT(?,?,?,?),
     ?,
     NOW()
 )";
@@ -67,11 +61,11 @@ $stmt->execute([
     $_POST['recipientName'],
     $_POST['recipientMobile'],
     $_POST['delivery'],
+    $_POST['zipcode'],
     $_POST['city'],
     $_POST['town'],
-    $_POST['zipcode'],
     $_POST['address'],
-    $_POST['pay'],
+    $_POST['pay']
     
 ]);
 
