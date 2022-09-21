@@ -135,20 +135,88 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
-.wrap .containerr .main .row .col .whiteBg .friendWishList {
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton {
   width: 100%;
-  height: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 10px;
+  justify-content: left;
   align-items: center;
+  margin: 20px 0;
 }
-.wrap .containerr .main .row .col .whiteBg .friendWishList .wishList {
-  padding: 9px;
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton p.letFriendWatch {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  color: #000000;
+  padding-right: 16px;
 }
-.wrap .containerr .main .row .col .whiteBg .friendWishList .wishList img {
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton .switchButton {
+  width: 48px;
+  height: 24px;
+  border-radius: 100px;
+  background-color: #c2c2c2;
+  padding: 3px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton .switchButton .switch {
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  text-align: left;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists {
   width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList {
+  width: 100%;
+  padding: 0;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card {
+  width: 100%;
+  margin: auto;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
+  width: 140px;
+  height: 140px;
+  background-image: url(../images/products/71-1.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image .heart {
+  cursor: default;
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-title {
+  width: 190px;
+  padding: 5px 0 5px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-title h4 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price {
+  width: 190px;
+  padding: 0 0 5px 0;
+}
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price {
+    width: 150px;
+  }
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price p {
+  color: #554d49;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  font-weight: 900;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price p::before {
+  display: inline-block;
+  content: "NT$";
 }
 
 @media screen and (min-width: 700px) {

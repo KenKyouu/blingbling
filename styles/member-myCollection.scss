@@ -236,24 +236,131 @@ $bold: 900;
                         padding: 0px 30px;
                         margin-top: 15px;
 
-                        
-
-                        .friendWishList {
+                        .friendWatchButton {
                             width: 100%;
-                            height: auto;
                             display: flex;
-                            flex-wrap: wrap;
-                            justify-content: center;
-                            margin-bottom: 10px;
+                            justify-content: left;
                             align-items: center;
-
-                            .wishList {
-                                padding: 9px;
-                                
-
-                                img {
-                                    width: 100%;
+                            margin: 20px 0 ;
+                            p.letFriendWatch {
+                                font-family: "GenSenRounded-B";
+                                font-size: $p-font-size;
+                                color: $super-dark;
+                                padding-right: 16px;
+                            }
+                            .switchButton {
+                                width: 48px;
+                                height: 24px;
+                                border-radius: 100px;
+                                background-color: $gray;
+                                padding: 3px;
+                                .switch {
+                                    width: 18px;
+                                    height: 18px;
+                                    border-radius: 100px;
+                                    background-color: $white;
+                                    text-align: left;
                                 }
+                            }
+                        }
+
+                        .myWishLists {
+                            width: 100%;
+                            
+                            .wishList {
+                                width: 100%;
+                                padding: 0;
+                                a {
+                                    .product-card {
+                                        width: 100%;
+                                        margin: auto;
+                                        .product-image {
+                                            // @media (max-width:768px) {
+                                            //     width: 150px;
+                                            //     height: 150px;
+                                            // }
+                                            width: 140px;
+                                            height: 140px;
+                                            background-image: url(../images/products/71-1.jpeg);
+                                            background-size: cover;
+                                            position: relative;
+                                                .heart {
+                                                    cursor: default;
+                                                    position: absolute;
+                                                    right: 3px;
+                                                    bottom: 3px;
+                                                }
+                                        }
+                                        .product-title {
+                                            // @media (max-width:768px) {
+                                            //     width: 150px;
+                                                
+                                            // }
+                                        width: 190px;
+                                        padding: 5px 0 5px 0;
+                                            h4 {
+                                                color: $super-dark;
+                                                font-family: "GenSenRounded-M";
+                                                font-size: $ps-font-size;
+                                                overflow: hidden;
+                                                display: -webkit-box;
+                                                -webkit-box-orient: vertical;
+                                                -webkit-line-clamp: 2;
+                                            }
+                                        }
+                                        .product-price {
+                                            @media (max-width:768px) {
+                                                width: 150px;
+                                                
+                                            }
+                                        width: 190px;
+                                        padding: 0 0 5px 0;
+                                            p {
+                                                color: $deep-brown;
+                                                font-family: "GenSenRounded-M";
+                                                font-size:  $ps-font-size;
+                                                font-weight: $bold;
+                                                &::before {
+                                                display: inline-block;
+                                                content: "NT$";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                // .wishList-img {
+                                //     width: 140px;
+                                //     height: 140px;
+                                //     position: relative;
+                                //     img {
+                                //         width: 100%;
+                                //         height: 100%;
+                                //     }
+                                // }
+                                // .wishList-heart {
+                                //     position: absolute;
+                                //     z-index: 1;
+                                //     bottom: 0;
+                                //     right: 0;
+                                // }
+                                // .productTitle {
+                                //     width: 100%;
+                                //     padding-top: 10px;
+                                //     h4 {
+                                //         font-family: "GenSenRounded-B";
+                                //         font-size: $ps-font-size;
+                                //         color: $super-dark;
+                                //     }
+                                // }
+                                // .productPrice {
+                                //     padding-top: 6px;
+                                //     p {
+                                //         font-family: "GenSenRounded-B";
+                                //         font-size: $ps-font-size;
+                                //         color: $dark-gray;
+                                //         text-align: left;
+                                //     }
+                                // }
                             }
                         }
                     }
