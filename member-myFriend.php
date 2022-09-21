@@ -5,8 +5,11 @@ $pageName = 'home'; // 頁面名稱，可以自定義
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <?php include __DIR__ . '/parts/navbar.php'; ?>
-<div class="wrap">
+    <div class="wrap">
         <div class="containerr">
             <div class="main">
                 <div class="row">
@@ -177,7 +180,100 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                         <div class="whiteBg col-lg-9 col-xl-9">
                             <div class="newFriend">
                                 <p>新增好友資訊</p>
-                                <button class="uploadNewFriend" type="submit">新增</button>
+                                <button type="button" class="btn uploadNewFriend" data-toggle="modal" data-target="#exampleModalCenter">
+                                    新增
+                                </button>
+
+                                <!-- Modal -->
+                                <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <p class="editTitle">新增好友資訊</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="friend-details">
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p><span>*</span> 好友姓名</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p><span>*</span> 好友性別</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <select name="gender" placeholder="請選擇" required>
+                                                                <option value="male">男</option>
+                                                                <option value="female">女</option>
+                                                                <option value="others">不顯示</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p>好友Email</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="email" name="email" placeholder="好友的電子郵件地址">
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p><span>*</span> 好友生日</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
+                                                            <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p>好友印象標籤</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="text" name="tags" placeholder="最多選擇五個">
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text"></div>
+                                                            <div class="detail-input">
+                                                                <div class="tagsselect">
+                                                                    <div class="tags">
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發薯</span>
+                                                                        <span>沙發</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙鈴薯</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙鈴</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙鈴薯</span>
+                                                                        <span>沙發</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn true" data-dismiss="modal">儲存</button>
+                                                <button type="button" class="btn false" data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
                             <div class="myFriendsGroup">
                                 <div class="friendList">
@@ -838,7 +934,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
 
     <!-- ------------lightbox-d eleteWarning------------ -->
 
-    <div class="friend-lightbox-warn">
+    <!-- <div class="friend-lightbox-warn">
         <div class="friend-lightbox-black"></div>
         <div class="friend-lightbox-bg">
             <div class="friend-warning">
@@ -853,90 +949,6 @@ $pageName = 'home'; // 頁面名稱，可以自定義
             <button class="true">確定</button>
             <button class="false">取消</button>
         </div>
-    </div>
-
-    <!-- ------------lightbox-friendDetails------------ -->
-    
-    <div class="lightbox-newFriendDetails-blackbg"></div>
-    <div class="lightbox-newFriendDetails">
-        <p class="editTitle">新增好友資訊</p>
-        <div class="friend-details">
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 好友姓名</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 好友性別</p>
-                </div>
-                <div class="detail-input">
-                    <select name="gender" placeholder="請選擇" required>
-                        <option value="male">男</option>
-                        <option value="female">女</option>
-                        <option value="others">不顯示</option>
-                    </select>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p>好友Email</p>
-                </div>
-                <div class="detail-input">
-                    <input type="email" name="email" placeholder="好友的電子郵件地址">
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 好友生日</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
-                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p>好友印象標籤</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="tags" placeholder="最多選擇五個">
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text"></div>
-                <div class="detail-input">
-                    <div class="tagsselect">
-                        <div class="tags">
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發薯</span>
-                            <span>沙發</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙鈴薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙鈴</span>
-                            <span>沙發馬薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙鈴薯</span>
-                            <span>沙發</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="detailsbtn">
-            <button class="true" type="submit" name="btn">儲存</button>
-            <button class="false" name="btn">取消</button>
-        </div>
-    </div>
+    </div> -->
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

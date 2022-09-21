@@ -263,7 +263,7 @@ $bold: 900;
 }
 @media only screen and (min-width: 768px) {
     .j-progress-bar{
-        margin-top: 5rem;
+        margin-top: 6rem;
         width: 60%;
         margin-left: 4rem;
     }
@@ -617,10 +617,11 @@ $bold: 900;
 
   /* Style the indicator (dot/circle) */
     .j-point .j-checkmark-r:after {
-        top: 2.5px;
-        left: 2.5px;
-        width: 7px;
-        height: 7px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         background: black;
     }
@@ -1060,6 +1061,12 @@ $bold: 900;
                             line-height: 2;
                         }
                     }
+                    .has-error .j-input{
+                        @extend %has-error-shared;
+                    }
+                    .has-success .j-input{
+                        @extend %has-success-shared;
+                    }
                 }
             }
         }
@@ -1379,9 +1386,6 @@ $bold: 900;
                                 width: 100%;
                                 max-width: 370px;
                                 backface-visibility: hidden;
-                                #j-ccsingle{
-                                    position: absolute;
-                                }
                                 .j-card-wrap{
                                     background: url("../images/cart2-card-font.png") center center/cover no-repeat;
                                     display: flex;
@@ -1395,9 +1399,15 @@ $bold: 900;
                                 }
                                 .j-font-text{
                                     width: 100%;
-                                    .j-card-icon-wrap{
-                                        width: 16%;
+                                    .j-card-icons{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        .j-card-icon-wrap{
+                                            width: 16%;
+                                        }
                                     }
+                                    
                                     .j-card-number{
                                         padding:0 15%;
                                         text-align: left;
@@ -1572,7 +1582,7 @@ $bold: 900;
             }
             &:nth-child(2){
                 text-align: right;
-                a{
+                // a{
                     display: block;
                     width: 90%;
                     button{
@@ -1588,7 +1598,7 @@ $bold: 900;
                         font-size: $h6-font-size;
                         font-weight: $bold;
                     }
-                }
+                // }
                 
             }
         }
@@ -1785,55 +1795,6 @@ $bold: 900;
 }
 
 
-//---------------lightbox-error------
-// .j-lightbox{
-//     // display: none;
-//     .j-lightbox-black{
-//         z-index: 20;
-//         position: fixed;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         background-color: rgba(0, 0, 0, 0.7);
-//     }
-//     .j-lightbox-bg{
-//         z-index: 21;
-//         position: fixed;
-//         top: 50vh;
-//         left: 50vw;
-//         transform: translateX(-50%) translateY(-50%);
-//         width: 90%;
-//         max-width: 400px;
-//         font-family: "GenSenRounded-B";
-//         font-weight: $bold;
-//         text-align: center;
-//         background: url("../images/cart2-error-bg.png")center center/100% 100% no-repeat;
-//         padding: 76px 0;
-//         .j-warning{
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             margin: 10px 30px;
-//             .j-warn-icon{
-//                 margin-right: 20px;
-//             }
-//             .j-warn-text{
-//                 font-size: $h6-font-size;
-//                 color: $super-dark;
-//             }
-//         }
-//         button{
-//             border: none;
-//             background-color: $super-dark;
-//             border-radius: 10px;
-//             color: $white;
-//             font-size: $h7-font-size;
-//             padding: 10px 30px;
-//         }
-//     }
-    
-// }
 
 // footer
 
