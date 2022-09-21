@@ -1,9 +1,9 @@
 <?php
 
 $db_host = 'localhost';
-$db_user = 'kenkyou';
-$db_pass = 'admin';
-$db_name = 'project';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'BlingBling';
 
 $dsn = "mysql:host={$db_host};dbname={$db_name};charset=utf8"; // data source name
 
