@@ -656,7 +656,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 <textarea name="remark" id="remark" class="s-input" placeholder="有什麼想要跟我們說的嗎？"></textarea>
             </div>
 
-            <div class="row pt-3">
+            <div class="row btn-row pt-3">
                 <div class="col col-2"></div>
                 <div class="col col-2"></div>
                 <div class="col col-2"></div>
@@ -682,15 +682,13 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
 
                 <div class="col">
-                    <button class="cart1-check">前往結帳</button>
+                    <button class="cart1-check">查看訂單</button>
                 </div>
 
             </div>
         </div>
     </div>
 </div>
-
-
 
 
 
