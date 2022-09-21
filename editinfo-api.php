@@ -8,6 +8,7 @@ $output = [
     'postData' => $_POST,
 ];
 
+$user = $_SESSION['user']['id'];
 // 先判斷name跟email欄位有沒有值
 
 // if (empty($_POST['name']) or empty($_POST['email'])) {
@@ -31,7 +32,8 @@ $sql = "UPDATE `member` SET
     `gender` = ?,
     `birthday` = CONCAT(?,'-',?,'-',?),
     `mobile` = ?,
-    `address` = ?";
+    `address` = ?
+    WHERE `sid` = $user ";
 $stmt = $pdo->prepare($sql);
 
 $stmt->execute([

@@ -49,12 +49,12 @@ $("li.member, .header-member").mouseleave(function () {
 
 $(".switchtosignup").click(function () {
   console.log("eeennn");
-  $(".pc-login").removeClass("loginandsignup-show");
+  $(".pc-login").addClass("loginandsignup-hidden");
   $(".pc-signup").addClass("loginandsignup-show");
 });
 
 $(".switchtologin").click(function () {
   console.log("hellohello");
   $(".pc-signup").removeClass("loginandsignup-show");
-  $(".pc-login").addClass("loginandsignup-show");
+  $(".pc-login").removeClass("loginandsignup-hidden");
 });
