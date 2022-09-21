@@ -225,6 +225,52 @@
   font-size: 18px;
 }
 
+.footer-mobile {
+  margin-top: 30px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 257px;
+}
+@media screen and (min-width: 768px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+.footer-mobile .footer-logo {
+  padding-top: 30px;
+  width: 85px;
+  margin: auto;
+}
+.footer-mobile .footer-nav ul {
+  margin: 35px 40px 0 40px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ffffff;
+}
+.footer-mobile .footer-nav ul li a {
+  color: #ffffff;
+  font-family: "GenSenRounded-M";
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-mobile .footer-social {
+  margin: 35px 160px 0 160px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-mobile .footer-c {
+  margin-top: 35px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
 .footer-pc {
   width: 100%;
   height: 120px;

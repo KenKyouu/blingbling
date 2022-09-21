@@ -288,6 +288,7 @@ body {
 }
 .j-list .j-list-info .j-list-item .j-list-sub .j-list-num .j-amount svg {
   margin-left: -15px;
+  cursor: pointer;
 }
 .j-list .j-list-info .j-list-item .j-list-sub .j-money {
   text-align: center;
@@ -298,6 +299,7 @@ body {
 .j-list .j-list-info .j-list-item .s-list-icon svg {
   width: 80%;
   margin-top: 15px;
+  cursor: pointer;
 }
 .j-list .j-list-info .j-list-item .s-list-icon .s-trash {
   margin-top: -5px;
@@ -642,6 +644,9 @@ body {
 .s-package-card-item .s-package-card-title .s-package-card-btn .money-discount {
   color: #7cb2af;
 }
+.s-package-card-item .s-package-card-title .s-package-card-btn .s-package-card-radio label {
+  cursor: pointer;
+}
 
 /* Hide the browser's default checkbox */
 /* Create a custom radio button */
@@ -979,6 +984,11 @@ body {
   padding: 10px;
   border-radius: 10px;
 }
+.s-additional-product-section .additional-product-wrap .additional-product-box .additional-product-card .img-wrap img:hover {
+  -webkit-animation: swing 1s 1;
+          animation: swing 1s 1;
+  cursor: pointer;
+}
 .s-additional-product-section .additional-product-wrap .additional-product-box .additional-product-card .info-wrap {
   padding-top: 10px;
 }
@@ -1017,6 +1027,41 @@ body {
   border: 1px solid #2d827d;
 }
 
+@-webkit-keyframes swing {
+  15% {
+    transform: translateX(5px);
+  }
+  40% {
+    transform: translateX(-5px);
+  }
+  65% {
+    transform: translateX(2px);
+  }
+  85% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes swing {
+  15% {
+    transform: translateX(5px);
+  }
+  40% {
+    transform: translateX(-5px);
+  }
+  65% {
+    transform: translateX(2px);
+  }
+  85% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @media only screen and (min-width: 576px) {
   .s-additional-product-section {
     padding-left: 130px;
@@ -1088,7 +1133,7 @@ body {
   font-weight: 900;
   text-align: center;
   background: url("../images/cart1-coupon-bg.png") center center/100% 100% no-repeat;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg button {
   border: 1px solid #000000;
@@ -1099,6 +1144,7 @@ body {
   font-size: 16px;
   text-align: center;
   padding: 10px 40px;
+  cursor: pointer;
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select {
   padding: 0 20px;
@@ -1106,12 +1152,17 @@ body {
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card {
   padding-bottom: 1.1rem;
+  margin-left: 1.1rem;
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .coupon-close-icon {
   position: absolute;
   top: 0;
   right: 0;
   left: 85%;
+  cursor: pointer;
+}
+.s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card label {
+  cursor: pointer;
 }
 
 .s-discount-wrap .container .s-coupon-lightbox {
@@ -1139,7 +1190,7 @@ body {
   font-weight: 900;
   text-align: center;
   background: url("../images/cart1-coupon-bg.png") center center/100% 100% no-repeat;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg button {
   border: 1px solid #000000;
@@ -1157,10 +1208,15 @@ body {
 }
 .s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card {
   padding-bottom: 1.1rem;
+  margin-left: 1.1rem;
 }
 .s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .coupon-close-icon {
   position: absolute;
   top: 0;
   right: 0;
   left: 85%;
+  cursor: pointer;
+}
+.s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card label {
+  cursor: pointer;
 }/*# sourceMappingURL=cart1.css.map */

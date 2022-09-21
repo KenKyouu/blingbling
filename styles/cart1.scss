@@ -363,6 +363,7 @@ body {
 
                         svg {
                             margin-left: -15px; // 電腦版要刪掉
+                            cursor: pointer;
                         }
                     }
                 }
@@ -378,6 +379,7 @@ body {
                 svg {
                     width: 80%;
                     margin-top: 15px;
+                    cursor: pointer;
                 }
 
                 .s-trash {
@@ -815,12 +817,11 @@ body {
                 color: $light-lake-green;
             }
 
-            // .s-package-card-radio {
-            //     .j-point {
-            //         @extend %point-shared;
-            //         @extend %point-input-shared;
-            //     }
-            // }
+            .s-package-card-radio {
+                label {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
@@ -1242,6 +1243,11 @@ body {
                     width: 100%;
                     padding: 10px;
                     border-radius: 10px;
+
+                    img:hover {
+                        animation: swing 1s 1;
+                        cursor: pointer;
+                    }
                 }
 
                 .info-wrap {
@@ -1291,6 +1297,28 @@ body {
 
             }
         }
+    }
+}
+
+@keyframes swing {
+    15% {
+        transform: translateX(5px);
+    }
+
+    40% {
+        transform: translateX(-5px);
+    }
+
+    65% {
+        transform: translateX(2px);
+    }
+
+    85% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0px);
     }
 }
 
@@ -1393,7 +1421,7 @@ body {
                         font-weight: $bold;
                         text-align: center;
                         background: url("../images/cart1-coupon-bg.png")center center/100% 100% no-repeat;
-                        padding: 50px 0;
+                        padding: 30px 0;
 
                         button {
                             border: 1px solid $super-dark;
@@ -1404,6 +1432,7 @@ body {
                             font-size: $p-font-size;
                             text-align: center;
                             padding: 10px 40px;
+                            cursor: pointer;
                         }
 
                         .s-coupon-select {
@@ -1412,12 +1441,18 @@ body {
 
                             .coupon-radio-card {
                                 padding-bottom: 1.1rem;
+                                margin-left: 1.1rem;
 
                                 .coupon-close-icon {
                                     position: absolute;
                                     top: 0;
                                     right: 0;
                                     left: 85%;
+                                    cursor: pointer;
+                                }
+
+                                label {
+                                    cursor: pointer;
                                 }
                             }
                         }
@@ -1464,7 +1499,7 @@ body {
                 font-weight: $bold;
                 text-align: center;
                 background: url("../images/cart1-coupon-bg.png")center center/100% 100% no-repeat;
-                padding: 50px 0;
+                padding: 30px 0;
 
                 button {
                     border: 1px solid $super-dark;
@@ -1483,13 +1518,18 @@ body {
 
                     .coupon-radio-card {
                         padding-bottom: 1.1rem;
-                        // position: relative;
+                        margin-left: 1.1rem;
 
                         .coupon-close-icon {
                             position: absolute;
                             top: 0;
                             right: 0;
                             left: 85%;
+                            cursor: pointer;
+                        }
+
+                        label {
+                            cursor: pointer;
                         }
                     }
                 }

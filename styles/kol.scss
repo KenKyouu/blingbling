@@ -152,14 +152,6 @@ body {
     }
 }
 
-// @media only screen and (min-width: 991px) {
-//     .container {
-//         .article-tag-wrap {
-//             margin-top: 8.5rem;
-//         }
-//     }
-// }
-
 // -------------------------KOL文章-------------------------------- //
 
 .article-container {
@@ -173,6 +165,14 @@ body {
         font-size: $h5-font-size ;
         color: $super-dark;
         padding-bottom: 10px;
+    }
+
+    .article-ribbon {
+        .col {
+            img {
+                width: 50%;
+            }
+        }
     }
 
     .kol-wrap {
@@ -192,7 +192,7 @@ body {
             display: none;
             position: absolute;
             top: 30%;
-            width: 15%;
+            width: 30%;
             right: 0;
             left: 0;
             margin: 0 auto;
@@ -204,10 +204,6 @@ body {
             font-family: "Roboto";
             font-size: $p-font-size;
             font-weight: 700;
-        }
-
-        &:hover {
-            display: block;
         }
     }
 }
@@ -252,6 +248,31 @@ body {
     }
 }
 
+@media (min-width: 525px) and (max-width: 1200px) {
+    .article-container {
+        .article {
+            .article-wrap {
+                .kol-wrap {
+                    .article-content-wrap {
+                        .article-page {
+
+                            .arrow-left,
+                            .arrow-right {
+                                margin-left: 1.2rem;
+
+                                svg {
+                                    width: 70%;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .article-container {
         padding: 60px 30px;
@@ -264,30 +285,40 @@ body {
                 }
 
                 .kol-wrap {
-                    .article-content-wrap {
-                        width: 60%;
-                        height: 250px;
+                    button {
+                        display: none;
+                    }
 
-                        h6 {
-                            font-size: $h6-font-size;
-                            padding-top: 15px;
-                        }
+                    &:hover {
+                        display: block;
+                        cursor: pointer
+                    }
+                }
 
-                        p {
-                            font-size: $ps-font-size;
-                            padding: 30px 0;
-                            height: 140px;
-                        }
+                .article-content-wrap {
+                    width: 60%;
+                    height: 250px;
 
-                        .article-page {
-                            padding: 0 15px;
-                        }
+                    h6 {
+                        font-size: $h6-font-size;
+                        padding-top: 15px;
+                    }
+
+                    p {
+                        font-size: $ps-font-size;
+                        padding: 30px 0;
+                        height: 140px;
+                    }
+
+                    .article-page {
+                        padding: 0 15px;
                     }
                 }
             }
         }
     }
 }
+
 
 @media only screen and (min-width: 992px) {
     .article-container {
@@ -300,7 +331,20 @@ body {
                     font-weight: 900;
                 }
 
+                .article-ribbon {
+                    .col {
+                        img {
+                            width: 30%;
+                        }
+                    }
+                }
+
                 .kol-wrap {
+
+                    button {
+                        width: 20%;
+                    }
+
                     .article-content-wrap {
                         width: 60%;
                         height: 280px;
@@ -324,8 +368,19 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
-    .container {
+    .kol-text-bg-section {
+        background-image: url(../images/kol-text-bg.svg), url(../images/kol-bg.svg);
+        background-size: 7%, 16%;
+        background-repeat: no-repeat;
+        background-position-x: 100%, -2%;
+        background-position-y: 10%, 70%;
+        background-attachment: local, fixed;
+        // animation: 1.5s linear infinite alternate;
+    }
+
+    .contaiber {
         .article-tag-wrap {
+
             .row {
                 padding: 20px 30px;
 
@@ -336,12 +391,88 @@ body {
                         h6 {
                             font-size: 15px;
                         }
+
+                        &:hover {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
         }
     }
 }
+
+@media only screen and (min-width: 1200px) {
+    .article-container {
+        .article {
+            .article-wrap {
+                .article-ribbon {
+                    .col {
+                        img {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .article-container {
+        padding: 80px 0;
+    }
+
+    .article-tag-wrap {
+        .article-pc-section {
+            .row {
+                .col {
+                    .kol-tag {
+                        width: 100%;
+                        height: 45px;
+
+                        h6 {
+                            font-size: 18px;
+                        }
+
+                        &:hover {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1980px) {
+    .article-container {
+        .article {
+            .article-wrap {
+                .kol-wrap {
+                    .article-content-wrap {
+                        .article-page {
+
+                            .arrow-left,
+                            .arrow-right {
+                                margin-left: 1.5rem;
+
+                                svg {
+                                    width: 60%;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 .article-page {
     padding: 10px 15px;
