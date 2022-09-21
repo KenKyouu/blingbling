@@ -18,85 +18,6 @@ body {
   background: url(../images/other_bg_paper.png) center center/cover repeat;
 }
 
-.header {
-  width: 100%;
-  height: 56.5px;
-  background-color: #000000;
-  opacity: 80%;
-  border-radius: 0 0 20px 20px;
-  display: flex;
-}
-.header .left {
-  padding-left: 20px;
-  width: 100%;
-}
-.header .left h1.logo {
-  width: 100%;
-}
-.header .left h1.logo a {
-  width: 100%;
-}
-.header .left h1.logo a img {
-  width: 75%;
-}
-.header .right {
-  padding-right: 10px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.header .right li {
-  display: flex;
-  align-items: center;
-}
-.header .right li ul {
-  margin: 0 10px;
-}
-.header .right li ul.cart {
-  margin-bottom: 5px;
-}
-
-.footer {
-  margin-top: 100px;
-  background-image: url(../images/footer-bg.svg);
-  background-repeat: no-repeat;
-  background-size: 160%;
-  background-position: center;
-  overflow: hidden;
-  width: 100%;
-  height: 257px;
-}
-.footer .footer-logo {
-  padding-top: 30px;
-  width: 20%;
-  margin: auto;
-}
-.footer .footer-nav ul {
-  margin: 35px 40px 0 40px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid white;
-}
-.footer .footer-nav ul li a {
-  color: white;
-  font-family: "GenSenRounded-M";
-  font-size: 16px;
-}
-.footer .footer-social {
-  margin: 35px 160px 0 160px;
-  display: flex;
-  justify-content: space-between;
-}
-.footer .footer-c {
-  margin-top: 35px;
-  text-align: center;
-  color: white;
-  font-family: "Roboto";
-  font-size: 14px;
-}
-
 .cart1-no-product-wrap .container {
   width: 100%;
   padding: 80px 0 50px;
@@ -232,8 +153,19 @@ body {
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg img {
   width: 100%;
+<<<<<<< HEAD
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 12px;
+}
+.cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg:hover {
+  -webkit-animation: swing 1s 1;
+          animation: swing 1s 1;
+  cursor: pointer;
+=======
   object-fit: cover;
   padding: 15px;
+>>>>>>> a6fc11ca463878b3b1229ad303a34474f1b8503c
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap {
   width: 100%;
@@ -268,4 +200,40 @@ body {
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap .info-price-btn button svg {
   width: 100%;
+}
+
+@-webkit-keyframes swing {
+  15% {
+    transform: translateX(5px);
+  }
+  40% {
+    transform: translateX(-5px);
+  }
+  65% {
+    transform: translateX(2px);
+  }
+  85% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes swing {
+  15% {
+    transform: translateX(5px);
+  }
+  40% {
+    transform: translateX(-5px);
+  }
+  65% {
+    transform: translateX(2px);
+  }
+  85% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=cart1-no-product.css.map */
