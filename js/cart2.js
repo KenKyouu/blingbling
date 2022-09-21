@@ -205,9 +205,8 @@ $(document).on("keypress", "form", function (e) {
                 message: "^安全碼 為必填欄位"
             },
             length: {
-                minimum: 3,
-                maximum: 4,
-                message: "^安全碼 有3或4碼"
+                is: 3,
+                message: "^安全碼 為3碼"
             }
         }
     };
@@ -471,7 +470,7 @@ var expirationdate_mask = new IMask(expirationdate, {
 
 //Mask the security code
 var securitycode_mask = new IMask(securitycode, {
-    mask: '0000',
+    mask: '000',
 });
 
 
