@@ -173,7 +173,7 @@ $pageName = 'member-myOrder'; // 頁面名稱，可以自定義
                         <div class="whiteBg col-lg-9 col-xl-9">
                             <div class="order-list">
                                 <div class="order-num">
-                                    <p>訂單編號 #11299</p>
+                                    <p>訂單編號 #12000</p>
                                     <button><a href="./member_order_datails.php">訂單詳情</a></button>
                                 </div>
                                 <div class="order-detail-title">
