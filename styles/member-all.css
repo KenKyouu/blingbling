@@ -1081,54 +1081,9 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
-.wrap .containerr .main .row .col .whiteBg .noticeButton {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 0;
-}
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice {
-  display: flex;
-  justify-content: center;
-  margin: 9px 0 9px 0;
-}
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn {
-  position: relative;
-}
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn button {
-  width: 130px;
-  height: 38px;
-  border-radius: 10px;
-  border: 3px solid #000000;
-  background-color: rgba(0, 0, 0, 0);
-  font-family: "GenSenRounded-B";
-  font-size: 14px;
-  color: #000000;
-}
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn .noticeNumber {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: #d45a6a;
-  z-index: 1;
-  position: absolute;
-  right: -10px;
-  top: -10px;
-}
-.wrap .containerr .main .row .col .whiteBg .noticeButton .notice .noticebtn .noticeNumber p {
-  font-family: "GenSenRounded-B";
-  font-size: 16px;
-  color: #ffffff;
-}
 .wrap .containerr .main .row .col .whiteBg .noticeborder {
   overflow: hidden;
+  margin-top: 20px;
 }
 .wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails {
   width: 100%;

@@ -175,7 +175,7 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
                         <!------------ white border ------------>
 
                         <div class="whiteBg col-lg-9 col-xl-9">
-                            <div class="noticeButton">
+                            <!-- <div class="noticeButton">
                                 <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                     <div class="noticebtn">
                                         <button class="noticebtn">訂單進度通知</button>
@@ -224,7 +224,7 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!------------ notice details ------------>
 
