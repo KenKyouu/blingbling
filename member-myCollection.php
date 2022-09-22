@@ -1,72 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// require __DIR__ . '/parts/connect_db.php';
+$pageName = 'member-myCollection'; // 頁面名稱，可以自定義
+?>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlingBling有禮</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/all.css" />
-    <link rel="stylesheet" href="./styles/member-myCollection.css">
-    <link rel="stylesheet" href="./styles/m-header.css">
-</head>
-
-<body>
-    <!------------ header ------------>
-
-    <div class="header">
-        <div class="left">
-            <h1 class="logo">
-                <a href="#"><img src="./images/header-m-logo.svg" alt="" /></a>
-            </h1>
-        </div>
-        <div class="right">
-            <li>
-                <ul class="cart">
-                    <a class="cart" href="#"><svg width="27" height="24" viewBox="0 0 27 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.2605 16.9011H20.6858V6.65625H2.10381C1.59987 6.65625 1.24941 7.11005 1.42336 7.53747L5.2605 16.9011Z"
-                                fill="white" stroke="white" stroke-miterlimit="10" />
-                            <path
-                                d="M20.5297 7.04603L25.8293 1.58014C25.8945 1.51288 25.8945 1.39632 25.8293 1.32906L25.8291 1.32889L25.8267 1.32642C25.8267 1.3264 25.8267 1.32638 25.8267 1.32637C25.7698 1.26782 25.6831 1.26784 25.6263 1.32642L20.3053 6.8145L20.5297 7.04603Z"
-                                fill="white" stroke="white" />
-                            <path
-                                d="M18.405 22.1437C18.405 22.7084 18.845 23.1396 19.3555 23.1396C19.8659 23.1396 20.3059 22.7084 20.3059 22.1437C20.3059 21.5789 19.8659 21.1477 19.3555 21.1477C18.845 21.1477 18.405 21.5789 18.405 22.1437Z"
-                                fill="white" stroke="white" />
-                            <path
-                                d="M5.7605 22.1437C5.7605 22.7084 6.20047 23.1396 6.71094 23.1396C7.2214 23.1396 7.66138 22.7084 7.66138 22.1437C7.66138 21.5789 7.22139 21.1477 6.71094 21.1477C6.20049 21.1477 5.7605 21.5789 5.7605 22.1437Z"
-                                fill="white" stroke="white" />
-                            <path
-                                d="M5.89735 19.3219H20.1689C20.2301 19.3219 20.3059 19.2663 20.3059 19.165V19.1623C20.3059 19.061 20.2301 19.0054 20.1689 19.0054H5.89735C5.83622 19.0054 5.76039 19.061 5.76039 19.1623V19.165C5.76039 19.2676 5.83493 19.3219 5.89735 19.3219Z"
-                                fill="white" stroke="white" />
-                        </svg>
-                    </a>
-                </ul>
-                <ul class="menu">
-                    <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M21.0362 3.15483H3.47997C3.22481 3.15483 3.01807 2.62392 3.01807 1.96865C3.01807 1.31339 3.22481 0.782471 3.47997 0.782471H21.0362C21.2913 0.782471 21.4981 1.31339 21.4981 1.96865C21.4981 2.62392 21.2913 3.15483 21.0362 3.15483Z"
-                                fill="white" />
-                            <path
-                                d="M21.0362 12.6509H3.47997C3.22481 12.6509 3.01807 12.12 3.01807 11.4647C3.01807 10.8095 3.22481 10.2786 3.47997 10.2786H21.0362C21.2913 10.2786 21.4981 10.8095 21.4981 11.4647C21.4981 12.12 21.2913 12.6509 21.0362 12.6509Z"
-                                fill="white" />
-                            <path
-                                d="M21.1463 22.147H7.77014C7.57573 22.147 7.41821 21.6161 7.41821 20.9608C7.41821 20.3056 7.57573 19.7747 7.77014 19.7747H21.1463C21.3407 19.7747 21.4982 20.3056 21.4982 20.9608C21.4982 21.6209 21.3407 22.147 21.1463 22.147Z"
-                                fill="white" />
-                        </svg>
-                    </a>
-                </ul>
-            </li>
-        </div>
-    </div>
-
-    <!------------ body ------------>
-
-    <div class="wrap">
+<?php include __DIR__ . '/parts/html-head.php'; ?>
+<link rel="stylesheet" href="./styles/member-all.css">
+<?php include __DIR__ . '/parts/navbar.php'; ?>
+<div class="wrap">
         <div class="containerr">
             <div class="main">
                 <div class="row">
@@ -4803,92 +4743,5 @@
             </div>
         </div>
     </div>
-
-    <!-- ------------lightbox-friendDetails------------ -->
-
-    <!-- <div class="lightbox-friendDetails">
-        <p class="editTitle">編輯好友資訊</p>
-        <div class="friend-details">
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 好友姓名</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 好友性別</p>
-                </div>
-                <div class="detail-input">
-                    <select name="gender" placeholder="請選擇" required>
-                        <option value="male">男</option>
-                        <option value="female">女</option>
-                        <option value="others">不顯示</option>
-                    </select>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p>好友Email</p>
-                </div>
-                <div class="detail-input">
-                    <input type="email" name="email" placeholder="好友的電子郵件地址">
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p><span>*</span> 好友生日</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
-                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text">
-                    <p>好友印象標籤</p>
-                </div>
-                <div class="detail-input">
-                    <input type="text" name="tags" placeholder="最多選擇五個">
-                </div>
-            </div>
-            <div class="detail">
-                <div class="detail-text"></div>
-                <div class="detail-input">
-                    <div class="tagsselect">
-                        <div class="tags">
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發薯</span>
-                            <span>沙發</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙鈴薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙鈴</span>
-                            <span>沙發馬薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙鈴薯</span>
-                            <span>沙發</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="detailsbtn">
-            <button class="true" type="submit" name="btn">儲存</button>
-            <button class="false" name="btn">取消</button>
-        </div>
-    </div> -->
-
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./js/main.js"></script>
-</body>
-
-</html>
+<?php include __DIR__ . '/parts/scripts.php'; ?>
+<?php include __DIR__ . '/parts/html-foot.php'; ?>
