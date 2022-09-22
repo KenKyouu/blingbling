@@ -117,7 +117,10 @@
 }
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
-  color: #4c4948;
+  fill: #ffffff;
+}
+.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg.ordersvg path {
+  stroke: #ffffff;
 }
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
   font-family: "GenSenRounded-M";
@@ -587,6 +590,110 @@
   align-items: center;
   padding: 0px 30px;
   margin-top: 15px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton p.letFriendWatch {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+  padding-right: 16px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton .switchButton {
+  width: 48px;
+  height: 24px;
+  border-radius: 100px;
+  background-color: #c2c2c2;
+  padding: 3px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton .switchButton .switch {
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  text-align: left;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
+  width: 150px;
+  height: 150px;
+  background-image: url(../images/products/71-1.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image .heart {
+  cursor: default;
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-title {
+  width: 150px;
+  padding: 8px 0 8px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-title h4 {
+  width: 100%;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price {
+  width: 100%;
+  padding: 0 0 5px 0;
+}
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price {
+    width: 150px;
+  }
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price p {
+  color: #554d49;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  font-weight: 900;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price p::before {
+  display: inline-block;
+  content: "NT$";
+}
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 19px #4c4948;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
   width: 100%;
   height: auto;
   background-color: #ffffff;
@@ -621,10 +728,15 @@
   border-radius: 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #ffffff;
-  background-color: #2d827d;
-  border: none;
+  color: #2d827d;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #7cb2af;
   margin-bottom: 20px;
+}
+.wrap .containerr .main .row .col .whiteBg .newFriend .uploadNewFriend:hover {
+  background-color: #2d827d;
+  color: #ffffff;
+  border: none;
 }
 .wrap .containerr .main .row .col .whiteBg .newFriend .modal .modal-dialog {
   width: 375px;
@@ -809,6 +921,65 @@
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon {
   width: 15%;
   text-align: right;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% auto no-repeat;
+  padding: 76px 0;
+  border: none;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content {
+  width: auto;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning .friend-warn-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning .friend-warn-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-footer button.true {
+  width: 98px;
+  height: 38px;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-footer button.false {
+  width: 98px;
+  height: 38px;
+  border: 3px solid #000000;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .wrap .containerr .main .row .col .whiteBg {
   width: 100%;
@@ -1126,6 +1297,30 @@
     align-items: center;
     justify-content: center;
   }
+  .wrap .containerr .main .row .col .whiteBg .newFriend .modal {
+    width: auto;
+    left: auto;
+    padding-top: 1.4rem;
+  }
+  .wrap .containerr .main .row .col .whiteBg .newFriend .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
+    width: auto;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 576px) {
   .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
@@ -1226,14 +1421,26 @@
     width: 35%;
     text-align: right;
     padding-right: 20px;
+    fill: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
     width: 16px;
     height: 16px;
     margin-bottom: 2px;
+    fill: #ffffff;
   }
-  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg :target {
-    color: #4c4948;
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg path {
+    fill: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+    fill: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg path {
+    fill: #ffffff;
+    stroke: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
     width: 65%;
@@ -1439,6 +1646,21 @@
     align-items: center;
     padding: 0 5%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .myWishLists {
+    width: 100%;
+    height: 520px;
+    overflow: scroll;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend {
     height: auto;
     background-color: rgba(255, 255, 255, 0);
@@ -1450,8 +1672,13 @@
     font-size: 20px;
     padding-right: 40px;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.uploadNewFriend {
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.btn {
     margin-bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.btn:hover {
+    background-color: #2d827d;
+    color: #ffffff;
+    border: none;
   }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog {
     width: 700px;

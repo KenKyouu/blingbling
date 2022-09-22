@@ -1044,10 +1044,6 @@ $bold: 900;
                                     width: 15%;
                                     text-align: right;
 
-                                    button {
-                                        // width: 20px;
-                                        // height: 20px;
-                                    }
                                     .modal {
                                         display: flex !important;
                                         justify-content: center;
@@ -1454,60 +1450,61 @@ $bold: 900;
                         padding: 0px 30px;
                         margin-top: 15px;
 
-                        .noticeButton {
-                            width: 100%;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            flex-wrap: wrap;
-                            padding: 30px 0;
+                        // .noticeButton {
+                        //     width: 100%;
+                        //     display: flex;
+                        //     flex-direction: row;
+                        //     justify-content: center;
+                        //     align-items: center;
+                        //     flex-wrap: wrap;
+                        //     padding: 30px 0;
 
-                            .notice {
-                                display: flex;
-                                justify-content: center;
-                                margin: 9px 0 9px 0;
+                        //     .notice {
+                        //         display: flex;
+                        //         justify-content: center;
+                        //         margin: 9px 0 9px 0;
 
-                                .noticebtn {
-                                    position: relative;
+                        //         .noticebtn {
+                        //             position: relative;
 
-                                    button {
-                                        width: 130px;
-                                        height: 38px;
-                                        border-radius: 10px;
-                                        border: 3px solid $super-dark;
-                                        background-color: #00000000;
-                                        font-family: "GenSenRounded-B";
-                                        font-size: $ps-font-size;
-                                        color: $super-dark;
-                                    }
+                        //             button {
+                        //                 width: 130px;
+                        //                 height: 38px;
+                        //                 border-radius: 10px;
+                        //                 border: 3px solid $super-dark;
+                        //                 background-color: #00000000;
+                        //                 font-family: "GenSenRounded-B";
+                        //                 font-size: $ps-font-size;
+                        //                 color: $super-dark;
+                        //             }
 
-                                    .noticeNumber {
-                                        width: 30px;
-                                        height: 30px;
-                                        border-radius: 100%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        border: none;
-                                        background-color: $red-pink;
-                                        z-index: 1;
-                                        position: absolute;
-                                        right: -10px;
-                                        top: -10px;
+                        //             .noticeNumber {
+                        //                 width: 30px;
+                        //                 height: 30px;
+                        //                 border-radius: 100%;
+                        //                 display: flex;
+                        //                 align-items: center;
+                        //                 justify-content: center;
+                        //                 border: none;
+                        //                 background-color: $red-pink;
+                        //                 z-index: 1;
+                        //                 position: absolute;
+                        //                 right: -10px;
+                        //                 top: -10px;
 
-                                        p {
-                                            font-family: "GenSenRounded-B";
-                                            font-size: $p-font-size;
-                                            color: $white;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                        //                 p {
+                        //                     font-family: "GenSenRounded-B";
+                        //                     font-size: $p-font-size;
+                        //                     color: $white;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
 
                         .noticeborder {
                             overflow: hidden;
+                            margin-top: 20px;
 
                             .noticeDetails {
                                 width: 100%;
@@ -2383,6 +2380,7 @@ $bold: 900;
                                 height: 570px;
                                 overflow: scroll;
                                 margin-bottom: 20px;
+                                // margin-top: 20px;
                             }
                         }
                     }
