@@ -34,6 +34,7 @@ function checkForm() {
         console.log(data);
         if (data.success) {
           genAlert("新增完成", "success");
+          location.href = "member-myIntro.php";
         } else {
           genAlert(data.error);
         }
@@ -67,6 +68,7 @@ function checkFormmb() {
         console.log(data);
         if (data.success) {
           genAlert("新增完成", "success");
+          location.href = "member-myIntro.php";
         } else {
           genAlert(data.error);
         }
