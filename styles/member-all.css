@@ -915,9 +915,21 @@
   width: 15%;
   text-align: right;
 }
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon .watchFriendSvg {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon {
   width: 15%;
   text-align: right;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .deleteFriendSvg {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
   display: flex !important;
@@ -992,16 +1004,27 @@
 }
 .wrap .containerr .main .row .col .whiteBg .backToList {
   width: 100%;
-  display: flex;
-  align-items: center;
   text-align: left;
   padding-top: 25px;
 }
-.wrap .containerr .main .row .col .whiteBg .backToList p {
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #2d827d;
   padding-left: 15px;
+}
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl:hover svg path {
+  fill: #7cb2af;
+}
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl:hover p {
+  color: #7cb2af;
 }
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails {
   width: 100%;
@@ -1029,6 +1052,14 @@
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon {
   width: 40%;
   margin-left: 20px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button:hover {
+  background-color: #c2c2c2;
+  border-radius: 3px;
 }
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth {
   display: flex;
@@ -1156,96 +1187,34 @@
   border: none;
   margin: 15px 0 15px;
 }
-.wrap .containerr .main .row .col .whiteBg .couponbtn {
+.wrap .containerr .main .row .col .whiteBg .couponTitle {
+  display: none;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
 }
-.wrap .containerr .main .row .col .whiteBg .couponbtn button {
-  width: 130px;
-  height: 38px;
-  border-radius: 10px;
-  border: 3px solid #000000;
-  background-color: rgba(255, 255, 255, 0);
-  font-family: "GenSenRounded-B";
-  font-size: 14px;
-  color: #000000;
-}
-.wrap .containerr .main .row .col .whiteBg .coupons {
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons {
   width: 100%;
   height: auto;
+  margin: 0 0 20px 0;
 }
-.wrap .containerr .main .row .col .whiteBg .coupons .coupon {
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon {
   width: 100%;
 }
-.wrap .containerr .main .row .col .whiteBg .coupons .coupon img {
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon img {
   width: 100%;
 }
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup {
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate {
   width: 100%;
 }
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle {
-  width: 100%;
-  display: flex;
-  padding-bottom: 5px;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName {
-  width: 70%;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p {
   font-family: "GenSenRounded-B";
-  font-size: 14px;
+  font-size: 16px;
   color: #4c4948;
-  border-left: 3px solid #d4cfc6;
-  padding-left: 10px;
+  padding-top: 10px;
   width: 100%;
   text-align: left;
 }
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
-  width: 30%;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate p.couponDate {
-  font-family: "GenSenRounded-B";
-  font-size: 14px;
-  color: #4c4948;
-  border-left: 3px solid #d4cfc6;
-  padding-left: 10px;
-  width: 100%;
-  text-align: left;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails {
-  width: 100%;
-  padding-bottom: 20px;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail {
-  width: 100%;
-  display: flex;
-  border-bottom: 2px solid #9fc8e1;
-  padding: 13px 0 13px;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName {
-  width: 70%;
-  text-align: left;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponName p {
-  width: 100%;
-  font-family: "GenSenRounded-B";
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate {
-  width: 30%;
-  text-align: left;
-  display: flex;
-  align-items: center;
-}
-.wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponDetails .invalidDetail .invalidCouponDate p {
-  width: 100%;
-  font-family: "GenSenRounded-B";
-  font-size: 14px;
-  color: #000000;
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p span {
+  color: #d45a6a;
 }
 .wrap .containerr .main .row .col .whiteBg {
   width: 100%;
@@ -1333,11 +1302,52 @@
   .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
     max-width: 1000px;
   }
-  .wrap .containerr .main .row .col .whiteBg .coupons .coupon {
-    width: 100%;
-    height: auto;
+  .wrap .containerr .main .row .col .whiteBg .couponTitle {
     display: flex;
-    padding: 5px 5px;
+    margin-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponName {
+    width: 70%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponName p.couponName {
+    font-family: "GenSenRounded-B";
+    font-size: 14px;
+    color: #4c4948;
+    border-left: 3px solid #d4cfc6;
+    padding-left: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponDate {
+    width: 30%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponDate p.couponDate {
+    font-family: "GenSenRounded-B";
+    font-size: 14px;
+    color: #4c4948;
+    border-left: 3px solid #d4cfc6;
+    padding-left: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon {
+    width: 70%;
+    padding-right: 15px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon img {
+    width: 100%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate {
+    width: 30%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p {
+    width: 100%;
   }
 }
 @media screen and (min-width: 700px) {
@@ -1878,7 +1888,7 @@
     background-color: rgba(255, 255, 255, 0);
     flex-direction: row;
     justify-content: left;
-    margin: 20px 0 30px;
+    margin: 20px 0 30px 0;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -1900,36 +1910,24 @@
     background-color: #2d827d;
     border: none;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
-    margin-bottom: 30px;
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle {
+    margin-bottom: 10px;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .couponbtn button.canUseBtn:hover {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .couponbtn button.invalidBtn:hover {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .coupons {
-    width: 100%;
-    height: 400px;
-    overflow: scroll;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
-    padding-bottom: 10px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponName {
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName {
     width: 68%;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponDate {
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName p.couponName {
+    font-size: 16px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate {
     width: 32%;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate p.couponDate {
+    font-size: 16px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .validCoupon {
     width: 100%;
-    height: 360px;
+    height: 440px;
     overflow: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
@@ -2177,8 +2175,10 @@
   justify-content: center;
   padding: 33px 0;
   z-index: 1;
+  transition: 0.1s;
   position: absolute;
-  right: 100%;
+  top: 20%;
+  right: -100%;
 }
 .lightbox-friendDetails p.editTitle {
   font-family: "GenSenRounded-B";
@@ -2300,25 +2300,22 @@
   margin: 0 10px;
 }
 
-.coupon-lightbox-err .coupon-lightbox-black {
-  z-index: 20;
+.coupon-lightbox-err {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  left: -100%;
 }
 .coupon-lightbox-err .coupon-lightbox-bg {
-  z-index: 21;
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
+  z-index: 11;
+  width: 100%;
   max-width: 400px;
-  font-family: "GenSenRounded-B";
-  font-weight: 900;
   text-align: center;
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
@@ -2334,39 +2331,38 @@
   padding-bottom: 10px;
 }
 .coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-text {
+  font-family: "GenSenRounded-B";
   font-size: 20px;
   color: #000000;
   padding-bottom: 10px;
 }
-.coupon-lightbox-err .coupon-lightbox-bg button {
+.coupon-lightbox-err button.ok {
   border: none;
   background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
+  font-family: "GenSenRounded-B";
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;
 }
 
-.coupon-lightbox-success .coupon-lightbox-black {
-  z-index: 20;
+.coupon-lightbox-success {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  left: -100%;
 }
 .coupon-lightbox-success .coupon-lightbox-bg {
-  z-index: 21;
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
+  z-index: 11;
+  width: 100%;
   max-width: 400px;
-  font-family: "GenSenRounded-B";
-  font-weight: 900;
   text-align: center;
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
@@ -2382,15 +2378,17 @@
   padding-bottom: 10px;
 }
 .coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-text {
+  font-family: "GenSenRounded-B";
   font-size: 20px;
   color: #000000;
   padding-bottom: 10px;
 }
-.coupon-lightbox-success .coupon-lightbox-bg button {
+.coupon-lightbox-success button.ok {
   border: none;
   background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
+  font-family: "GenSenRounded-B";
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;

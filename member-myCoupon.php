@@ -180,49 +180,94 @@ $pageName = 'member-coupon'; // 頁面名稱，可以自定義
                                 <input class="keyCouponCode" type="text" placeholder="請輸入優惠券代碼">
                                 <button class="newcoupon" type="submit">確認送出</button>
                             </div>
-                            <div class="couponbtn">
-                                <button class="canUseBtn">可用優惠券</button>
-                                <button class="invalidBtn">失效優惠券</button>
-                            </div>
-                            <div class="coupons row">
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_1.png" alt="">
+                            <!-- <div class="couponbtn">
+                                <button type="radio" name="type" value="valid" class="canUseBtn">可用優惠券</button>
+                                <button type="radio" name="type" value="invalid" class="invalidBtn">失效優惠券</button>
+                            </div> -->
+
+                            <div class="couponTitle">
+                                <div class="couponName">
+                                    <p class="couponName">持有優惠券</p>
                                 </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_2.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_3.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_1.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_2.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_3.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_1.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_2.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_3.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_1.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_2.png" alt="">
-                                </div>
-                                <div class="coupon col-sm-6">
-                                    <img src="./images/coupon/coupon_3.png" alt="">
+                                <div class="couponDate">
+                                    <p class="couponDate">使用期限</p>
                                 </div>
                             </div>
-                            <!-- <div class="invalidCouponGroup">
+                            <div class="validCoupon">
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_1.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_2.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_3.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_1.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_2.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_3.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_1.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_2.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                                <div class="coupons">
+                                    <div class="coupon">
+                                        <img src="./images/coupon/coupon_3.png" alt="">
+                                    </div>
+                                    <div class="couponInvalidDate">
+                                        <p>至&nbsp;<span>2022-10-31</span>&nbsp;截止</p>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- <div id="invalidCouponGroup" class="invalidCouponGroup">
                                 <div class="invalidCouponTitle">
                                     <div class="couponName">
                                         <p class="couponName">優惠券名稱</p>
@@ -332,8 +377,7 @@ $pageName = 'member-coupon'; // 頁面名稱，可以自定義
 
     <!-- ------------lightbox-err------------ -->
 
-    <!-- <div class="coupon-lightbox-err">
-        <div class="coupon-lightbox-black"></div>
+    <div class="coupon-lightbox-err">
         <div class="coupon-lightbox-bg">
             <div class="coupon-warning">
                 <div class="coupon-warn-icon">
@@ -341,15 +385,18 @@ $pageName = 'member-coupon'; // 頁面名稱，可以自定義
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25073 1.03046C8.01224 -0.343478 9.98777 -0.343474 10.7493 1.03046L17.7464 13.6548C18.4853 14.9879 17.5212 16.6244 15.9971 16.6244H2.00287C0.478781 16.6244 -0.485248 14.9879 0.253592 13.6548L7.25073 1.03046ZM10.633 6.40624C10.633 7.25227 9.90187 11.3248 8.99997 11.3248C8.09808 11.3248 7.36695 7.25227 7.36695 6.40624C7.36695 5.56022 8.09808 4.87438 8.99997 4.87438C9.90187 4.87438 10.633 5.56022 10.633 6.40624ZM8.99997 13.7743C9.45092 13.7743 9.81648 13.4087 9.81648 12.9578C9.81648 12.5068 9.45092 12.1413 8.99997 12.1413C8.54903 12.1413 8.18346 12.5068 8.18346 12.9578C8.18346 13.4087 8.54903 13.7743 8.99997 13.7743Z" fill="#ca3f68"/>
                     </svg>
                 </div>
-            <div class="coupon-warn-text">代碼錯誤，請重新輸入</div>
+                <div class="coupon-warn-text">代碼錯誤，請重新輸入</div>
+            </div>
+            <button class="ok">好! Bling</button>
         </div>
-        <button>好! Bling</button>
-    </div> -->
+       
+    </div>
+
+
 
     <!-- ------------lightbox-success------------ -->
 
-    <!-- <div class="coupon-lightbox-success">
-        <div class="coupon-lightbox-black"></div>
+    <div class="coupon-lightbox-success">
         <div class="coupon-lightbox-bg">
             <div class="coupon-warning">
                 <div class="coupon-true-icon">
@@ -358,9 +405,13 @@ $pageName = 'member-coupon'; // 頁面名稱，可以自定義
                         <path d="M20.9237 6.78353L20.9253 6.78193C21.0059 6.70053 21.1417 6.69822 21.227 6.78353L22.7413 8.29784C22.8257 8.38226 22.8257 8.5167 22.7413 8.60112L13.1464 18.196L11.1257 20.2167L11.4792 20.5703L11.1257 20.2167C11.0413 20.3011 10.9068 20.3011 10.8224 20.2167L4.25619 13.6505L3.90263 14.0041L4.25619 13.6505C4.17177 13.5661 4.17177 13.4316 4.25618 13.3472L5.7705 11.8329L5.42274 11.4852L5.7705 11.8329C5.85492 11.7485 5.98935 11.7485 6.07377 11.8329L10.1153 15.8744C10.5902 16.3494 11.3578 16.3494 11.8328 15.8744L20.9237 6.78353Z" fill="#2d827d" stroke="#2d827d"/>
                     </svg>
                 </div>
-            <div class="coupon-true-text">優惠券新增成功</div>
+                <div class="coupon-true-text">優惠券新增成功</div>
+            </div>
+            <button class="ok">好! Bling</button>
         </div>
-        <button>好! Bling</button>
-    </div> -->
+        
+    </div>
+
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script src="./js/member.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

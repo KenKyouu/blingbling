@@ -25,11 +25,33 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   //   this.style.color = '#4c4948';
   // });
 
-  // $(document).ready(function(){
+  $(document).ready(function(){
     $("li.btn").click(function(){
         $(this).css("background-color", "white");
         $(".btnP").css("color", "#4c4948");
         $(".btnsvg > svg > path").css("fill", "#4c4948", "stroke", "#4c4948");
         $(".btnsvg > svg.ordersvg > path").css("stroke", "#4c4948");
     });
+});
+
+// $('.editIcon').click(function(){
+//   // $('.lightbox-friendDetails').css('top', '20%');
+//   $('.lightbox-friendDetails').css('right', '40%');
+// })
+
+$('.newcoupon').click(function(){
+  $('.coupon-lightbox-err').addClass('show').css('left', '0');
+});
+$('button.ok').click(function(){
+  $('.coupon-lightbox-err').removeClass('show').css('left', '-100%');
+});
+// $('.newcoupon').click(function(){
+//   $('.coupon-lightbox-err').addClass(show){
+//     $('.coupon-lightbox-err').css('left', '0');
+//   };
+// })
+// $('button.ok').click(function(){
+//   $('.coupon-lightbox-err').removeClass('show'){
+//     $('.coupon-lightbox-err').css('left', '-100%');
+//   };
 // });
