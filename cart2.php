@@ -96,39 +96,13 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                     <div class="j-list-sub">
                                         <p><?= $v['name'] ?></p>
                                         <div class="j-list-num">
-                                            <div class="j-money-single  px-0 col-md-4">NT$ <?= $v['price'] ?></div>
-                                            <div class="j-amount col-6 px-0 col-md-4"><?= $v['qty'] ?></div>
-                                            <div class="j-money col-6 px-0 col-md-4">NT$ <?= $v['price']*$v['qty'] ?></div>
+                                            <div class="j-money-single  px-0 col-md-4" data-val="<?= $v['price'] ?>"></div>
+                                            <div class="j-amount qty col-6 px-0 col-md-4"><?= $v['qty'] ?></div>
+                                            <div class="j-money col-6 px-0 col-md-4"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <?php endforeach; ?>
-                                <!-- <div class="j-list-item">
-                                    <div class="j-list-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="j-list-sub">
-                                        <p>Roborock 石頭科技 掃地機器人   S7+(小米生態鏈-台灣公司貨)</p>
-                                        <div class="j-list-num">
-                                            <div class="j-money-single  px-0 col-md-4">NT$ 22,999</div>
-                                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                                            <div class="j-money col-6 px-0 col-md-4">NT$ 22,999</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="j-list-item">
-                                    <div class="j-list-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="j-list-sub">
-                                        <p>Roborock 石頭科技 掃地機器人   S7+(小米生態鏈-台灣公司貨)</p>
-                                        <div class="j-list-num">
-                                            <div class="j-money-single  px-0 col-md-4">NT$ 22,999</div>
-                                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                                            <div class="j-money col-6 px-0 col-md-4">NT$ 22,999</div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <form id="cart2form" name="cart2form" method="post" action="" onsubmit="return false;" novalidate>
@@ -529,11 +503,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                         <div class="j-amount-detail">
                                             <div class="j-detail">
                                                 <div class="col-6 px-0 mr-4 j-detail-subtitle"><span>商品小計</span></div>
-                                                <?php $productTotal = 0; 
-                                                foreach($_SESSION['cart'] as $k=>$v){
-                                                    $productTotal += $v['price']*$v['qty'];
-                                                } ?>
-                                                <div class="col-6 px-0 j-detail-money"><span class="j-pl">NT$ <?= $productTotal ?></span></div>
+                                                <div class="col-6 px-0 j-detail-money"><span class="j-pl j-product-price"></span></div>
                                             </div>
                                             <div class="j-detail">
                                                 <div class="col-6 px-0 mr-4 j-detail-subtitle">
@@ -572,11 +542,11 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                         </div>
                                         
                                         <div class="j-total">
-                                            <a href="#">
+                                            <!-- <a href="#"> -->
                                                 <button >確認結帳
                                                     <span>NT$29,935</span>
                                                 </button>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -596,12 +566,8 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                             <div class="col-6 px-0 j-summary-subtitle">
                                                 <span>商品小計</span>
                                             </div>
-                                            <?php $productTotal = 0; 
-                                            foreach($_SESSION['cart'] as $k=>$v){
-                                                $productTotal += $v['price']*$v['qty'];
-                                            } ?>
                                             <div class="col-6 px-0 j-summary-price">
-                                                <span class="j-pl"><?= $productTotal ?></span>
+                                                <span class="j-pl j-product-price"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">

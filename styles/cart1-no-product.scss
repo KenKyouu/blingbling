@@ -107,16 +107,20 @@ body {
                     }
 
                     .cta-btn {
-                        button {
-                            padding: 15px;
-                            background-color: $lake-green;
-                            border: none;
-                            color: white;
-                            border-radius: 10px;
-                            text-align: center;
-                            font-family: "GenSenRounded-B";
-                            font-size: $ps-font-size;
+                        a{
+                            display: block;
+                            button {
+                                padding: 15px;
+                                background-color: $lake-green;
+                                border: none;
+                                color: white;
+                                border-radius: 10px;
+                                text-align: center;
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                            }
                         }
+                        
                     }
                 }
             }

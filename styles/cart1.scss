@@ -359,11 +359,28 @@ body {
                     }
 
                     .j-amount {
+                        width: 100%;
                         text-align: center;
-
-                        svg {
-                            margin-left: -15px; // 電腦版要刪掉
-                            cursor: pointer;
+                        justify-content: space-between;
+                        vertical-align: baseline;
+                        button{
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                            svg {
+                                width: 90%;
+                                cursor: pointer;
+                            }
+                        }
+                        .amountNumber{
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                            text-align: center;
                         }
                     }
                 }
