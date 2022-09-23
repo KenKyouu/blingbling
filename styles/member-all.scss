@@ -214,11 +214,6 @@ $bold: 900;
                                                 margin-bottom: 5px;
                                                 fill: $white;
                                             }
-                                            svg.ordersvg {
-                                                path {
-                                                    stroke: $white;
-                                                }
-                                            }
                                         }
 
                                         .btnP {
@@ -1908,7 +1903,6 @@ $bold: 900;
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
-                                                    fill: $white;
                                                     path {
                                                         fill: $white;
                                                         stroke: $white;

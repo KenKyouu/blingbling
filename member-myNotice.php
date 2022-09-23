@@ -456,5 +456,5 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
     </div>
 
 <?php include __DIR__ . '/parts/scripts.php'; ?>
-<!-- <script src="./js/main.js"></script> -->
+<script src="./js/member.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

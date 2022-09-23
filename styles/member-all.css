@@ -119,9 +119,6 @@
   margin-bottom: 5px;
   fill: #ffffff;
 }
-.wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg.ordersvg path {
-  stroke: #ffffff;
-}
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
   font-family: "GenSenRounded-M";
   font-size: 14px;
@@ -1436,7 +1433,6 @@
     width: 16px;
     height: 16px;
     margin-bottom: 2px;
-    fill: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg path {
     fill: #ffffff;
