@@ -1,5 +1,5 @@
 <?php
-// require __DIR__ . '/parts/connect_db.php';
+require __DIR__ . '/parts/connect_db.php';
 $pageName = 'cart1-none'; // 頁面名稱，可以自定義
 ?>
 
@@ -26,7 +26,7 @@ $pageName = 'cart1-none'; // 頁面名稱，可以自定義
                         <h5>您的購物車是空的。</h5>
                     </div>
                     <div class="cta-btn">
-                        <button>帶我去挑禮物！Bling</button>
+                        <a href="./product-list.php"><button>帶我去挑禮物！Bling</button></a>
                     </div>
                 </div>
             </div>

@@ -1660,8 +1660,8 @@ $bold: 900;
             }
             .j-total{
                 padding: 1rem 0 2rem;
-                a{
-                    display: block;
+                // a{
+                //     display: block;
                     button{
                         border: none;
                         background-color: $lake-green;
@@ -1675,7 +1675,7 @@ $bold: 900;
                             margin-left: 0.5rem;
                         }
                     }
-                }
+                // }
                 
             }
         }
