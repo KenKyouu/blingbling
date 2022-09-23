@@ -197,6 +197,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                 </div>
                             </div>
 
+
                             <div class="myIntro">
                                 <div class="userName">
                                     <div class="myIntro-title">
@@ -301,6 +302,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         <p class="myIntro-info"><?= $member[0]['address'] ?></p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
