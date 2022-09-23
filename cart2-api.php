@@ -27,6 +27,10 @@ $total = 0;
 foreach($_SESSION['cart'] as $k=>$v){
     $total += $v['price']*$v['qty'];
 }
+$ordertotal =0;
+    $ordertotal = $total + $_SESSION['order']['orderpackage'] - $_SESSION['order']['ordergiftvoucher'] - $_SESSION['order']['ordercoupon'] + $_SESSION['order']['orderfreight'];
+
+
 $od_sql = "INSERT INTO `orders`(
     `member_sid`,
     `amount`, 
@@ -59,8 +63,8 @@ $od_sql = "INSERT INTO `orders`(
 
 $stmt = $pdo->prepare($od_sql);
 $stmt->execute([
-    $_SESSION['user']['sid'],
-    $total,
+    $_SESSION['user']['id'],
+    $ordertotal,
     $_POST['ordererName'],
     $_POST['ordererMobile'],
     $_POST['ordererTel1'],
