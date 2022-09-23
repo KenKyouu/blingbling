@@ -85,7 +85,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                                         </a></li>
                                     <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                         <div class="btnsvg">
-                                            <svg width="15" height="13" viewBox="0 0 26 23" fill="none"
+                                            <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z"
@@ -110,7 +110,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                                         </a></li>
                                     <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                         <div class="btnsvg">
-                                            <svg width="15" height="10.5" viewBox="0 0 27 20" fill="none"
+                                            <svg width="15" height="10.5" viewBox="0 0 27 20" fill="none" 
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M13.5 18.5372C8.00652 18.5372 3.27343 14.4605 1.494 12.7078C1.17588 12.395 1 11.9762 1 11.529C1 11.0818 1.17588 10.663 1.494 10.3502C3.27343 8.59747 8.00652 4.52075 13.5 4.52075C18.9961 4.52075 23.7266 8.59747 25.506 10.3502C25.8241 10.663 26 11.0818 26 11.529C26 11.9762 25.8241 12.395 25.506 12.7078C23.7266 14.4605 18.9935 18.5372 13.5 18.5372ZM13.5 4.90852C8.14877 4.90852 3.51138 8.90768 1.76557 10.6268C1.52245 10.8672 1.38796 11.1878 1.38796 11.529C1.38796 11.8702 1.52245 12.1908 1.76557 12.4312C3.51138 14.1503 8.14877 18.1494 13.5 18.1494C18.8512 18.1494 23.4886 14.1503 25.2344 12.4312C25.4776 12.1908 25.612 11.8702 25.612 11.529C25.612 11.1878 25.4776 10.8672 25.2344 10.6268C23.4886 8.90768 18.8512 4.90852 13.5 4.90852Z"
@@ -185,6 +185,95 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                                 </button>
 
                                 <!-- Modal -->
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <p class="editTitle">新增好友資訊</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="friend-details">
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p><span>*</span> 好友姓名</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p><span>*</span> 好友性別</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <select name="gender" placeholder="請選擇" required>
+                                                                <option value="male">男</option>
+                                                                <option value="female">女</option>
+                                                                <option value="others">不顯示</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p>好友Email</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="email" name="email" placeholder="好友的電子郵件地址">
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p><span>*</span> 好友生日</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
+                                                            <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text">
+                                                            <p>好友印象標籤</p>
+                                                        </div>
+                                                        <div class="detail-input">
+                                                            <input type="text" name="tags" placeholder="最多選擇五個">
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail">
+                                                        <div class="detail-text"></div>
+                                                            <div class="detail-input">
+                                                                <div class="tagsselect">
+                                                                    <div class="tags">
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發薯</span>
+                                                                        <span>沙發</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙鈴薯</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙鈴</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙發馬鈴薯</span>
+                                                                        <span>沙發馬薯</span>
+                                                                        <span>沙鈴薯</span>
+                                                                        <span>沙發</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn true" data-dismiss="modal">儲存</button>
+                                                <button type="button" class="btn false" data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
@@ -955,24 +1044,6 @@ $pageName = 'home'; // 頁面名稱，可以自定義
             </div>
         </div>
     </div>
-
-    <!-- ------------lightbox-d eleteWarning------------ -->
-
-    <!-- <div class="friend-lightbox-warn">
-        <div class="friend-lightbox-black"></div>
-        <div class="friend-lightbox-bg">
-            <div class="friend-warning">
-                <div class="friend-warn-icon">
-                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25073 1.03046C8.01224 -0.343478 9.98777 -0.343474 10.7493 1.03046L17.7464 13.6548C18.4853 14.9879 17.5212 16.6244 15.9971 16.6244H2.00287C0.478781 16.6244 -0.485248 14.9879 0.253592 13.6548L7.25073 1.03046ZM10.633 6.40624C10.633 7.25227 9.90187 11.3248 8.99997 11.3248C8.09808 11.3248 7.36695 7.25227 7.36695 6.40624C7.36695 5.56022 8.09808 4.87438 8.99997 4.87438C9.90187 4.87438 10.633 5.56022 10.633 6.40624ZM8.99997 13.7743C9.45092 13.7743 9.81648 13.4087 9.81648 12.9578C9.81648 12.5068 9.45092 12.1413 8.99997 12.1413C8.54903 12.1413 8.18346 12.5068 8.18346 12.9578C8.18346 13.4087 8.54903 13.7743 8.99997 13.7743Z" fill="#ca3f68"/>
-                    </svg>
-                </div>
-            <div class="friend-warn-text">確定要刪除好友資訊嗎</div>
-        </div>
-        <div class="tfBtn">
-            <button class="true">確定</button>
-            <button class="false">取消</button>
-        </div>
-    </div> -->
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script src="./js/member.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

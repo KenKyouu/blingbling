@@ -892,12 +892,20 @@
   border-radius: 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #ffffff;
-  background-color: #2d827d;
-  border: none;
+  color: #2d827d;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #7cb2af;
   margin-bottom: 20px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .newFriend .uploadNewFriend:hover {
+  background-color: #2d827d;
+  color: #ffffff;
+  border: none;
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .newFriend .modal .modal-dialog {
   width: 375px;
   height: auto;
@@ -1133,13 +1141,21 @@
   width: 15%;
   text-align: right;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
   max-width: 400px;
   font-family: "GenSenRounded-B";
   font-weight: 900;
   text-align: center;
-  background: url("../images/error-bg.png") center center/100% 100% no-repeat;
+  background: url("../images/error-bg.png") center center/100% auto no-repeat;
   padding: 76px 0;
   border: none;
 }
@@ -1606,6 +1622,8 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
+<<<<<<< HEAD
+=======
 
 .wrap .containerr .main .row .col .whiteBg .noticeButton {
   width: 100%;
@@ -1679,8 +1697,10 @@
   color: #ffffff;
 }
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .noticeborder {
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails {
@@ -1755,6 +1775,9 @@
   .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
     width: auto;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
     margin: 0;
@@ -1903,6 +1926,16 @@
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg path {
     fill: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+    fill: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg path {
+    fill: #ffffff;
+    stroke: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
     width: 65%;
@@ -2161,8 +2194,13 @@
     font-size: 20px;
     padding-right: 40px;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.uploadNewFriend {
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.btn {
     margin-bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.btn:hover {
+    background-color: #2d827d;
+    color: #ffffff;
+    border: none;
   }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog {
     width: 700px;

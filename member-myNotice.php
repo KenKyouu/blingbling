@@ -82,7 +82,7 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
                                         </a></li>
                                     <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
                                             <div class="btnsvg">
-                                                <svg width="15" height="13" viewBox="0 0 26 23" fill="none"
+                                                <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z"
@@ -175,7 +175,7 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
                         <!------------ white border ------------>
 
                         <div class="whiteBg col-lg-9 col-xl-9">
-                            <div class="noticeButton">
+                            <!-- <div class="noticeButton">
                                 <div class="notice col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                     <div class="noticebtn">
                                         <button class="noticebtn">訂單進度通知</button>
@@ -224,7 +224,7 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!------------ notice details ------------>
 
@@ -456,5 +456,5 @@ $pageName = 'member-notice'; // 頁面名稱，可以自定義
     </div>
 
 <?php include __DIR__ . '/parts/scripts.php'; ?>
-<!-- <script src="./js/main.js"></script> -->
+<script src="./js/member.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

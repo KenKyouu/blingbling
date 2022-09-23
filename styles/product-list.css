@@ -30,13 +30,19 @@ body {
   -webkit-box-shadow: 5px 10px 12px #c2c2c2;
           box-shadow: 5px 10px 12px #c2c2c2;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 @media screen and (min-width: 768px) {
   .content .banner {
     height: 375px;
   }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .content .banner .class {
   padding: 5px 15px;
   border: 1px solid #ffffff;
@@ -56,7 +62,10 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 @media screen and (min-width: 768px) {
   .content .banner .class {
     border: 2px solid #ffffff;
@@ -68,7 +77,10 @@ body {
     bottom: 40px;
   }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .content .banner .class h3 {
   padding-bottom: 3px;
   color: #ffffff;
@@ -136,17 +148,18 @@ body {
     font-size: 20px;
   }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .content .filter-button-mobile {
   padding: 15px 0 15px 15px;
 }
-
 @media screen and (min-width: 768px) {
   .content .filter-button-mobile {
     display: none;
   }
 }
-
 .content .filter-button-mobile button.filter {
   padding: 5px 8px;
   border: 2px solid #4c4948;
@@ -162,18 +175,19 @@ body {
     font-size: 18px;
   }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .content .filter-button-pc {
   position: fixed;
   padding: 30px 0;
 }
-
 @media screen and (max-width: 768px) {
   .content .filter-button-pc {
     display: none;
   }
 }
-
 .content .filter-button-pc button.filter-pc {
   padding: 10px;
   border-top: 2px solid #4c4948;
@@ -186,7 +200,10 @@ body {
   font-family: "GenSenRounded-M";
   font-size: 20px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .content .product-list {
   width: 100%;
   display: -webkit-box;
@@ -341,12 +358,11 @@ body {
   right: -100%;
   z-index: 200;
 }
-
 @media screen and (min-width: 768px) {
   .filter-page,
-  .gender-filter-detail,
-  .price-filter-detail,
-  .color-filter-detail {
+.gender-filter-detail,
+.price-filter-detail,
+.color-filter-detail {
     display: none;
   }
 }
@@ -558,7 +574,10 @@ body {
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .gender-filter-detail .gender-filter-content form .gender-filter-radio span.all {
   padding-left: 17px;
 }
@@ -678,5 +697,9 @@ body {
 
 .body-hidden {
   overflow: hidden;
+<<<<<<< HEAD
+}/*# sourceMappingURL=product-list.css.map */
+=======
 }
 /*# sourceMappingURL=product-list.css.map */
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
