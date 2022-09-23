@@ -205,9 +205,8 @@ $(document).on("keypress", "form", function (e) {
                 message: "^安全碼 為必填欄位"
             },
             length: {
-                minimum: 3,
-                maximum: 4,
-                message: "^安全碼 有3或4碼"
+                is: 3,
+                message: "^安全碼 為3碼"
             }
         }
     };
@@ -471,7 +470,7 @@ var expirationdate_mask = new IMask(expirationdate, {
 
 //Mask the security code
 var securitycode_mask = new IMask(securitycode, {
-    mask: '0000',
+    mask: '000',
 });
 
 
@@ -731,4 +730,41 @@ function freightFee(){
     }else{
         $('.freight-fee').text('');
     }
+}
+
+
+//價錢加,
+const dollarCommas = function(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+};
+function updatePrices() {
+	let productTotal = 0; //總價
+
+	$('.j-list-item').each(function() {
+		//取值
+		const listItem = $(this);
+		const singlePrice = listItem.find('.j-money-single');
+		const smallPrice = listItem.find('.j-money');
+
+		const price = +singlePrice.attr('data-val');
+		const qty = +listItem.find('.qty').text();
+
+		singlePrice.html('NT$ ' + dollarCommas(price));
+		smallPrice.html('NT$ ' + dollarCommas(price * qty));
+		productTotal += price * qty;
+	});
+	$('.j-product-price').html('NT$ ' + dollarCommas(productTotal));
+	console.log(productTotal);
+
+}
+updatePrices(); //一進頁就要執行一次
+
+
+
+function sameMember(){
+    const ordererName = $('#ordererName').attr('data-val');
+    const ordererMobile = $('#ordererMobile').attr('data-val');
+    $('#ordererName').attr('value', ordererName);
+    $('#ordererMobile').attr('value', ordererMobile);
+
 }

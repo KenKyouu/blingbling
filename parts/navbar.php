@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if (!empty($_SESSION['user'])) {
-// header('Location: ./index.php');
-// exit;
-// } 
+//session_start();
+//if (!empty($_SESSION['user'])) {
+//    header('Location: ./member-myIntro.php');
+//    exit;
+//}
 ?>
 
 <div class="header">
@@ -291,7 +291,7 @@
 </div>
 
 
-<div class="pc-signup">
+<!-- <div class="pc-signup">
     <div class="signup-box">
         <div class="switchtologin"></div>
         <div class="pc-signup-info">
@@ -452,4 +452,4 @@
 
         </div>
     </div>
-</div>
+</div> -->
