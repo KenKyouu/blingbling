@@ -3,6 +3,10 @@ require __DIR__ . '/parts/connect_db.php';
 $pageName = 'cart2'; // 頁面名稱，可以自定義
 ?>
 
+<?php
+$user = $_SESSION['user']['id'];
+$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+?>
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/cart2.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
@@ -115,7 +119,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                 
                                                 <div class="j-check j-form-group">
                                                     <label class="j-point">同會員資料
-                                                        <input type="checkbox" />
+                                                        <input type="checkbox" onclick="sameMember()" />
                                                         <span class="j-checkmark"></span>
                                                     </label>
                                                     <div class="j-messages"></div>
@@ -131,6 +135,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                     class="j-input"
                                                     placeholder="訂購人姓名(本名)"
                                                     oninput="cop()"
+                                                    data-val="<?= $member[0]['name'] ?>"
                                                 />
                                                 <div class="j-messages"></div>
                                                 </div>
@@ -147,6 +152,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                     class="j-input"
                                                     placeholder="訂購人手機"
                                                     oninput="cop()"
+                                                    data-val="<?= $member[0]['mobile'] ?>"
                                                 />
                                                 <div class="j-messages"></div>
                                                 </div>

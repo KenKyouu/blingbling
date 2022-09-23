@@ -755,5 +755,16 @@ function updatePrices() {
 	});
 	$('.j-product-price').html('NT$ ' + dollarCommas(productTotal));
 	console.log(productTotal);
+
 }
 updatePrices(); //一進頁就要執行一次
+
+
+
+function sameMember(){
+    const ordererName = $('#ordererName').attr('data-val');
+    const ordererMobile = $('#ordererMobile').attr('data-val');
+    $('#ordererName').attr('value', ordererName);
+    $('#ordererMobile').attr('value', ordererMobile);
+
+}

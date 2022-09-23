@@ -3,10 +3,19 @@ require __DIR__ . '/parts/connect_db.php';
 $pageName = 'cart1'; // 頁面名稱，可以自定義
 ?>
 <?php
+if (empty($_SESSION['user'])) {
+    header('Location: ./login.php');
+    exit;
+}
+// echo json_encode($_SESSION['cart']);
 if (empty($_SESSION['cart'])) {
     header('Location: ./cart1-none.php');
     exit;
 }
+?>
+<?php
+$user = $_SESSION['user']['id'];
+$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 ?>
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/cart1.css">
@@ -81,6 +90,7 @@ if (empty($_SESSION['cart'])) {
                 <div class="j-list-item" data-sid="<?= $k ?>">
                     <div class="j-list-img">
                     <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                    </div>
                     <div class="j-list-sub">
                         <p><?= $v['name'] ?></p>
                         <div class="j-list-num">
@@ -169,7 +179,7 @@ if (empty($_SESSION['cart'])) {
 
                         <p>我的購物金還有：</p>
                         <div class="s-package-card-btn d-flex">
-                            <p class="money-discount">NT$ 100</p>
+                            <p class="money-discount giftvoucher" data-val="<?= $member[0]['gift_voucher'] ?>"></p>
                             <div class="s-package-card-radio d-flex pl-4">
                                 <label class="d-flex j-point">
                                     <input type="radio" name="default-package" class="default-package">
@@ -283,7 +293,7 @@ if (empty($_SESSION['cart'])) {
 
             <div class="col-12 discount-col d-flex">
                 <div class="col-6 ml-3">
-                    <h3>購物金有：<span style="color:#7cb2af;">&emsp;NT$100</span></h3>
+                    <h3>購物金有：<span class="giftvoucher" data-val="<?= $member[0]['gift_voucher'] ?>" style="color:#7cb2af;"></span></h3>
                 </div>
 
                 <div class="col-6 d-flex">
@@ -354,7 +364,9 @@ if (empty($_SESSION['cart'])) {
                 <button>繼續選購</button>
             </div>
             <div class="col">
-                <button class="cart1-check">前往結帳</button>
+                <a href="./cart2.php">
+                    <button class="cart1-check" onclick="addToOrder(event)">前往結帳</button>
+                </a>
             </div>
         </div>
     </div>
@@ -451,7 +463,7 @@ if (empty($_SESSION['cart'])) {
                     <span>包裝小計</span>
                 </div>
                 <div class="col-6 px-0 j-summary-price">
-                    <span id="orderPackagePrice" class="j-pl">NT$ 199</span>
+                    <span id="orderPackagePrice" class="j-pl" data-val="199">NT$ 199</span>
                 </div>
             </div>
             <div class="j-summary-item">

@@ -51,7 +51,7 @@ function removeItem(event) {
 		function(data) {
 			// console.log(data);
 
-			showCartCount(data); //總數量
+			// showCartCount(data); //總數量
 			listItem.remove();
 			// TODO: 更新 總計, 
 			updatePrices(); //ajax發回時就要更新
@@ -69,7 +69,7 @@ function removeHeart(event){
 		},
 		function(data){
 			// console.log(data);
-			showCartCount(data);
+			// showCartCount(data);
 			listItem.remove();
 			updatePrices();
 		},
@@ -92,7 +92,7 @@ $(function(){
 		},
 		function(data) {
 			console.log(data);
-			showCartCount(data); //總數量
+			// showCartCount(data); //總數量
 			// TODO: 更新小計, 總計,
 			updatePrices();
 			// console.log(qty);
@@ -147,12 +147,44 @@ function updatePrices() {
 		total += price * qty;
 	});
 	$('.j-product-price').html('NT$ ' + dollarCommas(total));
+    const giftvoucher = $('.giftvoucher').attr('data-val');
+    $('.giftvoucher').html('$ ' + dollarCommas(giftvoucher));
 }
 updatePrices(); //一進頁就要執行一次
 
 
 
-
+function addToOrder(event) {
+    // const addToOrderBtn = $(event.currentTarget);
+    const producttotal = $('#orderProductPrice').text();
+    const orderpackage = $('#orderPackagePrice').attr('data-val');
+    const ordergiftvoucher = $('#orderCoinPrice').text();
+    const ordercoupon = $('#orderCouponPrice').text();
+    const orderfreight = $('#orderShippingPrice').text();
+    console.log({
+        producttotal,
+        orderpackage,
+        ordergiftvoucher,
+        ordercoupon,
+        orderfreight,
+    });
+  
+    $.get(
+      "addtoorder.php",
+      {
+        producttotal,
+        orderpackage,
+        ordergiftvoucher,
+        ordercoupon,
+        orderfreight,
+      },
+      function (data) {
+          // showCartCount(data);
+        console.log(data);
+      },
+      "json"
+    );
+  }
 
 
 

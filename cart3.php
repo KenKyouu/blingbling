@@ -1,6 +1,10 @@
 <?php
-// require __DIR__ . '/parts/connect_db.php';
+require __DIR__ . '/parts/connect_db.php';
 $pageName = 'cart3'; // 頁面名稱，可以自定義
+
+$user = $_SESSION['user']['id'];
+$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+$orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
