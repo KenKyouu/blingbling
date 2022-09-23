@@ -1169,10 +1169,7 @@
 .j-subtotal .j-subtotal-f .j-sum-item .j-total {
   padding: 1rem 0 2rem;
 }
-.j-subtotal .j-subtotal-f .j-sum-item .j-total a {
-  display: block;
-}
-.j-subtotal .j-subtotal-f .j-sum-item .j-total a button {
+.j-subtotal .j-subtotal-f .j-sum-item .j-total button {
   border: none;
   background-color: #2d827d;
   color: #ffffff;
@@ -1182,7 +1179,7 @@
   font-size: 18px;
   font-weight: 900;
 }
-.j-subtotal .j-subtotal-f .j-sum-item .j-total a button span {
+.j-subtotal .j-subtotal-f .j-sum-item .j-total button span {
   margin-left: 0.5rem;
 }
 .j-subtotal .j-fixed-bg {

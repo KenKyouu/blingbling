@@ -9,3 +9,6 @@ $('.j-list-title').on('click', function () {
 $('.j-upicon').on('click', function () {
     $('.j-subtotal').toggleClass('j-open');
 })
+
+
+

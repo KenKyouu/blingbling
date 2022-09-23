@@ -28,11 +28,14 @@ foreach($_SESSION['cart'] as $k=>$v){
     $total += $v['price']*$v['qty'];
 }
 $od_sql = "INSERT INTO `orders`(
-    `member_sid`, `amount`, 
-    `ordererName`,
-    `ordererMobile`, 
-    `recipientName`, 
-    `recipientMobile`, 
+    `member_sid`,
+    `amount`, 
+    `orderer_name`,
+    `orderer_mobile`,
+    `orderer_tel`,
+    `recipient_name`, 
+    `recipient_mobile`, 
+    `recipient_tel`,
     `delivery`,
     `address`,
     `pay`,
@@ -42,8 +45,10 @@ $od_sql = "INSERT INTO `orders`(
     ?,
     ?,
     ?,
+    CONCAT(?,'-',?),
     ?,
     ?,
+    CONCAT(?,'-',?),
     ?,
     CONCAT(?,?,?,?),
     ?,
@@ -54,12 +59,16 @@ $od_sql = "INSERT INTO `orders`(
 
 $stmt = $pdo->prepare($od_sql);
 $stmt->execute([
-    $_SESSION['user']['id'],
+    $_SESSION['user']['sid'],
     $total,
     $_POST['ordererName'],
     $_POST['ordererMobile'],
+    $_POST['ordererTel1'],
+    $_POST['ordererTel2'],
     $_POST['recipientName'],
     $_POST['recipientMobile'],
+    $_POST['recipientTel1'],
+    $_POST['recipientTel2'],
     $_POST['delivery'],
     $_POST['zipcode'],
     $_POST['city'],
@@ -90,7 +99,7 @@ exit;
 $order_sid = $pdo->lastInsertId();  // 訂單編號
 
  // 訂單明細
-$od_sql =  "INSERT INTO `order_details`(`order_sid`, `product_sid`, `price`, `quantity`) VALUES (?, ?, ?, ?)";
+$od_sql =  "INSERT INTO `order_details`(`orders_sid`, `product_sid`, `price`, `quantity`) VALUES (?, ?, ?, ?)";
 $stmt =$pdo->prepare($od_sql);
 
 foreach($_SESSION['cart'] as $k=>$v){

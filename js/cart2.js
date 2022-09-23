@@ -731,3 +731,29 @@ function freightFee(){
         $('.freight-fee').text('');
     }
 }
+
+
+//價錢加,
+const dollarCommas = function(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+};
+function updatePrices() {
+	let productTotal = 0; //總價
+
+	$('.j-list-item').each(function() {
+		//取值
+		const listItem = $(this);
+		const singlePrice = listItem.find('.j-money-single');
+		const smallPrice = listItem.find('.j-money');
+
+		const price = +singlePrice.attr('data-val');
+		const qty = +listItem.find('.qty').text();
+
+		singlePrice.html('NT$ ' + dollarCommas(price));
+		smallPrice.html('NT$ ' + dollarCommas(price * qty));
+		productTotal += price * qty;
+	});
+	$('.j-product-price').html('NT$ ' + dollarCommas(productTotal));
+	console.log(productTotal);
+}
+updatePrices(); //一進頁就要執行一次

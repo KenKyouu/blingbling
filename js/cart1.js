@@ -25,71 +25,151 @@ $('.coupon-svg').on('click', function () {
 })
 
 // 摘要小精靈none-fixed
-$(window).scroll(function () {
-    const denominator = $('body').height() - $(window).height()
-    const percentage = $(window).scrollTop() / denominator * 100;
-    console.log('percentage: ', percentage);
-})
-
-
-(function(){
-    let t = $('.amountNumber');
-    $('.rightIncrease').click(function(){
-        console.log('click');
-        
-        
-    })
-    $('.leftDecrease').click(function(){
-        
-    })
-})
+// $(window).scroll(function () {
+//     const denominator = $('body').height() - $(window).height()
+//     const percentage = $(window).scrollTop() / denominator * 100;
+//     console.log('percentage: ', percentage);
+// })
 
 
 
 
 
+//價錢加,
+const dollarCommas = function(n) {
+	return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+};
+
+function removeItem(event) {
+	const listItem = $(event.currentTarget).closest('.j-list-item');
+	const sid = listItem.attr('data-sid');
+
+	$.get(
+		'handle-cart.php', {
+			sid
+		},
+		function(data) {
+			// console.log(data);
+
+			showCartCount(data); //總數量
+			listItem.remove();
+			// TODO: 更新 總計, 
+			updatePrices(); //ajax發回時就要更新
+		},
+		'json');
+}
+
+function removeHeart(event){
+	const listItem = $(event.currentTarget).closest('.j-list-item');
+	const sid = listItem.attr('data-sid');
+
+	$.get(
+		'handle-cart.php',{
+			sid
+		},
+		function(data){
+			// console.log(data);
+			showCartCount(data);
+			listItem.remove();
+			updatePrices();
+		},
+	'json');
+
+}
+
+
+$(function(){
+	$(".add").click(function(){
+		console.log('click');
+	let sid = $(this).closest('.j-list-item').attr('data-sid');
+	let t=$(this).parent().find('input[class*=qty]');
+	t.val(parseInt(t.val())+1);
+	qty = t.val();
+	$.get(
+		'handle-cart.php', {
+			sid,
+			qty
+		},
+		function(data) {
+			console.log(data);
+			showCartCount(data); //總數量
+			// TODO: 更新小計, 總計,
+			updatePrices();
+			// console.log(qty);
+		},
+		'json');
+	})
+	$(".min").click(function(){
+		console.log('click');
+	let sid = $(this).closest('.j-list-item').attr('data-sid');
+	let t=$(this).parent().find('input[class*=qty]');
+	t.val(parseInt(t.val())-1);
+	if(parseInt(t.val())<1){
+		t.val(1);
+	}
+	qty = t.val();
+	$.get(
+		'handle-cart.php', {
+			sid,
+			qty
+		},
+		function(data) {
+			console.log(data);
+	// 		showCartCount(data); //總數量
+	// 		// TODO: 更新小計, 總計,
+			updatePrices();
+		},
+		'json');
+	})
+	})
 
 
 
-// // 訂購清單金額計算
-// window.onload = function () {
-//     var decrease = document.getElementsByClassName("leftDecrease");  //減號
-//     var piece = document.getElementsByClassName("amountNumber");  //數量
-//     var increase = document.getElementsByClassName("rightIncrease");  //加號
-//     var price = document.getElementsByClassName("singlePrice"); //單價
-//     var smallPrice = document.getElementsByClassName("smallPrice"); //小計
-//     var totalPrice = document.getElementById("totalPrice"); //金額總計
 
-//     // 數量加減
-//     for (var i = 1; i < decrease.length; i++) {
 
-//         decrease[i].index = i;
-//         increase[i].index = i;
 
-//         decrease[i].onclick = function () {
-//             // 判斷數量是否大於1
-//             if (piece[this.index].innerHTML < 1) {
-//                 this.disabled = true; //當數量小於1時, 減號不能用
-//             }
-//             // 當前數量-1
-//             piece[this.index].innerHTML--;
 
-//             // 計算小計
-//             smallPrice[this.index].value = Number(smallPrice[this.index].value) - Number(price[this.index].innerHTML);
-//             totalPrice.innerHTML = Number(totalPrice.innerHTML) - Number(price[this.index].innerHTML);
-//         }
-//     }
-//     // 加號click事件
-//     increase[i].onclick = function () {
-//         // 將對應的減號解禁
-//         decrease[this.index].disabled = false;
 
-//         // 當前數量+1
-//         piece[this.index].innerHTML++;
+function updatePrices() {
+	let total = 0; //總價
 
-//         // 計算小計
-//         smallPrice[this.index].value = Number(smallPrice[this.index].value) + Number(price[this.index].innerHTML);
+	$('.j-list-item').each(function() {
+		//取值
+		const listItem = $(this);
+		const singlePrice = listItem.find('.singlePrice');
+		const smallPrice = listItem.find('.smallPrice');
 
-//         totalPrice.innerHTML = Number(totalPrice.innerHTML) + Number(price[this.index].innerHTML);
-//     }
-// }
+		const price = +singlePrice.attr('data-val');
+		const qty = +listItem.find('.qty').val();
+
+		singlePrice.html('NT$ ' + dollarCommas(price));
+		smallPrice.html('NT$ ' + dollarCommas(price * qty));
+		total += price * qty;
+	});
+	$('.j-product-price').html('NT$ ' + dollarCommas(total));
+}
+updatePrices(); //一進頁就要執行一次
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
