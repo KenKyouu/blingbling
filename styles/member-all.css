@@ -1172,6 +1172,16 @@
   font-size: 14px;
   color: #000000;
 }
+.wrap .containerr .main .row .col .whiteBg .coupons {
+  width: 100%;
+  height: auto;
+}
+.wrap .containerr .main .row .col .whiteBg .coupons .coupon {
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .coupons .coupon img {
+  width: 100%;
+}
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup {
   width: 100%;
 }
@@ -1322,6 +1332,12 @@
 @media screen and (min-width: 576px) {
   .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
     max-width: 1000px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .coupons .coupon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 5px 5px;
   }
 }
 @media screen and (min-width: 700px) {
@@ -1874,8 +1890,33 @@
     text-align: left;
     padding: 0 10px;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon button.newcoupon {
+    color: #2d827d;
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid #7cb2af;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon button.newcoupon:hover {
+    color: #ffffff;
+    background-color: #2d827d;
+    border: none;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
     margin-bottom: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponbtn button.canUseBtn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponbtn button.invalidBtn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .coupons {
+    width: 100%;
+    height: 400px;
+    overflow: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
     padding-bottom: 10px;
