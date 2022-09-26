@@ -4,7 +4,10 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
 
 $user = $_SESSION['user']['id'];
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
-$orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+$orders = $pdo->query("SELECT * FROM `orders` WHERE `member_sid`= $user order by `sid` DESC LIMIT 1")->fetchAll();
+
+$order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_sid, p.name FROM orders o JOIN order_details od ON o.sid = od.orders_sid JOIN product p ON p.sid = od.product_sid WHERE o.`member_sid`= $user and o.`sid` = (SELECT `sid` FROM `orders` WHERE `member_sid`= $user order by `sid` DESC LIMIT 1);")->fetchAll();
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -76,20 +79,22 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <div class="col-md-2 px-0">數量</div>
                     <div class="col-md-2 px-0">小計</div>
                 </div>
+                <?php foreach($order_details as $k=>$v): ?>
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="./images/products/populer-01.jpeg" alt="">
+                        <img src="images/products/<?= $v['product_sid'] ?>_1.png" alt="<?= $v['name'] ?>">
                     </div>
                     <div class="j-list-sub">
-                        <p>Roborock 石頭科技 掃地機器人S7+(小米生態鏈-台灣公司貨)</p>
+                        <p><?= $v['name'] ?></p>
                         <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4">NT$ 22,999</div>
-                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                            <div class="j-money col-6 px-0 col-md-4">NT$ 22,999</div>
+                            <div class="j-money-single  px-0 col-md-4" data-val="<?= $v['price'] ?>"></div>
+                            <div class="j-amount col-6 px-0 col-md-4" data-val="<?= $v['quantity'] ?>"></div>
+                            <div class="j-money col-6 px-0 col-md-4" data-val="<?= $v['price']*$v['quantity'] ?>"></div>
                         </div>
                     </div>
                 </div>
-                <div class="j-list-item">
+                <?php endforeach; ?>
+                <!-- <div class="j-list-item">
                     <div class="j-list-img">
                         <img src="./images/products/populer-02.jpeg" alt="">
                     </div>
@@ -140,7 +145,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <div class="j-money col-6 px-0 col-md-4">NT$ 880</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -157,9 +162,11 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <div class="col total-col">
                     <h3>商品小計</h3>
                 </div>
+                
                 <div class="col price-col">
-                    <h3>NT$ 30,835</h3>
+                    <h3 class="j-product-price" ></h3>
                 </div>
+               
             </div>
 
             <div class="row total-row no-gutters">
@@ -167,7 +174,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h3>包裝小計</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>NT$ 199</h3>
+                    <h3 class="j-package" data-val="<?= $orders[0]['package'] ?>"></h3>
                 </div>
             </div>
 
@@ -176,7 +183,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h3>運費小計</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>NT$ 0</h3>
+                    <h3 class="j-freightfee" data-val="<?= $orders[0]['freight'] ?>"></h3>
                 </div>
             </div>
 
@@ -185,7 +192,10 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h3>購物金折抵</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>-NT$ 100</h3>
+                    <h3>
+                        <span>-</span> 
+                        <span class="j-giftvoucher" data-val="<?= $orders[0]['gift_voucher_use'] ?>"></span>
+                    </h3>
                 </div>
             </div>
 
@@ -194,9 +204,14 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h3>優惠券折抵</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>-NT$ 999</h3>
+                    <h3>
+                        <span>-</span>
+                        <span class="j-coupon" data-val="<?= $orders[0]['coupon_use'] ?>"></span>
+                    </h3>
                 </div>
             </div>
+
+            
 
             <div class="row total-row pt-3 no-gutters">
                 <div class="col-12 total-col-boder">
@@ -210,7 +225,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h3>訂單總計</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>NT$ 29,935</h3>
+                    <h3 class="finaltotal" data-val="<?= $orders[0]['amount'] ?>"></h3>
                 </div>
             </div>
         </div>
@@ -229,7 +244,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <span>商品小計</span>
                         </div>
                         <div class="col-6 px-0 j-summary-price">
-                            <span class="j-pl"> NT$ 30,835</span>
+                            <span class="j-pl j-product-price"></span>
                         </div>
                     </div>
                     <div class="j-summary-item">
@@ -237,7 +252,15 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <span>包裝小計</span>
                         </div>
                         <div class="col-6 px-0 j-summary-price">
-                            <span class="j-pl">NT$ 199</span>
+                            <span class="j-pl j-package" data-val="<?= $orders[0]['package'] ?>"></span>
+                        </div>
+                    </div>
+                    <div class="j-summary-item">
+                        <div class="col-6 px-0 j-summary-subtitle">
+                            <span>運費小計</span>
+                        </div>
+                        <div class="col-6 px-0 j-summary-price">
+                            <span class="j-pl j-freightfee" data-val="<?= $orders[0]['freight'] ?>"></span>
                         </div>
                     </div>
                     <div class="j-summary-item">
@@ -246,7 +269,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                         </div>
                         <div class="col-6 px-0 j-summary-price">
                             <span>-</span>
-                            <span class="pl-1">NT$ 0</span>
+                            <span class="pl-1 j-giftvoucher" data-val="<?= $orders[0]['gift_voucher_use'] ?>"></span>
                         </div>
                     </div>
                     <div class="j-summary-item">
@@ -255,17 +278,10 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                         </div>
                         <div class="col-6 px-0 j-summary-price">
                             <span>-</span>
-                            <span class="pl-1">NT$ 1,099</span>
+                            <span class="pl-1 j-coupon" data-val="<?= $orders[0]['coupon_use'] ?>"></span>
                         </div>
                     </div>
-                    <div class="j-summary-item">
-                        <div class="col-6 px-0 j-summary-subtitle">
-                            <span>運費小計</span>
-                        </div>
-                        <div class="col-6 px-0 j-summary-price">
-                            <span class="j-pl">NT$ 100</span>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="j-total-kv">
@@ -273,7 +289,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <span>金額總計</span>
                 </div>
                 <div class="col-6 px-0 j-total-price">
-                    <span class="j-pl">NT$29,935</span>
+                    <span class="j-pl finaltotal"></span>
                 </div>
             </div>
         </div>
@@ -281,7 +297,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
     </div>
 </div>
 
-<div class="s-payment-info-wrap">
+<!-- <div class="s-payment-info-wrap">
     <div class="container">
 
         <div class="row no-gutters">
@@ -350,7 +366,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- 手機版訂單資訊 -->
 <div class="s-order-info-list-wrap d-block d-lg-none">
@@ -368,7 +384,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h6>訂購日期</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>2022-10-15</h6>
+                    <h6><?= $orders[0]['order_date'] ?></h6>
                 </div>
             </div>
 
@@ -377,7 +393,10 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h6>訂單編號</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>#11299</h6>
+                    <h6>
+                        <span>#</span>
+                        <span><?= $orders[0]['order_number'] ?></span>
+                    </h6>
                 </div>
             </div>
 
@@ -398,10 +417,10 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
             <div class="row">
                 <div class="col col-6">
-                    <h6>配送方式</h6>
+                    <h6>禮物配送方式</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>禮物配送方式</h6>
+                    <h6><?= $orders[0]['delivery'] ?></h6>
                 </div>
             </div>
 
@@ -434,7 +453,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h6>訂購人姓名</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>禮佳在</h6>
+                    <h6><?= $orders[0]['orderer_name'] ?></h6>
                 </div>
             </div>
 
@@ -443,7 +462,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h6>收件人姓名</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>同訂購人</h6>
+                    <h6><?= $orders[0]['recipient_name'] ?></h6>
                 </div>
             </div>
 
@@ -452,7 +471,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h6>收件人手機</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>0987123987</h6>
+                    <h6><?= $orders[0]['recipient_mobile'] ?></h6>
                 </div>
             </div>
 
@@ -467,7 +486,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <h6>付款方式</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>銀行轉帳</h6>
+                    <h6><?= $orders[0]['pay'] ?></h6>
                 </div>
             </div>
 
@@ -510,7 +529,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>訂購日期</p>
                         </div>
                         <div class="col">
-                            <p>2022-10-13</p>
+                            <p><?= $orders[0]['order_date'] ?></p>
                         </div>
                     </div>
 
@@ -519,7 +538,10 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>訂單編號</p>
                         </div>
                         <div class="col">
-                            <p>#11299</p>
+                            <p>
+                                <span>#</span>
+                                <span><?= $orders[0]['order_number'] ?></span>
+                            </p>
                         </div>
                     </div>
 
@@ -545,7 +567,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>訂購人姓名</p>
                         </div>
                         <div class="col">
-                            <p>禮佳在</p>
+                            <p><?= $orders[0]['orderer_name'] ?></p>
                         </div>
                     </div>
 
@@ -554,7 +576,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>收件人姓名</p>
                         </div>
                         <div class="col">
-                            <p>同訂購人</p>
+                            <p><?= $orders[0]['recipient_name'] ?></p>
                         </div>
                     </div>
 
@@ -563,7 +585,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>收件人手機</p>
                         </div>
                         <div class="col">
-                            <p>0987123456</p>
+                            <p><?= $orders[0]['recipient_mobile'] ?></p>
                         </div>
                     </div>
 
@@ -580,7 +602,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>禮物配送方式</p>
                         </div>
                         <div class="col">
-                            <p>超商取貨</p>
+                            <p><?= $orders[0]['delivery'] ?></p>
                         </div>
                     </div>
 
@@ -615,7 +637,7 @@ $orders = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p>付款方式</p>
                         </div>
                         <div class="col">
-                            <p>銀行轉帳</p>
+                            <p><?= $orders[0]['pay'] ?></p>
                         </div>
                     </div>
 

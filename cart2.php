@@ -119,7 +119,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 
                                                 <div class="j-check j-form-group">
                                                     <label class="j-point">同會員資料
-                                                        <input type="checkbox" onclick="sameMember()" />
+                                                        <input type="checkbox"
+                                                        id="cbSameMember"
+                                                        onclick="sameMember()" />
                                                         <span class="j-checkmark"></span>
                                                     </label>
                                                     <div class="j-messages"></div>
@@ -275,7 +277,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             <div class="j-d-title j-form-group">
 
                                                 <label class="j-point">宅配
-                                                    <input type="radio" name="delivery" value="宅配" class="j-home" checked onclick="freightFee()">
+                                                    <input type="radio" name="delivery" value="宅配" class="j-home"   data-val="100" checked>
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
                                                 <div class="j-messages"></div>
@@ -322,7 +324,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             <div class="j-d-title j-form-group">
 
                                                 <label class="j-point">超商取貨
-                                                    <input type="radio" name="delivery" value="超商取貨" class="j-convenience" id="j-convenience" onchange="copyData2()" onclick="freightFee()">
+                                                    <input type="radio" name="delivery" value="超商取貨" class="j-convenience" id="j-convenience" onchange="copyData2()"   data-val="60">
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
                                                 <div class="j-messages"></div>
@@ -481,7 +483,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                     </div>
                                 </div>
                             </section>
-
+                            
                             <ul class="j-cart2-btn">
                                 <li class="col-md-6 px-0">
                                     <a href="./cart1.php">
@@ -490,11 +492,11 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                 </li>
                                 <li class="col-md-6 px-0">
                                     <!-- <a href="#"> -->
-                                        <button type="submit">確認結帳 NT$29,935</button>
+                                        <button type="submit">確認結帳 <span class="finaltotal"></span></button>
                                     <!-- </a> -->
                                 </li>
                             </ul>
-                            
+
                             <div class="j-subtotal">
                                 <div class="j-subtotal-f">
                                     <div class="j-sum-item">
@@ -509,14 +511,14 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         <div class="j-amount-detail">
                                             <div class="j-detail">
                                                 <div class="col-6 px-0 mr-4 j-detail-subtitle"><span>商品小計</span></div>
-                                                <div class="col-6 px-0 j-detail-money"><span class="j-pl j-product-price"></span></div>
+                                                <div class="col-6 px-0 j-detail-money"><span class="j-pl j-product-price" ></span></div>
                                             </div>
                                             <div class="j-detail">
                                                 <div class="col-6 px-0 mr-4 j-detail-subtitle">
                                                     <span>包裝小計</span>
                                                 </div>
                                                 <div class="col-6 px-0 j-detail-money">
-                                                    <span class="j-pl">NT$ 199</span>
+                                                    <span class="j-pl j-package" data-val="<?= $_SESSION['order']['orderpackage'] ?>" ></span>
                                                 </div>
                                             </div>
                                             <div class="j-detail">
@@ -525,7 +527,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 </div>
                                                 <div class="col-6 px-0 d-flex j-detail-money">
                                                     <span>-</span>
-                                                    <span class="pl-1">   NT$ 0</span>
+                                                    <span class="pl-1 j-giftvoucher"  data-val="<?= $_SESSION['order']['ordergiftvoucher'] ?>"></span>
                                                 </div>
                                             </div>
                                             <div class="j-detail">
@@ -534,7 +536,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 </div>
                                                 <div class="col-6 px-0 d-flex j-detail-money">
                                                     <span>-</span>
-                                                    <span class="pl-1">   NT$ 1,099</span>
+                                                    <span class="pl-1 j-coupon" data-val="<?= $_SESSION['order']['ordercoupon'] ?>"></span>
                                                 </div>
                                             </div>
                                             <div class="j-detail">
@@ -542,7 +544,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     <span>運費小計</span>
                                                 </div>
                                                 <div class="col-6 px-0 j-detail-money">
-                                                    <span class="j-pl freight-fee">NT$ <span class="freight-fee">100</span></span>
+                                                    <span class="j-pl j-freightfee" data-val="<?= $_SESSION['order']['orderfreight'] ?>"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -550,7 +552,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         <div class="j-total">
                                             <!-- <a href="#"> -->
                                                 <button >確認結帳
-                                                    <span>NT$29,935</span>
+                                                    <span class="finaltotal"></span>
                                                 </button>
                                             <!-- </a> -->
                                         </div>
@@ -558,6 +560,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                 </div>
                                 <div class="j-fixed-bg"></div>
                             </div>
+
 
                             <div class="j-summary-list">
                                 <div class="j-bling-img">
@@ -581,7 +584,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 <span >包裝小計</span>
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
-                                                <span class="j-pl">NT$ 199</span>
+                                                <span class="j-pl j-package" data-val="<?= $_SESSION['order']['orderpackage'] ?>"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -590,7 +593,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
                                                 <span>-</span>
-                                                <span class="pl-1">NT$ 0</span>
+                                                <span class="pl-1 j-giftvoucher" data-val="<?= $_SESSION['order']['ordergiftvoucher'] ?>"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -599,7 +602,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
                                                 <span>-</span>
-                                                <span class="pl-1">NT$ 1,099</span>
+                                                <span class="pl-1 j-coupon" data-val="<?= $_SESSION['order']['ordercoupon'] ?>"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -607,7 +610,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 <span>運費小計</span>
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
-                                                <span class="j-pl ">NT$ <span class="freight-fee">100</span> </span>
+                                                <span class="j-pl j-freightfee" data-val="<?= $_SESSION['order']['orderfreight'] ?>"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -617,7 +620,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         <span>金額總計</span>
                                     </div>
                                     <div class="col-6 px-0 j-total-price">
-                                        <span class="j-pl">NT$29,935</span>
+                                        <span class="j-pl finaltotal"></span>
                                     </div>
                                 </div>
                             </div>

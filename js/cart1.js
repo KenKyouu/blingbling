@@ -24,12 +24,17 @@ $('.coupon-svg').on('click', function () {
     $('.s-coupon-pc-lightbox').hide();
 })
 
-// 摘要小精靈none-fixed
-// $(window).scroll(function () {
-//     const denominator = $('body').height() - $(window).height()
-//     const percentage = $(window).scrollTop() / denominator * 100;
-//     console.log('percentage: ', percentage);
-// })
+//fixed scroll
+$(window).scroll(function(){
+    $('.j-summary-list').removeClass('j-scroll');
+
+    if($(window).scrollTop() >= 357){
+
+    // console.log('$(window).scrollTop():',$(window).scrollTop());
+    // console.log('scrollTop():',$('.s-pc-btn-wrap').offset().top);
+        $('.j-summary-list').addClass('j-scroll');
+    }
+})
 
 
 
@@ -57,6 +62,7 @@ function removeItem(event) {
 			updatePrices(); //ajax發回時就要更新
 		},
 		'json');
+        
 }
 
 function removeHeart(event){
@@ -125,30 +131,66 @@ $(function(){
 
 
 
+//包裝價錢
+const blingchose = +$('.j-bling-chose').attr('data-val');
+const nonepackage = +$('.j-none-package').attr('data-val');
+$('.j-bling-chose').click(function(){
+    $('.j-orderpackage').html('NT$ ' + dollarCommas(blingchose));
+    $('.j-orderpackage').attr('data-val',blingchose);
+    updatePrices();
+})
+$('.j-none-package').click(function(){
+    $('.j-orderpackage').html('NT$ ' + dollarCommas(nonepackage));
+    $('.j-orderpackage').attr('data-val',nonepackage);
+    updatePrices();
+})
+    
 
-
-
+//購物金價錢
+const usevoucher = $('.j-gift-voucher').attr('data-val');
+const nonevoucher = +$('.j-none-voucher').attr('data-val');
+$('.j-gift-voucher').click(function(){
+    $('.j-giftvoucher').html('NT$ ' + dollarCommas(usevoucher));
+    $('.j-giftvoucher').attr('data-val',usevoucher);
+    updatePrices();
+})
+$('.j-none-voucher').click(function(){
+    $('.j-giftvoucher').html('NT$ ' + dollarCommas(nonevoucher));
+    $('.j-giftvoucher').attr('data-val',nonevoucher);
+    updatePrices();
+})
 
 
 function updatePrices() {
-	let total = 0; //總價
+    let productTotal = 0; //總價
 
-	$('.j-list-item').each(function() {
-		//取值
-		const listItem = $(this);
-		const singlePrice = listItem.find('.singlePrice');
-		const smallPrice = listItem.find('.smallPrice');
+    $('.j-list-item').each(function() {
+        //取值
+        const listItem = $(this);
+        const singlePrice = listItem.find('.singlePrice');
+        const smallPrice = listItem.find('.smallPrice');
 
-		const price = +singlePrice.attr('data-val');
-		const qty = +listItem.find('.qty').val();
+        const price = +singlePrice.attr('data-val');
+        const qty = +listItem.find('.qty').val();
 
-		singlePrice.html('NT$ ' + dollarCommas(price));
-		smallPrice.html('NT$ ' + dollarCommas(price * qty));
-		total += price * qty;
-	});
-	$('.j-product-price').html('NT$ ' + dollarCommas(total));
+        singlePrice.html('NT$ ' + dollarCommas(price));
+        smallPrice.html('NT$ ' + dollarCommas(price * qty));
+        productTotal += price * qty;
+    });
+    $('.j-product-price').html('NT$ ' + dollarCommas(productTotal));
+    $('.j-product-price').attr('data-val',productTotal);
+    if(productTotal == 0){
+        // console.log('upd:',$('.finaltotal').text());
+        location.href= './cart1-none.php';
+    }
     const giftvoucher = $('.giftvoucher').attr('data-val');
     $('.giftvoucher').html('$ ' + dollarCommas(giftvoucher));
+    const orderpackage = $('.j-orderpackage').attr('data-val');
+    const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
+    const ordercoupon = $('.j-coupon').attr('data-val');
+    const finaltotal = (productTotal + parseInt(orderpackage) - parseInt(ordergiftvoucher) - parseInt(ordercoupon)).toString();
+    console.log(finaltotal);
+    $('.finaltotal').html('NT$ ' + dollarCommas(finaltotal));
 }
 updatePrices(); //一進頁就要執行一次
 
@@ -156,17 +198,15 @@ updatePrices(); //一進頁就要執行一次
 
 function addToOrder(event) {
     // const addToOrderBtn = $(event.currentTarget);
-    const producttotal = $('#orderProductPrice').text();
-    const orderpackage = $('#orderPackagePrice').attr('data-val');
-    const ordergiftvoucher = $('#orderCoinPrice').text();
-    const ordercoupon = $('#orderCouponPrice').text();
-    const orderfreight = $('#orderShippingPrice').text();
+    const producttotal = $('.j-producttotal').attr('data-val');
+    const orderpackage = $('.j-orderpackage').attr('data-val');
+    const ordergiftvoucher = $('.j-gift-voucher').attr('data-val');
+    // const ordercoupon = $('#orderCouponPrice').attr('data-val');
     console.log({
         producttotal,
         orderpackage,
         ordergiftvoucher,
-        ordercoupon,
-        orderfreight,
+        // ordercoupon,
     });
   
     $.get(
@@ -175,19 +215,19 @@ function addToOrder(event) {
         producttotal,
         orderpackage,
         ordergiftvoucher,
-        ordercoupon,
-        orderfreight,
+        // ordercoupon,
       },
       function (data) {
           // showCartCount(data);
         console.log(data);
+        updatePrices();
       },
       "json"
     );
   }
 
 
-
+ 
 
 
 

@@ -476,13 +476,13 @@ body {
 .s-package-wrap .container .row .package-col .package-radio label {
   margin-left: 20%;
   margin-top: 20px;
+  position: relative;
 }
 .s-package-wrap .container .row .package-col .package-radio label h3 {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #000000;
 }
-
 .s-discount-wrap {
   margin-top: 30px;
 }
@@ -516,10 +516,11 @@ body {
 }
 .s-discount-wrap .container .row .discount-col .col-6 {
   padding: 0;
-  padding: 10px 0 10px 15px;
+  padding: 10px 0;
 }
 .s-discount-wrap .container .row .discount-col .col-6 .discount-radio {
-  padding-left: 20%;
+  width: 50%;
+  position: relative;
 }
 .s-discount-wrap .container .row .discount-col .col-6 h3 {
   font-family: "GenSenRounded-B";
@@ -635,6 +636,7 @@ body {
 }
 .s-package-card-item .s-package-card-title {
   display: flex;
+  align-items: center;
   padding: 20px 0 10px;
   font-family: "Roboto";
   font-size: 16px;
@@ -645,6 +647,9 @@ body {
 }
 .s-package-card-item .s-package-card-title p {
   padding: 5px 5px 5px 10px;
+}
+.s-package-card-item .s-package-card-title .s-package-card-btn {
+  align-items: center;
 }
 .s-package-card-item .s-package-card-title .s-package-card-btn button {
   align-items: center;
@@ -660,15 +665,22 @@ body {
 .s-package-card-item .s-package-card-title .s-package-card-btn .money-discount {
   color: #7cb2af;
 }
-.s-package-card-item .s-package-card-title .s-package-card-btn .s-package-card-radio label {
+.s-package-card-item .s-package-card-title .s-package-card-btn .s-package-card-radio .j-point {
+  position: relative;
+}
+/* Hide the browser's default checkbox */
+.s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .j-point input, .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .j-point input, .s-package-wrap .container .row .package-col .package-radio .j-point input, .s-discount-wrap .container .row .discount-col .col-6 .j-point input, .s-package-card-item .s-package-card-title .s-package-card-btn .s-package-card-radio .j-point input {
+  position: absolute;
   cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
-/* Hide the browser's default checkbox */
 /* Create a custom radio button */
 .j-checkmark-r {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   height: 16px;
   width: 16px;
@@ -890,6 +902,8 @@ body {
     max-width: 320px;
     border-radius: 10px;
     box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition: 1s cubic-bezier(0.36, 0.14, 0, 1);
   }
   .j-summary-list .j-bling-img {
     position: absolute;
@@ -941,9 +955,8 @@ body {
     padding-left: 0.8rem;
   }
 }
-.s-summary-list-fixed {
-  position: fixed;
-  top: 0;
+.j-scroll {
+  transform: translateY(-40vh);
 }
 
 .s-additional-title-wrap {
@@ -1144,12 +1157,11 @@ body {
   cursor: pointer;
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select {
-  padding: 0 20px;
+  padding: 40px 40px 20px 20px;
   position: relative;
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card {
   padding-bottom: 1.1rem;
-  margin-left: 1.1rem;
 }
 .s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .coupon-close-icon {
   position: absolute;
@@ -1158,10 +1170,13 @@ body {
   left: 85%;
   cursor: pointer;
 }
-.s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card label {
-  cursor: pointer;
+.s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .j-point {
+  position: relative;
 }
-
+.s-package-wrap .container .j-list .j-list-info .s-coupon-pc-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .j-point .j-checkmark-r {
+  bottom: 50%;
+  transform: translateY(50%);
+}
 .s-discount-wrap .container .s-coupon-lightbox {
   display: none;
 }
@@ -1200,12 +1215,11 @@ body {
   padding: 10px 40px;
 }
 .s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select {
-  padding: 0 20px;
+  padding: 40px 40px 20px 20px;
   position: relative;
 }
 .s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card {
   padding-bottom: 1.1rem;
-  margin-left: 1.1rem;
 }
 .s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .coupon-close-icon {
   position: absolute;
@@ -1214,6 +1228,10 @@ body {
   left: 85%;
   cursor: pointer;
 }
-.s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card label {
-  cursor: pointer;
+.s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .j-point {
+  position: relative;
+}
+.s-discount-wrap .container .s-coupon-lightbox .s-coupon-lightbox-bg .s-coupon-select .coupon-radio-card .j-point .j-checkmark-r {
+  bottom: 50%;
+  transform: translateY(50%);
 }/*# sourceMappingURL=cart1.css.map */

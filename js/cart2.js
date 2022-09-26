@@ -85,11 +85,6 @@ $(document).on("keypress", "form", function (e) {
 });
 
 
-
-
-
-
-
 //欄位驗證
 (function() {
     var constraints = {
@@ -722,21 +717,29 @@ document.querySelector('.creditcard').classList.add('flipped');
 });
 
 
-function freightFee(){
-    if($('.j-home').prop("checked")){
-        $('.freight-fee').text('100');
-    }else if($('.j-convenience').prop("checked")){
-        $('.freight-fee').text('60');
-    }else{
-        $('.freight-fee').text('');
-    }
-}
-
 
 //價錢加,
 const dollarCommas = function(n) {
     return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 };
+
+
+
+const homedelivery = +$('.j-home').attr('data-val');
+const storedelivery = +$('.j-convenience').attr('data-val');
+$('.j-home').click(function(){
+    $('.j-freightfee').html('NT$ ' + dollarCommas(homedelivery));
+    $('.j-freightfee').attr('data-val',homedelivery);
+    updatePrices();
+})
+$('.j-convenience').click(function(){
+    $('.j-freightfee').html('NT$ ' + dollarCommas(storedelivery));
+    $('.j-freightfee').attr('data-val',storedelivery);
+    updatePrices();
+})
+    
+
+
 function updatePrices() {
 	let productTotal = 0; //總價
 
@@ -754,8 +757,20 @@ function updatePrices() {
 		productTotal += price * qty;
 	});
 	$('.j-product-price').html('NT$ ' + dollarCommas(productTotal));
+    $('.j-product-price').attr('data-val','NT$ ' + dollarCommas(productTotal));
 	console.log(productTotal);
-
+    const orderpackage = $('.j-package').attr('data-val');
+    $('.j-package').html('NT$ ' + dollarCommas(orderpackage));
+    const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
+    $('.j-giftvoucher').html('NT$ ' + dollarCommas(ordergiftvoucher));
+    const ordercoupon = $('.j-coupon').attr('data-val');
+    $('.j-coupon').html('NT$ ' + dollarCommas(ordercoupon));
+    const orderfreight = $('.j-freightfee').attr('data-val');
+    $('.j-freightfee').html('NT$ ' + dollarCommas(orderfreight));
+    console.log(orderfreight);
+    const finaltotal = (productTotal + parseInt(orderpackage) - parseInt(ordergiftvoucher) - parseInt(ordercoupon) + parseInt(orderfreight)).toString();
+    console.log(finaltotal);
+    $('.finaltotal').html('NT$ ' + dollarCommas(finaltotal));
 }
 updatePrices(); //一進頁就要執行一次
 
@@ -764,7 +779,26 @@ updatePrices(); //一進頁就要執行一次
 function sameMember(){
     const ordererName = $('#ordererName').attr('data-val');
     const ordererMobile = $('#ordererMobile').attr('data-val');
-    $('#ordererName').attr('value', ordererName);
-    $('#ordererMobile').attr('value', ordererMobile);
-
+    if($('#cbSameMember').prop('checked')){
+        $('#ordererName').val(ordererName);
+        $('#ordererMobile').val(ordererMobile);
+    }
+    else{
+        $('#ordererName').val('');
+        $('#ordererMobile').val('');
+    }
+    
 }
+
+
+//fixed scroll
+$(window).scroll(function(){
+    $('.j-summary-list').removeClass('j-scroll');
+
+    if($(window).scrollTop() >= 2150){
+
+    // console.log('$(window).scrollTop():',$(window).scrollTop());
+    // console.log('scrollTop():',$('.s-pc-btn-wrap').offset().top);
+        $('.j-summary-list').addClass('j-scroll');
+    }
+})

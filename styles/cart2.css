@@ -1226,6 +1226,8 @@
     max-width: 320px;
     border-radius: 10px;
     box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition: 1s cubic-bezier(0.36, 0.14, 0, 1);
   }
   .j-summary-list .j-bling-img {
     position: absolute;
@@ -1277,6 +1279,10 @@
     padding-left: 0.8rem;
   }
 }
+.j-scroll {
+  transform: translateY(-35vh);
+}
+
 .footer-mobile {
   display: none;
   padding-top: 30px;
