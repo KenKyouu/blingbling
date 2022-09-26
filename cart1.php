@@ -7,7 +7,6 @@ if (empty($_SESSION['user'])) {
     header('Location: ./login.php');
     exit;
 }
-// echo json_encode($_SESSION['cart']);
 if (empty($_SESSION['cart'])) {
     header('Location: ./cart1-none.php');
     exit;
@@ -21,7 +20,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 <link rel="stylesheet" href="./styles/cart1.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 
-<div class="s-package-wrap">
+<div class="s-package-wrap" id="j-scroll">
     <div class="container">
         <div class="j-progress-bar">
             <div class="j-step-up">
@@ -158,15 +157,15 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <button>客製化包裝</button>
                             <div class="s-package-card-radio d-flex pl-3">
                                 <label class="j-point d-flex">
-                                    <input type="radio" name="default-package" class="default-package">
-                                    <!-- <span class="j-checkmark-r"></span> -->
-                                    <h3 class="pl-2 pt-2">Bling 幫我選</h3>
+                                    <h3 class="pl-4 mr-3">Bling 幫我選</h3>
+                                    <input type="radio" name="defaultPackage"  class="default-package j-bling-chose" data-val="50">
+                                    <span class="j-checkmark-r"></span>
                                 </label>
 
                                 <label class="j-point d-flex pl-3">
-                                    <input type="radio" name="default-package" class="default-package">
-                                    <!-- <span class="j-checkmark-r"></span> -->
-                                    <h3 class="pl-2 pt-2">不需要包裝</h3>
+                                    <h3 class="pl-2 ">不需要包裝</h3>
+                                    <input type="radio" name="defaultPackage" class="default-package j-none-package" data-val="0">
+                                    <span class="j-checkmark-r"></span>
                                 </label>
                             </div>
                         </div>
@@ -182,12 +181,15 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <p class="money-discount giftvoucher" data-val="<?= $member[0]['gift_voucher'] ?>"></p>
                             <div class="s-package-card-radio d-flex pl-4">
                                 <label class="d-flex j-point">
-                                    <input type="radio" name="default-package" class="default-package">
-                                    <h3 class="pl-2 pt-1">全部折抵</h3>
+                                    <h3 class="pl-4 mr-3">全部折抵</h3>
+                                    <input type="radio"   name="giftvoucher"
+                                    class="default-package j-gift-voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
+                                    <span class="j-checkmark-r"></span>
                                 </label>
                                 <label class="d-flex pl-3 j-point">
-                                    <input type="radio" name="default-package" class="default-package">
-                                    <h3 class="pl-2 pt-1">不使用</h3>
+                                    <h3 class="pl-2 ">不使用</h3>
+                                    <input type="radio"  name="giftvoucher" class="default-package j-none-voucher" data-val="0">
+                                    <span class="j-checkmark-r"></span>
                                 </label>
                             </div>
                         </div>
@@ -219,17 +221,19 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                     </svg>
 
                                 </div>
-                                <label class="d-flex j-point pt-4 mt-2">
+                                <label class="d-flex j-point mt-2">
+                                    <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
                                     <input type="radio" name="coupon-radio" class="coupon-radio">
-                                    <img class="w-100" src="./images/cart1-coupon-01.png" alt="">
+                                    <span class="j-checkmark-r"></span>
                                 </label>
 
-                                <label class="d-flex j-point">
+                                <label class="d-flex j-point mt-3">
+                                    <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
                                     <input type="radio" name="coupon-radio" class="coupon-radio">
-                                    <img class="w-100" src="./images/cart1-coupon-02.png" alt="">
+                                    <span class="j-checkmark-r"></span>
                                 </label>
                             </div>
-                            <button class="coupon-apply-btn">確定使用！Bling</button>
+                            <button class="coupon-apply-btn" >確定使用！Bling</button>
                         </div>
                     </div>
                 </div>
@@ -262,16 +266,20 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                 <div class="package-radio">
                     <label class="d-flex j-point">
-                        <input type="radio" name="default-package" class="default-package">
-                        <h3 class="pl-3">Bling Bling
+                        <h3 class="pl-4">Bling Bling
                             幫我選</h3>
+                        <input type="radio" name="defaultPackage" class="default-package j-bling-chose" data-val="50"
+                        >
+                        <span class="j-checkmark-r"></span>
                     </label>
                 </div>
 
                 <div class="package-radio">
                     <label class="d-flex j-point">
-                        <input type="radio" name="default-package" class="default-package">
-                        <h3 class="pl-3">不需要包裝</h3>
+                        <h3 class="pl-4">不需要包裝</h3>
+                        <input type="radio" name="defaultPackage" class="default-package j-none-package" data-val="0"
+                        >
+                        <span class="j-checkmark-r"></span>
                     </label>
                 </div>
             </div>
@@ -291,21 +299,25 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>我的購物金 & 優惠券</h3>
             </div>
 
-            <div class="col-12 discount-col d-flex">
-                <div class="col-6 ml-3">
+            <div class="col-12 discount-col d-flex px-0">
+                <div class="col-6 pl-3 ">
                     <h3>購物金有：<span class="giftvoucher" data-val="<?= $member[0]['gift_voucher'] ?>" style="color:#7cb2af;"></span></h3>
                 </div>
 
-                <div class="col-6 d-flex">
-                    <label class="discount-radio j-point d-flex">
-                        <input type="radio" name="discount-radio" class="discount-radio">
-                        <h3 class="pl-2">全部折抵</h3>
+                <div class="col-6 d-flex j-relative">
+                    <label class="discount-radio j-point d-flex"><h3 class="pl-4 pt-1 mr-2">全部折抵</h3>
+                        <input type="radio" name="giftvoucher" class="default-package j-gift-voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
+                        <span class="j-checkmark-r"></span>
+                    </label>
+                    <label class="discount-radio d-flex pl-3 j-point"><h3 class="pl-2 pt-1">不使用</h3>
+                        <input type="radio"  name="giftvoucher" class="default-package j-none-voucher" data-val="0">
+                        <span class="j-checkmark-r"></span>
                     </label>
                 </div>
             </div>
 
             <div class="col-12 coupon-col">
-                <div class="col-12 d-flex ml-3">
+                <div class="col-12 d-flex ">
                     <h3>優惠券有：</h3>
                     <button class="coupon-btn">選擇優惠券</button>
                 </div>
@@ -325,14 +337,16 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             </svg>
 
                         </div>
-                        <label class="d-flex j-point pt-2 mt-1">
+                        <label class="d-flex j-point mt-2">
+                            <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
                             <input type="radio" name="coupon-radio" class="coupon-radio">
-                            <img class="w-100" src="./images/cart1-coupon-01.png" alt="">
+                            <span class="j-checkmark-r "></span>
                         </label>
 
-                        <label class="d-flex j-point">
+                        <label class="d-flex j-point mt-2">
+                            <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
                             <input type="radio" name="coupon-radio" class="coupon-radio">
-                            <img class="w-100" src="./images/cart1-coupon-02.png" alt="">
+                            <span class="j-checkmark-r"></span>
                         </label>
                     </div>
                     <button class="coupon-apply-btn">確定使用！Bling</button>
@@ -350,7 +364,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <button>繼續選購</button>
             </div>
             <div class="col">
-                <button class="cart1-check">前往結帳</button>
+                <a href="./cart2.php">
+                    <button class="cart1-check" onclick="addToOrder(event)">前往結帳 <span class="finaltotal"></span></button>
+                </a>
             </div>
         </div>
     </div>
@@ -361,11 +377,13 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
     <div class="container">
         <div class="row s-pc-btn-area">
             <div class="col">
-                <button>繼續選購</button>
+                <a href="./product-list.php">
+                    <button>繼續選購</button>
+                </a>
             </div>
             <div class="col">
                 <a href="./cart2.php">
-                    <button class="cart1-check" onclick="addToOrder(event)">前往結帳</button>
+                    <button class="cart1-check" onclick="addToOrder(event)">前往結帳 <span class="finaltotal"></span></button>
                 </a>
             </div>
         </div>
@@ -381,7 +399,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>商品小計</h3>
             </div>
             <div class="col price-col">
-                <h3 class="j-product-price"></h3>
+                <h3 class="j-product-price j-producttotal"></h3>
             </div>
         </div>
 
@@ -390,7 +408,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>包裝小計</h3>
             </div>
             <div class="col price-col">
-                <h3> NT$ 199</h3>
+                <h3 class="j-orderpackage" data-val="0">NT$ 0</h3>
             </div>
         </div>
 
@@ -399,7 +417,8 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>購物金折抵</h3>
             </div>
             <div class="col price-col">
-                <h3>-NT$ 100</h3>
+                <span>-</span>
+                <h3 class="j-giftvoucher" data-val="0">NT$ 0</h3>
             </div>
         </div>
 
@@ -408,7 +427,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>優惠券折抵</h3>
             </div>
             <div class="col price-col">
-                <h3>-NT$ 999</h3>
+                <h3 class="j-coupon" data-val="0">-NT$ 0</h3>
             </div>
         </div>
 
@@ -424,17 +443,21 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>訂單總計</h3>
             </div>
             <div class="col price-col">
-                <h3> NT$ 29,935</h3>
+                <h3 class="finaltotal"></h3>
             </div>
         </div>
 
         <div class="row subtitle-row">
             <div class="col subtitle-btn">
-                <button class="cart1-shop">繼續選購</button>
+                <a class="w-100" href="./product-list.php">
+                    <button class="cart1-shop">繼續選購</button>
+                </a>
             </div>
 
             <div class="col subtitle-btn">
-                <button class="cart1-check">前往結帳</button>
+                <a href="./cart2.php">
+                    <button class="cart1-check" onclick="addToOrder(event)">前往結帳<span class="finaltotal"></span></button>
+                </a>
             </div>
         </div>
 
@@ -455,7 +478,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <span>商品小計</span>
                 </div>
                 <div class="col-6 px-0 j-summary-price">
-                    <span id="orderProductPrice" class="j-pl j-product-price"></span>
+                    <span id="orderProductPrice" class="j-pl j-product-price j-producttotal"></span>
                 </div>
             </div>
             <div class="j-summary-item">
@@ -463,7 +486,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <span>包裝小計</span>
                 </div>
                 <div class="col-6 px-0 j-summary-price">
-                    <span id="orderPackagePrice" class="j-pl" data-val="199">NT$ 199</span>
+                    <span id="orderPackagePrice" class="j-pl j-orderpackage" data-val="0" >NT$ 0</span>
                 </div>
             </div>
             <div class="j-summary-item">
@@ -472,7 +495,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 </div>
                 <div class="col-6 px-0 j-summary-price">
                     <span>-</span>
-                    <span id="orderCoinPrice" class="pl-1">NT$ 0</span>
+                    <span id="orderCoinPrice" class="pl-1 j-giftvoucher" data-val="0">NT$ 0</span>
                 </div>
             </div>
             <div class="j-summary-item">
@@ -481,15 +504,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 </div>
                 <div class="col-6 px-0 j-summary-price">
                     <span>-</span>
-                    <span id="orderCouponPrice" class="pl-1">NT$ 1,099</span>
-                </div>
-            </div>
-            <div class="j-summary-item">
-                <div class="col-6 px-0 j-summary-subtitle">
-                    <span>運費小計</span>
-                </div>
-                <div class="col-6 px-0 j-summary-price">
-                    <span id="orderShippingPrice" class="j-pl">NT$ 100</span>
+                    <span id="orderCouponPrice" class="pl-1 j-coupon" data-val="0">NT$ 0</span>
                 </div>
             </div>
         </div>
@@ -499,7 +514,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
             <span>金額總計</span>
         </div>
         <div class="col-6 px-0 j-total-price">
-            <span id="orderTotalPrice" class="j-pl">NT$29,935</span>
+            <span id="orderTotalPrice" class="j-pl finaltotal"></span>
         </div>
     </div>
 </div>

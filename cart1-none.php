@@ -521,5 +521,4 @@ $pageName = 'cart1-none'; // 頁面名稱，可以自定義
 
 <?php include __DIR__ . '/parts/footer.php'; ?>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
-<script src="./js/cart1.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

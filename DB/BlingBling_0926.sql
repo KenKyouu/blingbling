@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost
--- 產生時間： 2022 年 09 月 26 日 13:49
+-- 產生時間： 2022 年 09 月 26 日 14:05
 -- 伺服器版本： 10.4.21-MariaDB
 -- PHP 版本： 8.0.19
 
@@ -428,6 +428,7 @@ INSERT INTO `notice` (`sid`, `content`) VALUES
 
 CREATE TABLE `orders` (
   `sid` int(11) NOT NULL,
+  `order_number` varchar(255) NOT NULL,
   `member_sid` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
   `order_date` date NOT NULL,
@@ -440,19 +441,20 @@ CREATE TABLE `orders` (
   `recipient_tel` varchar(255) DEFAULT NULL,
   `address` varchar(255) NOT NULL,
   `pay` varchar(255) NOT NULL,
+  `package` int(11) NOT NULL DEFAULT 0,
   `coupon_sid` int(11) DEFAULT NULL,
   `gift_voucher_use` int(11) NOT NULL DEFAULT 0,
-  `coupon_use` int(11) DEFAULT NULL,
-  `freight` int(11) NOT NULL DEFAULT 100
+  `coupon_use` int(11) DEFAULT 0,
+  `freight` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 傾印資料表的資料 `orders`
 --
 
-INSERT INTO `orders` (`sid`, `member_sid`, `amount`, `order_date`, `delivery`, `orderer_name`, `orderer_mobile`, `orderer_tel`, `recipient_name`, `recipient_mobile`, `recipient_tel`, `address`, `pay`, `coupon_sid`, `gift_voucher_use`, `coupon_use`, `freight`) VALUES
-(1, 7, 9179, '2022-09-23', '宅配', 'KenKyou', '0912345678', '-', 'KenKyou', '0912345678', '-', '106臺北市大安區qwewqeq', '信用卡', NULL, 0, NULL, 100),
-(2, 7, 65869, '2022-09-23', '宅配', 'KenKyou', '0912345678', '-', 'KenKyou', '0912345678', '-', '106臺北市大安區egegegserge', '信用卡', NULL, 0, NULL, 100);
+INSERT INTO `orders` (`sid`, `order_number`, `member_sid`, `amount`, `order_date`, `delivery`, `orderer_name`, `orderer_mobile`, `orderer_tel`, `recipient_name`, `recipient_mobile`, `recipient_tel`, `address`, `pay`, `package`, `coupon_sid`, `gift_voucher_use`, `coupon_use`, `freight`) VALUES
+(1, '', 7, 9179, '2022-09-23', '宅配', 'KenKyou', '0912345678', '-', 'KenKyou', '0912345678', '-', '106臺北市大安區qwewqeq', '信用卡', 0, NULL, 0, NULL, 100),
+(2, '', 7, 65869, '2022-09-23', '宅配', 'KenKyou', '0912345678', '-', 'KenKyou', '0912345678', '-', '106臺北市大安區egegegserge', '信用卡', 0, NULL, 0, NULL, 100);
 
 -- --------------------------------------------------------
 

@@ -31,7 +31,16 @@ $ordertotal =0;
     $ordertotal = $total + $_SESSION['order']['orderpackage'] - $_SESSION['order']['ordergiftvoucher'] - $_SESSION['order']['ordercoupon'] + $_SESSION['order']['orderfreight'];
 
 
+
+
+$yCode = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+shuffle($yCode);
+$orderSn = $yCode[0].(date('Y') - 2000) . strtoupper(dechex(date('m'))) . date('d') . sprintf('%02d', rand(0, 99));
+    
+
+
 $od_sql = "INSERT INTO `orders`(
+    `order_number`,
     `member_sid`,
     `amount`, 
     `orderer_name`,
@@ -43,8 +52,13 @@ $od_sql = "INSERT INTO `orders`(
     `delivery`,
     `address`,
     `pay`,
-    `order_date`
+    `order_date`,
+    `package`,
+    `gift_voucher_use`,
+    `coupon_use`,
+    `freight`
 ) VALUES (
+    ?,
     ?,
     ?,
     ?,
@@ -56,13 +70,18 @@ $od_sql = "INSERT INTO `orders`(
     ?,
     CONCAT(?,?,?,?),
     ?,
-    NOW()
+    NOW(),
+    ?,
+    ?,
+    ?,
+    ?
 )";
 
 
 
 $stmt = $pdo->prepare($od_sql);
 $stmt->execute([
+    $orderSn,
     $_SESSION['user']['id'],
     $ordertotal,
     $_POST['ordererName'],
@@ -78,8 +97,11 @@ $stmt->execute([
     $_POST['city'],
     $_POST['town'],
     $_POST['address'],
-    $_POST['pay']
-    
+    $_POST['pay'],
+    $_SESSION['order']['orderpackage'],
+    $_SESSION['order']['ordergiftvoucher'],
+    $_SESSION['order']['ordercoupon'],
+    $_SESSION['order']['orderfreight'],
 ]);
 
 // if($stmt->rowCount()){
@@ -88,6 +110,21 @@ $stmt->execute([
 // } else {
 //     $output['error'] = '資料沒有新增';
 // }
+
+// $giftvoucher = 0;
+// $v_sql = "INSERT INTO `member`(
+//     `gift_voucher`
+// ) VALUES (
+//     ?
+// )";
+
+// $stmt = $pdo->prepare($v_sql);
+// $stmt->execute([
+//     $giftvoucher
+// ]);
+
+
+
 
 
 echo json_encode($output);
@@ -116,3 +153,4 @@ foreach($_SESSION['cart'] as $k=>$v){
 }
 
 unset($_SESSION['cart']); // 清除購物車內容
+unset($_SESSION['order']);

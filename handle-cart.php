@@ -39,5 +39,5 @@ if(! empty($sid)){
 }
 
 
-echo json_encode($_SESSION['cart']);
+echo json_encode($_SESSION['cart'], JSON_UNESCAPED_UNICODE);
 
