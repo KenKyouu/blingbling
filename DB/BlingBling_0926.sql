@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost
--- 產生時間： 2022 年 09 月 23 日 13:14
+-- 產生時間： 2022 年 09 月 26 日 14:05
 -- 伺服器版本： 10.4.21-MariaDB
 -- PHP 版本： 8.0.19
 
@@ -224,8 +224,27 @@ INSERT INTO `class` (`sid`, `name`, `parent`) VALUES
 
 CREATE TABLE `coupon` (
   `sid` int(11) NOT NULL,
-  `class` varchar(255) NOT NULL,
-  `content` varchar(255) NOT NULL
+  `coupon_value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `coupon`
+--
+
+INSERT INTO `coupon` (`sid`, `coupon_value`) VALUES
+(1, 60),
+(2, 100);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `friend_tag`
+--
+
+CREATE TABLE `friend_tag` (
+  `sid` int(11) NOT NULL,
+  `friend_sid` int(11) NOT NULL,
+  `tag_sid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -284,6 +303,18 @@ CREATE TABLE `member_coupon` (
   `expiry_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 傾印資料表的資料 `member_coupon`
+--
+
+INSERT INTO `member_coupon` (`sid`, `member_sid`, `coupon_sid`, `expiry_date`) VALUES
+(1, 7, 1, '2022-12-31'),
+(2, 7, 1, '2022-12-31'),
+(3, 7, 2, '2022-12-31'),
+(4, 7, 2, '2022-10-13'),
+(5, 7, 2, '2022-09-30'),
+(6, 7, 1, '2022-10-31');
+
 -- --------------------------------------------------------
 
 --
@@ -295,6 +326,43 @@ CREATE TABLE `member_favorite` (
   `member_sid` int(11) NOT NULL,
   `product_sid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `member_favorite`
+--
+
+INSERT INTO `member_favorite` (`sid`, `member_sid`, `product_sid`) VALUES
+(1, 7, 132),
+(2, 7, 129),
+(3, 7, 127),
+(4, 7, 118);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `member_friend`
+--
+
+CREATE TABLE `member_friend` (
+  `sid` int(11) NOT NULL,
+  `member_sid` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `birthday_yyyy` int(11) DEFAULT NULL,
+  `birthday_mm` int(11) NOT NULL,
+  `birthday_dd` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `member_friend`
+--
+
+INSERT INTO `member_friend` (`sid`, `member_sid`, `name`, `gender`, `birthday_yyyy`, `birthday_mm`, `birthday_dd`, `email`) VALUES
+(1, 7, 'Emily', 'female', 1993, 3, 9, NULL),
+(2, 7, 'Priscilla', 'female', NULL, 9, 26, NULL),
+(3, 7, 'Roxy', 'female', NULL, 7, 31, NULL),
+(4, 7, 'Monica', 'female', NULL, 9, 14, NULL);
 
 -- --------------------------------------------------------
 
@@ -309,6 +377,19 @@ CREATE TABLE `member_notice` (
   `notice_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 傾印資料表的資料 `member_notice`
+--
+
+INSERT INTO `member_notice` (`sid`, `member_sid`, `notice_sid`, `notice_date`) VALUES
+(1, 7, 1, '2022-09-22'),
+(2, 7, 9, '2022-08-01'),
+(3, 7, 12, '2022-05-15'),
+(4, 7, 5, '2022-09-22'),
+(5, 7, 5, '2022-09-25'),
+(6, 7, 8, '2022-09-01'),
+(7, 7, 6, '2022-09-10');
+
 -- --------------------------------------------------------
 
 --
@@ -320,6 +401,25 @@ CREATE TABLE `notice` (
   `content` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 傾印資料表的資料 `notice`
+--
+
+INSERT INTO `notice` (`sid`, `content`) VALUES
+(1, '恭喜您獲得一張新的優惠券'),
+(2, '您有一張優惠券即將到期'),
+(3, '您的訂單已出貨'),
+(4, '您的訂單已到貨'),
+(5, '系統已收到您的訂單'),
+(6, '您的好友的生日快到了，來看看他的願望清單吧！'),
+(7, '有人送禮物給您囉！'),
+(8, '中秋精選禮物特輯！前往活動頁面查看詳細優惠！'),
+(9, '父親節限定優惠！相關禮品滿額折扣，前往活動詳情'),
+(10, '一年一度的七夕即將到來，選個禮物送給最愛的他/她'),
+(11, 'Bling Bling的一歲生日快到了！點擊領取3張限時優惠券'),
+(12, '鳳凰花開的畢業季，進入畢業禮物特輯尋找給同學們最好的祝福吧！'),
+(13, '母親像月亮一樣，照耀我家門窗～挑個禮物送給親愛的她');
+
 -- --------------------------------------------------------
 
 --
@@ -328,17 +428,33 @@ CREATE TABLE `notice` (
 
 CREATE TABLE `orders` (
   `sid` int(11) NOT NULL,
+  `order_number` varchar(255) NOT NULL,
   `member_sid` int(11) NOT NULL,
   `amount` int(11) NOT NULL,
   `order_date` date NOT NULL,
   `delivery` varchar(255) NOT NULL,
-  `ordererName` varchar(255) NOT NULL,
-  `ordererMobile` varchar(255) NOT NULL,
-  `recipientName` varchar(255) NOT NULL,
-  `recipientMobile` varchar(255) NOT NULL,
+  `orderer_name` varchar(255) NOT NULL,
+  `orderer_mobile` varchar(255) NOT NULL,
+  `orderer_tel` varchar(255) DEFAULT NULL,
+  `recipient_name` varchar(255) NOT NULL,
+  `recipient_mobile` varchar(255) NOT NULL,
+  `recipient_tel` varchar(255) DEFAULT NULL,
   `address` varchar(255) NOT NULL,
-  `pay` varchar(255) NOT NULL
+  `pay` varchar(255) NOT NULL,
+  `package` int(11) NOT NULL DEFAULT 0,
+  `coupon_sid` int(11) DEFAULT NULL,
+  `gift_voucher_use` int(11) NOT NULL DEFAULT 0,
+  `coupon_use` int(11) DEFAULT 0,
+  `freight` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `orders`
+--
+
+INSERT INTO `orders` (`sid`, `order_number`, `member_sid`, `amount`, `order_date`, `delivery`, `orderer_name`, `orderer_mobile`, `orderer_tel`, `recipient_name`, `recipient_mobile`, `recipient_tel`, `address`, `pay`, `package`, `coupon_sid`, `gift_voucher_use`, `coupon_use`, `freight`) VALUES
+(1, '', 7, 9179, '2022-09-23', '宅配', 'KenKyou', '0912345678', '-', 'KenKyou', '0912345678', '-', '106臺北市大安區qwewqeq', '信用卡', 0, NULL, 0, NULL, 100),
+(2, '', 7, 65869, '2022-09-23', '宅配', 'KenKyou', '0912345678', '-', 'KenKyou', '0912345678', '-', '106臺北市大安區egegegserge', '信用卡', 0, NULL, 0, NULL, 100);
 
 -- --------------------------------------------------------
 
@@ -351,12 +467,18 @@ CREATE TABLE `order_details` (
   `orders_sid` int(11) NOT NULL,
   `product_sid` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL DEFAULT 1,
-  `coupon_sid` int(11) NOT NULL,
-  `gift_voucher_use` int(11) NOT NULL DEFAULT 0,
-  `coupon_use` int(11) DEFAULT NULL,
-  `freight` int(11) NOT NULL
+  `quantity` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `order_details`
+--
+
+INSERT INTO `order_details` (`sid`, `orders_sid`, `product_sid`, `price`, `quantity`) VALUES
+(1, 1, 120, 3290, 2),
+(2, 1, 114, 2400, 1),
+(3, 2, 134, 1990, 3),
+(4, 2, 129, 19900, 3);
 
 -- --------------------------------------------------------
 
@@ -615,6 +737,12 @@ ALTER TABLE `coupon`
   ADD PRIMARY KEY (`sid`);
 
 --
+-- 資料表索引 `friend_tag`
+--
+ALTER TABLE `friend_tag`
+  ADD PRIMARY KEY (`sid`);
+
+--
 -- 資料表索引 `member`
 --
 ALTER TABLE `member`
@@ -624,6 +752,7 @@ ALTER TABLE `member`
 -- 資料表索引 `member_coupon`
 --
 ALTER TABLE `member_coupon`
+  ADD PRIMARY KEY (`sid`),
   ADD KEY `member_sid` (`member_sid`),
   ADD KEY `coupon_sid` (`coupon_sid`);
 
@@ -634,6 +763,12 @@ ALTER TABLE `member_favorite`
   ADD PRIMARY KEY (`sid`),
   ADD KEY `member_sid` (`member_sid`),
   ADD KEY `product_sid` (`product_sid`);
+
+--
+-- 資料表索引 `member_friend`
+--
+ALTER TABLE `member_friend`
+  ADD PRIMARY KEY (`sid`);
 
 --
 -- 資料表索引 `member_notice`
@@ -718,6 +853,12 @@ ALTER TABLE `class`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `coupon`
 --
 ALTER TABLE `coupon`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `friend_tag`
+--
+ALTER TABLE `friend_tag`
   MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -727,34 +868,46 @@ ALTER TABLE `member`
   MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `member_coupon`
+--
+ALTER TABLE `member_coupon`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `member_favorite`
 --
 ALTER TABLE `member_favorite`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `member_friend`
+--
+ALTER TABLE `member_friend`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `member_notice`
 --
 ALTER TABLE `member_notice`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `product`

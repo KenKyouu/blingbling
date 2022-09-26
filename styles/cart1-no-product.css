@@ -156,12 +156,18 @@ body {
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg img {
   width: 100%;
+<<<<<<< HEAD
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 15px;
+=======
   object-fit: cover;
   padding: 12px;
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg:hover {
   animation: swing 1s 1;
   cursor: pointer;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap {
   width: 100%;

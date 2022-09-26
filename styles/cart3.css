@@ -649,7 +649,8 @@ body {
   width: 60px;
   height: 60px;
   overflow: hidden;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #4c4948;
 }
 .j-list .j-list-info .j-list-item .j-list-img img {
@@ -735,7 +736,8 @@ body {
     width: 80px;
     height: 80px;
     overflow: hidden;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     background-color: #4c4948;
   }
   .j-list .j-list-info .j-list-item .j-list-img img {
