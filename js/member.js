@@ -1,31 +1,5 @@
 // greenBorder - memberButton
 
-// $("li.btn > a").click(function(){
-//     console.log($(this));
-//     $(this).css('background-color', 'white').parent().siblings().children().css('background-color', 'rgba(255, 255, 255, 0)');
-// });
-
-//edit myInfo
-// $('button.editMyInfo').click(function (e) {
-//     e.preventDefault();
-//     $('.lb-editmydetails').addClass('lightbox-show');
-//     $('.lb-editmydetails').css({
-//         opacity: '1',
-//     });
-//     $('.blackbg').css({
-//         opacity: '1',
-//     });
-//     $('body').addClass('body-hidden');
-// });
-
-// $(".true, .false").click(function () {
-//     $(".lb-editmydetails").removeClass("lightbox-show");
-//     $('.lb-editmydetails').css({
-//         display: 'none',
-//     });
-//     $("body").removeClass("body-hidden");
-// });
-
 $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -39,3 +13,45 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
   })
+
+  // $('li.btn').click(function(){
+  //   this.style.backgroundColor = 'white';
+  // });
+  // $('.memberbutton > ul > li.btn > a >.btnsvg > svg > path').click(function(){
+  //   this.style.fill = '#4c4948';
+  //   this.style.stroke = '#4c4948';
+  // });
+  // $('.memberbutton > ul > li.btn > a >.btnP').click(function(){
+  //   this.style.color = '#4c4948';
+  // });
+
+  $(document).ready(function(){
+    $("li.btn").click(function(){
+        $(this).css("background-color", "white");
+        $(".btnP").css("color", "#4c4948");
+        $(".btnsvg > svg > path").css("fill", "#4c4948", "stroke", "#4c4948");
+        $(".btnsvg > svg.ordersvg > path").css("stroke", "#4c4948");
+    });
+});
+
+// $('.editIcon').click(function(){
+//   // $('.lightbox-friendDetails').css('top', '20%');
+//   $('.lightbox-friendDetails').css('right', '40%');
+// })
+
+$('.newcoupon').click(function(){
+  $('.coupon-lightbox-err').addClass('show').css('left', '0');
+});
+$('button.ok').click(function(){
+  $('.coupon-lightbox-err').removeClass('show').css('left', '-100%');
+});
+// $('.newcoupon').click(function(){
+//   $('.coupon-lightbox-err').addClass(show){
+//     $('.coupon-lightbox-err').css('left', '0');
+//   };
+// })
+// $('button.ok').click(function(){
+//   $('.coupon-lightbox-err').removeClass('show'){
+//     $('.coupon-lightbox-err').css('left', '-100%');
+//   };
+// });

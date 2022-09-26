@@ -1,51 +1,78 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+
 .wrap {
   width: 100%;
   height: 100vh;
 }
+
 .wrap .containerr .main .row {
   height: 100vh;
   margin: 0;
 }
+
 .wrap .containerr .main .row .col {
   background-color: #2d827d;
   padding: 0;
 }
+
 .wrap .containerr .main .row .col .left .myName {
   padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder {
   width: 80px;
   height: 80px;
   border-radius: 100%;
   background-color: #7cb2af;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto {
   width: 70px;
   height: 70px;
@@ -53,85 +80,134 @@
   background-color: #ffffff;
   overflow: hidden;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
 }
+
 .wrap .containerr .main .row .col .left .myName .photo .photoedit {
   width: 24px;
   height: 24px;
   border-radius: 100%;
   background-color: #ffcd51;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 1;
   position: absolute;
   right: -3px;
   bottom: 0;
 }
+
 .wrap .containerr .main .row .col .left .myName h5 {
   font-family: "GenSenRounded-B";
   font-size: 24px;
   color: #000000;
   padding: 13px 0 13px 0;
 }
+
 .wrap .containerr .main .row .col .left .myName a.coin {
   font-family: "Roboto";
   font-size: 16px;
   color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 7px;
   text-decoration: none;
 }
+
 .wrap .containerr .main .row .col .left .myName a.coin svg {
   margin-right: 10px;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton {
   width: 100%;
   padding: 0px 30px;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
   padding: 10px 0;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a {
   width: 64px;
   height: 64px;
   border-radius: 10px;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
 }
+
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
   font-family: "GenSenRounded-M";
   font-size: 14px;
   color: #4c4948;
 }
+
 .wrap .containerr .main .row .col .whiteBg {
   width: 100%;
   height: auto;
   background-color: #ffffff;
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 -10px 19px #4c4948;
+  -webkit-box-shadow: 0 -10px 19px #4c4948;
+          box-shadow: 0 -10px 19px #4c4948;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0px 30px;
   margin-top: 15px;
   width: 100%;
@@ -145,23 +221,35 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .newFriend {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 20px 0 25px;
   width: 100%;
   height: 120px;
   border-radius: 10px;
-  background-color: rgba(126, 160, 131, 0.1882352941);
+  background-color: #7ea08330;
 }
+
 .wrap .containerr .main .row .col .whiteBg .newFriend p {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #2d827d;
   padding: 20px 0 20px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .newFriend button.uploadNewFriend {
   width: 130px;
   height: 38px;
@@ -173,43 +261,60 @@
   border: none;
   margin-bottom: 20px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup {
   width: 100%;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 18px 0 18px;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendName {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendName p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   text-align: left;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendBirth {
   width: 20%;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendBirth p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   text-align: left;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .birthdayIcon {
   width: 10%;
   text-align: center;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon {
   width: 15%;
   text-align: right;
 }
+
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon {
   width: 15%;
   text-align: right;
@@ -220,6 +325,7 @@
     padding: 0 100px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .wrap {
     background-image: url(../images/other_bg_paper.png);
@@ -228,9 +334,13 @@
     margin: 0 5%;
   }
   .wrap .containerr .main .row .col {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 90px;
   }
   .wrap .containerr .main .row .col .col-lg-3 {
@@ -241,9 +351,15 @@
     padding-left: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo {
@@ -278,23 +394,34 @@
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
     width: 100%;
-    flex-wrap: none;
-    justify-content: right;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     padding-top: 30px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
     width: 100%;
     padding: 0;
     margin: 6px 0 6px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
     width: 100%;
     height: 54px;
     border-radius: 100px 0 0 100px;
     background-color: #ffffff;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
     width: 35%;
@@ -311,23 +438,40 @@
     font-family: "GenSenRounded-B";
     font-size: 20px;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
     height: 70%;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 5%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend {
     height: auto;
     background-color: rgba(255, 255, 255, 0);
-    flex-direction: row;
-    justify-content: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     margin-bottom: 20px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend p {
@@ -343,10 +487,19 @@
     border-radius: 32px;
     border: 4px solid #2d827d;
     background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 50px 0;
   }
   .lightbox-newFriendDetails p.editTitle {
@@ -360,8 +513,12 @@
   }
   .lightbox-newFriendDetails .friend-details .detail {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 30px;
   }
   .lightbox-newFriendDetails .friend-details .detail .detail-text {
@@ -469,16 +626,19 @@
     margin: 0 20px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .wrap .containerr {
     margin: 0 10%;
   }
 }
+
 @media screen and (min-width: 1400px) {
   .wrap .containerr {
     margin: 0 15%;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .wrap .containerr {
     margin: 0 18%;
@@ -487,6 +647,7 @@
     padding-left: 20px;
   }
 }
+
 .friend-lightbox-warn .friend-lightbox-black {
   z-index: 20;
   position: fixed;
@@ -496,12 +657,14 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .friend-lightbox-warn .friend-lightbox-bg {
   z-index: 21;
   position: fixed;
   top: 50vh;
   left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   width: 90%;
   max-width: 400px;
   font-family: "GenSenRounded-B";
@@ -510,26 +673,43 @@
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
 }
+
 .friend-lightbox-warn .friend-lightbox-bg .friend-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 10px 30px;
 }
+
 .friend-lightbox-warn .friend-lightbox-bg .friend-warning .friend-warn-icon {
   margin-right: 20px;
   padding-bottom: 10px;
 }
+
 .friend-lightbox-warn .friend-lightbox-bg .friend-warning .friend-warn-text {
   font-size: 20px;
   color: #000000;
   padding-bottom: 10px;
 }
+
 .friend-lightbox-warn .friend-lightbox-bg .tfBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .friend-lightbox-warn .friend-lightbox-bg .tfBtn button.true {
   width: 98px;
   height: 38px;
@@ -541,6 +721,7 @@
   padding: 8px 30px;
   margin-top: 10px;
 }
+
 .friend-lightbox-warn .friend-lightbox-bg .tfBtn button.false {
   width: 98px;
   height: 38px;
@@ -560,46 +741,67 @@
   border-radius: 44px;
   border: 5px solid #2d827d;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 33px 0;
   z-index: 1;
   position: absolute;
   right: 100%;
 }
+
 .lightbox-friendDetails p.editTitle {
   font-family: "GenSenRounded-B";
   font-size: 16px;
   color: #4c4948;
   padding-bottom: 23px;
 }
+
 .lightbox-friendDetails .friend-details {
   width: 100%;
 }
+
 .lightbox-friendDetails .friend-details .detail {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 20px;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-text {
   width: 30%;
   padding-right: 20px;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-text p {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   text-align: right;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-text p span {
   color: #d45a6a;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input {
   width: 70%;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input input {
   width: 200px;
   height: 32px;
@@ -610,9 +812,11 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
   color: #c2c2c2;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input select {
   width: 100px;
   height: 32px;
@@ -623,12 +827,14 @@
   font-size: 14px;
   color: #4c4948;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input select option {
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #4c4948;
   text-align: center;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input input.birthmd {
   width: 70px;
   height: 32px;
@@ -642,6 +848,7 @@
   text-align: center;
   margin-right: 10px;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect {
   width: 200px;
   height: 120px;
@@ -651,10 +858,12 @@
   border: 2px solid #2d827d;
   padding: 10px 10px;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags {
   height: 120px;
   overflow: scroll;
 }
+
 .lightbox-friendDetails .friend-details .detail .detail-input .tagsselect .tags span {
   display: inline-block;
   margin-bottom: 5px;
@@ -664,9 +873,11 @@
   font-size: 9px;
   padding: 5px 10px;
 }
+
 .lightbox-friendDetails .detailsbtn {
   margin-top: 20px;
 }
+
 .lightbox-friendDetails .detailsbtn button.true {
   width: 130px;
   height: 38px;
@@ -677,6 +888,7 @@
   font-size: 14px;
   margin: 0 10px;
 }
+
 .lightbox-friendDetails .detailsbtn button.false {
   width: 130px;
   height: 38px;
@@ -687,4 +899,5 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
   margin: 0 10px;
-}/*# sourceMappingURL=member-myFriend.css.map */
+}
+/*# sourceMappingURL=member-myFriend.css.map */

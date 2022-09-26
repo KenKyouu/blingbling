@@ -44,7 +44,10 @@ body {
   font-weight: 900;
   text-align: left;
 }
-.cart1-no-product-wrap .container .row .col .cta-info-wrap .cta-btn button {
+.cart1-no-product-wrap .container .row .col .cta-info-wrap .cta-btn a {
+  display: block;
+}
+.cart1-no-product-wrap .container .row .col .cta-info-wrap .cta-btn a button {
   padding: 15px;
   background-color: #2d827d;
   border: none;
@@ -156,16 +159,15 @@ body {
 <<<<<<< HEAD
   -o-object-fit: cover;
      object-fit: cover;
+  padding: 15px;
+=======
+  object-fit: cover;
   padding: 12px;
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .img-wrap .img-bg:hover {
-  -webkit-animation: swing 1s 1;
-          animation: swing 1s 1;
+  animation: swing 1s 1;
   cursor: pointer;
-=======
-  object-fit: cover;
-  padding: 15px;
->>>>>>> a6fc11ca463878b3b1229ad303a34474f1b8503c
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap {
   width: 100%;
@@ -200,24 +202,6 @@ body {
 }
 .cart1-no-poduct-list-wrap .container .product-row .poduct-card .info-wrap .info-price-btn button svg {
   width: 100%;
-}
-
-@-webkit-keyframes swing {
-  15% {
-    transform: translateX(5px);
-  }
-  40% {
-    transform: translateX(-5px);
-  }
-  65% {
-    transform: translateX(2px);
-  }
-  85% {
-    transform: translateX(-2px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
 }
 
 @keyframes swing {

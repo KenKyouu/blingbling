@@ -27,7 +27,8 @@ body {
 .mb-signup .login .login-bg {
   width: 100%;
   height: 165px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   z-index: 1;
 }

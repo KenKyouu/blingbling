@@ -48,13 +48,25 @@ $("li.member, .header-member").mouseleave(function () {
 });
 
 $(".switchtosignup").click(function () {
-  console.log("eeennn");
-  $(".pc-login").removeClass("loginandsignup-show");
+  $(".pc-login").addClass("loginandsignup-hidden");
   $(".pc-signup").addClass("loginandsignup-show");
 });
 
 $(".switchtologin").click(function () {
-  console.log("hellohello");
   $(".pc-signup").removeClass("loginandsignup-show");
-  $(".pc-login").addClass("loginandsignup-show");
+  $(".pc-login").removeClass("loginandsignup-hidden");
+});
+
+$("span.clicktosignup").click(function () {
+  // $(".mb-login").removeClass("mb-loginandsignup-show");
+  $(".mb-login").addClass("mb-loginandsignup-hidden");
+  $(".mb-signup").removeClass("mb-loginandsignup-hidden");
+  // $(".mb-signup").addClass("mb-loginandsignup-show");
+});
+
+$("span.clicktologin").click(function () {
+  // $(".mb-signup").removeClass("mb-loginandsignup-show");
+  $(".mb-signup").addClass("mb-loginandsignup-hidden");
+  $(".mb-login").removeClass("mb-loginandsignup-hidden");
+  // $(".mb-login").addClass("mb-loginandsignup-show");
 });

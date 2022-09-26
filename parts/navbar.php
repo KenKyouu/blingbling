@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if (!empty($_SESSION['user'])) {
-// header('Location: ./index.php');
-// exit;
-// } 
+//session_start();
+//if (!empty($_SESSION['user'])) {
+//    header('Location: ./member-myIntro.php');
+//    exit;
+//}
 ?>
 
 <div class="header">
@@ -111,7 +111,7 @@
                                 <path d="M25 25.0586C25 18.1589 19.4045 12.5636 12.4987 12.5636C5.59301 12.5636 0 18.1589 0 25.0586H25Z" fill="#4C4948" />
                             </svg> 個人資訊</li>
                     </a>
-                    <a href="#">
+                    <a href="./member-myCollection.php">
                         <li><svg width="20" height="20" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.9345 5.0309C24.3121 2.1774 21.8199 0.0437136 18.8338 0.0437136C15.3815 0.0437136 12.5844 2.89721 12.5844 6.4191C12.5844 2.87407 9.76716 0 6.29221 0C2.82734 0 0.0201593 2.85608 0 6.38568C0 6.39596 0 6.40882 0 6.4191C0 7.16975 0.128515 7.88956 0.360347 8.56051C2.14696 14.4063 10.0872 21.0799 12.0578 22.6686C12.3173 22.8769 12.6827 22.8794 12.9422 22.6712C14.8045 21.1725 22.024 15.1081 24.3045 9.50654C24.743 8.4294 25 7.3677 25 6.35998C25 5.90753 24.9773 5.46535 24.9345 5.0309Z" fill="#4C4948" />
                             </svg> 我的收藏</li>
@@ -291,7 +291,7 @@
 </div>
 
 
-<div class="pc-signup">
+<!-- <div class="pc-signup">
     <div class="signup-box">
         <div class="switchtologin"></div>
         <div class="pc-signup-info">
@@ -452,4 +452,4 @@
 
         </div>
     </div>
-</div>
+</div> -->
