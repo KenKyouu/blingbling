@@ -1857,6 +1857,173 @@ $bold: 900;
     }
 }
 
+// ------------------lightbox-friendDetails-----------------
+
+.lightbox-friendDetails-bg {
+    width: 100%;
+    height: 100vh;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    .lightbox-friendDetails {
+        width: 375px;
+        height: auto;
+        border-radius: 44px;
+        border: 5px solid $lake-green;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 33px 0;
+        z-index: 91;
+
+        p.editTitle {
+            font-family: "GenSenRounded-B";
+            font-size: $p-font-size;
+            color: $dark-gray;
+            padding-bottom: 23px;
+        }
+
+        .friend-details {
+            width: 100%;
+
+            .detail {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .detail-text {
+                    width: 30%;
+                    padding-right: 20px;
+
+                    p {
+                        font-family: "GenSenRounded-B";
+                        font-size: $ps-font-size;
+                        color: $dark-gray;
+                        text-align: right;
+
+                        span {
+                            color: $red-pink;
+                        }
+                    }
+                }
+
+                .detail-input {
+                    width: 70%;
+
+                    input {
+                        width: 200px;
+                        height: 32px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 0 10px;
+                        font-family: "GenSenRounded-B";
+                        font-size: $ps-font-size;
+                    }
+
+                    ::-webkit-input-placeholder {
+                        color: $gray;
+                    }
+
+                    select {
+                        width: 100px;
+                        height: 32px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        font-family: "GenSenRounded-B";
+                        font-size: $ps-font-size;
+                        color: $dark-gray;
+
+                        // padding: 0 10px;
+                        option {
+                            font-family: "GenSenRounded-B";
+                            font-size: $ps-font-size;
+                            color: $dark-gray;
+                            text-align: center;
+                        }
+                    }
+
+                    input.birthmd {
+                        width: 70px;
+                        height: 32px;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 0 10px;
+                        color: $gray;
+                        font-family: "GenSenRounded-B";
+                        font-size: $ps-font-size;
+                        text-align: center;
+                        margin-right: 10px;
+                    }
+
+                    .tagsselect {
+                        width: 200px;
+                        height: 120px;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 2px solid $lake-green;
+                        padding: 10px 10px;
+
+                        .tags {
+                            height: 120px;
+                            overflow: scroll;
+
+                            span {
+                                display: inline-block;
+                                margin-bottom: 5px;
+                                border: 2px solid $super-dark;
+                                border-radius: 100px;
+                                font-family: "GenSenRounded-M";
+                                font-size: 9px;
+                                padding: 5px 10px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .detailsbtn {
+            margin-top: 20px;
+
+            button.f-store {
+                width: 130px;
+                height: 38px;
+                border-radius: 10px;
+                background-color: $super-dark;
+                color: $white;
+                font-family: "GenSenRounded-B";
+                font-size: $ps-font-size;
+                margin: 0 10px;
+            }
+
+            button.f-clean {
+                width: 130px;
+                height: 38px;
+                border-radius: 10px;
+                border: 3px solid $super-dark;
+                color: $super-dark;
+                background-color: rgba(255, 255, 255, 0);
+                font-family: "GenSenRounded-B";
+                font-size: $ps-font-size;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
 // ----------------RWD-575-----------------
 
 @media screen and (max-width:575px) {
@@ -2680,6 +2847,7 @@ $bold: 900;
 
                                     .friendName {
                                         .fn {
+                                            width: 50%;
                                             p {
                                                 text-align: left;
                                                 font-size: $h4-font-size;
@@ -2687,11 +2855,35 @@ $bold: 900;
                                         }
 
                                         .friendEditIcon {
+                                            width: 50%;
                                             svg {
                                                 width: 15px;
                                                 height: 15px;
                                                 text-align: left;
                                             }
+                                        }
+                                    }
+                                    .friendGenderBirth {
+                                        .friendGender {
+                                            p {
+                                                font-size: $h6-font-size;
+                                                color: $gray;
+                                            }
+                                        }
+                                        .friendBirth {
+                                            p {
+                                                font-size: $h6-font-size;
+                                                color: $gray;
+                                            }
+                                        }
+                                    }
+                                }
+                                .friendtags {
+                                    .tags {
+                                        justify-content: left;
+                                        margin-bottom: 0;
+                                        .tag {
+                                            margin: 5px;
                                         }
                                     }
                                 }
@@ -3005,154 +3197,156 @@ $bold: 900;
     }
     // ------------------lightbox-friendDetails-----------------
 
-    .lightbox-friendDetails {
-        width: 700px;
-        height: auto;
-        border-radius: 32px;
-        border: 4px solid $lake-green;
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 50px 0;
+    .lightbox-friendDetails-bg {
+        .lightbox-friendDetails {
+            width: 700px;
+            height: auto;
+            border-radius: 32px;
+            border: 4px solid $lake-green;
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
 
-        p.editTitle {
-            font-family: "GenSenRounded-B";
-            font-size: $h5-font-size;
-            color: $dark-gray;
-            padding-bottom: 50px;
-        }
+            p.editTitle {
+                font-family: "GenSenRounded-B";
+                font-size: $h5-font-size;
+                color: $dark-gray;
+                padding-bottom: 50px;
+            }
 
-        .friend-details {
-            width: 100%;
-
-            .detail {
+            .friend-details {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                margin-bottom: 30px;
 
-                .detail-text {
-                    width: 30%;
-                    padding-right: 40px;
+                .detail {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
 
-                    p {
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        color: $dark-gray;
-                        text-align: right;
+                    .detail-text {
+                        width: 30%;
+                        padding-right: 40px;
 
-                        span {
-                            color: $red-pink;
-                        }
-                    }
-                }
-
-                .detail-input {
-                    width: 70%;
-
-                    input {
-                        width: 400px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 0 10px;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                    }
-
-                    ::-webkit-input-placeholder {
-                        color: $gray;
-                    }
-
-                    select {
-                        width: 150px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        color: $dark-gray;
-
-                        // padding: 0 10px;
-                        option {
+                        p {
                             font-family: "GenSenRounded-B";
                             font-size: $p-font-size;
                             color: $dark-gray;
-                            text-align: center;
+                            text-align: right;
+
+                            span {
+                                color: $red-pink;
+                            }
                         }
                     }
 
-                    input.birthmd {
-                        width: 100px;
-                        height: 50px;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 0 10px;
-                        color: $gray;
-                        font-family: "GenSenRounded-B";
-                        font-size: $p-font-size;
-                        text-align: center;
-                        margin-right: 20px;
-                    }
+                    .detail-input {
+                        width: 70%;
 
-                    .tagsselect {
-                        width: 400px;
-                        height: 135px;
-                        overflow: hidden;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0);
-                        border: 2px solid $lake-green;
-                        padding: 10px 10px;
+                        input {
+                            width: 400px;
+                            height: 50px;
+                            border-radius: 10px;
+                            background-color: rgba(0, 0, 0, 0);
+                            border: 2px solid $lake-green;
+                            padding: 0 10px;
+                            font-family: "GenSenRounded-B";
+                            font-size: $p-font-size;
+                        }
 
-                        .tags {
-                            height: 135px;
-                            overflow: scroll;
+                        ::-webkit-input-placeholder {
+                            color: $gray;
+                        }
 
-                            span {
-                                display: inline-block;
-                                margin-bottom: 10px;
-                                border: 2px solid $super-dark;
-                                border-radius: 100px;
+                        select {
+                            width: 150px;
+                            height: 50px;
+                            border-radius: 10px;
+                            background-color: rgba(0, 0, 0, 0);
+                            border: 2px solid $lake-green;
+                            font-family: "GenSenRounded-B";
+                            font-size: $p-font-size;
+                            color: $dark-gray;
+
+                            // padding: 0 10px;
+                            option {
                                 font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                padding: 5px 10px;
+                                font-size: $p-font-size;
+                                color: $dark-gray;
+                                text-align: center;
+                            }
+                        }
 
+                        input.birthmd {
+                            width: 100px;
+                            height: 50px;
+                            border-radius: 10px;
+                            background-color: rgba(0, 0, 0, 0);
+                            border: 2px solid $lake-green;
+                            padding: 0 10px;
+                            color: $gray;
+                            font-family: "GenSenRounded-B";
+                            font-size: $p-font-size;
+                            text-align: center;
+                            margin-right: 20px;
+                        }
+
+                        .tagsselect {
+                            width: 400px;
+                            height: 135px;
+                            overflow: hidden;
+                            border-radius: 10px;
+                            background-color: rgba(0, 0, 0, 0);
+                            border: 2px solid $lake-green;
+                            padding: 10px 10px;
+
+                            .tags {
+                                height: 135px;
+                                overflow: scroll;
+
+                                span {
+                                    display: inline-block;
+                                    margin-bottom: 10px;
+                                    border: 2px solid $super-dark;
+                                    border-radius: 100px;
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    padding: 5px 10px;
+
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
-        .detailsbtn {
-            margin-top: 20px;
+            .detailsbtn {
+                margin-top: 20px;
 
-            button.true {
-                width: 140px;
-                height: 48px;
-                border-radius: 10px;
-                background-color: $super-dark;
-                color: $white;
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                margin: 0 20px;
-            }
+                button.f-store {
+                    width: 140px;
+                    height: 48px;
+                    border-radius: 10px;
+                    background-color: $super-dark;
+                    color: $white;
+                    font-family: "GenSenRounded-B";
+                    font-size: $p-font-size;
+                    margin: 0 20px;
+                }
 
-            button.false {
-                width: 140px;
-                height: 48px;
-                border-radius: 10px;
-                border: 3px solid $super-dark;
-                color: $super-dark;
-                background-color: rgba(255, 255, 255, 0);
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                margin: 0 20px;
+                button.f-clean {
+                    width: 140px;
+                    height: 48px;
+                    border-radius: 10px;
+                    border: 3px solid $super-dark;
+                    color: $super-dark;
+                    background-color: rgba(255, 255, 255, 0);
+                    font-family: "GenSenRounded-B";
+                    font-size: $p-font-size;
+                    margin: 0 20px;
+                }
             }
         }
     }
@@ -3277,165 +3471,6 @@ $bold: 900;
                 margin-top: 10px;
                 margin-left: 30px;
             }
-        }
-    }
-}
-
-// ------------------lightbox-friendDetails-----------------
-
-.lightbox-friendDetails {
-    width: 375px;
-    height: auto;
-    border-radius: 44px;
-    border: 5px solid $lake-green;
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 33px 0;
-    z-index: 1;
-    transition: .1s;
-    position: absolute;
-    top: 20%;
-    right: -100%;
-
-    p.editTitle {
-        font-family: "GenSenRounded-B";
-        font-size: $p-font-size;
-        color: $dark-gray;
-        padding-bottom: 23px;
-    }
-
-    .friend-details {
-        width: 100%;
-
-        .detail {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-
-            .detail-text {
-                width: 30%;
-                padding-right: 20px;
-
-                p {
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                    color: $dark-gray;
-                    text-align: right;
-
-                    span {
-                        color: $red-pink;
-                    }
-                }
-            }
-
-            .detail-input {
-                width: 70%;
-
-                input {
-                    width: 200px;
-                    height: 32px;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    padding: 0 10px;
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                }
-
-                ::-webkit-input-placeholder {
-                    color: $gray;
-                }
-
-                select {
-                    width: 100px;
-                    height: 32px;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                    color: $dark-gray;
-
-                    // padding: 0 10px;
-                    option {
-                        font-family: "GenSenRounded-B";
-                        font-size: $ps-font-size;
-                        color: $dark-gray;
-                        text-align: center;
-                    }
-                }
-
-                input.birthmd {
-                    width: 70px;
-                    height: 32px;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    padding: 0 10px;
-                    color: $gray;
-                    font-family: "GenSenRounded-B";
-                    font-size: $ps-font-size;
-                    text-align: center;
-                    margin-right: 10px;
-                }
-
-                .tagsselect {
-                    width: 200px;
-                    height: 120px;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    background-color: rgba(0, 0, 0, 0);
-                    border: 2px solid $lake-green;
-                    padding: 10px 10px;
-
-                    .tags {
-                        height: 120px;
-                        overflow: scroll;
-
-                        span {
-                            display: inline-block;
-                            margin-bottom: 5px;
-                            border: 2px solid $super-dark;
-                            border-radius: 100px;
-                            font-family: "GenSenRounded-M";
-                            font-size: 9px;
-                            padding: 5px 10px;
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .detailsbtn {
-        margin-top: 20px;
-
-        button.true {
-            width: 130px;
-            height: 38px;
-            border-radius: 10px;
-            background-color: $super-dark;
-            color: $white;
-            font-family: "GenSenRounded-B";
-            font-size: $ps-font-size;
-            margin: 0 10px;
-        }
-
-        button.false {
-            width: 130px;
-            height: 38px;
-            border-radius: 10px;
-            border: 3px solid $super-dark;
-            color: $super-dark;
-            background-color: rgba(255, 255, 255, 0);
-            font-family: "GenSenRounded-B";
-            font-size: $ps-font-size;
-            margin: 0 10px;
         }
     }
 }

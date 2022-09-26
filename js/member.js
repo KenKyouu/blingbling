@@ -50,6 +50,13 @@ $('button.cancel').click(function(){
   $('.friend-lightbox-warn').removeClass('show').css('left', '-100%');
 });
 
+$('.editIcon').click(function(){
+  $('.lightbox-friendDetails-bg').addClass('show').css('left', '0');
+});
+$('button.f-clean').click(function(){
+  $('.lightbox-friendDetails-bg').removeClass('show').css('left', '-100%');
+});
+
 $('.newcoupon').click(function(){
   $('.coupon-lightbox-err').addClass('show').css('left', '0');
 });

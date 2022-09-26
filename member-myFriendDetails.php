@@ -258,7 +258,7 @@ if (empty($r)) {
 
 <!-- ------------lightbox-friendDetails------------ -->
 
-<div class="lightbox-friendDetails-blackbg">
+<div class="lightbox-friendDetails-bg">
     <form class="lightbox-friendDetails">
         <p class="editTitle">編輯好友資訊</p>
         <div class="friend-details">
@@ -335,8 +335,8 @@ if (empty($r)) {
             </div>
         </div>
         <div class="detailsbtn">
-            <button class="true" type="submit" name="btn">儲存</button>
-            <button class="false" type="reset" name="btn">取消</button>
+            <button class="f-store" type="submit" name="btn">儲存</button>
+            <button class="f-clean" type="reset" name="btn">取消</button>
         </div>
     </form>
 </div>
