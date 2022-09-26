@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost
--- 產生時間： 2022 年 09 月 23 日 13:14
+-- 產生時間： 2022 年 09 月 23 日 13:34
 -- 伺服器版本： 10.4.21-MariaDB
 -- PHP 版本： 8.0.19
 
@@ -332,12 +332,18 @@ CREATE TABLE `orders` (
   `amount` int(11) NOT NULL,
   `order_date` date NOT NULL,
   `delivery` varchar(255) NOT NULL,
-  `ordererName` varchar(255) NOT NULL,
-  `ordererMobile` varchar(255) NOT NULL,
-  `recipientName` varchar(255) NOT NULL,
-  `recipientMobile` varchar(255) NOT NULL,
+  `orderer_name` varchar(255) NOT NULL,
+  `orderer_mobile` varchar(255) NOT NULL,
+  `orderer_tel` varchar(255) DEFAULT NULL,
+  `recipient_name` varchar(255) NOT NULL,
+  `recipient_mobile` varchar(255) NOT NULL,
+  `recipient_tel` varchar(255) DEFAULT NULL,
   `address` varchar(255) NOT NULL,
-  `pay` varchar(255) NOT NULL
+  `pay` varchar(255) NOT NULL,
+  `coupon_sid` int(11) NOT NULL,
+  `gift_voucher_use` int(11) NOT NULL DEFAULT 0,
+  `coupon_use` int(11) DEFAULT NULL,
+  `freight` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -351,11 +357,7 @@ CREATE TABLE `order_details` (
   `orders_sid` int(11) NOT NULL,
   `product_sid` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL DEFAULT 1,
-  `coupon_sid` int(11) NOT NULL,
-  `gift_voucher_use` int(11) NOT NULL DEFAULT 0,
-  `coupon_use` int(11) DEFAULT NULL,
-  `freight` int(11) NOT NULL
+  `quantity` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
