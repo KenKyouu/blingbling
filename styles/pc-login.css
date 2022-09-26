@@ -14,31 +14,15 @@
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .pc-login {
   position: fixed;
   z-index: 300;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
-=======
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
->>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 }
 .pc-login .login-box {
   width: 90%;
@@ -48,10 +32,6 @@
   background-size: 100% 100%;
   position: relative;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .pc-login .login-box .switchtosignup {
   width: 120px;
   height: 75px;
