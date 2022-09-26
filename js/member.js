@@ -34,10 +34,21 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     });
 });
 
-// $('.editIcon').click(function(){
-//   // $('.lightbox-friendDetails').css('top', '20%');
-//   $('.lightbox-friendDetails').css('right', '40%');
-// })
+// lightbox
+
+$('.uploadNewFriend').click(function(){
+  $('.inputNewFriend').addClass('show').css('left', '0');
+});
+$('button.clean').click(function(){
+  $('.inputNewFriend').removeClass('show').css('left', '-100%');
+});
+
+$('.deleteFriendIcon').click(function(){
+  $('.friend-lightbox-warn').addClass('show').css('left', '0');
+});
+$('button.cancel').click(function(){
+  $('.friend-lightbox-warn').removeClass('show').css('left', '-100%');
+});
 
 $('.newcoupon').click(function(){
   $('.coupon-lightbox-err').addClass('show').css('left', '0');
@@ -45,13 +56,3 @@ $('.newcoupon').click(function(){
 $('button.ok').click(function(){
   $('.coupon-lightbox-err').removeClass('show').css('left', '-100%');
 });
-// $('.newcoupon').click(function(){
-//   $('.coupon-lightbox-err').addClass(show){
-//     $('.coupon-lightbox-err').css('left', '0');
-//   };
-// })
-// $('button.ok').click(function(){
-//   $('.coupon-lightbox-err').removeClass('show'){
-//     $('.coupon-lightbox-err').css('left', '-100%');
-//   };
-// });
