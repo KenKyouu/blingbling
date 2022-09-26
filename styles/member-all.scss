@@ -212,7 +212,7 @@ $bold: 900;
                                         .btnsvg {
                                             svg {
                                                 margin-bottom: 5px;
-                                                color: $dark-gray;
+                                                fill: $white;
                                             }
                                         }
 
@@ -636,6 +636,7 @@ $bold: 900;
                                 align-items: center;
                                 justify-content: center;
                                 padding: 33px 0;
+
                                 // margin: 0;
                                 .modal-content {
                                     border: none;
@@ -769,6 +770,128 @@ $bold: 900;
                         }
                     }
 
+                    // -----MYCOLLECTION-----
+                    .whiteBg {
+                        width: 100%;
+                        height: auto;
+                        background-color: $white;
+                        border-radius: 10px 10px 0 0;
+                        box-shadow: 0 -10px 19px $dark-gray;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 0px 30px;
+                        margin-top: 15px;
+
+                        .friendWatchButton {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 20px 0;
+
+                            p.letFriendWatch {
+                                font-family: "GenSenRounded-B";
+                                font-size: $ps-font-size;
+                                color: $super-dark;
+                                padding-right: 16px;
+                            }
+
+                            .switchButton {
+                                width: 48px;
+                                height: 24px;
+                                border-radius: 100px;
+                                background-color: $gray;
+                                padding: 3px;
+
+                                .switch {
+                                    width: 18px;
+                                    height: 18px;
+                                    border-radius: 100px;
+                                    background-color: $white;
+                                    text-align: left;
+                                }
+                            }
+                        }
+
+                        .myWishLists {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            .wishList {
+                                width: 100%;
+                                height: auto;
+                                padding: 0;
+                                display: flex;
+                                justify-content: center;
+
+                                a {
+                                    .product-card {
+                                        width: 100%;
+                                        margin: 0 0 10px 0;
+
+                                        .product-image {
+                                            width: 150px;
+                                            height: 150px;
+                                            background-image: url(../images/products/71-1.jpeg);
+                                            background-size: cover;
+                                            position: relative;
+
+                                            .heart {
+                                                cursor: default;
+                                                position: absolute;
+                                                right: 3px;
+                                                bottom: 3px;
+                                            }
+                                        }
+
+                                        .product-title {
+                                            width: 150px;
+                                            padding: 8px 0 8px 0;
+
+                                            h4 {
+                                                width: 100%;
+                                                color: $super-dark;
+                                                font-family: "GenSenRounded-M";
+                                                font-size: $ps-font-size;
+                                                overflow: hidden;
+                                                display: -webkit-box;
+                                                -webkit-box-orient: vertical;
+                                                -webkit-line-clamp: 1;
+                                            }
+                                        }
+
+                                        .product-price {
+                                            @media (max-width:768px) {
+                                                width: 150px;
+
+                                            }
+
+                                            width: 100%;
+                                            padding: 0 0 5px 0;
+
+                                            p {
+                                                color: $deep-brown;
+                                                font-family: "GenSenRounded-M";
+                                                font-size: $ps-font-size;
+                                                font-weight: $bold;
+
+                                                &::before {
+                                                    display: inline-block;
+                                                    content: "NT$";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     // -----FRIEND-----
                     .whiteBg {
                         width: 100%;
@@ -816,10 +939,16 @@ $bold: 900;
                                 border-radius: 10px;
                                 font-family: "GenSenRounded-B";
                                 font-size: $ps-font-size;
-                                color: $white;
-                                background-color: $lake-green;
-                                border: none;
+                                color: $lake-green;
+                                background-color: rgba(255, 255, 255, 0);
+                                border: 3px solid $light-lake-green;
                                 margin-bottom: 20px;
+                            }
+
+                            .uploadNewFriend:hover {
+                                background-color: $lake-green;
+                                color: $white;
+                                border: none;
                             }
 
                             .modal {
@@ -1030,15 +1159,100 @@ $bold: 900;
                                     width: 10%;
                                     text-align: center;
                                 }
-
+                                
                                 .watchFriendIcon {
                                     width: 15%;
                                     text-align: right;
+                                    .watchFriendSvg {
+                                        width: 20px;
+                                        height: 20px;
+                                        border: none;
+                                        background-color: rgba(255, 255, 255, 0);
+                                    }
                                 }
 
                                 .deleteFriendIcon {
                                     width: 15%;
                                     text-align: right;
+                                    .deleteFriendSvg {
+                                        width: 20px;
+                                        height: 20px;
+                                        border: none;
+                                        background-color: rgba(255, 255, 255, 0);
+                                    }
+
+                                    .modal {
+                                        display: flex !important;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        .modal-dialog {
+                                            max-width: 400px;
+                                            font-family: "GenSenRounded-B";
+                                            font-weight: $bold;
+                                            text-align: center;
+                                            background: url("../images/error-bg.png")center center/100% auto no-repeat;
+                                            padding: 76px 0;
+                                            border: none;
+
+                                            .modal-content {
+                                                width: auto;
+
+                                                .modal-body {
+                                                    .friend-warning {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 10px 30px;
+
+                                                        .friend-warn-icon {
+                                                            margin-right: 20px;
+                                                            padding-bottom: 10px;
+                                                        }
+
+                                                        .friend-warn-text {
+                                                            font-size: $h6-font-size;
+                                                            color: $super-dark;
+                                                            padding-bottom: 10px;
+                                                        }
+                                                    }
+                                                }
+
+                                                .modal-footer {
+                                                    button.true {
+                                                        width: 98px;
+                                                        height: 38px;
+                                                        border: none;
+                                                        background-color: $super-dark;
+                                                        border-radius: 10px;
+                                                        color: $white;
+                                                        font-size: $p-font-size;
+                                                        // padding: 8px 30px;
+                                                        margin-top: 10px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+
+                                                    button.false {
+                                                        width: 98px;
+                                                        height: 38px;
+                                                        border: 3px solid $super-dark;
+                                                        background-color: rgba(0, 0, 0, 0);
+                                                        border-radius: 10px;
+                                                        color: $super-dark;
+                                                        font-size: $p-font-size;
+                                                        // padding: 8px 30px;
+                                                        margin-top: 10px;
+                                                        margin-left: 30px;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1059,16 +1273,31 @@ $bold: 900;
 
                         .backToList {
                             width: 100%;
-                            display: flex;
-                            align-items: center;
                             text-align: left;
                             padding-top: 25px;
 
-                            p {
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                color: $lake-green;
-                                padding-left: 15px;
+                            button.btl {
+                                display: flex;
+                                align-items: center;
+                                border: none;
+                                background-color: rgba(255, 255, 255, 0);
+                                width: 100%;
+                                p {
+                                    font-family: "GenSenRounded-B";
+                                    font-size: $ps-font-size;
+                                    color: $lake-green;
+                                    padding-left: 15px;
+                                }
+                            }
+                            button.btl:hover {
+                                svg {
+                                    path {
+                                        fill: $light-lake-green;
+                                    }
+                                }
+                                p {
+                                    color: $light-lake-green;
+                                }
                             }
                         }
 
@@ -1098,17 +1327,21 @@ $bold: 900;
                                             color: $dark-gray;
                                             text-align: right;
                                         }
-
-                                        // &::after {
-                                        //     display: block;
-                                        //     content: 'hihihihih';
-                                        // }
                                     }
-
 
                                     .friendEditIcon {
                                         width: 40%;
                                         margin-left: 20px;
+                                        button {
+                                            border: none;
+                                            background-color: rgba(255, 255, 255, 0);
+                                            // width: 20px;
+                                            // height: 20px;
+                                        }
+                                        button:hover {
+                                            background-color: $gray;
+                                            border-radius: 3px;
+                                        }
                                     }
                                 }
 
@@ -1265,103 +1498,135 @@ $bold: 900;
                             }
                         }
 
-                        .couponbtn {
-                            width: 100%;
-                            display: flex;
-                            justify-content: space-around;
-                            margin-bottom: 20px;
+                        // .couponbtn {
+                        //     width: 100%;
+                        //     display: flex;
+                        //     justify-content: space-around;
+                        //     margin-bottom: 20px;
 
-                            button {
-                                width: 130px;
-                                height: 38px;
-                                border-radius: 10px;
-                                border: 3px solid $super-dark;
-                                background-color: #ffffff00;
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                color: $super-dark;
-                            }
+                        //     button {
+                        //         width: 130px;
+                        //         height: 38px;
+                        //         border-radius: 10px;
+                        //         border: 3px solid $super-dark;
+                        //         background-color: #ffffff00;
+                        //         font-family: "GenSenRounded-B";
+                        //         font-size: $ps-font-size;
+                        //         color: $super-dark;
+                        //     }
+                        // }
+
+                        .couponTitle {
+                            display: none;
+                            width: 100%;
                         }
-
-                        .invalidCouponGroup {
-                            width: 100%;
-
-                            .invalidCouponTitle {
+                        .validCoupon {
+                            .coupons {
                                 width: 100%;
-                                display: flex;
-                                padding-bottom: 5px;
-
-
-                                .couponName {
-                                    width: 70%;
-
-                                    p.couponName {
-                                        font-family: "GenSenRounded-B";
-                                        font-size: $ps-font-size;
-                                        color: $dark-gray;
-                                        border-left: 3px solid $light-brown;
-                                        padding-left: 10px;
-                                        width: 100%;
-                                        text-align: left;
-
-                                    }
-                                }
-
-                                .couponDate {
-                                    width: 30%;
-
-                                    p.couponDate {
-                                        font-family: "GenSenRounded-B";
-                                        font-size: $ps-font-size;
-                                        color: $dark-gray;
-                                        border-left: 3px solid $light-brown;
-                                        padding-left: 10px;
-                                        width: 100%;
-                                        text-align: left;
-
-                                    }
-                                }
-                            }
-
-                            .invalidCouponDetails {
-                                width: 100%;
-                                padding-bottom: 20px;
-
-                                .invalidDetail {
+                                height: auto;
+                                margin: 0 0 20px 0;
+                                .coupon {
                                     width: 100%;
-                                    display: flex;
-                                    border-bottom: 2px solid $light-sky-blue;
-                                    padding: 13px 0 13px;
-
-                                    .invalidCouponName {
-                                        width: 70%;
-                                        text-align: left;
-
-                                        p {
-                                            width: 100%;
-                                            font-family: "GenSenRounded-B";
-                                            font-size: $ps-font-size;
-                                            line-height: 20px;
-                                            color: $super-dark
-                                        }
+                                    img {
+                                        width: 100%;
                                     }
-
-                                    .invalidCouponDate {
-                                        width: 30%;
+                                }
+                                .couponInvalidDate{
+                                    width: 100%;
+                                    p {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $p-font-size;
+                                        color: $dark-gray;
+                                        padding-top: 10px;
+                                        width: 100%;
                                         text-align: left;
-                                        display: flex;
-                                        align-items: center;
-
-                                        p {
-                                            width: 100%;
-                                            font-family: "GenSenRounded-B";
-                                            font-size: $ps-font-size;
-                                            color: $super-dark
+                                        span {
+                                            color: $red-pink;
                                         }
                                     }
                                 }
                             }
                         }
+
+                        // .invalidCouponGroup {
+                        //     width: 100%;
+
+                        //     .invalidCouponTitle {
+                        //         width: 100%;
+                        //         display: flex;
+                        //         padding-bottom: 5px;
+
+
+                        //         .couponName {
+                        //             width: 70%;
+
+                        //             p.couponName {
+                        //                 font-family: "GenSenRounded-B";
+                        //                 font-size: $ps-font-size;
+                        //                 color: $dark-gray;
+                        //                 border-left: 3px solid $light-brown;
+                        //                 padding-left: 10px;
+                        //                 width: 100%;
+                        //                 text-align: left;
+
+                        //             }
+                        //         }
+
+                        //         .couponDate {
+                        //             width: 30%;
+
+                        //             p.couponDate {
+                        //                 font-family: "GenSenRounded-B";
+                        //                 font-size: $ps-font-size;
+                        //                 color: $dark-gray;
+                        //                 border-left: 3px solid $light-brown;
+                        //                 padding-left: 10px;
+                        //                 width: 100%;
+                        //                 text-align: left;
+
+                        //             }
+                        //         }
+                        //     }
+
+                        //     .invalidCouponDetails {
+                        //         width: 100%;
+                        //         padding-bottom: 20px;
+
+                        //         .invalidDetail {
+                        //             width: 100%;
+                        //             display: flex;
+                        //             border-bottom: 2px solid $light-sky-blue;
+                        //             padding: 13px 0 13px;
+
+                        //             .invalidCouponName {
+                        //                 width: 70%;
+                        //                 text-align: left;
+
+                        //                 p {
+                        //                     width: 100%;
+                        //                     font-family: "GenSenRounded-B";
+                        //                     font-size: $ps-font-size;
+                        //                     line-height: 20px;
+                        //                     color: $super-dark
+                        //                 }
+                        //             }
+
+                        //             .invalidCouponDate {
+                        //                 width: 30%;
+                        //                 text-align: left;
+                        //                 display: flex;
+                        //                 align-items: center;
+
+                        //                 p {
+                        //                     width: 100%;
+                        //                     font-family: "GenSenRounded-B";
+                        //                     font-size: $ps-font-size;
+                        //                     color: $super-dark
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
                     }
 
                     // -----NOTICE-----
@@ -1377,60 +1642,61 @@ $bold: 900;
                         padding: 0px 30px;
                         margin-top: 15px;
 
-                        .noticeButton {
-                            width: 100%;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            flex-wrap: wrap;
-                            padding: 30px 0;
+                        // .noticeButton {
+                        //     width: 100%;
+                        //     display: flex;
+                        //     flex-direction: row;
+                        //     justify-content: center;
+                        //     align-items: center;
+                        //     flex-wrap: wrap;
+                        //     padding: 30px 0;
 
-                            .notice {
-                                display: flex;
-                                justify-content: center;
-                                margin: 9px 0 9px 0;
+                        //     .notice {
+                        //         display: flex;
+                        //         justify-content: center;
+                        //         margin: 9px 0 9px 0;
 
-                                .noticebtn {
-                                    position: relative;
+                        //         .noticebtn {
+                        //             position: relative;
 
-                                    button {
-                                        width: 130px;
-                                        height: 38px;
-                                        border-radius: 10px;
-                                        border: 3px solid $super-dark;
-                                        background-color: #00000000;
-                                        font-family: "GenSenRounded-B";
-                                        font-size: $ps-font-size;
-                                        color: $super-dark;
-                                    }
+                        //             button {
+                        //                 width: 130px;
+                        //                 height: 38px;
+                        //                 border-radius: 10px;
+                        //                 border: 3px solid $super-dark;
+                        //                 background-color: #00000000;
+                        //                 font-family: "GenSenRounded-B";
+                        //                 font-size: $ps-font-size;
+                        //                 color: $super-dark;
+                        //             }
 
-                                    .noticeNumber {
-                                        width: 30px;
-                                        height: 30px;
-                                        border-radius: 100%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        border: none;
-                                        background-color: $red-pink;
-                                        z-index: 1;
-                                        position: absolute;
-                                        right: -10px;
-                                        top: -10px;
+                        //             .noticeNumber {
+                        //                 width: 30px;
+                        //                 height: 30px;
+                        //                 border-radius: 100%;
+                        //                 display: flex;
+                        //                 align-items: center;
+                        //                 justify-content: center;
+                        //                 border: none;
+                        //                 background-color: $red-pink;
+                        //                 z-index: 1;
+                        //                 position: absolute;
+                        //                 right: -10px;
+                        //                 top: -10px;
 
-                                        p {
-                                            font-family: "GenSenRounded-B";
-                                            font-size: $p-font-size;
-                                            color: $white;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                        //                 p {
+                        //                     font-family: "GenSenRounded-B";
+                        //                     font-size: $p-font-size;
+                        //                     color: $white;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
 
                         .noticeborder {
                             overflow: hidden;
+                            margin-top: 20px;
 
                             .noticeDetails {
                                 width: 100%;
@@ -1484,16 +1750,59 @@ $bold: 900;
             .main {
                 .row {
                     .col {
+
+                        // -----MYINTRO-----
+
                         .whiteBg {
                             .modal {
                                 width: auto;
                                 left: auto;
                                 padding-top: 1.4rem;
+
                                 .modal-dialog {
                                     margin: 0;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                }
+                            }
+                        }
+
+                        // -----FRIEND-----
+                        .whiteBg {
+                            .newFriend {
+                                .modal {
+                                    width: auto;
+                                    left: auto;
+                                    padding-top: 1.4rem;
+
+                                    .modal-dialog {
+                                        margin: 0;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+
+                            .myFriendsGroup {
+                                .friendList {
+                                    .deleteFriendIcon {
+                                        .modal {
+                                            width: auto;
+                                            left: 0;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
+                                            .modal-dialog {
+                                                margin: 0;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1516,6 +1825,64 @@ $bold: 900;
                             .modal {
                                 .modal-dialog {
                                     max-width: 1000px;
+                                }
+                            }
+                        }
+                        .whiteBg {
+                            .couponTitle {
+                                display: flex;
+                                margin-bottom: 10px;
+                                .couponName {
+                                    width: 70%;
+    
+                                    p.couponName {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        border-left: 3px solid $light-brown;
+                                        padding-left: 10px;
+                                        width: 100%;
+                                        text-align: left;
+    
+                                    }
+                                }
+    
+                                .couponDate {
+                                    width: 30%;
+    
+                                    p.couponDate {
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        color: $dark-gray;
+                                        border-left: 3px solid $light-brown;
+                                        padding-left: 10px;
+                                        width: 100%;
+                                        text-align: left;
+    
+                                    }
+                                }
+                            }
+                            .validCoupon {
+                                .coupons {
+                                    width: 100%;
+                                    // height: 400px;
+                                    // overflow: scroll;
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 15px 0;
+                                    .coupon {
+                                        width: 70%;
+                                        padding-right: 15px;
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .couponInvalidDate {
+                                        width: 30%;
+                                        p {
+                                            width: 100%;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1663,14 +2030,26 @@ $bold: 900;
                                                 width: 35%;
                                                 text-align: right;
                                                 padding-right: 20px;
+                                                fill: $white;
 
                                                 svg {
                                                     width: 16px;
                                                     height: 16px;
                                                     margin-bottom: 2px;
+                                                    fill: $white;
 
-                                                    :target {
-                                                        color: $dark-gray;
+                                                    path {
+                                                        fill: $white;
+                                                    }
+                                                }
+
+                                                svg.ordersvg {
+                                                    width: 16px;
+                                                    height: 16px;
+                                                    margin-bottom: 2px;
+                                                    path {
+                                                        fill: $white;
+                                                        stroke: $white;
                                                     }
                                                 }
                                             }
@@ -1930,6 +2309,24 @@ $bold: 900;
                             }
                         }
 
+                        // -----MYCOLLECTION-----
+                        .col-lg-9 {
+                            height: 70%;
+                            box-shadow: none;
+                            margin: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0 5%;
+
+                            .myWishLists {
+                                width: 100%;
+                                height: 520px;
+                                overflow: scroll;
+                            }
+                        }
+
                         // -----FRIEND-----
                         .col-lg-9 {
                             height: 70%;
@@ -1953,8 +2350,14 @@ $bold: 900;
                                     padding-right: 40px;
                                 }
 
-                                button.uploadNewFriend {
+                                button.btn {
                                     margin-bottom: 0;
+                                }
+
+                                button.btn:hover {
+                                    background-color: $lake-green;
+                                    color: $white;
+                                    border: none;
                                 }
 
                                 .modal {
@@ -2192,7 +2595,7 @@ $bold: 900;
                                 background-color: rgba(255, 255, 255, 0);
                                 flex-direction: row;
                                 justify-content: left;
-                                margin: 20px 0 30px;
+                                margin: 20px 0 30px 0;
 
                                 p {
                                     font-size: $h6-font-size;
@@ -2205,33 +2608,76 @@ $bold: 900;
                                     text-align: left;
                                     padding: 0 10px;
                                 }
-                            }
-
-                            .couponbtn {
-                                margin-bottom: 30px;
-                            }
-
-                            .invalidCouponGroup {
-
-                                // margin-bottom: 20px;
-                                .invalidCouponTitle {
-                                    padding-bottom: 10px;
-
-                                    .couponName {
-                                        width: 68%;
-                                    }
-
-                                    .couponDate {
-                                        width: 32%;
-                                    }
+                                button.newcoupon {
+                                    color: $lake-green;
+                                    background-color: rgba(255, 255, 255, 0);
+                                    border: 3px solid $light-lake-green;
                                 }
-
-                                .invalidCouponDetails {
-                                    width: 100%;
-                                    height: 360px;
-                                    overflow: scroll;
+                                button.newcoupon:hover {
+                                    color: $white;
+                                    background-color: $lake-green;
+                                    border: none;
                                 }
                             }
+
+                            .couponTitle {
+                                margin-bottom: 10px;
+                                .couponName {
+                                    width: 68%;
+                                    p.couponName {
+                                        font-size: $p-font-size;
+                                    }
+                                }
+                                .couponDate {
+                                    width: 32%;
+                                    p.couponDate {
+                                        font-size: $p-font-size;
+                                    }
+                                }
+                            }
+
+                            .validCoupon {
+                                width: 100%;
+                                height: 440px;
+                                overflow: scroll;
+                            }
+
+                            // .couponbtn {
+                            //     margin-bottom: 30px;
+                            //     button.canUseBtn:hover {
+                            //         background-color: $super-dark;
+                            //         color: $white;
+                            //         border: none;
+                            //     }
+                            //     button.invalidBtn:hover {
+                            //         background-color: $super-dark;
+                            //         color: $white;
+                            //         border: none;
+                            //     }
+                            // }
+
+                            
+                            // .invalidCouponGroup {
+
+                            //     // margin-bottom: 20px;
+                            //     .invalidCouponTitle {
+                            //         padding-bottom: 10px;
+
+                            //         .couponName {
+                            //             width: 68%;
+                            //         }
+
+                            //         .couponDate {
+                            //             width: 32%;
+                            //         }
+                            //     }
+
+                            //     .invalidCouponDetails {
+                            //         width: 100%;
+                            //         height: 360px;
+                            //         overflow: scroll;
+                            //     }
+                            // }
                         }
 
                         // -----NOTICE-----
@@ -2250,6 +2696,7 @@ $bold: 900;
                                 height: 570px;
                                 overflow: scroll;
                                 margin-bottom: 20px;
+                                // margin-top: 20px;
                             }
                         }
                     }
@@ -2555,8 +3002,10 @@ $bold: 900;
     justify-content: center;
     padding: 33px 0;
     z-index: 1;
+    transition: .1s;
     position: absolute;
-    right: 100%;
+    top: 20%;
+    right: -100%;
 
     p.editTitle {
         font-family: "GenSenRounded-B";
@@ -2701,28 +3150,24 @@ $bold: 900;
 // ------------------lightbox-err-----------------
 
 .coupon-lightbox-err {
-
-    // display: none;
-    .coupon-lightbox-black {
-        z-index: 20;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
     .coupon-lightbox-bg {
-        z-index: 21;
-        position: fixed;
-        top: 50vh;
-        left: 50vw;
-        transform: translateX(-50%) translateY(-50%);
-        width: 90%;
+        z-index: 11;
+        // position: fixed;
+        // top: 50vh;
+        // left: 50vw;
+        // transform: translateX(-50%) translateY(-50%);
+        width: 100%;
         max-width: 400px;
-        font-family: "GenSenRounded-B";
-        font-weight: $bold;
         text-align: center;
         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
         padding: 76px 0;
@@ -2739,49 +3184,105 @@ $bold: 900;
             }
 
             .coupon-warn-text {
+                font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
                 color: $super-dark;
                 padding-bottom: 10px;
             }
         }
 
-        button {
-            border: none;
-            background-color: $super-dark;
-            border-radius: 10px;
-            color: $white;
-            font-size: $p-font-size;
-            padding: 10px 30px;
-            margin-top: 10px;
-        }
+    
+    }
+    button.ok {
+        border: none;
+        background-color: $super-dark;
+        border-radius: 10px;
+        color: $white;
+        font-family: "GenSenRounded-B";
+        font-size: $p-font-size;
+        padding: 10px 30px;
+        margin-top: 10px;
     }
 }
+
+// .coupon-lightbox-err {
+//     position: absolute;
+//     right: 100%;
+//     .coupon-lightbox-black {
+//         z-index: 20;
+//         position: fixed;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         background-color: rgba(0, 0, 0, 0.7);
+//     }
+
+//     .coupon-lightbox-bg {
+//         z-index: 21;
+//         position: fixed;
+//         top: 50vh;
+//         left: 50vw;
+//         transform: translateX(-50%) translateY(-50%);
+//         width: 90%;
+//         max-width: 400px;
+//         font-family: "GenSenRounded-B";
+//         font-weight: $bold;
+//         text-align: center;
+//         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+//         padding: 76px 0;
+
+//         .coupon-warning {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             margin: 10px 30px;
+
+//             .coupon-warn-icon {
+//                 margin-right: 20px;
+//                 padding-bottom: 10px;
+//             }
+
+//             .coupon-warn-text {
+//                 font-size: $h6-font-size;
+//                 color: $super-dark;
+//                 padding-bottom: 10px;
+//             }
+//         }
+
+//         button {
+//             border: none;
+//             background-color: $super-dark;
+//             border-radius: 10px;
+//             color: $white;
+//             font-size: $p-font-size;
+//             padding: 10px 30px;
+//             margin-top: 10px;
+//         }
+//     }
+// }
 
 // ------------------lightbox-success-----------------
 
 .coupon-lightbox-success {
-
-    // display: none;
-    .coupon-lightbox-black {
-        z-index: 20;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
     .coupon-lightbox-bg {
-        z-index: 21;
-        position: fixed;
-        top: 50vh;
-        left: 50vw;
-        transform: translateX(-50%) translateY(-50%);
-        width: 90%;
+        z-index: 11;
+        // position: fixed;
+        // top: 50vh;
+        // left: 50vw;
+        // transform: translateX(-50%) translateY(-50%);
+        width: 100%;
         max-width: 400px;
-        font-family: "GenSenRounded-B";
-        font-weight: $bold;
         text-align: center;
         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
         padding: 76px 0;
@@ -2791,6 +3292,7 @@ $bold: 900;
             align-items: center;
             justify-content: center;
             margin: 10px 30px;
+            
 
             .coupon-true-icon {
                 margin-right: 20px;
@@ -2798,20 +3300,80 @@ $bold: 900;
             }
 
             .coupon-true-text {
+                font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
                 color: $super-dark;
                 padding-bottom: 10px;
             }
         }
 
-        button {
-            border: none;
-            background-color: $super-dark;
-            border-radius: 10px;
-            color: $white;
-            font-size: $p-font-size;
-            padding: 10px 30px;
-            margin-top: 10px;
-        }
+       
+    }
+    button.ok {
+        border: none;
+        background-color: $super-dark;
+        border-radius: 10px;
+        color: $white;
+        font-family: "GenSenRounded-B";
+        font-size: $p-font-size;
+        padding: 10px 30px;
+        margin-top: 10px;
     }
 }
+
+// .coupon-lightbox-success {
+
+//     // display: none;
+//     .coupon-lightbox-black {
+//         z-index: 20;
+//         position: fixed;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         background-color: rgba(0, 0, 0, 0.7);
+//     }
+
+//     .coupon-lightbox-bg {
+//         z-index: 21;
+//         position: fixed;
+//         top: 50vh;
+//         left: 50vw;
+//         transform: translateX(-50%) translateY(-50%);
+//         width: 90%;
+//         max-width: 400px;
+//         font-family: "GenSenRounded-B";
+//         font-weight: $bold;
+//         text-align: center;
+//         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
+//         padding: 76px 0;
+
+//         .coupon-warning {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             margin: 10px 30px;
+
+//             .coupon-true-icon {
+//                 margin-right: 20px;
+//                 padding-bottom: 10px;
+//             }
+
+//             .coupon-true-text {
+//                 font-size: $h6-font-size;
+//                 color: $super-dark;
+//                 padding-bottom: 10px;
+//             }
+//         }
+
+//         button {
+//             border: none;
+//             background-color: $super-dark;
+//             border-radius: 10px;
+//             color: $white;
+//             font-size: $p-font-size;
+//             padding: 10px 30px;
+//             margin-top: 10px;
+//         }
+//     }
+// }

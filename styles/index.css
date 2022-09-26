@@ -339,9 +339,15 @@
   width: 100%;
   background-image: url(../images/ribbon-4.svg), url(../images/ribbon-3.svg), url(../images/ribbon-5.svg);
   background-repeat: no-repeat;
+<<<<<<< HEAD
+  background-size: 50px, 90px, 23px;
+  background-position-y: 80px, 280px, 230px;
+  background-position-x: 20px, -30px, 360px;
+=======
   background-size: 50px,90px,23px;
   background-position-y: 80px,280px,230px;
   background-position-x: 20px,-30px,360px;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   -webkit-animation-name: mainBg;
           animation-name: mainBg;
   -webkit-animation-duration: 3.5s;
@@ -352,14 +358,32 @@
 
 @media (min-width: 768px) {
   .I-mainSection {
+<<<<<<< HEAD
+    background-size: 150px, 240px, 90px;
+    background-position-y: 150px, 600px, 500px;
+    background-position-x: 60px, -40px, 1800px;
+=======
     background-size: 150px,240px,90px;
     background-position-y: 150px,600px,500px;
     background-position-x: 60px,-40px,1800px;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     -webkit-animation-name: mainBg2;
             animation-name: mainBg2;
   }
   @-webkit-keyframes mainBg2 {
     0% {
+<<<<<<< HEAD
+      background-position-y: 150px, 600px, 500px;
+      background-position-x: 60px, -40px, 1800px;
+    }
+    50% {
+      background-position-y: 200px, 580px, 520px;
+      background-position-x: 60px, -40px, 1800px;
+    }
+    100% {
+      background-position-y: 150px, 600px, 500px;
+      background-position-x: 60px, -40px, 1800px;
+=======
       background-position-y: 150px,600px,500px;
       background-position-x: 60px,-40px,1800px;
     }
@@ -370,6 +394,7 @@
     100% {
       background-position-y: 150px,600px,500px;
       background-position-x: 60px,-40px,1800px;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     }
   }
   @keyframes mainBg2 {
@@ -416,7 +441,6 @@
 @media (max-width: 375px) {
   .mainBotton .mainRow {
     width: 100%;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 80%;
@@ -501,27 +525,39 @@
 
 @media (min-width: 768px) {
   .I-storySection .storyTitle {
+<<<<<<< HEAD
+    flex: 0 0 50%;
+=======
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
             flex: 0 0 50%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     max-width: 50%;
   }
 }
 
 @media (min-width: 1400px) {
   .I-storySection .storyTitle {
+<<<<<<< HEAD
+    flex: 0 0 45%;
+=======
     -ms-flex: 0 0 45%;
     -webkit-box-flex: 0;
             flex: 0 0 45%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     max-width: 45%;
   }
 }
 
 @media (min-width: 1600px) {
   .I-storySection .storyTitle {
+<<<<<<< HEAD
+    flex: 0 0 35%;
+=======
     -ms-flex: 0 0 35%;
     -webkit-box-flex: 0;
             flex: 0 0 35%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     max-width: 35%;
   }
 }
@@ -693,21 +729,30 @@
 }
 
 .I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row {
+<<<<<<< HEAD
+  display: flex;
+  flex: 0 0 58.333333%;
+=======
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
   -ms-flex: 0 0 58.333333%;
   -webkit-box-flex: 0;
           flex: 0 0 58.333333%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   max-width: 58.333333%;
   margin: 0px 5px;
 }
 
 @media (min-width: 1400px) {
   .I-populerSection .populerInfor .populerInforBox .populerInfor-botton .populerInfor-row {
+<<<<<<< HEAD
+    flex: 0 0 17%;
+=======
     -ms-flex: 0 0 17%;
     -webkit-box-flex: 0;
             flex: 0 0 17%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     max-width: 17%;
   }
 }
@@ -877,9 +922,13 @@
 
 @media (min-width: 1400px) {
   .I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow {
+<<<<<<< HEAD
+    flex: 0 0 50%;
+=======
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
             flex: 0 0 50%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
     max-width: 50%;
     padding-bottom: 0px;
   }
@@ -918,10 +967,16 @@
 
 .I-FestivalSection .FestivalBox .FestivalMainBox .FestivalRow .FestivalCardRow .FestivalCard .FestivalCard-Top .Top-text p {
   position: absolute;
+<<<<<<< HEAD
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+=======
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   font-size: 16px;
   font-weight: 700;
   padding: 10px 5px;
@@ -1667,6 +1722,17 @@
   overflow-x: scroll;
   -webkit-animation: brandSlide 10s linear infinite;
           animation: brandSlide 10s linear infinite;
+<<<<<<< HEAD
+}
+@-webkit-keyframes brandSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+=======
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 }
 
 @-webkit-keyframes brandSlide {
@@ -1693,9 +1759,13 @@
 
 .I-brandSection .brandBox .brandSlide .brandTop .brandImgWarp {
   width: 100%;
+<<<<<<< HEAD
+  flex: 0 0 22%;
+=======
   -ms-flex: 0 0 22%;
   -webkit-box-flex: 0;
           flex: 0 0 22%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   max-width: 22%;
   margin: 0 -5px;
 }
@@ -1728,6 +1798,17 @@
   overflow-x: scroll;
   -webkit-animation: brandSlide2 10s linear infinite;
           animation: brandSlide2 10s linear infinite;
+<<<<<<< HEAD
+}
+@-webkit-keyframes brandSlide2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+=======
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 }
 
 @-webkit-keyframes brandSlide2 {
@@ -1754,9 +1835,13 @@
 
 .I-brandSection .brandBox .brandSlide .brandTop2 .brandImgWarp {
   width: 100%;
+<<<<<<< HEAD
+  flex: 0 0 22%;
+=======
   -ms-flex: 0 0 22%;
   -webkit-box-flex: 0;
           flex: 0 0 22%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   max-width: 22%;
   margin: 0 -5px;
 }

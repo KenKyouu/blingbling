@@ -3,6 +3,10 @@ require __DIR__ . '/parts/connect_db.php';
 $pageName = 'cart2'; // 頁面名稱，可以自定義
 ?>
 
+<?php
+$user = $_SESSION['user']['id'];
+$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+?>
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/cart2.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
@@ -96,39 +100,13 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                     <div class="j-list-sub">
                                         <p><?= $v['name'] ?></p>
                                         <div class="j-list-num">
-                                            <div class="j-money-single  px-0 col-md-4">NT$ <?= $v['price'] ?></div>
-                                            <div class="j-amount col-6 px-0 col-md-4"><?= $v['qty'] ?></div>
-                                            <div class="j-money col-6 px-0 col-md-4">NT$ <?= $v['price']*$v['qty'] ?></div>
+                                            <div class="j-money-single  px-0 col-md-4" data-val="<?= $v['price'] ?>"></div>
+                                            <div class="j-amount qty col-6 px-0 col-md-4"><?= $v['qty'] ?></div>
+                                            <div class="j-money col-6 px-0 col-md-4"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <?php endforeach; ?>
-                                <!-- <div class="j-list-item">
-                                    <div class="j-list-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="j-list-sub">
-                                        <p>Roborock 石頭科技 掃地機器人   S7+(小米生態鏈-台灣公司貨)</p>
-                                        <div class="j-list-num">
-                                            <div class="j-money-single  px-0 col-md-4">NT$ 22,999</div>
-                                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                                            <div class="j-money col-6 px-0 col-md-4">NT$ 22,999</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="j-list-item">
-                                    <div class="j-list-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="j-list-sub">
-                                        <p>Roborock 石頭科技 掃地機器人   S7+(小米生態鏈-台灣公司貨)</p>
-                                        <div class="j-list-num">
-                                            <div class="j-money-single  px-0 col-md-4">NT$ 22,999</div>
-                                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                                            <div class="j-money col-6 px-0 col-md-4">NT$ 22,999</div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <form id="cart2form" name="cart2form" method="post" action="" onsubmit="return false;" novalidate>
@@ -141,7 +119,9 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                 
                                                 <div class="j-check j-form-group">
                                                     <label class="j-point">同會員資料
-                                                        <input type="checkbox" />
+                                                        <input type="checkbox"
+                                                        id="cbSameMember"
+                                                        onclick="sameMember()" />
                                                         <span class="j-checkmark"></span>
                                                     </label>
                                                     <div class="j-messages"></div>
@@ -157,6 +137,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                     class="j-input"
                                                     placeholder="訂購人姓名(本名)"
                                                     oninput="cop()"
+                                                    data-val="<?= $member[0]['name'] ?>"
                                                 />
                                                 <div class="j-messages"></div>
                                                 </div>
@@ -173,6 +154,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                     class="j-input"
                                                     placeholder="訂購人手機"
                                                     oninput="cop()"
+                                                    data-val="<?= $member[0]['mobile'] ?>"
                                                 />
                                                 <div class="j-messages"></div>
                                                 </div>
@@ -295,7 +277,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                             <div class="j-d-title j-form-group">
 
                                                 <label class="j-point">宅配
-                                                    <input type="radio" name="delivery" value="宅配" class="j-home" checked onclick="freightFee()">
+                                                    <input type="radio" name="delivery" value="宅配" class="j-home"   data-val="100" checked>
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
                                                 <div class="j-messages"></div>
@@ -342,7 +324,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                             <div class="j-d-title j-form-group">
 
                                                 <label class="j-point">超商取貨
-                                                    <input type="radio" name="delivery" value="超商取貨" class="j-convenience" id="j-convenience" onchange="copyData2()" onclick="freightFee()">
+                                                    <input type="radio" name="delivery" value="超商取貨" class="j-convenience" id="j-convenience" onchange="copyData2()"   data-val="60">
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
                                                 <div class="j-messages"></div>
@@ -501,7 +483,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                     </div>
                                 </div>
                             </section>
-
+                            
                             <ul class="j-cart2-btn">
                                 <li class="col-md-6 px-0">
                                     <a href="./cart1.php">
@@ -510,11 +492,11 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                 </li>
                                 <li class="col-md-6 px-0">
                                     <!-- <a href="#"> -->
-                                        <button type="submit">確認結帳 NT$29,935</button>
+                                        <button type="submit">確認結帳 <span class="finaltotal"></span></button>
                                     <!-- </a> -->
                                 </li>
                             </ul>
-                            
+
                             <div class="j-subtotal">
                                 <div class="j-subtotal-f">
                                     <div class="j-sum-item">
@@ -529,18 +511,14 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                         <div class="j-amount-detail">
                                             <div class="j-detail">
                                                 <div class="col-6 px-0 mr-4 j-detail-subtitle"><span>商品小計</span></div>
-                                                <?php $productTotal = 0; 
-                                                foreach($_SESSION['cart'] as $k=>$v){
-                                                    $productTotal += $v['price']*$v['qty'];
-                                                } ?>
-                                                <div class="col-6 px-0 j-detail-money"><span class="j-pl">NT$ <?= $productTotal ?></span></div>
+                                                <div class="col-6 px-0 j-detail-money"><span class="j-pl j-product-price" ></span></div>
                                             </div>
                                             <div class="j-detail">
                                                 <div class="col-6 px-0 mr-4 j-detail-subtitle">
                                                     <span>包裝小計</span>
                                                 </div>
                                                 <div class="col-6 px-0 j-detail-money">
-                                                    <span class="j-pl">NT$ 199</span>
+                                                    <span class="j-pl j-package" data-val="<?= $_SESSION['order']['orderpackage'] ?>" ></span>
                                                 </div>
                                             </div>
                                             <div class="j-detail">
@@ -549,7 +527,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                 </div>
                                                 <div class="col-6 px-0 d-flex j-detail-money">
                                                     <span>-</span>
-                                                    <span class="pl-1">   NT$ 0</span>
+                                                    <span class="pl-1 j-giftvoucher"  data-val="<?= $_SESSION['order']['ordergiftvoucher'] ?>"></span>
                                                 </div>
                                             </div>
                                             <div class="j-detail">
@@ -558,7 +536,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                 </div>
                                                 <div class="col-6 px-0 d-flex j-detail-money">
                                                     <span>-</span>
-                                                    <span class="pl-1">   NT$ 1,099</span>
+                                                    <span class="pl-1 j-coupon" data-val="<?= $_SESSION['order']['ordercoupon'] ?>"></span>
                                                 </div>
                                             </div>
                                             <div class="j-detail">
@@ -566,22 +544,23 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                     <span>運費小計</span>
                                                 </div>
                                                 <div class="col-6 px-0 j-detail-money">
-                                                    <span class="j-pl freight-fee">NT$ <span class="freight-fee">100</span></span>
+                                                    <span class="j-pl j-freightfee" data-val="<?= $_SESSION['order']['orderfreight'] ?>"></span>
                                                 </div>
                                             </div>
                                         </div>
                                         
                                         <div class="j-total">
-                                            <a href="#">
+                                            <!-- <a href="#"> -->
                                                 <button >確認結帳
-                                                    <span>NT$29,935</span>
+                                                    <span class="finaltotal"></span>
                                                 </button>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="j-fixed-bg"></div>
                             </div>
+
 
                             <div class="j-summary-list">
                                 <div class="j-bling-img">
@@ -596,12 +575,8 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                             <div class="col-6 px-0 j-summary-subtitle">
                                                 <span>商品小計</span>
                                             </div>
-                                            <?php $productTotal = 0; 
-                                            foreach($_SESSION['cart'] as $k=>$v){
-                                                $productTotal += $v['price']*$v['qty'];
-                                            } ?>
                                             <div class="col-6 px-0 j-summary-price">
-                                                <span class="j-pl"><?= $productTotal ?></span>
+                                                <span class="j-pl j-product-price"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -609,7 +584,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                 <span >包裝小計</span>
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
-                                                <span class="j-pl">NT$ 199</span>
+                                                <span class="j-pl j-package" data-val="<?= $_SESSION['order']['orderpackage'] ?>"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -618,7 +593,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
                                                 <span>-</span>
-                                                <span class="pl-1">NT$ 0</span>
+                                                <span class="pl-1 j-giftvoucher" data-val="<?= $_SESSION['order']['ordergiftvoucher'] ?>"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -627,7 +602,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
                                                 <span>-</span>
-                                                <span class="pl-1">NT$ 1,099</span>
+                                                <span class="pl-1 j-coupon" data-val="<?= $_SESSION['order']['ordercoupon'] ?>"></span>
                                             </div>
                                         </div>
                                         <div class="j-summary-item">
@@ -635,7 +610,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                                 <span>運費小計</span>
                                             </div>
                                             <div class="col-6 px-0 j-summary-price">
-                                                <span class="j-pl ">NT$ <span class="freight-fee">100</span> </span>
+                                                <span class="j-pl j-freightfee" data-val="<?= $_SESSION['order']['orderfreight'] ?>"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -645,7 +620,7 @@ $pageName = 'cart2'; // 頁面名稱，可以自定義
                                         <span>金額總計</span>
                                     </div>
                                     <div class="col-6 px-0 j-total-price">
-                                        <span class="j-pl">NT$29,935</span>
+                                        <span class="j-pl finaltotal"></span>
                                     </div>
                                 </div>
                             </div>

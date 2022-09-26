@@ -183,7 +183,7 @@
 
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnsvg svg {
   margin-bottom: 5px;
-  color: #4c4948;
+  fill: #ffffff;
 }
 
 .wrap .containerr .main .row .col .left .memberbutton ul li.btn a .btnP {
@@ -847,6 +847,110 @@
           align-items: center;
   padding: 0px 30px;
   margin-top: 15px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton p.letFriendWatch {
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  color: #000000;
+  padding-right: 16px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton .switchButton {
+  width: 48px;
+  height: 24px;
+  border-radius: 100px;
+  background-color: #c2c2c2;
+  padding: 3px;
+}
+.wrap .containerr .main .row .col .whiteBg .friendWatchButton .switchButton .switch {
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  text-align: left;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
+  width: 150px;
+  height: 150px;
+  background-image: url(../images/products/71-1.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image .heart {
+  cursor: default;
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-title {
+  width: 150px;
+  padding: 8px 0 8px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-title h4 {
+  width: 100%;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price {
+  width: 100%;
+  padding: 0 0 5px 0;
+}
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price {
+    width: 150px;
+  }
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price p {
+  color: #554d49;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+  font-weight: 900;
+}
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-price p::before {
+  display: inline-block;
+  content: "NT$";
+}
+.wrap .containerr .main .row .col .whiteBg {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -10px 19px #4c4948;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px;
+  margin-top: 15px;
   width: 100%;
   height: auto;
   background-color: #ffffff;
@@ -893,12 +997,20 @@
   border-radius: 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #ffffff;
-  background-color: #2d827d;
-  border: none;
+  color: #2d827d;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #7cb2af;
   margin-bottom: 20px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .newFriend .uploadNewFriend:hover {
+  background-color: #2d827d;
+  color: #ffffff;
+  border: none;
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .newFriend .modal .modal-dialog {
   width: 375px;
   height: auto;
@@ -1129,12 +1241,89 @@
   width: 15%;
   text-align: right;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon .watchFriendSvg {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon {
   width: 15%;
   text-align: right;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .deleteFriendSvg {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
+  max-width: 400px;
+  font-family: "GenSenRounded-B";
+  font-weight: 900;
+  text-align: center;
+  background: url("../images/error-bg.png") center center/100% auto no-repeat;
+  padding: 76px 0;
+  border: none;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content {
+  width: auto;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 30px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning .friend-warn-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-body .friend-warning .friend-warn-text {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-footer button.true {
+  width: 98px;
+  height: 38px;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog .modal-content .modal-footer button.false {
+  width: 98px;
+  height: 38px;
+  border: 3px solid #000000;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg {
   width: 100%;
   height: auto;
@@ -1158,6 +1347,19 @@
 
 .wrap .containerr .main .row .col .whiteBg .backToList {
   width: 100%;
+<<<<<<< HEAD
+  text-align: left;
+  padding-top: 25px;
+}
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl p {
+=======
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,12 +1371,22 @@
 }
 
 .wrap .containerr .main .row .col .whiteBg .backToList p {
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #2d827d;
   padding-left: 15px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl:hover svg path {
+  fill: #7cb2af;
+}
+.wrap .containerr .main .row .col .whiteBg .backToList button.btl:hover p {
+  color: #7cb2af;
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails {
   width: 100%;
   display: -webkit-box;
@@ -1219,7 +1431,18 @@
   width: 40%;
   margin-left: 20px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button:hover {
+  background-color: #c2c2c2;
+  border-radius: 3px;
+}
+=======
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendGenderBirth {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1401,6 +1624,29 @@
   border: none;
   margin: 15px 0 15px;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .couponTitle {
+  display: none;
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons {
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px 0;
+}
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon {
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon img {
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate {
+  width: 100%;
+}
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p {
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+=======
 
 .wrap .containerr .main .row .col .whiteBg .couponbtn {
   width: 100%;
@@ -1442,12 +1688,16 @@
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponName p.couponName {
   font-family: "GenSenRounded-B";
   font-size: 14px;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   color: #4c4948;
-  border-left: 3px solid #d4cfc6;
-  padding-left: 10px;
+  padding-top: 10px;
   width: 100%;
   text-align: left;
 }
+<<<<<<< HEAD
+.wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p span {
+  color: #d45a6a;
+=======
 
 .wrap .containerr .main .row .col .whiteBg .invalidCouponGroup .invalidCouponTitle .couponDate {
   width: 30%;
@@ -1506,6 +1756,7 @@
   font-family: "GenSenRounded-B";
   font-size: 14px;
   color: #000000;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 }
 
 .wrap .containerr .main .row .col .whiteBg {
@@ -1528,6 +1779,8 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
+<<<<<<< HEAD
+=======
 
 .wrap .containerr .main .row .col .whiteBg .noticeButton {
   width: 100%;
@@ -1601,8 +1854,10 @@
   color: #ffffff;
 }
 
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
 .wrap .containerr .main .row .col .whiteBg .noticeborder {
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails {
@@ -1657,11 +1912,82 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .wrap .containerr .main .row .col .whiteBg .newFriend .modal {
+    width: auto;
+    left: auto;
+    padding-top: 1.4rem;
+  }
+  .wrap .containerr .main .row .col .whiteBg .newFriend .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal {
+    width: auto;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .deleteFriendIcon .modal .modal-dialog {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 576px) {
   .wrap .containerr .main .row .col .whiteBg .modal .modal-dialog {
     max-width: 1000px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponName {
+    width: 70%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponName p.couponName {
+    font-family: "GenSenRounded-B";
+    font-size: 14px;
+    color: #4c4948;
+    border-left: 3px solid #d4cfc6;
+    padding-left: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponDate {
+    width: 30%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .couponTitle .couponDate p.couponDate {
+    font-family: "GenSenRounded-B";
+    font-size: 14px;
+    color: #4c4948;
+    border-left: 3px solid #d4cfc6;
+    padding-left: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon {
+    width: 70%;
+    padding-right: 15px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon img {
+    width: 100%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate {
+    width: 30%;
+  }
+  .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p {
+    width: 100%;
   }
 }
 
@@ -1782,14 +2108,25 @@
     width: 35%;
     text-align: right;
     padding-right: 20px;
+    fill: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
     width: 16px;
     height: 16px;
     margin-bottom: 2px;
+    fill: #ffffff;
   }
-  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg :target {
-    color: #4c4948;
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg path {
+    fill: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg path {
+    fill: #ffffff;
+    stroke: #ffffff;
   }
   .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
     width: 65%;
@@ -2032,6 +2369,21 @@
             align-items: center;
     padding: 0 5%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .myWishLists {
+    width: 100%;
+    height: 520px;
+    overflow: scroll;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 {
+    height: 70%;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend {
     height: auto;
     background-color: rgba(255, 255, 255, 0);
@@ -2048,8 +2400,13 @@
     font-size: 20px;
     padding-right: 40px;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.uploadNewFriend {
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.btn {
     margin-bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend button.btn:hover {
+    background-color: #2d827d;
+    color: #ffffff;
+    border: none;
   }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog {
     width: 700px;
@@ -2276,6 +2633,11 @@
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon {
     height: auto;
     background-color: rgba(255, 255, 255, 0);
+<<<<<<< HEAD
+    flex-direction: row;
+    justify-content: left;
+    margin: 20px 0 30px 0;
+=======
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2284,6 +2646,7 @@
         -ms-flex-pack: left;
             justify-content: left;
     margin: 20px 0 30px;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -2295,21 +2658,34 @@
     text-align: left;
     padding: 0 10px;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .couponbtn {
-    margin-bottom: 30px;
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon button.newcoupon {
+    color: #2d827d;
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid #7cb2af;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle {
-    padding-bottom: 10px;
+  .wrap .containerr .main .row .col .col-lg-9 .getcoupon button.newcoupon:hover {
+    color: #ffffff;
+    background-color: #2d827d;
+    border: none;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponName {
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle {
+    margin-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName {
     width: 68%;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponTitle .couponDate {
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName p.couponName {
+    font-size: 16px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate {
     width: 32%;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .invalidCouponGroup .invalidCouponDetails {
+  .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate p.couponDate {
+    font-size: 16px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .validCoupon {
     width: 100%;
-    height: 360px;
+    height: 440px;
     overflow: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
@@ -2613,8 +2989,10 @@
           justify-content: center;
   padding: 33px 0;
   z-index: 1;
+  transition: 0.1s;
   position: absolute;
-  right: 100%;
+  top: 20%;
+  right: -100%;
 }
 
 .lightbox-friendDetails p.editTitle {
@@ -2758,17 +3136,24 @@
   margin: 0 10px;
 }
 
-.coupon-lightbox-err .coupon-lightbox-black {
-  z-index: 20;
+.coupon-lightbox-err {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  left: -100%;
 }
 
 .coupon-lightbox-err .coupon-lightbox-bg {
+<<<<<<< HEAD
+  z-index: 11;
+  width: 100%;
+=======
   z-index: 21;
   position: fixed;
   top: 50vh;
@@ -2776,9 +3161,8 @@
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   width: 90%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   max-width: 400px;
-  font-family: "GenSenRounded-B";
-  font-weight: 900;
   text-align: center;
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
@@ -2803,32 +3187,45 @@
 }
 
 .coupon-lightbox-err .coupon-lightbox-bg .coupon-warning .coupon-warn-text {
+  font-family: "GenSenRounded-B";
   font-size: 20px;
   color: #000000;
   padding-bottom: 10px;
 }
+<<<<<<< HEAD
+.coupon-lightbox-err button.ok {
+=======
 
 .coupon-lightbox-err .coupon-lightbox-bg button {
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   border: none;
   background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
+  font-family: "GenSenRounded-B";
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;
 }
 
-.coupon-lightbox-success .coupon-lightbox-black {
-  z-index: 20;
+.coupon-lightbox-success {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  left: -100%;
 }
 
 .coupon-lightbox-success .coupon-lightbox-bg {
+<<<<<<< HEAD
+  z-index: 11;
+  width: 100%;
+=======
   z-index: 21;
   position: fixed;
   top: 50vh;
@@ -2836,9 +3233,8 @@
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   width: 90%;
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   max-width: 400px;
-  font-family: "GenSenRounded-B";
-  font-weight: 900;
   text-align: center;
   background: url("../images/error-bg.png") center center/100% 100% no-repeat;
   padding: 76px 0;
@@ -2863,16 +3259,22 @@
 }
 
 .coupon-lightbox-success .coupon-lightbox-bg .coupon-warning .coupon-true-text {
+  font-family: "GenSenRounded-B";
   font-size: 20px;
   color: #000000;
   padding-bottom: 10px;
 }
+<<<<<<< HEAD
+.coupon-lightbox-success button.ok {
+=======
 
 .coupon-lightbox-success .coupon-lightbox-bg button {
+>>>>>>> 29d7be4ab8d0a18c753f401b1a3ca06cf671b716
   border: none;
   background-color: #000000;
   border-radius: 10px;
   color: #ffffff;
+  font-family: "GenSenRounded-B";
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;

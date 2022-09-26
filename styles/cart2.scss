@@ -1660,8 +1660,8 @@ $bold: 900;
             }
             .j-total{
                 padding: 1rem 0 2rem;
-                a{
-                    display: block;
+                // a{
+                //     display: block;
                     button{
                         border: none;
                         background-color: $lake-green;
@@ -1675,7 +1675,7 @@ $bold: 900;
                             margin-left: 0.5rem;
                         }
                     }
-                }
+                // }
                 
             }
         }
@@ -1737,6 +1737,8 @@ $bold: 900;
         max-width: 320px;
         border-radius: 10px;
         box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+        transform: translateY(0);
+        transition:1s cubic-bezier(.36,.14,0,1);
         // overflow: hidden;
         .j-bling-img{
             position: absolute;
@@ -1793,7 +1795,11 @@ $bold: 900;
         
     }
 }
+.j-scroll{
+        
+    transform: translateY(-35vh);
 
+}
 
 
 // footer

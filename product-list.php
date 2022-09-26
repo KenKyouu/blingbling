@@ -2,16 +2,33 @@
 require __DIR__ . '/parts/connect_db.php';
 $pageName = 'product_list'; // 頁面名稱，可以自定義
 
-$perPage = 4; // 每頁最多有幾筆
+$perPage = 20; // 每頁最多有幾筆
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
 $lowp = isset($_GET['lowp']) ? intval($_GET['lowp']) : 0; // 篩選的最低價格
 $highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高價格
 
 $qsp = []; // query string parameters
+$where = ' WHERE 1 ';
 
 $cates = $pdo->query("SELECT * FROM class WHERE parent=0")->fetchAll();
-
+$products = $pdo->query("SELECT * FROM product")->fetchAll();
+$t_sql = "SELECT COUNT(1) FROM product $where";
+$totalRows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
+$totalPages = ceil($totalRows / $perPage);
+$rows = [];
+if ($totalRows > 0) {
+    if ($page < 1) {
+        header('Location: ?page=1');
+        exit;
+    }
+    if ($page > $totalPages) {
+        header('Location: ?page=' . $totalPages);
+        exit;
+    }
+    $sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
+    $rows = $pdo->query($sql)->fetchAll();
+}
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -65,174 +82,50 @@ $cates = $pdo->query("SELECT * FROM class WHERE parent=0")->fetchAll();
         </button>
     </div>
     <div class="product-list">
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
+        <?php foreach ($rows as $r) : ?>
+            <a href="./product_details.php?sid=<?= $r['sid'] ?>">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./images/products/<?= $r['sid'] ?>_1.png" alt="">
+                        <div class="heart">
+                        </div>
+                    </div>
+                    <div class="product-title">
+                        <h3><?= $r['name'] ?></h3>
+                    </div>
+                    <div class="product-price">
+                        <p><?= $r['price'] ?></p>
                     </div>
                 </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="product-card">
-                <div class="product-image">
-                    <div class="heart">
-                    </div>
-                </div>
-                <div class="product-title">
-                    <h3>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h3>
-                </div>
-                <div class="product-price">
-                    <p>5,000</p>
-                </div>
-            </div>
-        </a>
+            </a>
+        <?php endforeach; ?>
+    </div>
+    <div class="page-button">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item <?= $page == 1 ? 'disabled' : '' ?>">
+                    <a class="page-link" href="?<?php $qsp['page'] = $page - 1;
+                                                echo http_build_query($qsp); ?>">
+                        <i class="fa-solid fa-circle-arrow-left"></i>
+                    </a>
+                </li>
+                <?php for ($i = $page - 2; $i <= $page + 2; $i++) :
+                    if ($i >= 1 and $i <= $totalPages) :
+                        $qsp['page'] = $i;
+                ?>
+                        <li class="page-item <?= $page == $i ? 'active' : '' ?>">
+                            <a class="page-link" href="?<?= http_build_query($qsp); ?>"><?= $i ?></a>
+                        </li>
+                <?php endif;
+                endfor ?>
+                <li class="page-item <?= $page == $totalPages ? 'disabled' : '' ?>">
+                    <a class="page-link" href="?<?php $qsp['page'] = $page + 1;
+                                                echo http_build_query($qsp); ?>">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>
 <div class="filter-page-pc">

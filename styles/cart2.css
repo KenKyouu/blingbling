@@ -257,7 +257,8 @@
   width: 60px;
   height: 60px;
   overflow: hidden;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #4c4948;
 }
 .j-list .j-list-info .j-list-item .j-list-img img {
@@ -347,7 +348,8 @@
     width: 80px;
     height: 80px;
     overflow: hidden;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     background-color: #4c4948;
   }
   .j-list .j-list-info .j-list-item .j-list-img img {
@@ -399,7 +401,10 @@
   font-size: 18px;
   display: block;
   position: relative;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding-left: 1.75rem;
 }
 
@@ -707,7 +712,9 @@
 
 .j-city, .j-town {
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("../images/icons/icon=down.svg") 90% center/0.8rem no-repeat;
   fill: #000000;
   cursor: pointer;
@@ -912,7 +919,8 @@
     position: absolute;
     width: 100%;
     max-width: 370px;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-front .j-card-wrap {
     background: url("../images/cart2-card-font.png") center center/cover no-repeat;
@@ -970,7 +978,8 @@
     position: absolute;
     width: 100%;
     max-width: 370px;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .j-pay-wrap div .j-credit-pay .j-credit-bg .j-card-pers .creditcard .j-credit-back .j-card-wrap {
     background: url("../images/cart2-card-back.png") center center/cover no-repeat;
@@ -1169,10 +1178,7 @@
 .j-subtotal .j-subtotal-f .j-sum-item .j-total {
   padding: 1rem 0 2rem;
 }
-.j-subtotal .j-subtotal-f .j-sum-item .j-total a {
-  display: block;
-}
-.j-subtotal .j-subtotal-f .j-sum-item .j-total a button {
+.j-subtotal .j-subtotal-f .j-sum-item .j-total button {
   border: none;
   background-color: #2d827d;
   color: #ffffff;
@@ -1182,7 +1188,7 @@
   font-size: 18px;
   font-weight: 900;
 }
-.j-subtotal .j-subtotal-f .j-sum-item .j-total a button span {
+.j-subtotal .j-subtotal-f .j-sum-item .j-total button span {
   margin-left: 0.5rem;
 }
 .j-subtotal .j-fixed-bg {
@@ -1229,6 +1235,8 @@
     max-width: 320px;
     border-radius: 10px;
     box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition: 1s cubic-bezier(0.36, 0.14, 0, 1);
   }
   .j-summary-list .j-bling-img {
     position: absolute;
@@ -1280,6 +1288,10 @@
     padding-left: 0.8rem;
   }
 }
+.j-scroll {
+  transform: translateY(-35vh);
+}
+
 .footer-mobile {
   display: none;
   padding-top: 30px;
