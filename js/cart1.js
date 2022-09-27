@@ -161,6 +161,22 @@ $('.j-none-voucher').click(function(){
 })
 
 
+//優惠券價錢
+$('.coupon-apply-btn').click(function(){
+    $('input[class*=coupon-radio]').each(function(){
+        if ($(this).prop("checked")) {
+        let couponradio = $(this).attr('data-val');
+        console.log(couponradio);
+        $('.j-coupon').html('NT$ ' + dollarCommas(couponradio));
+        $('.j-coupon').attr('data-val',couponradio);
+        updatePrices();
+        }
+    })
+})
+
+
+
+
 function updatePrices() {
     let productTotal = 0; //總價
 
@@ -200,13 +216,13 @@ function addToOrder(event) {
     // const addToOrderBtn = $(event.currentTarget);
     const producttotal = $('.j-producttotal').attr('data-val');
     const orderpackage = $('.j-orderpackage').attr('data-val');
-    const ordergiftvoucher = $('.j-gift-voucher').attr('data-val');
-    // const ordercoupon = $('#orderCouponPrice').attr('data-val');
+    const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
+    const ordercoupon = $('.j-coupon').attr('data-val');
     console.log({
         producttotal,
         orderpackage,
         ordergiftvoucher,
-        // ordercoupon,
+        ordercoupon,
     });
   
     $.get(
@@ -215,7 +231,7 @@ function addToOrder(event) {
         producttotal,
         orderpackage,
         ordergiftvoucher,
-        // ordercoupon,
+        ordercoupon,
       },
       function (data) {
           // showCartCount(data);

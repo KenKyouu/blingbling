@@ -15,6 +15,10 @@ if (empty($_SESSION['cart'])) {
 <?php
 $user = $_SESSION['user']['id'];
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+$membercoupon = $pdo->query("SELECT * FROM member_coupon WHERE member_sid=$user ORDER BY `expiry_date`")->fetchAll();
+$couponsid = $membercoupon[0]['coupon_sid'];
+$coupon = $pdo->query("SELECT * FROM coupon WHERE `sid`=$couponsid")->fetchAll();
+$coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc JOIN `coupon` c ON mc.coupon_sid  = c.sid WHERE mc.`member_sid`= $user")->fetchAll();
 ?>
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/cart1.css">
@@ -221,17 +225,13 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                     </svg>
 
                                 </div>
+                                <?php foreach ($coupon_value as $cv) : ?>
                                 <label class="d-flex j-point mt-2">
-                                    <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
-                                    <input type="radio" name="coupon-radio" class="coupon-radio">
+                                    <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
+                                    <input type="radio" name="coupon-radio" class="coupon-radio" data-val="<?= $cv['coupon_value'] ?>">
                                     <span class="j-checkmark-r"></span>
                                 </label>
-
-                                <label class="d-flex j-point mt-3">
-                                    <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
-                                    <input type="radio" name="coupon-radio" class="coupon-radio">
-                                    <span class="j-checkmark-r"></span>
-                                </label>
+                                <?php endforeach; ?>
                             </div>
                             <button class="coupon-apply-btn" >確定使用！Bling</button>
                         </div>
@@ -306,11 +306,11 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                 <div class="col-6 d-flex j-relative">
                     <label class="discount-radio j-point d-flex"><h3 class="pl-4 pt-1 mr-2">全部折抵</h3>
-                        <input type="radio" name="giftvoucher" class="default-package j-gift-voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
+                        <input type="radio" name="giftvoucher" class="default-package j-gift-voucher voucher" data-val="<?= $member[0]['gift_voucher'] ?>" >
                         <span class="j-checkmark-r"></span>
                     </label>
                     <label class="discount-radio d-flex pl-3 j-point"><h3 class="pl-2 pt-1">不使用</h3>
-                        <input type="radio"  name="giftvoucher" class="default-package j-none-voucher" data-val="0">
+                        <input type="radio"  name="giftvoucher" class="default-package j-none-voucher voucher" data-val="0" >
                         <span class="j-checkmark-r"></span>
                     </label>
                 </div>
@@ -335,21 +335,16 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                             <svg class="coupon-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.329 7.44126L15.7695 3.00293C16.0768 2.69579 16.0768 2.20049 15.7695 1.89335L14.1057 0.230356C13.7984 -0.0767853 13.3029 -0.0767853 12.9956 0.230356L8.55507 4.6687C8.24777 4.97584 7.75223 4.97584 7.44493 4.6687L3.00441 0.230356C2.69712 -0.0767853 2.20158 -0.0767853 1.89428 0.230356L0.23047 1.89335C-0.0768233 2.20049 -0.0768233 2.69579 0.23047 3.00293L4.67099 7.44126C4.97829 7.7484 4.97829 8.2437 4.67099 8.55084L0.23047 12.9892C-0.0768233 13.2963 -0.0768233 13.7916 0.23047 14.0988L1.89428 15.7617C2.20158 16.0689 2.69712 16.0689 3.00441 15.7617L7.44493 11.3234C7.75223 11.0163 8.24777 11.0163 8.55507 11.3234L12.9956 15.7617C13.3029 16.0689 13.7984 16.0689 14.1057 15.7617L15.7695 14.0988C16.0768 13.7916 16.0768 13.2963 15.7695 12.9892L11.329 8.55084C11.0245 8.2437 11.0245 7.74563 11.329 7.44126Z" fill="#000" />
                             </svg>
-
                         </div>
+                        <?php foreach ($coupon_value as $cv) : ?>
                         <label class="d-flex j-point mt-2">
-                            <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
-                            <input type="radio" name="coupon-radio" class="coupon-radio">
+                            <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
+                            <input type="radio" name="couponradio" class="coupon-radio "  data-val="<?= $cv['coupon_value'] ?>">
                             <span class="j-checkmark-r "></span>
                         </label>
-
-                        <label class="d-flex j-point mt-2">
-                            <img class="w-100 ml-4" src="./images/cart1-coupon-01.png" alt="">
-                            <input type="radio" name="coupon-radio" class="coupon-radio">
-                            <span class="j-checkmark-r"></span>
-                        </label>
+                        <?php endforeach; ?>
                     </div>
-                    <button class="coupon-apply-btn">確定使用！Bling</button>
+                    <button class="coupon-apply-btn" >確定使用！Bling</button>
                 </div>
             </div>
         </div>
@@ -427,7 +422,8 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                 <h3>優惠券折抵</h3>
             </div>
             <div class="col price-col">
-                <h3 class="j-coupon" data-val="0">-NT$ 0</h3>
+                <span>-</span>
+                <h3 class="j-coupon" data-val="0">NT$ 0</h3>
             </div>
         </div>
 
