@@ -56,14 +56,14 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                         <div class="memberbutton">
                             <ul class="memberbutton">
-                                <li class="btn col-4 col-md-2 col-lg-12"><a href="./member-myIntro.php">
+                                <li class="btn col-4 col-md-2 col-lg-12" style="background-color:#ffffff"><a href="./member-myIntro.php">
                                         <div class="btnsvg">
                                             <svg width="14" height="14" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.4721 12.5341C15.935 12.5341 18.7422 9.72825 18.7422 6.26705C18.7422 2.80585 15.935 0 12.4721 0C9.00915 0 6.2019 2.80585 6.2019 6.26705C6.2019 9.72825 9.00915 12.5341 12.4721 12.5341Z" fill="#4C4948" />
-                                                <path d="M24.9416 25.0001C24.9416 18.1164 19.3591 12.5342 12.4695 12.5342C5.57993 12.5342 0 18.1164 0 25.0001H24.9416Z" fill="#4C4948" />
+                                                <path d="M12.4721 12.5341C15.935 12.5341 18.7422 9.72825 18.7422 6.26705C18.7422 2.80585 15.935 0 12.4721 0C9.00915 0 6.2019 2.80585 6.2019 6.26705C6.2019 9.72825 9.00915 12.5341 12.4721 12.5341Z" fill="#4C4948" style="fill:#4c4948" />
+                                                <path d="M24.9416 25.0001C24.9416 18.1164 19.3591 12.5342 12.4695 12.5342C5.57993 12.5342 0 18.1164 0 25.0001H24.9416Z" fill="#4C4948" style="fill:#4c4948" />
                                             </svg>
                                         </div>
-                                        <div class="btnP">
+                                        <div class="btnP" style="color:#4c4948">
                                             個人資訊
                                         </div>
                                     </a></li>
