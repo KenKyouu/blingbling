@@ -468,11 +468,14 @@ body {
       }
     }
   }
-  .filter {
+  .filter-button-mobile {
     padding: 15px 0 15px 15px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     button.filter {
       padding: 5px 8px;
-      border: 2px solid $super-dark;
+      border: 2px solid $dark-gray;
       border-radius: 10px;
       background-color: rgba($color: #000000, $alpha: 0);
       color: $super-dark;
@@ -481,6 +484,26 @@ body {
       @media screen and (min-width: 992px) {
         font-size: $h7-font-size;
       }
+    }
+  }
+  .filter-button-pc {
+    position: fixed;
+    padding: 30px 0;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    button.filter-pc {
+      padding: 10px;
+      border-top: 2px solid $dark-gray;
+      border-right: 2px solid $dark-gray;
+      border-bottom: 2px solid $dark-gray;
+      border-left: 2px solid rgba($color: #000000, $alpha: 0);
+      // border: 2px solid $dark-gray;
+      border-radius: 0 10px 10px 0;
+      background-color: rgba($color: $lake-green, $alpha: 0.3);
+      color: $super-dark;
+      font-family: "GenSenRounded-M";
+      font-size: $h6-font-size;
     }
   }
   .product-list {
@@ -517,17 +540,23 @@ body {
           width: 170px;
           height: 170px;
           margin: auto;
-          background-image: url(../images/products/71-1.jpeg);
-          background-size: cover;
+          // object-fit: cover;
           position: relative;
+          background-color: $white;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
           @media screen and (min-width: 992px) {
             width: 250px;
             height: 250px;
           }
           @media screen and (min-width: 1200px) {
             width: 275px;
-            height: 350px;
-            background-position: center center;
+            height: 275px;
+            // background-position: center center;
           }
           .heart {
             width: 30px;
@@ -553,6 +582,7 @@ body {
             font-size: $p-font-size;
             overflow: hidden;
             display: -webkit-box;
+            line-height: 1.4rem;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             @media screen and (min-width: 992px) {
@@ -583,7 +613,39 @@ body {
       }
     }
   }
+  .page-button {
+    margin-top: 30px;
+    nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        li.active a {
+          background-color: $lake-green;
+          border-color: $dark-gray;
+        }
+        a {
+          color: $dark-gray;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
 }
+
+// .filter-page-pc {
+//   position: fixed;
+//   top: 0;
+//   z-index: 205;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: rgba($color: $lake-green, $alpha: 0.95);
+//   .filter-page-pc-back {
+//     padding: 100px 0 0 30px;
+//     span.filter-pc-back {
+//       cursor: pointer;
+//     }
+//   }
+// }
 
 .filter-page,
 .gender-filter-detail,
@@ -596,7 +658,10 @@ body {
   top: 0;
   right: -100%;
   z-index: 200;
-  display: none;
+  // display: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
   .filter-header {
     width: 100%;
     padding: 5px 0;
@@ -782,7 +847,7 @@ body {
 // jQuery
 .filter-show {
   right: 0;
-  display: block;
+  // display: block;
 }
 
 .list-hidden {

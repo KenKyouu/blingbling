@@ -1,6 +1,13 @@
 <?php
-// require __DIR__ . '/parts/connect_db.php';
+require __DIR__ . '/parts/connect_db.php';
 $pageName = 'cart3'; // 頁面名稱，可以自定義
+
+$user = $_SESSION['user']['id'];
+$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+$orders = $pdo->query("SELECT * FROM `orders` WHERE `member_sid`= $user order by `sid` DESC LIMIT 1")->fetchAll();
+
+$order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_sid, p.name FROM orders o JOIN order_details od ON o.sid = od.orders_sid JOIN product p ON p.sid = od.product_sid WHERE o.`member_sid`= $user and o.`sid` = (SELECT `sid` FROM `orders` WHERE `member_sid`= $user order by `sid` DESC LIMIT 1);")->fetchAll();
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -44,6 +51,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
             </div>
         </div>
+
         <div class="j-list">
             <div class="j-list-bar">
                 <div class="j-list-wrap">
@@ -63,6 +71,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
 
             </div>
+
             <div class="j-list-info">
                 <div class="j-list-title col-12 px-4">
                     <div class="col-md-6 px-0 j-product">商品名稱</div>
@@ -70,22 +79,24 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <div class="col-md-2 px-0">數量</div>
                     <div class="col-md-2 px-0">小計</div>
                 </div>
+                <?php foreach($order_details as $k=>$v): ?>
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-01.jpeg" alt="">
+                        <img src="images/products/<?= $v['product_sid'] ?>_1.png" alt="<?= $v['name'] ?>">
                     </div>
                     <div class="j-list-sub">
-                        <p>Roborock 石頭科技 掃地機器人S7+(小米生態鏈-台灣公司貨)</p>
+                        <p><?= $v['name'] ?></p>
                         <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4">NT$ 22,999</div>
-                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                            <div class="j-money col-6 px-0 col-md-4">NT$ 22,999</div>
+                            <div class="j-money-single  px-0 col-md-4" data-val="<?= $v['price'] ?>"></div>
+                            <div class="j-amount col-6 px-0 col-md-4" data-val="<?= $v['quantity'] ?>"></div>
+                            <div class="j-money col-6 px-0 col-md-4" data-val="<?= $v['price']*$v['quantity'] ?>"></div>
                         </div>
                     </div>
                 </div>
-                <div class="j-list-item">
+                <?php endforeach; ?>
+                <!-- <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-02.jpeg" alt="">
+                        <img src="./images/products/populer-02.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>Jo Malone 香水禮盒(英國梨與小蒼蘭香水+鼠尾草與海鹽)</p>
@@ -98,7 +109,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-03.jpeg" alt="">
+                        <img src="./images/products/populer-03.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>COACH 立體馬車緹花LOGO卡夾鑰匙零錢包-櫻花卡其粉</p>
@@ -111,7 +122,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-04.jpeg" alt="">
+                        <img src="./images/products/populer-04.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>SNUGGLE香氛室內擴香100mlX3入組(/小蒼蘭/雪松/茉莉)</p>
@@ -124,7 +135,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
                 <div class="j-list-item">
                     <div class="j-list-img">
-                        <img src="../images/products/populer-05.jpeg" alt="">
+                        <img src="./images/products/populer-05.jpeg" alt="">
                     </div>
                     <div class="j-list-sub">
                         <p>ONE BOY UPF50+防曬冰感A+級機能冰鋒衣 - 扶桑花S</p>
@@ -134,12 +145,15 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                             <div class="j-money col-6 px-0 col-md-4">NT$ 880</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div class="row no-gutters d-block d-md-none">
-            <div class="col col-12 title-text-col d-flex">
-                <h2>訂單摘要</h2>
+
+        <div class="s-list-info">
+            <div class="row no-gutters d-block d-md-none">
+                <div class="col col-12 title-text-col d-flex">
+                    <h2>訂單摘要</h2>
+                </div>
             </div>
         </div>
 
@@ -148,9 +162,11 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 <div class="col total-col">
                     <h3>商品小計</h3>
                 </div>
+                
                 <div class="col price-col">
-                    <h3>NT$ 30,835</h3>
+                    <h3 class="j-product-price" ></h3>
                 </div>
+               
             </div>
 
             <div class="row total-row no-gutters">
@@ -158,7 +174,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h3>包裝小計</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>NT$ 199</h3>
+                    <h3 class="j-package" data-val="<?= $orders[0]['package'] ?>"></h3>
                 </div>
             </div>
 
@@ -167,7 +183,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h3>運費小計</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>NT$ 0</h3>
+                    <h3 class="j-freightfee" data-val="<?= $orders[0]['freight'] ?>"></h3>
                 </div>
             </div>
 
@@ -176,7 +192,10 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h3>購物金折抵</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>-NT$ 100</h3>
+                    <h3>
+                        <span>-</span> 
+                        <span class="j-giftvoucher" data-val="<?= $orders[0]['gift_voucher_use'] ?>"></span>
+                    </h3>
                 </div>
             </div>
 
@@ -185,9 +204,14 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h3>優惠券折抵</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>-NT$ 999</h3>
+                    <h3>
+                        <span>-</span>
+                        <span class="j-coupon" data-val="<?= $orders[0]['coupon_use'] ?>"></span>
+                    </h3>
                 </div>
             </div>
+
+            
 
             <div class="row total-row pt-3 no-gutters">
                 <div class="col-12 total-col-boder">
@@ -201,7 +225,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h3>訂單總計</h3>
                 </div>
                 <div class="col price-col">
-                    <h3>NT$ 29,935</h3>
+                    <h3 class="finaltotal" data-val="<?= $orders[0]['amount'] ?>"></h3>
                 </div>
             </div>
         </div>
@@ -220,7 +244,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                             <span>商品小計</span>
                         </div>
                         <div class="col-6 px-0 j-summary-price">
-                            <span class="j-pl"> NT$ 30,835</span>
+                            <span class="j-pl j-product-price"></span>
                         </div>
                     </div>
                     <div class="j-summary-item">
@@ -228,7 +252,15 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                             <span>包裝小計</span>
                         </div>
                         <div class="col-6 px-0 j-summary-price">
-                            <span class="j-pl">NT$ 199</span>
+                            <span class="j-pl j-package" data-val="<?= $orders[0]['package'] ?>"></span>
+                        </div>
+                    </div>
+                    <div class="j-summary-item">
+                        <div class="col-6 px-0 j-summary-subtitle">
+                            <span>運費小計</span>
+                        </div>
+                        <div class="col-6 px-0 j-summary-price">
+                            <span class="j-pl j-freightfee" data-val="<?= $orders[0]['freight'] ?>"></span>
                         </div>
                     </div>
                     <div class="j-summary-item">
@@ -237,7 +269,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                         </div>
                         <div class="col-6 px-0 j-summary-price">
                             <span>-</span>
-                            <span class="pl-1">NT$ 0</span>
+                            <span class="pl-1 j-giftvoucher" data-val="<?= $orders[0]['gift_voucher_use'] ?>"></span>
                         </div>
                     </div>
                     <div class="j-summary-item">
@@ -246,17 +278,10 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                         </div>
                         <div class="col-6 px-0 j-summary-price">
                             <span>-</span>
-                            <span class="pl-1">NT$ 1,099</span>
+                            <span class="pl-1 j-coupon" data-val="<?= $orders[0]['coupon_use'] ?>"></span>
                         </div>
                     </div>
-                    <div class="j-summary-item">
-                        <div class="col-6 px-0 j-summary-subtitle">
-                            <span>運費小計</span>
-                        </div>
-                        <div class="col-6 px-0 j-summary-price">
-                            <span class="j-pl">NT$ 100</span>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="j-total-kv">
@@ -264,7 +289,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <span>金額總計</span>
                 </div>
                 <div class="col-6 px-0 j-total-price">
-                    <span class="j-pl">NT$29,935</span>
+                    <span class="j-pl finaltotal"></span>
                 </div>
             </div>
         </div>
@@ -272,7 +297,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
     </div>
 </div>
 
-<div class="s-payment-info-wrap">
+<!-- <div class="s-payment-info-wrap">
     <div class="container">
 
         <div class="row no-gutters">
@@ -301,7 +326,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 </div>
 
                 <div class="col account-col">
-                    <h3>9736010728123</h3>
+                    <h3>9736010728</h3>
                 </div>
 
                 <div class="col account-col pb-3">
@@ -326,6 +351,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 <div class="col account-col">
                     <h3>NT$ 29,935</h3>
                 </div>
+                <div class="col"></div>
             </div>
 
             <div class="row no-gutters">
@@ -336,10 +362,11 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                 <div class="col account-col">
                     <h3>2022-10-18 23:59</h3>
                 </div>
+                <div class="col"></div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- 手機版訂單資訊 -->
 <div class="s-order-info-list-wrap d-block d-lg-none">
@@ -357,7 +384,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h6>訂購日期</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>2022-10-15</h6>
+                    <h6><?= $orders[0]['order_date'] ?></h6>
                 </div>
             </div>
 
@@ -366,7 +393,10 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h6>訂單編號</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>#11299</h6>
+                    <h6>
+                        <span>#</span>
+                        <span><?= $orders[0]['order_number'] ?></span>
+                    </h6>
                 </div>
             </div>
 
@@ -387,10 +417,10 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
 
             <div class="row">
                 <div class="col col-6">
-                    <h6>配送方式</h6>
+                    <h6>禮物配送方式</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>禮物配送方式</h6>
+                    <h6><?= $orders[0]['delivery'] ?></h6>
                 </div>
             </div>
 
@@ -423,7 +453,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h6>訂購人姓名</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>禮佳在</h6>
+                    <h6><?= $orders[0]['orderer_name'] ?></h6>
                 </div>
             </div>
 
@@ -432,7 +462,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h6>收件人姓名</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>同訂購人</h6>
+                    <h6><?= $orders[0]['recipient_name'] ?></h6>
                 </div>
             </div>
 
@@ -441,7 +471,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h6>收件人手機</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>0987123987</h6>
+                    <h6><?= $orders[0]['recipient_mobile'] ?></h6>
                 </div>
             </div>
 
@@ -456,7 +486,7 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
                     <h6>付款方式</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>銀行轉帳</h6>
+                    <h6><?= $orders[0]['pay'] ?></h6>
                 </div>
             </div>
 
@@ -482,142 +512,205 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
 </div>
 
 <!-- 電腦版訂單資訊 -->
-<div class="s-pcorder-info-list-wrap d-none d-lg-block">
+<div class="s-pcorder-info-list-section d-none d-lg-block">
     <div class="container">
-        <div class="pc-bg-wrap">
-            <div class="pcorder-list-section">
+        <div class="pcorder-list-wrap d-flex">
 
-                <div class="row">
-                    <div class="col">
-                        <h3>訂單資訊</h3>
+            <div class="pcorder-list-box">
+
+                <div class="list-info">
+                    <div class="row">
+                        <div class="col">
+                            <h3>訂單資訊</h3>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>訂購日期</p>
+                        </div>
+                        <div class="col">
+                            <p><?= $orders[0]['order_date'] ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>訂單編號</p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                <span>#</span>
+                                <span><?= $orders[0]['order_number'] ?></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>訂單狀態</p>
+                        </div>
+                        <div class="col">
+                            <p>處理中</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <h6>訂購日期</h6>
+                <div class="list-info">
+                    <div class="row">
+                        <div class="col">
+                            <h3>顧客資訊</h3>
+                        </div>
                     </div>
-                    <div class="col col-6">
-                        <h6>2022-10-15</h6>
+                    <div class="row">
+                        <div class="col">
+                            <p>訂購人姓名</p>
+                        </div>
+                        <div class="col">
+                            <p><?= $orders[0]['orderer_name'] ?></p>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>收件人姓名</p>
+                        </div>
+                        <div class="col">
+                            <p><?= $orders[0]['recipient_name'] ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>收件人手機</p>
+                        </div>
+                        <div class="col">
+                            <p><?= $orders[0]['recipient_mobile'] ?></p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>訂單編號</h6>
+                <div class="list-info list-line">
+                    <div class="row">
+                        <div class="col">
+                            <h3>配送資訊</h3>
+                        </div>
                     </div>
-                    <div class="col col-6">
-                        <h6>#11299</h6>
+                    <div class="row">
+                        <div class="col">
+                            <p>禮物配送方式</p>
+                        </div>
+                        <div class="col">
+                            <p><?= $orders[0]['delivery'] ?></p>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>卡片寄送方式</p>
+                        </div>
+                        <div class="col">
+                            <p>Email</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>配送狀態</p>
+                        </div>
+                        <div class="col">
+                            <p>待出貨</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="row pb-2">
-                    <div class="col col-6">
-                        <h6>訂單狀態</h6>
+                <div class="list-info list-line">
+                    <div class="row">
+                        <div class="col">
+                            <h3>付款資訊</h3>
+                        </div>
                     </div>
-                    <div class="col col-6">
-                        <h6>處理中</h6>
+                    <div class="row">
+                        <div class="col">
+                            <p>付款方式</p>
+                        </div>
+                        <div class="col">
+                            <p><?= $orders[0]['pay'] ?></p>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>付款狀態</p>
+                        </div>
+                        <div class="col">
+                            <p>未付款</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>載具類型</p>
+                        </div>
+                        <div class="col">
+                            <p>會員手機載具</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="row order-boder">
-                    <div class="col col-6">
-                        <h3>配送資訊</h3>
-                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------------ 訂單留言備註 --------------------------------------->
+<div class="s-order-remark-section">
+    <div class="container">
+        <div class="s-order-remark-wrap">
+            <div class="row">
+                <div class="col text-col">
+                    <h2>訂單留言備註</h2>
+                </div>
+            </div>
+
+            <div class="s-remark-wrap">
+                <label for="remark"></label>
+                <textarea name="remark" id="remark" class="s-input" placeholder="有什麼想要跟我們說的嗎？"></textarea>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col col-2"></div>
+                <div class="col col-2"></div>
+                <div class="col col-2"></div>
+                <div class="col col-3">
+                    <div class="s-order-text">100</div>
+                </div>
+                <div class="col col-3">
+                    <button>送出</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="s-order-cta-section">
+    <div class="container">
+        <div class="s-order-cta">
+            <div class="row">
+                <div class="col">
+                    <button>繼續選購</button>
                 </div>
 
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>配送方式</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>禮物配送方式</h6>
-                    </div>
+                <div class="col">
+                    <button class="cart1-check">前往結帳</button>
                 </div>
 
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>卡片寄送方式</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>Email</h6>
-                    </div>
-                </div>
-
-                <div class="row pb-2">
-                    <div class="col col-6">
-                        <h6>配送狀態</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>待出貨</h6>
-                    </div>
-                </div>
-
-                <div class="row order-boder">
-                    <div class="col col-6">
-                        <h3>顧客資訊</h3>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>訂購人姓名</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>禮佳在</h6>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>收件人姓名</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>同訂購人</h6>
-                    </div>
-                </div>
-
-                <div class="row pb-2">
-                    <div class="col col-6">
-                        <h6>收件人手機</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>0987123987</h6>
-                    </div>
-                </div>
-
-                <div class="row order-boder">
-                    <div class="col col-6">
-                        <h3>付款資訊</h3>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>付款方式</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>銀行轉帳</h6>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-6">
-                        <h6>付款狀態</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>未付款</h6>
-                    </div>
-                </div>
-
-                <div class="row pb-2">
-                    <div class="col col-6">
-                        <h6>載具類型</h6>
-                    </div>
-                    <div class="col col-6">
-                        <h6>會員載具</h6>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -625,6 +718,10 @@ $pageName = 'cart3'; // 頁面名稱，可以自定義
 
 
 
+
+
+
 <?php include __DIR__ . '/parts/footer.php'; ?>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script src="./js/cart3.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

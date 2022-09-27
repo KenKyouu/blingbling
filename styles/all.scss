@@ -180,6 +180,11 @@ $bold: 900;
 //   }
 // }
 
+body {
+  position: relative;
+  // overflow: hidden;
+}
+
 .header {
   .up {
     position: fixed;
@@ -227,6 +232,16 @@ $bold: 900;
         }
         li.cart {
           margin-bottom: 5px;
+          position: relative;
+          span.cart-red-point {
+            position: absolute;
+            right: 0px;
+            top: -2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $coral;
+          }
         }
       }
     }
@@ -236,7 +251,7 @@ $bold: 900;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
       .mockup {
@@ -392,7 +407,7 @@ $bold: 900;
   }
   .footer-nav {
     ul {
-      margin: 35px 40px 0 40px;
+      margin: 35px 70px 0 70px;
       padding-bottom: 10px;
       display: flex;
       justify-content: space-between;
@@ -555,31 +570,36 @@ $bold: 900;
       }
       .product-class {
         width: 100%;
-
         color: $super-dark;
         font-family: "GenSenRounded-M";
         font-size: $p-font-size;
-        .class-select {
-          display: flex;
-          height: 40px;
-          .class-image {
-            padding: 10px 0 0 0;
-            margin-left: 20px;
-            width: 8%;
-            position: relative;
-            img {
-              width: 100%;
-              position: absolute;
-              bottom: 3px;
-            }
-          }
-          .class-name {
-            width: 100%;
-            margin-left: 10px;
-            padding: 10px 0 0 0;
+        a {
+          color: $deep-brown;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          text-decoration: none;
+          .class-select {
             display: flex;
-            align-items: center;
-            border-bottom: 1px solid $gray;
+            height: 40px;
+            .class-image {
+              padding: 10px 0 0 0;
+              margin-left: 20px;
+              width: 8%;
+              position: relative;
+              img {
+                width: 100%;
+                position: absolute;
+                bottom: 3px;
+              }
+            }
+            .class-name {
+              width: 100%;
+              margin-left: 10px;
+              padding: 10px 0 0 0;
+              display: flex;
+              align-items: center;
+              border-bottom: 1px solid $gray;
+            }
           }
         }
       }
@@ -587,6 +607,15 @@ $bold: 900;
         display: flex;
         justify-content: space-between;
         margin: 60px 30px 0 30px;
+        .circle {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $lake-green;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         a {
           .circle {
             width: 40px;
@@ -597,6 +626,678 @@ $bold: 900;
             justify-content: center;
             align-items: center;
           }
+        }
+      }
+    }
+  }
+}
+
+.pc-login {
+  position: fixed;
+  z-index: 300;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // left: -100%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  .login-box {
+    width: 90%;
+    height: 550px;
+    max-width: 933px;
+    background: url(../images/pc-login.svg) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    .switchtosignup {
+      width: 120px;
+      height: 75px;
+      // background-color: $coral;
+      position: absolute;
+      top: 47%;
+      left: 19%;
+      cursor: pointer;
+    }
+    .pc-login-info {
+      width: 30%;
+      position: absolute;
+      top: 25%;
+      left: 45%;
+      .pc-login-container {
+        width: 130%;
+        padding-top: 15%;
+        input {
+          width: 90%;
+          font-family: "GenSenRounded-B";
+          font-size: $ps-font-size;
+          color: $gray;
+          border: none;
+          border-bottom: 2px solid $dark-gray;
+          outline: none;
+          padding-bottom: 2%;
+          @media screen and (max-width: 864px) {
+            width: 85%;
+          }
+        }
+        .mail-input {
+          padding-top: 5%;
+        }
+        .password-input {
+          padding-top: 10%;
+          position: relative;
+          .eye-close {
+            position: absolute;
+            top: 30px;
+            right: 5px;
+            @media screen and (max-width: 864px) {
+              top: 25px;
+              right: 10px;
+            }
+          }
+          p {
+            padding-top: 2px;
+            padding-left: 30px;
+            font-weight: bold;
+            a {
+              text-align: left;
+              font-family: "Roboto";
+              font-size: 12px;
+              color: $light-lake-green;
+            }
+          }
+        }
+        .login-button {
+          padding-top: 20%;
+          .login-btn {
+            width: 263px;
+            height: 35px;
+            border: 0;
+            border-radius: 10px;
+            background-color: $lake-green;
+            color: $white;
+            font-family: "GenSenRounded-M";
+            font-size: $p-font-size;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .or {
+        text-align: center;
+        padding-top: 10%;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        color: $dark-gray;
+        padding-bottom: 10px;
+      }
+      .orwith-icon {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .fb-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+        .google-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          // margin-right: 10px;
+        }
+      }
+      .not-member {
+        padding-top: 20px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        text-align: center;
+        color: $dark-gray;
+        a {
+          color: $light-lake-green;
+        }
+      }
+    }
+  }
+}
+
+.mb-login {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  .login {
+    width: 100%;
+    height: 165px;
+    justify-content: center;
+    .login-bg {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      position: absolute;
+      z-index: 1;
+    }
+    .login-logo {
+      width: 200px;
+      height: 117px;
+      position: absolute;
+      z-index: 2;
+      top: 30px;
+    }
+  }
+  .mb-login-bg2 {
+    width: 100%;
+    height: 502px;
+    background-color: $white;
+    box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    z-index: 3;
+    .login-containerr {
+      text-align: left;
+      margin: 0 8%;
+      .bg2-title {
+        width: 100%;
+        margin-left: 10%;
+        padding-top: 50px;
+        font-family: "GenSenRounded-B";
+        font-size: $h5-font-size;
+        color: $super-dark;
+      }
+      .bg2-info {
+        text-align: center;
+        padding-top: 30px;
+        input {
+          width: 80%;
+          font-family: "GenSenRounded-B";
+          font-size: $ps-font-size;
+          color: $gray;
+          border: none;
+          border-bottom: 2px solid $dark-gray;
+          outline: none;
+          padding-bottom: 10px;
+          ::-webkit-input-placeholder {
+            color: $gray;
+          }
+        }
+        .mail-input {
+          padding-top: 35px;
+        }
+        .password-input {
+          padding-top: 35px;
+          position: relative;
+          .eye-close {
+            position: absolute;
+            // top: 35px;
+            right: 8%;
+          }
+        }
+        .forget-pw {
+          text-align: left;
+          padding-left: 12%;
+          p {
+            padding-top: 2px;
+
+            font-weight: bold;
+            a {
+              text-align: left;
+              font-family: "Roboto";
+              font-size: 12px;
+              color: $light-lake-green;
+            }
+          }
+        }
+        .login-btn {
+          width: 263px;
+          height: 35px;
+          border: 0;
+          border-radius: 10px;
+          background-color: $lake-green;
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .or {
+        text-align: center;
+        padding-top: 40px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        color: $dark-gray;
+        padding-bottom: 10px;
+      }
+      .orwith-icon {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .fb-icon {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+        .google-icon {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          // margin-right: 10px;
+        }
+      }
+      .not-member {
+        padding-top: 20px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        text-align: center;
+        color: $dark-gray;
+
+        span.clicktosignup {
+          color: $light-lake-green;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.pc-signup {
+  position: fixed;
+  z-index: 300;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 100%;
+  .signup-box {
+    position: relative;
+    width: 90%;
+    height: 550px;
+    max-width: 933px;
+    background: url(../images/pc-signup.svg) no-repeat;
+    background-size: 100% 100%;
+    .switchtologin {
+      width: 120px;
+      height: 75px;
+      // background-color: $coral;
+      position: absolute;
+      top: 39%;
+      left: 19%;
+      cursor: pointer;
+    }
+    .pc-signup-info {
+      width: 28.5%;
+      position: absolute;
+      top: 25%;
+      left: 45%;
+      .pc-signup-container {
+        width: 130%;
+        padding-top: 15%;
+        input {
+          width: 90%;
+          font-family: "GenSenRounded-B";
+          font-size: $ps-font-size;
+          color: $gray;
+          border: none;
+          border-bottom: 2px solid $dark-gray;
+          outline: none;
+          padding-bottom: 2%;
+          @media screen and (max-width: 864px) {
+            width: 85%;
+          }
+          @media screen and (max-width: 909px) {
+            width: 80%;
+          }
+        }
+        .mail-input {
+          padding-top: 2%;
+        }
+        .password-input {
+          padding-top: 5%;
+          position: relative;
+          .eye-close {
+            position: absolute;
+            top: 20px;
+            right: 5px;
+            @media screen and (max-width: 864px) {
+              top: 20px;
+              right: 22px;
+            }
+            @media screen and (max-width: 909px) {
+              top: 16px;
+              right: 30px;
+            }
+          }
+          p {
+            padding-top: 2px;
+            padding-left: 30px;
+            font-weight: bold;
+          }
+        }
+        .password-corret-input {
+          padding-top: 5%;
+          width: 100%;
+          margin-left: 30px;
+          position: relative;
+          // @media screen and (max-width:864px) {
+          //   width: 85%;
+          // }
+          @media screen and (max-width: 909px) {
+            width: 100%;
+          }
+          .eye-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            @media screen and (max-width: 864px) {
+              top: 15px;
+              right: 50px;
+            }
+            @media screen and (max-width: 909px) {
+              top: 16px;
+              right: 60px;
+            }
+          }
+          p {
+            padding-top: 2px;
+            padding-left: 30px;
+            font-weight: bold;
+          }
+        }
+        .bd-input {
+          padding-top: 5%;
+          input {
+            text-align: center;
+            width: 28%;
+            margin: 0 3px;
+            @media screen and (max-width: 864px) {
+              width: 26%;
+            }
+            @media screen and (max-width: 909px) {
+              width: 25%;
+            }
+          }
+          .bd-input-1 {
+            text-align: left;
+            margin-left: 0;
+          }
+          p {
+            padding-left: 12%;
+            padding-top: 3px;
+            padding-left: 30px;
+            font-family: "Roboto";
+            font-weight: bold;
+            font-size: 11px;
+            color: $dark-gray;
+          }
+        }
+        .sign-p {
+          font-family: "Roboto";
+          font-weight: bold;
+          font-size: 11px;
+          color: $dark-gray;
+          text-align: left;
+          padding: 5px 5px 8px 0px;
+          a {
+            color: $dark-blue;
+          }
+        }
+        .signup-btn {
+          width: 150px;
+          height: 35px;
+          border: 0;
+          border-radius: 10px;
+          background-color: $lake-green;
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .or {
+        text-align: center;
+        // padding-top: 3%;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        color: $dark-gray;
+        padding-bottom: 10px;
+        @media screen and (max-width: 864px) {
+          padding-top: 5%;
+        }
+        @media screen and (min-width: 910px) {
+          padding-top: 8%;
+        }
+      }
+      .orwith-icon {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .fb-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+        .google-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          // margin-right: 10px;
+        }
+      }
+      .not-member {
+        padding-top: 20px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        text-align: center;
+        color: $dark-gray;
+        a {
+          color: $light-lake-green;
+        }
+      }
+    }
+  }
+}
+
+.mb-signup {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  .signup {
+    width: 100%;
+    height: 165px;
+    justify-content: center;
+    .signup-bg {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      position: absolute;
+      z-index: 1;
+    }
+    .signup-logo {
+      width: 200px;
+      height: 117px;
+      position: absolute;
+      z-index: 2;
+      top: 30px;
+    }
+  }
+  .mb-signup-bg2 {
+    width: 100%;
+    height: 502px;
+    background-color: $white;
+    box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    z-index: 3;
+    .signup-containerr {
+      text-align: left;
+      margin: 0 8%;
+      .bg2-title {
+        width: 100%;
+        margin-left: 10%;
+        padding-top: 50px;
+        font-family: "GenSenRounded-B";
+        font-size: $h5-font-size;
+        color: $super-dark;
+      }
+      .bg2-info {
+        text-align: center;
+        padding-top: 10px;
+        input {
+          width: 80%;
+          font-family: "GenSenRounded-B";
+          font-size: $ps-font-size;
+          color: $gray;
+          border: none;
+          border-bottom: 2px solid $dark-gray;
+          outline: none;
+          padding-bottom: 8px;
+          padding-top: 20px;
+          ::-webkit-input-placeholder {
+            color: $gray;
+          }
+        }
+        // .mail-input{
+
+        // }
+        .password-input {
+          position: relative;
+          .eye-close {
+            position: absolute;
+            top: 19px;
+            right: 8.3%;
+          }
+        }
+        .password-corret-input {
+          width: 100%;
+          margin-left: 15px;
+          position: relative;
+          .eye-close {
+            position: absolute;
+            top: 19px;
+            right: 11%;
+          }
+        }
+        .bd-input {
+          input {
+            width: 25.5%;
+            margin: 0 5px;
+          }
+          .bd-input-1 {
+            margin-left: 0;
+          }
+          p {
+            padding-left: 12%;
+            padding-top: 3px;
+            // padding-left: 30px;
+            text-align: left;
+            font-family: "Roboto";
+            font-weight: bold;
+            font-size: 11px;
+            color: $dark-gray;
+          }
+        }
+        .sign-p {
+          font-family: "Roboto";
+          font-weight: bold;
+          font-size: 11px;
+          color: $dark-gray;
+          text-align: left;
+          padding: 5px 30px 8px 0px;
+          a {
+            color: $dark-blue;
+          }
+        }
+        .signup-btn {
+          width: 263px;
+          height: 35px;
+          border: 0;
+          border-radius: 10px;
+          background-color: $lake-green;
+          color: $white;
+          font-family: "GenSenRounded-M";
+          font-size: $p-font-size;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .or {
+        text-align: center;
+        padding-top: 20px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        color: $dark-gray;
+        padding-bottom: 10px;
+      }
+      .orwith-icon {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .fb-icon {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          margin-right: 10px;
+        }
+        .google-icon {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          background-color: #c2c2c24a;
+          border-radius: 10px;
+          // margin-right: 10px;
+        }
+      }
+      .not-member {
+        padding-top: 15px;
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        text-align: center;
+        color: $dark-gray;
+
+        span.clicktologin {
+          cursor: pointer;
+          color: $light-lake-green;
         }
       }
     }
@@ -627,4 +1328,19 @@ $bold: 900;
 
 .header-icon-height {
   padding: 45px 0;
+}
+
+.loginandsignup-hidden {
+  left: -100%;
+}
+.loginandsignup-show {
+  left: 0%;
+}
+
+.mb-loginandsignup-hidden {
+  display: none;
+}
+
+.mb-loginandsignup-show {
+  display: block;
 }
