@@ -204,7 +204,6 @@ $coupon = $pdo->query("SELECT * FROM coupon WHERE `sid`=$couponsid")->fetchAll()
         </div>
         <button class="ok">好! Bling</button>
     </div>
-
 </div>
 
 <?php include __DIR__ . '/parts/scripts.php'; ?>

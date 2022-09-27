@@ -143,9 +143,21 @@ $(function () {
 
 
 //包裝價錢
+const packagechose = +$('.j-package-chose').attr('data-val');
 const blingchose = +$('.j-bling-chose').attr('data-val');
 const nonepackage = +$('.j-none-package').attr('data-val');
+<<<<<<< HEAD
 $('.j-bling-chose').click(function () {
+=======
+$('.j-package-chose').click(function(){
+    setTimeout(function(){
+        $('.j-orderpackage').html('NT$ ' + dollarCommas(packagechose));
+        $('.j-orderpackage').attr('data-val',packagechose);
+        updatePrices();
+    },5000)
+})
+$('.j-bling-chose').click(function(){
+>>>>>>> b6983050a6ed90c99fd698856255523b940c7a01
     $('.j-orderpackage').html('NT$ ' + dollarCommas(blingchose));
     $('.j-orderpackage').attr('data-val', blingchose);
     updatePrices();
@@ -170,6 +182,22 @@ $('.j-none-voucher').click(function () {
     $('.j-giftvoucher').attr('data-val', nonevoucher);
     updatePrices();
 })
+
+
+//優惠券價錢
+$('.coupon-apply-btn').click(function(){
+    $('input[class*=coupon-radio]').each(function(){
+        if ($(this).prop("checked")) {
+        let couponradio = $(this).attr('data-val');
+        console.log(couponradio);
+        $('.j-coupon').html('NT$ ' + dollarCommas(couponradio));
+        $('.j-coupon').attr('data-val',couponradio);
+        updatePrices();
+        }
+    })
+})
+
+
 
 
 function updatePrices() {
@@ -211,16 +239,17 @@ function addToOrder(event) {
     // const addToOrderBtn = $(event.currentTarget);
     const producttotal = $('.j-producttotal').attr('data-val');
     const orderpackage = $('.j-orderpackage').attr('data-val');
-    const ordergiftvoucher = $('.j-gift-voucher').attr('data-val');
-    // const ordercoupon = $('#orderCouponPrice').attr('data-val');
+    const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
+    const ordercoupon = $('.j-coupon').attr('data-val');
     console.log({
         producttotal,
         orderpackage,
         ordergiftvoucher,
-        // ordercoupon,
+        ordercoupon,
     });
 
     $.get(
+<<<<<<< HEAD
         "addtoorder.php",
         {
             producttotal,
@@ -234,6 +263,21 @@ function addToOrder(event) {
             updatePrices();
         },
         "json"
+=======
+      "addtoorder.php",
+      {
+        producttotal,
+        orderpackage,
+        ordergiftvoucher,
+        ordercoupon,
+      },
+      function (data) {
+          // showCartCount(data);
+        console.log(data);
+        updatePrices();
+      },
+      "json"
+>>>>>>> b6983050a6ed90c99fd698856255523b940c7a01
     );
 }
 

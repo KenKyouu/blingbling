@@ -8,7 +8,7 @@ $output = [
     'code' => 0,
     'postData' => $_POST,
 ];
-
+$user = $_SESSION['user']['id'];
 // if(empty($_POST['name']) or empty($_POST['email'])){
 //     $output['error']= '欄位資料不足';
 //     echo json_encode($output, JSON_UNESCAPED_UNICODE);
@@ -29,8 +29,6 @@ foreach($_SESSION['cart'] as $k=>$v){
 }
 $ordertotal =0;
     $ordertotal = $total + $_SESSION['order']['orderpackage'] - $_SESSION['order']['ordergiftvoucher'] - $_SESSION['order']['ordercoupon'] + $_SESSION['order']['orderfreight'];
-
-
 
 
 $yCode = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
@@ -111,20 +109,6 @@ $stmt->execute([
 //     $output['error'] = '資料沒有新增';
 // }
 
-// $giftvoucher = 0;
-// $v_sql = "INSERT INTO `member`(
-//     `gift_voucher`
-// ) VALUES (
-//     ?
-// )";
-
-// $stmt = $pdo->prepare($v_sql);
-// $stmt->execute([
-//     $giftvoucher
-// ]);
-
-
-
 
 
 echo json_encode($output);
@@ -151,6 +135,21 @@ foreach($_SESSION['cart'] as $k=>$v){
         $v['qty'],
     ]);
 }
+
+
+$sql = "UPDATE `member` SET 
+    `gift_voucher`= ? 
+    WHERE `sid`= $user ";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        0
+    ]);
+
+
+// "SELECT  `gift_voucher_use` FROM `orders` WHERE `member_sid`=$user FOR UPDATE `member` SET `gift_voucher` = 0 WHERE `sid`= $user";
+
+
+
 
 unset($_SESSION['cart']); // 清除購物車內容
 unset($_SESSION['order']);
