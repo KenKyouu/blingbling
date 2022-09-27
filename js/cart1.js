@@ -25,109 +25,120 @@ $('.coupon-svg').on('click', function () {
 })
 
 //fixed scroll
-$(window).scroll(function(){
+$(window).scroll(function () {
     $('.j-summary-list').removeClass('j-scroll');
 
-    if($(window).scrollTop() >= 357){
+    if ($(window).scrollTop() >= 357) {
 
-    // console.log('$(window).scrollTop():',$(window).scrollTop());
-    // console.log('scrollTop():',$('.s-pc-btn-wrap').offset().top);
+        // console.log('$(window).scrollTop():',$(window).scrollTop());
+        // console.log('scrollTop():',$('.s-pc-btn-wrap').offset().top);
         $('.j-summary-list').addClass('j-scroll');
     }
 })
 
+// header hidden
+let lastScroll = 0;
+$(window).scroll(function () {
+    let scrollNow = $(window).scrollTop();
 
-
+    if (scrollNow > lastScroll) {
+        $('.header,.up').addClass('header-hidden')
+    }
+    else {
+        $('.header,.up').removeClass('header-hidden')
+    }
+    lastScroll = scrollNow;
+})
 
 
 //價錢加,
-const dollarCommas = function(n) {
-	return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+const dollarCommas = function (n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 };
 
 function removeItem(event) {
-	const listItem = $(event.currentTarget).closest('.j-list-item');
-	const sid = listItem.attr('data-sid');
+    const listItem = $(event.currentTarget).closest('.j-list-item');
+    const sid = listItem.attr('data-sid');
 
-	$.get(
-		'handle-cart.php', {
-			sid
-		},
-		function(data) {
-			// console.log(data);
+    $.get(
+        'handle-cart.php', {
+        sid
+    },
+        function (data) {
+            // console.log(data);
 
-			// showCartCount(data); //總數量
-			listItem.remove();
-			// TODO: 更新 總計, 
-			updatePrices(); //ajax發回時就要更新
-		},
-		'json');
-        
-}
-
-function removeHeart(event){
-	const listItem = $(event.currentTarget).closest('.j-list-item');
-	const sid = listItem.attr('data-sid');
-
-	$.get(
-		'handle-cart.php',{
-			sid
-		},
-		function(data){
-			// console.log(data);
-			// showCartCount(data);
-			listItem.remove();
-			updatePrices();
-		},
-	'json');
+            // showCartCount(data); //總數量
+            listItem.remove();
+            // TODO: 更新 總計, 
+            updatePrices(); //ajax發回時就要更新
+        },
+        'json');
 
 }
 
+function removeHeart(event) {
+    const listItem = $(event.currentTarget).closest('.j-list-item');
+    const sid = listItem.attr('data-sid');
 
-$(function(){
-	$(".add").click(function(){
-		console.log('click');
-	let sid = $(this).closest('.j-list-item').attr('data-sid');
-	let t=$(this).parent().find('input[class*=qty]');
-	t.val(parseInt(t.val())+1);
-	qty = t.val();
-	$.get(
-		'handle-cart.php', {
-			sid,
-			qty
-		},
-		function(data) {
-			console.log(data);
-			// showCartCount(data); //總數量
-			// TODO: 更新小計, 總計,
-			updatePrices();
-			// console.log(qty);
-		},
-		'json');
-	})
-	$(".min").click(function(){
-		console.log('click');
-	let sid = $(this).closest('.j-list-item').attr('data-sid');
-	let t=$(this).parent().find('input[class*=qty]');
-	t.val(parseInt(t.val())-1);
-	if(parseInt(t.val())<1){
-		t.val(1);
-	}
-	qty = t.val();
-	$.get(
-		'handle-cart.php', {
-			sid,
-			qty
-		},
-		function(data) {
-			console.log(data);
-	// 		showCartCount(data); //總數量
-	// 		// TODO: 更新小計, 總計,
-			updatePrices();
-		},
-		'json');
-	})
-	})
+    $.get(
+        'handle-cart.php', {
+        sid
+    },
+        function (data) {
+            // console.log(data);
+            // showCartCount(data);
+            listItem.remove();
+            updatePrices();
+        },
+        'json');
+
+}
+
+
+$(function () {
+    $(".add").click(function () {
+        console.log('click');
+        let sid = $(this).closest('.j-list-item').attr('data-sid');
+        let t = $(this).parent().find('input[class*=qty]');
+        t.val(parseInt(t.val()) + 1);
+        qty = t.val();
+        $.get(
+            'handle-cart.php', {
+            sid,
+            qty
+        },
+            function (data) {
+                console.log(data);
+                // showCartCount(data); //總數量
+                // TODO: 更新小計, 總計,
+                updatePrices();
+                // console.log(qty);
+            },
+            'json');
+    })
+    $(".min").click(function () {
+        console.log('click');
+        let sid = $(this).closest('.j-list-item').attr('data-sid');
+        let t = $(this).parent().find('input[class*=qty]');
+        t.val(parseInt(t.val()) - 1);
+        if (parseInt(t.val()) < 1) {
+            t.val(1);
+        }
+        qty = t.val();
+        $.get(
+            'handle-cart.php', {
+            sid,
+            qty
+        },
+            function (data) {
+                console.log(data);
+                // 		showCartCount(data); //總數量
+                // 		// TODO: 更新小計, 總計,
+                updatePrices();
+            },
+            'json');
+    })
+})
 
 
 
@@ -135,6 +146,9 @@ $(function(){
 const packagechose = +$('.j-package-chose').attr('data-val');
 const blingchose = +$('.j-bling-chose').attr('data-val');
 const nonepackage = +$('.j-none-package').attr('data-val');
+<<<<<<< HEAD
+$('.j-bling-chose').click(function () {
+=======
 $('.j-package-chose').click(function(){
     setTimeout(function(){
         $('.j-orderpackage').html('NT$ ' + dollarCommas(packagechose));
@@ -143,28 +157,29 @@ $('.j-package-chose').click(function(){
     },5000)
 })
 $('.j-bling-chose').click(function(){
+>>>>>>> b6983050a6ed90c99fd698856255523b940c7a01
     $('.j-orderpackage').html('NT$ ' + dollarCommas(blingchose));
-    $('.j-orderpackage').attr('data-val',blingchose);
+    $('.j-orderpackage').attr('data-val', blingchose);
     updatePrices();
 })
-$('.j-none-package').click(function(){
+$('.j-none-package').click(function () {
     $('.j-orderpackage').html('NT$ ' + dollarCommas(nonepackage));
-    $('.j-orderpackage').attr('data-val',nonepackage);
+    $('.j-orderpackage').attr('data-val', nonepackage);
     updatePrices();
 })
-    
+
 
 //購物金價錢
 const usevoucher = $('.j-gift-voucher').attr('data-val');
 const nonevoucher = +$('.j-none-voucher').attr('data-val');
-$('.j-gift-voucher').click(function(){
+$('.j-gift-voucher').click(function () {
     $('.j-giftvoucher').html('NT$ ' + dollarCommas(usevoucher));
-    $('.j-giftvoucher').attr('data-val',usevoucher);
+    $('.j-giftvoucher').attr('data-val', usevoucher);
     updatePrices();
 })
-$('.j-none-voucher').click(function(){
+$('.j-none-voucher').click(function () {
     $('.j-giftvoucher').html('NT$ ' + dollarCommas(nonevoucher));
-    $('.j-giftvoucher').attr('data-val',nonevoucher);
+    $('.j-giftvoucher').attr('data-val', nonevoucher);
     updatePrices();
 })
 
@@ -188,7 +203,7 @@ $('.coupon-apply-btn').click(function(){
 function updatePrices() {
     let productTotal = 0; //總價
 
-    $('.j-list-item').each(function() {
+    $('.j-list-item').each(function () {
         //取值
         const listItem = $(this);
         const singlePrice = listItem.find('.singlePrice');
@@ -202,10 +217,10 @@ function updatePrices() {
         productTotal += price * qty;
     });
     $('.j-product-price').html('NT$ ' + dollarCommas(productTotal));
-    $('.j-product-price').attr('data-val',productTotal);
-    if(productTotal == 0){
+    $('.j-product-price').attr('data-val', productTotal);
+    if (productTotal == 0) {
         // console.log('upd:',$('.finaltotal').text());
-        location.href= './cart1-none.php';
+        location.href = './cart1-none.php';
     }
     const giftvoucher = $('.giftvoucher').attr('data-val');
     $('.giftvoucher').html('$ ' + dollarCommas(giftvoucher));
@@ -232,8 +247,23 @@ function addToOrder(event) {
         ordergiftvoucher,
         ordercoupon,
     });
-  
+
     $.get(
+<<<<<<< HEAD
+        "addtoorder.php",
+        {
+            producttotal,
+            orderpackage,
+            ordergiftvoucher,
+            // ordercoupon,
+        },
+        function (data) {
+            // showCartCount(data);
+            console.log(data);
+            updatePrices();
+        },
+        "json"
+=======
       "addtoorder.php",
       {
         producttotal,
@@ -247,11 +277,12 @@ function addToOrder(event) {
         updatePrices();
       },
       "json"
+>>>>>>> b6983050a6ed90c99fd698856255523b940c7a01
     );
-  }
+}
 
 
- 
+
 
 
 
