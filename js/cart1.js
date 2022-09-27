@@ -132,8 +132,16 @@ $(function(){
 
 
 //包裝價錢
+const packagechose = +$('.j-package-chose').attr('data-val');
 const blingchose = +$('.j-bling-chose').attr('data-val');
 const nonepackage = +$('.j-none-package').attr('data-val');
+$('.j-package-chose').click(function(){
+    setTimeout(function(){
+        $('.j-orderpackage').html('NT$ ' + dollarCommas(packagechose));
+        $('.j-orderpackage').attr('data-val',packagechose);
+        updatePrices();
+    },5000)
+})
 $('.j-bling-chose').click(function(){
     $('.j-orderpackage').html('NT$ ' + dollarCommas(blingchose));
     $('.j-orderpackage').attr('data-val',blingchose);

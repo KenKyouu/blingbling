@@ -158,7 +158,7 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
                         </svg>
                         <p>加購包裝 & 卡片服務：</p>
                         <div class="s-package-card-btn d-flex">
-                            <button>客製化包裝</button>
+                            <button class="j-package-chose" data-val="50" onclick="window.open('./package.html','客製化包裝',config='width=1920, height=1080')">客製化包裝</button>
                             <div class="s-package-card-radio d-flex pl-3">
                                 <label class="j-point d-flex">
                                     <h3 class="pl-4 mr-3">Bling 幫我選</h3>
@@ -262,7 +262,7 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
             </div>
 
             <div class="col-12 package-col">
-                <button>客製化包裝</button>
+                <button class="j-package-chose" data-val="50" onclick="window.open('./package.html','客製化包裝',config='width=360, height=600')">客製化包裝</button>
 
                 <div class="package-radio">
                     <label class="d-flex j-point">
