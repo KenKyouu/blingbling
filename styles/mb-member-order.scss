@@ -229,7 +229,7 @@ $bold: 900;
                         align-items: center;
                         padding: 0px 30px;
                         margin-top: 15px;
-
+                       
                         .order-list{
                             width: 100%;
                             padding-top: 15px;
@@ -252,12 +252,20 @@ $bold: 900;
                                     border: 3px solid $super-dark;
                                     border-radius: 10px;
                                     background-color: rgba(255, 255, 255, 0);
-                                    color:$super-dark;
                                     font-family: "GenSenRounded-B";
                                     font-size: $ps-font-size;
-                                    p{
+                                    a{
+                                        text-decoration: none;
+                                        color:$super-dark;
                                         padding-right: 5px;
                                     }
+                                }
+                                button:hover{
+                                    background-color: $super-dark;
+                                    a{
+                                        color: $white;
+                                    }
+                                    
                                 }
                             }
                             .order-detail-title{
@@ -414,7 +422,7 @@ $bold: 900;
                             margin: 0;
                             display: flex;
                             flex-direction: column;
-                            justify-content: center;
+                            // justify-content: center;
                             align-items: center;
 
                             .mydetailstop {
