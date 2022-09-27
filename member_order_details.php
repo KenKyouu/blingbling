@@ -10,8 +10,8 @@ if (empty($_SESSION['user'])) {
 $user = $_SESSION['user']['id'];
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 $sid = intval($_GET['sid']);
-$sql = "SELECT *  FROM order_details WHERE orders_sid=$sid";
-$r = $pdo->query($sql)->fetch();
+$sql = "SELECT *  FROM order_details WHERE `orders_sid` = $sid";
+$r = $pdo->query($sql)->fetchAll();
 $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
 // $orderdetails = $pdo->query("SELECT * FROM order_details WHERE member_sid=$user")->fetchAll();
 ?>
@@ -212,7 +212,7 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                             </div>
 
                             <div class="detail-info">
-                                <?php foreach ($memberorders as $o) : ?>
+                                <?php foreach ($r as $r) : ?>
                                     <div class="title-left">
                                         <div class="order-product">
                                             <div class="order-product-pic">
@@ -286,15 +286,15 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                 <div class="delivery-info">
                                     <div class="delivery-title-left">
                                         <div class="order-p">
-                                            <p>楊彬彬</p>
-                                            <p>台北市大安區復興南路一段390號2樓</p>
+                                            <p><?= $memberorders[0]['recipient_name'] ?></p>
+                                            <p><?= $memberorders[0]['address'] ?></p>
                                         </div>
                                     </div>
                                     <div class="delivery-title-center">
-                                        <div>宅配到府</div>
+                                        <div><?= $memberorders[0]['delivery'] ?></div>
                                     </div>
                                     <div class="delivery-title-right">
-                                        <div>信用卡刷卡</div>
+                                        <div><?= $memberorders[0]['pay'] ?></div>
                                     </div>
                                 </div>
                             </div>
