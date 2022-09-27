@@ -242,6 +242,10 @@ $bold: 900;
                         align-items: center;
                         padding: 0px 30px;
                         margin-top: 15px;
+                        @media screen and (max-width:991px) {
+                            min-height: 250px;
+                        }
+                        // min-height: 400px;
 
                         .mydetailstop {
                             padding-top: 20px;
@@ -836,8 +840,8 @@ $bold: 900;
                                         margin: 0 0 10px 0;
 
                                         .product-image {
-                                            width: 150px;
-                                            height: 150px;
+                                            width: 140px;
+                                            height: 140px;
                                             background-image: url(../images/products/71-1.jpeg);
                                             background-size: cover;
                                             position: relative;
@@ -1129,10 +1133,6 @@ $bold: 900;
                                 width: 20%;
                                 text-align: left;
                             }
-                            .f-birthIcon {
-                                width: 15%;
-                                text-align: center;
-                            }
                             .f-watchDetails {
                                 width: 15%;
                                 text-align: center;
@@ -1150,6 +1150,11 @@ $bold: 900;
                                 display: flex;
                                 align-items: center;
                                 padding: 18px 0 18px;
+
+                                .birthdayIcon {
+                                    width: 15%;
+                                    text-align: center;
+                                }
 
                                 .friendName {
                                     width: 35%;
@@ -1174,11 +1179,6 @@ $bold: 900;
                                         color: $dark-gray;
                                         text-align: left;
                                     }
-                                }
-
-                                .birthdayIcon {
-                                    width: 15%;
-                                    text-align: center;
                                 }
                                 
                                 .watchFriendIcon {
@@ -1472,7 +1472,7 @@ $bold: 900;
                             .coupons {
                                 width: 100%;
                                 height: auto;
-                                margin: 0 0 20px 0;
+                                margin-bottom: 25px;
                                 .coupon {
                                     width: 100%;
                                     img {
@@ -1643,6 +1643,7 @@ $bold: 900;
                         // }
 
                         .noticeborder {
+                            width: 100%;
                             overflow: hidden;
                             margin-top: 20px;
 
@@ -2168,6 +2169,21 @@ $bold: 900;
                                 }
                             }
                         }
+                        .whiteBg {
+                            .myWishLists {
+                                justify-content: left;
+                                .wishList {
+                                    a {
+                                        .product-card {
+                                            .product-image {
+                                                width: 190px;
+                                                height: 190px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -2391,6 +2407,9 @@ $bold: 900;
 
                                         .myIntro-info {
                                             width: 65%;
+                                            p {
+                                                font-size: $p-font-size;
+                                            }
                                         }
                                     }
 
@@ -2403,6 +2422,9 @@ $bold: 900;
 
                                         .myIntro-info {
                                             width: 65%;
+                                            p {
+                                                font-size: $p-font-size;
+                                            }
                                         }
                                     }
 
@@ -2415,6 +2437,9 @@ $bold: 900;
 
                                         .myIntro-info {
                                             width: 65%;
+                                            p {
+                                                font-size: $p-font-size;
+                                            }
                                         }
                                     }
 
@@ -2427,6 +2452,9 @@ $bold: 900;
 
                                         .myIntro-info {
                                             width: 65%;
+                                            p {
+                                                font-size: $p-font-size;
+                                            }
                                         }
                                     }
 
@@ -2439,6 +2467,9 @@ $bold: 900;
 
                                         .myIntro-info {
                                             width: 65%;
+                                            p {
+                                                font-size: $p-font-size;
+                                            }
                                         }
                                     }
 
@@ -2451,6 +2482,9 @@ $bold: 900;
 
                                         .myIntro-info {
                                             width: 65%;
+                                            p {
+                                                font-size: $p-font-size;
+                                            }
                                         }
                                     }
                                 }
@@ -2605,7 +2639,7 @@ $bold: 900;
                             .myWishLists {
                                 width: 100%;
                                 height: 520px;
-                                overflow: scroll;
+                                overflow-y: scroll;
                                 justify-content: left;
                             }
                         }
@@ -2923,7 +2957,7 @@ $bold: 900;
                                 background-color: rgba(255, 255, 255, 0);
                                 flex-direction: row;
                                 justify-content: left;
-                                margin: 20px 0 30px 0;
+                                margin: 30px 0;
 
                                 p {
                                     font-size: $h6-font-size;
@@ -2967,7 +3001,7 @@ $bold: 900;
                             .validCoupon {
                                 width: 100%;
                                 height: 440px;
-                                overflow: scroll;
+                                overflow-y: scroll;
                                 .coupons {
                                     .coupon {
                                         img {
@@ -3028,10 +3062,20 @@ $bold: 900;
 
                             .noticeborder {
                                 width: 100%;
-                                height: 570px;
-                                overflow: scroll;
-                                margin-bottom: 20px;
-                                // margin-top: 20px;
+                                height: 560px;
+                                overflow-y: scroll;
+                                margin-bottom: 30px;
+                                margin-top: 30px;
+                                .noticeDetails {
+                                    .noticeDetail {
+                                        p.noticeDate {
+                                            font-size: $p-font-size;
+                                        }
+                                        p.notice {
+                                            font-size: $p-font-size;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -3529,63 +3573,6 @@ $bold: 900;
     }
 }
 
-// .coupon-lightbox-err {
-//     position: absolute;
-//     right: 100%;
-//     .coupon-lightbox-black {
-//         z-index: 20;
-//         position: fixed;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         background-color: rgba(0, 0, 0, 0.7);
-//     }
-
-//     .coupon-lightbox-bg {
-//         z-index: 21;
-//         position: fixed;
-//         top: 50vh;
-//         left: 50vw;
-//         transform: translateX(-50%) translateY(-50%);
-//         width: 90%;
-//         max-width: 400px;
-//         font-family: "GenSenRounded-B";
-//         font-weight: $bold;
-//         text-align: center;
-//         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
-//         padding: 76px 0;
-
-//         .coupon-warning {
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             margin: 10px 30px;
-
-//             .coupon-warn-icon {
-//                 margin-right: 20px;
-//                 padding-bottom: 10px;
-//             }
-
-//             .coupon-warn-text {
-//                 font-size: $h6-font-size;
-//                 color: $super-dark;
-//                 padding-bottom: 10px;
-//             }
-//         }
-
-//         button {
-//             border: none;
-//             background-color: $super-dark;
-//             border-radius: 10px;
-//             color: $white;
-//             font-size: $p-font-size;
-//             padding: 10px 30px;
-//             margin-top: 10px;
-//         }
-//     }
-// }
-
 // ------------------lightbox-success-----------------
 
 .coupon-lightbox-success {
@@ -3644,60 +3631,3 @@ $bold: 900;
         margin-top: 10px;
     }
 }
-
-// .coupon-lightbox-success {
-
-//     // display: none;
-//     .coupon-lightbox-black {
-//         z-index: 20;
-//         position: fixed;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         background-color: rgba(0, 0, 0, 0.7);
-//     }
-
-//     .coupon-lightbox-bg {
-//         z-index: 21;
-//         position: fixed;
-//         top: 50vh;
-//         left: 50vw;
-//         transform: translateX(-50%) translateY(-50%);
-//         width: 90%;
-//         max-width: 400px;
-//         font-family: "GenSenRounded-B";
-//         font-weight: $bold;
-//         text-align: center;
-//         background: url("../images/error-bg.png")center center/100% 100% no-repeat;
-//         padding: 76px 0;
-
-//         .coupon-warning {
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             margin: 10px 30px;
-
-//             .coupon-true-icon {
-//                 margin-right: 20px;
-//                 padding-bottom: 10px;
-//             }
-
-//             .coupon-true-text {
-//                 font-size: $h6-font-size;
-//                 color: $super-dark;
-//                 padding-bottom: 10px;
-//             }
-//         }
-
-//         button {
-//             border: none;
-//             background-color: $super-dark;
-//             border-radius: 10px;
-//             color: $white;
-//             font-size: $p-font-size;
-//             padding: 10px 30px;
-//             margin-top: 10px;
-//         }
-//     }
-// }

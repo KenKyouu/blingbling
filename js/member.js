@@ -63,3 +63,4 @@ $('.newcoupon').click(function(){
 $('button.ok').click(function(){
   $('.coupon-lightbox-err').removeClass('show').css('left', '-100%');
 });
+

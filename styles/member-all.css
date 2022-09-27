@@ -136,6 +136,11 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
+@media screen and (max-width: 991px) {
+  .wrap .containerr .main .row .col .whiteBg {
+    min-height: 250px;
+  }
+}
 .wrap .containerr .main .row .col .whiteBg .mydetailstop {
   padding-top: 20px;
 }
@@ -638,8 +643,8 @@
   margin: 0 0 10px 0;
 }
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   background-image: url(../images/products/71-1.jpeg);
   background-size: cover;
   position: relative;
@@ -744,10 +749,6 @@
   width: 20%;
   text-align: left;
 }
-.wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-birthIcon {
-  width: 15%;
-  text-align: center;
-}
 .wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-watchDetails {
   width: 15%;
   text-align: center;
@@ -764,6 +765,10 @@
   display: flex;
   align-items: center;
   padding: 18px 0 18px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .birthdayIcon {
+  width: 15%;
+  text-align: center;
 }
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendName {
   width: 35%;
@@ -784,10 +789,6 @@
   font-size: 14px;
   color: #4c4948;
   text-align: left;
-}
-.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .birthdayIcon {
-  width: 15%;
-  text-align: center;
 }
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon {
   width: 15%;
@@ -1013,7 +1014,7 @@
 .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons {
   width: 100%;
   height: auto;
-  margin: 0 0 20px 0;
+  margin-bottom: 25px;
 }
 .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon {
   width: 100%;
@@ -1048,6 +1049,7 @@
   margin-top: 15px;
 }
 .wrap .containerr .main .row .col .whiteBg .noticeborder {
+  width: 100%;
   overflow: hidden;
   margin-top: 20px;
 }
@@ -1458,6 +1460,13 @@
   .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p {
     width: 100%;
   }
+  .wrap .containerr .main .row .col .whiteBg .myWishLists {
+    justify-content: left;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
+    width: 190px;
+    height: 190px;
+  }
 }
 @media screen and (min-width: 700px) {
   .wrap .containerr .main .row .col .whiteBg {
@@ -1614,6 +1623,9 @@
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-info {
     width: 65%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-info p {
+    font-size: 16px;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender {
     padding-top: 30px;
   }
@@ -1622,6 +1634,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-info {
     width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-info p {
+    font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday {
     padding-top: 30px;
@@ -1632,6 +1647,9 @@
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-info {
     width: 65%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-info p {
+    font-size: 16px;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email {
     padding-top: 30px;
   }
@@ -1640,6 +1658,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-info {
     width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-info p {
+    font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone {
     padding-top: 30px;
@@ -1650,6 +1671,9 @@
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-info {
     width: 65%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-info p {
+    font-size: 16px;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address {
     padding-top: 30px;
   }
@@ -1658,6 +1682,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-info {
     width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-info p {
+    font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 button.editMyInfo {
     margin: 35px 0 0 0;
@@ -1778,7 +1805,7 @@
   .wrap .containerr .main .row .col .col-lg-9 .myWishLists {
     width: 100%;
     height: 520px;
-    overflow: scroll;
+    overflow-y: scroll;
     justify-content: left;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
@@ -2032,7 +2059,7 @@
     background-color: rgba(255, 255, 255, 0);
     flex-direction: row;
     justify-content: left;
-    margin: 20px 0 30px 0;
+    margin: 30px 0;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -2072,7 +2099,7 @@
   .wrap .containerr .main .row .col .col-lg-9 .validCoupon {
     width: 100%;
     height: 440px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 .validCoupon .coupons .coupon img {
     width: 80%;
@@ -2088,9 +2115,16 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .noticeborder {
     width: 100%;
-    height: 570px;
-    overflow: scroll;
-    margin-bottom: 20px;
+    height: 560px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .noticeborder .noticeDetails .noticeDetail p.noticeDate {
+    font-size: 16px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .noticeborder .noticeDetails .noticeDetail p.notice {
+    font-size: 16px;
   }
   .inputNewFriend .lightbox-newFriendDetails {
     width: 700px;
