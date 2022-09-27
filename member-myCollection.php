@@ -324,4 +324,5 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
   </div>
 </div>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script src="./js/member.js"></script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
