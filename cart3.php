@@ -79,20 +79,20 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                     <div class="col-md-2 px-0">數量</div>
                     <div class="col-md-2 px-0">小計</div>
                 </div>
-                <?php foreach($order_details as $k=>$v): ?>
-                <div class="j-list-item">
-                    <div class="j-list-img">
-                        <img src="images/products/<?= $v['product_sid'] ?>_1.png" alt="<?= $v['name'] ?>">
-                    </div>
-                    <div class="j-list-sub">
-                        <p><?= $v['name'] ?></p>
-                        <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4" data-val="<?= $v['price'] ?>"></div>
-                            <div class="j-amount col-6 px-0 col-md-4" data-val="<?= $v['quantity'] ?>"></div>
-                            <div class="j-money col-6 px-0 col-md-4" data-val="<?= $v['price']*$v['quantity'] ?>"></div>
+                <?php foreach ($order_details as $k => $v) : ?>
+                    <div class="j-list-item">
+                        <div class="j-list-img">
+                            <img src="images/products/<?= $v['product_sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                        </div>
+                        <div class="j-list-sub">
+                            <p><?= $v['name'] ?></p>
+                            <div class="j-list-num">
+                                <div class="j-money-single  px-0 col-md-4" data-val="<?= $v['price'] ?>"></div>
+                                <div class="j-amount col-6 px-0 col-md-4" data-val="<?= $v['quantity'] ?>"></div>
+                                <div class="j-money col-6 px-0 col-md-4" data-val="<?= $v['price'] * $v['quantity'] ?>"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
                 <!-- <div class="j-list-item">
                     <div class="j-list-img">
@@ -162,11 +162,11 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                 <div class="col total-col">
                     <h3>商品小計</h3>
                 </div>
-                
+
                 <div class="col price-col">
-                    <h3 class="j-product-price" ></h3>
+                    <h3 class="j-product-price"></h3>
                 </div>
-               
+
             </div>
 
             <div class="row total-row no-gutters">
@@ -193,7 +193,7 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                 </div>
                 <div class="col price-col">
                     <h3>
-                        <span>-</span> 
+                        <span>-</span>
                         <span class="j-giftvoucher" data-val="<?= $orders[0]['gift_voucher_use'] ?>"></span>
                     </h3>
                 </div>
@@ -211,7 +211,7 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                 </div>
             </div>
 
-            
+
 
             <div class="row total-row pt-3 no-gutters">
                 <div class="col-12 total-col-boder">
@@ -281,7 +281,7 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                             <span class="pl-1 j-coupon" data-val="<?= $orders[0]['coupon_use'] ?>"></span>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="j-total-kv">
@@ -667,7 +667,7 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
 </div>
 
 
-<!------------------------------ 訂單留言備註 --------------------------------------->
+<!------------------------------ 訂單留言備註 --------------------------------->
 <div class="s-order-remark-section">
     <div class="container">
         <div class="s-order-remark-wrap">
@@ -679,15 +679,15 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
 
             <div class="s-remark-wrap">
                 <label for="remark"></label>
-                <textarea name="remark" id="remark" class="s-input" placeholder="有什麼想要跟我們說的嗎？"></textarea>
+                <textarea name="remark" id="remark" class="s-input" placeholder="有什麼想要跟我們說的嗎？" maxlength="100"></textarea>
             </div>
 
             <div class="row btn-row pt-3">
                 <div class="col col-2"></div>
                 <div class="col col-2"></div>
                 <div class="col col-2"></div>
-                <div class="col col-3">
-                    <div class="s-order-text">100</div>
+                <div class="col col-3 pt-3">
+                    <span class="s-order-text">0/100</span>
                 </div>
                 <div class="col col-3">
                     <button>送出</button>
@@ -704,11 +704,11 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
         <div class="s-order-cta">
             <div class="row">
                 <div class="col">
-                    <button>繼續選購</button>
+                    <button>繼續挑選禮物</button>
                 </div>
 
                 <div class="col">
-                    <button class="cart1-check">查看訂單</button>
+                    <button class="cart1-check">查看我的訂單</button>
                 </div>
 
             </div>
