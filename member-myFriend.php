@@ -139,6 +139,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                             </button>
                         </div>
                         <div class="friendGroupTitle">
+                            <div class="f-gift"></div>
                             <div class="f-name"><p>好友名稱</p></div>
                             <div class="f-birth"><p>生日</p></div>
                             <div class="f-watchDetails"><p>查看詳細頁面</p></div>
