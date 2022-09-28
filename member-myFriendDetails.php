@@ -278,7 +278,7 @@ if (empty($r)) {
                     <select name="gender" placeholder="請選擇" required>
                         <option value="male">男</option>
                         <option value="female">女</option>
-                        <option value="others">不顯示</option>
+                        <!-- <option value="others">不顯示</option> -->
                     </select>
                 </div>
             </div>
