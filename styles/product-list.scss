@@ -591,9 +591,18 @@ body {
         }
         .product-title {
           width: 170px;
+          height: 55px;
           padding: 5px;
+          margin: auto;
           @media screen and (min-width: 992px) {
             width: 250px;
+            height: 75px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+          }
+          @media screen and (min-width: 1200px) {
+            width: 275px;
+            height: 75px;
             padding-top: 15px;
             padding-bottom: 15px;
           }
@@ -614,8 +623,12 @@ body {
         .product-price {
           width: 170px;
           padding: 5px;
+          margin: auto;
           @media screen and (min-width: 992px) {
             width: 250px;
+          }
+          @media screen and (min-width: 1200px) {
+            width: 275px;
           }
           p {
             color: $deep-brown;

@@ -9,16 +9,25 @@ $lowp = isset($_GET['lowp']) ? intval($_GET['lowp']) : 0; // 篩選的最低價�
 $highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高價格
 $qsp = []; // query string parameters
 $where = ' WHERE 1 ';
-if ($cate) {
+// if ($cate) {
+//     $where .= " AND class_sid=$cate ";
+//     $qsp['cate'] = $cate;
+// }
+if ($cate > 0 and $cate < 9) {
+    $where .= " AND parent=$cate ";
+    $qsp['cate'] = $cate;
+} else if ($cate > 8) {
     $where .= " AND class_sid=$cate ";
     $qsp['cate'] = $cate;
 }
+// echo $where;
+// exit;
 $products = [];
 $cates = $pdo->query("SELECT * FROM class WHERE parent=$cate")->fetchAll();
 
 $join = $pdo->query("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid")->fetchAll();
-//echo json_encode($join);
-//exit;
+// echo json_encode($join);
+// exit;
 
 $catename = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
 if ($cate == 0) {
@@ -27,7 +36,8 @@ if ($cate == 0) {
     $products = $pdo->query("SELECT * FROM product WHERE `class_sid`= $cate")->fetchAll();
 };
 // $products = $pdo->query("SELECT * FROM product)->fetchAll();
-$t_sql = "SELECT COUNT(1) FROM product $where";
+// $t_sql = "SELECT COUNT(1) FROM product $where";
+$t_sql = "SELECT COUNT(1) FROM `class` INNER JOIN `product` ON product.class_sid=class.sid $where";
 $totalRows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
 $totalPages = ceil($totalRows / $perPage);
 $rows = [];
@@ -40,8 +50,8 @@ if ($totalRows > 0) {
         header('Location: ?page=' . $totalPages);
         exit;
     }
-    $sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
-    // $sql = sprintf("SELECT * FROM `product` %s $cate ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
+    //$sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
+    $sql = sprintf("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid %s ORDER BY product.sid DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
     $rows = $pdo->query($sql)->fetchAll();
 }
 ?>
