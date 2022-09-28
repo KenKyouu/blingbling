@@ -422,7 +422,7 @@ body {
         padding-bottom: 3px;
         color: $white;
         font-family: "GenSenRounded-M";
-        font-size: $p-font-size;
+        font-size: $h6-font-size;
         @media screen and (min-width: 768px) {
           font-size: $h5-font-size;
         }
@@ -433,6 +433,9 @@ body {
     width: 100%;
     overflow: hidden;
     // border-bottom: 2px solid $gray;
+    @media screen and (min-width: 768px) {
+      height: 93px;
+    }
     .slider-bar {
       //   width: 650px;
       padding: 0 15px;
@@ -508,10 +511,10 @@ body {
   }
   .product-list {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     padding: 0 6px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     margin: auto;
     @media screen and (min-width: 768px) {
       width: 85%;
@@ -524,6 +527,24 @@ body {
     @media screen and (min-width: 1200px) {
       width: calc(100% - 600px);
       margin: 0 300px;
+    }
+    @media (max-width: 549px) {
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: 835px) and (min-width: 550px) {
+      grid-template-columns: auto auto auto;
+    }
+    @media (max-width: 1199px) and (min-width: 992px) {
+      grid-template-columns: auto auto auto;
+    }
+    @media (max-width: 1449px) and (min-width: 1200px) {
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: 1719px) and (min-width: 1450px) {
+      grid-template-columns: auto auto auto;
+    }
+    @media screen and (min-width: 1720px) {
+      grid-template-columns: auto auto auto auto;
     }
     a {
       text-decoration: none;
@@ -632,20 +653,179 @@ body {
   }
 }
 
-// .filter-page-pc {
-//   position: fixed;
-//   top: 0;
-//   z-index: 205;
-//   width: 100%;
-//   height: 100vh;
-//   background-color: rgba($color: $lake-green, $alpha: 0.95);
-//   .filter-page-pc-back {
-//     padding: 100px 0 0 30px;
-//     span.filter-pc-back {
-//       cursor: pointer;
-//     }
-//   }
-// }
+.filter-page-pc {
+  position: fixed;
+  top: 0;
+  z-index: 205;
+  width: 100%;
+  height: 100vh;
+  right: 100%;
+  background-color: rgba($color: $lake-green, $alpha: 0.95);
+  overflow: scroll;
+  padding-bottom: 100px;
+  .filter-page-pc-back {
+    padding: 100px 0 0 30px;
+    span.filter-pc-back {
+      cursor: pointer;
+    }
+  }
+  .filter-class-pc {
+    margin: 60px 0 0 100px;
+    .button-filter-pc {
+      ul {
+        margin: 15px 0;
+        li {
+          margin: 40px 0;
+          a {
+            text-decoration: none;
+            color: $white;
+            font-size: $h6-font-size;
+            font-family: "GenSenRounded-M";
+            padding: 10px 30px;
+            border: 2px solid $white;
+            border-radius: 28px;
+          }
+        }
+      }
+    }
+    .class-filter-pc {
+      margin-top: 60px;
+      h2 {
+        color: $white;
+        font-size: $h5-font-size;
+        font-family: "GenSenRounded-M";
+      }
+      .horizon {
+        margin-top: 15px;
+        width: 200px;
+        height: 2px;
+        background-color: $white;
+      }
+      .class-name {
+        ul {
+          margin-left: 20px;
+          li {
+            margin: 20px 0;
+            a {
+              text-decoration: none;
+              color: $white;
+              font-size: $h6-font-size;
+              font-family: "GenSenRounded-M";
+            }
+          }
+        }
+      }
+    }
+    .gender-filter-pc {
+      margin-top: 60px;
+      h2 {
+        color: $white;
+        font-size: $h5-font-size;
+        font-family: "GenSenRounded-M";
+      }
+      .horizon {
+        margin-top: 15px;
+        width: 200px;
+        height: 2px;
+        background-color: $white;
+      }
+      .gender {
+        margin-left: 20px;
+        input {
+          margin: 20px 0;
+        }
+        label {
+          margin: 0 40px 0 10px;
+          color: $white;
+          font-size: $h6-font-size;
+          font-family: "GenSenRounded-M";
+        }
+      }
+    }
+    .color-filter-pc {
+      margin-top: 60px;
+      h2 {
+        color: $white;
+        font-size: $h5-font-size;
+        font-family: "GenSenRounded-M";
+      }
+      .horizon {
+        margin-top: 15px;
+        width: 200px;
+        height: 2px;
+        background-color: $white;
+      }
+      .color {
+        margin-left: 20px;
+        padding-top: 10px;
+        .color-content {
+          display: flex;
+          align-items: center;
+          input {
+            margin: 15px 0;
+          }
+          label {
+            display: flex;
+            align-items: center;
+            margin: 0 40px 0 30px;
+            color: $white;
+            font-size: $h6-font-size;
+            font-family: "GenSenRounded-M";
+          }
+        }
+      }
+    }
+    .price-filter-pc {
+      margin-top: 60px;
+      h2 {
+        color: $white;
+        font-size: $h5-font-size;
+        font-family: "GenSenRounded-M";
+      }
+      .horizon {
+        margin-top: 15px;
+        width: 200px;
+        height: 2px;
+        background-color: $white;
+      }
+      .price {
+        margin-left: 20px;
+        padding-top: 35px;
+        display: flex;
+        align-items: center;
+        h4 {
+          color: $white;
+          font-size: $h7-font-size;
+          font-family: "GenSenRounded-M";
+        }
+        input {
+          margin: 0 15px;
+          padding: 5px;
+          width: 80px;
+          border: 2px solid $white;
+          border-radius: 5px;
+          font-size: $h7-font-size;
+          font-family: "GenSenRounded-M";
+          &:focus {
+            outline: none;
+            border: 3px solid $light-lake-green;
+          }
+        }
+      }
+    }
+    button.filter-submit-pc {
+      margin-top: 60px;
+      margin-left: 20px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: $super-dark;
+      color: $white;
+      font-size: $h7-font-size;
+      font-family: "GenSenRounded-M";
+    }
+  }
+}
 
 .filter-page,
 .gender-filter-detail,

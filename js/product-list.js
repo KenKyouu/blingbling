@@ -40,6 +40,14 @@ $(".filter-detail-back").click(function () {
     ".gender-filter-detail, .price-filter-detail, .color-filter-detail"
   ).removeClass("filter-show");
 });
+$(".filter-button-pc").click(function () {
+  $(".filter-page-pc").addClass("filter-show");
+  $("body").addClass("body-hidden");
+});
+$(".filter-page-pc-back").click(function () {
+  $(".filter-page-pc").removeClass("filter-show");
+  $("body").removeClass("body-hidden");
+});
 
 // gender-filter-detail
 
