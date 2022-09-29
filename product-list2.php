@@ -7,22 +7,49 @@ $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
 $lowp = isset($_GET['lowp']) ? intval($_GET['lowp']) : 0; // 篩選的最低價格
 $highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高價格
+$gender = isset($_GET['gender']) ? $_GET['gender'] : '';
 $colors = [];
-if (!empty($_GET['color'])) {
-    $colors = $_GET['color'];
-}
+
 
 $qsp = []; // query string parameters
-$where = ' WHERE 1 ';
+
+$ps_where = ' WHERE 1 ';
+$ps_where2 = '';
+$isGetColor = false;
+if (!empty($gender)) {
+    $ps_where .= sprintf(" AND `gender`=%s ", $pdo->quote($gender));
+    $qsp['gender'] = $gender;
+}
+if (!empty($_GET['color'])) {
+    $isGetColor = true;
+    $colors = $_GET['color'];
+
+    $colors2 = [];
+
+    foreach ($colors as $c) {
+        $colors2[] = $pdo->quote($c); // prevent SQL Injection
+    }
+
+
+
+    $ps_where .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
+    $ps_where2 .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
+}
+
+// echo $ps_where;
+// exit;
 // if ($cate) {
 //     $where .= " AND class_sid=$cate ";
 //     $qsp['cate'] = $cate;
 // }
+
+$where = ' WHERE 1 ';
+
 if ($cate > 0 and $cate < 9) {
-    $where .= " AND parent=$cate ";
+    $where .= " AND c.parent=$cate ";
     $qsp['cate'] = $cate;
 } else if ($cate > 8) {
-    $where .= " AND class_sid=$cate ";
+    $where .= " AND p.class_sid=$cate ";
     $qsp['cate'] = $cate;
 }
 // echo $where;
@@ -34,6 +61,9 @@ $join = $pdo->query("SELECT * FROM `class` INNER JOIN `product` ON product.class
 // echo json_encode($join);
 // exit;
 
+// " SELECT * FROM product_style WHERE 1 AND (`color`='black' OR `color`='gray') AND `gender`='male' "
+
+
 $catename = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
 if ($cate == 0) {
     $products = $pdo->query("SELECT * FROM product")->fetchAll();
@@ -42,9 +72,23 @@ if ($cate == 0) {
 };
 // $products = $pdo->query("SELECT * FROM product)->fetchAll();
 // $t_sql = "SELECT COUNT(1) FROM product $where";
-$t_sql = "SELECT COUNT(1) FROM `class` INNER JOIN `product` ON product.class_sid=class.sid $where";
+$newPsWhere = ($isGetColor) ? '' : $ps_where;
+$newPsWhere2 = ($isGetColor) ? $ps_where2 : '';
+// echo $newPsWhere . ", ";
+// echo $newPsWhere2 . ", ";
+
+$t_sql = "SELECT COUNT(distinct p.sid) FROM `class` c JOIN `product` p ON p.class_sid=c.sid
+JOIN (
+    SELECT * FROM product_style $newPsWhere 
+) ps ON p.sid=ps.product_sid
+$where" . $newPsWhere2;
+// echo $t_sql . ", ";
+
 $totalRows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
 $totalPages = ceil($totalRows / $perPage);
+// echo $totalPages . ",";
+// echo $totalRows;
+// exit;
 $rows = [];
 if ($totalRows > 0) {
     if ($page < 1) {
@@ -56,8 +100,21 @@ if ($totalRows > 0) {
         exit;
     }
     //$sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
-    $sql = sprintf("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid %s ORDER BY product.sid DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
+    $sql = sprintf("
+    SELECT p.*, ps.color, ps.gender, count(distinct p.sid) FROM `class` c JOIN `product` p ON p.class_sid=c.sid
+    Left JOIN (
+        SELECT * FROM product_style $newPsWhere
+    ) ps ON p.sid=ps.product_sid
+    %s group by p.sid
+    LIMIT %s, %s", $where . $newPsWhere2, ($page - 1) * $perPage, $perPage);
+
+    // echo $sql;
+    // exit;
+
+    // $sql = sprintf("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid %s ORDER BY product.sid DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
     $rows = $pdo->query($sql)->fetchAll();
+    // echo $rows;
+    // exit;
 }
 ?>
 
@@ -192,7 +249,10 @@ if ($totalRows > 0) {
                 </ul>
             </div>
         </div>
-        <form name="filter_pc" action="">
+        <form name="filter_pc" action="product-list2.php?cate=2">
+            <?php foreach ($_GET as $gKey => $gValue) : ?>
+                <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
+            <?php endforeach; ?>
             <div class="gender-filter-pc">
                 <h2>性別</h2>
                 <div class="horizon"></div>
@@ -239,106 +299,90 @@ if ($totalRows > 0) {
                 <h2>顏色</h2>
                 <div class="horizon"></div>
                 <div class="color">
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="black-pc" value="black">
-                        <label for="black-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="black" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;黑色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="white-pc" value="white">
-                        <label for="white-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="white" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;白色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="gray-pc" value="gray">
-                        <label for="gray-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#C2C2C2" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;灰色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="brown-pc">
-                        <label for="brown-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#7A482D" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;棕色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="rice-pc">
-                        <label for="rice-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#F1DAAD" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;米色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="green-pc">
-                        <label for="green-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#7EA083" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;綠色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="blue-pc">
-                        <label for="blue-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#548FBE" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;藍色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="purple-pc">
-                        <label for="purple-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#9149AB" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;紫色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="yellow-pc">
-                        <label for="yellow-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#FFCD51" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;黃色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="pink-pc">
-                        <label for="pink-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#EE92AD" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;粉色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="red-pc">
-                        <label for="red-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#BD392A" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;紅色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="orange-pc">
-                        <label for="orange-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#CB6B28" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;橘色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="silver-pc">
-                        <label for="silver-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#D4CFC6" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;銀色</span></label>
-                    </div>
-                    <div class="color-content">
-                        <input type="checkbox" name="color[]" id="gold-pc">
-                        <label for="gold-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="9.5" fill="#FFE39F" stroke="white" />
-                                </svg>
-                                &nbsp;&nbsp;金色</span></label>
-                    </div>
+                    <?php
+                    $op_colors = [
+                        [
+                            'name_en' => 'black',
+                            'name_zh' => '黑色',
+                            'web' => '#000000'
+                        ],
+                        [
+                            'name_en' => 'white',
+                            'name_zh' => '白色',
+                            'web' => '#ffffff'
+                        ],
+                        [
+                            'name_en' => 'gray',
+                            'name_zh' => '灰色',
+                            'web' => '#C2C2C2'
+                        ],
+                        [
+                            'name_en' => 'brown',
+                            'name_zh' => '棕色',
+                            'web' => '#7A482D'
+                        ],
+                        [
+                            'name_en' => 'rice',
+                            'name_zh' => '米色',
+                            'web' => '#F1DAAD'
+                        ],
+                        [
+                            'name_en' => 'green',
+                            'name_zh' => '綠色',
+                            'web' => '#7EA083'
+                        ],
+                        [
+                            'name_en' => 'blue',
+                            'name_zh' => '藍色',
+                            'web' => '#548FBE'
+                        ],
+                        [
+                            'name_en' => 'purple',
+                            'name_zh' => '紫色',
+                            'web' => '#9149AB'
+                        ],
+                        [
+                            'name_en' => 'yellow',
+                            'name_zh' => '黃色',
+                            'web' => '#FFCD51'
+                        ],
+                        [
+                            'name_en' => 'pink',
+                            'name_zh' => '粉色',
+                            'web' => '#EE92AD'
+                        ],
+                        [
+                            'name_en' => 'red',
+                            'name_zh' => '紅色',
+                            'web' => '#BD392A'
+                        ],
+                        [
+                            'name_en' => 'orange',
+                            'name_zh' => '橘色',
+                            'web' => '#CB6B28'
+                        ],
+                        [
+                            'name_en' => 'silver',
+                            'name_zh' => '銀色',
+                            'web' => '#D4CFC6'
+                        ],
+                        [
+                            'name_en' => 'gold',
+                            'name_zh' => '金色',
+                            'web' => '#FFE39F'
+                        ]
+                    ];
+                    ?>
+                    <?php foreach ($op_colors as $opc) : ?>
+                        <div class="color-content">
+                            <input type="checkbox" name="color[]" id="<?= $opc['name_en'] ?>-pc" value="<?= $opc['name_en'] ?>">
+                            <label for="<?= $opc['name_en'] ?>-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="9.5" fill="<?= $opc['web'] ?>" stroke="white" />
+                                    </svg>
+                                    &nbsp;&nbsp;<?= $opc['name_zh'] ?></span></label>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-
             </div>
             <div class="price-filter-pc">
                 <h2>價格</h2>
@@ -556,110 +600,15 @@ if ($totalRows > 0) {
     </div>
     <div class="color-filter-content">
         <form class="color-form" action="">
-            <label for="black" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="black" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;黑色</span>
-                <input type="checkbox" name="color" id="black" value="black" />
-            </label>
-            <label for="white" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="white" stroke="white" />
-                    </svg>
-
-                    &nbsp;&nbsp;白色</span>
-                <input type="checkbox" name="color" id="white" value="white" />
-            </label>
-            <label for="gray" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#C2C2C2" stroke="white" />
-                    </svg>
-
-                    &nbsp;&nbsp;灰色</span>
-                <input type="checkbox" name="color" id="gray" value="gray" />
-            </label>
-            <label for="brown" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#7A482D" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;棕色</span>
-                <input type="checkbox" name="color" id="brown" value="brown" />
-            </label>
-            <label for="rice" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#F1DAAD" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;米色</span>
-                <input type="checkbox" name="color" id="rice" value="rice" />
-            </label>
-            <label for="green" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#7EA083" stroke="white" />
-                    </svg>
-
-                    &nbsp;&nbsp;綠色</span>
-                <input type="checkbox" name="color" id="green" value="green" />
-            </label>
-            <label for="blue" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#548FBE" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;藍色</span>
-                <input type="checkbox" name="color" id="blue" value="blue" />
-            </label>
-            <label for="purple" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#9149AB" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;紫色</span>
-                <input type="checkbox" name="color" id="purple" value="purple" />
-            </label>
-            <label for="yellow" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#FFCD51" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;黃色</span>
-                <input type="checkbox" name="color" id="yellow" value="yellow" />
-            </label>
-            <label for="pink" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#EE92AD" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;粉色</span>
-                <input type="checkbox" name="color" id="pink" value="pink" />
-            </label>
-            <label for="red" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#BD392A" stroke="white" />
-                    </svg>
-
-                    &nbsp;&nbsp;紅色</span>
-                <input type="checkbox" name="color" id="red" value="red" />
-            </label>
-            <label for="orange" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#CB6B28" stroke="white" />
-                    </svg>
-
-                    &nbsp;&nbsp;橘色</span>
-                <input type="checkbox" name="color" id="orange" value="orange" />
-            </label>
-            <label for="silver" class="color-filter-radio">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#D4CFC6" stroke="white" />
-                    </svg>
-                    &nbsp;&nbsp;銀色</span>
-                <input type="checkbox" name="color" id="silver" value="silver" />
-            </label>
-            <label for="gold" class="color-filter-radio last">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="9.5" fill="#FFE39F" stroke="white" />
-                    </svg>
-
-                    &nbsp;&nbsp;金色</span>
-                <input type="checkbox" name="color" id="gold" value="gold" />
-            </label>
+            <?php foreach ($op_colors as $opc) : ?>
+                <label for="<?= $opc['name_en'] ?>" class="color-filter-radio">
+                    <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="9.5" fill="<?= $opc['web'] ?>" stroke="white" />
+                        </svg>
+                        &nbsp;&nbsp;<?= $opc['name_zh'] ?></span>
+                    <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" />
+                </label>
+            <?php endforeach; ?>
         </form>
     </div>
     <div class="filter-footer">
@@ -685,5 +634,15 @@ if ($totalRows > 0) {
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script>
     const colors = <?= json_encode($colors) ?>;
+
+    colors.forEach(v => {
+        const el = $('#' + v + '-pc');
+        // console.log(el)
+        if (el.length) {
+            el.prop('checked', true);
+        }
+
+
+    })
 </script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
