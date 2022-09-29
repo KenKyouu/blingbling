@@ -157,7 +157,7 @@ $pageName = 'kol'; // 頁面名稱，可以自定義
                             <div class="swiper-train">
                                 <div class="img-wrap d-flex">
                                     <img class="kol-img w-100" src="./images/kol_images/kol-image-02.png" alt="">
-                                    <button class="ctaBtn">CHECK NOW</button>
+                                    <button class="ctaBtn"><span>CHECK NOW</span></button>
                                 </div>
 
                                 <div class="article-content-wrap">

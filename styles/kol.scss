@@ -445,7 +445,8 @@ body {
                                     font-size: $ps-font-size;
                                     font-weight: 700;
                                     padding: 15px;
-                                    transition: .8;
+                                    transition: 0.5s all ease;
+                                    opacity: .7;
                                 }
                             }
                         }

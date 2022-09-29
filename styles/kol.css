@@ -312,7 +312,8 @@ body {
     font-size: 14px;
     font-weight: 700;
     padding: 15px;
-    transition: 0.8;
+    transition: 0.5s all ease;
+    opacity: 0.7;
   }
   .article-container .article .article-wrap .kol-wrap .swiper-wrap .article-content-wrap {
     width: 60%;

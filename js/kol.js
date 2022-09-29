@@ -68,14 +68,7 @@ function moveX(nowPage) {
 $('.article-page > svg').click(function () {
     nowPage = $(this).index();
     moveX(nowPage);
-
 })
-
-// // 圖片cta導購
-// $('.img-wrap > img').hover(function () {
-//     $('button').css('display', 'block');
-// })
-
 
 // 各文章標籤分類
 $('#mbNewsBeauty,#pcNewsBeauty').click(function () {
