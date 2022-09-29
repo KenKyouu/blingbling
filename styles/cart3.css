@@ -82,7 +82,7 @@ body {
 
 @media (min-width: 482px) and (max-width: 767.98px) {
   .s-total-list-wrap .container .s-list-info {
-    padding-top: 7rem;
+    padding-top: 6.5rem;
   }
 }
 .j-subtotal {
@@ -381,10 +381,6 @@ body {
   font-size: 16px;
   font-weight: 700;
   padding-top: 10px;
-  border: 2px solid #000000;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
   text-align: center;
   align-items: flex-end;
 }
@@ -419,10 +415,10 @@ body {
 }
 .s-order-cta-section .container .s-order-cta .row .col button {
   background-color: none;
-  border: 3px solid #7cb2af;
+  border: 3px solid #2d827d;
   color: #2d827d;
   font-family: "GenSenRounded-B";
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 10px;
   width: 100%;
   padding: 10px;
@@ -460,6 +456,10 @@ body {
   }
   .s-order-cta-section .container .s-order-cta .row .col button {
     padding: 15px;
+    font-size: 20px;
+  }
+  .s-order-cta-section .container .s-order-cta .row .col .cart1-check {
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -817,7 +817,7 @@ body {
   .j-list {
     width: 75%;
     margin-top: 4rem;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
   .j-list .j-list-bar {
     max-height: 120px;
