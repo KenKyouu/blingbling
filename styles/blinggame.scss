@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+// 顏色設定
+$super-dark: #000000;
+$dark-red: #a31c2d;
+$pink: #ca3f68;
+$red-pink: #d45a6a;
+$light-pink: #ee92ad;
+$dark-green: #2f5e36;
+$green: #7ea083;
+$lake-green: #2d827d;
+$light-lake-green: #7cb2af;
+$sky-blue: #5292b9;
+$light-sky-blue: #9fc8e1;
+$dark-blue: #154d7a;
+$blue: #548fbe;
+$brown: #7a482d;
+$khaki: #b28064;
+$orange: #cb6b28;
+$light-orange: #e1a77e;
+$coral: #bd392a;
+$light-coral: #f07f72;
+$dark-gray: #4c4948;
+$gray: #c2c2c2;
+$yellow: #ffcd51;
+$light-yellow: #ffe39f;
+$skin: #d4cfc6;
+$white: #ffffff;
+$light-brown: #d4cfc6;
+$deep-brown: #554d49;
+
+// 字體設定
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GenSenRounded-B"; // ps-cr
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"),
+    url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto"; // ps-e
+  src: url("../fonts/RobotoFlex.woff") format("woff"),
+    url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+// 字體大小設定
+// 不分字型
+$h1-font-size: 80px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: 20px;
+$h7-font-size: 18px;
+$p-font-size: 16px;
+$ps-font-size: 14px;
+
+// 字體粗細
+// 細字體不用下font-weight，粗字體再用下列變數
+// ex: font-weight: $bold;
+$bold: 900;
+
+// 以下兩種範例
+
+// h2.chinese {
+//   font-family: "GenSenRounded-M";
+//   font-size: 48px;
+//   font-weight: $bold;
+//   color: $coral;
+// }
+
+// h3.english {
+//   font-family: "Roboto";
+//   font-weight: $bold;
+//   font-size: 110px;
+//   color: $lake-green;
+// }
+// #canvas{
+//     width: 100vh;
+// }
+
+#app{
+  width: 1920px;
+  height: 1000px;
+  position: relative;
+  svg{
+    position: absolute;
+    font-size: $h1-font-size;
+    font-family: "GenSenRounded-B";
+    color: $lake-green;
+    top: 120px;
+    left: 100px;
+    z-index: 10; 
+  }
+  .winNum{
+      position: absolute;
+      font-size: $h2-font-size;
+      font-family: "GenSenRounded-B";
+      color: $lake-green;
+      top: 120px;
+      left: 160px;
+      z-index: 10;    
+  }
+  .gamePlayBtn{
+      cursor: pointer;
+      position: absolute;
+      z-index: 10;   
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img{
+          width: 300px;
+      }
+  }
+  .over{
+      display: none;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .box{
+          width: 371px;
+          img{
+              width: 300px;
+          }
+          p{
+            font-family: "GenSenRounded-B";
+            color: $lake-green;
+            font-size: $h3-font-size;
+          }
+          button{
+            padding: 0 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: $lake-green;
+            font-family: "GenSenRounded-B";
+            p{
+                font-size: $h5-font-size;
+                color:$white;
+            }
+          }
+        //   a{
+        //       text-decoration: none;
+        //       img{
+        //           display: block;
+        //           height: auto;
+        //           width: 400px;
+        //       }
+        //       display: block;
+        //       cursor: pointer;
+        //       width: 100px;
+        //       margin: 20px auto 0 auto;
+        //       img{
+        //           display: block;
+        //           width: 100%;
+        //           height: auto;
+        //       }
+        //   } 
+      }
+  }
+}
+
+.hpBar{
+  z-index: 10;
+  position: absolute;
+  top: 85px;
+  right: 150px;
+  // width: 145px;
+  display: flex;
+  align-items: center;
+  h2{
+    font-family: "GenSenRounded-B";
+    font-size: $h2-font-size;
+    color: $lake-green;
+    padding-right: 20px;
+  }
+  .hpBox{
+      width: 250px;
+      height: 40px;
+      border: 5px solid $lake-green;
+      border-radius: 20px;
+      .hp{
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          background-color: $light-lake-green;
+      }
+  }
+}
+
+
+

@@ -161,14 +161,14 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     <div></div>
                                 </div>
                                 <div class="order-step2">
-                                    <div class="step-circle">
+                                    <div class="step-circle2">
                                         <svg width="12" height="10" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.2114 0.213808L7.94052 9.48013C7.6553 9.76521 7.19535 9.76521 6.91013 9.48013L2.78859 5.36063C2.50337 5.07555 2.04343 5.07555 1.75821 5.36063L0.213914 6.90415C-0.0713047 7.18922 -0.0713047 7.64895 0.213914 7.93402L6.91013 14.6269C7.19535 14.912 7.6553 14.912 7.94052 14.6269L10.0013 12.5672L19.7861 2.78722C20.0713 2.50214 20.0713 2.04242 19.7861 1.75734L18.2418 0.213808C17.9566 -0.0712695 17.4941 -0.0712695 17.2114 0.213808Z" fill="#ffffff" />
                                         </svg>
                                     </div>
-                                    <div class="step-text">
+                                    <div class="step-text2">
                                         <p>已出貨</p>
-                                        <p>2022/08/29</p>
+                                        <!-- <p>2022/08/29</p> -->
                                     </div>
                                 </div>
                                 <div class="order-dash">
@@ -180,15 +180,15 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     <div></div>
                                 </div>
                                 <div class="order-step3">
-                                    <div class="step-circle">
+                                    <div class="step-circle2">
                                         <svg width="12" height="10" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.2114 0.213808L7.94052 9.48013C7.6553 9.76521 7.19535 9.76521 6.91013 9.48013L2.78859 5.36063C2.50337 5.07555 2.04343 5.07555 1.75821 5.36063L0.213914 6.90415C-0.0713047 7.18922 -0.0713047 7.64895 0.213914 7.93402L6.91013 14.6269C7.19535 14.912 7.6553 14.912 7.94052 14.6269L10.0013 12.5672L19.7861 2.78722C20.0713 2.50214 20.0713 2.04242 19.7861 1.75734L18.2418 0.213808C17.9566 -0.0712695 17.4941 -0.0712695 17.2114 0.213808Z" fill="#ffffff" />
                                         </svg>
                                     </div>
-                                    <div class="step-text">
+                                    <div class="step-text2">
                                         <p>已到貨
                                         </p>
-                                        <p>2022/08/30</p>
+                                        <!-- <p>2022/08/30</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -202,17 +202,17 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     <div class="order-p">商品</div>
                                 </div>
                                 <div class="title-center">
-                                    <div>尺寸</div>
-                                    <div>規格</div>
+                                    <!-- <div>尺寸</div>
+                                    <div>規格</div> -->
                                     <div>數量</div>
                                 </div>
                                 <div class="title-right">
                                     <div>小計</div>
                                 </div>
                             </div>
-
+                            
+                            <?php foreach ($r as $r) : ?>
                             <div class="detail-info">
-                                <?php foreach ($r as $r) : ?>
                                     <div class="title-left">
                                         <div class="order-product">
                                             <div class="order-product-pic">
@@ -228,17 +228,16 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                         </div>
                                     </div>
                                     <div class="title-center">
-                                        <div>S</div>
-                                        <div>白色</div>
+                                        <!-- <div>S</div>
+                                        <div>白色</div> -->
                                         <div><?= $r['quantity'] ?></div>
                                     </div>
                                     <div class="title-right">
                                         <div>NT$ <?= $r['price'] * $r['quantity'] ?></div>
-                                    </div>
-                                <?php endforeach; ?>
+                                    </div>        
                             </div>
-
-
+                            <?php endforeach; ?>
+                            
                             <div class="detail-price">
                                 <div class="price-left">
                                     <div>
@@ -256,13 +255,13 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                 </div>
                                 <div class="price-right">
                                     <div>
-                                        <p>NT$ <?= $memberorders[0]['package'] ?></p>
+                                        <p>$ <?= $memberorders[0]['package'] ?></p>
                                     </div>
                                     <div>
-                                        <p>NT$ <?= $memberorders[0]['freight'] ?></p>
+                                        <p>$ <?= $memberorders[0]['freight'] ?></p>
                                     </div>
                                     <div>
-                                        <p>-NT$ <?= $memberorders[0]['gift_voucher_use'] + $memberorders[0]['coupon_use'] ?></p>
+                                        <p>-$ <?= $memberorders[0]['gift_voucher_use'] + $memberorders[0]['coupon_use'] ?></p>
                                     </div>
                                     <div class="order-total-price">
                                         <p>NT$ <?= $memberorders[0]['amount'] ?></p>
@@ -301,7 +300,8 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
 
                             <div class="buy-again">
                                 <button>
-                                    <p>再買一次</p><svg width="18" height="18" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <p>再買一次</p>
+                                    <svg width="18" height="18" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#2d827d" stroke="#2d827d" stroke-miterlimit="10" />
                                         <path d="M25.4566 0.546045L25.4564 0.545871L25.454 0.543485C25.454 0.543467 25.454 0.543448 25.454 0.543429C25.396 0.485505 25.3006 0.485524 25.2426 0.543485L19.9379 5.84555L20.1516 6.05907L25.4566 0.756655C25.5145 0.698812 25.5145 0.603888 25.4566 0.546045Z" fill="#2d827d" stroke="#2d827d" />
                                         <path d="M18.0269 20.701C18.0269 21.2252 18.4521 21.6507 18.9773 21.6507C19.5025 21.6507 19.9277 21.2252 19.9277 20.701C19.9277 20.1767 19.5024 19.7512 18.9773 19.7512C18.4522 19.7512 18.0269 20.1767 18.0269 20.701Z" fill="#2d827d" stroke="#2d827d" />

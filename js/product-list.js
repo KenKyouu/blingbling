@@ -40,6 +40,14 @@ $(".filter-detail-back").click(function () {
     ".gender-filter-detail, .price-filter-detail, .color-filter-detail"
   ).removeClass("filter-show");
 });
+$(".filter-button-pc").click(function () {
+  $(".filter-page-pc").addClass("filter-show");
+  $("body").addClass("body-hidden");
+});
+$(".filter-page-pc-back").click(function () {
+  $(".filter-page-pc").removeClass("filter-show");
+  $("body").removeClass("body-hidden");
+});
 
 // gender-filter-detail
 
@@ -91,19 +99,46 @@ $(".filter-detail-back").click(function () {
 
 let colorArr = [];
 
+colorList = {
+  black: "黑色",
+  white: "白色",
+  gray: "灰色",
+  brown: "棕色",
+  rice: "米色",
+  green: "綠色",
+  blue: "藍色",
+  purple: "紫色",
+  yellow: "黃色",
+  pink: "粉色",
+  red: "紅色",
+  orange: "橘色",
+  silver: "銀色",
+  gold: "金色",
+};
+
 $(".filter-detail-back").click(function () {
   $("input[name=color]").each(function () {
     if ($(this).prop("checked")) {
-      console.log($(this).val());
+      // console.log($(this).val());
       colorArr.push($(this).val());
       // console.log(colorArr);
       // colorArr = [];
     }
     // TODO: 把顏色改成中文抓到#color-span
-    console.log(colorArr);
+
     // colorArr = [];
   });
-  colorArr = [];
+  let color_zh = "";
+  colorArr.forEach(function (el) {
+    // console.log(colorList[el]);
+    color_zh += colorList[el] + ", ";
+  });
+  // console.log(color_zh.substring(0, color_zh.length - 1));
+  $("#color-span")
+    .text(color_zh.substring(0, color_zh.length - 2))
+    .css("color", "#fff");
+  // console.log(colorArr);
+  // colorArr = [];
 });
 
 // click like

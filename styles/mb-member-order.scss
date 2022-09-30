@@ -277,12 +277,13 @@ $bold: 900;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                padding: 0 5px 0 5px;
+                                padding: 0 20px 0 20px;
                                 font-family: "GenSenRounded-B";
                                 font-size: $p-font-size;
                                 color:$dark-gray ;
                                 @media (max-width:768px) {
                                     font-size: $ps-font-size;
+                                    padding: 0 10px 0 10px;
                                 }
                             }
                             .order-detail{
@@ -293,9 +294,12 @@ $bold: 900;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                padding: 0 5px 0 5px;
+                                padding: 0 25px 0 15px;
                                 font-family: "GenSenRounded-B";
                                 font-size: $ps-font-size;
+                                @media (max-width:768px) {
+                                    padding: 0 10px 0 5px;
+                                }
                             }
                         }
 
