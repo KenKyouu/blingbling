@@ -98,6 +98,48 @@ body{
 $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
 $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
+.openingArea{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/star_bg_3.png);
+  background-color: $dark-blue;
+  -webkit-mask: url(../images/open_face.svg) no-repeat center;
+  -webkit-mask-size: 350% 350%;
+  mask: url(../images/open_face.svg) no-repeat center;
+  mask-size: 350% 350%;
+  .giftBoxArea{
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    justify-content: center;
+    .giftAnimateArea{
+      width: 100%;
+      padding-top: 100px;
+    }
+  }
+}
+
+#openArea.animation-start{
+  animation: openingAnimate 3s both ;
+  animation-delay: 6s;
+  @keyframes openingAnimate {
+    0%{
+      -webkit-mask-size: 350% 350%;
+      mask-size: 350% 350%;
+      height: 100vh;
+    }
+    80%{
+      -webkit-mask-size: 30% 30%;
+      mask-size: 30% 30%;
+      height: 100vh;
+    }
+    100%{
+      -webkit-mask-size: 0% 0%;
+      mask-size: 0% 0%;
+      height: 0vh;
+    }
+  }
+}
 
 
 
