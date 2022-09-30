@@ -307,59 +307,103 @@ body {
       border-radius: 0 0 10px 10px;
       background-color: $white;
       box-shadow: 0px 0px 20px $dark-gray;
-      display: flex;
-      justify-content: center;
-      // align-items: center;
-      padding-top: 60px;
-      .h-mega-category {
+      padding: 50px 0 30px 0;
+      .h-megaMenu {
         height: 100%;
-        .h-mega-title {
-          height: 20%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          a {
-            text-decoration: none;
+        display: flex;
+        justify-content: center;
+        padding: 0 2%;
+        flex-wrap: wrap;
+        .h-mega-category {
+          // height: 100%;
+          .h-mega-title {
+            height: 20%;
             display: flex;
-            align-items: center;
-            p {
-              color: $dark-gray;
-              font-family: "GenSenRounded-B";
-              font-size: $p-font-size;
-              padding-right: 30px;
+            flex-direction: column;
+            justify-content: center;
+            a {
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              p {
+                color: $dark-gray;
+                font-family: "GenSenRounded-B";
+                font-size: $p-font-size;
+                padding-right: 30px;
+              }
+              p:hover {
+                color: $lake-green;
+              }
+              .mega-img {
+                width: 50px;
+                img {
+                  width: 100%;
+                }
+              }
             }
-            p:hover {
-              color: $lake-green;
-            }
-            .mega-img {
-              width: 50px;
-              img {
-                width: 100%;
+          }
+          ul.h-mega-option {
+            height: 80%;
+            li {
+              padding: 6px 0;
+              a {
+                text-decoration: none;
+                color: $dark-gray;
+                font-family: "GenSenRounded-M";
+                font-size: $ps-font-size;
+              }
+              a:hover {
+                color: $light-lake-green;
               }
             }
           }
         }
-        ul.h-mega-option {
-          height: 80%;
-          li {
-            padding: 6px 0;
-            a {
-              text-decoration: none;
-              color: $dark-gray;
-              font-family: "GenSenRounded-M";
-              font-size: $ps-font-size;
-            }
-            a:hover {
-              color: $light-lake-green;
+        .h-mega-line {
+          width: 2px;
+          height: 300px;
+          background-color: $gray;
+          margin: 85px 25px 0 25px;
+        }
+      }
+    }
+    @media screen and (max-width:1911px) {
+      .header-class {
+        height: auto;
+        padding-top: 0;
+        .h-megaMenu {
+          justify-content: left;
+          .h-mega-category {
+            padding: 50px 25px 0 25px;
+          }
+          .h-mega-line {
+            display: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width:1010px) {
+      .header-class {
+        .h-megaMenu {
+          .h-mega-category {
+            padding: 30px 25px 25px 25px;
+            .h-mega-title {
+              a {
+                .mega-img {
+                  display: none;
+                }
+              }
             }
           }
         }
       }
-      .h-mega-line {
-        width: 2px;
-        height: 300px;
-        background-color: $gray;
-        margin: 95px 25px 0 25px;
+    }
+    @media screen and (max-width:773px) {
+      .header-class {
+        .h-megaMenu {
+          .h-mega-category {
+            padding: 20px 23px 25px 23px;
+          }
+        }
       }
     }
     .header-search {

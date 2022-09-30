@@ -95,274 +95,276 @@
         </div>
     </div>
     <div class="down">
-    <div class="header-class">
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>美妝保養</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item08.png" alt="">
-                        </div>
-                    </a>
+        <div class="header-class">
+            <div class="h-megaMenu">
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>美妝保養</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item08.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">眼部彩妝</a>
+                        </li>
+                        <li>
+                            <a href="#">臉部彩妝</a>
+                        </li>
+                        <li>
+                            <a href="#">唇部彩妝</a>
+                        </li>
+                        <li>
+                            <a href="#">化妝水</a>
+                        </li>
+                        <li>
+                            <a href="#">精華液</a>
+                        </li>
+                        <li>
+                            <a href="#">乳液乳霜</a>
+                        </li>
+                        <li>
+                            <a href="#">眼霜</a>
+                        </li>
+                        <li>
+                            <a href="#">其他臉部保養</a>
+                        </li>
+                        <li>
+                            <a href="#">身體保養</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">眼部彩妝</a>
-                    </li>
-                    <li>
-                        <a href="#">臉部彩妝</a>
-                    </li>
-                    <li>
-                        <a href="#">唇部彩妝</a>
-                    </li>
-                    <li>
-                        <a href="#">化妝水</a>
-                    </li>
-                    <li>
-                        <a href="#">精華液</a>
-                    </li>
-                    <li>
-                        <a href="#">乳液乳霜</a>
-                    </li>
-                    <li>
-                        <a href="#">眼霜</a>
-                    </li>
-                    <li>
-                        <a href="#">其他臉部保養</a>
-                    </li>
-                    <li>
-                        <a href="#">身體保養</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>流行時尚</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item01.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>流行時尚</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item01.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">T-shirt</a>
+                        </li>
+                        <li>
+                            <a href="#">襯衫</a>
+                        </li>
+                        <li>
+                            <a href="#">背心</a>
+                        </li>
+                        <li>
+                            <a href="#">外套</a>
+                        </li>
+                        <li>
+                            <a href="#">POLO衫</a>
+                        </li>
+                        <li>
+                            <a href="#">裙子</a>
+                        </li>
+                        <li>
+                            <a href="#">褲子</a>
+                        </li>
+                        <li>
+                            <a href="#">帽子</a>
+                        </li>
+                        <li>
+                            <a href="#">圍巾/披肩/絲巾</a>
+                        </li>
+                        <li>
+                            <a href="#">鞋子</a>
+                        </li>
+                        <li>
+                            <a href="#">領帶/領結</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">T-shirt</a>
-                    </li>
-                    <li>
-                        <a href="#">襯衫</a>
-                    </li>
-                    <li>
-                        <a href="#">背心</a>
-                    </li>
-                    <li>
-                        <a href="#">外套</a>
-                    </li>
-                    <li>
-                        <a href="#">POLO衫</a>
-                    </li>
-                    <li>
-                        <a href="#">裙子</a>
-                    </li>
-                    <li>
-                        <a href="#">褲子</a>
-                    </li>
-                    <li>
-                        <a href="#">帽子</a>
-                    </li>
-                    <li>
-                        <a href="#">圍巾/披肩/絲巾</a>
-                    </li>
-                    <li>
-                        <a href="#">鞋子</a>
-                    </li>
-                    <li>
-                        <a href="#">領帶/領結</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>數位家電</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item02.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>數位家電</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item02.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">藍芽喇叭/音響</a>
+                        </li>
+                        <li>
+                            <a href="#">鍵盤/鍵盤周邊</a>
+                        </li>
+                        <li>
+                            <a href="#">滑鼠/滑鼠周邊</a>
+                        </li>
+                        <li>
+                            <a href="#">耳機/耳機周邊</a>
+                        </li>
+                        <li>
+                            <a href="#">相機/相機周邊</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">藍芽喇叭/音響</a>
-                    </li>
-                    <li>
-                        <a href="#">鍵盤/鍵盤周邊</a>
-                    </li>
-                    <li>
-                        <a href="#">滑鼠/滑鼠周邊</a>
-                    </li>
-                    <li>
-                        <a href="#">耳機/耳機周邊</a>
-                    </li>
-                    <li>
-                        <a href="#">相機/相機周邊</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>母嬰幼兒</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item03.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>母嬰幼兒</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item03.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">孕期護理</a>
+                        </li>
+                        <li>
+                            <a href="#">時尚孕媽咪</a>
+                        </li>
+                        <li>
+                            <a href="#">外出用品/配件</a>
+                        </li>
+                        <li>
+                            <a href="#">嬰幼兒服飾</a>
+                        </li>
+                        <li>
+                            <a href="#">奶瓶/奶嘴</a>
+                        </li>
+                        <li>
+                            <a href="#">安撫玩具/玩偶</a>
+                        </li>
+                        <li>
+                            <a href="#">外出用品</a>
+                        </li>
+                        <li>
+                            <a href="#">彌月禮盒限定組</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">孕期護理</a>
-                    </li>
-                    <li>
-                        <a href="#">時尚孕媽咪</a>
-                    </li>
-                    <li>
-                        <a href="#">外出用品/配件</a>
-                    </li>
-                    <li>
-                        <a href="#">嬰幼兒服飾</a>
-                    </li>
-                    <li>
-                        <a href="#">奶瓶/奶嘴</a>
-                    </li>
-                    <li>
-                        <a href="#">安撫玩具/玩偶</a>
-                    </li>
-                    <li>
-                        <a href="#">外出用品</a>
-                    </li>
-                    <li>
-                        <a href="#">彌月禮盒限定組</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>居家生活</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item04.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>居家生活</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item04.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">居家織品</a>
+                        </li>
+                        <li>
+                            <a href="#">生活收納</a>
+                        </li>
+                        <li>
+                            <a href="#">家飾佈置</a>
+                        </li>
+                        <li>
+                            <a href="#">居家清潔</a>
+                        </li>
+                        <li>
+                            <a href="#">家具</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">居家織品</a>
-                    </li>
-                    <li>
-                        <a href="#">生活收納</a>
-                    </li>
-                    <li>
-                        <a href="#">家飾佈置</a>
-                    </li>
-                    <li>
-                        <a href="#">居家清潔</a>
-                    </li>
-                    <li>
-                        <a href="#">家具</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>毛寵物</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item05.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>毛寵物</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item05.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">寵物配件</a>
+                        </li>
+                        <li>
+                            <a href="#">餐具/玩具</a>
+                        </li>
+                        <li>
+                            <a href="#">寵物床/外出籠</a>
+                        </li>
+                        <li>
+                            <a href="#">清潔/美容</a>
+                        </li>
+                        <li>
+                            <a href="#">貓砂/貓砂盆/墊</a>
+                        </li>
+                        <li>
+                            <a href="#">貓跳板/抓板</a>
+                        </li>
+                        <li>
+                            <a href="#">罐頭/鮮食</a>
+                        </li>
+                        <li>
+                            <a href="#">零食/肉乾</a>
+                        </li>
+                        <li>
+                            <a href="#">其他</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">寵物配件</a>
-                    </li>
-                    <li>
-                        <a href="#">餐具/玩具</a>
-                    </li>
-                    <li>
-                        <a href="#">寵物床/外出籠</a>
-                    </li>
-                    <li>
-                        <a href="#">清潔/美容</a>
-                    </li>
-                    <li>
-                        <a href="#">貓砂/貓砂盆/墊</a>
-                    </li>
-                    <li>
-                        <a href="#">貓跳板/抓板</a>
-                    </li>
-                    <li>
-                        <a href="#">罐頭/鮮食</a>
-                    </li>
-                    <li>
-                        <a href="#">零食/肉乾</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>節慶道具</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item06.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>節慶道具</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item06.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">節慶裝飾</a>
+                        </li>
+                        <li>
+                            <a href="#">桌上佈置</a>
+                        </li>
+                        <li>
+                            <a href="#">其他</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">節慶裝飾</a>
-                    </li>
-                    <li>
-                        <a href="#">桌上佈置</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="h-mega-line"></div>
-            <div class="h-mega-category">
-                <div class="h-mega-title">
-                    <a href="#">
-                        <p>票券</p>
-                        <div class="mega-img">
-                            <img src="images/icon_item07.png" alt="">
-                        </div>
-                    </a>
+                <div class="h-mega-line"></div>
+                <div class="h-mega-category">
+                    <div class="h-mega-title">
+                        <a href="#">
+                            <p>票券</p>
+                            <div class="mega-img">
+                                <img src="images/icon_item07.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="h-mega-option">
+                        <li>
+                            <a href="#">飯店住宿券</a>
+                        </li>
+                        <li>
+                            <a href="#">民宿住宿券</a>
+                        </li>
+                        <li>
+                            <a href="#">其他餐券</a>
+                        </li>
+                        <li>
+                            <a href="#">美容舒壓券</a>
+                        </li>
+                        <li>
+                            <a href="#">門票娛樂券</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="h-mega-option">
-                    <li>
-                        <a href="#">飯店住宿券</a>
-                    </li>
-                    <li>
-                        <a href="#">民宿住宿券</a>
-                    </li>
-                    <li>
-                        <a href="#">其他餐券</a>
-                    </li>
-                    <li>
-                        <a href="#">美容舒壓券</a>
-                    </li>
-                    <li>
-                        <a href="#">門票娛樂券</a>
-                    </li>
-                </ul>
             </div>
         </div>
         <div class="header-search">
