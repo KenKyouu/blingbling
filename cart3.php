@@ -94,58 +94,6 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                         </div>
                     </div>
                 <?php endforeach; ?>
-                <!-- <div class="j-list-item">
-                    <div class="j-list-img">
-                        <img src="./images/products/populer-02.jpeg" alt="">
-                    </div>
-                    <div class="j-list-sub">
-                        <p>Jo Malone 香水禮盒(英國梨與小蒼蘭香水+鼠尾草與海鹽)</p>
-                        <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4">NT$ 2,299</div>
-                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                            <div class="j-money col-6 px-0 col-md-4">NT$ 2,299</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="j-list-item">
-                    <div class="j-list-img">
-                        <img src="./images/products/populer-03.jpeg" alt="">
-                    </div>
-                    <div class="j-list-sub">
-                        <p>COACH 立體馬車緹花LOGO卡夾鑰匙零錢包-櫻花卡其粉</p>
-                        <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4">NT$ 1,580</div>
-                            <div class="j-amount col-6 px-0 col-md-4">2</div>
-                            <div class="j-money col-6 px-0 col-md-4">NT$ 3,160</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="j-list-item">
-                    <div class="j-list-img">
-                        <img src="./images/products/populer-04.jpeg" alt="">
-                    </div>
-                    <div class="j-list-sub">
-                        <p>SNUGGLE香氛室內擴香100mlX3入組(/小蒼蘭/雪松/茉莉)</p>
-                        <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4">NT$ 499</div>
-                            <div class="j-amount col-6 px-0 col-md-4">3</div>
-                            <div class="j-money col-6 px-0 col-md-4">NT$ 1,497</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="j-list-item">
-                    <div class="j-list-img">
-                        <img src="./images/products/populer-05.jpeg" alt="">
-                    </div>
-                    <div class="j-list-sub">
-                        <p>ONE BOY UPF50+防曬冰感A+級機能冰鋒衣 - 扶桑花S</p>
-                        <div class="j-list-num">
-                            <div class="j-money-single  px-0 col-md-4">NT$ 880</div>
-                            <div class="j-amount col-6 px-0 col-md-4">1</div>
-                            <div class="j-money col-6 px-0 col-md-4">NT$ 880</div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
 
@@ -704,11 +652,15 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
         <div class="s-order-cta">
             <div class="row">
                 <div class="col">
-                    <button>繼續挑選禮物</button>
+                    <a href="./product-list.php">
+                        <button>繼續挑選禮物</button>
+                    </a>
                 </div>
 
                 <div class="col">
-                    <button class="cart1-check">查看我的訂單</button>
+                    <a href="./member_order.php">
+                        <button class="cart1-check">查看我的訂單</button>
+                    </a>
                 </div>
 
             </div>

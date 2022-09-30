@@ -37,18 +37,18 @@ $(window).scroll(function () {
 })
 
 // header hidden
-let lastScroll = 0;
-$(window).scroll(function () {
-    let scrollNow = $(window).scrollTop();
+// let lastScroll = 0;
+// $(window).scroll(function () {
+//     let scrollNow = $(window).scrollTop();
 
-    if (scrollNow > lastScroll) {
-        $('.header,.up').addClass('header-hidden')
-    }
-    else {
-        $('.header,.up').removeClass('header-hidden')
-    }
-    lastScroll = scrollNow;
-})
+//     if (scrollNow > lastScroll) {
+//         $('.header,.up').addClass('header-hidden')
+//     }
+//     else {
+//         $('.header,.up').removeClass('header-hidden')
+//     }
+//     lastScroll = scrollNow;
+// })
 
 
 //價錢加,
@@ -67,32 +67,48 @@ function removeItem(event) {
         function (data) {
             // console.log(data);
 
-            // showCartCount(data); //總數量
+            
             listItem.remove();
             // TODO: 更新 總計, 
             updatePrices(); //ajax發回時就要更新
+            showCartCount(data); //總數量
         },
         'json');
 
 }
+
+$('.heart-icon').click(function(){
+    $(this).addClass('active');
+})
 
 function removeHeart(event) {
     const listItem = $(event.currentTarget).closest('.j-list-item');
     const sid = listItem.attr('data-sid');
-
+    console.log(sid);
     $.get(
-        'handle-cart.php', {
-        sid
-    },
-        function (data) {
-            // console.log(data);
-            // showCartCount(data);
-            listItem.remove();
-            updatePrices();
+        'favorite.php',
+        {
+            sid
         },
-        'json');
+        'json')
+    setTimeout(function(){
+        $.get(
+            'handle-cart.php',
+        {
+            sid
+        },
+            function (data) {
+                // console.log(data);
 
+                listItem.remove();
+                updatePrices();
+                showCartCount(data);
+            },
+            'json');
+    },2500);
 }
+
+
 
 
 $(function () {
@@ -109,9 +125,10 @@ $(function () {
         },
             function (data) {
                 console.log(data);
-                // showCartCount(data); //總數量
+
                 // TODO: 更新小計, 總計,
                 updatePrices();
+                showCartCount(data); //總數量
                 // console.log(qty);
             },
             'json');
@@ -132,9 +149,10 @@ $(function () {
         },
             function (data) {
                 console.log(data);
-                // 		showCartCount(data); //總數量
+                
                 // 		// TODO: 更新小計, 總計,
                 updatePrices();
+                showCartCount(data); //總數量
             },
             'json');
     })
@@ -146,9 +164,7 @@ $(function () {
 const packagechose = +$('.j-package-chose').attr('data-val');
 const blingchose = +$('.j-bling-chose').attr('data-val');
 const nonepackage = +$('.j-none-package').attr('data-val');
-<<<<<<< HEAD
-$('.j-bling-chose').click(function () {
-=======
+
 $('.j-package-chose').click(function(){
     setTimeout(function(){
         $('.j-orderpackage').html('NT$ ' + dollarCommas(packagechose));
@@ -157,7 +173,6 @@ $('.j-package-chose').click(function(){
     },5000)
 })
 $('.j-bling-chose').click(function(){
->>>>>>> b6983050a6ed90c99fd698856255523b940c7a01
     $('.j-orderpackage').html('NT$ ' + dollarCommas(blingchose));
     $('.j-orderpackage').attr('data-val', blingchose);
     updatePrices();
@@ -249,21 +264,7 @@ function addToOrder(event) {
     });
 
     $.get(
-<<<<<<< HEAD
-        "addtoorder.php",
-        {
-            producttotal,
-            orderpackage,
-            ordergiftvoucher,
-            // ordercoupon,
-        },
-        function (data) {
-            // showCartCount(data);
-            console.log(data);
-            updatePrices();
-        },
-        "json"
-=======
+
       "addtoorder.php",
       {
         producttotal,
@@ -277,7 +278,7 @@ function addToOrder(event) {
         updatePrices();
       },
       "json"
->>>>>>> b6983050a6ed90c99fd698856255523b940c7a01
+
     );
 }
 

@@ -392,10 +392,39 @@ body{
                         cursor: pointer;
                         width: 10%;
                         text-align: right;
+                        
                     }    
                 }         
             }
         }   
+    }
+}
+.heart {
+    transform-origin: center;
+    stroke-dasharray: 135;
+}
+  
+.active .heart {
+    animation: draw-heart 2s forwards;
+    stroke: $red-pink;
+}
+@keyframes draw-heart {
+    0% {
+        stroke-dashoffset: -135;
+        transform: scale(.2) rotate(-280deg);
+    }
+    30% {
+        stroke-dashoffset: 135;
+        transform: scale(.4) rotate(280deg);
+    }
+    60% {
+        stroke-dashoffset: -135;
+        transform: scale(.6);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke: $dark-red;
+        fill: $pink;
     }
 }
 

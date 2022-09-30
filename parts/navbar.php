@@ -16,7 +16,7 @@
         <div class="right-mobile">
             <ul>
                 <li class="cart">
-                    <a class="cart" href="#"><svg width="27" height="24" viewBox="0 0 27 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <a class="cart" href="./cart1.php"><svg width="27" height="24" viewBox="0 0 27 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.2605 16.9011H20.6858V6.65625H2.10381C1.59987 6.65625 1.24941 7.11005 1.42336 7.53747L5.2605 16.9011Z" fill="white" stroke="white" stroke-miterlimit="10" />
                             <path d="M20.5297 7.04603L25.8293 1.58014C25.8945 1.51288 25.8945 1.39632 25.8293 1.32906L25.8291 1.32889L25.8267 1.32642C25.8267 1.3264 25.8267 1.32638 25.8267 1.32637C25.7698 1.26782 25.6831 1.26784 25.6263 1.32642L20.3053 6.8145L20.5297 7.04603Z" fill="white" stroke="white" />
                             <path d="M18.405 22.1437C18.405 22.7084 18.845 23.1396 19.3555 23.1396C19.8659 23.1396 20.3059 22.7084 20.3059 22.1437C20.3059 21.5789 19.8659 21.1477 19.3555 21.1477C18.845 21.1477 18.405 21.5789 18.405 22.1437Z" fill="white" stroke="white" />
@@ -24,7 +24,7 @@
                             <path d="M5.89735 19.3219H20.1689C20.2301 19.3219 20.3059 19.2663 20.3059 19.165V19.1623C20.3059 19.061 20.2301 19.0054 20.1689 19.0054H5.89735C5.83622 19.0054 5.76039 19.061 5.76039 19.1623V19.165C5.76039 19.2676 5.83493 19.3219 5.89735 19.3219Z" fill="white" stroke="white" />
                         </svg>
                     </a>
-                    <span class="cart-red-point"></span>
+                    <span class="cart-none-point" ></span>
                 </li>
                 <li class="menu">
                     <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@
                             <path d="M5.95348 23.1331H23.0794C23.2111 23.1331 23.3438 23.0184 23.3438 22.8447V22.8416C23.3438 22.6674 23.2106 22.5532 23.0794 22.5532H5.95348C5.82174 22.5532 5.68913 22.668 5.68913 22.8416V22.8447C5.68913 23.0202 5.82046 23.1331 5.95348 23.1331Z" fill="white" stroke="white" />
                         </svg>
                     </a>
-                    <span class="cart-red-point"></span>
+                    <span class="cart-none-point"></span>
                 </li>
             </ul>
         </div>
@@ -284,7 +284,7 @@
                         </svg>
                     </div>
                 </a>
-
+                
             </div>
         </div>
     </div>

@@ -121,6 +121,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     <label class="j-point">同會員資料
                                                         <input type="checkbox"
                                                         id="cbSameMember"
+                                                        class="j"
                                                         onclick="sameMember()" />
                                                         <span class="j-checkmark"></span>
                                                     </label>
@@ -134,7 +135,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     type="text"
                                                     name="ordererName"
                                                     id="ordererName"
-                                                    class="j-input"
+                                                    class="j-input j"
                                                     placeholder="訂購人姓名(本名)"
                                                     oninput="cop()"
                                                     data-val="<?= $member[0]['name'] ?>"
@@ -151,7 +152,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     type="text"
                                                     name="ordererMobile"
                                                     id="ordererMobile"
-                                                    class="j-input"
+                                                    class="j-input j"
                                                     placeholder="訂購人手機"
                                                     oninput="cop()"
                                                     data-val="<?= $member[0]['mobile'] ?>"
@@ -166,7 +167,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         type="text"
                                                         name="ordererTel1"
                                                         id="ordererTel1"
-                                                        class="j-input"
+                                                        class="j-input j"
                                                         placeholder="02"
                                                         oninput="cop()"
                                                     />
@@ -177,7 +178,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         type="text"
                                                         name="ordererTel2"
                                                         id="ordererTel2"
-                                                        class="j-input"
+                                                        class="j-input j"
                                                         placeholder="12345678"
                                                         oninput="cop()"
                                                     />
@@ -197,6 +198,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <input
                                                         type="checkbox"
                                                         id="cbSameOrderer"
+                                                        class="j"
                                                         onchange="copyData()"
                                                         />
                                                         <span class="j-checkmark"></span>
@@ -214,7 +216,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     name="recipientName"
                                                     id="recipientName"
                                                     value=""
-                                                    class="j-input"
+                                                    class="j-input j"
                                                     placeholder="收件人姓名(本名)"
                                                     oninput="cop2()"
                                                 />
@@ -230,7 +232,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     type="text"
                                                     name="recipientMobile"
                                                     id="recipientMobile"
-                                                    class="j-input"
+                                                    class="j-input j"
                                                     placeholder="收件人手機"
                                                     oninput="cop2()"
                                                 />
@@ -246,7 +248,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         type="text"
                                                         name="recipientTel1"
                                                         id="recipientTel1"
-                                                        class="j-input"
+                                                        class="j-input j"
                                                         placeholder="02"
                                                     />
                                                     <div class="j-messages"></div>
@@ -256,7 +258,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         type="text"
                                                         name="recipientTel2"
                                                         id="recipientTel2"
-                                                        class="j-input"
+                                                        class="j-input j"
                                                         placeholder="12345678"
                                                     />
                                                     <div class="j-messages"></div>
@@ -274,13 +276,13 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                     <h5 class="">配送方式</h5>
                                     <div>
                                         <div class="j-home-delivery">
-                                            <div class="j-d-title j-form-group">
+                                            <div class="j-d-title ">
 
                                                 <label class="j-point">宅配
-                                                    <input type="radio" name="delivery" value="宅配" class="j-home"   data-val="100" checked>
+                                                    <input type="radio" name="delivery" value="宅配" class="j-home "   data-val="100" checked>
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
-                                                <div class="j-messages"></div>
+                                                <!-- <div class="j-messages"></div> -->
                                             </div>
                                             <ul class="j-home-info">
                                                 <li >
@@ -298,7 +300,8 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                                                         <div class="col-6 px-0 j-form-group">
                                                             <label class="j-point ">上午
-                                                                <input type="radio" name="time" value="morning" checked>
+                                                                <input type="radio" name="time" value="morning"
+                                                                class="j" checked>
                                                                 <span class="j-checkmark-r"></span> 
                                                             </label>
                                                             <div class="j-messages"></div>
@@ -306,7 +309,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                                                         <div class="col-6 px-0 j-form-group">
                                                             <label class="j-point ">下午
-                                                                <input type="radio" name="time" value="afternoon">
+                                                                <input type="radio" name="time" value="afternoon" class="j">
                                                                 <span class="j-checkmark-r"></span> 
                                                             </label>
                                                             <div class="j-messages"></div>
@@ -321,23 +324,23 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             </ul>
                                         </div>
                                         <div class="j-convenience-store">
-                                            <div class="j-d-title j-form-group">
+                                            <div class="j-d-title ">
 
                                                 <label class="j-point">超商取貨
-                                                    <input type="radio" name="delivery" value="超商取貨" class="j-convenience" id="j-convenience" onchange="copyData2()"   data-val="60">
+                                                    <input type="radio" name="delivery" value="超商取貨" class="j-convenience " id="j-convenience" onchange="copyData2()"   data-val="60">
                                                     <span class="j-checkmark-r"></span> 
                                                 </label>
-                                                <div class="j-messages"></div>
+                                                <!-- <div class="j-messages"></div> -->
                                             </div>
                                             <ul class="j-store-info">
                                                 <li class="j-space1 j-form-group">
                                                     <label for="storeRecipientName"  class="j-label j-label-required">收件人姓名(本名)</label>
-                                                    <input type="text"  id="storeRecipientName" value="" class="j-input" placeholder="收件人姓名(本名)">
+                                                    <input type="text"  id="storeRecipientName" value="" class="j-input j" placeholder="收件人姓名(本名)">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-space j-form-group">
                                                     <label for="storeRecipientMobile"  class="j-label j-label-required">收件人手機</label>
-                                                    <input type="text"  id="storeRecipientMobile" class="j-input" placeholder="收件人手機">
+                                                    <input type="text"  id="storeRecipientMobile" class="j-input j" placeholder="收件人手機">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-store-btn">
@@ -357,12 +360,12 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                 <h5 >支付方式</h5>
                                 <div>
                                     <div class="j-credit-pay">
-                                        <div class="j-credit-title j-form-group">
+                                        <div class="j-credit-title ">
                                             <label class="j-point">信用卡
                                                 <input type="radio" name="pay" value="信用卡" class="j-credit" checked>
                                                 <span class="j-checkmark-r"></span> 
                                             </label>
-                                            <div class="j-messages"></div>
+                                            <!-- <div class="j-messages"></div> -->
                                         </div>
                                         <div class="j-credit-bg">
 
@@ -420,22 +423,22 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             
                                                 <li class="j-form-group">
                                                     <label for="cardHolder"  class="j-label j-label-required j-holder">持卡人姓名</label>
-                                                    <input type="text" maxlength="15" name="cardHolder" id="cardHolder" value="" class="j-input" placeholder="持卡人姓名">
+                                                    <input type="text" maxlength="15" name="cardHolder" id="cardHolder" value="" class="j-input j" placeholder="持卡人姓名">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-space j-form-group">
                                                     <label for="cardNumber"  class="j-label j-label-required">卡號</label>
-                                                    <input type="text" pattern="[0-9]*" name="cardNumber" id="cardNumber" class="j-input" placeholder="**** **** **** ****">
+                                                    <input type="text" pattern="[0-9]*" name="cardNumber" id="cardNumber" class="j-input j" placeholder="**** **** **** ****">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-space j-form-group">
                                                     <label for="expires"  class="j-label j-label-required">到期日</label>
-                                                    <input type="text" pattern="[0-9]*" name="expires" id="expires" class="j-input" placeholder="MM/YY">
+                                                    <input type="text" pattern="[0-9]*" name="expires" id="expires" class="j-input j" placeholder="MM/YY">
                                                     <div class="j-messages"></div>
                                                 </li>
                                                 <li class="j-space j-form-group">
                                                     <label for="cvv"  class="j-label j-label-required">安全碼</label>
-                                                    <input type="text" pattern="[0-9]*" name="cvv" id="cvv" class="j-input j-cvv" placeholder="***">
+                                                    <input type="text" pattern="[0-9]*" name="cvv" id="cvv" class="j-input j-cvv j" placeholder="***">
                                                     <div class="j-messages"></div>
                                                 </li>
                                             
@@ -443,42 +446,42 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         </div>
                                     </div>
                                     <div class="j-bank-pay">
-                                        <div class="j-bank-title j-form-group">
+                                        <div class="j-bank-title ">
                                             
                                             <label class="j-point">銀行轉帳
                                                 <input type="radio" name="pay" value="銀行轉帳" class="j-bank" > <span class="j-checkmark-r"></span> 
                                             </label>
-                                            <div class="j-messages"></div>
+                                            <!-- <div class="j-messages"></div> -->
                                         </div>
                                     </div>
                                     <div class="j-line-pay">
-                                        <div class="j-line-title j-form-group">
+                                        <div class="j-line-title ">
                                             
                                             <label class="j-point">Line Pay
                                                 <input type="radio" name="pay" value="Line Pay" class="j-line" > 
                                                 <span class="j-checkmark-r"></span> 
                                             </label>
-                                            <div class="j-messages"></div>
+                                            <!-- <div class="j-messages"></div> -->
                                         </div>
                                     </div>
                                     <div class="j-apple-pay">
-                                        <div class="j-apple-title j-form-group">
+                                        <div class="j-apple-title ">
                                             
                                             <label class="j-point">Apple Pay
                                                 <input type="radio" name="pay" value="Apple Pay" class="j-apple" > 
                                                 <span class="j-checkmark-r"></span> 
                                             </label>
-                                            <div class="j-messages"></div>
+                                            <!-- <div class="j-messages"></div> -->
                                         </div>
                                     </div>
                                     <div class="j-money-pay">
-                                        <div class="j-money-title j-form-group">
+                                        <div class="j-money-title ">
                                             
                                             <label class="j-point">貨到付款
                                                 <input type="radio" name="pay" value="貨到付款" class="j-money"/> 
                                                 <span class="j-checkmark-r"></span> 
                                             </label>
-                                            <div class="j-messages"></div>
+                                            <!-- <div class="j-messages"></div> -->
                                         </div>
                                     </div>
                                 </div>

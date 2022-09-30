@@ -28,6 +28,10 @@ function numReduce() {
   }
 }
 
+$('.heart-icon').click(function(){
+  $(this).addClass('active');
+})
+
 function addToCart(event) {
   const addToCartBtn = $(event.currentTarget);
   const qty = addToCartBtn.closest(".pc-add-cart").find(".quantity-num").val();
@@ -44,9 +48,29 @@ function addToCart(event) {
       qty,
     },
     function (data) {
-      //   showCartCount(data);
+      showCartCount(data);
       console.log(data);
     },
     "json"
   );
+}
+
+
+
+function heart(event){
+  const item = $(event.currentTarget).closest('.heart-icon');
+    const sid = item.attr('data-sid');
+    console.log(sid);
+    $.get(
+        'favorite.php',
+        {
+            sid
+        },
+        'json');
+        $.get(
+          'handle-cart.php',
+      {
+          sid
+      },
+          'json');
 }
