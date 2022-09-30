@@ -190,12 +190,108 @@ body {
             .swiper-train {
                 width: 100%;
                 transform: translateX(-0px);
-                transition: .3s;
+                transition: .8s;
 
                 .img-wrap {
 
                     img {
                         width: 100%;
+                    }
+                }
+
+                button {
+                    // display: none;
+                    position: absolute;
+                    top: 20%;
+                    left: 35%;
+                    right: 0%;
+                    width: 35%;
+                    background-color: $super-dark;
+                    border: 1px solid $super-dark;
+                    opacity: .8;
+                    border-radius: 10px;
+                    color: white;
+                    font-family: "Roboto";
+                    font-size: $ps-font-size;
+                    padding: 10px;
+                }
+
+                &:hover {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------- 不輪播文章區 ------------------
+
+.article-wrap {
+    .article-title {
+        font-family: "GenSenRounded-B";
+        font-size: $h5-font-size ;
+        font-weight: 700;
+        color: $super-dark;
+        padding-bottom: 10px;
+    }
+
+    .article-ribbon {
+        .col {
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    .kol-wrap {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        .none-swiper-wrap {
+            width: 100%;
+
+            .none-swiper-train {
+                width: 100%;
+
+                .img-wrap {
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .article-content-wrap {
+                    width: 83%;
+                    height: auto;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    background-color: white;
+                    transform: translateY(-35px);
+
+                    .sub-content {
+                        padding: 15px;
+                    }
+
+                    .sub-content h6 {
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        color: $super-dark;
+                        text-align: justify;
+                        padding-top: 5px;
+                    }
+
+                    .sub-content p {
+                        font-family: "GenSenRounded-M";
+                        font-size: 13px;
+                        color: $super-dark;
+                        text-align: justify;
+                        padding: 20px 0 0;
+                        height: 150px;
+                        overflow-y: hidden;
                     }
                 }
             }
@@ -243,23 +339,69 @@ body {
     }
 }
 
-@media (min-width: 525px) and (max-width: 1200px) {
+@media (min-width: 375px) and (max-width: 767.98px) {
     .article-container {
         .article {
-            .article-wrap {
-                .kol-wrap {
-                    .article-content-wrap {
-                        .article-page {
+            .kol-wrap {
 
-                            .arrow-left,
-                            .arrow-right {
-                                margin-left: 1.2rem;
+                .swiper-wrap,
+                .none-swiper-wrap {
+                    position: relative;
 
-                                svg {
-                                    width: 70%;
+                    .swiper-train,
+                    .none-swiper-train {
+                        .article-content-wrap {
+                            width: 83%;
+                            height: auto;
+                            right: 0;
+                            left: 0;
+                            margin: 0 auto;
+                            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                            border-radius: 10px;
+                            background-color: white;
+                            transform: translateY(-20px);
+
+                            .sub-content {
+                                p {
+                                    font-family: "GenSenRounded-M";
+                                    font-size: 13px;
+                                    color: #000000;
+                                    text-align: justify;
+                                    padding: 10px 0 0;
+                                    height: 150px;
+                                    overflow-y: hidden;
                                 }
                             }
+                        }
+                    }
+                }
 
+                .article-page {
+                    position: absolute;
+                    top: 90%;
+                    left: 13%;
+                    width: 90%;
+                    margin: -20px;
+
+                    .col {
+                        ul {
+                            li {
+                                width: 10px;
+                                height: 10px;
+                                border: 2px solid #000000;
+                                border-radius: 50%;
+                                background-color: none;
+                                margin: 0 5px;
+                            }
+
+                            li.active {
+                                background-color: $lake-green;
+                                border: 2px solid $lake-green;
+                            }
+                        }
+
+                        svg {
+                            width: 80%;
                         }
                     }
                 }
@@ -267,6 +409,7 @@ body {
         }
     }
 }
+
 
 @media only screen and (min-width: 768px) {
     .article-container {
@@ -280,40 +423,59 @@ body {
                 }
 
                 .kol-wrap {
-                    button {
-                        display: none;
-                    }
+                    .swiper-wrap {
+                        .swiper-train {
+                            .img-wrap {
+                                button {
+                                    display: none;
+                                }
+                            }
 
-                    &:hover {
-                        display: block;
-                        cursor: pointer
-                    }
-                }
+                            &:hover {
+                                button {
+                                    display: block;
+                                    cursor: pointer;
+                                    top: 30%;
+                                    left: 40%;
+                                    right: 0%;
+                                    width: 25%;
+                                    border-radius: 10px;
+                                    color: white;
+                                    font-family: "Roboto";
+                                    font-size: $ps-font-size;
+                                    font-weight: 700;
+                                    padding: 15px;
+                                    transition: 0.5s all ease;
+                                    opacity: .7;
+                                }
+                            }
+                        }
 
-                .article-content-wrap {
-                    width: 60%;
-                    height: 250px;
+                        .article-content-wrap {
+                            width: 60%;
+                            height: 250px;
 
-                    h6 {
-                        font-size: $h6-font-size;
-                        padding-top: 15px;
-                    }
+                            h6 {
+                                font-size: $h6-font-size;
+                                padding-top: 15px;
+                            }
 
-                    p {
-                        font-size: $ps-font-size;
-                        padding: 30px 0;
-                        height: 140px;
-                    }
+                            p {
+                                font-size: $ps-font-size;
+                                padding: 30px 0;
+                                height: 140px;
+                            }
 
-                    .article-page {
-                        padding: 0 15px;
+                            .article-page {
+                                padding: 0 15px;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
-
 
 @media only screen and (min-width: 992px) {
     .article-container {
@@ -354,7 +516,8 @@ body {
 
                             p {
                                 height: 165px;
-                                font-size: $p-font-size;
+                                font-size: $ps-font-size;
+                                line-height: 1.3rem;
                             }
                         }
                     }
@@ -375,7 +538,7 @@ body {
         animation: upDown 3s linear infinite alternate;
     }
 
-    .contaiber {
+    .container {
         .article-tag-wrap {
 
             .row {
@@ -462,7 +625,6 @@ body {
                                     width: 60%;
                                 }
                             }
-
                         }
                     }
                 }
@@ -473,28 +635,37 @@ body {
 
 
 .article-page {
-    padding: 10px 15px;
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    right: 50%;
+    width: 55%;
+    margin: -15px;
 
     .col {
-        width: 50%;
-
         ul {
             display: flex;
-            justify-content: space-around; // 電腦版要拿掉，換start
+            justify-content: space-around;
 
             li {
-                width: 10px;
-                height: 10px;
+                width: 12px;
+                height: 12px;
                 border: 2px solid $super-dark;
                 border-radius: 50%;
                 background-color: none;
-                margin: 0 5px;
+                margin: 0 8px;
             }
 
             li.active {
                 background-color: $lake-green;
                 border: 2px solid $lake-green;
             }
+        }
+    }
+
+    .arrow-left.active {
+        svg {
+            color: $super-dark;
         }
     }
 }
@@ -569,4 +740,12 @@ body {
 #livingSection,
 #petSection {
     display: none;
+}
+
+.article-page {
+    .col {
+        svg:hover {
+            cursor: pointer;
+        }
+    }
 }
