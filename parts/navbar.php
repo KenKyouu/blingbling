@@ -20,7 +20,7 @@ require __DIR__ . '/connect_db.php';
                             <path d="M5.89735 19.3219H20.1689C20.2301 19.3219 20.3059 19.2663 20.3059 19.165V19.1623C20.3059 19.061 20.2301 19.0054 20.1689 19.0054H5.89735C5.83622 19.0054 5.76039 19.061 5.76039 19.1623V19.165C5.76039 19.2676 5.83493 19.3219 5.89735 19.3219Z" fill="white" stroke="white" />
                         </svg>
                     </a>
-                    <span class="cart-red-point"></span>
+                    <span class="cart-none-point" ></span>
                 </li>
                 <li class="menu">
                     <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@ require __DIR__ . '/connect_db.php';
                             <path d="M5.95348 23.1331H23.0794C23.2111 23.1331 23.3438 23.0184 23.3438 22.8447V22.8416C23.3438 22.6674 23.2106 22.5532 23.0794 22.5532H5.95348C5.82174 22.5532 5.68913 22.668 5.68913 22.8416V22.8447C5.68913 23.0202 5.82046 23.1331 5.95348 23.1331Z" fill="white" stroke="white" />
                         </svg>
                     </a>
-                    <span class="cart-red-point"></span>
+                    <span class="cart-none-point"></span>
                 </li>
             </ul>
         </div>
@@ -591,7 +591,7 @@ require __DIR__ . '/connect_db.php';
                         </svg>
                     </div>
                 </a>
-
+                
             </div>
         </div>
     </div>
