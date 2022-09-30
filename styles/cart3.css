@@ -344,9 +344,6 @@ body {
     width: 75%;
   }
 }
-.s-order-remark-section {
-  padding-top: 3.5rem;
-}
 .s-order-remark-section .container {
   width: 100%;
   margin: 0 auto;
@@ -392,25 +389,77 @@ body {
   align-items: flex-end;
 }
 .s-order-remark-section .container .row .col button {
-  padding: 10px 30px;
+  padding: 10px;
   background-color: #000000;
   border: 1px solid #000000;
   color: white;
   border-radius: 10px;
   font-family: "Roboto";
   font-size: 14px;
+  width: 100%;
 }
 .s-order-remark-section .container .row .text-col {
   text-align: left;
 }
 
+.s-order-cta-section {
+  margin: 3.5rem 0;
+}
+.s-order-cta-section .container {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-order-cta-section .container .s-order-cta {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.s-order-cta-section .container .s-order-cta .row {
+  margin: 0;
+}
+.s-order-cta-section .container .s-order-cta .row .col button {
+  background-color: none;
+  border: 3px solid #7cb2af;
+  color: #2d827d;
+  font-family: "GenSenRounded-B";
+  font-size: 14px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  line-height: 0.8rem;
+  text-align: center;
+}
+.s-order-cta-section .container .s-order-cta .row .col .cart1-check {
+  background-color: #2d827d;
+  border: 3px solid #2d827d;
+  color: white;
+}
+
+@media only screen and (min-width: 576px) {
+  .s-order-remark-section {
+    padding-top: 3.5rem;
+  }
+}
 @media only screen and (min-width: 768px) {
+  .s-order-remark-section {
+    margin-top: 3.5rem;
+  }
   .s-order-remark-section .container .s-order-remark-wrap {
     width: 70%;
     margin: 0 15px;
   }
   .s-order-remark-section .container .s-order-remark-wrap .s-remark-wrap {
     padding-left: 15px;
+  }
+  .s-order-remark-section .container .s-order-remark-wrap .btn-row {
+    padding: 0;
+  }
+  .s-order-cta-section .container .s-order-cta {
+    width: 70%;
+    padding: 80px 0 80px 15px;
+  }
+  .s-order-cta-section .container .s-order-cta .row .col button {
+    padding: 15px;
   }
 }
 @media only screen and (min-width: 1400px) {

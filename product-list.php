@@ -7,13 +7,42 @@ $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
 $lowp = isset($_GET['lowp']) ? intval($_GET['lowp']) : 0; // 篩選的最低價格
 $highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高價格
+$colors = [];
+if (!empty($_GET['color'])) {
+    $colors = $_GET['color'];
+}
 
 $qsp = []; // query string parameters
 $where = ' WHERE 1 ';
+// if ($cate) {
+//     $where .= " AND class_sid=$cate ";
+//     $qsp['cate'] = $cate;
+// }
+if ($cate > 0 and $cate < 9) {
+    $where .= " AND parent=$cate ";
+    $qsp['cate'] = $cate;
+} else if ($cate > 8) {
+    $where .= " AND class_sid=$cate ";
+    $qsp['cate'] = $cate;
+}
+// echo $where;
+// exit;
+$products = [];
+$cates = $pdo->query("SELECT * FROM class WHERE parent=$cate")->fetchAll();
 
-$cates = $pdo->query("SELECT * FROM class WHERE parent=0")->fetchAll();
-$products = $pdo->query("SELECT * FROM product")->fetchAll();
-$t_sql = "SELECT COUNT(1) FROM product $where";
+$join = $pdo->query("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid")->fetchAll();
+// echo json_encode($join);
+// exit;
+
+$catename = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
+if ($cate == 0) {
+    $products = $pdo->query("SELECT * FROM product")->fetchAll();
+} else {
+    $products = $pdo->query("SELECT * FROM product WHERE `class_sid`= $cate")->fetchAll();
+};
+// $products = $pdo->query("SELECT * FROM product)->fetchAll();
+// $t_sql = "SELECT COUNT(1) FROM product $where";
+$t_sql = "SELECT COUNT(1) FROM `class` INNER JOIN `product` ON product.class_sid=class.sid $where";
 $totalRows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
 $totalPages = ceil($totalRows / $perPage);
 $rows = [];
@@ -26,7 +55,8 @@ if ($totalRows > 0) {
         header('Location: ?page=' . $totalPages);
         exit;
     }
-    $sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
+    //$sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
+    $sql = sprintf("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid %s ORDER BY product.sid DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
     $rows = $pdo->query($sql)->fetchAll();
 }
 ?>
@@ -36,11 +66,13 @@ if ($totalRows > 0) {
 <div class="content">
     <div class="banner">
         <div class="class">
-            <?php foreach ($cates as $c) :
-                $title = $c['sid'] == $cate ? $c['name'] : ''; ?>
-                <h3>
-                    <?= $title ?></h3>
-            <?php endforeach ?>
+            <h3><?php
+                if ($catename == []) {
+                    echo "全部";
+                } else {
+                    echo $catename[0]['name'];
+                }
+                ?></h3>
         </div>
     </div>
     <div class="slider">
@@ -136,6 +168,203 @@ if ($totalRows > 0) {
             </svg>
         </span>
     </div>
+    <div class="filter-class-pc">
+        <div class="button-filter-pc">
+            <ul>
+                <li><a href="" class="new">新品</a></li>
+                <li><a href="" class="sale">優惠</a></li>
+                <li><a href="" class="theme">節慶</a></li>
+            </ul>
+        </div>
+        <div class="class-filter-pc">
+            <h2>分類</h2>
+            <div class="horizon"></div>
+            <div class="class-name">
+                <ul>
+                    <li><a href="./product-list.php?cate=1">美妝保養</a></li>
+                    <li><a href="./product-list.php?cate=2">流行時尚</a></li>
+                    <li><a href="./product-list.php?cate=3">數位家電</a></li>
+                    <li><a href="./product-list.php?cate=4">母嬰幼兒</a></li>
+                    <li><a href="./product-list.php?cate=5">居家生活</a></li>
+                    <li><a href="./product-list.php?cate=6">毛寵物</a></li>
+                    <li><a href="./product-list.php?cate=7">節慶道具</a></li>
+                    <li><a href="./product-list.php?cate=8">票券</a></li>
+                </ul>
+            </div>
+        </div>
+        <form name="filter_pc" action="">
+            <div class="gender-filter-pc">
+                <h2>性別</h2>
+                <div class="horizon"></div>
+                <div class="gender">
+                    <input type="radio" name="gender-pc" id="male-pc">
+                    <label for="male-pc">
+                        <span>
+                            <svg width="10" height="25" viewBox="0 0 10 25" fill="#5292b9" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_388_988)">
+                                    <path d="M7.3881 6.33521H1.93183C0.866634 6.33521 0 7.20184 0 8.26703V14.3438C0 15.107 0.62257 15.7296 1.38579 15.7296C1.50575 15.7296 1.60503 15.7296 1.68776 15.7296V23.6141C1.68776 24.3773 2.31033 24.9999 3.07355 24.9999C3.83677 24.9999 4.45934 24.3773 4.45934 23.6141V16.3687C4.45934 16.2736 4.53586 16.197 4.63101 16.197H4.68892C4.78407 16.197 4.86059 16.2736 4.86059 16.3687V23.6141C4.86059 24.3773 5.48316 24.9999 6.24638 24.9999C7.0096 24.9999 7.63217 24.3773 7.63217 23.6141V15.7296C7.7149 15.7296 7.81418 15.7296 7.93414 15.7296C8.69736 15.7296 9.31993 15.107 9.31993 14.3438V8.26703C9.31993 7.20184 8.4533 6.33521 7.3881 6.33521Z" fill="#5292b9" />
+                                    <path d="M4.65993 5.80169C6.25876 5.80169 7.56181 4.5007 7.56181 2.89981C7.56181 1.29892 6.25876 0 4.65993 0C3.06111 0 1.75806 1.30098 1.75806 2.90188C1.75806 4.50277 3.05904 5.80376 4.65993 5.80376V5.80169Z" fill="#5292b9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_388_988">
+                                        <rect width="9.31993" height="25" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                    </label>
+                    <input type="radio" name="gender-pc" id="female-pc">
+                    <label for="female-pc">
+                        <span>
+                            <svg width="10" height="25" viewBox="0 0 10 25" fill="#d45a6a" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_388_985)">
+                                    <path d="M4.92873 5.80376C6.5314 5.80376 7.83061 4.50454 7.83061 2.90188C7.83061 1.29921 6.5314 0 4.92873 0C3.32607 0 2.02686 1.29921 2.02686 2.90188C2.02686 4.50454 3.32607 5.80376 4.92873 5.80376Z" fill="#d45a6a" />
+                                    <path d="M9.81829 13.0035L8.71173 7.74374C8.54006 6.92675 7.80993 6.33521 6.97639 6.33521H2.88109C2.04755 6.33521 1.31742 6.92675 1.14575 7.74374L0.0391893 13.0035C-0.0704326 13.5289 0.0598727 14.0708 0.397012 14.4865C0.636939 14.7823 0.9596 14.985 1.31742 15.0801L0.860319 17.256H2.53774V17.345L2.94934 23.8933C2.98864 24.5138 3.50572 24.9999 4.12829 24.9999C4.43648 24.9999 4.71777 24.882 4.92667 24.6876C5.13764 24.882 5.41687 24.9999 5.72505 24.9999C6.34762 24.9999 6.8647 24.5138 6.904 23.8933L7.3156 17.3677V17.256H8.99509L8.53592 15.0801C8.89374 14.985 9.2164 14.7802 9.45633 14.4865C9.79554 14.0687 9.92584 13.5289 9.81415 13.0035H9.81829Z" fill="#d45a6a" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_388_985">
+                                        <rect width="9.85563" height="25" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                    </label>
+                    <input type="radio" name="gender-pc" id="all-gender-pc">
+                    <label for="all-gender-pc">
+                        <span class="all">全部</span>
+                    </label>
+                </div>
+            </div>
+            <div class="color-filter-pc">
+                <h2>顏色</h2>
+                <div class="horizon"></div>
+                <div class="color">
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="black-pc" value="black">
+                        <label for="black-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="black" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;黑色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="white-pc" value="white">
+                        <label for="white-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="white" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;白色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="gray-pc" value="gray">
+                        <label for="gray-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#C2C2C2" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;灰色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="brown-pc">
+                        <label for="brown-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#7A482D" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;棕色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="rice-pc">
+                        <label for="rice-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#F1DAAD" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;米色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="green-pc">
+                        <label for="green-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#7EA083" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;綠色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="blue-pc">
+                        <label for="blue-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#548FBE" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;藍色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="purple-pc">
+                        <label for="purple-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#9149AB" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;紫色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="yellow-pc">
+                        <label for="yellow-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#FFCD51" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;黃色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="pink-pc">
+                        <label for="pink-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#EE92AD" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;粉色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="red-pc">
+                        <label for="red-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#BD392A" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;紅色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="orange-pc">
+                        <label for="orange-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#CB6B28" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;橘色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="silver-pc">
+                        <label for="silver-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#D4CFC6" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;銀色</span></label>
+                    </div>
+                    <div class="color-content">
+                        <input type="checkbox" name="color[]" id="gold-pc">
+                        <label for="gold-pc"><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="9.5" fill="#FFE39F" stroke="white" />
+                                </svg>
+                                &nbsp;&nbsp;金色</span></label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="price-filter-pc">
+                <h2>價格</h2>
+                <div class="horizon"></div>
+                <div class="price">
+                    <h4>NT$</h4>
+                    <input type="text" name="price-pc" value="" maxlength="6" pattern="[0-9]{6}">
+                    <h4>-</h4>
+                    <input type="text" name="price-pc" value="" maxlength="6" pattern="[0-9]{6}">
+                </div>
+            </div>
+            <button class="filter-submit-pc" type="submit">搜尋&nbsp;&nbsp;<svg width="82" height="14" viewBox="0 0 82 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2766_86944)">
+                        <path d="M0.378906 6.53516L80.2489 7.02516" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M75.2387 13.1352L74.2188 12.0252L79.6687 7.02523L74.2887 1.95523L75.3187 0.865234L81.8787 7.03523L75.2387 13.1352Z" fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2766_86944">
+                            <rect width="81.88" height="12.27" fill="white" transform="translate(0 0.865234)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+        </form>
+
+    </div>
 </div>
 <div class="filter-page">
     <div class="filter-header">
@@ -146,9 +375,15 @@ if ($totalRows > 0) {
     </div>
     <div class="filter-class">
         <div class="button-filter">
-            <span class="new">新品</span>
-            <span class="sale">優惠</span>
-            <span class="theme">節慶</span>
+            <a href="">
+                <span class="new">新品</span>
+            </a>
+            <a href="">
+                <span class="sale">優惠</span>
+            </a>
+            <a href="">
+                <span class="theme">節慶</span>
+            </a>
         </div>
         <div class="gender-filter">
             <span class="filter-title">性別</span>
@@ -448,4 +683,7 @@ if ($totalRows > 0) {
 </div>
 <?php include __DIR__ . '/parts/footer.php'; ?>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
+<script>
+    const colors = <?= json_encode($colors) ?>;
+</script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

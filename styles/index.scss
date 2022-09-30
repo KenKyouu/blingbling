@@ -197,7 +197,6 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   
   }
 }
-
 .card-bg {
   opacity: 1;
   position: absolute;
@@ -314,7 +313,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           margin-right: auto;
           justify-content: center;
           @media (min-width:768px) {
-            width: 20%;
+            width: 17%;
             padding-top: 0px;
           }
             .mainLogo img{
@@ -324,15 +323,18 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         .mainNav{
           padding-top: 30px;
           width: 100%;
+          display: none;
           // background-color: $pink;
-          @media (max-width:1400px) {
-            display: none;
+          @media (min-width:1200px) {
+            display: flex;
+            padding-top: 30px;
+            width: 100%;
           }
           .mainNav-wrap{
             margin: auto;
             display:flex;
             justify-content: space-around;
-            width: 25%;
+            width: 22%;
             // background-color: $yellow;
             .nav-1{
               display: flex;
@@ -535,6 +537,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       font-size:36px;
       @media (min-width:1400px){
         font-size: 48px;
+        line-height: 60px;
       }
     }
     .I-story-text{
@@ -555,10 +558,19 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
   .storyInfor{
       margin-top: 15px;
+      margin-left:5px ;
       .storyInfor-text{
-        font-family:"Roboto";
-        font-weight: $bold;
-        font-size: 14px;
+        font-family:"GenSenRounded-M";
+        text-align:justify;
+        text-justify:distribute; 
+        font-size: 13px;
+        line-height: 20px;
+        color: $dark-gray;
+        @media (min-width:768px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        
       }
   }
 }
@@ -586,6 +598,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       margin: 0;
       @media (min-width:1400px){
         font-size: 48px;
+        line-height: 60px;
       }
     }
     .poupler-text{
@@ -597,10 +610,11 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         color: $light-brown;
         background-color:$super-dark;
         border-radius: 60px;
-        padding: 0px 15px 3px 15px;
+        padding: 5px 15px;
         @media (min-width:1400px){
           font-size: 24px;
           transform: translate(-50px);
+          padding: 10px 20px;
         }
       }
       h2{
@@ -675,6 +689,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 font-family: "GenSenRounded-B";
                 font-size: $ps-font-size;
                 margin: 0;
+                line-height: 20px;
+                @media (min-width:768px) {
+                  padding-bottom: 5px;
+                }
               }
               .populerCardPrice{
                 text-align: center;
@@ -683,8 +701,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 width: 48%;
                 margin: 0;
                 border: 1px solid $super-dark;
-                padding: 0px 5px;
+                padding: 2px 5px;
                 border-radius: 5px;
+                @media (min-width:768px) {
+                  width: 38%;
+                  padding: 2px 5px;
+                }
   
               }
               .populerCardPrice::before{
@@ -705,6 +727,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 font-family: "GenSenRounded-B";
                 font-size: $ps-font-size;
                 margin: 0;
+                line-height: 20px;
+                @media (min-width:768px) {
+                  padding-bottom: 5px;
+                }
               }
               .populerCardPrice{
                 text-align: center;
@@ -713,8 +739,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 width: 40%;
                 margin: 0;
                 border: 1px solid $super-dark;
-                padding: 0px 5px;
+                padding: 2px 5px;
                 border-radius: 5px;
+                @media (min-width:768px) {
+                  width: 35%;
+                  padding: 2px 5px;
+                }
   
               }
               .populerCardPrice::before{

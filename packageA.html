@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>package</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/package.css" />
+</head>
+<body>
+
+
+
+    <!-- -------w-packageSection---------------- -->
+    <!-- <div class="w-package-lightBoxBg"></div> -->
+        <div class="w-newpackageSection ">
+            <div class="loading" id="js-loader">
+                <div class="loader"></div>
+            </div>
+            <span class="drag-notice" id="js-drag-notice">可用滑鼠進行拖曳&#176;
+            </span>
+            <div class="options">
+                <div class="option --is-active" data-option="topbody">
+                    <img src="./images/pachage-icon-topbox.svg" alt="" />
+                </div>
+                <div class="option" data-option="mainbody">
+                    <img src="./images/pachage-icon-mainbox.svg" alt="" />
+                </div>
+                <div class="option" data-option="mainRibbon">
+                    <img src="./images/pachage-icon-ribbon.svg" alt="" />
+                </div>
+                <div class="option" data-option="sideRibbon">
+                    <img src="./images/pachage-icon-ribbonLeft.svg" alt="" />
+                </div>
+                <div class="option" data-option="sideRibbon-2">
+                    <img src="./images/pachage-icon-ribbonRight.svg" alt="" />
+                </div>
+            </div>
+            
+            <canvas id="c" class=""></canvas>
+            <div class="w-new-packageBotton">
+
+                <div class="w-packageBotton-box">
+                    <div class="w-packageBotton-wrap">
+                        <div id="step3Btn-pre" class="w-p-new-skipBtn">
+                            略過包裝設計
+                        </div>
+                        <div id="step3Btn-clean" class="w-p-new-skipBtn">
+                            清除設計
+                        </div>
+                        <div id="step3Btn-next" class="w-p-new-skipBtn">
+                            下一步
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="info"></div>
+                    <div id="js-tray" class="tray">
+                        <div id="js-tray-slide" class="tray__slide"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- -------------w-newCardSection--------------- -->
+        <div class="w-newCardSection d-none">
+            <div class="w-P-closeSection">
+                <div class="w-p-close">
+                    <img src="./images/close.svg" alt="">
+                </div>
+            </div>
+            <div class="w-new-package-stepWrap">
+                    <div class="stepCard">
+                        <div id="step1"  class="stepTop1">
+                            1
+                        </div>
+                        <div class="stepBotton">
+                            禮物盒
+                        </div>
+                    </div>
+                    <div class="stepLine"></div>
+                    <div class="stepCard">
+                        <div id="step2"  class="stepTop2">
+                            2
+                        </div>
+                        <div class="stepBotton">
+                            禮物卡
+                        </div>
+                    </div>
+                    <div class="stepLine2"></div>
+                    <div  class="stepCard">
+                        <div id="step3" class="stepTop3">
+                            3
+                        </div>
+                        <div class="stepBotton">
+                            完成
+                        </div>
+                    </div>
+            </div> 
+            <div class="w-new-mainTitle">
+                <div class="w-new-mainTitleBox">
+                    選擇卡片背景
+                </div>
+            </div>
+            <div class="w-new-decorateSection">
+                        <div class="w-boxStyle">
+                            <div class="w-boxStyle-wrap">
+                                <div class="w-boxStyle-1">
+                                    <img  src="./images/card-01.png" alt="">
+                                </div>
+                                <div class="w-boxStyle-2">
+                                    <img  src="./images/card-01.png" alt="">
+                                </div>
+                                <div  class="w-boxStyle-3">
+                                    <img src="./images/card-01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            <div class="w-newCardShowSection">
+                <img src="./images/card-01.png" alt="">
+            </div>
+                <!-- <input type="text"> -->
+
+            
+        </div>
+
+    
+    
+
+
+
+    
+
+
+
+
+    <script src='https://unpkg.com/three@0.127.0/build/three.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/package-main.js"></script>
+    <script src="./js/package.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

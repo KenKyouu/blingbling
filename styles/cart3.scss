@@ -148,7 +148,7 @@ body {
     .s-total-list-wrap {
         .container {
             .s-list-info {
-                padding-top: 7rem;
+                padding-top: 6.5rem;
             }
         }
     }
@@ -305,7 +305,8 @@ body {
         border-radius: 10px;
         box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
         transform: translateY(0);
-        transition:1s cubic-bezier(.36,.14,0,1);
+        transition: 1s cubic-bezier(.36, .14, 0, 1);
+
         // overflow: hidden;
         .j-bling-img {
             position: absolute;
@@ -366,8 +367,9 @@ body {
         }
     }
 }
-.j-scroll{
-        
+
+.j-scroll {
+
     transform: translateY(-35vh);
 
 }
@@ -480,7 +482,7 @@ body {
 
 // --------------------------訂單留言備註 -------------------------------//
 .s-order-remark-section {
-    padding-top: 3.5rem;
+    // padding-top: 3.5rem;
 
     .container {
         width: 100%;
@@ -526,22 +528,23 @@ body {
                     font-size: $p-font-size;
                     font-weight: 700;
                     padding-top: 10px;
-                    border: 2px solid $super-dark;
-                    border-radius: 50%;
-                    width: 40px;
-                    height: 40px;
+                    // border: 2px solid $super-dark;
+                    // border-radius: 50%;
+                    // width: 40px;
+                    // height: 40px;
                     text-align: center;
                     align-items: flex-end;
                 }
 
                 button {
-                    padding: 10px 30px;
+                    padding: 10px;
                     background-color: $super-dark;
                     border: 1px solid $super-dark;
                     color: white;
                     border-radius: 10px;
                     font-family: "Roboto";
                     font-size: $ps-font-size;
+                    width: 100%;
 
                 }
             }
@@ -553,8 +556,56 @@ body {
     }
 }
 
+.s-order-cta-section {
+    margin: 3.5rem 0;
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        .s-order-cta {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            .row {
+                margin: 0;
+
+                .col {
+                    button {
+                        background-color: none;
+                        border: 3px solid $lake-green;
+                        color: $lake-green;
+                        font-family: "GenSenRounded-B";
+                        font-size: $p-font-size;
+                        border-radius: 10px;
+                        width: 100%;
+                        padding: 10px;
+                        line-height: 0.8rem;
+                        text-align: center;
+                    }
+
+                    .cart1-check {
+                        background-color: $lake-green;
+                        border: 3px solid $lake-green;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .s-order-remark-section {
+        padding-top: 3.5rem;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .s-order-remark-section {
+        margin-top: 3.5rem;
+
         .container {
             .s-order-remark-wrap {
                 width: 70%;
@@ -562,6 +613,33 @@ body {
 
                 .s-remark-wrap {
                     padding-left: 15px;
+                }
+
+                .btn-row {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .s-order-cta-section {
+        .container {
+            .s-order-cta {
+                width: 70%;
+                padding: 80px 0 80px 15px;
+
+                .row {
+                    .col {
+                        button {
+                            padding: 15px;
+                            font-size: $h6-font-size;
+                        }
+
+                        .cart1-check {
+                            font-size: $h6-font-size;
+                        }
+
+                    }
                 }
             }
         }
@@ -999,7 +1077,7 @@ body {
     .j-list {
         width: 75%;
         margin-top: 4rem;
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
 
         .j-list-bar {
             max-height: 120px;
