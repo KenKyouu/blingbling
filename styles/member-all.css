@@ -136,6 +136,11 @@
   padding: 0px 30px;
   margin-top: 15px;
 }
+@media screen and (max-width: 991px) {
+  .wrap .containerr .main .row .col .whiteBg {
+    min-height: 250px;
+  }
+}
 .wrap .containerr .main .row .col .whiteBg .mydetailstop {
   padding-top: 20px;
 }
@@ -149,7 +154,7 @@
   width: 280px;
   height: 420px;
   border-radius: 10px;
-  box-shadow: 5px 0 20px #4c4948;
+  box-shadow: 1px 0 10px #4c4948;
 }
 .wrap .containerr .main .row .col .whiteBg .mydetailstop .member-card .membercardimg img.memberCard {
   width: 100%;
@@ -638,8 +643,8 @@
   margin: 0 0 10px 0;
 }
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   background-image: url(../images/products/71-1.jpeg);
   background-size: cover;
   position: relative;
@@ -736,6 +741,9 @@
   display: flex;
   align-items: center;
 }
+.wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-gift {
+  width: 15%;
+}
 .wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-name {
   width: 35%;
   text-align: left;
@@ -743,10 +751,6 @@
 .wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-birth {
   width: 20%;
   text-align: left;
-}
-.wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-birthIcon {
-  width: 15%;
-  text-align: center;
 }
 .wrap .containerr .main .row .col .whiteBg .friendGroupTitle .f-watchDetails {
   width: 15%;
@@ -764,6 +768,10 @@
   display: flex;
   align-items: center;
   padding: 18px 0 18px;
+}
+.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .birthdayIcon {
+  width: 15%;
+  text-align: center;
 }
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .friendName {
   width: 35%;
@@ -784,10 +792,6 @@
   font-size: 14px;
   color: #4c4948;
   text-align: left;
-}
-.wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .birthdayIcon {
-  width: 15%;
-  text-align: center;
 }
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon {
   width: 15%;
@@ -1013,7 +1017,7 @@
 .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons {
   width: 100%;
   height: auto;
-  margin: 0 0 20px 0;
+  margin-bottom: 25px;
 }
 .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .coupon {
   width: 100%;
@@ -1048,6 +1052,7 @@
   margin-top: 15px;
 }
 .wrap .containerr .main .row .col .whiteBg .noticeborder {
+  width: 100%;
   overflow: hidden;
   margin-top: 20px;
 }
@@ -1458,6 +1463,13 @@
   .wrap .containerr .main .row .col .whiteBg .validCoupon .coupons .couponInvalidDate p {
     width: 100%;
   }
+  .wrap .containerr .main .row .col .whiteBg .myWishLists {
+    justify-content: left;
+  }
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList a .product-card .product-image {
+    width: 190px;
+    height: 190px;
+  }
 }
 @media screen and (min-width: 700px) {
   .wrap .containerr .main .row .col .whiteBg {
@@ -1614,6 +1626,9 @@
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-info {
     width: 65%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName .myIntro-info p {
+    font-size: 16px;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender {
     padding-top: 30px;
   }
@@ -1622,6 +1637,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-info {
     width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender .myIntro-info p {
+    font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday {
     padding-top: 30px;
@@ -1632,6 +1650,9 @@
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-info {
     width: 65%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday .myIntro-info p {
+    font-size: 16px;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email {
     padding-top: 30px;
   }
@@ -1640,6 +1661,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-info {
     width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email .myIntro-info p {
+    font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone {
     padding-top: 30px;
@@ -1650,6 +1674,9 @@
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-info {
     width: 65%;
   }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone .myIntro-info p {
+    font-size: 16px;
+  }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address {
     padding-top: 30px;
   }
@@ -1658,6 +1685,9 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-info {
     width: 65%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address .myIntro-info p {
+    font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 button.editMyInfo {
     margin: 35px 0 0 0;
@@ -1778,7 +1808,7 @@
   .wrap .containerr .main .row .col .col-lg-9 .myWishLists {
     width: 100%;
     height: 520px;
-    overflow: scroll;
+    overflow-y: scroll;
     justify-content: left;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
@@ -1795,7 +1825,7 @@
     background-color: rgba(255, 255, 255, 0);
     flex-direction: row;
     justify-content: left;
-    margin: 30px 0 20px 0;
+    margin: 25px 0 20px 0;
   }
   .wrap .containerr .main .row .col .col-lg-9 .newFriend p {
     font-size: 20px;
@@ -1809,151 +1839,23 @@
     color: #ffffff;
     border: none;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog {
-    width: 700px;
-    height: auto;
-    border-radius: 32px;
-    border: 4px solid #2d827d;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-header p.editTitle {
-    font-family: "GenSenRounded-B";
-    font-size: 24px;
-    color: #4c4948;
-    padding-bottom: 50px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details {
-    width: 100%;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-text {
-    width: 30%;
-    padding-right: 40px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-text p {
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-    color: #4c4948;
-    text-align: right;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-text p span {
-    color: #d45a6a;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input {
-    width: 70%;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input input {
-    width: 400px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #2d827d;
-    padding: 0 10px;
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input ::-webkit-input-placeholder {
-    color: #c2c2c2;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input select {
-    width: 150px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #2d827d;
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-    color: #4c4948;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input select option {
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-    color: #4c4948;
-    text-align: center;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input input.birthmd {
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #2d827d;
-    padding: 0 10px;
-    color: #c2c2c2;
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-    text-align: center;
-    margin-right: 20px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input .tagsselect {
-    width: 400px;
-    height: 135px;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #2d827d;
-    padding: 10px 10px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input .tagsselect .tags {
-    height: 135px;
-    overflow: scroll;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-body .friend-details .detail .detail-input .tagsselect .tags span {
-    display: inline-block;
-    margin-bottom: 10px;
-    border: 2px solid #000000;
-    border-radius: 100px;
-    font-family: "GenSenRounded-B";
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-footer button.true {
-    width: 140px;
-    height: 48px;
-    border-radius: 10px;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-    margin: 0 20px;
-  }
-  .wrap .containerr .main .row .col .col-lg-9 .newFriend .modal .modal-dialog .modal-content .modal-footer button.false {
-    width: 140px;
-    height: 48px;
-    border-radius: 10px;
-    border: 3px solid #000000;
-    color: #000000;
-    background-color: rgba(255, 255, 255, 0);
-    font-family: "GenSenRounded-B";
-    font-size: 16px;
-    margin: 0 20px;
-  }
   .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle .f-birthIcon {
     text-align: left;
     padding-left: 15px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle .f-watchDetails {
     text-align: left;
-    padding-left: 5px;
+    padding-left: 10px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle .f-delete {
     text-align: left;
-    padding-left: 25px;
+    padding-left: 35px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .myFriendsGroup {
     width: 100%;
     height: 460px;
     margin: 20px 0;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
     height: 70%;
@@ -2006,8 +1908,8 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .friendWishList {
     width: 100%;
-    height: 410px;
-    overflow: scroll;
+    height: 400px;
+    overflow-y: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 {
     width: 100%;
@@ -2032,7 +1934,7 @@
     background-color: rgba(255, 255, 255, 0);
     flex-direction: row;
     justify-content: left;
-    margin: 20px 0 30px 0;
+    margin: 30px 0;
   }
   .wrap .containerr .main .row .col .col-lg-9 .getcoupon p {
     font-size: 20px;
@@ -2072,7 +1974,7 @@
   .wrap .containerr .main .row .col .col-lg-9 .validCoupon {
     width: 100%;
     height: 440px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .wrap .containerr .main .row .col .col-lg-9 .validCoupon .coupons .coupon img {
     width: 80%;
@@ -2088,9 +1990,16 @@
   }
   .wrap .containerr .main .row .col .col-lg-9 .noticeborder {
     width: 100%;
-    height: 570px;
-    overflow: scroll;
-    margin-bottom: 20px;
+    height: 560px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .noticeborder .noticeDetails .noticeDetail p.noticeDate {
+    font-size: 16px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .noticeborder .noticeDetails .noticeDetail p.notice {
+    font-size: 16px;
   }
   .inputNewFriend .lightbox-newFriendDetails {
     width: 700px;
