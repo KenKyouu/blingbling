@@ -10,6 +10,8 @@ $highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高�
 $gender = isset($_GET['gender']) ? $_GET['gender'] : '';
 $colors = [];
 
+// echo substr($_SERVER['QUERY_STRING'], 7);
+// exit;
 
 $qsp = []; // query string parameters
 
@@ -18,7 +20,7 @@ $ps_where2 = '';
 $isGetColor = false;
 if (!empty($gender)) {
     $ps_where .= sprintf(" AND `gender`=%s ", $pdo->quote($gender));
-    $qsp['gender'] = $gender;
+    // $qsp['gender'] = $gender;
 }
 if (!empty($_GET['color'])) {
     $isGetColor = true;
@@ -29,8 +31,6 @@ if (!empty($_GET['color'])) {
     foreach ($colors as $c) {
         $colors2[] = $pdo->quote($c); // prevent SQL Injection
     }
-
-
 
     $ps_where .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
     $ps_where2 .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
@@ -52,6 +52,17 @@ if ($cate > 0 and $cate < 9) {
     $where .= " AND p.class_sid=$cate ";
     $qsp['cate'] = $cate;
 }
+if ($lowp) {
+    $where .= " AND p.price>=$lowp ";
+    // $qsp['lowp'] = $lowp;
+}
+if ($highp) {
+    $where .= " AND p.price<=$highp ";
+    // $qsp['highp'] = $highp;
+}
+// if ($gender) {
+//     $where .= " AND ps.gender=$gender ";
+// }
 // echo $where;
 // exit;
 $products = [];
@@ -192,7 +203,8 @@ if ($totalRows > 0) {
             <ul class="pagination">
                 <li class="page-item <?= $page == 1 ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page - 1;
-                                                echo http_build_query($qsp); ?>">
+                                                echo http_build_query($qsp);
+                                                ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>">
                         <i class="fa-solid fa-circle-arrow-left"></i>
                     </a>
                 </li>
@@ -201,13 +213,13 @@ if ($totalRows > 0) {
                         $qsp['page'] = $i;
                 ?>
                         <li class="page-item <?= $page == $i ? 'active' : '' ?>">
-                            <a class="page-link" href="?<?= http_build_query($qsp); ?>"><?= $i ?></a>
+                            <a class="page-link" href="?<?= http_build_query($qsp); ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>"><?= $i ?></a>
                         </li>
                 <?php endif;
                 endfor ?>
                 <li class="page-item <?= $page == $totalPages ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page + 1;
-                                                echo http_build_query($qsp); ?>">
+                                                echo http_build_query($qsp); ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>">
                         <i class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                 </li>
@@ -255,7 +267,7 @@ if ($totalRows > 0) {
                 <h2>性別</h2>
                 <div class="horizon"></div>
                 <div class="gender">
-                    <input type="radio" name="gender-pc" id="male-pc">
+                    <input type="radio" name="gender" id="male-pc" value="male">
                     <label for="male-pc">
                         <span>
                             <svg width="10" height="25" viewBox="0 0 10 25" fill="#5292b9" xmlns="http://www.w3.org/2000/svg">
@@ -271,7 +283,7 @@ if ($totalRows > 0) {
                             </svg>
                         </span>
                     </label>
-                    <input type="radio" name="gender-pc" id="female-pc">
+                    <input type="radio" name="gender" id="female-pc" value="female">
                     <label for="female-pc">
                         <span>
                             <svg width="10" height="25" viewBox="0 0 10 25" fill="#d45a6a" xmlns="http://www.w3.org/2000/svg">
@@ -287,10 +299,10 @@ if ($totalRows > 0) {
                             </svg>
                         </span>
                     </label>
-                    <input type="radio" name="gender-pc" id="all-gender-pc">
+                    <!-- <input type="radio" name="gender-pc" id="all-gender-pc">
                     <label for="all-gender-pc">
                         <span class="all">全部</span>
-                    </label>
+                    </label> -->
                 </div>
             </div>
             <div class="color-filter-pc">
@@ -387,23 +399,23 @@ if ($totalRows > 0) {
                 <div class="horizon"></div>
                 <div class="price">
                     <h4>NT$</h4>
-                    <input type="text" name="price-pc" value="" maxlength="6" pattern="[0-9]{6}">
+                    <input type="text" name="lowp" value="" maxlength="6"">
                     <h4>-</h4>
-                    <input type="text" name="price-pc" value="" maxlength="6" pattern="[0-9]{6}">
+                    <input type=" text" name="highp" value="" maxlength="6"">
                 </div>
             </div>
-            <button class="filter-submit-pc" type="submit">搜尋&nbsp;&nbsp;<svg width="82" height="14" viewBox="0 0 82 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_2766_86944)">
-                        <path d="M0.378906 6.53516L80.2489 7.02516" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M75.2387 13.1352L74.2188 12.0252L79.6687 7.02523L74.2887 1.95523L75.3187 0.865234L81.8787 7.03523L75.2387 13.1352Z" fill="white" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_2766_86944">
-                            <rect width="81.88" height="12.27" fill="white" transform="translate(0 0.865234)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
+            <button class=" filter-submit-pc" type="submit">搜尋&nbsp;&nbsp;<svg width="82" height="14" viewBox="0 0 82 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2766_86944)">
+                            <path d="M0.378906 6.53516L80.2489 7.02516" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M75.2387 13.1352L74.2188 12.0252L79.6687 7.02523L74.2887 1.95523L75.3187 0.865234L81.8787 7.03523L75.2387 13.1352Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2766_86944">
+                                <rect width="81.88" height="12.27" fill="white" transform="translate(0 0.865234)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    </button>
         </form>
 
     </div>
