@@ -193,15 +193,17 @@ $('#w-step2BtnCard-next').click(function(){
 //----canvas-dataurl----------------------
 
 
-// const btnStepOneFinish = document.querySelector('#w-step1BtnPackage-next');
-// const imgPackage = document.querySelector('#imgPackageConverted');
-// const myCanvas = document.querySelector('#c');
+const btnStepOneFinish = document.querySelector('#w-step1BtnPackage-next');
+const imgPackage = document.querySelector('#imgPackageConverted');
+const myCanvas = document.querySelector('#c');
 
-// btnStepOneFinish.addEventListener("click",function(){
-//     const dataURI= myCanvas.toDataURL();
+btnStepOneFinish.addEventListener("click",function(){
+    const dataURI= myCanvas.toDataURL();
 
-//     console.log(dataURI)
-// });
+    console.log(dataURI)
+    $("#imgPackageConverted").attr("src",dataURI)
+});
+
 
 //-----拿取卡片樣式data--------
 
