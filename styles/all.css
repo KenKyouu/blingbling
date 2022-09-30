@@ -89,7 +89,7 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header .up .right-pc {
     display: none;
   }
@@ -142,8 +142,61 @@ body {
   height: 500px;
   margin: 0 10%;
   border-radius: 0 0 10px 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px #4c4948;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+.header .down .header-class .h-mega-category {
+  height: 100%;
+}
+.header .down .header-class .h-mega-category .h-mega-title {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .down .header-class .h-mega-category .h-mega-title a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header .down .header-class .h-mega-category .h-mega-title a p {
+  color: #4c4948;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  padding-right: 30px;
+}
+.header .down .header-class .h-mega-category .h-mega-title a p:hover {
+  color: #2d827d;
+}
+.header .down .header-class .h-mega-category .h-mega-title a .mega-img {
+  width: 50px;
+}
+.header .down .header-class .h-mega-category .h-mega-title a .mega-img img {
+  width: 100%;
+}
+.header .down .header-class .h-mega-category ul.h-mega-option {
+  height: 80%;
+}
+.header .down .header-class .h-mega-category ul.h-mega-option li {
+  padding: 6px 0;
+}
+.header .down .header-class .h-mega-category ul.h-mega-option li a {
+  text-decoration: none;
+  color: #4c4948;
+  font-family: "GenSenRounded-M";
+  font-size: 14px;
+}
+.header .down .header-class .h-mega-category ul.h-mega-option li a:hover {
+  color: #7cb2af;
+}
+.header .down .header-class .h-mega-line {
+  width: 2px;
+  height: 300px;
   background-color: #c2c2c2;
-  box-shadow: 4px 4px 15px #000000;
+  margin: 95px 25px 0 25px;
 }
 .header .down .header-search {
   display: none;
@@ -199,8 +252,8 @@ body {
   right: 10%;
   width: 200px;
   border-radius: 0 0 10px 10px;
-  background-color: #c2c2c2;
-  box-shadow: 4px 4px 15px #000000;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px #4c4948;
 }
 @media screen and (max-width: 768px) {
   .header .down .header-member {
@@ -227,6 +280,10 @@ body {
     width: 13%;
   }
 }
+.header .down .header-member .member-link ul {
+  display: flex;
+  flex-direction: column;
+}
 .header .down .header-member .member-link ul a {
   padding: 10px 20px;
   text-decoration: none;
@@ -234,9 +291,35 @@ body {
   align-items: center;
 }
 .header .down .header-member .member-link ul a li {
-  color: #000000;
-  font-family: "GenSenRounded-M";
-  font-size: 18px;
+  width: 100%;
+  color: #4c4948;
+  font-family: "GenSenRounded-B";
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.header .down .header-member .member-link ul a li .h-member-svg {
+  width: 40%;
+  text-align: center;
+}
+.header .down .header-member .member-link ul a li .h-member-text {
+  width: 60%;
+  text-align: left;
+}
+.header .down .header-member .member-link ul a:hover {
+  background-color: #4c4948;
+}
+.header .down .header-member .member-link ul a:hover li {
+  color: #ffffff;
+}
+.header .down .header-member .member-link ul a:hover li svg path {
+  fill: #ffffff;
+}
+.header .down .header-member .member-link ul a:hover li svg.order path {
+  stroke: #ffffff;
+}
+.header .down .header-member .member-link ul a.notice:hover {
+  border-radius: 0 0 10px 10px;
 }
 
 .footer-mobile {

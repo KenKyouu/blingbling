@@ -157,12 +157,19 @@
   border: 3px solid #000000;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
-  color: #000000;
   font-family: "GenSenRounded-B";
   font-size: 14px;
 }
-.wrap .containerr .main .row .col .whiteBg .order-list .order-num button p {
+.wrap .containerr .main .row .col .whiteBg .order-list .order-num button a {
+  text-decoration: none;
+  color: #000000;
   padding-right: 5px;
+}
+.wrap .containerr .main .row .col .whiteBg .order-list .order-num button:hover {
+  background-color: #000000;
+}
+.wrap .containerr .main .row .col .whiteBg .order-list .order-num button:hover a {
+  color: #ffffff;
 }
 .wrap .containerr .main .row .col .whiteBg .order-list .order-detail-title {
   margin-top: 10px;
@@ -295,7 +302,6 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   .wrap .containerr .main .row .col .col-lg-9 .mydetailstop {

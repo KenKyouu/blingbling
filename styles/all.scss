@@ -305,8 +305,62 @@ body {
       height: 500px;
       margin: 0 10%;
       border-radius: 0 0 10px 10px;
-      background-color: $gray;
-      box-shadow: 4px 4px 15px $super-dark;
+      background-color: $white;
+      box-shadow: 0px 0px 20px $dark-gray;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      padding-top: 60px;
+      .h-mega-category {
+        height: 100%;
+        .h-mega-title {
+          height: 20%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            p {
+              color: $dark-gray;
+              font-family: "GenSenRounded-B";
+              font-size: $p-font-size;
+              padding-right: 30px;
+            }
+            p:hover {
+              color: $lake-green;
+            }
+            .mega-img {
+              width: 50px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        ul.h-mega-option {
+          height: 80%;
+          li {
+            padding: 6px 0;
+            a {
+              text-decoration: none;
+              color: $dark-gray;
+              font-family: "GenSenRounded-M";
+              font-size: $ps-font-size;
+            }
+            a:hover {
+              color: $light-lake-green;
+            }
+          }
+        }
+      }
+      .h-mega-line {
+        width: 2px;
+        height: 300px;
+        background-color: $gray;
+        margin: 95px 25px 0 25px;
+      }
     }
     .header-search {
       display: none;
@@ -352,8 +406,8 @@ body {
       right: 10%;
       width: 200px;
       border-radius: 0 0 10px 10px;
-      background-color: $gray;
-      box-shadow: 4px 4px 15px $super-dark;
+      background-color: $white;
+      box-shadow: 0px 0px 20px $dark-gray;
       @media screen and (max-width: 768px) {
         display: none;
       }
@@ -371,16 +425,49 @@ body {
       }
       .member-link {
         ul {
+          display: flex;
+          flex-direction: column;
+          // padding: 8px 0;
           a {
             padding: 10px 20px;
             text-decoration: none;
             display: flex;
             align-items: center;
             li {
-              color: $super-dark;
-              font-family: "GenSenRounded-M";
-              font-size: $h7-font-size;
+              width: 100%;
+              color: $dark-gray;
+              font-family: "GenSenRounded-B";
+              font-size: $p-font-size;
+              display: flex;
+              align-items: center;
+              .h-member-svg {
+                width: 40%;
+                text-align: center;
+              }
+              .h-member-text {
+                width: 60%;
+                text-align: left;
+              }
             }
+          }
+          a:hover {
+            background-color: $dark-gray;
+            li {
+              color: $white;
+              svg {
+                path {
+                  fill: $white;
+                }
+              }
+              svg.order {
+                path {
+                  stroke: $white;
+                }
+              }
+            }
+          }
+          a.notice:hover {
+            border-radius: 0 0 10px 10px;
           }
         }
       }
