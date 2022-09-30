@@ -278,7 +278,7 @@ if (empty($r)) {
                     <select name="gender" placeholder="請選擇" required>
                         <option value="male">男</option>
                         <option value="female">女</option>
-                        <option value="others">不顯示</option>
+                        <!-- <option value="others">不顯示</option> -->
                     </select>
                 </div>
             </div>
@@ -295,7 +295,7 @@ if (empty($r)) {
                     <p><span>*</span> 好友生日</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
+                    <input type="text" name="birthday" placeholder="MM" class="birthmd" \d{1}\d{1} required>
                     <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
                 </div>
             </div>
@@ -304,7 +304,7 @@ if (empty($r)) {
                     <p>好友印象標籤</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="tags" placeholder="最多選擇五個">
+                    <input type="text" name="tags" placeholder="最多選擇五個" readonly="readonly">
                 </div>
             </div>
             <div class="detail">

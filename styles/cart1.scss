@@ -1281,6 +1281,11 @@ body {
 
                 .svg-col {
                     margin-left: -20%;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }

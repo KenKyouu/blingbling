@@ -225,11 +225,11 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
 
                                 </div>
                                 <?php foreach ($coupon_value as $cv) : ?>
-                                <label class="d-flex j-point mt-2">
-                                    <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
-                                    <input type="radio" name="coupon-radio" class="coupon-radio" data-val="<?= $cv['coupon_value'] ?>">
-                                    <span class="j-checkmark-r"></span>
-                                </label>
+                                    <label class="d-flex j-point mt-2">
+                                        <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
+                                        <input type="radio" name="coupon-radio" class="coupon-radio" data-val="<?= $cv['coupon_value'] ?>">
+                                        <span class="j-checkmark-r"></span>
+                                    </label>
                                 <?php endforeach; ?>
                             </div>
                             <button class="coupon-apply-btn">確定使用！Bling</button>
@@ -303,12 +303,14 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
 
                 <div class="col-6 d-flex j-relative">
 
-                    <label class="discount-radio j-point d-flex"><h3 class="pl-4 pt-1 mr-2">全部折抵</h3>
-                        <input type="radio" name="giftvoucher" class="default-package j-gift-voucher voucher" data-val="<?= $member[0]['gift_voucher'] ?>" >
+                    <label class="discount-radio j-point d-flex">
+                        <h3 class="pl-4 pt-1 mr-2">全部折抵</h3>
+                        <input type="radio" name="giftvoucher" class="default-package j-gift-voucher voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
                         <span class="j-checkmark-r"></span>
                     </label>
-                    <label class="discount-radio d-flex pl-3 j-point"><h3 class="pl-2 pt-1">不使用</h3>
-                        <input type="radio"  name="giftvoucher" class="default-package j-none-voucher voucher" data-val="0" >
+                    <label class="discount-radio d-flex pl-3 j-point">
+                        <h3 class="pl-2 pt-1">不使用</h3>
+                        <input type="radio" name="giftvoucher" class="default-package j-none-voucher voucher" data-val="0">
 
                         <span class="j-checkmark-r"></span>
                     </label>
@@ -336,14 +338,14 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
                             </svg>
                         </div>
                         <?php foreach ($coupon_value as $cv) : ?>
-                        <label class="d-flex j-point mt-2">
-                            <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
-                            <input type="radio" name="couponradio" class="coupon-radio "  data-val="<?= $cv['coupon_value'] ?>">
-                            <span class="j-checkmark-r "></span>
-                        </label>
+                            <label class="d-flex j-point mt-2">
+                                <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
+                                <input type="radio" name="couponradio" class="coupon-radio " data-val="<?= $cv['coupon_value'] ?>">
+                                <span class="j-checkmark-r "></span>
+                            </label>
                         <?php endforeach; ?>
                     </div>
-                    <button class="coupon-apply-btn" >確定使用！Bling</button>
+                    <button class="coupon-apply-btn">確定使用！Bling</button>
                 </div>
             </div>
         </div>
@@ -722,6 +724,22 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
 
                             <div class="cta-btn d-flex">
                                 <p class="additionalPrice pt-1">2,129</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="additional-product-card">
+                        <div class="img-wrap w-100">
+                            <div class="img-bg">
+                                <img class="w-100" src="./images/products/festival-02.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="info-wrap">
+                            <h3>怦然心動 永生花小夜燈</h3>
+
+                            <div class="cta-btn d-flex">
+                                <p class="additionalPrice pt-1">1480</p>
                             </div>
                         </div>
                     </div>

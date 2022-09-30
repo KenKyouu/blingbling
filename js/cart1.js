@@ -50,6 +50,28 @@ $(window).scroll(function () {
 //     lastScroll = scrollNow;
 // })
 
+// 加購區電腦版點擊輪播
+let nowPage = 0;
+$('.svg-col').click(function () {
+    if (nowPage < 4) {
+        nowPage = nowPage + 1;
+    }
+
+    else {
+        (nowPage > 0)
+        nowPage = nowPage;
+    }
+    moveX(nowPage);
+})
+
+function moveX(nowPage) {
+    const movement = nowPage * -300;
+    $('.additional-product-row').css({
+        'transform': `translateX(${movement}px)`,
+        'transition': '.8s',
+    });
+}
+
 
 //價錢加,
 const dollarCommas = function (n) {
@@ -165,6 +187,7 @@ const packagechose = +$('.j-package-chose').attr('data-val');
 const blingchose = +$('.j-bling-chose').attr('data-val');
 const nonepackage = +$('.j-none-package').attr('data-val');
 
+
 $('.j-package-chose').click(function(){
     setTimeout(function(){
         $('.j-orderpackage').html('NT$ ' + dollarCommas(packagechose));
@@ -173,6 +196,8 @@ $('.j-package-chose').click(function(){
     },5000)
 })
 $('.j-bling-chose').click(function(){
+
+
     $('.j-orderpackage').html('NT$ ' + dollarCommas(blingchose));
     $('.j-orderpackage').attr('data-val', blingchose);
     updatePrices();
@@ -200,14 +225,14 @@ $('.j-none-voucher').click(function () {
 
 
 //優惠券價錢
-$('.coupon-apply-btn').click(function(){
-    $('input[class*=coupon-radio]').each(function(){
+$('.coupon-apply-btn').click(function () {
+    $('input[class*=coupon-radio]').each(function () {
         if ($(this).prop("checked")) {
-        let couponradio = $(this).attr('data-val');
-        console.log(couponradio);
-        $('.j-coupon').html('NT$ ' + dollarCommas(couponradio));
-        $('.j-coupon').attr('data-val',couponradio);
-        updatePrices();
+            let couponradio = $(this).attr('data-val');
+            console.log(couponradio);
+            $('.j-coupon').html('NT$ ' + dollarCommas(couponradio));
+            $('.j-coupon').attr('data-val', couponradio);
+            updatePrices();
         }
     })
 })
@@ -265,19 +290,19 @@ function addToOrder(event) {
 
     $.get(
 
-      "addtoorder.php",
-      {
-        producttotal,
-        orderpackage,
-        ordergiftvoucher,
-        ordercoupon,
-      },
-      function (data) {
-          // showCartCount(data);
-        console.log(data);
-        updatePrices();
-      },
-      "json"
+        "addtoorder.php",
+        {
+            producttotal,
+            orderpackage,
+            ordergiftvoucher,
+            ordercoupon,
+        },
+        function (data) {
+            // showCartCount(data);
+            console.log(data);
+            updatePrices();
+        },
+        "json"
 
     );
 }
