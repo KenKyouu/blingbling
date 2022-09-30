@@ -77,7 +77,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             我的收藏
                                         </div>
                                     </a></li>
-                                <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                <li class="btn col-4 col-md-2 col-lg-12"><a href="./member_order.php">
                                         <div class="btnsvg">
                                             <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#4C4948" stroke="#4C4948" stroke-miterlimit="10" />
