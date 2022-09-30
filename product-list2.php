@@ -78,7 +78,7 @@ $newPsWhere2 = ($isGetColor) ? $ps_where2 : '';
 // echo $newPsWhere2 . ", ";
 
 $t_sql = "SELECT COUNT(distinct p.sid) FROM `class` c JOIN `product` p ON p.class_sid=c.sid
-JOIN (
+LEFT JOIN (
     SELECT * FROM product_style $newPsWhere 
 ) ps ON p.sid=ps.product_sid
 $where" . $newPsWhere2;
@@ -113,8 +113,6 @@ if ($totalRows > 0) {
 
     // $sql = sprintf("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid %s ORDER BY product.sid DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
     $rows = $pdo->query($sql)->fetchAll();
-    // echo $rows;
-    // exit;
 }
 ?>
 
@@ -634,15 +632,12 @@ if ($totalRows > 0) {
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script>
     const colors = <?= json_encode($colors) ?>;
-
     colors.forEach(v => {
         const el = $('#' + v + '-pc');
         // console.log(el)
         if (el.length) {
             el.prop('checked', true);
         }
-
-
     })
 </script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
