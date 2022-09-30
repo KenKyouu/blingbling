@@ -15,12 +15,13 @@ $colors = [];
 
 $qsp = []; // query string parameters
 
+
 $ps_where = ' WHERE 1 ';
 $ps_where2 = '';
 $isGetColor = false;
 if (!empty($gender)) {
     $ps_where .= sprintf(" AND `gender`=%s ", $pdo->quote($gender));
-    // $qsp['gender'] = $gender;
+    $qsp['gender'] = $gender;
 }
 if (!empty($_GET['color'])) {
     $isGetColor = true;
@@ -29,12 +30,22 @@ if (!empty($_GET['color'])) {
     $colors2 = [];
 
     foreach ($colors as $c) {
-        $colors2[] = $pdo->quote($c); // prevent SQL Injection
+        $colors2[]  =  $pdo->quote($c); // prevent SQL Injection
     }
+
+    foreach ($colors as $c) {
+        $colorsData[] = str_replace("'", '', $pdo->quote($c)); // prevent SQL Injection
+    }
+    $qsp['color'] = $colorsData;
+
+
 
     $ps_where .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
     $ps_where2 .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
 }
+
+
+// var_dump($colorsData) . '<BR>';
 
 // echo $ps_where;
 // exit;
@@ -54,12 +65,17 @@ if ($cate > 0 and $cate < 9) {
 }
 if ($lowp) {
     $where .= " AND p.price>=$lowp ";
-    // $qsp['lowp'] = $lowp;
+    $qsp['lowp'] = $lowp;
 }
 if ($highp) {
     $where .= " AND p.price<=$highp ";
-    // $qsp['highp'] = $highp;
+    $qsp['highp'] = $highp;
 }
+
+echo json_encode($qsp);
+// echo http_build_query($qsp);
+// exit;
+
 // if ($gender) {
 //     $where .= " AND ps.gender=$gender ";
 // }
@@ -204,7 +220,7 @@ if ($totalRows > 0) {
                 <li class="page-item <?= $page == 1 ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page - 1;
                                                 echo http_build_query($qsp);
-                                                ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>">
+                                                ?>">
                         <i class="fa-solid fa-circle-arrow-left"></i>
                     </a>
                 </li>
@@ -213,13 +229,13 @@ if ($totalRows > 0) {
                         $qsp['page'] = $i;
                 ?>
                         <li class="page-item <?= $page == $i ? 'active' : '' ?>">
-                            <a class="page-link" href="?<?= http_build_query($qsp); ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>"><?= $i ?></a>
+                            <a class="page-link" href="?<?= http_build_query($qsp); ?>"><?= $i ?></a>
                         </li>
                 <?php endif;
                 endfor ?>
                 <li class="page-item <?= $page == $totalPages ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page + 1;
-                                                echo http_build_query($qsp); ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>">
+                                                echo http_build_query($qsp); ?>">
                         <i class="fa-solid fa-circle-arrow-right"></i>
                     </a>
                 </li>
