@@ -872,7 +872,7 @@ body {
     }
   }
   .filter-class {
-    margin-top: 50px;
+    margin-top: 100px;
     .button-filter {
       padding: 20px;
       border-bottom: 1px solid $white;
@@ -913,6 +913,9 @@ body {
         right: 10px;
       }
     }
+    .gender-filter {
+      border-top: 1px solid $white;
+    }
   }
   .filter-footer {
     // width: 100%;
@@ -939,8 +942,8 @@ body {
 
 .gender-filter-detail {
   .gender-filter-content {
-    margin-top: 120px;
-    form {
+    margin-top: 100px;
+    .gender-form {
       .gender-filter-radio {
         display: flex;
         justify-content: space-between;
@@ -962,7 +965,7 @@ body {
           margin-right: 30px;
         }
       }
-      label.all {
+      label.female {
         border-bottom: 1px solid $white;
       }
     }
@@ -971,8 +974,8 @@ body {
 
 .price-filter-detail {
   .price-filter-content {
-    margin-top: 120px;
-    form {
+    margin-top: 100px;
+    .price-form {
       .price-filter-radio {
         display: flex;
         justify-content: space-between;
@@ -1004,9 +1007,9 @@ body {
 .color-filter-detail {
   .color-filter-content {
     height: calc(100% - 206px);
-    margin-top: 120px;
+    margin-top: 100px;
     overflow: hidden;
-    form {
+    .color-form {
       height: calc(100% - 0px);
       overflow: scroll;
       .color-filter-radio {
@@ -1030,7 +1033,7 @@ body {
           margin-right: 30px;
         }
       }
-      label.last {
+      label.color-filter-radio:nth-last-child(1) {
         border-bottom: 1px solid $white;
       }
     }

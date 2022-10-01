@@ -72,7 +72,8 @@ if ($highp) {
     $qsp['highp'] = $highp;
 }
 
-echo json_encode($qsp);
+
+// echo json_encode($qsp);
 // echo http_build_query($qsp);
 // exit;
 
@@ -275,7 +276,7 @@ if ($totalRows > 0) {
                 </ul>
             </div>
         </div>
-        <form name="filter_pc" action="product-list2.php?cate=2">
+        <form name="filter_pc" action="product-list2.php?">
             <?php foreach ($_GET as $gKey => $gValue) : ?>
                 <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
             <?php endforeach; ?>
@@ -444,7 +445,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="filter-class">
-        <div class="button-filter">
+        <!-- <div class="button-filter">
             <a href="">
                 <span class="new">新品</span>
             </a>
@@ -454,7 +455,7 @@ if ($totalRows > 0) {
             <a href="">
                 <span class="theme">節慶</span>
             </a>
-        </div>
+        </div> -->
         <div class="gender-filter">
             <span class="filter-title">性別</span>
             <span class="filter-content" id="gender-span">所有性別</span>
@@ -483,22 +484,32 @@ if ($totalRows > 0) {
             </span>
         </div>
         <div class="filter-footer">
-            <button type="button">
-                搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: none;
-                                stroke: #fff;
-                            }
-                        </style>
-                    </defs>
-                    <g id="_圖層_1-2">
-                        <path class="cls-1" d="M0,5.48H50" />
-                        <path class="cls-1" d="M50,5.48L33,.48" />
-                    </g>
-                </svg>
-            </button>
+            <form name="filter_mobile" action="product-list2.php?">
+                <?php foreach ($_GET as $gKey => $gValue) : ?>
+                    <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
+                <?php endforeach; ?>
+                <input class="mobile-gender" type="text" name="gender" value="" hidden>
+                <input class="mobile-lowp" type="text" name="lowp" value="" hidden>
+                <input class="mobile-highp" type="text" name="highp" value="" hidden>
+                <div class="addInput"></div>
+                <!-- <input class="mobile-color" type="text" name="color[]" value="" hidden> -->
+                <button type="submit">
+                    搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="_圖層_1-2">
+                            <path class="cls-1" d="M0,5.48H50" />
+                            <path class="cls-1" d="M50,5.48L33,.48" />
+                        </g>
+                    </svg>
+                </button>
+            </form>
         </div>
     </div>
 </div>
@@ -510,7 +521,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="gender-filter-content">
-        <form class="gender-form" action="">
+        <div class="gender-form" action="">
             <label for="male" class="gender-filter-radio">
                 <span>
                     <svg width="10" height="25" viewBox="0 0 10 25" fill="#5292b9" xmlns="http://www.w3.org/2000/svg">
@@ -528,7 +539,7 @@ if ($totalRows > 0) {
                 </span>
                 <input type="radio" name="gender" id="male" value="male" />
             </label>
-            <label for="female" class="gender-filter-radio">
+            <label for="female" class="gender-filter-radio female">
                 <span>
                     <svg width="10" height="25" viewBox="0 0 10 25" fill="#d45a6a" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_388_985)">
@@ -541,18 +552,17 @@ if ($totalRows > 0) {
                             </clipPath>
                         </defs>
                     </svg>
-
                     &nbsp; &nbsp; 女
                 </span>
                 <input type="radio" name="gender" id="female" value="female" />
             </label>
-            <label for="all-gender" class="gender-filter-radio all">
+            <!-- <label for="all-gender" class="gender-filter-radio all">
                 <span class="all">&nbsp;&nbsp;全部</span>
                 <input type="radio" name="gender" id="all-gender" value="all-gender" />
-            </label>
-        </form>
+            </label> -->
+        </div>
     </div>
-    <div class="filter-footer">
+    <!-- <div class="filter-footer">
         <button type="button">
             搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                 <defs>
@@ -569,7 +579,7 @@ if ($totalRows > 0) {
                 </g>
             </svg>
         </button>
-    </div>
+    </div> -->
 </div>
 <div class="price-filter-detail">
     <div class="filter-header">
@@ -579,7 +589,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="price-filter-content">
-        <form class="price-form" action="">
+        <div class="price-form" action="">
             <label for="price-range-one" class="price-filter-radio">
                 <span>NT$500以下</span>
                 <input type="radio" name="price" id="price-range-one" value="price-range-one" />
@@ -596,9 +606,9 @@ if ($totalRows > 0) {
                 <span>NT$5,000以上</span>
                 <input type="radio" name="price" id="price-range-four" value="price-range-four" />
             </label>
-        </form>
+        </div>
     </div>
-    <div class="filter-footer">
+    <!-- <div class="filter-footer">
         <button type="button">
             搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                 <defs>
@@ -615,7 +625,7 @@ if ($totalRows > 0) {
                 </g>
             </svg>
         </button>
-    </div>
+    </div> -->
 </div>
 <div class="color-filter-detail">
     <div class="filter-header">
@@ -625,7 +635,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="color-filter-content">
-        <form class="color-form" action="">
+        <div class="color-form" action="">
             <?php foreach ($op_colors as $opc) : ?>
                 <label for="<?= $opc['name_en'] ?>" class="color-filter-radio">
                     <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -635,9 +645,9 @@ if ($totalRows > 0) {
                     <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" />
                 </label>
             <?php endforeach; ?>
-        </form>
+        </div>
     </div>
-    <div class="filter-footer">
+    <!-- <div class="filter-footer">
         <button type="button">
             搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                 <defs>
@@ -654,7 +664,7 @@ if ($totalRows > 0) {
                 </g>
             </svg>
         </button>
-    </div>
+    </div> -->
 </div>
 <?php include __DIR__ . '/parts/footer.php'; ?>
 <?php include __DIR__ . '/parts/scripts.php'; ?>

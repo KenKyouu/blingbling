@@ -35,11 +35,13 @@ $(".color-filter").click(function () {
   $(".color-filter-detail").addClass("filter-show");
 });
 
-$(".filter-detail-back").click(function () {
-  $(
-    ".gender-filter-detail, .price-filter-detail, .color-filter-detail"
-  ).removeClass("filter-show");
-});
+$(".filter-detail-back, .gender-filter-radio, .price-filter-radio").click(
+  function () {
+    $(
+      ".gender-filter-detail, .price-filter-detail, .color-filter-detail"
+    ).removeClass("filter-show");
+  }
+);
 $(".filter-button-pc").click(function () {
   $(".filter-page-pc").addClass("filter-show");
   $("body").addClass("body-hidden");
@@ -53,11 +55,13 @@ $(".filter-page-pc-back").click(function () {
 
 let genderArr = [];
 
-$(".filter-detail-back").click(function () {
+$(".gender-filter-radio").click(function () {
   $("input[name=gender]").each(function () {
     if ($(this).prop("checked")) {
-      console.log($(this).val());
+      // console.log($(this).val());
       genderArr.push($(this).val());
+      $(".mobile-gender").val(genderArr[0]);
+      // console.log($(".mobile-gender").val());
       if (genderArr[0] == "male") {
         $("#gender-span").text("男").css("color", "#fff");
       } else if (genderArr[0] == "female") {
@@ -65,7 +69,7 @@ $(".filter-detail-back").click(function () {
       } else if (genderArr[0] == "all-gender") {
         $("#gender-span").text("所有性別").css("color", "#fff");
       }
-      console.log(genderArr);
+      // console.log(genderArr);
       genderArr = [];
     }
   });
@@ -75,21 +79,28 @@ $(".filter-detail-back").click(function () {
 
 let priceArr = [];
 
-$(".filter-detail-back").click(function () {
+$(".price-filter-radio").click(function () {
   $("input[name=price]").each(function () {
     if ($(this).prop("checked")) {
-      console.log($(this).val());
+      // console.log($(this).val());
       priceArr.push($(this).val());
       if (priceArr[0] == "price-range-one") {
         $("#price-span").text("NT$500以下").css("color", "#fff");
+        $(".mobile-lowp").val(0);
+        $(".mobile-highp").val(500);
       } else if (priceArr[0] == "price-range-two") {
         $("#price-span").text("NT$500 - NT$1,000").css("color", "#fff");
+        $(".mobile-lowp").val(500);
+        $(".mobile-highp").val(1000);
       } else if (priceArr[0] == "price-range-three") {
         $("#price-span").text("NT$1,000 - NT$5,000").css("color", "#fff");
+        $(".mobile-lowp").val(1000);
+        $(".mobile-highp").val(5000);
       } else if (priceArr[0] == "price-range-four") {
         $("#price-span").text("NT$5,000以上").css("color", "#fff");
+        $(".mobile-lowp").val(5000);
       }
-      console.log(priceArr);
+      // console.log(priceArr);
       priceArr = [];
     }
   });
@@ -121,7 +132,11 @@ $(".filter-detail-back").click(function () {
     if ($(this).prop("checked")) {
       // console.log($(this).val());
       colorArr.push($(this).val());
-      // console.log(colorArr);
+      $(".addInput").append(
+        "<input type='text' name='color[]' value='" +
+          $(this).val() +
+          "' hidden></input>"
+      );
       // colorArr = [];
     }
     // TODO: 把顏色改成中文抓到#color-span
@@ -138,6 +153,8 @@ $(".filter-detail-back").click(function () {
     .text(color_zh.substring(0, color_zh.length - 2))
     .css("color", "#fff");
   // console.log(colorArr);
+  $(".mobile-color").val(colorArr);
+  // console.log($(".mobile-color").val());
   // colorArr = [];
 });
 
