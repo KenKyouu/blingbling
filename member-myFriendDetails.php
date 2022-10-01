@@ -12,11 +12,12 @@ $sid = intval($_GET['sid']);
 $sql = "SELECT *  FROM member_friend WHERE sid=$sid";
 $r = $pdo->query($sql)->fetch();
 $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user ORDER BY `birthday_mm`, `birthday_dd`")->fetchAll();
-
-if (empty($r)) {
-    header('Location: member_myFriend.php');
-    exit;
-}
+$friendsid = substr($_SERVER['QUERY_STRING'], 4);
+$friend = intval($friendsid);
+// if (empty($r)) {
+//     header('Location: member_myFriend.php');
+//     exit;
+// }
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -78,7 +79,7 @@ if (empty($r)) {
                                             我的收藏
                                         </div>
                                     </a></li>
-                                <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                <li class="btn col-4 col-md-2 col-lg-12"><a href="./member_order.php">
                                         <div class="btnsvg">
                                             <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#4C4948" stroke="#4C4948" stroke-miterlimit="10" />
@@ -259,7 +260,7 @@ if (empty($r)) {
 <!-- ------------lightbox-friendDetails------------ -->
 
 <div class="lightbox-friendDetails-bg">
-    <form class="lightbox-friendDetails">
+    <form method="POST" name="editFriend" onsubmit="checkFriend(); return false;" class="lightbox-friendDetails" novalidate>
         <p class="editTitle">編輯好友資訊</p>
         <div class="friend-details">
             <div class="detail">
@@ -267,7 +268,7 @@ if (empty($r)) {
                     <p><span>*</span> 好友姓名</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
+                    <input type="text" name="friendname" placeholder="好友的姓名或暱稱" required>
                 </div>
             </div>
             <div class="detail">
@@ -275,7 +276,7 @@ if (empty($r)) {
                     <p><span>*</span> 好友性別</p>
                 </div>
                 <div class="detail-input">
-                    <select name="gender" placeholder="請選擇" required>
+                    <select name="friendgender" placeholder="請選擇" required>
                         <option value="male">男</option>
                         <option value="female">女</option>
                         <!-- <option value="others">不顯示</option> -->
@@ -287,7 +288,7 @@ if (empty($r)) {
                     <p>好友Email</p>
                 </div>
                 <div class="detail-input">
-                    <input type="email" name="email" placeholder="好友的電子郵件地址">
+                    <input type="email" name="friendemail" placeholder="好友的電子郵件地址">
                 </div>
             </div>
             <div class="detail">
@@ -295,8 +296,8 @@ if (empty($r)) {
                     <p><span>*</span> 好友生日</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" \d{1}\d{1} required>
-                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
+                    <input type="text" name="friendmonth" placeholder="MM" class="birthmd" \d{1}\d{1} required>
+                    <input type="text" name="friendday" placeholder="DD" class="birthmd" required>
                 </div>
             </div>
             <div class="detail">
@@ -304,9 +305,10 @@ if (empty($r)) {
                     <p>好友印象標籤</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="tags" placeholder="最多選擇五個" readonly="readonly">
+                    <input type="text" name="friendtags" placeholder="最多選擇五個" readonly="readonly">
                 </div>
             </div>
+            <!-- TODO: tag get -->
             <div class="detail">
                 <div class="detail-text"></div>
                 <div class="detail-input">
@@ -335,6 +337,7 @@ if (empty($r)) {
             </div>
         </div>
         <div class="detailsbtn">
+            <input type="text" name="friendsid" value="<?= $friend ?>" hidden>
             <button class="f-store" type="submit" name="btn">儲存</button>
             <button class="f-clean" type="reset" name="btn">取消</button>
         </div>
@@ -343,4 +346,29 @@ if (empty($r)) {
 
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script src="./js/member.js"></script>
+<script>
+    function checkFriend() {
+        // TODO: 欄位檢查
+        //   if (!$("#login-email").val()) {
+        //     alert("請填寫帳號");
+        //     return;
+        //   }
+        //   if (!$("#login-password").val()) {
+        //     alert("請填寫密碼");
+        //     return;
+        //   }
+        $.post(
+            "editfriend-api.php",
+            $(document.editFriend).serialize(),
+            function(data) {
+                if (data.success) {
+                    location.href = "member-myFriend.php";
+                } else {
+                    alert(data.error);
+                }
+            },
+            "json"
+        );
+    }
+</script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
