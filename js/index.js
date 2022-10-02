@@ -86,6 +86,40 @@ $('.giftAnimateArea').click(function(){
   $('#openArea').addClass('animation-start')
 })
 
+// const OpenAreaHight = $('#openArea').css('height')
+// console.log('height',OpenAreaHight);
+let OpenAreaHeight = $('#openArea').css('height')
+  console.log(OpenAreaHeight.substring(0, OpenAreaHeight.length -2));
+let OpenAreaHeightStr= OpenAreaHeight.substring(0, OpenAreaHeight.length -2)
+console.log('OpenAreaHeightStr',OpenAreaHeightStr)
+console.log(typeof(Number(OpenAreaHeightStr)));
+
+
+  
+if(Number(OpenAreaHeightStr==0)){
+  
+  $('#menuFixed').addClass('.menuFixed')
+}
+//-----menuSection-------
+
+
+// $('.w-indexHeader-menu').click(function(){
+//   console.log('hi')
+//   const Opacity = $('.w-indexHeader-menuSection').css('opacity')
+//   console.log(Opacity)
+//   if(Opacity==1){
+//     $('.w-indexHeader-menuSection').css('opacity','0')
+//   }else{
+//     $('.w-indexHeader-menuSection').css('opacity','1')
+//   }
+// })
+
+$('.w-indexHeader-menu, .w-indexHeader-menuSection').mouseenter(function(){
+  $('.w-indexHeader-menuSection').css('opacity','1')
+})
+$('.w-indexHeader-menu,.w-indexHeader-menuSection').mouseleave(function(){
+  $('.w-indexHeader-menuSection').css('opacity','0')
+})
 
 //------滑鼠滾動---------------
 // $(window).scroll(function (){
