@@ -9,8 +9,6 @@ $output = [
 ];
 
 $user = $_SESSION['user']['id'];
-$friend = intval($_POST['friendsid']);
-
 
 // 先判斷name跟email欄位有沒有值
 
@@ -29,19 +27,21 @@ $friend = intval($_POST['friendsid']);
 //     $birthday = $_POST['birthday'];
 // }
 
-if (empty($_POST['friendemail'])) {
-    $email = NULL;
-} else {
-    $email = $_POST['friendemail'];
-}
-
-$sql = "UPDATE `member_friend` SET
-    `name` = ?,
-    `gender` = ?,
-    `email` = ?,
-    `birthday_mm` = ?,
-    `birthday_dd` = ?
-    WHERE `sid` = $friend ";
+$sql = "INSERT INTO `member_friend` (
+    `member_sid`,
+    `name`,
+    `gender`,
+    `email`,
+    `birthday_mm`,
+    `birthday_dd`
+    ) VALUES (
+        $user,
+        ?,
+        ?,
+        ?,
+        ?,
+        ?
+    )";
 $stmt = $pdo->prepare($sql);
 
 $stmt->execute([
@@ -51,35 +51,6 @@ $stmt->execute([
     $_POST['friendmonth'],
     $_POST['friendday']
 ]);
-
-// TODO: 抓friendtag的value
-
-if (!empty($_POST['friendtag'])) {
-    $pdo->query("DELETE FROM `friend_tag` WHERE `friend_sid` = $friend")->fetchAll();
-    $tagsql = "INSERT INTO `friend_tag` (
-        `friend_sid`,
-        `tag_sid`
-        ) VALUES (
-            $friend,
-            ?
-        )";
-    $stmttag = $pdo->prepare($tagsql);
-    $stmttag->execute([
-        $_POST['friendtag']
-    ]);
-} else {
-    $tagsql = "INSERT INTO `friend_tag` (
-        `friend_sid`,
-        `tag_sid`
-        ) VALUES (
-            $friend,
-            ?
-        )";
-    $stmttag = $pdo->prepare($tagsql);
-    $stmttag->execute([
-        $_POST['friendtag']
-    ]);
-}
 
 if ($stmt->rowCount()) {
     $output['success'] = true;

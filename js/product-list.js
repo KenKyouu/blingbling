@@ -139,7 +139,6 @@ $(".filter-detail-back").click(function () {
       );
       // colorArr = [];
     }
-    // TODO: 把顏色改成中文抓到#color-span
 
     // colorArr = [];
   });
