@@ -23,9 +23,9 @@ $pageName = 'home'; // 頁面名稱，可以自定義
 </div>
 
 <div class="indexContainer">
-  <!-- <div class="w-indexHeader-menu_fixed">
+  <div id="menuFixed" class="w-indexHeader-menu_fixed">
     <div class="w-indexHeader-menu">
-          <img src="./images/icons/index-icon-menu.svg" alt="">
+        <img src="./images/icons/index-icon-menu.svg" alt="">
     </div>
     <div class="w-indexHeader-menuSection">
       <div class="menuSection_top">
@@ -124,7 +124,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
       <div class="indexBox">
         <div id="area1" class="I-mainSection">
             <div class="w-indexHeader">
