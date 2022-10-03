@@ -47,39 +47,47 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([
     $_POST['friendname'],
     $_POST['friendgender'],
-    $_POST['friendemail'],
+    $email,
     $_POST['friendmonth'],
     $_POST['friendday']
 ]);
 
 // TODO: 抓friendtag的value
 
+
 if (!empty($_POST['friendtag'])) {
     $pdo->query("DELETE FROM `friend_tag` WHERE `friend_sid` = $friend")->fetchAll();
-    $tagsql = "INSERT INTO `friend_tag` (
-        `friend_sid`,
-        `tag_sid`
-        ) VALUES (
-            $friend,
-            ?
-        )";
-    $stmttag = $pdo->prepare($tagsql);
-    $stmttag->execute([
-        $_POST['friendtag']
-    ]);
+    for ($i = 0; $i < count($_POST['friendtag']); $i++) {
+        $tagsql = "INSERT INTO `friend_tag` (
+            `friend_sid`,
+            `tag_sid`
+            ) VALUES (
+                $friend,
+                ?
+            )";
+        $stmttag = $pdo->prepare($tagsql);
+        $stmttag->execute([
+            intval($_POST['friendtag'][$i])
+        ]);
+    }
 } else {
-    $tagsql = "INSERT INTO `friend_tag` (
-        `friend_sid`,
-        `tag_sid`
-        ) VALUES (
-            $friend,
-            ?
-        )";
-    $stmttag = $pdo->prepare($tagsql);
-    $stmttag->execute([
-        $_POST['friendtag']
-    ]);
+    for ($i = 0; $i < count($_POST['friendtag']); $i++) {
+        $tagsql = "INSERT INTO `friend_tag` (
+            `friend_sid`,
+            `tag_sid`
+            ) VALUES (
+                $friend,
+                ?
+            )";
+        $stmttag = $pdo->prepare($tagsql);
+        $stmttag->execute([
+            intval($_POST['friendtag'][$i])
+        ]);
+    }
 }
+
+
+
 
 if ($stmt->rowCount()) {
     $output['success'] = true;
