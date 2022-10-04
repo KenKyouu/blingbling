@@ -2840,12 +2840,25 @@ $bold: 900;
 
                                             }
                                         }
-                                    }
-
-                                    :target {
-                                        background-color: $white;
-                                        border-radius: 100px 0 0 100px;
-                                        color: $dark-gray;
+                                        .showBtn {
+                                            background-color: $white;
+                                            .btnsvg{
+                                                svg {
+                                                    path {
+                                                        fill: $dark-gray;
+                                                    }
+                                                }
+                                                svg.ordersvg {
+                                                    path {
+                                                        fill: $dark-gray;
+                                                        stroke: $dark-gray;
+                                                    }
+                                                }
+                                            }
+                                            .btnP {
+                                                color: $dark-gray;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -4113,3 +4126,17 @@ $bold: 900;
         margin-top: 10px;
     }
 }
+
+// .showBtn {
+//     background-color: $white;
+//     .btnsvg{
+//         svg {
+//             path {
+//                 fill: $dark-gray;
+//             }
+//         }
+//     }
+//     .btnP {
+//         color: $dark-gray;
+//     }
+// }
