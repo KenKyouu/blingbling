@@ -361,10 +361,11 @@ $bold: 900;
                 width: 60px;
                 height: 60px;
                 overflow: hidden;
-                object-fit: cover;
+
                 background-color: $dark-gray;
                 img{
                     width: 100%;
+                    object-fit: cover;
                     height: 100%;
                 }
             }
@@ -1797,7 +1798,7 @@ $bold: 900;
 }
 .j-scroll{
         
-    transform: translateY(-35vh);
+    transform: translateY(-40vh);
 
 }
 

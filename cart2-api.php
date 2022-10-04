@@ -146,7 +146,7 @@ $sql = "UPDATE `member` SET
     ]);
 
 
-// "SELECT  `gift_voucher_use` FROM `orders` WHERE `member_sid`=$user FOR UPDATE `member` SET `gift_voucher` = 0 WHERE `sid`= $user";
+
 
 
 

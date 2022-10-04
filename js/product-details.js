@@ -28,6 +28,10 @@ function numReduce() {
   }
 }
 
+$('.heart-icon').click(function(){
+  $(this).addClass('active');
+})
+
 function addToCart(event) {
   const addToCartBtn = $(event.currentTarget);
   const qty = addToCartBtn.closest(".pc-add-cart").find(".quantity-num").val();
@@ -44,9 +48,64 @@ function addToCart(event) {
       qty,
     },
     function (data) {
-      //   showCartCount(data);
+      showCartCount(data);
       console.log(data);
     },
     "json"
   );
 }
+
+
+function addToCartm(event) {
+  const addToCartBtn = $(event.currentTarget);
+  const qty = addToCartBtn.closest(".add-group").find(".quantity-num").val();
+  const sid = addToCartBtn.attr("data-sid");
+  console.log({
+    sid,
+    qty,
+  });
+
+  $.get(
+    "handle-cart.php",
+    {
+      sid,
+      qty,
+    },
+    function (data) {
+      showCartCount(data);
+      console.log(data);
+    },
+    "json"
+  );
+}
+
+
+function heart(event){
+  const item = $(event.currentTarget).closest('.heart-icon');
+    const sid = item.attr('data-sid');
+    console.log(sid);
+    $.get(
+        'favorite.php',
+        {
+            sid
+        },
+        'json');
+        $.get(
+          'handle-cart.php',
+      {
+          sid
+      },
+          'json');
+}
+
+
+document.querySelectorAll('.add-cartbtn').forEach(button => button.addEventListener('click', e => {
+  if(!button.classList.contains('loading')) {
+
+      button.classList.add('loading');
+
+      setTimeout(() => button.classList.remove('loading'), 2500);
+
+  }
+  e.preventDefault();
+}));

@@ -59,20 +59,60 @@ $('input:radio[name="delivery"]').change(function(){
     }
 })
 
+
+
+
 //pay 切換
+// var locations = [];
+// $(".j-credit-bg").each(function() {
+//     var store = $(''),
+//         offset = store.offset();
+//     locations.push(store.siblings().eq(store.index()));
+//     console.log(locations);
+// });
+var store = $('.j-credit-info');
+
 $('input:radio[name="pay"]').change(function(){
-    if($('.j-credit').prop("checked")==false){
-        $('.j-credit-bg').slideUp(400);
-        setTimeout(function(){
-            $('.j-credit-bg').hide();
-        },800);
-    }else{
-        $('.j-credit-bg').slideDown(400);
+    // $(".j-credit-bg").each(function(i, e) {
+    //     var te = $(this).clone(true);
+        if($('.j-credit').prop("checked")==false){
+            $('.j-credit-bg').slideUp(400);
+            setTimeout(function(){
+                $('.j-credit-bg').hide();
+            },800);
+            
+            store.remove(); // remove
+            console.log(store);
+            $('.j-credit-title').removeClass('.j-form-group');
+        }
+        else{
+            $('.j-credit-bg').slideDown(400);
         setTimeout(function(){
             $('.j-credit-bg').show();
         },800);
-    }
+        $('.j-credit-bg').append(store);
+        console.log(store);
+        $('.j-credit-title').addClass('.j-form-group');
+        // locations[i].append(te); // restore
+        // console.log(locations);
+        }
+    // });
 })
+// $('input:radio[name="pay"]').change(function(){
+//     if($('.j-credit').prop("checked")==false){
+//         $('.j-credit-bg').slideUp(400);
+//         setTimeout(function(){
+//             $('.j-credit-bg').hide();
+//         },800);
+       
+//     }else{
+//         $('.j-credit-bg').slideDown(400);
+//         setTimeout(function(){
+//             $('.j-credit-bg').show();
+//         },800);
+
+//     }
+// })
 
 
 //避免按下Enter就送出表單
@@ -168,6 +208,7 @@ $(document).on("keypress", "form", function (e) {
                 message: "^格式輸入錯誤"
             }
         },
+    
         "cardHolder":{
             presence: {
                 message: "^持卡人姓名 為必填欄位"
@@ -204,7 +245,47 @@ $(document).on("keypress", "form", function (e) {
                 message: "^安全碼 為3碼"
             }
         }
-    };
+    }
+    // var constraintcard = {
+    //     "cardHolder":{
+    //         presence: {
+    //             message: "^持卡人姓名 為必填欄位"
+    //         },
+    //         format: {
+    //             pattern: "^[A-z\\u4e00-\\u9fa5]*$",//可填中文與英文
+    //             message: "^格式輸入錯誤"
+    //         }
+    //     },
+    //     "cardNumber":{
+    //         presence: {
+    //             message: "^卡號 為必填欄位"
+    //         },
+    //         length: {
+    //             is: 19,
+    //             message: "^卡號 為16碼"
+    //         }
+    //     },
+    //     "expires":{
+    //         presence: {
+    //             message: "^到期日 為必填欄位"
+    //         },
+    //         length: {
+    //             is: 5,
+    //             message: "^到期日 格式為MM/YY"
+    //         }
+    //     },
+    //     "cvv":{
+    //         presence: {
+    //             message: "^安全碼 為必填欄位"
+    //         },
+    //         length: {
+    //             is: 3,
+    //             message: "^安全碼 為3碼"
+    //         }
+    //     }
+    // };
+    
+
 
      // Hook up the form so we can prevent it from being posted
     let form = document.querySelector("form#cart2form");
@@ -214,7 +295,7 @@ $(document).on("keypress", "form", function (e) {
     });
 
     // Hook up the inputs to validate on the fly
-    let inputs = document.querySelectorAll("input, textarea, select")
+    let inputs = document.querySelectorAll(".j, textarea, select")
     for (let i = 0; i < inputs.length; ++i) {
         inputs.item(i).addEventListener("change", function(ev) {
         let errors = validate(form, constraints) || {};
@@ -222,29 +303,12 @@ $(document).on("keypress", "form", function (e) {
         });
     }
 
-    function handleFormSubmit(form, input) {
-    // validate the form against the constraints
-        let errors = validate(form, constraints);
-        // then we update the form to reflect the results
-        showErrors(form, errors || {});
-        if (!errors) {
-          //   showSuccess();
-            $.post(
-            'cart2-api.php',
-            $(document.cart2form).serialize(),
-            function(data) {
-                console.log(data);
-                if(data.success){
-                    location.href= './cart3.php';
-                }
-            }, 'json');
-        }
-    }
+    
 
     // Updates the inputs with the validation errors
     function showErrors(form, errors) {
         // We loop through all the inputs and show the errors for that input
-        _.each(form.querySelectorAll("input[name], textarea[name], select[name]"), function(input) {
+        _.each(form.querySelectorAll(".j[name], textarea[name], select[name]"), function(input) {
             // Since the errors can be null if no errors were found we need to handle
             // that
             showErrorsForInput(input, errors && errors[input.name]);
@@ -305,7 +369,55 @@ $(document).on("keypress", "form", function (e) {
         messages.appendChild(block);
     }
 
+    function handleFormSubmit(form, input) {
+        // validate the form against the constraints
+            let errors = validate(form, constraints);
+            // let errors = $(form)./hasClass('has-error');
+            // then we update the form to reflect the results
+            showErrors(form, errors || {});
+            // showErrors(form, errorcard || {});
+            // console.log(errors);
+            // console.log(errors['cardHolder']);
 
+            // if (!errors) {
+            //     $.post(
+            //     'cart2-api.php',
+            //     $(document.cart2form).serialize(),
+            //     function(data) {
+            //         console.log(data);
+            //         if(data.success){
+            //             location.href= './cart3.php';
+            //         }
+            //     }, 'json');
+            // }
+            if($('.j-credit').prop("checked")==true && !errors){
+                // if(!errors){
+                console.log('1');
+                $.post(
+                    'cart2-api.php',
+                    $(document.cart2form).serialize(),
+                    function(data) {
+                        console.log(data);
+                        if(data.success){
+                            location.href= './cart3.php';
+                        }
+                    }, 'json');
+                // }
+            }else if($('.j-credit').prop("checked")==false && !errors['ordererName'] && !errors['ordererMobile'] && !errors['recipientName'] && !errors['recipientMobile'] && !errors['address']){
+                console.log('2');
+                $.post(
+                    'cart2-api.php',
+                    $(document.cart2form).serialize(),
+                    function(data) {
+                        console.log(data);
+                        if(data.success){
+                            location.href= './cart3.php';
+                        }
+                    }, 'json');
+            }
+        }
+
+        
 })();
 
 
@@ -323,6 +435,11 @@ function copyData(){
         document.getElementById('recipientTel1').value = ordererTel1;
         const ordererTel2 = document.getElementById('ordererTel2').value;
         document.getElementById('recipientTel2').value = ordererTel2;
+        $('#recipientName').parent().removeClass('has-error');
+        $('#recipientName').next().html('');
+        $('#recipientMobile').parent().removeClass('has-error');
+        $('#recipientMobile').next().html('');
+
     }else{
         // console.log('not');
         document.getElementById('recipientName').value ='';
@@ -353,14 +470,14 @@ function cop(){
 
 //when data change ,remove checked 
 $('.j-recipient input[type=text]').change(function(){
-    $('.j-check input[type=checkbox]').prop('checked',false);
+    $('.j-check input[id=cbSameOrderer]').prop('checked',false);
 })
 //if orderer has error ,can't checked
 $('.j-orderer input[type=text]').change(function(){
-    $('.j-check input[type=checkbox]').attr('disabled',false);
+    $('.j-check input[id=cbSameOrderer]').attr('disabled',false);
     if($(this).closest('.j-form-group').hasClass('has-error')){
         // console.log('error');
-        $('.j-check input[type=checkbox]').attr('disabled',true);
+        $('.j-check input[id=cbSameOrderer]').attr('disabled',true);
     }
 })
 
@@ -784,6 +901,10 @@ function sameMember(){
     if($('#cbSameMember').prop('checked')){
         $('#ordererName').val(ordererName);
         $('#ordererMobile').val(ordererMobile);
+        $('#ordererName').parent().removeClass('has-error');
+        $('#ordererName').next().html('');
+        $('#ordererMobile').parent().removeClass('has-error');
+        $('#ordererMobile').next().html('');
     }
     else{
         $('#ordererName').val('');

@@ -268,7 +268,6 @@ body {
             left: 50%;
             transform: translateX(-50%) translateY(50%);
             cursor: pointer;
-
             h5 {
                 font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
@@ -320,10 +319,10 @@ body {
                 width: 60px;
                 height: 60px;
                 overflow: hidden;
-                object-fit: cover;
                 background-color: $dark-gray;
 
                 img {
+                    object-fit: cover;
                     width: 100%;
                     height: 100%;
                 }
@@ -410,6 +409,34 @@ body {
         }
     }
 
+}
+.heart {
+    transform-origin: center;
+    stroke-dasharray: 135;
+}
+  
+.active .heart {
+    animation: draw-heart 2s forwards;
+    stroke: $red-pink;
+}
+@keyframes draw-heart {
+    0% {
+        stroke-dashoffset: -135;
+        transform: scale(.2) rotate(-280deg);
+    }
+    30% {
+        stroke-dashoffset: 135;
+        transform: scale(.4) rotate(280deg);
+    }
+    60% {
+        stroke-dashoffset: -135;
+        transform: scale(.6);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke: $dark-red;
+        fill: $pink;
+    }
 }
 
 .j-list.j-listopen {
@@ -856,6 +883,7 @@ body {
             .s-package-card-radio {
                 .j-point {
                     position: relative;
+                    cursor: pointer;
                 }
 
                 .j-point input {
@@ -879,6 +907,7 @@ body {
 
 /* Create a custom radio button */
 .j-checkmark-r {
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -961,19 +990,22 @@ body {
             justify-content: center;
             align-items: center;
             padding-top: 30px;
-
-            button {
-                background-color: none;
-                border: 3px solid $light-lake-green;
-                color: $lake-green;
-                font-family: "GenSenRounded-B";
-                font-size: $ps-font-size;
-                border-radius: 10px;
+            a{
                 width: 100%;
-                padding: 10px;
-                line-height: 0.8rem;
-                text-align: center;
+                button {
+                    background-color: none;
+                    border: 3px solid $light-lake-green;
+                    color: $lake-green;
+                    font-family: "GenSenRounded-B";
+                    font-size: $ps-font-size;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 10px;
+                    line-height: 0.8rem;
+                    text-align: center;
+                }
             }
+            
 
             .cart1-check {
                 background-color: $lake-green;
@@ -1250,6 +1282,11 @@ body {
 
                 .svg-col {
                     margin-left: -20%;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }
@@ -1498,6 +1535,7 @@ body {
 
                                 .j-point {
                                     position: relative;
+                                    cursor: pointer;
 
                                     .j-checkmark-r {
                                         bottom: 50%;
@@ -1583,7 +1621,7 @@ body {
 
                         .j-point {
                             position: relative;
-
+                            cursor: pointer;
                             .j-checkmark-r {
                                 bottom: 50%;
                                 transform: translateY(50%);

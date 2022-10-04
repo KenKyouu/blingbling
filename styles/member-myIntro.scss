@@ -1084,3 +1084,46 @@ $bold: 900;
         }
     }
 }
+
+.uploadPhoto {
+    p.editTitle {
+        font-family: "GenSenRounded-B";
+        font-size: $ps-font-size;
+        color: $dark-gray;
+    }
+    .detail-input {
+        input {
+            width: 130px;
+            height: 38px;
+            border-radius: 10px;
+            border: 3px solid $light-lake-green;
+            color: $lake-green;
+            font-family: "GenSenRounded-B";
+            font-size: $ps-font-size;
+        }
+    }
+    .detailsbtn {
+        margin-top: 20px;
+        button.upload {
+            width: 130px;
+            height: 38px;
+            border-radius: 10px;
+            background-color: $super-dark;
+            color: $white;
+            font-family: "GenSenRounded-B";
+            font-size: $ps-font-size;
+            margin: 0 10px;
+        }
+        button.cancelUpload {
+            width: 130px;
+            height: 38px;
+            border-radius: 10px;
+            border: 3px solid $super-dark;
+            color: $super-dark;
+            background-color: rgba(255, 255, 255, 0);
+            font-family: "GenSenRounded-B";
+            font-size: $ps-font-size;
+            margin: 0 10px;
+        }
+    }
+}

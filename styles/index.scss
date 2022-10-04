@@ -83,21 +83,73 @@
 //
 -----------------------------------------------------------
 body{
-  // width: 100%;
-  // height: 100%;
-  // background-image: url(../images/w-indexBg.png);
-  // // background-image:url(../images/index-bg_paper.png);
-  // background-size: 100%;
-  // background-repeat-x:no-repeat;
-  // @media (max-width:576px) {
-  //   background-image: url(../images/m-indexBg.png);
-  //   background-size: 100%;
-  //   transition: background .4s ease-in;
-  // }
+
 }
 $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
 $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
+.openingArea{
+  width: 100%;
+  height: 100vh;
+  background-image:url(../images/star_bg_3.png);
+  background-color: #154d7a;
+  // background-image: linear-gradient(to bottom,$dark-blue, #0b2234);
+  background-position: center;
+  background-size: 100%;
+  -webkit-mask: url(../images/open_face.svg) no-repeat center;
+  -webkit-mask-size: 350% 350%;
+  mask: url(../images/open_face.svg) no-repeat center;
+  mask-size: 350% 350%;
+  animation: openBg 2s infinite alternate;
+  transition-timing-function:ease-in-out;
+  z-index: 30;
+  @keyframes openBg {
+    from{
+      background-size: 100%;
+    }
+    to{
+      background-size: 105%;
+    }
+  }
+  .giftBoxArea{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    justify-content: center;
+    @media (min-width:768px) {
+      width: 70%;
+    }
+    .giftAnimateArea{
+      width: 100%;
+      padding-top: 260px;
+      @media (min-width:768px) {
+        padding-top: 100px;
+      }
+    }
+  }
+}
+
+#openArea.animation-start{
+  animation: openingAnimate 3s both ;
+  animation-delay: 6s;
+  @keyframes openingAnimate {
+    0%{
+      -webkit-mask-size: 350% 350%;
+      mask-size: 350% 350%;
+      height: 100vh;
+    }
+    80%{
+      -webkit-mask-size: 30% 30%;
+      mask-size: 30% 30%;
+      height: 100vh;
+    }
+    100%{
+      -webkit-mask-size: 0% 0%;
+      mask-size: 0% 0%;
+      height: 0vh;
+    }
+  }
+}
 
 
 
@@ -114,7 +166,156 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transition: background .4s ease-in;
     background-repeat:repeat;
   }
+  .w-indexHeader-menu_fixed{
+    position: fixed;
+    z-index: 20;
+    top: 42px;
+    width: 100%;
+    display: none;
+    @media (min-width:768px) {
+      display: block;
+    }
+    .w-indexHeader-menu{
+      position:absolute;
+      right: 100px;
+      width: 5%;
+      transition: .5s;
+      img{
+        width: 70%;
+        cursor: pointer;
+      }
+    }
+  }
+  .w-indexHeader-menuSection{
+    position: absolute;
+    width: 300px;
+    height: 340px;
+    top: 100px;
+    right: 60px;
+    // background-color: rgba(255, 255, 255, 0.629);
+    opacity: 0;
+    transition: .5s;
+    .menuSection_top{
+      position: absolute;
+      width: 20%;
+      height: 25px;
+      top: -25px;
+      right: 75px;
+      img{
+        width: 100%;
+        height: 100%;
+        opacity: .8;
+      }
+    }
+    .menuSection_box{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.854);
+      border-radius: 10%;
+      padding: 20px;
+      .menuSection_box_top{
+        font-family: "GenSenRounded-B";
+        color: $lake-green;
+        font-size: $h6-font-size;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        text-align: center;
+        border-bottom: 2px solid $lake-green;
+        margin-bottom: 10px;
+      }
+      .menuSection_box_main{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        padding-bottom: 20px;
+        // background-color: #154d7a;
+        .menuSectionBox_mainLeft{
+          width: 50%;
+          height: 100%;
+          margin-left: 5px;
+          a{
+            text-decoration:none;
+            .mainLeftWrap{
+              padding-left: 10px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              height: 25%;
+              transition: .5s;
+              &:hover{
+                background-color: #ffffff;
+                border-radius: 5%;
+                }
+              img{
+                width: 20%;
+              }
+              .menuBox_item{
+                margin-left: 10px;
+                font-family: "GenSenRounded-B";
+                color: $dark-gray;
+                font-size: $p-font-size;
+              }
+            }
+          }
+        }
+        .menuSectionBox_mainRight{
+          width: 50%;
+          height: 100%;
+          margin-left:10px;
+          a{
+            text-decoration:none;
+            .mainLeftWrap{
+              width: 100%;
+              display: flex;
+              padding-left: 10px;
+              align-items: center;
+              height: 25%;
+              &:hover{
+                background-color: #ffffff;
+                border-radius: 5%;
+              }
+              img{
+                width: 20%;
+              }
+              .menuBox_item{
+                margin-left: 10px;
+                font-family: "GenSenRounded-B";
+                color: $dark-gray;
+                font-size: $p-font-size;
+              }
+            }
+          }
+        }
+      }
+      .menuSection_box_botton{
+        width:100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        // margin-bottom: 20px;
+        .menuSectionBox_bottonWrap{
+          width: 30%;
+          height: 100%;
+          // padding-top: 20px;
+          img{
+            width: 100%;
+            height: 90%;
+          }
+          img:hover{
+            transform: scale(110%);
+          }
+        }
+      }
+    }
+  }
 }
+// #menuFixed{
+//   display: none;
+// }
+// .menuFixed{
+//   display: flex;
+// }
 //--------vue卡片--------------------------
 .p-index-container {
   margin-top: 100px;
@@ -165,8 +366,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       opacity: 1;
     }
     .card {
-      transition:
-        0.6s $hoverEasing,
+      transition: 0.6s $hoverEasing,
         box-shadow 2s $hoverEasing;
       // box-shadow:
       //   rgba(white, 0.2) 0 0 40px 5px,
@@ -183,12 +383,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   flex: 0 0 240px;
   width: 240px;
   height: 320px;
-  background-image: url(../images/card-bg-2.png);
+  // background-color: $skin;
+  background-image: url(../images/story_paper_03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow:
-    rgba(black, 0.66) 0 5px 5px 0;
-    // inset #333 0 0 0 5px;
+  box-shadow:  6px 10px 6px  rgba(0,0,0,0.08);
   transition: 1s $returnEasing;
   @media (min-width:768px) {
     width: 320px;
@@ -211,20 +412,24 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     1s $returnEasing,
     opacity 5s 1s $returnEasing;
   pointer-events: none;
-  background-image: url(../images/card-01.png);
+  background-image: url(../images/story_paper_02.jpg);
 }
 
 .card-info {
   padding: 20px;
   position: absolute;
   bottom: 0;
-  color: #fff;
+  // color: $deep-brown;
   transform: translateY(40%);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   
   p {
     opacity: 0;
-    text-shadow: rgba(black, 1) 0 2px 3px;
+    font-family: "GenSenRounded-B";
+    font-size: $p-font-size;
+    line-height: 20px;
+    color: $deep-brown;
+    // text-shadow: rgba(black, 1) 0 2px 3px;
     transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   
@@ -245,10 +450,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .card-info h1 {
-  font-family: "Playfair Display";
-  font-size: 36px;
+  font-family: "GenSenRounded-B";
+  font-size: 25px;
   font-weight: 700;
-  text-shadow: rgba(black, 0.5) 0 10px 10px;
+  padding-bottom: 40px;
+  color: $deep-brown;
+  // text-shadow: rgba(black, 0.5) 0 10px 10px;
 }
 
 
@@ -272,11 +479,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       display: flex;
       width: 100%;
       .w-indexHeaderBox{
-          width: 15%;
+          width: 12%;
           margin-left: auto;
           display: flex;
-          margin-right: 150px;
+          margin-right: 200px;
           align-items: center;
+          // background-color: #154d7a;
           // padding: 20px;
         .w-indexHeader-item1{
           margin-right: 30px;
@@ -284,19 +492,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           transition: .5s;
           img{
             width: 100%;
+            -webkit-filter: drop-shadow(2px 1px 2px  rgba(0,0,0,0.16));
+            filter: drop-shadow(2px 1px 2px  rgba(0,0,0,0.16))
           }
         }
-        .w-indexHeader-item1:hover img{
-          filter:drop-shadow(0 1px 4px  rgba(0,0,0,0.16),inset 0 -9px 0 -3px #000000);
-        }
-        .w-indexHeader-menu{
-          width: 100%;
-          img{
-            width: 100%;
-          }
-        }
-        .w-indexHeader-menu:hover img{
-          
+        .w-indexHeader-item1 img:hover{
+          transform: scale(105%);
         }
       }
     }
@@ -338,10 +539,14 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             // background-color: $yellow;
             .nav-1{
               display: flex;
+              cursor: pointer;
               .nav-1L{
                 font-family: "GenSenRounded-B";
                 font-size: $p-font-size;
                 padding-right: 10px;
+                &:hover{
+                  color: $lake-green;
+                }
               }
               .nav-1R{
                 width: 18px;
@@ -352,18 +557,26 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             }
             .nav-2{
               display: flex;
+              cursor: pointer;
               .nav-2box{
                 font-family: "GenSenRounded-B";
                 font-size: $p-font-size;
                 padding-right: 10px;
+                &:hover{
+                  color: $lake-green;
+                }
               }
             }
             .nav-3{
               display: flex;
+              cursor: pointer;
               .nav-3box{
                 font-family: "GenSenRounded-B";
                 font-size: $p-font-size;
                 padding-right: 10px;
+                &:hover{
+                  color: $lake-green;
+                }
               }
             }
           }
@@ -379,7 +592,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-position-y:80px,280px,230px ;
   background-position-x:20px,-30px,360px;
   animation-name:mainBg;
-  animation-duration:3.5s;
+  animation-duration:3.6s;
   animation-iteration-count:infinite;
   // @keyframes mainBg {
   //   0%{
@@ -435,20 +648,6 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       width: 90%;
       margin: auto;
       animation: mainCard 10s linear infinite;
-    //   @keyframes mainCard{
-    //     0% {
-    //         transform: translateX(0%);
-    //     }
-    //     100% {
-    //         transform: translateX(-50%);
-    //     }
-    // }
-      
-      // -ms-flex-wrap: wrap;
-      // flex-wrap: wrap;
-      // flex: 0 0 75%;
-      // max-width: 75%;
-      // padding: 20px;
       @media (max-width:375px) {
         width: 100%;
         -ms-flex-wrap: wrap;
@@ -614,7 +813,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         @media (min-width:1400px){
           font-size: 24px;
           transform: translate(-50px);
-          padding: 10px 20px;
+          padding: 8px 15px;
         }
       }
       h2{
@@ -671,6 +870,16 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           flex: 0 0 58.333333%;
           max-width: 58.333333%;
           margin: 0px 5px;
+          &:hover{
+            .populerCardPrice{
+              transition: .5s;
+              background-color: $gray;
+            }
+            .populerCardTop{
+              transition: .5s;
+              transform: translateY(-15px);
+            }
+          }
           @media (min-width:1400px){
             -ms-flex: 0 0 17%;
           flex: 0 0 17%;
@@ -679,10 +888,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           .populerCard-s{
             width: 85%;
             margin: auto;
+            cursor: pointer;
             .populerCardTop{
               margin-top: 30px;
               border-radius: 10px;
               overflow: hidden;
+              transition: .5s;
             }
             .populerCardInfor{
               .populerCardTitle{
@@ -717,10 +928,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           }
           .populerCard-b{
             width:100%;
+            cursor: pointer;
             .populerCardTop{
               margin-top: 30px;
               border-radius: 10px;
               overflow: hidden;
+              transition: .5s;
             }
             .populerCardInfor{
               .populerCardTitle{
@@ -766,6 +979,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 }
 
+
 //--------FestivalSection-----------
 .I-FestivalSection{
   width: 100%;
@@ -776,12 +990,29 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-position-y: 200px, 350px,0px;
   background-attachment: fixed,fixed,local;
   transition: .5s;
+  animation: FestivalAnimate 1.5s alternate infinite;
+  @keyframes FestivalAnimate {
+    0%{
+      background-position-y: 200px, 350px,0px;
+    }
+    100%{
+      background-position-y: 200px, 350px,15px;
+    }
+  }
   @media (min-width:1400px){
     background-size: 5%,4%,32%;
     background-position-x:0%,100%,80% ;
-    background-position-y: 150px, 280px,150px;
+    background-position-y: 150px, 280px,200px;
     background-attachment: fixed,fixed,local;
     margin-top: 300px;
+    @keyframes FestivalAnimate {
+      0%{
+        background-position-y: 150px, 280px,200px;
+      }
+      100%{
+        background-position-y: 150px, 280px,170px;
+      }
+    }
   }
   .FestivalBox{
     transition: .5s;
@@ -838,6 +1069,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             transition: .5s;
             .FestivalCard-Top{
               .img-wrap{
+                width: 100%;
                 border-radius: 10px;
                 overflow: hidden;
                 box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.293), 9px 11px 3px 1px rgba(12, 13, 15, 0.215);
@@ -845,10 +1077,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 @media (min-width:768px){
                   box-shadow:  0 5px 3px 0 rgba(0, 0, 0, 0.293), 20px 20px 3px 1px rgba(12, 13, 15, 0.215);
                   border-radius: 40px;
+                  width: 100%;
                 }
                 img{
+                  width: 100%;
                   opacity: 0.85;
                   transition: .5s;
+                  transform:scale(1.1);
                 }
 
               }
@@ -939,7 +1174,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
               transition: .5s;
             }
             .FestivalCard:hover .img-wrap img {
-              transform:scale(1.2);
+              transform:scale(1.3);
               transition: .5s;
             }
           }
@@ -1004,6 +1239,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           padding: 0px 15px 3px 15px;
           @media (min-width:768px){
             font-size: 24px;
+            padding: 8px 15px;
           }
         }
       }
@@ -1025,7 +1261,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             width: 180px;
             height: 100%;
             margin: auto;
-            // padding:20px 10px;
+            cursor: pointer;
+            &:hover{
+              .newCardImg img{
+                transition: .5s;
+                transform: scale(1.2);
+              }
+            }
             .newCardImg{
               width: 100%;
               height: 230px;
@@ -1035,6 +1277,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: .5s;
               }
             }
             .newCardInfor{
@@ -1087,7 +1330,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             width: 180px;
             height: 100%;
             margin: auto;
-            // padding:20px 10px;
+            cursor: pointer;
+            &:hover{
+              .newCardImg img{
+                transition: .5s;
+                transform: scale(1.2);
+              }
+            }
             .newCardImg{
               width: 100%;
               height: 230px;
@@ -1097,6 +1346,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: .5s;
               }
             }
             .newCardInfor{
@@ -1296,6 +1546,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         @media (min-width:1400px) {
           width: 13%;
           margin-left: 21%;
+          padding: 10px 25px;
         }
         .NEWSbtn-L{
           color: $white;
