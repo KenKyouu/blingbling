@@ -81,7 +81,7 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
             </div>
 
             <div class="j-list-info">
-                <div class="j-list-title col-12 px-4">
+                <div class="j-list-title col-12 pr-5 pl-5">
                     <div class="col-md-6 px-0 j-product">商品名稱</div>
                     <div class="col-md-2 px-0">單價</div>
                     <div class="col-md-2 px-0">數量</div>

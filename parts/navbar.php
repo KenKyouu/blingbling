@@ -21,6 +21,7 @@ require __DIR__ . '/connect_db.php';
                         </svg>
                     </a>
                     <span class="cart-none-point"></span>
+
                 </li>
                 <li class="menu">
                     <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="#fff" xmlns="http://www.w3.org/2000/svg">

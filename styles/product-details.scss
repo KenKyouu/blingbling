@@ -378,6 +378,7 @@ body{
                                 width: 100%;
                                 margin-left: 5px;
                             }
+                            overflow: hidden;
                             width: 80%;
                             padding:8px 0;
                             border: 0;
@@ -388,8 +389,90 @@ body{
                             font-size: $p-font-size;
                             align-items: center;
                             justify-content: center;  
+                            --cart: $white;  
+                            position: relative;
+                            transform: scale(var(--scale, 1));
+                            transition: transform .4s cubic-bezier(.36, 1.01, .32, 1.27);
+                            &:active {
+                                --scale: .95;
+                            }
                             p{
                                 padding-right: 5px; 
+                                transform: translateY(var(--span-y, 0));
+                                transition: transform .5s ease;
+                            }
+                            .cart{
+                                position: relative;
+                                transform-origin: 100% 0px;
+                                transform: translateX(0) rotate(0deg);
+                                &:after {
+                                    display: block;
+                                    content: '';
+                                    position: absolute;
+                                    width: 68%;
+                                    height: 40%;
+                                    background: $white;
+                                    left: 15%;
+                                    bottom: 28%;
+                                    transform-origin: 60% 45%;
+                                    transform: perspective(4.5px) rotateX(-15deg) scaleY(var(--fill, 0));
+                                    transition: transform 1.2s ease var(--fill-d);
+                                }
+                                svg{
+                                    z-index: 1;
+                                    position: relative;
+                                    polyline{
+                                        stroke: #2d827d;
+                                        stroke-dasharray: 10px;
+                                        stroke-dashoffset: var(--offset, 10px);
+                                        transform: translateX(-25%) translateY(-10%);
+                                        transition: stroke-dashoffset 0.4s ease var(--offset-d);
+                                    }
+                                }
+                            }
+                            &.loading{
+                                --scale: .95;
+                                --span-y: -32px;
+                                // --icon-r: 180deg;
+                                --fill: 1;
+                                --fill-d: .8s;
+                                --offset: 0;
+                                --offset-d: 1.5s;
+                                .cart {
+                                    animation: cart 2.4s linear forwards .2s;
+                                }
+                            }
+                        }
+                        @keyframes cart {
+                            1%{
+                                transform:rotate(15deg);
+                            }
+                            12.5% {
+                                transform: translateX(-30px) rotate(15deg);
+                            }
+                            25%,
+                            45%,
+                            55%,
+                            75%
+                            {
+                                transform: translateX(-40px) ;
+                            }
+                            50% {
+                                transform: translateX(-40px) scale(.9);
+                            }
+                            44%,
+                            56% {
+                                transform-origin: 100% 0%;
+                            }
+                            45%,
+                            55% {
+                                transform-origin: 50% 50%;
+                            }
+                            87.5% {
+                                transform: translateX(-150px) rotate(15deg);
+                            }
+                            100% {
+                                transform: translateX(-350px) rotate(15deg);
                             }
                         }
                     }
@@ -651,6 +734,7 @@ body{
             .cartbtn{
                 padding: 0 8px;
                 .add-cartbtn{
+                    overflow: hidden;
                     width: 130px;
                     height: 35px;
                     border: 0;
@@ -661,6 +745,91 @@ body{
                     font-size: $p-font-size;
                     align-items: center;
                     justify-content: center;
+                    --cart: $white;  
+                    position: relative;
+                    transform: scale(var(--scale, 1));
+                    transition: transform .4s cubic-bezier(.36, 1.01, .32, 1.27);
+                    &:active {
+                        --scale: .95;
+                    }
+                    p{
+                        padding-right: 5px; 
+                        transform: translateY(var(--span-y, 0));
+                        transition: transform .5s ease;
+                    }
+                    .cart{
+                        position: relative;
+                        transform-origin: 100% 0px;
+                        transform: translateX(0) rotate(0deg);
+                        &:after {
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            width: 68%;
+                            height: 40%;
+                            background: $white;
+                            left: 15%;
+                            bottom: 28%;
+                            transform-origin: 60% 45%;
+                            transform: perspective(4.5px) rotateX(-15deg) scaleY(var(--fill, 0));
+                            transition: transform 1.2s ease var(--fill-d);
+                        }
+                        svg{
+                            z-index: 1;
+                            position: relative;
+                            polyline{
+                                stroke: #2d827d;
+                                stroke-dasharray: 10px;
+                                stroke-dashoffset: var(--offset, 10px);
+                                transform: translateX(-25%) translateY(-10%);
+                                transition: stroke-dashoffset 0.4s ease var(--offset-d);
+                            }
+                        }
+                    }
+                    &.loading{
+                        --scale: .95;
+                        --span-y: -32px;
+                        // --icon-r: 180deg;
+                        --fill: 1;
+                        --fill-d: .8s;
+                        --offset: 0;
+                        --offset-d: 1.5s;
+                        .cart {
+                            animation: cart 2.4s linear forwards .2s;
+                        }
+                    }
+                }
+                @keyframes cart {
+                    1%{
+                        transform:rotate(15deg);
+                    }
+                    12.5% {
+                        transform: translateX(-30px) rotate(15deg);
+                    }
+                    25%,
+                    45%,
+                    55%,
+                    75%
+                    {
+                        transform: translateX(-40px) ;
+                    }
+                    50% {
+                        transform: translateX(-40px) scale(.9);
+                    }
+                    44%,
+                    56% {
+                        transform-origin: 100% 0%;
+                    }
+                    45%,
+                    55% {
+                        transform-origin: 50% 50%;
+                    }
+                    87.5% {
+                        transform: translateX(-70px) rotate(15deg);
+                    }
+                    100% {
+                        transform: translateX(-120px) rotate(15deg);
+                    }
                 }
             }
             .heart-icon{
