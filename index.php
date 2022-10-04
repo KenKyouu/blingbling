@@ -176,20 +176,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
 
           <div id="app" class="p-index-container">
             <card class="storyCard_1" data-image="./images/story_01.png" >
-              <h1 slot="header">Canyons</h1>
-              <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <h1 slot="header"> ❤ 貼心小秘書</h1>
+              <p slot="content">生日提醒、送禮推薦、智能服務Bling Bling都隨時都在</p>
             </card>
-            <card data-image="./images/story_card_02.png">
-              <h1 slot="header">Beaches</h1>
-              <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <card data-image="./images/story_02.png">
+              <h1 slot="header">❤ 客製化包裝</h1>
+              <p slot="content">提供自製客製化包裝，讓你送禮更用心</p>
             </card>
-            <card data-image="./images/story_card_03.png">
-              <h1 slot="header">Trees</h1>
-              <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <card data-image="./images/story_03.png">
+              <h1 slot="header">❤ 智能送禮推薦</h1>
+              <p slot="content">智能送禮推薦服務，讓你送禮不失誤</p>
             </card>
-            <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
-              <h1 slot="header">Lakes</h1>
-              <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <card data-image="./images/story_04.png">
+              <h1 slot="header">❤ 好友生日提醒</h1>
+              <p slot="content">好友生日提醒功能，不怕錯過任何送禮時刻</p>
             </card>
           </div>
 
@@ -231,7 +231,8 @@ $pageName = 'home'; // 頁面名稱，可以自定義
             </div>
           </div>
           <div class="storyInfor">
-            <p class="storyInfor-text">Bling Bling 有禮說話不在多，在於說得對，說中了事和理的要害，能打動聽者的心。這句話改變了我的人生。如果此時我們選擇忽略送禮物，那後果可想而知。送禮物可以說是有著成為常識的趨勢。赫茲里特講過一句值得人反覆尋思的話，小人物在社會中是一種必要的調劑。每個人都不得不面對這些問題。在面對這種問題時，務必詳細考慮送禮物的各種可能。俗話說的好，掌握思考過程，也就掌握了送禮物。</p>
+            <p class="storyInfor-text">Bling Bling有禮，秉持著能讓消費者得到更便利貼心的送禮及收禮服務，除了引用現在流行的線上送禮功能之外，更增加智能送禮推薦、送禮提醒及客製化包裝等服務．期望能透過我們的平台解決現代人事務多交際多沒時間構思送禮內容的煩惱，並用心對待每一份禮品，讓每個商品都像獨一無二的珍寶，體現送禮人的用心，感動收禮人心．
+            </p>
           </div>
         </div>
         <div id="area3" class="I-populerSection">
@@ -251,11 +252,11 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                 <div class="populerInfor-row">
                   <div class="populerCard-s">
                     <div class="populerCardTop">
-                      <img class="w-100" src="./images/products/populer-01.jpeg" alt="">
+                      <img class="w-100" src="./images/products/populer-1.png" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">復古文青風編織木頭矮櫃</p>
+                      <p class="populerCardPrice mt-1">2093</p>
                     </div>
                   </div>
                 </div>
@@ -265,8 +266,8 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                       <img class="w-100" src="./images/products/populer-02.jpeg" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">DITOO PLUS像素藍牙喇叭</p>
+                      <p class="populerCardPrice mt-1">2280</p>
                     </div>
                   </div>
                 </div>
@@ -276,8 +277,8 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                       <img class="w-100" src="./images/products/populer-03.jpeg" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">富士山皮革手拿包</p>
+                      <p class="populerCardPrice mt-1">1800</p>
                     </div>
                   </div>
                 </div>
@@ -287,8 +288,8 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                       <img class="w-100" src="./images/products/populer-04.jpeg" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">躺躺貓療癒禮盒組</p>
+                      <p class="populerCardPrice mt-1">720</p>
                     </div>
                   </div>
                 </div>
@@ -298,8 +299,8 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                       <img class="w-100" src="./images/products/populer-05.jpeg" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">文青風帆布鞋｜6色</p>
+                      <p class="populerCardPrice mt-1">690</p>
                     </div>
                   </div>
                 </div>
@@ -309,8 +310,8 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                       <img class="w-100" src="./images/products/populer-06.jpeg" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">可攜式環保榨汁杯</p>
+                      <p class="populerCardPrice mt-1">1200</p>
                     </div>
                   </div>
                 </div>
@@ -320,52 +321,52 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                       <img class="w-100" src="./images/products/populer-01.jpeg" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">木質智能小夜燈</p>
+                      <p class="populerCardPrice mt-1">1730</p>
                     </div>
                   </div>
                 </div>
                 <div class="populerInfor-row">
                   <div class="populerCard-b">
                     <div class="populerCardTop">
-                      <img class="w-100" src="./images/products/populer-02.jpeg" alt="">
+                      <img class="w-100" src="./images/products/populer-2.png" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle"> OVERDIGI 多彩6mm快拆手機掛繩-肩背帶</p>
+                      <p class="populerCardPrice mt-1">690</p>
                     </div>
                   </div>
                 </div>
                 <div class="populerInfor-row">
                   <div class="populerCard-s">
                     <div class="populerCardTop">
-                      <img class="w-100" src="./images/products/populer-03.jpeg" alt="">
+                      <img class="w-100" src="./images/products/populer-3.png" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">蠟筆小新無線鍵盤滑鼠組</p>
+                      <p class="populerCardPrice mt-1">1380</p>
                     </div>
                   </div>
                 </div>
                 <div class="populerInfor-row">
                   <div class="populerCard-b">
                     <div class="populerCardTop">
-                      <img class="w-100" src="./images/products/populer-04.jpeg" alt="">
+                      <img class="w-100" src="./images/products/populer-4.png" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">【Kodak 柯達】復古底片相機</p>
+                      <p class="populerCardPrice mt-1">1990</p>
                     </div>
                   </div>
                 </div>
                 <div class="populerInfor-row">
                   <div class="populerCard-s">
                     <div class="populerCardTop">
-                      <img class="w-100" src="./images/products/populer-05.jpeg" alt="">
+                      <img class="w-100" src="./images/products/populer-5.png" alt="">
                     </div>
                     <div class="populerCardInfor mt-2">
-                      <p class="populerCardTitle">Minor Figures 小人物 | 燕麥奶 一般版 6入</p>
-                      <p class="populerCardPrice mt-1">3200</p>
+                      <p class="populerCardTitle">唐老鴨翹臀磁吸充電盤-可當支架</p>
+                      <p class="populerCardPrice mt-1">990</p>
                     </div>
                   </div>
                 </div>
@@ -384,20 +385,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-01.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_1.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.1</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">HOLA 聖誕音樂會 倒數禮盒</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>1630</p>
                             </div>
                           </div>
                         </div>
@@ -409,20 +410,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-02.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_2.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.2</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">湯姆歷險記限定禮盒</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>1750</p>
                             </div>
                           </div>
                         </div>
@@ -434,20 +435,21 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-03.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_3.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.3</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">SWAROVSKI 
+                            Holiday Cheers聖誕樹</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>2650</p>
                             </div>
                           </div>
                         </div>
@@ -459,20 +461,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-04.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_4.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.4</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">聖誕樹雙層玻璃杯</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>780</p>
                             </div>
                           </div>
                         </div>
@@ -484,20 +486,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-05.jpeg" alt="">
+                        <img class="w-100" src="./images/products/97_1.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.5</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">DITOO PLUS像素藍牙喇叭</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>2280</p>
                             </div>
                           </div>
                         </div>
@@ -509,20 +511,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-06.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_5.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.6</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">手工玻璃旋轉酒杯+冰酒石禮盒</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>1615</p>
                             </div>
                           </div>
                         </div>
@@ -534,20 +536,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-07.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_6.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.7</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">hó-lim 飲料杯 / 免吸管神杯 2入優惠 / 6色任選</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>1799</p>
                             </div>
                           </div>
                         </div>
@@ -559,20 +561,20 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                   <div class="FestivalCard">
                     <div class="FestivalCard-Top">
                       <div class="img-wrap">
-                        <img class="w-100" src="./images/products/festival-08.jpeg" alt="">
+                        <img class="w-100" src="./images/products/Christmas_7.png" alt="">
                       </div>
                       <div class="Top-text">
                         <p>TOP.8</p>
                       </div>
                       <div class="FestivalCard-Infor">
                         <div class="FestivalCard-InforL ">
-                          <p class="">青山依舊在，幾度夕陽紅。慣看秋月春風。</p>
+                          <p class="">送禮首選 DIY自調果實酒套裝禮盒</p>
                         </div>
                         <div class="FestivalCard-InforR">
                           <div class="FestivalCard-PriceBox">
                             <div class="FestivalCard-Price">
                               <p>TWD</p>
-                              <p>3200</p>
+                              <p>1200</p>
                             </div>
                           </div>
                         </div>
@@ -603,61 +605,61 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                 <div class="newCardRow">
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-01.jpeg" alt="">
+                      <img src="./images/products/new_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      青鳥旅行 x 59屆金馬影展 旅行箱蛋捲禮盒 24入
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-02.jpeg" alt="">
+                      <img src="./images/products/new_2.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      Apple Watch 38/40/41mm 莫蘭迪仕女真皮錶帶
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-03.jpeg" alt="">
+                      <img src="./images/products/71-4.jpeg" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        pidan 太空艙寵物背包 美好寵物生活
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-01.jpeg" alt="">
+                      <img src="./images/products/242_2.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        生活訂製・淡靄藍天絲™床包四件組
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-02.jpeg" alt="">
+                      <img src="./images/products/245_4.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      荷蘭 TAPIS PETIT 可機洗純棉手工地毯 玫瑰褐
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-03.jpeg" alt="">
+                      <img src="./images/products/252_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        VIPO 小王子造型星球燈 愛與馴養
                       </p>
                     </div>
                   </div>
@@ -671,101 +673,101 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                 <div class="newCardRow-botton">
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-01.jpeg" alt="">
+                      <img src="./images/products/253_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        éclat 匠心花藝清新居家乾燥花藝組_2款任選
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-02.jpeg" alt="">
+                      <img src="./images/products/255_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      Kanari 永恆燭台 Twilight 玫瑰金色
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-03.jpeg" alt="">
+                      <img src="./images/products/261_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      igrass貓掌全自動感應泡沫機
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-04.jpeg" alt="">
+                      <img src="./images/products/254_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        丹麥 The Poster Club 藝術版畫 Serene Stripes
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-04.jpeg" alt="">
+                      <img src="./images/products/264_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        White Label Living JOLIEN 扶手單椅
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-01.jpeg" alt="">
+                      <img src="./images/products/239_1.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      【皮革禮物】 Rocky 手工縫製 紳士領結
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-02.jpeg" alt="">
+                      <img src="./images/products/230_2.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        羊絨觸感雙面圍巾カシミヤタッチ/リバーシブルマフラー
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-03.jpeg" alt="">
+                      <img src="./images/products/201_2.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      PURROOM｜蛋花貓抓板 多種組合玩法
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-04.jpeg" alt="">
+                      <img src="./images/products/13_3.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                      hegen PCTO™ EBP 舒芙蕾多功能雙邊電動擠乳器組 
                       </p>
                     </div>
                   </div>
                   <div class="newCard">
                     <div class="newCardImg">
-                      <img src="./images/products/new-04.jpeg" alt="">
+                      <img src="./images/products/22_3.png" alt="">
                     </div>
                     <div class="newCardInfor">
                       <p>
-                        Minor Figures 小人物 | 燕麥奶 一般版 6入
+                        嬰幼兒抗UV短袖連身式泳裝(小福虎)
                       </p>
                     </div>
                   </div>
@@ -782,7 +784,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
                 <h2>NEWS...</h2>
                 <div class="NEWSinfor">
                   <p>
-                    斯賓諾莎曾經認為，智慧，不是死的默念，而是生的深思。這段話對世界的改變有著深遠的影響。
+                    Bling Bling 給你最流行的送禮指南，讓你送禮不踩雷！
                   </p>
               </div>
             </div> 
@@ -794,22 +796,22 @@ $pageName = 'home'; // 頁面名稱，可以自定義
               <input type="radio" name="slider" id="item-3">
             <div class="p-NEWScards">
               <label class="p-NEWScard" for="item-1" id="song-1">
-                <img src="./images/products/news-01.jpeg" alt="song">
+                <img src="./images/kol_images/kol-image-30.png" alt="song">
                 <div class="p-NEWScard-text">
-                  10大女用包款推薦
+                  5款最時尚又實用的送禮家電推薦清單！
                 </div>
               </label>
               <label class="p-NEWScard" for="item-2" id="song-2">
                 <div class="p-NEWScard-text">
-                  10大女用包款推薦
+                  情侶生日禮物送什麼？送禮攻略大指南！
                 </div>
-                <img src="./images/products/news-02.jpeg" alt="song">
+                <img src="./images/kol_images/kol-image-36.png" alt="song">
               </label>
               <label class="p-NEWScard" for="item-3" id="song-3">
                 <div class="p-NEWScard-text">
-                  10大女用包款推薦
+                  WFH提升效率超有感！15款居家辦公必備小物推薦
                 </div>
-                <img src="./images/products/news-03.jpeg" alt="song">
+                <img src="./images/kol_images/kol-image-33.png" alt="song">
               </label>
             </div>
           
