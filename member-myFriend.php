@@ -10,6 +10,9 @@ $user = $_SESSION['user']['id'];
 $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user ORDER BY `birthday_mm`, `birthday_dd`")->fetchAll();
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
+
+$today = date('m/d');
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -188,7 +191,7 @@ $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
                                         </a>
                                     </div>
                                     <div class="deleteFriendIcon">
-                                        <button class="deleteFriendSvg">
+                                        <button class="deleteFriendSvg" data-val="<?= $f['sid'] ?>">
                                             <svg width="15" height="16" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M22.7251 4.55958H0.733645C0.330016 4.55958 0 4.23226 0 3.8263C0 3.42287 0.327477 3.09302 0.733645 3.09302H22.7251C23.1287 3.09302 23.4588 3.42033 23.4588 3.8263C23.4588 4.23226 23.1313 4.55958 22.7251 4.55958Z" fill="#4C4948" />
                                                 <path d="M14.7107 1.46656H8.74512C8.34149 1.46656 8.01147 1.13925 8.01147 0.733279C8.01147 0.329849 8.33895 0 8.74512 0H14.7107C15.1143 0 15.4444 0.327311 15.4444 0.733279C15.4444 1.13925 15.1169 1.46656 14.7107 1.46656Z" fill="#4C4948" />
@@ -219,7 +222,7 @@ $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
             <div class="friend-warn-text">確定要刪除好友資訊嗎</div>
         </div>
         <div class="tfBtn">
-            <button class="delete">確定</button>
+            <button class="delete" onclick="deleteFriend(event)">確定</button>
             <button class="cancel">取消</button>
         </div>
     </div>
@@ -273,8 +276,9 @@ $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
                     <p>好友印象標籤</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="friendtags" placeholder="最多選擇五個" readonly="readonly">
+                    <input type="text" name="" placeholder="最多選擇五個" readonly="readonly">
                 </div>
+                <div class="appendtag"></div>
             </div>
             <div class="detail">
                 <div class="detail-text"></div>
@@ -282,7 +286,7 @@ $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
                     <div class="tagsselect">
                         <div class="tags">
                             <?php foreach ($tags as $t) : ?>
-                                <span data-val="<?= $t['sid'] ?>"><?= $t['name'] ?></span>
+                                <span class="tagbyken" data-val="<?= $t['sid'] ?>"><?= $t['name'] ?></span>
                             <?php endforeach; ?>
                         </div>
                     </div>
@@ -320,6 +324,45 @@ $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
             },
             "json"
         );
+    }
+
+
+    // friend tags
+    let tagnameArr = [];
+    let tagvalueArr = [];
+    let inputname = 1;
+    $('.tagbyken').click(function() {
+        let tagname = $(this).text();
+        let tagvalue = $(this).attr('data-val');
+        tagnameArr.push(tagname);
+        tagvalueArr.push(tagvalue);
+        console.log(tagvalueArr)
+        $('.appendtag').append(
+            "<input type='text' name='friendtag[]' value='" +
+            tagvalue +
+            "' hidden></input>"
+        )
+    })
+
+    // delete friend
+    $('.deleteFriendSvg').click(function() {
+        $('button.delete').attr('data-val', $(this).attr('data-val'))
+    })
+
+    function deleteFriend(event) {
+        const deleteButton = $(event.currentTarget);
+        const sid = deleteButton.attr('data-val');
+        console.log(sid);
+        $.get(
+            "deletefriend-api.php", {
+                sid
+            },
+            function(data) {
+                console.log(data);
+            },
+            "json"
+        );
+        document.location.href = "./member-myFriend.php"
     }
 </script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

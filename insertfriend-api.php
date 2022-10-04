@@ -10,6 +10,10 @@ $output = [
 
 $user = $_SESSION['user']['id'];
 
+$lastfriend = $pdo->query("SELECT * FROM member_friend WHERE 1 ORDER BY `sid` DESC LIMIT 1")->fetchAll();
+$lastfriendsid = $lastfriend[0]['sid'];
+$insertfriendsid = $lastfriendsid + 1;
+
 // 先判斷name跟email欄位有沒有值
 
 // if (empty($_POST['name']) or empty($_POST['email'])) {
@@ -27,7 +31,15 @@ $user = $_SESSION['user']['id'];
 //     $birthday = $_POST['birthday'];
 // }
 
+
+// if (empty($_POST['friendemail'])) {
+//     $email = NULL;
+// } else {
+//     $email = $_POST['friendemail'];
+// }
+
 $sql = "INSERT INTO `member_friend` (
+    `sid`,
     `member_sid`,
     `name`,
     `gender`,
@@ -35,6 +47,7 @@ $sql = "INSERT INTO `member_friend` (
     `birthday_mm`,
     `birthday_dd`
     ) VALUES (
+        $insertfriendsid,
         $user,
         ?,
         ?,
@@ -51,6 +64,23 @@ $stmt->execute([
     $_POST['friendmonth'],
     $_POST['friendday']
 ]);
+
+if (!empty($_POST['friendtag'])) {
+    for ($i = 0; $i < count($_POST['friendtag']); $i++) {
+        $tagsql = "INSERT INTO `friend_tag` (
+            `friend_sid`,
+            `tag_sid`
+            ) VALUES (
+                $insertfriendsid,
+                ?
+            )";
+        $stmttag = $pdo->prepare($tagsql);
+        $stmttag->execute([
+            intval($_POST['friendtag'][$i])
+        ]);
+    }
+}
+
 
 if ($stmt->rowCount()) {
     $output['success'] = true;

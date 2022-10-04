@@ -379,7 +379,7 @@ if (!empty($friendismember)) {
         tagvalueArr.push(tagvalue);
         console.log(tagvalueArr)
         $('.appendtag').append(
-            "<input type='text' name='friendtag' value='" +
+            "<input type='text' name='friendtag[]' value='" +
             tagvalue +
             "' hidden></input>"
         )
