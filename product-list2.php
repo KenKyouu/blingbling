@@ -17,14 +17,14 @@ $qsp = []; // query string parameters
 
 
 $ps_where = ' WHERE 1 ';
-$ps_where2 = '';
-$isGetColor = false;
+// $ps_where2 = '';
+// $isGetColor = false;
 if (!empty($gender)) {
     $ps_where .= sprintf(" AND `gender`=%s ", $pdo->quote($gender));
     $qsp['gender'] = $gender;
 }
 if (!empty($_GET['color'])) {
-    $isGetColor = true;
+    // $isGetColor = true;
     $colors = $_GET['color'];
 
     $colors2 = [];
@@ -41,7 +41,7 @@ if (!empty($_GET['color'])) {
 
 
     $ps_where .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
-    $ps_where2 .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
+    // $ps_where2 .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
 }
 
 
@@ -100,16 +100,16 @@ if ($cate == 0) {
 };
 // $products = $pdo->query("SELECT * FROM product)->fetchAll();
 // $t_sql = "SELECT COUNT(1) FROM product $where";
-$newPsWhere = ($isGetColor) ? '' : $ps_where;
-$newPsWhere2 = ($isGetColor) ? $ps_where2 : '';
+// $newPsWhere = ($isGetColor) ? '' : $ps_where;
+// $newPsWhere2 = ($isGetColor) ? $ps_where2 : '';
 // echo $newPsWhere . ", ";
 // echo $newPsWhere2 . ", ";
 
 $t_sql = "SELECT COUNT(distinct p.sid) FROM `class` c JOIN `product` p ON p.class_sid=c.sid
-LEFT JOIN (
-    SELECT * FROM product_style $newPsWhere 
+JOIN (
+    SELECT * FROM product_style $ps_where 
 ) ps ON p.sid=ps.product_sid
-$where" . $newPsWhere2;
+$where";
 // echo $t_sql . ", ";
 
 $totalRows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
@@ -130,11 +130,11 @@ if ($totalRows > 0) {
     //$sql = sprintf("SELECT * FROM `product` %s ORDER BY `sid` DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
     $sql = sprintf("
     SELECT p.*, ps.color, ps.gender, count(distinct p.sid) FROM `class` c JOIN `product` p ON p.class_sid=c.sid
-    Left JOIN (
-        SELECT * FROM product_style $newPsWhere
+    JOIN (
+        SELECT * FROM product_style $ps_where
     ) ps ON p.sid=ps.product_sid
     %s group by p.sid
-    LIMIT %s, %s", $where . $newPsWhere2, ($page - 1) * $perPage, $perPage);
+    LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
 
     // echo $sql;
     // exit;
@@ -177,7 +177,10 @@ if ($totalRows > 0) {
             <ul>
                 <?php if ($cate < 9) { ?>
                     <?php foreach ($cates as $c) : ?>
-                        <li><a href="?<?php $tmp['cate'] = $c['sid'];
+                        <li><a href="?<?php
+                                        $tmp = $_GET;
+                                        unset($tmp['page']);
+                                        $tmp['cate'] = $c['sid'];
                                         echo http_build_query($tmp); ?>">
                                 <?= $c['name'] ?>
                             </a>
@@ -193,7 +196,10 @@ if ($totalRows > 0) {
                                     if ($cate == $cpcp['sid']) {
                                         echo ('background-color:#2d827d; border:2px solid #2d827d');
                                     }
-                                    ?>"><a href="?<?php $tmp['cate'] = $cpcp['sid'];
+                                    ?>"><a href="?<?php
+                                                    $tmp = $_GET;
+                                                    unset($tmp['page']);
+                                                    $tmp['cate'] = $cpcp['sid'];
                                                     echo http_build_query($tmp); ?>" style="<?php
                                                                                             if ($cate == $cpcp['sid']) {
                                                                                                 echo ('color:#ffffff');
@@ -318,15 +324,18 @@ if ($totalRows > 0) {
                 </ul>
             </div>
         </div>
-        <form name="filter_pc" action="product-list2.php?">
+        <form name="filter_pc">
+            <?php /*
             <?php foreach ($_GET as $gKey => $gValue) : ?>
                 <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
             <?php endforeach; ?>
+*/ ?>
+            <input type="hidden" name="cate" value="<?= !empty($cate) ? $cate : '' ?>">
             <div class="gender-filter-pc">
                 <h2>性別</h2>
                 <div class="horizon"></div>
                 <div class="gender">
-                    <input type="radio" name="gender" id="male-pc" value="male">
+                    <input type="radio" name="gender" id="male-pc" value="male" <?= $gender == 'male' ? 'checked' : '' ?>>
                     <label for="male-pc">
                         <span>
                             <svg width="10" height="25" viewBox="0 0 10 25" fill="#5292b9" xmlns="http://www.w3.org/2000/svg">
@@ -342,7 +351,7 @@ if ($totalRows > 0) {
                             </svg>
                         </span>
                     </label>
-                    <input type="radio" name="gender" id="female-pc" value="female">
+                    <input type="radio" name="gender" id="female-pc" value="female" <?= $gender == 'female' ? 'checked' : '' ?>>
                     <label for="female-pc">
                         <span>
                             <svg width="10" height="25" viewBox="0 0 10 25" fill="#d45a6a" xmlns="http://www.w3.org/2000/svg">
@@ -458,23 +467,23 @@ if ($totalRows > 0) {
                 <div class="horizon"></div>
                 <div class="price">
                     <h4>NT$</h4>
-                    <input type="text" name="lowp" value="" maxlength="6"">
+                    <input type="text" name="lowp" maxlength="6" value="<?= !empty($lowp) ? $lowp : '' ?>">
                     <h4>-</h4>
-                    <input type=" text" name="highp" value="" maxlength="6"">
+                    <input type=" text" name="highp" maxlength="6">
                 </div>
             </div>
             <button class=" filter-submit-pc" type="submit">搜尋&nbsp;&nbsp;<svg width="82" height="14" viewBox="0 0 82 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_2766_86944)">
-                            <path d="M0.378906 6.53516L80.2489 7.02516" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M75.2387 13.1352L74.2188 12.0252L79.6687 7.02523L74.2887 1.95523L75.3187 0.865234L81.8787 7.03523L75.2387 13.1352Z" fill="white" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_2766_86944">
-                                <rect width="81.88" height="12.27" fill="white" transform="translate(0 0.865234)" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    </button>
+                    <g clip-path="url(#clip0_2766_86944)">
+                        <path d="M0.378906 6.53516L80.2489 7.02516" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M75.2387 13.1352L74.2188 12.0252L79.6687 7.02523L74.2887 1.95523L75.3187 0.865234L81.8787 7.03523L75.2387 13.1352Z" fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2766_86944">
+                            <rect width="81.88" height="12.27" fill="white" transform="translate(0 0.865234)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
         </form>
 
     </div>
