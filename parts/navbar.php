@@ -585,6 +585,27 @@ require __DIR__ . '/connect_db.php';
         </div>
     </div>
 </div>
+<div class="historySection">
+    <div class="historyBox">
+       <div class="historyItem" data-sid="">
+            <div class="historyItem-img">
+                <img src="./images/products/100_1.png" alt="" />
+            </div>
+            <div class="historyItem-sub">
+                <p>產品名dfhsdlffdsfhjd</p>
+            </div>
+       </div>
+       <div class="historyItem" data-sid="">
+            <div class="historyItem-img">
+                <img src="./images/products/101_1.png" alt="" />
+            </div>
+            <div class="historyItem-sub">
+                <p>產品名dfhsdlffdsfhjd</p>
+            </div>
+       </div>
+       
+    </div>
+</div>
 
 
 <!-- <div class="pc-signup">

@@ -37,15 +37,15 @@ Vue.component('card', {
       return this.mouseY / this.height;
     },
     cardStyle() {
-      const rX = this.mousePX * 30;
-      const rY = this.mousePY * -30;
+      const rX = this.mousePX * -10;
+      const rY = this.mousePY * 5;
       return {
         transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
       };
     },
     cardBgTransform() {
-      const tX = this.mousePX * -40;
-      const tY = this.mousePY * -40;
+      const tX = this.mousePX * -30;
+      const tY = this.mousePY * -30;
       return {
         transform: `translateX(${tX}px) translateY(${tY}px)`
       }
@@ -86,74 +86,71 @@ $('.giftAnimateArea').click(function(){
   $('#openArea').addClass('animation-start')
 })
 
-// const OpenAreaHight = $('#openArea').css('height')
-// console.log('height',OpenAreaHight);
-let OpenAreaHeight = $('#openArea').css('height')
-  console.log(OpenAreaHeight.substring(0, OpenAreaHeight.length -2));
-let OpenAreaHeightStr= OpenAreaHeight.substring(0, OpenAreaHeight.length -2)
-console.log('OpenAreaHeightStr',OpenAreaHeightStr)
-console.log(typeof(Number(OpenAreaHeightStr)));
+
+// let OpenAreaHeight = $('#openArea').css('height')
+//   console.log(OpenAreaHeight.substring(0, OpenAreaHeight.length -2));
+// let OpenAreaHeightStr= OpenAreaHeight.substring(0, OpenAreaHeight.length -2)
+// console.log('OpenAreaHeightStr',OpenAreaHeightStr)
+// console.log(typeof(Number(OpenAreaHeightStr)));
 
 
   
-if(Number(OpenAreaHeightStr==0)){
+// if(Number(OpenAreaHeightStr==0)){
   
-  $('#menuFixed').addClass('.menuFixed')
-}
+//   $('#menuFixed').addClass('.menuFixed')
+// }
 //-----menuSection-------
 
 
-// $('.w-indexHeader-menu').click(function(){
-//   console.log('hi')
-//   const Opacity = $('.w-indexHeader-menuSection').css('opacity')
-//   console.log(Opacity)
-//   if(Opacity==1){
-//     $('.w-indexHeader-menuSection').css('opacity','0')
-//   }else{
-//     $('.w-indexHeader-menuSection').css('opacity','1')
-//   }
-// })
+$('.w-indexHeader-menu').click(function(){
+  console.log('hi')
+  const Opacity = $('.w-indexHeader-menuSection').css('opacity')
+  console.log(Opacity)
+  if(Opacity==1){
+    $('.w-indexHeader-menuSection').css('opacity','0')
+  }else{
+    $('.w-indexHeader-menuSection').css('opacity','1')
+  }
+})
 
-$('.w-indexHeader-menu, .w-indexHeader-menuSection').mouseenter(function(){
-  $('.w-indexHeader-menuSection').css('opacity','1')
-})
-$('.w-indexHeader-menu,.w-indexHeader-menuSection').mouseleave(function(){
-  $('.w-indexHeader-menuSection').css('opacity','0')
-})
+// $('.w-indexHeader-menu, .w-indexHeader-menuSection').mouseenter(function(){
+//   $('.w-indexHeader-menuSection').css('opacity','1')
+// })
+// $('.w-indexHeader-menu,.w-indexHeader-menuSection').mouseleave(function(){
+//   $('.w-indexHeader-menuSection').css('opacity','0')
+// })
 
 //------滑鼠滾動---------------
-// $(window).scroll(function (){
-//   if($(window).scrollTop()>=300){
-//     $('#openArea').
-//   }
-// }
-// $(window).scroll(function (){
-//   console.log('scrollTop:', $(window).scrollTop());
-//   if ($(window).scrollTop() >= 100){
-//     $('.openingArea').css('display','none')
-//   }
-
-// })
 
 
+$(window).scroll(function () {
+  console.log('scrollTop:', $(window).scrollTop());
 
 
-// $(window).scroll(function () {
-//   console.log('scrollTop:', $(window).scrollTop());
+  if ($(window).scrollTop() >= 750) {
+      $('#area3').css({
+          transform: 'translateY(0px)',
+          opacity: 1,
+      })
+  }  else{
+    $('#area3').css({
+        transform: 'translateY(200px)',
+        opacity: 0,
+    })
+  }
 
-
-//   // if ($(window).scrollTop() >= 300) {
-//   //     $('.course-mainBox').css({
-//   //         transform: 'translateY(0px)',
-//   //         opacity: 1,
-//   //     })
-//   // }
-//   // else{
-//   //     $('.course-mainBox').css({
-//   //         transform: 'translateY(200px)',
-//   //         opacity: 0,
-//   //     })
-//   // }
+  if ($(window).scrollTop() >= 2350) {
+    $('#area4').css({
+        transform: 'translateY(0px)',
+        opacity: 1,
+    })
+}  else{
+  $('#area4').css({
+      transform: 'translateY(200px)',
+      opacity: 0,
+  })
+}
+})
 
 //   // if ($(window).scrollTop() >= 1074) {
 //   //     $('.place-window').css({
