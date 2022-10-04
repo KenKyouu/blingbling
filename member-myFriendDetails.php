@@ -21,6 +21,7 @@ $friendismember = $pdo->query("SELECT * FROM member WHERE email= '$friendemail' 
 $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
 $friendtags = $pdo->query("SELECT * FROM friend_tag WHERE `friend_sid`= $friend ")->fetchAll();
 
+
 if (!empty($friendismember)) {
     $friendmembersid = $friendismember[0]['sid'];
     $friendfavorite = $pdo->query("SELECT * FROM member_favorite WHERE `member_sid`= $friendmembersid ORDER BY `product_sid`")->fetchAll();
@@ -213,7 +214,7 @@ if (!empty($friendismember)) {
                                 <?php if (!empty($friendfavorite)) : ?>
                                     <?php foreach ($friendfavorite as $ff) : ?>
                                         <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                            <a href="#">
+                                            <a href="./product_details.php?sid=<?= $ff['product_sid'] ?>">
                                                 <img class="wish" src="./images/products/<?= $ff['product_sid'] ?>_1.png" alt="">
                                             </a>
                                         </div>
@@ -256,12 +257,45 @@ if (!empty($friendismember)) {
                                 </div>
                             </div>
                             <div class="f-recommend">
-                                <div class="f-title">
-                                    <p>禮物推薦</p>
+                                <?php if (!empty($friendtags)) : ?>
+                                    <div class="f-title">
+                                        <p>禮物推薦</p>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if (!empty($friendtags)) {
+                                    $recommendArr = [];
+                                    for ($n = 0; $n < count($friendtags); $n++) {
+                                        // echo $friendtags[$n]['tag_sid'];
+                                        array_push($recommendArr, $friendtags[$n]['tag_sid']);
+                                    }
+                                    $recommendwhere = " WHERE 1 AND (`tag_sid` =" . implode(" OR `tag_sid`=", $recommendArr) . ") ";
+                                    $recommendsql = "SELECT * FROM `tag_rel` $recommendwhere ORDER BY RAND() LIMIT 8";
+                                    $recommend = $pdo->query($recommendsql)->fetchAll();
+                                    // echo json_encode($recommend);
+                                    // exit;
+                                } ?>
+                                <?php if (!empty($friendtags)) : ?>
+                                    <?php foreach ($recommend as $rc) : ?>
+                                        <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                            <a href="./product_details.php?sid=<?= $rc['product_sid'] ?>">
+                                                <img class="wish" src="./images/products/<?= $rc['product_sid'] ?>_1.png" alt="">
+                                            </a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                                <!-- <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
                                 </div>
                                 <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
                                     <a href="#">
                                         <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
                                     </a>
                                 </div>
                                 <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
@@ -281,24 +315,9 @@ if (!empty($friendismember)) {
                                 </div>
                                 <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
                                     <a href="#">
-                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
                                         <img class="wish" src="./images/products/71-4.jpeg" alt="">
                                     </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                                    </a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

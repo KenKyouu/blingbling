@@ -469,7 +469,7 @@ if ($totalRows > 0) {
                     <h4>NT$</h4>
                     <input type="text" name="lowp" maxlength="6" value="<?= !empty($lowp) ? $lowp : '' ?>">
                     <h4>-</h4>
-                    <input type=" text" name="highp" maxlength="6">
+                    <input type=" text" name="highp" maxlength="6" value="<?= !empty($highp) ? $highp : '' ?>">
                 </div>
             </div>
             <button class=" filter-submit-pc" type="submit">搜尋&nbsp;&nbsp;<svg width="82" height="14" viewBox="0 0 82 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,12 +536,15 @@ if ($totalRows > 0) {
         </div>
         <div class="filter-footer">
             <form name="filter_mobile" action="product-list2.php?">
-                <?php foreach ($_GET as $gKey => $gValue) : ?>
-                    <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
-                <?php endforeach; ?>
-                <input class="mobile-gender" type="text" name="gender" value="" hidden>
-                <input class="mobile-lowp" type="text" name="lowp" value="" hidden>
-                <input class="mobile-highp" type="text" name="highp" value="" hidden>
+                <?php // foreach ($_GET as $gKey => $gValue) : 
+                ?>
+                <!-- <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden> -->
+                <?php // endforeach; 
+                ?>
+                <input type="hidden" name="cate" value="<?= !empty($cate) ? $cate : '' ?>">
+                <input class="mobile-gender" type="text" name="gender" value="<?= !empty($gender) ? $gender : '' ?>" hidden>
+                <input class="mobile-lowp" type="text" name="lowp" value="<?= !empty($lowp) ? $lowp : '' ?>" hidden>
+                <input class="mobile-highp" type="text" name="highp" value="<?= !empty($highp) ? $highp : '' ?>" hidden>
                 <div class="addInput"></div>
                 <!-- <input class="mobile-color" type="text" name="color[]" value="" hidden> -->
                 <button type="submit">
