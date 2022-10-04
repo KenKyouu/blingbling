@@ -102,8 +102,7 @@ body{
         @media (min-width:992px) {
             padding: 70px 100px;
         }
-
-        padding: 56.5px 50px;
+        padding: 56.5px 50px 20px 50px;
         .product-info1{
             width: 100%;
             @media(min-width:768px)  {
@@ -123,7 +122,7 @@ body{
                 }
                 .product-pic{ 
                     width: 100%;
-                    height: 266px;
+                    height: 276px;
                     overflow: hidden;
                     object-fit: cover;
                     padding: 0;
@@ -143,20 +142,31 @@ body{
                             object-fit: cover;
                         }
                         .slider-row{
+                            width: 100%;
                             display: flex;
-                            object-fit: cover;
+                            background-color: $white;
                             @media (min-width:768px) {
                                 display: block;
                                 flex-direction: column;
                             }
                             img{
-                                @media (max-width:768px) {
-                                    height: auto;
-                                }
                                 width: 100%;
-                                height: 100vh;
+                                height: 276px;
                                 object-fit: cover;
+                                @media (min-width:768px) {
+                                    height: 100vh;
+                                }
                             }
+                            // .pic_size{
+                            //     width: 25%;
+                            //     height: 275px;
+                            //     object-fit: cover;
+                            //     @media (min-width:768px){
+                            //         width: 100%;
+                            //         height: 100vh;  
+                            //     }
+                                
+                            // }
                         }  
                     }
                 }
@@ -179,7 +189,11 @@ body{
                     font-family:"GenSenRounded-B";
                     color: $lake-green;
                     font-size: $ps-font-size;
-                    } 
+                    text-decoration: none;
+                    }
+                    a:hover{
+                        color: $light-lake-green;
+                    }
                 }
                 .product-text{
                     @media (min-width:768px) {
@@ -207,15 +221,64 @@ body{
                             display: none;
                         }
                         height: auto;
-                        height: auto;
                         font-family:"GenSenRounded-B";
-                        font-size: $h4-font-size;
+                        font-size: $h3-font-size;
                         display: flex;
                         padding: 20px 0 30px 0;
                         span{
-                            font-size: $ps-font-size;
+                            font-size: $h5-font-size;
                         }
                     } 
+                    .pc-price{
+                    @media (min-width:768px) {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                    @media (max-width:767px) {
+                         display: none;
+                    }
+                    .productprice{
+                        // width: 50%;
+                        height: auto;
+                        font-family:"GenSenRounded-B";
+                        font-size: $h2-font-size;
+                        display: flex;
+                        padding: 20px 0 30px 0;
+                        span{
+                            font-size: $h5-font-size;
+                        }
+                    } 
+                    // .pc-select-group{
+                    //     // width: 50%;
+                    //     display: flex;
+                    //     justify-content: right;
+                    //     padding: 10px 0 15px 0;
+                    //     .product-select{
+                    //         padding-left: 15px;
+                    //         font-family: "GenSenRounded-B";
+                    //         .select-title{
+                    //             font-size: $ps-font-size;
+                    //             color: $lake-green;
+                    //         }
+                    //         .select-info{
+                    //             appearance:none;
+                    //             -moz-appearance:none;
+                    //             -webkit-appearance:none;
+                    //             background: url("../images/icons/icon=down.svg") no-repeat right center transparent;
+                    //             background-size: 10px;
+                    //             padding-right: 15px;
+                    //             border:0;
+                    //             border-bottom: 2px solid $super-dark;
+                    //             width: auto;
+                    //             height:34px;
+                    //             color:$super-dark;
+                    //             font-size: $p-font-size;
+                                
+                    //         }
+                    //     }
+                    // } 
+                }
                     
                 }  
                 .product-info{
@@ -247,77 +310,36 @@ body{
                         // position: relative;
                         .short-line{
                             // position: absolute;
+                            margin-top: 40px;
+                            margin-bottom: 5px;
                             width: 100%;
                             height: 5px;
                             background-color:$super-dark;
-                            bottom: 0px;
+                            // bottom: 0px;
+                            @media (max-width:768px) {
+                                margin-top: 5px;;
+                            }
                         }
                     }
                     .product-info-text{
                         padding-top: 10px;
                     .describe-text{
                         @media (max-width:768px) {
-                            height: 200px;
+                            height: auto;
                         }
                         font-family: "Roboto";
                         font-weight: $bold;
                         line-height: 1.4;
-                        font-size: 14px;
+                        font-size: $p-font-size;
                         width: 100%;
-                        height: 250px;
-                        }
-                    }
-                }
-                .pc-price{
-                    @media (min-width:768px) {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 100%;
-                    }
-                     @media (max-width:767px) {
-                         display: none;
-                    }
-                    .productprice{
-                        // width: 50%;
                         height: auto;
-                        font-family:"GenSenRounded-B";
-                        font-size: $h3-font-size;
-                        display: flex;
-                        padding: 20px 0 30px 0;
-                        span{
-                            font-size: $ps-font-size;
+                        border-bottom: 1px solid $super-dark;
+                        padding-bottom: 30px;
+                        margin-bottom: 50px;
                         }
-                    } 
-                    .pc-select-group{
-                        // width: 50%;
-                        display: flex;
-                        justify-content: right;
-                        padding: 10px 0 15px 0;
-                        .product-select{
-                            padding-left: 15px;
-                            font-family: "GenSenRounded-B";
-                            .select-title{
-                                font-size: $ps-font-size;
-                                color: $lake-green;
-                            }
-                            .select-info{
-                                appearance:none;
-                                -moz-appearance:none;
-                                -webkit-appearance:none;
-                                background: url("../images/icons/icon=down.svg") no-repeat right center transparent;
-                                background-size: 10px;
-                                padding-right: 15px;
-                                border:0;
-                                border-bottom: 2px solid $super-dark;
-                                width: auto;
-                                height:34px;
-                                color:$super-dark;
-                                font-size: $p-font-size;
-                                
-                            }
-                        }
-                    } 
+                    }
                 }
+                
                 .pc-add-cart{
                     @media (max-width:767px) {
                         display: none;
@@ -325,26 +347,33 @@ body{
                     display: flex;
                     width: 100%;
                     align-items: center;
-                    justify-content: space-between;
                     .quantity{
-                        @media (max-width:992px) {
+                        @media (max-width:1300px) {
                             width: 40%;
                         }
                         display: flex;
                         width: 30%;
+                        height: 38px;
                         .quantity-reduce{
                             padding: 0;
-                            width: 32%;
-                            padding:8px 0;
+                            width: 40px;
+                            // padding:8px 0;
                             border: 3px solid $light-lake-green;
                             border-radius: 10px;
                             background-color: transparent;
+                        }
+                        .quantity-reduce:hover{
+                            background-color: $light-lake-green;
+                            border: 0;
+                            rect{
+                                fill:$white;
+                            }
                         }
                         .quantity-num{
                             border: 0;
                             background-color: transparent;
                             text-align: center;
-                            width: 32px;
+                            width: 25px;
                             font-family: "GenSenRounded-B";
                             color: $lake-green;
                             display: flex;
@@ -354,15 +383,18 @@ body{
                         }
                         .quantity-add{
                             padding: 0;
-                            width: 32%;
-                            padding:8px 0;
+                            width: 40px;
+                            // padding:8px 0;
                             border: 0;
                             border-radius: 10px;
                             background-color: $lake-green;
                         }
+                        .quantity-add:hover{
+                            background-color: $light-lake-green;
+                        }
                     }
                     .cartbtn{
-                        @media (max-width:1150px) {
+                        @media (max-width:1300px) {
                             width: 50%;
                         }
                         width: 60%;
@@ -371,15 +403,15 @@ body{
                         align-items: center;
                         justify-content: right;
                         .add-cartbtn{
-                            @media (min-width:768px) and (max-width:870px) {
+                            @media (min-width:768px) and (max-width:1300px) {
                                 font-size: $ps-font-size;    
                             }
-                            @media (max-width:1150px) {
-                                width: 100%;
-                                margin-left: 5px;
-                            }
-                            width: 80%;
-                            padding:8px 0;
+                            // @media (max-width:1150px) {
+                            //     width: 100%;
+                            //     margin-left: 5px;
+                            // }
+                            width: 90%;
+                            height: 38px;
                             border: 0;
                             border-radius: 10px;
                             background-color: $lake-green;
@@ -391,6 +423,9 @@ body{
                             p{
                                 padding-right: 5px; 
                             }
+                        }
+                        .add-cartbtn:hover{
+                            background-color: $light-lake-green;
                         }
                     }
                     .heart-icon{
@@ -409,9 +444,9 @@ body{
         display: none;
     }
     @media (min-width:992px) {
-        margin:0 145px;
+        margin:0 100px;
     }
-    margin:0 30px 50px 30px;
+    margin:0 50px 50px 30px;
     .mightlike{
         @media (min-width:769px) {
             padding-top: 12%;
@@ -423,8 +458,11 @@ body{
             .mightlike-title-text{
                 font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-weight: 900;
-                font-size: $h3-font-size;
+                font-size: $h2-font-size;
                 padding-bottom: 5px;
+                @media (max-width:497px) {
+                    font-size: $h4-font-size;
+                }
             }
             .mightlike-capsule{
                 width: 90px;
@@ -447,27 +485,27 @@ body{
             justify-content: center;
             align-items: center;
             overflow: hidden;  
-            .slick-prev{
-                // border-radius: 10px 0 0 10px;
-                border: 0;
-                width: 25px;
-                height: 25px;
-                background-color: $super-dark;
-                i{
-                    color: $white;
-                }
-            }
-            .slick-next{
-                // margin: 10px 0;
-                // border-radius: 0 10px 10px 0;
-                border: 0;
-                width: 25px;
-                height: 25px;
-                background-color: $super-dark;
-                i{
-                    color: $white;
-                }
-            }   
+            // .slick-prev{
+            //     // border-radius: 10px 0 0 10px;
+            //     border: 0;
+            //     width: 25px;
+            //     height: 25px;
+            //     background-color: $super-dark;
+            //     i{
+            //         color: $white;
+            //     }
+            // }
+            // .slick-next{
+            //     // margin: 10px 0;
+            //     // border-radius: 0 10px 10px 0;
+            //     border: 0;
+            //     width: 25px;
+            //     height: 25px;
+            //     background-color: $super-dark;
+            //     i{
+            //         color: $white;
+            //     }
+            // }   
             .product-list-scroll{
                 // max-width: 960px;
                 width: auto;
@@ -480,6 +518,7 @@ body{
                     }
                     a {
                         margin:0 1%;
+                        text-decoration: none;
                         .product-card {
                             width: 100%;
                             margin: auto;
@@ -489,8 +528,8 @@ body{
                                     width: 150px;
                                     height: 150px;
                                 }
-                                width: 190px;
-                                height: 190px;
+                                width: 250px;
+                                height: 250px;
                                 margin: auto;
                                 background-image: url(../images/products/73-2.jpeg);
                                 background-size: cover;
@@ -507,7 +546,7 @@ body{
                                     width: 150px;
                                     
                                 }
-                            width: 190px;
+                            width: 250px;
                             padding: 5px 0 5px 0;
                                 h4 {
                                     color: $super-dark;
@@ -524,7 +563,7 @@ body{
                                     width: 150px;
                                     
                                 }
-                                width: 190px;
+                                width: 250px;
                                 padding: 0 0 5px 0;
                                 p {
                                     color: $deep-brown;
@@ -554,41 +593,44 @@ body{
     bottom:0;
     .addcart-info{
         width: 100%;
-        height: 120px;
+        height: 90px;
         background-color:$white;
         box-shadow: inset 0 1px 4px 1px rgba(0,0,0,0.15);
         border-radius: 20px 20px 0 0;
-        .select-group{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0 15px 0;
-            .product-select{
-                font-family: "GenSenRounded-B";
-                padding: 0 10px;
-                .select-title{
-                    font-size: $ps-font-size;
-                    color: $lake-green;
-                }
-                .select-info{
-                    appearance:none;
-                    -moz-appearance:none;
-                    -webkit-appearance:none;
-                    background: url("../images/icons/icon=down.svg") no-repeat right center transparent;
-                    background-size: 10px;
-                    border:0;
-                    border-bottom: 2px solid $super-dark;
-                    width: 130px;
-                    height:34px;
-                    color:$super-dark;
-                    font-size: $p-font-size;
-                }
-            }
-        }
+        display: flex;
+        align-items: center;
+        // .select-group{
+        //     width: 100%;
+        //     display: flex;
+        //     justify-content: center;
+        //     padding: 10px 0 15px 0;
+        //     .product-select{
+        //         font-family: "GenSenRounded-B";
+        //         padding: 0 10px;
+        //         .select-title{
+        //             font-size: $ps-font-size;
+        //             color: $lake-green;
+        //         }
+        //         .select-info{
+        //             appearance:none;
+        //             -moz-appearance:none;
+        //             -webkit-appearance:none;
+        //             background: url("../images/icons/icon=down.svg") no-repeat right center transparent;
+        //             background-size: 10px;
+        //             border:0;
+        //             border-bottom: 2px solid $super-dark;
+        //             width: 130px;
+        //             height:34px;
+        //             color:$super-dark;
+        //             font-size: $p-font-size;
+        //         }
+        //     }
+        // }
         .add-group{
             width: 100%;
             display: flex;
             justify-content: center;
+           
             .quantity{
                 // padding: 0 10px;
                 .quantity-reduce{
@@ -597,6 +639,13 @@ body{
                     border: 3px solid $light-lake-green;
                     border-radius: 10px;
                     background-color: transparent;
+                }
+                .quantity-reduce:hover{
+                    background-color: $light-lake-green;
+                    border: 0;
+                    rect{
+                        fill:$white;
+                    }
                 }
                 .quantity-num{
                     width: 40px;
@@ -611,12 +660,15 @@ body{
                     // padding: 0 10px;
                     font-size: $h6-font-size;
                 }
-                   .quantity-add{
+                .quantity-add{
                     width: 35px;
                     height: 35px;
                     border: 0;
                     border-radius: 10px;
                     background-color: $lake-green;
+                }
+                .quantity-add:hover{
+                    background-color: $light-lake-green;
                 }
             }
             .cartbtn{
@@ -632,6 +684,9 @@ body{
                     font-size: $p-font-size;
                     align-items: center;
                     justify-content: center;
+                }
+                .add-cartbtn:hover{
+                    background-color: $light-lake-green;
                 }
             }
             .heart-icon{
