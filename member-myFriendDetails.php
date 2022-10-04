@@ -206,57 +206,99 @@ if (!empty($friendismember)) {
                             </div>
                         </div>
                         <div class="friendWishList">
-                            <?php if (!empty($friendfavorite)) : ?>
-                                <?php foreach ($friendfavorite as $ff) : ?>
-                                    <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                        <img class="wish" src="./images/products/<?= $ff['product_sid'] ?>_1.png" alt="">
-                                    </div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                            <div class="f-wishes">
+                                <div class="f-title">
+                                    <p>好友心願</p>
+                                </div>
+                                <?php if (!empty($friendfavorite)) : ?>
+                                    <?php foreach ($friendfavorite as $ff) : ?>
+                                        <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                            <a href="#">
+                                                <img class="wish" src="./images/products/<?= $ff['product_sid'] ?>_1.png" alt="">
+                                            </a>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                            </div>
-                            <div class="wishList col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                            <div class="f-recommend">
+                                <div class="f-title">
+                                    <p>禮物推薦</p>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                    <a href="#">
+                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

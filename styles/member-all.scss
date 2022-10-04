@@ -786,48 +786,50 @@ $bold: 900;
                         align-items: center;
                         padding: 0px 30px;
                         margin-top: 15px;
+                        // justify-content: center;
                         @media screen and (max-width:991px) {
                             min-height: 250px;
                         }
 
-                        .friendWatchButton {
-                            width: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            margin: 30px 0 20px 0;
+                        // .friendWatchButton {
+                        //     width: 100%;
+                        //     display: flex;
+                        //     justify-content: center;
+                        //     align-items: center;
+                        //     margin: 30px 0 20px 0;
 
-                            p.letFriendWatch {
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                color: $super-dark;
-                                padding-right: 16px;
-                            }
+                        //     p.letFriendWatch {
+                        //         font-family: "GenSenRounded-B";
+                        //         font-size: $ps-font-size;
+                        //         color: $super-dark;
+                        //         padding-right: 16px;
+                        //     }
 
-                            .switchButton {
-                                width: 48px;
-                                height: 24px;
-                                border-radius: 100px;
-                                background-color: $gray;
-                                padding: 3px;
+                        //     .switchButton {
+                        //         width: 48px;
+                        //         height: 24px;
+                        //         border-radius: 100px;
+                        //         background-color: $gray;
+                        //         padding: 3px;
 
-                                .switch {
-                                    width: 18px;
-                                    height: 18px;
-                                    border-radius: 100px;
-                                    background-color: $white;
-                                    text-align: left;
-                                }
-                            }
-                        }
+                        //         .switch {
+                        //             width: 18px;
+                        //             height: 18px;
+                        //             border-radius: 100px;
+                        //             background-color: $white;
+                        //             text-align: left;
+                        //         }
+                        //     }
+                        // }
 
                         .myWishLists {
                             width: 100%;
                             height: auto;
                             display: flex;
                             flex-wrap: wrap;
-                            justify-content: center;
+                            justify-content: left;
                             align-items: center;
+                            margin-top: 40px;
 
                             .wishList {
                                 width: 100%;
@@ -1807,7 +1809,9 @@ $bold: 900;
                                 align-items: center;
 
                                 .tagsName {
+                                    width: 100%;
                                     padding: 10px 0;
+                                    text-align: center;
 
                                     p {
                                         font-family: "GenSenRounded-B";
@@ -1846,18 +1850,68 @@ $bold: 900;
                         .friendWishList {
                             width: 100%;
                             height: auto;
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: center;
-                            margin-bottom: 10px;
-                            align-items: center;
+                            // display: flex;
+                            // flex-wrap: wrap;
+                            // justify-content: left;
+                            // margin-bottom: 10px;
+                            // align-items: center;
 
-                            .wishList {
-                                padding: 9px;
-
-
-                                img {
+                            .f-wishes {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: left;
+                                margin-bottom: 10px;
+                                align-items: center;
+                                .f-title {
                                     width: 100%;
+                                    background-color: $light-brown;
+                                    border-radius: 100px 100px 0 0;
+                                    margin-bottom: 10px;
+                                    p {
+                                        color: $dark-gray;
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        padding: 8px 5px;
+                                        text-align: center;
+                                    }
+                                }
+                                .wishList {
+                                    padding: 9px;
+
+                                    a {
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            .f-recommend {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: left;
+                                margin: 20px 0 10px 0;
+                                align-items: center;
+                                .f-title {
+                                    width: 100%;
+                                    background-color: $light-brown;
+                                    border-radius: 100px 100px 0 0;
+                                    margin-bottom: 10px;
+                                    p {
+                                        color: $dark-gray;
+                                        font-family: "GenSenRounded-B";
+                                        font-size: $ps-font-size;
+                                        padding: 8px 5px;
+                                        text-align: center;
+                                    }
+                                }
+                                .wishList {
+                                    padding: 9px;
+
+                                    a {
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1879,48 +1933,48 @@ $bold: 900;
                             min-height: 250px;
                         }
 
-                        .getcoupon {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            margin: 20px 0 25px;
-                            width: 100%;
-                            height: 180px;
-                            border-radius: 10px;
-                            background-color: #7ea08330;
+                        // .getcoupon {
+                        //     display: flex;
+                        //     flex-direction: column;
+                        //     align-items: center;
+                        //     justify-content: center;
+                        //     margin: 20px 0 25px;
+                        //     width: 100%;
+                        //     height: 180px;
+                        //     border-radius: 10px;
+                        //     background-color: #7ea08330;
 
-                            p {
-                                font-family: "GenSenRounded-B";
-                                font-size: $p-font-size;
-                                color: $lake-green;
-                                padding: 15px 0 15px;
-                            }
+                        //     p {
+                        //         font-family: "GenSenRounded-B";
+                        //         font-size: $p-font-size;
+                        //         color: $lake-green;
+                        //         padding: 15px 0 15px;
+                        //     }
 
-                            input.keyCouponCode {
-                                width: 280px;
-                                height: 60px;
-                                border-radius: 10px;
-                                border: 2px solid $lake-green;
-                                color: $gray;
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                text-align: center;
-                                background-color: #7ea08300;
-                            }
+                        //     input.keyCouponCode {
+                        //         width: 280px;
+                        //         height: 60px;
+                        //         border-radius: 10px;
+                        //         border: 2px solid $lake-green;
+                        //         color: $gray;
+                        //         font-family: "GenSenRounded-B";
+                        //         font-size: $ps-font-size;
+                        //         text-align: center;
+                        //         background-color: #7ea08300;
+                        //     }
 
-                            button.newcoupon {
-                                width: 130px;
-                                height: 38px;
-                                border-radius: 10px;
-                                font-family: "GenSenRounded-B";
-                                font-size: $ps-font-size;
-                                color: $white;
-                                background-color: $lake-green;
-                                border: none;
-                                margin: 15px 0 15px;
-                            }
-                        }
+                        //     button.newcoupon {
+                        //         width: 130px;
+                        //         height: 38px;
+                        //         border-radius: 10px;
+                        //         font-family: "GenSenRounded-B";
+                        //         font-size: $ps-font-size;
+                        //         color: $white;
+                        //         background-color: $lake-green;
+                        //         border: none;
+                        //         margin: 15px 0 15px;
+                        //     }
+                        // }
 
                         // .couponbtn {
                         //     width: 100%;
@@ -1945,6 +1999,7 @@ $bold: 900;
                             width: 100%;
                         }
                         .validCoupon {
+                            margin-top: 20px;
                             .coupons {
                                 width: 100%;
                                 height: auto;
@@ -2985,6 +3040,18 @@ $bold: 900;
                             button.editMyInfo {
                                 margin: 35px 0 0 0;
                             }
+                            button.editMyInfo:hover {
+                                border: none;
+                                background-color: $super-dark;
+                                p.edit {
+                                    color: $white;
+                                }
+                                svg {
+                                    path {
+                                        fill: $white;
+                                    }
+                                }
+                            }
 
                             .modal {
                                 .modal-dialog {
@@ -3130,7 +3197,7 @@ $bold: 900;
 
                             .myWishLists {
                                 width: 100%;
-                                height: 520px;
+                                height: 540px;
                                 overflow-y: scroll;
                                 justify-content: left;
                             }
@@ -3408,6 +3475,9 @@ $bold: 900;
                                     }
                                 }
                                 .friendtags {
+                                    .tagsName {
+                                        text-align: left;
+                                    }
                                     .tags {
                                         justify-content: left;
                                         margin-bottom: 0;
@@ -3422,15 +3492,18 @@ $bold: 900;
                                 width: 100%;
                                 height: 400px;
                                 overflow-y: scroll;
+                                
 
                                 .col-lg-3 {
                                     width: 100%;
                                     height: auto;
                                     background-color: rgba(255, 255, 255, 0);
 
-                                    img.wish {
-                                        width: 100%;
-                                        height: 100%;
+                                    a {
+                                        img.wish {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
                                     }
                                 }
                             }
@@ -3447,38 +3520,38 @@ $bold: 900;
                             align-items: center;
                             padding: 0 5%;
 
-                            .getcoupon {
-                                height: auto;
-                                background-color: rgba(255, 255, 255, 0);
-                                flex-direction: row;
-                                justify-content: left;
-                                margin: 30px 0;
+                            // .getcoupon {
+                            //     height: auto;
+                            //     background-color: rgba(255, 255, 255, 0);
+                            //     flex-direction: row;
+                            //     justify-content: left;
+                            //     margin: 30px 0;
 
-                                p {
-                                    font-size: $h6-font-size;
-                                    padding-right: 30px;
-                                }
+                            //     p {
+                            //         font-size: $h6-font-size;
+                            //         padding-right: 30px;
+                            //     }
 
-                                input.keyCouponCode {
-                                    font-size: $p-font-size;
-                                    margin-right: 40px;
-                                    text-align: left;
-                                    padding: 0 10px;
-                                }
-                                button.newcoupon {
-                                    color: $lake-green;
-                                    background-color: rgba(255, 255, 255, 0);
-                                    border: 3px solid $light-lake-green;
-                                }
-                                button.newcoupon:hover {
-                                    color: $white;
-                                    background-color: $lake-green;
-                                    border: none;
-                                }
-                            }
+                            //     input.keyCouponCode {
+                            //         font-size: $p-font-size;
+                            //         margin-right: 40px;
+                            //         text-align: left;
+                            //         padding: 0 10px;
+                            //     }
+                            //     button.newcoupon {
+                            //         color: $lake-green;
+                            //         background-color: rgba(255, 255, 255, 0);
+                            //         border: 3px solid $light-lake-green;
+                            //     }
+                            //     button.newcoupon:hover {
+                            //         color: $white;
+                            //         background-color: $lake-green;
+                            //         border: none;
+                            //     }
+                            // }
 
                             .couponTitle {
-                                margin-bottom: 10px;
+                                margin: 40px 0 10px 0;
                                 .couponName {
                                     width: 68%;
                                     p.couponName {
@@ -3495,7 +3568,7 @@ $bold: 900;
 
                             .validCoupon {
                                 width: 100%;
-                                height: 440px;
+                                height: 500px;
                                 overflow-y: scroll;
                                 .coupons {
                                     .coupon {

@@ -136,12 +136,12 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
           <!------------ white border ------------>
 
           <div class="whiteBg col-lg-9 col-xl-9">
-            <div class="friendWatchButton">
+            <!-- <div class="friendWatchButton">
               <p class="letFriendWatch">讓好友看到我的收藏清單</p>
               <div class="switchButton">
                 <div class="switch"></div>
               </div>
-            </div>
+            </div> -->
             <div class="myWishLists row">
               <?php foreach ($memberfavorite as $m) : ?>
                 <div class="wishList col-6 col-sm-4">
