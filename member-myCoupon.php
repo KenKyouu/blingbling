@@ -135,11 +135,11 @@ $coupon = $pdo->query("SELECT * FROM coupon WHERE `sid`=$couponsid")->fetchAll()
                     <!------------ white border ------------>
 
                     <div class="whiteBg col-lg-9 col-xl-9">
-                        <div class="getcoupon">
+                        <!-- <div class="getcoupon">
                             <p>新增優惠券</p>
                             <input class="keyCouponCode" type="text" placeholder="請輸入優惠券代碼">
                             <button class="newcoupon" type="submit">確認送出</button>
-                        </div>
+                        </div> -->
                         <!-- <div class="couponbtn">
                                 <button type="radio" name="type" value="valid" class="canUseBtn">可用優惠券</button>
                                 <button type="radio" name="type" value="invalid" class="invalidBtn">失效優惠券</button>
