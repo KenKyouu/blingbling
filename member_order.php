@@ -8,7 +8,7 @@ if (empty($_SESSION['user'])) {
 
 $user = $_SESSION['user']['id'];
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
-$memberorders = $pdo->query("SELECT * FROM orders WHERE member_sid=$user ORDER BY `order_date`")->fetchAll();
+$memberorders = $pdo->query("SELECT * FROM orders WHERE member_sid=$user ORDER BY `order_date` DESC")->fetchAll();
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>

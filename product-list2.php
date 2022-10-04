@@ -15,12 +15,13 @@ $colors = [];
 
 $qsp = []; // query string parameters
 
+
 $ps_where = ' WHERE 1 ';
 $ps_where2 = '';
 $isGetColor = false;
 if (!empty($gender)) {
     $ps_where .= sprintf(" AND `gender`=%s ", $pdo->quote($gender));
-    // $qsp['gender'] = $gender;
+    $qsp['gender'] = $gender;
 }
 if (!empty($_GET['color'])) {
     $isGetColor = true;
@@ -29,12 +30,22 @@ if (!empty($_GET['color'])) {
     $colors2 = [];
 
     foreach ($colors as $c) {
-        $colors2[] = $pdo->quote($c); // prevent SQL Injection
+        $colors2[]  =  $pdo->quote($c); // prevent SQL Injection
     }
+
+    foreach ($colors as $c) {
+        $colorsData[] = str_replace("'", '', $pdo->quote($c)); // prevent SQL Injection
+    }
+    $qsp['color'] = $colorsData;
+
+
 
     $ps_where .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
     $ps_where2 .= " AND (`color`=" .  implode(" OR `color`=", $colors2) .  ") ";
 }
+
+
+// var_dump($colorsData) . '<BR>';
 
 // echo $ps_where;
 // exit;
@@ -54,12 +65,18 @@ if ($cate > 0 and $cate < 9) {
 }
 if ($lowp) {
     $where .= " AND p.price>=$lowp ";
-    // $qsp['lowp'] = $lowp;
+    $qsp['lowp'] = $lowp;
 }
 if ($highp) {
     $where .= " AND p.price<=$highp ";
-    // $qsp['highp'] = $highp;
+    $qsp['highp'] = $highp;
 }
+
+
+// echo json_encode($qsp);
+// echo http_build_query($qsp);
+// exit;
+
 // if ($gender) {
 //     $where .= " AND ps.gender=$gender ";
 // }
@@ -134,23 +151,59 @@ if ($totalRows > 0) {
         <div class="class">
             <h3><?php
                 if ($catename == []) {
-                    echo "全部";
+                    echo "所有商品";
                 } else {
                     echo $catename[0]['name'];
                 }
                 ?></h3>
         </div>
+        <?php if ($cate > 8) { ?>
+            <div class="bread">
+                <a class="parentbread" href="./product-list2.php?cate=<?php
+                                                                        $childClass = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
+                                                                        $childsparentsid = $childClass[0]['parent'];
+                                                                        $childsparent = $pdo->query("SELECT * FROM class WHERE `sid`=$childsparentsid")->fetchAll();
+                                                                        echo $childsparentsid;
+                                                                        ?>"><?= $childsparent[0]['name'] ?></a>
+                <svg class="breadsvg" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.58151 7.4142L2.22391 0.36885C2.10306 0.251974 1.95929 0.159207 1.80088 0.0959004C1.64247 0.0325937 1.47257 0 1.30096 0C1.12935 0 0.959445 0.0325937 0.801037 0.0959004C0.642629 0.159207 0.498855 0.251974 0.37801 0.36885C0.135897 0.602484 0 0.918529 0 1.24796C0 1.57739 0.135897 1.89344 0.37801 2.12707L6.81266 8.36189L0.37801 14.5344C0.135897 14.768 0 15.084 0 15.4135C0 15.7429 0.135897 16.0589 0.37801 16.2926C0.498402 16.4104 0.641973 16.5041 0.800402 16.5684C0.958832 16.6326 1.12897 16.666 1.30096 16.6667C1.47295 16.666 1.64309 16.6326 1.80152 16.5684C1.95995 16.5041 2.10352 16.4104 2.22391 16.2926L9.58151 9.24723C9.71346 9.13046 9.81877 8.98874 9.89079 8.831C9.96282 8.67326 10 8.50292 10 8.33071C10 8.15851 9.96282 7.98816 9.89079 7.83042C9.81877 7.67268 9.71346 7.53096 9.58151 7.4142V7.4142Z" fill="#ffffff" />
+                </svg>
+                <a class="selfbread" href="./product-list2.php?cate=<?= $cate ?>"><?= $catename[0]['name'] ?></a>
+            </div>
+        <?php } ?>
     </div>
     <div class="slider">
         <div class="slider-bar">
             <ul>
-                <?php foreach ($cates as $c) : ?>
-                    <li><a href="?<?php $tmp['cate'] = $c['sid'];
-                                    echo http_build_query($tmp); ?>">
-                            <?= $c['name'] ?>
-                        </a>
-                    </li>
-                <?php endforeach ?>
+                <?php if ($cate < 9) { ?>
+                    <?php foreach ($cates as $c) : ?>
+                        <li><a href="?<?php $tmp['cate'] = $c['sid'];
+                                        echo http_build_query($tmp); ?>">
+                                <?= $c['name'] ?>
+                            </a>
+                        </li>
+                    <?php endforeach ?>
+                <?php } else {
+                    $childClass = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
+                    $childsparentsid = $childClass[0]['parent'];
+                    $childsparent = $pdo->query("SELECT * FROM class WHERE `parent`=$childsparentsid")->fetchAll();
+                ?>
+                    <?php foreach ($childsparent as $cpcp) : ?>
+                        <li style="<?php
+                                    if ($cate == $cpcp['sid']) {
+                                        echo ('background-color:#2d827d; border:2px solid #2d827d');
+                                    }
+                                    ?>"><a href="?<?php $tmp['cate'] = $cpcp['sid'];
+                                                    echo http_build_query($tmp); ?>" style="<?php
+                                                                                            if ($cate == $cpcp['sid']) {
+                                                                                                echo ('color:#ffffff');
+                                                                                            }
+                                                                                            ?>">
+                                <?= $cpcp['name'] ?>
+                            </a>
+                        </li>
+                    <?php endforeach ?>
+                <?php } ?>
             </ul>
         </div>
     </div>
@@ -169,7 +222,7 @@ if ($totalRows > 0) {
     </div>
     <div class="filter-button-pc">
         <button class="filter-pc">
-            <svg width="30" height="30" viewBox="0 0 25 18" fill="#4c4948" xmlns="http://www.w3.org/2000/svg">
+            <svg width="30" height="30" viewBox="0 0 25 18" fill="#4C4948" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24.3751 2.80309H0.624875C0.279682 2.80309 0 2.52355 0 2.17852C0 1.8335 0.279682 1.55396 0.624875 1.55396H24.3751C24.7203 1.55396 25 1.8335 25 2.17852C25 2.52355 24.7203 2.80309 24.3751 2.80309Z" fill="#4C4948" />
                 <path d="M24.3751 9.24498H0.624875C0.279682 9.24498 0 8.96544 0 8.62041C0 8.27539 0.279682 7.99585 0.624875 7.99585H24.3751C24.7203 7.99585 25 8.27539 25 8.62041C25 8.96544 24.7203 9.24498 24.3751 9.24498Z" fill="#4C4948" />
                 <path d="M24.3751 15.473H0.624875C0.279682 15.473 0 15.1935 0 14.8484C0 14.5034 0.279682 14.2239 0.624875 14.2239H24.3751C24.7203 14.2239 25 14.5034 25 14.8484C25 15.196 24.7203 15.473 24.3751 15.473Z" fill="#4C4948" />
@@ -204,8 +257,11 @@ if ($totalRows > 0) {
                 <li class="page-item <?= $page == 1 ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page - 1;
                                                 echo http_build_query($qsp);
-                                                ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>">
-                        <i class="fa-solid fa-circle-arrow-left"></i>
+                                                ?>">
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.418489 9.5858L7.77609 16.6312C7.89694 16.748 8.04071 16.8408 8.19912 16.9041C8.35753 16.9674 8.52743 17 8.69904 17C8.87065 17 9.04055 16.9674 9.19896 16.9041C9.35737 16.8408 9.50114 16.748 9.62199 16.6312C9.8641 16.3975 10 16.0815 10 15.752C10 15.4226 9.8641 15.1066 9.62199 14.8729L3.18734 8.63811L9.62199 2.46564C9.8641 2.23201 10 1.91596 10 1.58653C10 1.2571 9.8641 0.941057 9.62199 0.707422C9.5016 0.5896 9.35803 0.495865 9.1996 0.43165C9.04117 0.367435 8.87103 0.334019 8.69904 0.333334C8.52705 0.334019 8.35691 0.367435 8.19848 0.43165C8.04005 0.495865 7.89648 0.5896 7.77609 0.707422L0.418489 7.75277C0.28654 7.86954 0.181235 8.01126 0.109209 8.169C0.0371838 8.32674 0 8.49708 0 8.66929C0 8.84149 0.0371838 9.01184 0.109209 9.16958C0.181235 9.32732 0.28654 9.46904 0.418489 9.5858Z" fill="#4C4948" />
+                        </svg>
+
                     </a>
                 </li>
                 <?php for ($i = $page - 2; $i <= $page + 2; $i++) :
@@ -213,14 +269,17 @@ if ($totalRows > 0) {
                         $qsp['page'] = $i;
                 ?>
                         <li class="page-item <?= $page == $i ? 'active' : '' ?>">
-                            <a class="page-link" href="?<?= http_build_query($qsp); ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>"><?= $i ?></a>
+                            <a class="page-link" href="?<?= http_build_query($qsp); ?>"><?= $i ?></a>
                         </li>
                 <?php endif;
                 endfor ?>
                 <li class="page-item <?= $page == $totalPages ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page + 1;
-                                                echo http_build_query($qsp); ?>&<?= substr($_SERVER['QUERY_STRING'], 7); ?>">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                                echo http_build_query($qsp); ?>">
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.58151 7.4142L2.22391 0.36885C2.10306 0.251974 1.95929 0.159207 1.80088 0.0959004C1.64247 0.0325937 1.47257 0 1.30096 0C1.12935 0 0.959445 0.0325937 0.801037 0.0959004C0.642629 0.159207 0.498855 0.251974 0.37801 0.36885C0.135897 0.602484 0 0.918529 0 1.24796C0 1.57739 0.135897 1.89344 0.37801 2.12707L6.81266 8.36189L0.37801 14.5344C0.135897 14.768 0 15.084 0 15.4135C0 15.7429 0.135897 16.0589 0.37801 16.2926C0.498402 16.4104 0.641973 16.5041 0.800402 16.5683C0.958832 16.6326 1.12897 16.666 1.30096 16.6667C1.47295 16.666 1.64309 16.6326 1.80152 16.5683C1.95995 16.5041 2.10352 16.4104 2.22391 16.2926L9.58151 9.24723C9.71346 9.13046 9.81876 8.98874 9.89079 8.831C9.96282 8.67326 10 8.50292 10 8.33071C10 8.15851 9.96282 7.98816 9.89079 7.83042C9.81876 7.67268 9.71346 7.53096 9.58151 7.4142Z" fill="#4C4948" />
+                        </svg>
+
                     </a>
                 </li>
             </ul>
@@ -236,13 +295,13 @@ if ($totalRows > 0) {
         </span>
     </div>
     <div class="filter-class-pc">
-        <div class="button-filter-pc">
+        <!-- <div class="button-filter-pc">
             <ul>
                 <li><a href="" class="new">新品</a></li>
                 <li><a href="" class="sale">優惠</a></li>
                 <li><a href="" class="theme">節慶</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="class-filter-pc">
             <h2>分類</h2>
             <div class="horizon"></div>
@@ -259,7 +318,7 @@ if ($totalRows > 0) {
                 </ul>
             </div>
         </div>
-        <form name="filter_pc" action="product-list2.php?cate=2">
+        <form name="filter_pc" action="product-list2.php?">
             <?php foreach ($_GET as $gKey => $gValue) : ?>
                 <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
             <?php endforeach; ?>
@@ -428,7 +487,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="filter-class">
-        <div class="button-filter">
+        <!-- <div class="button-filter">
             <a href="">
                 <span class="new">新品</span>
             </a>
@@ -438,7 +497,7 @@ if ($totalRows > 0) {
             <a href="">
                 <span class="theme">節慶</span>
             </a>
-        </div>
+        </div> -->
         <div class="gender-filter">
             <span class="filter-title">性別</span>
             <span class="filter-content" id="gender-span">所有性別</span>
@@ -467,22 +526,32 @@ if ($totalRows > 0) {
             </span>
         </div>
         <div class="filter-footer">
-            <button type="button">
-                搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: none;
-                                stroke: #fff;
-                            }
-                        </style>
-                    </defs>
-                    <g id="_圖層_1-2">
-                        <path class="cls-1" d="M0,5.48H50" />
-                        <path class="cls-1" d="M50,5.48L33,.48" />
-                    </g>
-                </svg>
-            </button>
+            <form name="filter_mobile" action="product-list2.php?">
+                <?php foreach ($_GET as $gKey => $gValue) : ?>
+                    <input type="text" name="<?= $gKey ?>" value="<?= $gValue ?>" hidden>
+                <?php endforeach; ?>
+                <input class="mobile-gender" type="text" name="gender" value="" hidden>
+                <input class="mobile-lowp" type="text" name="lowp" value="" hidden>
+                <input class="mobile-highp" type="text" name="highp" value="" hidden>
+                <div class="addInput"></div>
+                <!-- <input class="mobile-color" type="text" name="color[]" value="" hidden> -->
+                <button type="submit">
+                    搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="_圖層_1-2">
+                            <path class="cls-1" d="M0,5.48H50" />
+                            <path class="cls-1" d="M50,5.48L33,.48" />
+                        </g>
+                    </svg>
+                </button>
+            </form>
         </div>
     </div>
 </div>
@@ -494,7 +563,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="gender-filter-content">
-        <form class="gender-form" action="">
+        <div class="gender-form" action="">
             <label for="male" class="gender-filter-radio">
                 <span>
                     <svg width="10" height="25" viewBox="0 0 10 25" fill="#5292b9" xmlns="http://www.w3.org/2000/svg">
@@ -512,7 +581,7 @@ if ($totalRows > 0) {
                 </span>
                 <input type="radio" name="gender" id="male" value="male" />
             </label>
-            <label for="female" class="gender-filter-radio">
+            <label for="female" class="gender-filter-radio female">
                 <span>
                     <svg width="10" height="25" viewBox="0 0 10 25" fill="#d45a6a" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_388_985)">
@@ -525,18 +594,17 @@ if ($totalRows > 0) {
                             </clipPath>
                         </defs>
                     </svg>
-
                     &nbsp; &nbsp; 女
                 </span>
                 <input type="radio" name="gender" id="female" value="female" />
             </label>
-            <label for="all-gender" class="gender-filter-radio all">
+            <!-- <label for="all-gender" class="gender-filter-radio all">
                 <span class="all">&nbsp;&nbsp;全部</span>
                 <input type="radio" name="gender" id="all-gender" value="all-gender" />
-            </label>
-        </form>
+            </label> -->
+        </div>
     </div>
-    <div class="filter-footer">
+    <!-- <div class="filter-footer">
         <button type="button">
             搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                 <defs>
@@ -553,7 +621,7 @@ if ($totalRows > 0) {
                 </g>
             </svg>
         </button>
-    </div>
+    </div> -->
 </div>
 <div class="price-filter-detail">
     <div class="filter-header">
@@ -563,7 +631,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="price-filter-content">
-        <form class="price-form" action="">
+        <div class="price-form" action="">
             <label for="price-range-one" class="price-filter-radio">
                 <span>NT$500以下</span>
                 <input type="radio" name="price" id="price-range-one" value="price-range-one" />
@@ -580,9 +648,9 @@ if ($totalRows > 0) {
                 <span>NT$5,000以上</span>
                 <input type="radio" name="price" id="price-range-four" value="price-range-four" />
             </label>
-        </form>
+        </div>
     </div>
-    <div class="filter-footer">
+    <!-- <div class="filter-footer">
         <button type="button">
             搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                 <defs>
@@ -599,7 +667,7 @@ if ($totalRows > 0) {
                 </g>
             </svg>
         </button>
-    </div>
+    </div> -->
 </div>
 <div class="color-filter-detail">
     <div class="filter-header">
@@ -609,7 +677,7 @@ if ($totalRows > 0) {
             &nbsp;&nbsp;返回</span>
     </div>
     <div class="color-filter-content">
-        <form class="color-form" action="">
+        <div class="color-form" action="">
             <?php foreach ($op_colors as $opc) : ?>
                 <label for="<?= $opc['name_en'] ?>" class="color-filter-radio">
                     <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -619,9 +687,9 @@ if ($totalRows > 0) {
                     <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" />
                 </label>
             <?php endforeach; ?>
-        </form>
+        </div>
     </div>
-    <div class="filter-footer">
+    <!-- <div class="filter-footer">
         <button type="button">
             搜尋&nbsp;<svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.14 5.98">
                 <defs>
@@ -638,7 +706,7 @@ if ($totalRows > 0) {
                 </g>
             </svg>
         </button>
-    </div>
+    </div> -->
 </div>
 <?php include __DIR__ . '/parts/footer.php'; ?>
 <?php include __DIR__ . '/parts/scripts.php'; ?>

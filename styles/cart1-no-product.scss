@@ -117,6 +117,12 @@ body {
                             text-align: center;
                             font-family: "GenSenRounded-B";
                             font-size: $ps-font-size;
+                            text-decoration: none;
+                        }
+
+                        a {
+                            color: white;
+                            text-decoration: none;
                         }
 
                         &:hover {
