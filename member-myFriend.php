@@ -8,6 +8,11 @@ if (empty($_SESSION['user'])) {
 
 $user = $_SESSION['user']['id'];
 $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user ORDER BY `birthday_mm`, `birthday_dd`")->fetchAll();
+$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+$tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
+
+$today = date('m/d');
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -40,12 +45,12 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                                     </svg>
                                 </div>
                             </div>
-                            <h5>Bling Bling</h5>
+                            <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
                                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11.3636 9.09091H15.9091C16.2105 9.09091 16.4995 8.97118 16.7126 8.75807C16.9257 8.54496 17.0455 8.25593 17.0455 7.95454C17.0455 7.65316 16.9257 7.36412 16.7126 7.15101C16.4995 6.9379 16.2105 6.81818 15.9091 6.81818H13.6364V5.68182C13.6364 5.38043 13.5166 5.0914 13.3035 4.87829C13.0904 4.66518 12.8014 4.54545 12.5 4.54545C12.1986 4.54545 11.9096 4.66518 11.6965 4.87829C11.4834 5.0914 11.3636 5.38043 11.3636 5.68182V6.81818C10.4595 6.81818 9.59238 7.17735 8.95305 7.81668C8.31372 8.45601 7.95455 9.32312 7.95455 10.2273C7.95455 11.1314 8.31372 11.9985 8.95305 12.6379C9.59238 13.2772 10.4595 13.6364 11.3636 13.6364H13.6364C13.9377 13.6364 14.2268 13.7561 14.4399 13.9692C14.653 14.1823 14.7727 14.4713 14.7727 14.7727C14.7727 15.0741 14.653 15.3631 14.4399 15.5763C14.2268 15.7894 13.9377 15.9091 13.6364 15.9091H9.09091C8.78953 15.9091 8.50049 16.0288 8.28738 16.2419C8.07427 16.455 7.95455 16.7441 7.95455 17.0454C7.95455 17.3468 8.07427 17.6359 8.28738 17.849C8.50049 18.0621 8.78953 18.1818 9.09091 18.1818H11.3636V19.3182C11.3636 19.6196 11.4834 19.9086 11.6965 20.1217C11.9096 20.3348 12.1986 20.4545 12.5 20.4545C12.8014 20.4545 13.0904 20.3348 13.3035 20.1217C13.5166 19.9086 13.6364 19.6196 13.6364 19.3182V18.1818C14.5405 18.1818 15.4076 17.8226 16.047 17.1833C16.6863 16.544 17.0455 15.6769 17.0455 14.7727C17.0455 13.8686 16.6863 13.0015 16.047 12.3621C15.4076 11.7228 14.5405 11.3636 13.6364 11.3636H11.3636C11.0623 11.3636 10.7732 11.2439 10.5601 11.0308C10.347 10.8177 10.2273 10.5287 10.2273 10.2273C10.2273 9.92589 10.347 9.63685 10.5601 9.42374C10.7732 9.21063 11.0623 9.09091 11.3636 9.09091ZM12.5 0C10.0277 0 7.61099 0.733112 5.55538 2.10663C3.49976 3.48015 1.89761 5.43238 0.951511 7.71645C0.00541613 10.0005 -0.242126 12.5139 0.24019 14.9386C0.722505 17.3634 1.91301 19.5907 3.66117 21.3388C5.40933 23.087 7.63661 24.2775 10.0614 24.7598C12.4861 25.2421 14.9995 24.9946 17.2835 24.0485C19.5676 23.1024 21.5199 21.5002 22.8934 19.4446C24.2669 17.389 25 14.9723 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 0 12.5 0ZM12.5 22.7273C10.4772 22.7273 8.4999 22.1274 6.81804 21.0037C5.13617 19.8799 3.82531 18.2826 3.05124 16.4138C2.27716 14.545 2.07463 12.4887 2.46925 10.5048C2.86387 8.52086 3.83792 6.69853 5.26823 5.26822C6.69854 3.83791 8.52086 2.86386 10.5048 2.46924C12.4887 2.07462 14.545 2.27715 16.4138 3.05123C18.2826 3.82531 19.8799 5.13616 21.0037 6.81803C22.1275 8.4999 22.7273 10.4772 22.7273 12.5C22.7273 15.2124 21.6498 17.8138 19.7318 19.7318C17.8138 21.6498 15.2124 22.7273 12.5 22.7273Z" fill="#ffcd51" />
                                 </svg>
-                                2,022
+                                <?= $member[0]['gift_voucher'] ?>
                             </a>
                         </div>
 
@@ -72,7 +77,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                                             我的收藏
                                         </div>
                                     </a></li>
-                                <li class="btn col-4 col-md-2 col-lg-12"><a href="#">
+                                <li class="btn col-4 col-md-2 col-lg-12"><a href="./member_order.php">
                                         <div class="btnsvg">
                                             <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#4C4948" stroke="#4C4948" stroke-miterlimit="10" />
@@ -140,17 +145,25 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                         </div>
                         <div class="friendGroupTitle">
                             <div class="f-gift"></div>
-                            <div class="f-name"><p>好友名稱</p></div>
-                            <div class="f-birth"><p>生日</p></div>
-                            <div class="f-watchDetails"><p>查看詳細頁面</p></div>
-                            <div class="f-delete"><p>刪除</p></div>
+                            <div class="f-name">
+                                <p>好友名稱</p>
+                            </div>
+                            <div class="f-birth">
+                                <p>生日</p>
+                            </div>
+                            <div class="f-watchDetails">
+                                <p>查看詳細頁面</p>
+                            </div>
+                            <div class="f-delete">
+                                <p>刪除</p>
+                            </div>
                         </div>
                         <div class="myFriendsGroup">
                             <?php foreach ($memberfriend as $f) : ?>
                                 <div class="friendList">
                                     <div class="birthdayIcon">
                                         <svg width="20" height="21" viewBox="0 0 82 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M76.64 20.47H50.6731C53.6616 19.5924 56.5232 18.429 57.9 16.97C61.55 13.09 61.55 6.78997 57.9 2.90997C54.25 -0.970031 48.3 -0.970031 44.65 2.90997C43.1969 4.45442 42.0542 7.7648 41.2121 11.1324C40.3707 7.7648 39.2274 4.45442 37.77 2.90997C34.12 -0.970031 28.17 -0.970031 24.52 2.90997C20.87 6.78997 20.87 13.09 24.52 16.97C25.8927 18.429 28.7536 19.5924 31.7426 20.47H5.07C2.27 20.47 0 22.89 0 25.85V33.56C0 36.53 2.28 38.94 5.07 38.94H5.41V79.38C5.41 83.03 8.21 86 11.65 86H30.85V86.05H50.85V86H70.06C73.5 86 76.3 83.03 76.3 79.38V38.94H76.64C79.44 38.94 81.71 36.52 81.71 33.56V25.85C81.71 22.88 79.43 20.47 76.64 20.47ZM55.46 82.95H70.05C71.91 82.95 73.42 81.35 73.42 79.38V38.94H55.46V82.95ZM54.46 82.95V38.94H50.85V82.95H54.46ZM30.85 38.94H26.96V82.95H30.85V38.94ZM8.28 38.94H25.96V82.95H11.65C9.79 82.95 8.28 81.35 8.28 79.38V38.94ZM39.7583 18.4797C39.7213 18.7182 39.6873 18.9431 39.6563 19.1528C34.8064 18.3013 28.2844 16.6528 26.55 14.81V14.82C24.02 12.13 24.02 7.75997 26.55 5.06997C29.08 2.37997 33.21 2.37997 35.74 5.06997C37.4301 6.84597 38.9378 13.3994 39.7583 18.4797ZM42.7647 19.1544C47.6152 18.3034 54.1347 16.6539 55.88 14.81C58.41 12.12 58.41 7.74997 55.88 5.05997C54.61 3.71997 52.95 3.03997 51.29 3.03997L51.28 3.04997C49.62 3.04997 47.95 3.71997 46.69 5.06997C45.0064 6.85885 43.4874 13.4246 42.6672 18.5081C42.7025 18.7366 42.7349 18.9526 42.7647 19.1544ZM76.64 35.89H48.73V23.52H76.64C77.86 23.52 78.84 24.57 78.84 25.85V33.56C78.84 34.85 77.85 35.89 76.64 35.89ZM45.86 23.52V35.89H35.85V23.52H45.86ZM32.98 23.52V35.89H5.07C3.85 35.89 2.87 34.84 2.87 33.56V25.85C2.87 24.56 3.86 23.52 5.07 23.52H32.98Z" fill="#d45a6a"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M76.64 20.47H50.6731C53.6616 19.5924 56.5232 18.429 57.9 16.97C61.55 13.09 61.55 6.78997 57.9 2.90997C54.25 -0.970031 48.3 -0.970031 44.65 2.90997C43.1969 4.45442 42.0542 7.7648 41.2121 11.1324C40.3707 7.7648 39.2274 4.45442 37.77 2.90997C34.12 -0.970031 28.17 -0.970031 24.52 2.90997C20.87 6.78997 20.87 13.09 24.52 16.97C25.8927 18.429 28.7536 19.5924 31.7426 20.47H5.07C2.27 20.47 0 22.89 0 25.85V33.56C0 36.53 2.28 38.94 5.07 38.94H5.41V79.38C5.41 83.03 8.21 86 11.65 86H30.85V86.05H50.85V86H70.06C73.5 86 76.3 83.03 76.3 79.38V38.94H76.64C79.44 38.94 81.71 36.52 81.71 33.56V25.85C81.71 22.88 79.43 20.47 76.64 20.47ZM55.46 82.95H70.05C71.91 82.95 73.42 81.35 73.42 79.38V38.94H55.46V82.95ZM54.46 82.95V38.94H50.85V82.95H54.46ZM30.85 38.94H26.96V82.95H30.85V38.94ZM8.28 38.94H25.96V82.95H11.65C9.79 82.95 8.28 81.35 8.28 79.38V38.94ZM39.7583 18.4797C39.7213 18.7182 39.6873 18.9431 39.6563 19.1528C34.8064 18.3013 28.2844 16.6528 26.55 14.81V14.82C24.02 12.13 24.02 7.75997 26.55 5.06997C29.08 2.37997 33.21 2.37997 35.74 5.06997C37.4301 6.84597 38.9378 13.3994 39.7583 18.4797ZM42.7647 19.1544C47.6152 18.3034 54.1347 16.6539 55.88 14.81C58.41 12.12 58.41 7.74997 55.88 5.05997C54.61 3.71997 52.95 3.03997 51.29 3.03997L51.28 3.04997C49.62 3.04997 47.95 3.71997 46.69 5.06997C45.0064 6.85885 43.4874 13.4246 42.6672 18.5081C42.7025 18.7366 42.7349 18.9526 42.7647 19.1544ZM76.64 35.89H48.73V23.52H76.64C77.86 23.52 78.84 24.57 78.84 25.85V33.56C78.84 34.85 77.85 35.89 76.64 35.89ZM45.86 23.52V35.89H35.85V23.52H45.86ZM32.98 23.52V35.89H5.07C3.85 35.89 2.87 34.84 2.87 33.56V25.85C2.87 24.56 3.86 23.52 5.07 23.52H32.98Z" fill="#d45a6a" />
                                         </svg>
                                     </div>
                                     <div class="friendName">
@@ -178,7 +191,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                                         </a>
                                     </div>
                                     <div class="deleteFriendIcon">
-                                        <button class="deleteFriendSvg">
+                                        <button class="deleteFriendSvg" data-val="<?= $f['sid'] ?>">
                                             <svg width="15" height="16" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M22.7251 4.55958H0.733645C0.330016 4.55958 0 4.23226 0 3.8263C0 3.42287 0.327477 3.09302 0.733645 3.09302H22.7251C23.1287 3.09302 23.4588 3.42033 23.4588 3.8263C23.4588 4.23226 23.1313 4.55958 22.7251 4.55958Z" fill="#4C4948" />
                                                 <path d="M14.7107 1.46656H8.74512C8.34149 1.46656 8.01147 1.13925 8.01147 0.733279C8.01147 0.329849 8.33895 0 8.74512 0H14.7107C15.1143 0 15.4444 0.327311 15.4444 0.733279C15.4444 1.13925 15.1169 1.46656 14.7107 1.46656Z" fill="#4C4948" />
@@ -203,13 +216,13 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
         <div class="friend-warning">
             <div class="friend-warn-icon">
                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25073 1.03046C8.01224 -0.343478 9.98777 -0.343474 10.7493 1.03046L17.7464 13.6548C18.4853 14.9879 17.5212 16.6244 15.9971 16.6244H2.00287C0.478781 16.6244 -0.485248 14.9879 0.253592 13.6548L7.25073 1.03046ZM10.633 6.40624C10.633 7.25227 9.90187 11.3248 8.99997 11.3248C8.09808 11.3248 7.36695 7.25227 7.36695 6.40624C7.36695 5.56022 8.09808 4.87438 8.99997 4.87438C9.90187 4.87438 10.633 5.56022 10.633 6.40624ZM8.99997 13.7743C9.45092 13.7743 9.81648 13.4087 9.81648 12.9578C9.81648 12.5068 9.45092 12.1413 8.99997 12.1413C8.54903 12.1413 8.18346 12.5068 8.18346 12.9578C8.18346 13.4087 8.54903 13.7743 8.99997 13.7743Z" fill="#ca3f68"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25073 1.03046C8.01224 -0.343478 9.98777 -0.343474 10.7493 1.03046L17.7464 13.6548C18.4853 14.9879 17.5212 16.6244 15.9971 16.6244H2.00287C0.478781 16.6244 -0.485248 14.9879 0.253592 13.6548L7.25073 1.03046ZM10.633 6.40624C10.633 7.25227 9.90187 11.3248 8.99997 11.3248C8.09808 11.3248 7.36695 7.25227 7.36695 6.40624C7.36695 5.56022 8.09808 4.87438 8.99997 4.87438C9.90187 4.87438 10.633 5.56022 10.633 6.40624ZM8.99997 13.7743C9.45092 13.7743 9.81648 13.4087 9.81648 12.9578C9.81648 12.5068 9.45092 12.1413 8.99997 12.1413C8.54903 12.1413 8.18346 12.5068 8.18346 12.9578C8.18346 13.4087 8.54903 13.7743 8.99997 13.7743Z" fill="#ca3f68" />
                 </svg>
             </div>
             <div class="friend-warn-text">確定要刪除好友資訊嗎</div>
         </div>
         <div class="tfBtn">
-            <button class="delete">確定</button>
+            <button class="delete" onclick="deleteFriend(event)">確定</button>
             <button class="cancel">取消</button>
         </div>
     </div>
@@ -218,7 +231,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
 <!-- ------------lightbox-newFriendDetails------------ -->
 
 <div class="inputNewFriend">
-    <form class="lightbox-newFriendDetails">
+    <form method="POST" name="insertFriend" onsubmit="addFriend(); return false;" class="lightbox-newFriendDetails" novalidate>
         <p class="editTitle">新增好友資訊</p>
         <div class="friend-details">
             <div class="detail">
@@ -226,7 +239,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                     <p><span>*</span> 好友姓名</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="name" placeholder="好友的姓名或暱稱" required>
+                    <input type="text" name="friendname" placeholder="好友的姓名或暱稱" required>
                 </div>
             </div>
             <div class="detail">
@@ -234,7 +247,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                     <p><span>*</span> 好友性別</p>
                 </div>
                 <div class="detail-input">
-                    <select name="gender" placeholder="請選擇" required>
+                    <select name="friendgender" placeholder="請選擇" required>
                         <option value="male">男</option>
                         <option value="female">女</option>
                         <!-- <option value="others">不顯示</option> -->
@@ -246,7 +259,7 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                     <p>好友Email</p>
                 </div>
                 <div class="detail-input">
-                    <input type="email" name="email" placeholder="好友的電子郵件地址">
+                    <input type="email" name="friendemail" placeholder="好友的電子郵件地址">
                 </div>
             </div>
             <div class="detail">
@@ -254,8 +267,8 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                     <p><span>*</span> 好友生日</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="birthday" placeholder="MM" class="birthmd" required>
-                    <input type="text" name="birthday" placeholder="DD" class="birthmd" required>
+                    <input type="text" name="friendmonth" placeholder="MM" class="birthmd" required>
+                    <input type="text" name="friendday" placeholder="DD" class="birthmd" required>
                 </div>
             </div>
             <div class="detail">
@@ -263,31 +276,18 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
                     <p>好友印象標籤</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="tags" placeholder="最多選擇五個" readonly="readonly">
+                    <input type="text" name="" placeholder="最多選擇五個" readonly="readonly">
                 </div>
+                <div class="appendtag"></div>
             </div>
             <div class="detail">
                 <div class="detail-text"></div>
                 <div class="detail-input">
                     <div class="tagsselect">
                         <div class="tags">
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發薯</span>
-                            <span>沙發</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙鈴薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙鈴</span>
-                            <span>沙發馬薯</span>
-                            <span>沙發馬鈴薯</span>
-                            <span>沙發馬薯</span>
-                            <span>沙鈴薯</span>
-                            <span>沙發</span>
+                            <?php foreach ($tags as $t) : ?>
+                                <span class="tagbyken" data-val="<?= $t['sid'] ?>"><?= $t['name'] ?></span>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -301,4 +301,68 @@ $memberfriend = $pdo->query("SELECT * FROM member_friend WHERE member_sid=$user 
 </div>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script src="./js/member.js"></script>
+<script>
+    function addFriend() {
+        // TODO: 欄位檢查
+        //   if (!$("#login-email").val()) {
+        //     alert("請填寫帳號");
+        //     return;
+        //   }
+        //   if (!$("#login-password").val()) {
+        //     alert("請填寫密碼");
+        //     return;
+        //   }
+        $.post(
+            "insertfriend-api.php",
+            $(document.insertFriend).serialize(),
+            function(data) {
+                if (data.success) {
+                    location.href = "member-myFriend.php";
+                } else {
+                    alert(data.error);
+                }
+            },
+            "json"
+        );
+    }
+
+
+    // friend tags
+    let tagnameArr = [];
+    let tagvalueArr = [];
+    let inputname = 1;
+    $('.tagbyken').click(function() {
+        let tagname = $(this).text();
+        let tagvalue = $(this).attr('data-val');
+        tagnameArr.push(tagname);
+        tagvalueArr.push(tagvalue);
+        console.log(tagvalueArr)
+        $('.appendtag').append(
+            "<input type='text' name='friendtag[]' value='" +
+            tagvalue +
+            "' hidden></input>"
+        )
+    })
+
+    // delete friend
+    $('.deleteFriendSvg').click(function() {
+        $('button.delete').attr('data-val', $(this).attr('data-val'))
+    })
+
+    function deleteFriend(event) {
+        const deleteButton = $(event.currentTarget);
+        const sid = deleteButton.attr('data-val');
+        console.log(sid);
+        $.get(
+            "deletefriend-api.php", {
+                sid
+            },
+            function(data) {
+                console.log(data);
+            },
+            "json"
+        );
+        document.location.href = "./member-myFriend.php"
+    }
+</script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

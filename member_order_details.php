@@ -149,7 +149,7 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     </div>
                                     <div class="step-text">
                                         <p>收到訂單</p>
-                                        <p>2022/08/28</p>
+                                        <p><?= $memberorders[0]['order_date'] ?></p>
                                     </div>
                                 </div>
                                 <div class="order-dash">
@@ -210,9 +210,9 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     <div>小計</div>
                                 </div>
                             </div>
-                            
+
                             <?php foreach ($r as $r) : ?>
-                            <div class="detail-info">
+                                <div class="detail-info">
                                     <div class="title-left">
                                         <div class="order-product">
                                             <div class="order-product-pic">
@@ -234,10 +234,10 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     </div>
                                     <div class="title-right">
                                         <div>NT$ <?= $r['price'] * $r['quantity'] ?></div>
-                                    </div>        
-                            </div>
+                                    </div>
+                                </div>
                             <?php endforeach; ?>
-                            
+
                             <div class="detail-price">
                                 <div class="price-left">
                                     <div>

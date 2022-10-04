@@ -1,3 +1,4 @@
+
 Vue.config.devtools = true;
 
 Vue.component('card', {
@@ -75,3 +76,159 @@ Vue.component('card', {
 const app = new Vue({
   el: '#app'
 });
+
+
+//----開場--------
+const OPENING = document.getElementById('openArea');
+
+$('.giftAnimateArea').click(function(){
+  console.log('hi');
+  $('#openArea').addClass('animation-start')
+})
+
+// const OpenAreaHight = $('#openArea').css('height')
+// console.log('height',OpenAreaHight);
+let OpenAreaHeight = $('#openArea').css('height')
+  console.log(OpenAreaHeight.substring(0, OpenAreaHeight.length -2));
+let OpenAreaHeightStr= OpenAreaHeight.substring(0, OpenAreaHeight.length -2)
+console.log('OpenAreaHeightStr',OpenAreaHeightStr)
+console.log(typeof(Number(OpenAreaHeightStr)));
+
+
+  
+if(Number(OpenAreaHeightStr==0)){
+  
+  $('#menuFixed').addClass('.menuFixed')
+}
+//-----menuSection-------
+
+
+// $('.w-indexHeader-menu').click(function(){
+//   console.log('hi')
+//   const Opacity = $('.w-indexHeader-menuSection').css('opacity')
+//   console.log(Opacity)
+//   if(Opacity==1){
+//     $('.w-indexHeader-menuSection').css('opacity','0')
+//   }else{
+//     $('.w-indexHeader-menuSection').css('opacity','1')
+//   }
+// })
+
+$('.w-indexHeader-menu, .w-indexHeader-menuSection').mouseenter(function(){
+  $('.w-indexHeader-menuSection').css('opacity','1')
+})
+$('.w-indexHeader-menu,.w-indexHeader-menuSection').mouseleave(function(){
+  $('.w-indexHeader-menuSection').css('opacity','0')
+})
+
+//------滑鼠滾動---------------
+// $(window).scroll(function (){
+//   if($(window).scrollTop()>=300){
+//     $('#openArea').
+//   }
+// }
+// $(window).scroll(function (){
+//   console.log('scrollTop:', $(window).scrollTop());
+//   if ($(window).scrollTop() >= 100){
+//     $('.openingArea').css('display','none')
+//   }
+
+// })
+
+
+
+
+// $(window).scroll(function () {
+//   console.log('scrollTop:', $(window).scrollTop());
+
+
+//   // if ($(window).scrollTop() >= 300) {
+//   //     $('.course-mainBox').css({
+//   //         transform: 'translateY(0px)',
+//   //         opacity: 1,
+//   //     })
+//   // }
+//   // else{
+//   //     $('.course-mainBox').css({
+//   //         transform: 'translateY(200px)',
+//   //         opacity: 0,
+//   //     })
+//   // }
+
+//   // if ($(window).scrollTop() >= 1074) {
+//   //     $('.place-window').css({
+//   //         transform: 'translateY(0px)',
+//   //         opacity: 1,
+//   //     })
+//   // }
+//   // else{
+//   //     $('.place-window').css({
+//   //         transform: 'translateY(200px)',
+//   //         opacity: 0,
+//   //     })
+//   // }
+
+//   // if ($(window).scrollTop() >= 977) {
+//   //     $('.place-mainBox-M').css({
+//   //         transform: 'translateY(0px)',
+//   //         opacity: 1,
+//   //     })
+//   // }
+//   // else{
+//   //     $('.place-mainBox-M').css({
+//   //         transform: 'translateY(200px)',
+//   //         opacity: 0,
+//   //     })
+//   // }
+
+  
+//   // if ($(window).scrollTop() >= 2150) {
+//   //     $('.fishOne').css({
+//   //         'right':'5%',
+//   //         opacity: 1,
+//   //     })
+//   // }
+//   // else{
+//   //     $('.fishOne').css({
+//   //         'right':'0',
+//   //         opacity: 0,
+//   //     })
+//   // }
+//   // if ($(window).scrollTop() >= 2585) {
+//   //     $('.fishTwo').css({
+//   //         'left':'25%',
+//   //         opacity: 1,
+//   //     })
+//   // }
+//   // else{
+//   //     $('.fishTwo').css({
+//   //         'left':'0',
+//   //         opacity: 0,
+//   //     })
+//   // }
+
+//   // if (
+//   //     $(window).scrollTop() >= $('#area1').offset().top &&
+//   //     $(window).scrollTop() < $('#area2').offset().top
+//   // ) {
+//   //     //除了被點擊到的游標，其他都恢復成原來的顏色
+//   //     $('.nav li').removeClass('active');
+//   //     $('.nav li:eq(0)').addClass('active');
+//   // } else if (
+//   //     $(window).scrollTop() >= $('#area2').offset().top &&
+//   //     $(window).scrollTop() < $('#area3').offset().top
+//   // ) {
+//   //     $('.nav li').removeClass('active');
+//   //     $('.nav li:eq(1)').addClass('active');
+//   // } else if (
+//   //     $(window).scrollTop() >= $('#area3').offset().top &&
+//   //     $(window).scrollTop() < $('#area4').offset().top
+//   // ) {
+//   //     $('.nav li').removeClass('active');
+//   //     $('.nav li:eq(2)').addClass('active');
+
+//   // } else if ($(window).scrollTop() >= $('#area4').offset().top) {
+//   //     $('.nav li').removeClass('active');
+//   //     $('.nav li:eq(3)').addClass('active');
+//   // }
+// })
