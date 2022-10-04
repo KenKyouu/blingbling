@@ -268,7 +268,6 @@ body {
             left: 50%;
             transform: translateX(-50%) translateY(50%);
             cursor: pointer;
-
             h5 {
                 font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
@@ -320,10 +319,10 @@ body {
                 width: 60px;
                 height: 60px;
                 overflow: hidden;
-                object-fit: cover;
                 background-color: $dark-gray;
 
                 img {
+                    object-fit: cover;
                     width: 100%;
                     height: 100%;
                 }
@@ -884,6 +883,7 @@ body {
             .s-package-card-radio {
                 .j-point {
                     position: relative;
+                    cursor: pointer;
                 }
 
                 .j-point input {
@@ -907,6 +907,7 @@ body {
 
 /* Create a custom radio button */
 .j-checkmark-r {
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1534,6 +1535,7 @@ body {
 
                                 .j-point {
                                     position: relative;
+                                    cursor: pointer;
 
                                     .j-checkmark-r {
                                         bottom: 50%;
@@ -1619,7 +1621,7 @@ body {
 
                         .j-point {
                             position: relative;
-
+                            cursor: pointer;
                             .j-checkmark-r {
                                 bottom: 50%;
                                 transform: translateY(50%);

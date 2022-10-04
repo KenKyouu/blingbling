@@ -20,7 +20,9 @@ require __DIR__ . '/connect_db.php';
                             <path d="M5.89735 19.3219H20.1689C20.2301 19.3219 20.3059 19.2663 20.3059 19.165V19.1623C20.3059 19.061 20.2301 19.0054 20.1689 19.0054H5.89735C5.83622 19.0054 5.76039 19.061 5.76039 19.1623V19.165C5.76039 19.2676 5.83493 19.3219 5.89735 19.3219Z" fill="white" stroke="white" />
                         </svg>
                     </a>
-                    <span class="cart-none-point" ></span>
+                    <span class="cart-none-point" >
+                    </span>
+                    
                 </li>
                 <li class="menu">
                     <a class="menu" href="#"><svg width="23" height="28" viewBox="0 0 23 28" fill="#fff" xmlns="http://www.w3.org/2000/svg">

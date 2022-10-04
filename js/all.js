@@ -75,12 +75,12 @@ $("span.clicktologin").click(function () {
 
 function showCartCount(obj){
   let count = 0;
-
   for(let k in obj){
       const item = obj[k];
       count += +item.qty;
   }
   console.log(count);
+  
   if(count == 0){
     // console.log('0:',count);
     $('.cart-none-point').removeClass('cart-red-point');
