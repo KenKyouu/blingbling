@@ -313,14 +313,14 @@ if ($totalRows > 0) {
             <div class="horizon"></div>
             <div class="class-name">
                 <ul>
-                    <li><a href="./product-list.php?cate=1">美妝保養</a></li>
-                    <li><a href="./product-list.php?cate=2">流行時尚</a></li>
-                    <li><a href="./product-list.php?cate=3">數位家電</a></li>
-                    <li><a href="./product-list.php?cate=4">母嬰幼兒</a></li>
-                    <li><a href="./product-list.php?cate=5">居家生活</a></li>
-                    <li><a href="./product-list.php?cate=6">毛寵物</a></li>
-                    <li><a href="./product-list.php?cate=7">節慶道具</a></li>
-                    <li><a href="./product-list.php?cate=8">票券</a></li>
+                    <li><a href="./product-list2.php?cate=1">美妝保養</a></li>
+                    <li><a href="./product-list2.php?cate=2">流行時尚</a></li>
+                    <li><a href="./product-list2.php?cate=3">數位家電</a></li>
+                    <li><a href="./product-list2.php?cate=4">母嬰幼兒</a></li>
+                    <li><a href="./product-list2.php?cate=5">居家生活</a></li>
+                    <li><a href="./product-list2.php?cate=6">毛寵物</a></li>
+                    <li><a href="./product-list2.php?cate=7">節慶道具</a></li>
+                    <li><a href="./product-list2.php?cate=8">票券</a></li>
                 </ul>
             </div>
         </div>
