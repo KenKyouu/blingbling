@@ -151,23 +151,59 @@ if ($totalRows > 0) {
         <div class="class">
             <h3><?php
                 if ($catename == []) {
-                    echo "全部";
+                    echo "所有商品";
                 } else {
                     echo $catename[0]['name'];
                 }
                 ?></h3>
         </div>
+        <?php if ($cate > 8) { ?>
+            <div class="bread">
+                <a class="parentbread" href="./product-list2.php?cate=<?php
+                                                                        $childClass = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
+                                                                        $childsparentsid = $childClass[0]['parent'];
+                                                                        $childsparent = $pdo->query("SELECT * FROM class WHERE `sid`=$childsparentsid")->fetchAll();
+                                                                        echo $childsparentsid;
+                                                                        ?>"><?= $childsparent[0]['name'] ?></a>
+                <svg class="breadsvg" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.58151 7.4142L2.22391 0.36885C2.10306 0.251974 1.95929 0.159207 1.80088 0.0959004C1.64247 0.0325937 1.47257 0 1.30096 0C1.12935 0 0.959445 0.0325937 0.801037 0.0959004C0.642629 0.159207 0.498855 0.251974 0.37801 0.36885C0.135897 0.602484 0 0.918529 0 1.24796C0 1.57739 0.135897 1.89344 0.37801 2.12707L6.81266 8.36189L0.37801 14.5344C0.135897 14.768 0 15.084 0 15.4135C0 15.7429 0.135897 16.0589 0.37801 16.2926C0.498402 16.4104 0.641973 16.5041 0.800402 16.5684C0.958832 16.6326 1.12897 16.666 1.30096 16.6667C1.47295 16.666 1.64309 16.6326 1.80152 16.5684C1.95995 16.5041 2.10352 16.4104 2.22391 16.2926L9.58151 9.24723C9.71346 9.13046 9.81877 8.98874 9.89079 8.831C9.96282 8.67326 10 8.50292 10 8.33071C10 8.15851 9.96282 7.98816 9.89079 7.83042C9.81877 7.67268 9.71346 7.53096 9.58151 7.4142V7.4142Z" fill="#ffffff" />
+                </svg>
+                <a class="selfbread" href="./product-list2.php?cate=<?= $cate ?>"><?= $catename[0]['name'] ?></a>
+            </div>
+        <?php } ?>
     </div>
     <div class="slider">
         <div class="slider-bar">
             <ul>
-                <?php foreach ($cates as $c) : ?>
-                    <li><a href="?<?php $tmp['cate'] = $c['sid'];
-                                    echo http_build_query($tmp); ?>">
-                            <?= $c['name'] ?>
-                        </a>
-                    </li>
-                <?php endforeach ?>
+                <?php if ($cate < 9) { ?>
+                    <?php foreach ($cates as $c) : ?>
+                        <li><a href="?<?php $tmp['cate'] = $c['sid'];
+                                        echo http_build_query($tmp); ?>">
+                                <?= $c['name'] ?>
+                            </a>
+                        </li>
+                    <?php endforeach ?>
+                <?php } else {
+                    $childClass = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
+                    $childsparentsid = $childClass[0]['parent'];
+                    $childsparent = $pdo->query("SELECT * FROM class WHERE `parent`=$childsparentsid")->fetchAll();
+                ?>
+                    <?php foreach ($childsparent as $cpcp) : ?>
+                        <li style="<?php
+                                    if ($cate == $cpcp['sid']) {
+                                        echo ('background-color:#2d827d; border:2px solid #2d827d');
+                                    }
+                                    ?>"><a href="?<?php $tmp['cate'] = $cpcp['sid'];
+                                                    echo http_build_query($tmp); ?>" style="<?php
+                                                                                            if ($cate == $cpcp['sid']) {
+                                                                                                echo ('color:#ffffff');
+                                                                                            }
+                                                                                            ?>">
+                                <?= $cpcp['name'] ?>
+                            </a>
+                        </li>
+                    <?php endforeach ?>
+                <?php } ?>
             </ul>
         </div>
     </div>
@@ -186,7 +222,7 @@ if ($totalRows > 0) {
     </div>
     <div class="filter-button-pc">
         <button class="filter-pc">
-            <svg width="30" height="30" viewBox="0 0 25 18" fill="#4c4948" xmlns="http://www.w3.org/2000/svg">
+            <svg width="30" height="30" viewBox="0 0 25 18" fill="#4C4948" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24.3751 2.80309H0.624875C0.279682 2.80309 0 2.52355 0 2.17852C0 1.8335 0.279682 1.55396 0.624875 1.55396H24.3751C24.7203 1.55396 25 1.8335 25 2.17852C25 2.52355 24.7203 2.80309 24.3751 2.80309Z" fill="#4C4948" />
                 <path d="M24.3751 9.24498H0.624875C0.279682 9.24498 0 8.96544 0 8.62041C0 8.27539 0.279682 7.99585 0.624875 7.99585H24.3751C24.7203 7.99585 25 8.27539 25 8.62041C25 8.96544 24.7203 9.24498 24.3751 9.24498Z" fill="#4C4948" />
                 <path d="M24.3751 15.473H0.624875C0.279682 15.473 0 15.1935 0 14.8484C0 14.5034 0.279682 14.2239 0.624875 14.2239H24.3751C24.7203 14.2239 25 14.5034 25 14.8484C25 15.196 24.7203 15.473 24.3751 15.473Z" fill="#4C4948" />
@@ -222,7 +258,10 @@ if ($totalRows > 0) {
                     <a class="page-link" href="?<?php $qsp['page'] = $page - 1;
                                                 echo http_build_query($qsp);
                                                 ?>">
-                        <i class="fa-solid fa-circle-arrow-left"></i>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.418489 9.5858L7.77609 16.6312C7.89694 16.748 8.04071 16.8408 8.19912 16.9041C8.35753 16.9674 8.52743 17 8.69904 17C8.87065 17 9.04055 16.9674 9.19896 16.9041C9.35737 16.8408 9.50114 16.748 9.62199 16.6312C9.8641 16.3975 10 16.0815 10 15.752C10 15.4226 9.8641 15.1066 9.62199 14.8729L3.18734 8.63811L9.62199 2.46564C9.8641 2.23201 10 1.91596 10 1.58653C10 1.2571 9.8641 0.941057 9.62199 0.707422C9.5016 0.5896 9.35803 0.495865 9.1996 0.43165C9.04117 0.367435 8.87103 0.334019 8.69904 0.333334C8.52705 0.334019 8.35691 0.367435 8.19848 0.43165C8.04005 0.495865 7.89648 0.5896 7.77609 0.707422L0.418489 7.75277C0.28654 7.86954 0.181235 8.01126 0.109209 8.169C0.0371838 8.32674 0 8.49708 0 8.66929C0 8.84149 0.0371838 9.01184 0.109209 9.16958C0.181235 9.32732 0.28654 9.46904 0.418489 9.5858Z" fill="#4C4948" />
+                        </svg>
+
                     </a>
                 </li>
                 <?php for ($i = $page - 2; $i <= $page + 2; $i++) :
@@ -237,7 +276,10 @@ if ($totalRows > 0) {
                 <li class="page-item <?= $page == $totalPages ? 'disabled' : '' ?>">
                     <a class="page-link" href="?<?php $qsp['page'] = $page + 1;
                                                 echo http_build_query($qsp); ?>">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.58151 7.4142L2.22391 0.36885C2.10306 0.251974 1.95929 0.159207 1.80088 0.0959004C1.64247 0.0325937 1.47257 0 1.30096 0C1.12935 0 0.959445 0.0325937 0.801037 0.0959004C0.642629 0.159207 0.498855 0.251974 0.37801 0.36885C0.135897 0.602484 0 0.918529 0 1.24796C0 1.57739 0.135897 1.89344 0.37801 2.12707L6.81266 8.36189L0.37801 14.5344C0.135897 14.768 0 15.084 0 15.4135C0 15.7429 0.135897 16.0589 0.37801 16.2926C0.498402 16.4104 0.641973 16.5041 0.800402 16.5683C0.958832 16.6326 1.12897 16.666 1.30096 16.6667C1.47295 16.666 1.64309 16.6326 1.80152 16.5683C1.95995 16.5041 2.10352 16.4104 2.22391 16.2926L9.58151 9.24723C9.71346 9.13046 9.81876 8.98874 9.89079 8.831C9.96282 8.67326 10 8.50292 10 8.33071C10 8.15851 9.96282 7.98816 9.89079 7.83042C9.81876 7.67268 9.71346 7.53096 9.58151 7.4142Z" fill="#4C4948" />
+                        </svg>
+
                     </a>
                 </li>
             </ul>
@@ -253,13 +295,13 @@ if ($totalRows > 0) {
         </span>
     </div>
     <div class="filter-class-pc">
-        <div class="button-filter-pc">
+        <!-- <div class="button-filter-pc">
             <ul>
                 <li><a href="" class="new">新品</a></li>
                 <li><a href="" class="sale">優惠</a></li>
                 <li><a href="" class="theme">節慶</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="class-filter-pc">
             <h2>分類</h2>
             <div class="horizon"></div>

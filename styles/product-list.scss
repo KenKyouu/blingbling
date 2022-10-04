@@ -410,21 +410,52 @@ body {
       align-items: center;
       position: absolute;
       left: 50%;
-      bottom: 20px;
+      bottom: 50px;
       transform: translateX(-50%);
       @media screen and (min-width: 768px) {
         border: 2px solid $white;
       }
       @media screen and (min-width: 768px) {
-        bottom: 40px;
+        bottom: 80px;
       }
       h3 {
         padding-bottom: 3px;
         color: $white;
         font-family: "GenSenRounded-M";
-        font-size: $h6-font-size;
+        font-size: $h7-font-size;
         @media screen and (min-width: 768px) {
           font-size: $h5-font-size;
+        }
+      }
+    }
+    .bread {
+      padding: 5px 15px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-50%);
+      @media screen and (min-width: 768px) {
+        bottom: 25px;
+      }
+      a {
+        text-decoration: none;
+        flex-shrink: 0;
+        margin: 0 15px;
+        color: $white;
+        font-family: "GenSenRounded-M";
+        font-size: $ps-font-size;
+        @media screen and (min-width: 768px) {
+          font-size: $h6-font-size;
+        }
+      }
+      .breadsvg {
+        width: 5%;
+        @media screen and (min-width: 768px) {
+          width: 100%;
         }
       }
     }
@@ -454,6 +485,14 @@ body {
           border-radius: 15px;
           flex-shrink: 0;
           cursor: pointer;
+          transition: all 0.2s;
+          &:hover {
+            background-color: $lake-green;
+            border: 2px solid $lake-green;
+            a {
+              color: $white;
+            }
+          }
           @media screen and (min-width: 768px) {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -463,6 +502,7 @@ body {
             font-family: "GenSenRounded-M";
             font-size: $p-font-size;
             text-decoration: none;
+            transition: all 0.2s;
             @media screen and (min-width: 992px) {
               font-size: $h6-font-size;
             }
@@ -556,7 +596,6 @@ body {
         @media screen and (min-width: 768px) {
           margin-bottom: 30px;
         }
-
         .product-image {
           width: 170px;
           height: 170px;
@@ -649,6 +688,7 @@ body {
   }
   .page-button {
     margin-top: 30px;
+    padding-bottom: 50px;
     nav {
       ul {
         display: flex;
