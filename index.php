@@ -3948,7 +3948,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
         </div>
         <div class="mainNav">
           <div class="mainNav-wrap">
-            <a href="./product-list2.php" style="text-decoration: none;">
+            <a href="./product-list2.php">
               <div class="nav-1">
                 <div class="nav-1L">
                   商品分類
@@ -4760,7 +4760,7 @@ $pageName = 'home'; // 頁面名稱，可以自定義
     <div class="footer-nav">
       <ul>
         <li><a href="#">聯絡我們</a></li>
-        <li><a href="#">幫助中心</a></li>
+        <!-- <li><a href="#">幫助中心</a></li> -->
         <li><a href="#">會員中心</a></li>
       </ul>
     </div>
