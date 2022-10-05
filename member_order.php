@@ -126,26 +126,28 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE member_sid=$user ORDER B
                     </div>
 
                     <div class="whiteBg col-lg-9 col-xl-9">
-                        <?php foreach ($memberorders as $o) :  ?>
-                            <div class="order-list">
-                                <div class="order-num">
-                                    <p>訂單編號 #<?= $o['order_number'] ?></p>
-                                    <button><a href="./member_order_details.php?sid=<?= $o['sid'] ?>">訂單詳情</a></button>
+                        <div class="orders">
+                            <?php foreach ($memberorders as $o) :  ?>
+                                <div class="order-list">
+                                    <div class="order-num">
+                                        <p>訂單編號 #<?= $o['order_number'] ?></p>
+                                        <button><a href="./member_order_details.php?sid=<?= $o['sid'] ?>">訂單詳情</a></button>
+                                    </div>
+                                    <div class="order-detail-title">
+                                        <div>訂單日期</div>
+                                        <div>付款方式</div>
+                                        <div>總價</div>
+                                        <div>訂單狀態</div>
+                                    </div>
+                                    <div class="order-detail">
+                                        <div><?= $o['order_date'] ?></div>
+                                        <div><?= $o['pay'] ?></div>
+                                        <div>NT$ <?= $o['amount'] ?></div>
+                                        <div>處理中</div>
+                                    </div>
                                 </div>
-                                <div class="order-detail-title">
-                                    <div>訂單日期</div>
-                                    <div>付款方式</div>
-                                    <div>總價</div>
-                                    <div>訂單狀態</div>
-                                </div>
-                                <div class="order-detail">
-                                    <div><?= $o['order_date'] ?></div>
-                                    <div><?= $o['pay'] ?></div>
-                                    <div>NT$ <?= $o['amount'] ?></div>
-                                    <div>處理中</div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
             </div>
