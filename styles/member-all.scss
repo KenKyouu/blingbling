@@ -1425,6 +1425,7 @@ $bold: 900;
                             display: flex;
                             align-items: center;
                             
+                            
                             .f-gift {
                                 width: 13%;
                             }
@@ -3070,42 +3071,41 @@ $bold: 900;
                                 }
                             }
                             .friendGroupTitle {
+                                padding-right: 17px;
                                 .f-name {
                                     font-size: $ps-font-size;
                                     font-family: "GenSenRounded-B";
                                     p {
-                                        border-left: 3px solid $light-brown;
-                                        padding-left: 10px;
+                                        text-decoration: underline solid $light-brown 3px;
+                                        text-underline-offset: 10px;
                                     }
                                 }
                                 .f-birth {
                                     font-size: $ps-font-size;
                                     font-family: "GenSenRounded-B";
-                                    // padding-left: 40px;
                                     p {
-                                        border-left: 3px solid $light-brown;
-                                        padding-left: 10px;
-                                        text-align: left;
+                                        text-decoration: underline solid $light-brown 3px;
+                                        text-align: center;
+                                        text-underline-offset: 10px;
                                     }
                                 }
                                 .f-watchDetails {
-                                    text-align: left;
-                                    padding-left: 10px;
                                     font-size: $ps-font-size;
                                     font-family: "GenSenRounded-B";
+                                    text-align: center;
                                     p {
-                                        border-left: 3px solid $light-brown;
-                                        padding-left: 10px;
+                                        text-decoration: underline solid $light-brown 3px;
+                                        text-underline-offset: 10px;
                                     }
                                 }
                                 .f-delete {
-                                    text-align: left;
-                                    padding-left: 20px;
+                                    text-align: center;
                                     font-size: $ps-font-size;
                                     font-family: "GenSenRounded-B";
                                     p {
-                                        border-left: 3px solid $light-brown;
-                                        padding-left: 10px;
+                                        width: auto;
+                                        text-decoration: underline solid $light-brown 3px;
+                                        text-underline-offset: 10px;
                                     }
                                 }
                             }
@@ -3117,7 +3117,7 @@ $bold: 900;
                                 .friendList {
                                     .friendBirth {
                                         p {
-                                            text-align: left;
+                                            text-align: center;
                                         }
                                     }
                                 }
