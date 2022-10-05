@@ -198,3 +198,24 @@ $(".heart").click(function () {
 // $("input[name=color]").each(function () {
 //   if ($(this).prop("checked")) console.log(this.id);
 // });
+
+//----拉拉 history區--------
+function addToHistory(event) {
+  const addToHistoryBtn = $(event.currentTarget);
+  const HistorySid = addToHistoryBtn.attr("data-sid");
+  console.log({
+    sid,
+  });
+
+  $.get(
+    "history-api.php",
+    {
+      sid,
+    },
+    function (data) {
+      showCartCount(data);
+      console.log(data);
+    },
+    "json"
+  );
+}

@@ -34,6 +34,16 @@ $("li.search, .header-search").mouseleave(function () {
   $("li.search").removeClass("header-icon-height");
   $(".header-search").hide();
 });
+//header-history
+$("li.recent, .historySection").mouseenter(function () {
+  $("li.recent").addClass("header-icon-height");
+  $(".historySection").show();
+});
+
+$("li.recent, .historySection").mouseleave(function () {
+  $("li.recent").removeClass("header-icon-height");
+  $(".historySection").hide();
+});
 
 // header-member
 

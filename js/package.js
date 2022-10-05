@@ -131,21 +131,21 @@ $(".w-inputContent").on('input propertychange', function () {
 //卡片背景置換功能----------------
 $(".w-CardStyle-1").click(function(){   
     
-    $("#w-ShowcardWrap").attr("src","/images/card-01.png");
+    $("#w-ShowcardWrap").attr("src","./images/card-01.png");
     $(".w-CardStyle-1-img").css('opacity','1');
     $(".w-CardStyle-2-img").css('opacity','.3');  
     $(".w-CardStyle-3-img").css('opacity','.3');  
 });
 
 $(".w-CardStyle-2").click(function(){                                
-    $("#w-ShowcardWrap").attr("src","/images/card-style-02.png");
+    $("#w-ShowcardWrap").attr("src","./images/card-style-02.png");
     $(".w-CardStyle-2-img").css('opacity','1'); 
     $(".w-CardStyle-1-img").css('opacity','.3'); 
     $(".w-CardStyle-3-img").css('opacity','.3');        
 });
 
 $(".w-CardStyle-3").click(function(){                                 
-    $("#w-ShowcardWrap").attr("src","/images/card-style-03.png");
+    $("#w-ShowcardWrap").attr("src","./images/card-style-03.png");
     $(".w-CardStyle-3-img").css('opacity','1');
     $(".w-CardStyle-1-img").css('opacity','.3');     
     $(".w-CardStyle-2-img").css('opacity','.3');     
