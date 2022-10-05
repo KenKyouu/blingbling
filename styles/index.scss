@@ -537,21 +537,25 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             justify-content: space-around;
             width: 22%;
             // background-color: $yellow;
-            .nav-1{
-              display: flex;
-              cursor: pointer;
-              .nav-1L{
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                padding-right: 10px;
-                &:hover{
-                  color: $lake-green;
+            a{
+              text-decoration: none;
+              .nav-1{
+                display: flex;
+                cursor: pointer;
+                .nav-1L{
+                  font-family: "GenSenRounded-B";
+                  font-size: $p-font-size;
+                  padding-right: 10px;
+                  color: $super-dark;
+                  &:hover{
+                    color: $lake-green;
+                  }
                 }
-              }
-              .nav-1R{
-                width: 18px;
-                svg{
-                  fill: $pink;
+                .nav-1R{
+                  width: 18px;
+                  svg{
+                    fill: $pink;
+                  }
                 }
               }
             }
@@ -562,6 +566,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 font-family: "GenSenRounded-B";
                 font-size: $p-font-size;
                 padding-right: 10px;
+                color: $super-dark;
                 &:hover{
                   color: $lake-green;
                 }
@@ -574,6 +579,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 font-family: "GenSenRounded-B";
                 font-size: $p-font-size;
                 padding-right: 10px;
+                color: $super-dark;
                 &:hover{
                   color: $lake-green;
                 }
@@ -748,7 +754,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         color: $light-brown;
         background-color:$super-dark;
         border-radius: 60px;
-        padding: 0px 15px 3px 15px;
+        padding: 0px 15px 5px 15px;
         @media (min-width:1400px){
           font-size: 36px;
         }
