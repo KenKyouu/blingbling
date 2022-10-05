@@ -486,7 +486,7 @@ require __DIR__ . '/connect_db.php';
                 <p>商品分類</p>
             </div>
             <div class="product-class">
-                <a href="./product-list.php?cate=1">
+                <a href="./product-list2.php?cate=1">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item08.png" alt="" />
@@ -494,7 +494,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">美妝保養</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=2">
+                <a href="./product-list2.php?cate=2">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item01.png" alt="" />
@@ -502,7 +502,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">流行時尚</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=3">
+                <a href="./product-list2.php?cate=3">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item02.png" alt="" />
@@ -510,7 +510,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">數位家電</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=4">
+                <a href="./product-list2.php?cate=4">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item03.png" alt="" />
@@ -518,7 +518,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">母嬰幼兒</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=5">
+                <a href="./product-list2.php?cate=5">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item04.png" alt="" />
@@ -526,7 +526,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">居家生活</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=6">
+                <a href="./product-list2.php?cate=6">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item05.png" alt="" />
@@ -534,7 +534,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">毛寵物</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=7">
+                <a href="./product-list2.php?cate=7">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item06.png" alt="" />
@@ -542,7 +542,7 @@ require __DIR__ . '/connect_db.php';
                         <span class="class-name">節慶道具</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=8">
+                <a href="./product-list2.php?cate=8">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item07.png" alt="" />
@@ -591,19 +591,19 @@ require __DIR__ . '/connect_db.php';
 <!-- history 區塊 -->
 <div class="historySection">
     <div class="historyBox">
-        <?php if(!empty($_SESSION['history'])) : ?>
-    <?php
-        foreach ($_SESSION['history'] as $k => $v) :?>
-       <div class="historyItem" data-sid="<?= $k ?>">
-            <div class="historyItem-img">
-                <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
-            </div>
-            <div class="historyItem-sub">
-                <p><?= $v['name'] ?></p>
-            </div>
-       </div>
-       <?php endforeach;?>
-       <?php endif; ?>
+        <?php if (!empty($_SESSION['history'])) : ?>
+            <?php
+            foreach ($_SESSION['history'] as $k => $v) : ?>
+                <div class="historyItem" data-sid="<?= $k ?>">
+                    <div class="historyItem-img">
+                        <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                    </div>
+                    <div class="historyItem-sub">
+                        <p><?= $v['name'] ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>
 
