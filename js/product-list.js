@@ -75,6 +75,12 @@ $(".gender-filter-radio").click(function () {
   });
 });
 
+if ($("input.mobile-gender").val() == "male") {
+  $("#gender-span").text("男").css("color", "#fff");
+} else if ($("input.mobile-gender").val() == "female") {
+  $("#gender-span").text("女").css("color", "#fff");
+}
+
 // price-filter-detail
 
 let priceArr = [];
@@ -105,6 +111,25 @@ $(".price-filter-radio").click(function () {
     }
   });
 });
+
+if (
+  $("input.mobile-lowp").val() == "0" &&
+  $("input.mobile-highp").val() == "500"
+) {
+  $("#price-span").text("NT$500以下").css("color", "#fff");
+} else if (
+  $("input.mobile-lowp").val() == "500" &&
+  $("input.mobile-highp").val() == "1000"
+) {
+  $("#price-span").text("NT$500 - NT$1,000").css("color", "#fff");
+} else if (
+  $("input.mobile-lowp").val() == "1000" &&
+  $("input.mobile-highp").val() == "5000"
+) {
+  $("#price-span").text("NT$1,000 - NT$5,000").css("color", "#fff");
+} else if ($("input.mobile-lowp").val() == "5000") {
+  $("#price-span").text("NT$5,000以上").css("color", "#fff");
+}
 
 // color-filter-detail
 
