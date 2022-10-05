@@ -204,13 +204,13 @@ function addToHistory(event) {
   const addToHistoryBtn = $(event.currentTarget);
   const HistorySid = addToHistoryBtn.attr("data-sid");
   console.log({
-    sid,
+    HistorySid,
   });
 
   $.get(
     "history-api.php",
     {
-      sid,
+      HistorySid,
     },
     function (data) {
       showCartCount(data);

@@ -1478,6 +1478,7 @@ body {
 
 .historySection{
   z-index: 205;
+  display: none;
   position: fixed;
   top: 70px;
   right: 100px;
@@ -1501,6 +1502,9 @@ body {
       margin-top: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid $dark-gray;
+      &:hover{
+        background-color: $light-lake-green;
+      }
       .historyItem-img{
         width: 30%;
         height: 70px;
