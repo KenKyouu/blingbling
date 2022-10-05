@@ -213,7 +213,7 @@ function addToHistory(event) {
       HistorySid,
     },
     function (data) {
-      showCartCount(data);
+      showHistoryList(data);
       console.log(data);
     },
     "json"

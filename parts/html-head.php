@@ -18,6 +18,7 @@ if (!isset($title)) {
     <link rel="stylesheet" href="./styles/all.css" />
     <link rel="stylesheet" href="./styles/product-list.css" />
     <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <link rel="icon" href="./images/favicon_32x32.ico" />
 </head>
 
 <body>

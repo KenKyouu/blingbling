@@ -407,15 +407,15 @@ body {
       }
     }
     .header-search {
-      display: none;
+      // display: none;
       position: fixed;
       z-index: 205;
       top: 70px;
-      right: 5%;
-      width: 350px;
-      height: 200px;
+      right: 8%;
+      width: 12%;
+      height: 58px;
       border-radius: 0 0 10px 10px;
-      background-color: $gray;
+      background-color: $white;
       box-shadow: 3px 3px 10px #0000006b;
       @media screen and (max-width: 768px) {
         display: none;
@@ -427,19 +427,46 @@ body {
         width: 25%;
       }
       @media screen and (max-width: 1400px) and (min-width: 1201px) {
-        width: 23%;
+        width: 18%;
+        right: 8%;
       }
       @media screen and (max-width: 1800px) and (min-width: 1401px) {
-        width: 20%;
+        width: 15%;
+        right: 7%;
       }
-      .header-search-input {
+      .searchBox{
+        justify-content: center;
+        display: flex;
         width: 90%;
-        margin-top: 10px;
-        margin-left: 5px;
-        padding: 5px 0;
-        border: 1px solid $super-dark;
-        border-radius: 7px;
-        background-color: $gray;
+        margin: 10px 10px 10px 12px;
+        input:focus{
+          border: 2px solid $lake-green;
+          outline: 0;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 4px #4c494849;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 4px #4c494849;
+        }
+        .header-search-input {
+          width: 80%;
+          padding: 5px;
+          border: 1.8px solid $deep-brown;
+          border-radius: 5px 0px 0px 5px;
+          outline-style: none;
+          font-family:"GenSenRounded-M" ;
+        }
+        .searchBtn{
+          width: 20%;
+          background-color: $lake-green;
+          border-radius: 0 5px 5px 0;
+          transition: .5s;
+          border: 1.8px solid $lake-green;
+          &:hover{
+            background-color: $light-lake-green;
+          }
+          img{
+            width: 100%;
+            padding: 3px;
+          }
+        }
       }
     }
     .header-member {
@@ -495,7 +522,7 @@ body {
             }
           }
           a:hover {
-            background-color: $dark-gray;
+            background-color: $lake-green;
             li {
               color: $white;
               svg {
