@@ -27,7 +27,7 @@ $pageName = 'cart1-none'; // 頁面名稱，可以自定義
                     </div>
                     <div class="cta-btn">
 
-                        <a href="./product-list.php">
+                        <a href="./product-list2.php">
                             <button>帶我去挑禮物！Bling</button>
                         </a>
 

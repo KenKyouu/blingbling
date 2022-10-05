@@ -30,7 +30,7 @@ $sql = "UPDATE `member` SET
     `password` = ?,
     `name` = ?,
     `gender` = ?,
-    `birthday` = CONCAT(?,'-',?,'-',?),
+    -- `birthday` = CONCAT(?,'-',?,'-',?),
     `mobile` = ?,
     `address` = ?
     WHERE `sid` = $user ";
@@ -40,9 +40,9 @@ $stmt->execute([
     password_hash($_POST['infopassword'], PASSWORD_DEFAULT),
     $_POST['infoname'],
     $_POST['infogender'],
-    $_POST['infoyear'],
-    $_POST['infomonth'],
-    $_POST['infoday'],
+    // $_POST['infoyear'],
+    // $_POST['infomonth'],
+    // $_POST['infoday'],
     $_POST['infomobile'],
     $_POST['infoaddress']
 ]);
