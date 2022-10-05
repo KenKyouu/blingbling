@@ -277,9 +277,25 @@ $today = date('m/d');
                     <p>好友印象標籤</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="" placeholder="最多選擇五個" readonly="readonly">
+                    <div class="appendtag">
+                        <!-- <span>最多選擇五個</span> -->
+                        <div class="tag">
+                            <span>沙發馬鈴薯</span>
+                        </div>
+                        <div class="tag">
+                            <span>沙發馬鈴薯</span>
+                        </div>
+                        <div class="tag">
+                            <span>沙發馬鈴薯</span>
+                        </div>
+                        <div class="tag">
+                            <span>沙發馬鈴薯</span>
+                        </div>
+                        <div class="tag">
+                            <span>沙發馬鈴薯</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="appendtag"></div>
             </div>
             <div class="detail">
                 <div class="detail-text"></div>
