@@ -7,7 +7,7 @@ if (empty($_SESSION['user'])) {
 }
 
 $user = $_SESSION['user']['id'];
-$memberfavorite = $pdo->query("SELECT * FROM member_favorite WHERE member_sid=$user")->fetchAll();
+$memberfavorite = $pdo->query("SELECT DISTINCT `product_sid` FROM member_favorite WHERE member_sid=$user")->fetchAll();
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 $productsid = $memberfavorite[0]['product_sid'];
 // echo json_encode($productsid);
