@@ -113,12 +113,13 @@ $('.w-indexHeader-menu').click(function(){
   }
 })
 
+
 // $('.w-indexHeader-menu, .w-indexHeader-menuSection').mouseenter(function(){
-//   $('.w-indexHeader-menuSection').css('opacity','1')
-// })
+//   $('.w-indexHeader-menuSection').show();
+// });
 // $('.w-indexHeader-menu,.w-indexHeader-menuSection').mouseleave(function(){
-//   $('.w-indexHeader-menuSection').css('opacity','0')
-// })
+//   $('.w-indexHeader-menuSection').hide();
+// });、、
 
 //------滑鼠滾動---------------
 
@@ -139,17 +140,17 @@ $(window).scroll(function () {
     })
   }
 
-  if ($(window).scrollTop() >= 2350) {
-    $('#area4').css({
-        transform: 'translateY(0px)',
-        opacity: 1,
-    })
-}  else{
-  $('#area4').css({
-      transform: 'translateY(200px)',
-      opacity: 0,
-  })
-}
+//   if ($(window).scrollTop() >= 2350) {
+//     $('#area4').css({
+//         transform: 'translateY(0px)',
+//         opacity: 1,
+//     })
+// }  else{
+//   $('#area4').css({
+//       transform: 'translateY(200px)',
+//       opacity: 0,
+//   })
+// }
 })
 
 //   // if ($(window).scrollTop() >= 1074) {

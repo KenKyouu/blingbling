@@ -81,6 +81,11 @@ $("span.clicktologin").click(function () {
   // $(".mb-login").addClass("mb-loginandsignup-show");
 });
 
+$('.member-loginBtn').click(function(){
+  $('.member-loginBtn').hide();
+  $('.member-logoutBtn').show();
+})
+
 //---拉拉historySection------------
 
 // function showHistoryList(obj){
