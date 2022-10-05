@@ -366,7 +366,12 @@ require __DIR__ . '/connect_db.php';
         </div>
         <div class="header-search">
             <form action="">
-                <input class="header-search-input" type="text" name="" value="">
+                <div class="searchBox">
+                    <input class="header-search-input" type="text" name="" value="" placeholder="Search">
+                    <button class="searchBtn" type="submit">
+                        <img src="./images/icons/searchBtn_icon.svg" alt="">
+                    </button>
+                </div>
             </form>
         </div>
         <div class="header-member">
@@ -439,6 +444,9 @@ require __DIR__ . '/connect_db.php';
                         </li>
                     </a>
                     <a href="./member-myNotice.php" class="notice">
+                    <button>
+                        
+                    </button>
                         <li>
                             <div class="h-member-svg">
                                 <svg width="14" height="18" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -589,7 +597,7 @@ require __DIR__ . '/connect_db.php';
     </div>
 </div>
 <!-- history 區塊 -->
-<div class="historySection">
+<div id="historyList" class="historySection">
     <div class="historyBox">
         <?php if(!empty($_SESSION['history'])) : ?>
     <?php
