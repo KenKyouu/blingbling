@@ -406,22 +406,21 @@ body{
                             @media (min-width:768px) and (max-width:1300px) {
                                 font-size: $ps-font-size;    
                             }
-// <<<<<<< HEAD
-                            // @media (max-width:1150px) {
-                            //     width: 100%;
-                            //     margin-left: 5px;
-                            // }
+
+                            @media (max-width:1150px) {
+                                width: 100%;
+                                margin-left: 5px;
+                            }
                             width: 90%;
                             height: 38px;
-// =======
-//                             @media (max-width:1150px) {
-//                                 width: 100%;
-//                                 margin-left: 5px;
-//                             }
-//                             overflow: hidden;
-//                             width: 80%;
-//                             padding:8px 0;
-// >>>>>>> bd708179c73e7ce94ae89fcd879a9a76a076ec75
+
+                            @media (max-width:1150px) {
+                                width: 100%;
+                                margin-left: 5px;
+                            }
+                            overflow: hidden;
+                            width: 80%;
+                            padding:8px 0;
                             border: 0;
                             border-radius: 10px;
                             background-color: $lake-green;
