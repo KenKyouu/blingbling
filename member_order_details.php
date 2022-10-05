@@ -285,7 +285,7 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                 <div class="delivery-info">
                                     <div class="delivery-title-left">
                                         <div class="order-p">
-                                            <p><?= $memberorders[0]['recipient_name'] ?></p>
+                                            <p class="order_name"><?= $memberorders[0]['recipient_name'] ?></p>
                                             <p><?= $memberorders[0]['address'] ?></p>
                                         </div>
                                     </div>
