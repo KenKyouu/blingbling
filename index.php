@@ -4432,16 +4432,18 @@ require __DIR__ . '/parts/connect_db.php';
                 </p>
               </div>
             </div>
-            <a href="./product_details.php?sid=71" <div class="newCard">
-              <div class="newCardImg">
-                <img src="./images/products/71-4.jpeg" alt="">
+            <a href="./product_details.php?sid=71" style="text-decoration:none ;">
+              <div class="newCard">
+                  <div class="newCardImg">
+                    <img src="./images/products/71-4.jpeg" alt="">
+                  </div>
+                  <div class="newCardInfor">
+                    <p>
+                      pidan 太空艙寵物背包 美好寵物生活
+                    </p>
+                  </div>
               </div>
-              <div class="newCardInfor">
-                <p>
-                  pidan 太空艙寵物背包 美好寵物生活
-                </p>
-              </div>
-          </div>
+            </a>
           <div class="newCard">
             <div class="newCardImg">
               <img src="./images/products/242_2.png" alt="">
