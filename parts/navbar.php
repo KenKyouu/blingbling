@@ -602,19 +602,21 @@ require __DIR__ . '/connect_db.php';
 <!-- history 區塊 -->
 <div id="historyList" class="historySection">
     <div class="historyBox">
-        <?php if(!empty($_SESSION['history'])) : ?>
+    <?php if(!empty($_SESSION['history'])):?> 
     <?php
         foreach ($_SESSION['history'] as $k => $v) :?>
-       <div class="historyItem" data-sid="<?= $k ?>">
-            <div class="historyItem-img">
-                <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+        <a href="./product_details.php?sid=<?= $v['sid'] ?>">
+            <div class="historyItem" data-sid="<?= $k ?>">
+                <div class="historyItem-img">
+                    <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                </div>
+                <div class="historyItem-sub">
+                    <p><?= $v['name'] ?></p>
+                </div>
             </div>
-            <div class="historyItem-sub">
-                <p><?= $v['name'] ?></p>
-            </div>
-       </div>
-       <?php endforeach;?>
-       <?php endif; ?>
+        </a>
+    <?php endforeach;?>
+    <?php endif; ?>
     </div>
 </div>
 

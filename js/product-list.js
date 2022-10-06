@@ -202,20 +202,18 @@ $(".heart").click(function () {
 //----拉拉 history區--------
 function addToHistory(event) {
   const addToHistoryBtn = $(event.currentTarget);
-  const HistorySid = addToHistoryBtn.attr("data-sid");
+  const sid = addToHistoryBtn.attr("data-sid");
   console.log({
-    HistorySid,
+    hi:'hello',
+    sid,
   });
 
   $.get(
     "history-api.php",
     {
-      HistorySid,
+      sid,
     },
-    function (data) {
-      showHistoryList(data);
-      console.log(data);
-    },
+  
     "json"
   );
 }
