@@ -696,7 +696,7 @@ if ($totalRows > 0) {
                             <circle cx="10" cy="10" r="9.5" fill="<?= $opc['web'] ?>" stroke="white" />
                         </svg>
                         &nbsp;&nbsp;<?= $opc['name_zh'] ?></span>
-                    <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" />
+                    <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" <?= (in_array($opc['name_en'], $colors)) ?  'checked' : '' ?> />
                 </label>
             <?php endforeach; ?>
         </div>

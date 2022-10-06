@@ -39,7 +39,7 @@ if (!empty($_SESSION['user'])) {
         </div>
         <div class="right-pc">
             <div class="mockup">
-                <h6>
+                <h6 onclick="location.href='./product-list2.php'">
                     商品分類&nbsp;&nbsp;<svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.1182 12.06L17.2582 2.23C17.9382 1.3 17.2682 0 16.1182 0H1.83817C0.688165 0 0.028166 1.3 0.698166 2.23L7.83817 12.06C8.39817 12.83 9.54816 12.83 10.1182 12.06Z" fill="#D55A6A" />
                     </svg>
@@ -505,7 +505,7 @@ if (!empty($_SESSION['user'])) {
                 <p>商品分類</p>
             </div>
             <div class="product-class">
-                <a href="./product-list.php?cate=1">
+                <a href="./product-list2.php?cate=1">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item08.png" alt="" />
@@ -513,7 +513,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">美妝保養</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=2">
+                <a href="./product-list2.php?cate=2">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item01.png" alt="" />
@@ -521,7 +521,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">流行時尚</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=3">
+                <a href="./product-list2.php?cate=3">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item02.png" alt="" />
@@ -529,7 +529,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">數位家電</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=4">
+                <a href="./product-list2.php?cate=4">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item03.png" alt="" />
@@ -537,7 +537,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">母嬰幼兒</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=5">
+                <a href="./product-list2.php?cate=5">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item04.png" alt="" />
@@ -545,7 +545,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">居家生活</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=6">
+                <a href="./product-list2.php?cate=6">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item05.png" alt="" />
@@ -553,7 +553,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">毛寵物</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=7">
+                <a href="./product-list2.php?cate=7">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item06.png" alt="" />
@@ -561,7 +561,7 @@ if (!empty($_SESSION['user'])) {
                         <span class="class-name">節慶道具</span>
                     </div>
                 </a>
-                <a href="./product-list.php?cate=8">
+                <a href="./product-list2.php?cate=8">
                     <div class="class-select">
                         <div class="class-image">
                             <img src="./images/icon_item07.png" alt="" />
