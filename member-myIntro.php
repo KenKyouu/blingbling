@@ -141,7 +141,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                         <div class="mydetailstop">
                             <div class="member-card">
                                 <div class="membercardimg">
-                                    <img src="./images/memberCard/memberCard-5.png" alt="" class="memberCard">
+                                    <img src="./images/memberCard/memberCard-<?= $member[0]['level'] ?>.png" alt="" class="memberCard">
                                 </div>
                                 <div class="memberLevel">
                                     <div class="diamondicon">
@@ -175,7 +175,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 </clipPath>
                                             </defs>
                                         </svg>
-                                        <svg width="15" height="13" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="30%">
+                                        <svg width="15" height="13" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_388_1010)">
                                                 <path d="M9.589 0H4.70107L0 5.33834L5.73767 6.34208L9.589 0Z" fill="#ffcd51" />
                                                 <path d="M0.186768 6.27686L10.8364 20.3019L5.48743 7.20393L0.186768 6.27686Z" fill="#ffcd51" />
@@ -192,7 +192,16 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         </svg>
                                     </div>
                                     <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" role="progressbar" style="width: 
+                                        <?php
+                                        if ($member[0]['level'] == 1) {
+                                            echo 0;
+                                        } else if ($member[0]['level'] == 2) {
+                                            echo 50;
+                                        } else if ($member[0]['level'] == 3) {
+                                            echo 100;
+                                        }
+                                        ?>%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                                         </div>
                                     </div>
                                 </div>
@@ -369,7 +378,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <input type="email" name="email" id="email" placeholder="您的電子郵件地址" required>
                                                     </div>
                                                 </div> -->
-                                                <div class="detail">
+                                                <!-- <div class="detail">
                                                     <div class="detail-text">
                                                         <p><span>*</span> 生日</p>
                                                     </div>
@@ -378,7 +387,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <input type="text" name="infomonth" placeholder="MM" class="birthmd" required>
                                                         <input type="text" name="infoday" placeholder="DD" class="birthmd" required>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="detail">
                                                     <div class="detail-text">
                                                         <p><span>*</span> 聯絡電話</p>

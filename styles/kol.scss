@@ -214,10 +214,15 @@ body {
                     font-family: "Roboto";
                     font-size: $ps-font-size;
                     padding: 10px;
+                    text-decoration: none;
+                    color: white;
                 }
 
                 &:hover {
                     display: block;
+                    text-decoration: none;
+                    color: white;
+
                 }
             }
         }
@@ -428,6 +433,8 @@ body {
                             .img-wrap {
                                 button {
                                     display: none;
+                                    text-decoration: none;
+                                    color: white;
                                 }
                             }
 
@@ -447,27 +454,34 @@ body {
                                     padding: 15px;
                                     transition: 0.5s all ease;
                                     opacity: .7;
+                                    text-decoration: none;
+                                }
+
+                                &:hover {
+                                    text-decoration: none;
+                                    color: white;
                                 }
                             }
-                        }
 
-                        .article-content-wrap {
-                            width: 60%;
-                            height: 250px;
 
-                            h6 {
-                                font-size: $h6-font-size;
-                                padding-top: 15px;
-                            }
+                            .article-content-wrap {
+                                width: 60%;
+                                height: 250px;
 
-                            p {
-                                font-size: $ps-font-size;
-                                padding: 30px 0;
-                                height: 140px;
-                            }
+                                h6 {
+                                    font-size: $h6-font-size;
+                                    padding-top: 15px;
+                                }
 
-                            .article-page {
-                                padding: 0 15px;
+                                p {
+                                    font-size: $ps-font-size;
+                                    padding: 30px 0;
+                                    height: 140px;
+                                }
+
+                                .article-page {
+                                    padding: 0 15px;
+                                }
                             }
                         }
                     }
@@ -502,6 +516,8 @@ body {
 
                     button {
                         width: 20%;
+                        text-decoration: none;
+                        color: white;
                     }
 
                     .article-content-wrap {
@@ -748,4 +764,9 @@ body {
             cursor: pointer;
         }
     }
+}
+
+.ctaBtn a {
+    color: white;
+    text-decoration: none;
 }

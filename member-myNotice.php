@@ -193,6 +193,12 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
                         <div class="noticeborder">
                             <div class="noticeDetails">
+                                <div class="noticeDetail-unread">
+                                    <p class="noticeDate">2022-10-01</p>
+                                    <p class="notice">
+                                        系統已收到新訂單!
+                                    </p>
+                                </div>
                                 <?php foreach ($membernotice as $n) : ?>
                                     <div class="noticeDetail">
                                         <p class="noticeDate"><?= $n['notice_date'] ?></p>

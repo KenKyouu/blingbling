@@ -366,7 +366,12 @@ require __DIR__ . '/connect_db.php';
         </div>
         <div class="header-search">
             <form action="">
-                <input class="header-search-input" type="text" name="" value="">
+                <div class="searchBox">
+                    <input class="header-search-input" type="text" name="" value="" placeholder="Search">
+                    <button class="searchBtn" type="submit">
+                        <img src="./images/icons/searchBtn_icon.svg" alt="">
+                    </button>
+                </div>
             </form>
         </div>
         <div class="header-member">
@@ -447,6 +452,12 @@ require __DIR__ . '/connect_db.php';
                             </div>
                             <div class="h-member-text">通知</div>
                         </li>
+                    </a>
+                    <a class="member-loginBtn" href="#" style="text-decoration:none;">
+                        <div class="h-member-loginText">登入</div>
+                    </a>
+                    <a class="member-logoutBtn" href="#" style="text-decoration:none;">
+                        <div class="h-member-loginText">登出</div>
                     </a>
                 </ul>
             </div>
@@ -588,25 +599,22 @@ require __DIR__ . '/connect_db.php';
         </div>
     </div>
 </div>
-<div class="historySection">
+<!-- history 區塊 -->
+<div id="historyList" class="historySection">
     <div class="historyBox">
-       <div class="historyItem" data-sid="">
+        <?php if(!empty($_SESSION['history'])) : ?>
+    <?php
+        foreach ($_SESSION['history'] as $k => $v) :?>
+       <div class="historyItem" data-sid="<?= $k ?>">
             <div class="historyItem-img">
-                <img src="./images/products/100_1.png" alt="" />
+                <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
             </div>
             <div class="historyItem-sub">
-                <p>產品名dfhsdlffdsfhjd</p>
+                <p><?= $v['name'] ?></p>
             </div>
        </div>
-       <div class="historyItem" data-sid="">
-            <div class="historyItem-img">
-                <img src="./images/products/101_1.png" alt="" />
-            </div>
-            <div class="historyItem-sub">
-                <p>產品名dfhsdlffdsfhjd</p>
-            </div>
-       </div>
-       
+       <?php endforeach;?>
+       <?php endif; ?>
     </div>
 </div>
 
