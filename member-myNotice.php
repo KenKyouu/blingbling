@@ -201,7 +201,12 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
                                                                 } else if ($n['readed'] == 2) {
                                                                     echo "noticeDetail";
                                                                 }
-                                                                ?>" data-val="<?= $n['sid'] ?>" style="cursor: pointer;">
+                                                                ?>" <?php
+                                                                    $linktogame = "onclick=location.href='http://localhost/blingbling/game.php'";
+                                                                    if ($n['notice_sid'] == 14 && ($n['readed'] == 1)) {
+                                                                        echo $linktogame;
+                                                                    };
+                                                                    ?> data-val="<?= $n['sid'] ?>" style="cursor: pointer;">
                                         <p class="noticeDate"><?= $n['notice_date'] ?></p>
                                         <p class="notice">
                                             <?php
