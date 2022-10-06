@@ -191,6 +191,8 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
                         <!------------ notice details ------------>
 
+
+
                         <div class="noticeborder">
                             <div class="noticeDetails">
                                 <div class="noticeDetail-unread">
@@ -200,7 +202,12 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
                                     </p>
                                 </div>
                                 <?php foreach ($membernotice as $n) : ?>
-                                    <div class="noticeDetail">
+                                    <div class="<?php if ($membernotice[0]['readed'] == 1) {
+                                                    echo "noticeDetail-unread";
+                                                } else if ($membernotice[0]['readed'] == 2) {
+                                                    echo "noticeDetail";
+                                                }
+                                                ?>">
                                         <p class="noticeDate"><?= $n['notice_date'] ?></p>
                                         <p class="notice">
                                             <?php
