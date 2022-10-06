@@ -1,5 +1,9 @@
 <?php
 require __DIR__ . '/connect_db.php';
+if (!empty($_SESSION['user'])) {
+    $user = $_SESSION['user']['id'];
+}
+
 ?>
 
 <div class="header">
@@ -453,12 +457,16 @@ require __DIR__ . '/connect_db.php';
                             <div class="h-member-text">通知</div>
                         </li>
                     </a>
-                    <a class="member-loginBtn" href="#" style="text-decoration:none;">
-                        <div class="h-member-loginText">登入</div>
-                    </a>
-                    <a class="member-logoutBtn" href="#" style="text-decoration:none;">
-                        <div class="h-member-loginText">登出</div>
-                    </a>
+                    <?php if (empty($user)) : ?>
+                        <a class="member-loginBtn" href="./login.php" style="text-decoration:none;">
+                            <div class="h-member-loginText">登入</div>
+                        </a>
+                    <?php endif; ?>
+                    <?php if (!empty($user)) : ?>
+                        <a class="member-logoutBtn" href="./logout.php" style="text-decoration:none;">
+                            <div class="h-member-loginText">登出</div>
+                        </a>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -602,21 +610,21 @@ require __DIR__ . '/connect_db.php';
 <!-- history 區塊 -->
 <div id="historyList" class="historySection">
     <div class="historyBox">
-    <?php if(!empty($_SESSION['history'])):?> 
-    <?php
-        foreach ($_SESSION['history'] as $k => $v) :?>
-        <a href="./product_details.php?sid=<?= $v['sid'] ?>">
-            <div class="historyItem" data-sid="<?= $k ?>">
-                <div class="historyItem-img">
-                    <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
-                </div>
-                <div class="historyItem-sub">
-                    <p><?= $v['name'] ?></p>
-                </div>
-            </div>
-        </a>
-    <?php endforeach;?>
-    <?php endif; ?>
+        <?php if (!empty($_SESSION['history'])) : ?>
+            <?php
+            foreach ($_SESSION['history'] as $k => $v) : ?>
+                <a href="./product_details.php?sid=<?= $v['sid'] ?>">
+                    <div class="historyItem" data-sid="<?= $k ?>">
+                        <div class="historyItem-img">
+                            <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                        </div>
+                        <div class="historyItem-sub">
+                            <p><?= $v['name'] ?></p>
+                        </div>
+                    </div>
+                </a>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>
 

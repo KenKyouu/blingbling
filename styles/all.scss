@@ -366,7 +366,7 @@ body {
         }
       }
     }
-    @media screen and (max-width:1911px) {
+    @media screen and (max-width: 1911px) {
       .header-class {
         height: auto;
         padding-top: 0;
@@ -381,7 +381,7 @@ body {
         }
       }
     }
-    @media screen and (max-width:1010px) {
+    @media screen and (max-width: 1010px) {
       .header-class {
         .h-megaMenu {
           .h-mega-category {
@@ -397,7 +397,7 @@ body {
         }
       }
     }
-    @media screen and (max-width:773px) {
+    @media screen and (max-width: 773px) {
       .header-class {
         .h-megaMenu {
           .h-mega-category {
@@ -434,16 +434,17 @@ body {
         width: 15%;
         right: 7%;
       }
-      .searchBox{
+      .searchBox {
         justify-content: center;
         display: flex;
         width: 90%;
         margin: 10px 10px 10px 12px;
-        input:focus{
+        input:focus {
           border: 2px solid $lake-green;
           outline: 0;
-          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 4px #4c494849;
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 4px #4c494849;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+            0 0 4px #4c494849;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #4c494849;
         }
         .header-search-input {
           width: 80%;
@@ -451,18 +452,18 @@ body {
           border: 1.8px solid $deep-brown;
           border-radius: 5px 0px 0px 5px;
           outline-style: none;
-          font-family:"GenSenRounded-M" ;
+          font-family: "GenSenRounded-M";
         }
-        .searchBtn{
+        .searchBtn {
           width: 20%;
           background-color: $lake-green;
           border-radius: 0 5px 5px 0;
-          transition: .5s;
+          transition: 0.5s;
           border: 1.8px solid $lake-green;
-          &:hover{
+          &:hover {
             background-color: $light-lake-green;
           }
-          img{
+          img {
             width: 100%;
             padding: 3px;
           }
@@ -523,15 +524,15 @@ body {
               }
             }
           }
-          .member-loginBtn{
+          .member-loginBtn {
             // display: none;
             padding-top: 5px;
             text-decoration: none;
             justify-content: center;
             background-color: $light-lake-green;
             border-radius: 0 0 10px 10px;
-            border-top:3px solid $gray ;
-            .h-member-loginText{
+            border-top: 3px solid $gray;
+            .h-member-loginText {
               text-align: center;
               width: 70%;
               margin-top: 5px;
@@ -540,22 +541,22 @@ body {
               color: $white;
               border-radius: 7px;
               border: 2px solid $light-lake-green;
-              transition: .5s;
-              &:hover{
+              transition: 0.5s;
+              &:hover {
                 background-color: $light-lake-green;
                 border: 2px solid $white;
               }
             }
           }
-          .member-logoutBtn{
-            display: none;
+          .member-logoutBtn {
+            // display: none;
             padding-top: 5px;
             text-decoration: none;
             justify-content: center;
             background-color: $light-lake-green;
             border-radius: 0 0 10px 10px;
-            border-top:3px solid $gray ;
-            .h-member-loginText{
+            border-top: 3px solid $gray;
+            .h-member-loginText {
               text-align: center;
               margin-top: 5px;
               width: 70%;
@@ -564,8 +565,8 @@ body {
               color: $white;
               border-radius: 7px;
               border: 2px solid $light-lake-green;
-              transition: .5s;
-              &:hover{
+              transition: 0.5s;
+              &:hover {
                 background-color: $light-lake-green;
                 border: 2px solid $white;
               }
@@ -1553,7 +1554,7 @@ body {
   display: block;
 }
 
-.historySection{
+.historySection {
   z-index: 205;
   display: none;
   position: fixed;
@@ -1566,14 +1567,14 @@ body {
   padding: 20px;
   border-radius: 0 0 20px 20px;
   box-shadow: 3px 3px 10px #0000006b;
-  .historyBox{
+  .historyBox {
     width: 100%;
     height: 100%;
     // overflow-y: scroll;
     // background-color: #154d7a;
-    a{
+    a {
       text-decoration: none;
-      .historyItem{
+      .historyItem {
         width: 100%;
         height: 70px;
         // background-color: #2d827d;
@@ -1582,28 +1583,28 @@ body {
         padding-bottom: 10px;
         border-bottom: 2px solid $gray;
         color: $deep-brown;
-        &:hover{
+        &:hover {
           background-color: #cecdcd4a;
         }
-        .historyItem-img{
+        .historyItem-img {
           width: 30%;
           height: 70px;
           margin-right: 15px;
           background-color: #4c4948;
           object-fit: cover;
           overflow: hidden;
-          img{
+          img {
             width: 100%;
             object-fit: cover;
             height: 70px;
           }
         }
-        .historyItem-sub{
+        .historyItem-sub {
           width: 70%;
           padding: 5px 15px 15px 0;
-          p{
+          p {
             font-size: $ps-font-size;
-            font-family:"GenSenRounded-M";
+            font-family: "GenSenRounded-M";
             color: $deep-brown;
             line-height: 19px;
             overflow: hidden;
@@ -1612,7 +1613,7 @@ body {
             -webkit-line-clamp: 2; /*行數*/
             -webkit-box-orient: vertical;
             white-space: normal;
-            &:hover{
+            &:hover {
               color: $lake-green;
             }
           }
