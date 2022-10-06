@@ -470,7 +470,7 @@ body {
       }
     }
     .header-member {
-      // display: none;
+      display: none;
       position: fixed;
       z-index: 205;
       top: 70px;
@@ -532,6 +532,8 @@ body {
             border-radius: 0 0 10px 10px;
             border-top:3px solid $gray ;
             .h-member-loginText{
+              font-family: "GenSenRounded-B";
+              font-size: $p-font-size;
               text-align: center;
               width: 70%;
               margin-top: 5px;
@@ -556,6 +558,8 @@ body {
             border-radius: 0 0 10px 10px;
             border-top:3px solid $gray ;
             .h-member-loginText{
+              font-family: "GenSenRounded-B";
+              font-size: $p-font-size;
               text-align: center;
               margin-top: 5px;
               width: 70%;
