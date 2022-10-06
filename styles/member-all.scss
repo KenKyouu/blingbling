@@ -796,7 +796,7 @@ $bold: 900;
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: left;
-                            margin-top: 20px;
+                            margin: 20px 0;
 
                             .wishList {
                                 width: 100%;
@@ -3145,6 +3145,7 @@ $bold: 900;
                                 height: 540px;
                                 overflow-y: scroll;
                                 justify-content: left;
+                                margin: 40px 0;
                             }
                         }
 
