@@ -2093,7 +2093,7 @@ $bold: 900;
 .inputNewFriend {
     width: 100%;
     height: 100vh;
-    z-index: 90;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -2298,7 +2298,7 @@ $bold: 900;
 .lightbox-friendDetails-bg {
     width: 100%;
     height: 100vh;
-    z-index: 900;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -3448,6 +3448,14 @@ $bold: 900;
                                 margin-bottom: 30px;
                                 margin-top: 30px;
                                 .noticeDetails {
+                                    .noticeDetail-unread {
+                                        p.noticeDate {
+                                            font-size: $p-font-size;
+                                        }
+                                        p.notice {
+                                            font-size: $p-font-size;
+                                        }
+                                    }
                                     .noticeDetail {
                                         p.noticeDate {
                                             font-size: $p-font-size;
