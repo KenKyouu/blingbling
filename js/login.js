@@ -46,55 +46,19 @@ function loginCheckFormmb() {
   );
 }
 
-// $('#eye_close').click(function(){
-//   console.log('click');
-//   // $('.eye-close').attr('src','./images/icons/icon=eye_open.svg')
-//   if($(this).hasClass('eye-close')){
-//     $('#login-password').attr('type','text');
-//   } else{
-//     $('#login-password').attr('type','password');
-//   }
-//   $(this).toggleClass('eye-close').attr('src','./images/icons/icon=eye_open.svg');
-// });
 
-// var checkEye = document.getElementById("eye_close");
-//       var floatingPassword =  document.getElementById("login-password");
-//       checkEye.addEventListener("click", function(e){
-//         if(e.target.classList.contains('eye-close')){
-//         //換class 病患 type
-//           e.target.classList.remove('eye-close');
-//           e.target.classList.add('eye-open');
-//           floatingPassword.setAttribute('type','text')
-//         }else{
-//           floatingPassword.setAttribute('type','password');
-//           e.target.classList.remove('eye-open');
-//           e.target.classList.add('eye-close')
-//         }
-//       });
-
-$(function(){
-  var $password =$('#login-password'),
-  $passwordInput = $('<input type="text" name="' + $password.attr('name') + '" class="' + $password.attr('className') + '" />');
-  $('#eye_close').click(function(){
-    console.log('hi')
-    const eye=  $('.eye-close').attr('src')
-    console.log(eye)
-    if(eye='./images/icons/icon=eye_open.svg'){
-      $password.replaceWith($passwordInput.val($password.val()));
-    }else{
-      if(eye='./images/icons/icon=eye_close.svg')
-      $passwordInput.replaceWith($password.val($passwordInput.val()));
+var input = document.getElementById('login-password')
+var imgs = document.getElementById('eye_close');
+    //下面是一個判斷每次點選的效果
+var flag = 0;
+imgs.onclick = function () {
+    if (flag == 0) {
+        input.type = 'text';
+        eye_close.src = './images/icons/icon=eye_open.svg';//睜眼圖
+        flag = 1;
+      } else {
+        input.type = 'password';
+        eye_close.src = './images/icons/icon=eye_close.svg';//閉眼圖
+        flag = 0;
+      }
     }
-    $('.eye-close').attr('src','./images/icons/icon=eye_open.svg')
-		// 如果是勾選則...
-		// if(this.){
-		// 	// 用 $passwordInput 來取代 $password
-		// 	// 並把 $passwordInput 的值設為 $password 的值
-		// 	$password.replaceWith($passwordInput.val($password.val()));
-		// }else{
-		// 	// 用 $password 來取代 $passwordInput
-		// 	// 並把 $password 的值設為 $passwordInput 的值
-		// 	$passwordInput.replaceWith($password.val($passwordInput.val()));
-		// }
-	});
-})

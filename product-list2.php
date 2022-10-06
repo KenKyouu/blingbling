@@ -240,7 +240,7 @@ if ($totalRows > 0) {
     </div>
     <div class="product-list">
         <?php foreach ($rows as $r) : ?>
-            <a href="./product_details.php?sid=<?= $r['sid'] ?>">
+            <a onclick="addToHistory(event)" data-sid="<?= $r['sid'] ?>"  href="./product_details.php?sid=<?= $r['sid'] ?>">
                 <div class="product-card">
                     <div class="product-image">
                         <img src="./images/products/<?= $r['sid'] ?>_1.png" alt="">
