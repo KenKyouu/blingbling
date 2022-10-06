@@ -268,6 +268,7 @@ body {
             left: 50%;
             transform: translateX(-50%) translateY(50%);
             cursor: pointer;
+
             h5 {
                 font-family: "GenSenRounded-B";
                 font-size: $h6-font-size;
@@ -410,28 +411,33 @@ body {
     }
 
 }
+
 .heart {
     transform-origin: center;
     stroke-dasharray: 135;
 }
-  
+
 .active .heart {
     animation: draw-heart 2s forwards;
     stroke: $red-pink;
 }
+
 @keyframes draw-heart {
     0% {
         stroke-dashoffset: -135;
         transform: scale(.2) rotate(-280deg);
     }
+
     30% {
         stroke-dashoffset: 135;
         transform: scale(.4) rotate(280deg);
     }
+
     60% {
         stroke-dashoffset: -135;
         transform: scale(.6);
     }
+
     100% {
         stroke-dashoffset: 0;
         stroke: $dark-red;
@@ -806,7 +812,7 @@ body {
 
             .col {
                 button {
-                    background-color: none;
+                    background: none;
                     border: 3px solid $lake-green;
                     color: $lake-green;
                     font-family: "GenSenRounded-B";
@@ -990,8 +996,10 @@ body {
             justify-content: center;
             align-items: center;
             padding-top: 30px;
-            a{
+
+            a {
                 width: 100%;
+
                 button {
                     background-color: none;
                     border: 3px solid $light-lake-green;
@@ -1005,7 +1013,7 @@ body {
                     text-align: center;
                 }
             }
-            
+
 
             .cart1-check {
                 background-color: $lake-green;
@@ -1622,6 +1630,7 @@ body {
                         .j-point {
                             position: relative;
                             cursor: pointer;
+
                             .j-checkmark-r {
                                 bottom: 50%;
                                 transform: translateY(50%);
