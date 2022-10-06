@@ -786,41 +786,9 @@ $bold: 900;
                         align-items: center;
                         padding: 0px 30px;
                         margin-top: 15px;
-                        // justify-content: center;
                         @media screen and (max-width:991px) {
                             min-height: 275px;
                         }
-
-                        // .friendWatchButton {
-                        //     width: 100%;
-                        //     display: flex;
-                        //     justify-content: center;
-                        //     align-items: center;
-                        //     margin: 30px 0 20px 0;
-
-                        //     p.letFriendWatch {
-                        //         font-family: "GenSenRounded-B";
-                        //         font-size: $ps-font-size;
-                        //         color: $super-dark;
-                        //         padding-right: 16px;
-                        //     }
-
-                        //     .switchButton {
-                        //         width: 48px;
-                        //         height: 24px;
-                        //         border-radius: 100px;
-                        //         background-color: $gray;
-                        //         padding: 3px;
-
-                        //         .switch {
-                        //             width: 18px;
-                        //             height: 18px;
-                        //             border-radius: 100px;
-                        //             background-color: $white;
-                        //             text-align: left;
-                        //         }
-                        //     }
-                        // }
 
                         .myWishLists {
                             width: 100%;
@@ -828,8 +796,7 @@ $bold: 900;
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: left;
-                            // align-items: center;
-                            margin-top: 40px;
+                            margin-top: 20px;
 
                             .wishList {
                                 width: 100%;
@@ -837,64 +804,77 @@ $bold: 900;
                                 padding: 0;
                                 display: flex;
                                 justify-content: center;
-
-                                a {
-                                    text-decoration: none;
-                                    .product-card {
+                                -ms-flex: 0 0 50%;
+                                flex: 0 0 50%;
+                                max-width: 50%;
+                                
+                                .product-card {
+                                    width: 100%;
+                                    height: 100%;
+                                    margin: 0 0 20px 0;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: 20px;
+                                    a {
                                         width: 100%;
-                                        margin: 0 0 10px 0;
-
+                                        height: 80%;
+                                        text-decoration: none;
                                         .product-image {
-                                            width: 140px;
-                                            height: 140px;
-                                            background-image: url(../images/products/71-1.jpeg);
-                                            background-size: cover;
-                                            position: relative;
-
-                                            .heart {
-                                                cursor: default;
-                                                position: absolute;
-                                                right: 3px;
-                                                bottom: 3px;
-                                            }
-                                        }
-
-                                        .product-title {
-                                            width: 150px;
-                                            padding: 8px 0 8px 0;
-
-                                            h4 {
-                                                width: 100%;
-                                                color: $super-dark;
-                                                font-family: "GenSenRounded-M";
-                                                font-size: $ps-font-size;
-                                                overflow: hidden;
-                                                display: -webkit-box;
-                                                -webkit-box-orient: vertical;
-                                                -webkit-line-clamp: 1;
-                                            }
-                                        }
-
-                                        .product-price {
-                                            @media (max-width:768px) {
-                                                width: 150px;
-
-                                            }
-
                                             width: 100%;
-                                            padding: 0 0 5px 0;
+                                            height: 140px;
+                                            img {
+                                                width: 100%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
 
-                                            p {
-                                                color: $deep-brown;
-                                                font-family: "GenSenRounded-M";
-                                                font-size: $ps-font-size;
-                                                font-weight: $bold;
+                                    .p-down {
+                                        width: 100%;
+                                        height: 20%;
+                                        display: flex;
+                                        align-items:flex-end;
+                                        .p-detail {
+                                            width: 100%;
+                                            .product-title {
+                                                width: 100%;
+                                                padding: 8px 0 8px 0;
 
-                                                &::before {
-                                                    display: inline-block;
-                                                    content: "NT$";
+                                                h4 {
+                                                    width: 100%;
+                                                    color: $super-dark;
+                                                    font-family: "GenSenRounded-M";
+                                                    font-size: $ps-font-size;
+                                                    overflow: hidden;
+                                                    display: -webkit-box;
+                                                    -webkit-box-orient: vertical;
+                                                    -webkit-line-clamp: 1;
                                                 }
                                             }
+
+                                            .product-price {
+                                                @media (max-width:768px) {
+                                                    width: 130px;
+                                                }
+                                                width: 100%;
+
+                                                p {
+                                                    color: $deep-brown;
+                                                    font-family: "GenSenRounded-M";
+                                                    font-size: $ps-font-size;
+                                                    font-weight: $bold;
+
+                                                    &::before {
+                                                        display: inline-block;
+                                                        content: "NT$";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        button.p-delete {
+                                            border: none;
+                                            background-color: #ffffff00;
                                         }
                                     }
                                 }
@@ -920,9 +900,7 @@ $bold: 900;
                        
                         .orders {
                             width: 100%;
-                            height: 560px;
-                            margin: 30px 0;
-                            overflow-y: scroll;
+                            margin-bottom: 20px;
                             .order-list{
                                 width: 100%;
                                 padding-top: 15px;
@@ -995,6 +973,12 @@ $bold: 900;
                                         padding: 0 10px 0 5px;
                                     }
                                 }
+                            }
+                            @media (min-width:992px) {
+                                width: 100%;
+                                height: 560px;
+                                overflow-y: scroll;
+                                margin: 30px 0;
                             }
                         }
 
@@ -2093,7 +2077,7 @@ $bold: 900;
 .inputNewFriend {
     width: 100%;
     height: 100vh;
-    z-index: 90;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -2298,7 +2282,7 @@ $bold: 900;
 .lightbox-friendDetails-bg {
     width: 100%;
     height: 100vh;
-    z-index: 900;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -2643,15 +2627,39 @@ $bold: 900;
                         }
                         .whiteBg {
                             .myWishLists {
-                                justify-content: left;
+                                width: 100%;
+                                display: flex;
                                 .wishList {
-                                    a {
-                                        .product-card {
+                                    -ms-flex: 0 0 50%;
+                                    flex: 0 0 50%;
+                                    max-width: 50%;
+                                    @media (min-width:700px) {
+                                        -ms-flex: 0 0 33%;
+                                        flex: 0 0 33%;
+                                        max-width: 33%;
+                                    }
+                                    @media (min-width:1200px) {
+                                        -ms-flex: 0 0 33%;
+                                        flex: 0 0 33%;
+                                        max-width: 33%;
+                                    }
+                                    .product-card {
+                                        width: 100%;
+                                        height: 100%;
+                                        padding: 20px;
+                                        a {
+                                            width: 100%;
+                                            height: 80%;
                                             .product-image {
-                                                width: 190px;
-                                                height: 190px;
+                                                width: 100%;
+                                                height: 100%;
+                                                img{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                }
                                             }
-                                        }
+                                        }    
                                     }
                                 }
                             }
@@ -3129,7 +3137,6 @@ $bold: 900;
                             margin: 0;
                             display: flex;
                             flex-direction: column;
-                            // justify-content: center;
                             align-items: center;
                             padding: 0 5%;
 
@@ -3140,9 +3147,6 @@ $bold: 900;
                                 justify-content: left;
                             }
                         }
-
-                        // -----MYORDER-----
-
 
                         // -----FRIEND-----
                         .col-lg-9 {
@@ -3448,6 +3452,14 @@ $bold: 900;
                                 margin-bottom: 30px;
                                 margin-top: 30px;
                                 .noticeDetails {
+                                    .noticeDetail-unread {
+                                        p.noticeDate {
+                                            font-size: $p-font-size;
+                                        }
+                                        p.notice {
+                                            font-size: $p-font-size;
+                                        }
+                                    }
                                     .noticeDetail {
                                         p.noticeDate {
                                             font-size: $p-font-size;
@@ -4040,17 +4052,3 @@ $bold: 900;
         margin-top: 10px;
     }
 }
-
-// .showBtn {
-//     background-color: $white;
-//     .btnsvg{
-//         svg {
-//             path {
-//                 fill: $dark-gray;
-//             }
-//         }
-//     }
-//     .btnP {
-//         color: $dark-gray;
-//     }
-// }

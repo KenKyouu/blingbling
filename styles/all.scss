@@ -531,8 +531,15 @@ body {
             justify-content: center;
             background-color: $light-lake-green;
             border-radius: 0 0 10px 10px;
-            border-top: 3px solid $gray;
-            .h-member-loginText {
+// <<<<<<< HEAD
+            border-top:3px solid $gray ;
+            .h-member-loginText{
+              font-family: "GenSenRounded-B";
+              font-size: $p-font-size;
+// =======
+//             border-top: 3px solid $gray;
+//             .h-member-loginText {
+// >>>>>>> 50f465e66c4223874cb1a04c7d5ce4a21634397a
               text-align: center;
               width: 70%;
               margin-top: 5px;
@@ -555,8 +562,15 @@ body {
             justify-content: center;
             background-color: $light-lake-green;
             border-radius: 0 0 10px 10px;
-            border-top: 3px solid $gray;
-            .h-member-loginText {
+// <<<<<<< HEAD
+            border-top:3px solid $gray ;
+            .h-member-loginText{
+              font-family: "GenSenRounded-B";
+              font-size: $p-font-size;
+// =======
+//             border-top: 3px solid $gray;
+//             .h-member-loginText {
+// >>>>>>> 50f465e66c4223874cb1a04c7d5ce4a21634397a
               text-align: center;
               margin-top: 5px;
               width: 70%;

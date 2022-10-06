@@ -20,6 +20,7 @@ if (!empty($couponsid)) {
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-couponbtn.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
     <div class="containerr">
