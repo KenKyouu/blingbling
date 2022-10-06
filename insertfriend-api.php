@@ -38,6 +38,8 @@ $insertfriendsid = $lastfriendsid + 1;
 //     $email = $_POST['friendemail'];
 // }
 
+$pdo->query("DELETE FROM `friend_tag` WHERE `friend_sid` = $insertfriendsid")->fetchAll();
+
 $sql = "INSERT INTO `member_friend` (
     `sid`,
     `member_sid`,
