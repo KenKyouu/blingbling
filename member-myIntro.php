@@ -32,6 +32,8 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                     <div class="left col-lg-3 col-xl-3">
                         <div class="myName">
+                            <!-- 拉拉TODO: -->
+                            <form action="upload-api.php" method="post" enctype="multipart/form-data">
                             <div class="photo">
                                 <div class="photoborder">
                                     <div class="myphoto">
@@ -46,6 +48,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                     </svg>
                                 </div>
                             </div>
+                            </form>
                             <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
                                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
