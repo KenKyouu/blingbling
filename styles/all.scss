@@ -470,7 +470,7 @@ body {
       }
     }
     .header-member {
-      // display: none;
+      display: none;
       position: fixed;
       z-index: 205;
       top: 70px;
@@ -1561,8 +1561,8 @@ body {
   right: 100px;
   background-color: #ffffff;
   width: 20%;
-  min-height: 100px;
-  max-height: 600px;
+  min-height: 0px;
+  // max-height: 600px;
   padding: 20px;
   border-radius: 0 0 20px 20px;
   box-shadow: 3px 3px 10px #0000006b;
@@ -1571,39 +1571,51 @@ body {
     height: 100%;
     // overflow-y: scroll;
     // background-color: #154d7a;
-    .historyItem{
-      width: 100%;
-      height: 70px;
-      // background-color: #2d827d;
-      display: flex;
-      margin-top: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid $dark-gray;
-      &:hover{
-        background-color: $light-lake-green;
-      }
-      .historyItem-img{
-        width: 30%;
+    a{
+      text-decoration: none;
+      .historyItem{
+        width: 100%;
         height: 70px;
-        margin-right: 15px;
-        background-color: #4c4948;
-        object-fit: cover;
-        overflow: hidden;
-        img{
-          width: 100%;
-          object-fit: cover;
-          height: 70px;
+        // background-color: #2d827d;
+        display: flex;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $gray;
+        color: $deep-brown;
+        &:hover{
+          background-color: #cecdcd4a;
         }
-      }
-      .historyItem-sub{
-        width: 70%;
-        padding: 15px 15px 15px 0;
-        
-        // text-align: center;
-        // justify-content: center;
-        p{
-          font-size: $p-font-size;
-          font-family:"GenSenRounded-M";
+        .historyItem-img{
+          width: 30%;
+          height: 70px;
+          margin-right: 15px;
+          background-color: #4c4948;
+          object-fit: cover;
+          overflow: hidden;
+          img{
+            width: 100%;
+            object-fit: cover;
+            height: 70px;
+          }
+        }
+        .historyItem-sub{
+          width: 70%;
+          padding: 5px 15px 15px 0;
+          p{
+            font-size: $ps-font-size;
+            font-family:"GenSenRounded-M";
+            color: $deep-brown;
+            line-height: 19px;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2; /*行數*/
+            -webkit-box-orient: vertical;
+            white-space: normal;
+            &:hover{
+              color: $lake-green;
+            }
+          }
         }
       }
     }
