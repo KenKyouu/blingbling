@@ -19,6 +19,7 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-noticebtn.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
     <div class="containerr">
