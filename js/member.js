@@ -64,3 +64,55 @@ $('button.ok').click(function(){
   $('.coupon-lightbox-err').removeClass('show').css('left', '-100%');
 });
 
+// member-button
+
+$(document).ready(function(){
+  $('a#btn1').click(function(){
+    $('a#btn1').addClass('showBtn');
+    $('a#btn2').removeClass('showBtn');
+    $('a#btn3').removeClass('showBtn');
+    $('a#btn4').removeClass('showBtn');
+    $('a#btn5').removeClass('showBtn');
+    $('a#btn6').removeClass('showBtn');
+  });
+  $('a#btn2').click(function(){
+    $('a#btn2').addClass('showBtn');
+    $('a#btn1').removeClass('showBtn');
+    $('a#btn3').removeClass('showBtn');
+    $('a#btn4').removeClass('showBtn');
+    $('a#btn5').removeClass('showBtn');
+    $('a#btn6').removeClass('showBtn');
+  });
+  $('a#btn3').click(function(){
+    $('a#btn3').addClass('showBtn');
+    $('a#btn1').removeClass('showBtn');
+    $('a#btn2').removeClass('showBtn');
+    $('a#btn4').removeClass('showBtn');
+    $('a#btn5').removeClass('showBtn');
+    $('a#btn6').removeClass('showBtn');
+  });
+  $('a#btn4').click(function(){
+    $('a#btn4').addClass('showBtn');
+    $('a#btn1').removeClass('showBtn');
+    $('a#btn2').removeClass('showBtn');
+    $('a#btn3').removeClass('showBtn');
+    $('a#btn5').removeClass('showBtn');
+    $('a#btn6').removeClass('showBtn');
+  });
+  $('a#btn5').click(function(){
+    $('a#btn5').addClass('showBtn');
+    $('a#btn1').removeClass('showBtn');
+    $('a#btn2').removeClass('showBtn');
+    $('a#btn3').removeClass('showBtn');
+    $('a#btn4').removeClass('showBtn');
+    $('a#btn6').removeClass('showBtn');
+  });
+  $('a#btn6').click(function(){
+    $('a#btn6').addClass('showBtn');
+    $('a#btn1').removeClass('showBtn');
+    $('a#btn2').removeClass('showBtn');
+    $('a#btn3').removeClass('showBtn');
+    $('a#btn4').removeClass('showBtn');
+    $('a#btn5').removeClass('showBtn');
+  });
+})
