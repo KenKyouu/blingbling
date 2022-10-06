@@ -377,7 +377,7 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                     <h6>卡片寄送方式</h6>
                 </div>
                 <div class="col col-6">
-                    <h6>Email</h6>
+                    <h6>實體配送</h6>
                 </div>
             </div>
 
@@ -559,7 +559,7 @@ $order_details = $pdo->query("SELECT o.`sid`, od.price,od.quantity,od.product_si
                             <p>卡片寄送方式</p>
                         </div>
                         <div class="col">
-                            <p>Email</p>
+                            <p>實體配送</p>
                         </div>
                     </div>
 
