@@ -150,7 +150,8 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     </div>
                                     <div class="step-text">
                                         <p>收到訂單</p>
-                                        <p><?= $memberorders[0]['order_date'] ?></p>
+                                        <p><?php $order_date = $memberorders[0]['order_date'];
+                                            echo substr($order_date, 0, 10) ?></p>
                                     </div>
                                 </div>
                                 <div class="order-dash">
