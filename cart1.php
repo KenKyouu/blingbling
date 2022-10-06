@@ -453,7 +453,7 @@ $coupon_value = $pdo->query("SELECT mc.*, c.coupon_value FROM `member_coupon` mc
             </div>
 
             <div class="col subtitle-btn">
-                <a href="./cart2.php">
+                <a class="w-100" href="./cart2.php">
                     <button class="cart1-check" onclick="addToOrder(event)">前往結帳</button>
                 </a>
             </div>
