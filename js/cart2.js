@@ -63,18 +63,9 @@ $('input:radio[name="delivery"]').change(function(){
 
 
 //pay 切換
-// var locations = [];
-// $(".j-credit-bg").each(function() {
-//     var store = $(''),
-//         offset = store.offset();
-//     locations.push(store.siblings().eq(store.index()));
-//     console.log(locations);
-// });
 var store = $('.j-credit-info');
 
 $('input:radio[name="pay"]').change(function(){
-    // $(".j-credit-bg").each(function(i, e) {
-    //     var te = $(this).clone(true);
         if($('.j-credit').prop("checked")==false){
             $('.j-credit-bg').slideUp(400);
             setTimeout(function(){
@@ -93,10 +84,8 @@ $('input:radio[name="pay"]').change(function(){
         $('.j-credit-bg').append(store);
         console.log(store);
         $('.j-credit-title').addClass('.j-form-group');
-        // locations[i].append(te); // restore
-        // console.log(locations);
         }
-    // });
+
 })
 // $('input:radio[name="pay"]').change(function(){
 //     if($('.j-credit').prop("checked")==false){
@@ -114,6 +103,10 @@ $('input:radio[name="pay"]').change(function(){
 //     }
 // })
 
+//auto input address
+$('textarea[name="address"]').click(function(){
+    $(this).val('中正路216巷133-1號6樓');
+});
 
 //避免按下Enter就送出表單
 $(document).on("keypress", "form", function (e) {

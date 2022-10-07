@@ -6,7 +6,6 @@ $output = [
     'success' => true, // 是否新增成功
     'error' => '', // 錯誤訊息
     'code' => 0,
-    'postData' => $_POST,
 ];
 $user = $_SESSION['user']['id'];
 // if(empty($_POST['name']) or empty($_POST['email'])){
@@ -136,6 +135,21 @@ foreach($_SESSION['cart'] as $k=>$v){
     ]);
 }
 
+$n_sql = "INSERT INTO `member_notice`(
+    `member_sid`,
+    `notice_sid`,
+    `notice_date`
+) VALUES (
+    ?,
+    ?,
+    NOW()
+)";
+$stmt = $pdo->prepare($n_sql);
+$stmt->execute([
+    $_SESSION['user']['id'],
+    5
+]);
+
 
 $sql = "UPDATE `member` SET 
     `gift_voucher`= ? 
@@ -145,11 +159,8 @@ $sql = "UPDATE `member` SET
         0
     ]);
 
-
-
-
-
-
+    
 
 unset($_SESSION['cart']); // 清除購物車內容
 unset($_SESSION['order']);
+
