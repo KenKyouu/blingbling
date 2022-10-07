@@ -90,22 +90,24 @@ $bold: 900;
   width: 1920px;
   height: 1000px;
   position: relative;
-  svg{
+  .coin{
     position: absolute;
-    font-size: $h1-font-size;
-    font-family: "GenSenRounded-B";
-    color: $lake-green;
+    // font-size: $h1-font-size;
+    // font-family: "GenSenRounded-B";
+    // // color: $lake-green;
     top: 120px;
     left: 100px;
     z-index: 10; 
+    width: 65px;
+    height: 65px;
   }
   .winNum{
       position: absolute;
       font-size: $h2-font-size;
       font-family: "GenSenRounded-B";
       color: $lake-green;
-      top: 120px;
-      left: 160px;
+      top: 130px;
+      left: 175px;
       z-index: 10;    
   }
   .gamePlayBtn{
@@ -133,21 +135,25 @@ $bold: 900;
           img{
               width: 300px;
           }
-          p{
+          .text{
             font-family: "GenSenRounded-B";
             color: $lake-green;
             font-size: $h3-font-size;
+            margin-bottom: 20px;
           }
           button{
-            padding: 0 40px;
+            padding: 10px 40px;
             border: none;
-            border-radius: 10px;
+            border-radius: 20px;
             background-color: $lake-green;
             font-family: "GenSenRounded-B";
             p{
                 font-size: $h5-font-size;
                 color:$white;
             }
+          }
+          button:hover{
+            background-color: $light-lake-green;
           }
         //   a{
         //       text-decoration: none;
@@ -173,16 +179,20 @@ $bold: 900;
 .hpBar{
   z-index: 10;
   position: absolute;
-  top: 85px;
+  top: 130px;
   right: 150px;
   // width: 145px;
   display: flex;
   align-items: center;
   h2{
-    font-family: "GenSenRounded-B";
-    font-size: $h2-font-size;
-    color: $lake-green;
+    // font-family: "GenSenRounded-B";
+    // font-size: $h2-font-size;
+    // color: $lake-green;
     padding-right: 20px;
+    img{
+      width: 65px;
+      height: 65px;
+    }
   }
   .hpBox{
       width: 250px;
