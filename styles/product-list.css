@@ -25,7 +25,9 @@ body {
 .content .banner {
   width: 100%;
   height: 160px;
-  background-image: url("https://picsum.photos/id/1008/1920/375");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   position: relative;
   -webkit-box-shadow: 5px 10px 12px #c2c2c2;
           box-shadow: 5px 10px 12px #c2c2c2;
@@ -40,6 +42,7 @@ body {
 .content .banner .class {
   padding: 5px 15px;
   border: 1px solid #ffffff;
+  background-color: #2d827d;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
