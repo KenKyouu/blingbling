@@ -433,12 +433,23 @@ if (!empty($friendismember)) {
 
     let tagnameArr = [];
     let tagvalueArr = [];
+
+
     for (let n = 0; n < $('span.kenken').length; n++) {
         let defavalue = $('span.kenken')[n];
         // console.log($(defavalue).attr('data-val'))
         tagvalueArr.push($(defavalue).attr('data-val'));
         // console.log(tagvalueArr);
     }
+
+    $('.tagbyken, span.kenken').click(function() {
+        if (tagvalueArr.length < 5) {
+            $(this).css({
+                'background-color': '#000000',
+                'color': '#ffffff'
+            })
+        }
+    })
 
     console.log(tagvalueArr)
     let inputname = 1;
@@ -486,12 +497,6 @@ if (!empty($friendismember)) {
         ($(this).parent()).remove();
         $(this).remove();
         console.log(tagvalueArr);
-    })
-    $('.tagbyken, span.kenken').click(function() {
-        $(this).css({
-            'background-color': '#000000',
-            'color': '#ffffff'
-        })
     })
 </script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
