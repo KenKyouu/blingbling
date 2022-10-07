@@ -139,6 +139,9 @@ $bold: 900;
                                         img.photo {
                                             width: 110%;
                                         }
+                                        img.upload_photo{
+                                            width: 100%;
+                                        }
                                     }
 
                                 }
@@ -155,6 +158,7 @@ $bold: 900;
                                     position: absolute;
                                     right: -3px;
                                     bottom: 0;
+                                    cursor: pointer;
                                 }
                             }
 
@@ -2764,7 +2768,9 @@ $bold: 900;
                                         .myphoto {
                                             width: 86px;
                                             height: 86px;
-
+                                            .nodisplay{
+                                                display: none;
+                                            }
                                             img.photo {
                                                 width: 120%;
                                                 position: static;
