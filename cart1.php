@@ -187,7 +187,7 @@ if (!empty($membercoupon)) {
                             <p class="money-discount giftvoucher" data-val="<?= $member[0]['gift_voucher'] ?>"></p>
                             <div class="s-package-card-radio d-flex pl-4">
                                 <label class="d-flex j-point">
-                                    <h3 class="pl-4 mr-3">全部折抵</h3>
+                                    <h3 class="pl-4 mr-3">全折抵</h3>
                                     <input type="radio" name="giftvoucher" class="default-package j-gift-voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
                                     <span class="j-checkmark-r"></span>
                                 </label>
@@ -301,14 +301,14 @@ if (!empty($membercoupon)) {
             </div>
 
             <div class="col-12 discount-col d-flex px-0">
-                <div class="col-6 pl-3 ">
+                <div class="col-6 pl-3 d-flex align-items-center">
                     <h3>購物金有：<span class="giftvoucher" data-val="<?= $member[0]['gift_voucher'] ?>" style="color:#7cb2af;"></span></h3>
                 </div>
 
                 <div class="col-6 d-flex j-relative">
 
                     <label class="discount-radio j-point d-flex">
-                        <h3 class="pl-4 pt-1 mr-2">全部折抵</h3>
+                        <h3 class="pl-4 pt-1 mr-2">全折抵</h3>
                         <input type="radio" name="giftvoucher" class="default-package j-gift-voucher voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
                         <span class="j-checkmark-r"></span>
                     </label>

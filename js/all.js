@@ -94,12 +94,12 @@ function showCartCount(obj){
   }
   console.log(count);
 
-if(count == 0){
-  // console.log('0:',count);
-  $('.cart-none-point').removeClass('cart-red-point');
-}else if(count > 0){
-  // console.log('1:',count);
-  $('.cart-none-point').addClass('cart-red-point');
+  if(count == 0){
+    // console.log('0:',count);
+    $('.cart-none-point').removeClass('cart-red-point');
+  }else if(count > 0){
+    // console.log('1:',count);
+    $('.cart-none-point').addClass('cart-red-point');
 
 }
 }
