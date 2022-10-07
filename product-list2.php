@@ -10,6 +10,7 @@ $highp = isset($_GET['highp']) ? intval($_GET['highp']) : 0; // 篩選的最高�
 $gender = isset($_GET['gender']) ? $_GET['gender'] : '';
 $colors = [];
 
+
 // echo substr($_SERVER['QUERY_STRING'], 7);
 // exit;
 
@@ -142,12 +143,56 @@ if ($totalRows > 0) {
     // $sql = sprintf("SELECT * FROM `class` INNER JOIN `product` ON product.class_sid=class.sid %s ORDER BY product.sid DESC LIMIT %s, %s", $where, ($page - 1) * $perPage, $perPage);
     $rows = $pdo->query($sql)->fetchAll();
 }
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="content">
-    <div class="banner">
+    <div class="banner" style="background-image: url(./images/product_banner/<?php
+                                                                                if ($cate < 9) {
+                                                                                    if (empty($cate)) {
+                                                                                        echo '0';
+                                                                                    } else if ($cate == '1') {
+                                                                                        echo '1';
+                                                                                    } else if ($cate == '2') {
+                                                                                        echo '2';
+                                                                                    } else if ($cate == '3') {
+                                                                                        echo '3';
+                                                                                    } else if ($cate == '4') {
+                                                                                        echo '4';
+                                                                                    } else if ($cate == '5') {
+                                                                                        echo '5';
+                                                                                    } else if ($cate == '6') {
+                                                                                        echo '6';
+                                                                                    } else if ($cate == '7') {
+                                                                                        echo '7';
+                                                                                    } else if ($cate == '8') {
+                                                                                        echo '8';
+                                                                                    }
+                                                                                } else {
+                                                                                    $childClass = $pdo->query("SELECT * FROM class WHERE `sid`=$cate")->fetchAll();
+                                                                                    $childsparentsid = $childClass[0]['parent'];
+                                                                                    $childsparent = $pdo->query("SELECT * FROM class WHERE `parent`=$childsparentsid")->fetchAll();
+                                                                                    if ($childsparentsid == '1') {
+                                                                                        echo '1';
+                                                                                    } else if ($childsparentsid == '2') {
+                                                                                        echo '2';
+                                                                                    } else if ($childsparentsid == '3') {
+                                                                                        echo '3';
+                                                                                    } else if ($childsparentsid == '4') {
+                                                                                        echo '4';
+                                                                                    } else if ($childsparentsid == '5') {
+                                                                                        echo '5';
+                                                                                    } else if ($childsparentsid == '6') {
+                                                                                        echo '6';
+                                                                                    } else if ($childsparentsid == '7') {
+                                                                                        echo '7';
+                                                                                    } else if ($childsparentsid == '8') {
+                                                                                        echo '8';
+                                                                                    }
+                                                                                }
+                                                                                ?>.jpg) ;">
         <div class="class">
             <h3><?php
                 if ($catename == []) {
@@ -240,12 +285,12 @@ if ($totalRows > 0) {
     </div>
     <div class="product-list">
         <?php foreach ($rows as $r) : ?>
-            <a onclick="addToHistory(event)" data-sid="<?= $r['sid'] ?>"  href="./product_details.php?sid=<?= $r['sid'] ?>">
+            <a onclick="addToHistory(event)" data-sid="<?= $r['sid'] ?>" href="./product_details.php?sid=<?= $r['sid'] ?>">
                 <div class="product-card">
                     <div class="product-image">
                         <img src="./images/products/<?= $r['sid'] ?>_1.png" alt="">
-                        <div class="heart">
-                        </div>
+                        <!-- <div class="heart">
+                        </div> -->
                     </div>
                     <div class="product-title">
                         <h3><?= $r['name'] ?></h3>
