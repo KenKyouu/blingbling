@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 // 顏色設定
@@ -531,15 +537,15 @@ body {
             justify-content: center;
             background-color: $light-lake-green;
             border-radius: 0 0 10px 10px;
-// <<<<<<< HEAD
-            border-top:3px solid $gray ;
-            .h-member-loginText{
+            // <<<<<<< HEAD
+            border-top: 3px solid $gray;
+            .h-member-loginText {
               font-family: "GenSenRounded-B";
               font-size: $p-font-size;
-// =======
-//             border-top: 3px solid $gray;
-//             .h-member-loginText {
-// >>>>>>> 50f465e66c4223874cb1a04c7d5ce4a21634397a
+              // =======
+              //             border-top: 3px solid $gray;
+              //             .h-member-loginText {
+              // >>>>>>> 50f465e66c4223874cb1a04c7d5ce4a21634397a
               text-align: center;
               width: 70%;
               margin-top: 5px;
@@ -562,15 +568,15 @@ body {
             justify-content: center;
             background-color: $light-lake-green;
             border-radius: 0 0 10px 10px;
-// <<<<<<< HEAD
-            border-top:3px solid $gray ;
-            .h-member-loginText{
+            // <<<<<<< HEAD
+            border-top: 3px solid $gray;
+            .h-member-loginText {
               font-family: "GenSenRounded-B";
               font-size: $p-font-size;
-// =======
-//             border-top: 3px solid $gray;
-//             .h-member-loginText {
-// >>>>>>> 50f465e66c4223874cb1a04c7d5ce4a21634397a
+              // =======
+              //             border-top: 3px solid $gray;
+              //             .h-member-loginText {
+              // >>>>>>> 50f465e66c4223874cb1a04c7d5ce4a21634397a
               text-align: center;
               margin-top: 5px;
               width: 70%;
@@ -913,7 +919,7 @@ body {
         .password-input {
           padding-top: 10%;
           position: relative;
-          .eye-close{
+          .eye-close {
             position: absolute;
             top: 35px;
             right: 5px;
@@ -924,10 +930,10 @@ body {
               cursor: pointer;
             }
           }
-          img{
+          img {
             width: 20px;
           }
-          .eye-open{
+          .eye-open {
             display: none;
           }
           p {
@@ -941,9 +947,8 @@ body {
               color: $light-lake-green;
             }
           }
-          
         }
-        
+
         .login-button {
           padding-top: 20%;
           .login-btn {
@@ -958,14 +963,13 @@ body {
             align-items: center;
             justify-content: center;
           }
-          .login-btn:hover{
+          .login-btn:hover {
             // background-color: transparent;
             // border: 3px solid $light-lake-green;
             // color: $lake-green;
             background-color: $light-lake-green;
           }
         }
-        
       }
       .or {
         text-align: center;
@@ -1084,7 +1088,6 @@ body {
             // top: 35px;
             right: 8%;
           }
-          
         }
         .forget-pw {
           text-align: left;
@@ -1113,7 +1116,7 @@ body {
           align-items: center;
           justify-content: center;
         }
-        .login-btn:hover{
+        .login-btn:hover {
           background-color: $light-lake-green;
         }
       }
@@ -1292,7 +1295,7 @@ body {
             text-align: left;
             margin-left: 0;
           }
-          .bd-input-3{
+          .bd-input-3 {
             margin-left: 10px;
           }
           p {
@@ -1326,9 +1329,9 @@ body {
           font-family: "GenSenRounded-M";
           font-size: $p-font-size;
           align-items: center;
-          justify-content: center;  
+          justify-content: center;
         }
-        .signup-btn:hover{
+        .signup-btn:hover {
           background-color: $light-lake-green;
         }
       }
@@ -1508,7 +1511,7 @@ body {
           align-items: center;
           justify-content: center;
         }
-        .signup-btn:hover{
+        .signup-btn:hover {
           background-color: $light-lake-green;
         }
       }
