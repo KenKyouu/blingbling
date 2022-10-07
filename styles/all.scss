@@ -860,7 +860,7 @@ body {
   z-index: 300;
   width: 100%;
   height: 100vh;
-  background: url(../images/login_bg8.png) no-repeat;
+  background: url(../images/login_bg9.png) no-repeat;
   background-size: 100% auto;
   // background-color: rgba(0, 0, 0, 0.311);
   display: flex;
@@ -882,7 +882,7 @@ body {
       height: 75px;
       // background-color: $coral;
       position: absolute;
-      top: 47%;
+      top: 50%;
       left: 19%;
       cursor: pointer;
     }
@@ -915,7 +915,7 @@ body {
           position: relative;
           .eye-close{
             position: absolute;
-            top: 30px;
+            top: 35px;
             right: 5px;
             cursor: pointer;
             @media screen and (max-width: 864px) {
@@ -923,6 +923,9 @@ body {
               right: 10px;
               cursor: pointer;
             }
+          }
+          img{
+            width: 20px;
           }
           .eye-open{
             display: none;
@@ -955,7 +958,14 @@ body {
             align-items: center;
             justify-content: center;
           }
+          .login-btn:hover{
+            // background-color: transparent;
+            // border: 3px solid $light-lake-green;
+            // color: $lake-green;
+            background-color: $light-lake-green;
+          }
         }
+        
       }
       .or {
         text-align: center;
@@ -1035,6 +1045,7 @@ body {
     border-radius: 10px 10px 0 0;
     position: absolute;
     z-index: 3;
+    overflow: hidden;
     .login-containerr {
       text-align: left;
       margin: 0 8%;
@@ -1073,10 +1084,11 @@ body {
             // top: 35px;
             right: 8%;
           }
+          
         }
         .forget-pw {
           text-align: left;
-          padding-left: 12%;
+          padding-left: 13%;
           p {
             padding-top: 2px;
 
@@ -1100,6 +1112,9 @@ body {
           font-size: $p-font-size;
           align-items: center;
           justify-content: center;
+        }
+        .login-btn:hover{
+          background-color: $light-lake-green;
         }
       }
       .or {
@@ -1158,7 +1173,7 @@ body {
   z-index: 300;
   width: 100%;
   height: 100vh;
-  background: url(../images/login_bg8.png) no-repeat;
+  background: url(../images/login_bg9.png) no-repeat;
   background-size: 100% auto;
   // background-color: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -1177,7 +1192,7 @@ body {
       height: 75px;
       // background-color: $coral;
       position: absolute;
-      top: 39%;
+      top: 32%;
       left: 19%;
       cursor: pointer;
     }
@@ -1265,7 +1280,7 @@ body {
           input {
             text-align: center;
             width: 28%;
-            margin: 0 3px;
+            // margin: 0 4px;
             @media screen and (max-width: 864px) {
               width: 26%;
             }
@@ -1277,9 +1292,12 @@ body {
             text-align: left;
             margin-left: 0;
           }
+          .bd-input-3{
+            margin-left: 10px;
+          }
           p {
             padding-left: 12%;
-            padding-top: 3px;
+            padding-top: 5px;
             padding-left: 30px;
             font-family: "Roboto";
             font-weight: bold;
@@ -1293,7 +1311,7 @@ body {
           font-size: 11px;
           color: $dark-gray;
           text-align: left;
-          padding: 5px 5px 8px 0px;
+          padding: 5px 5px 8px 30px;
           a {
             color: $dark-blue;
           }
@@ -1308,7 +1326,10 @@ body {
           font-family: "GenSenRounded-M";
           font-size: $p-font-size;
           align-items: center;
-          justify-content: center;
+          justify-content: center;  
+        }
+        .signup-btn:hover{
+          background-color: $light-lake-green;
         }
       }
       .or {
@@ -1395,6 +1416,7 @@ body {
     border-radius: 10px 10px 0 0;
     position: absolute;
     z-index: 3;
+    overflow: hidden;
     .signup-containerr {
       text-align: left;
       margin: 0 8%;
@@ -1441,20 +1463,20 @@ body {
           .eye-close {
             position: absolute;
             top: 19px;
-            right: 11%;
+            right: 12.5%;
           }
         }
         .bd-input {
           input {
             width: 25.5%;
-            margin: 0 5px;
+            margin-left: 5px;
           }
           .bd-input-1 {
-            margin-left: 0;
+            margin: 0;
           }
           p {
             padding-left: 12%;
-            padding-top: 3px;
+            padding-top: 8px;
             // padding-left: 30px;
             text-align: left;
             font-family: "Roboto";
@@ -1486,10 +1508,13 @@ body {
           align-items: center;
           justify-content: center;
         }
+        .signup-btn:hover{
+          background-color: $light-lake-green;
+        }
       }
       .or {
         text-align: center;
-        padding-top: 20px;
+        padding-top: 15px;
         font-family: "GenSenRounded-B";
         font-size: $ps-font-size;
         color: $dark-gray;
