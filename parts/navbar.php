@@ -1,5 +1,9 @@
 <?php
 require __DIR__ . '/connect_db.php';
+if (!empty($_SESSION['user'])) {
+    $user = $_SESSION['user']['id'];
+}
+
 ?>
 
 <div class="header">
@@ -35,7 +39,7 @@ require __DIR__ . '/connect_db.php';
         </div>
         <div class="right-pc">
             <div class="mockup">
-                <h6>
+                <h6 onclick="location.href='./product-list2.php'">
                     商品分類&nbsp;&nbsp;<svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.1182 12.06L17.2582 2.23C17.9382 1.3 17.2682 0 16.1182 0H1.83817C0.688165 0 0.028166 1.3 0.698166 2.23L7.83817 12.06C8.39817 12.83 9.54816 12.83 10.1182 12.06Z" fill="#D55A6A" />
                     </svg>
@@ -444,9 +448,6 @@ require __DIR__ . '/connect_db.php';
                         </li>
                     </a>
                     <a href="./member-myNotice.php" class="notice">
-                    <button>
-                        
-                    </button>
                         <li>
                             <div class="h-member-svg">
                                 <svg width="14" height="18" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -456,6 +457,16 @@ require __DIR__ . '/connect_db.php';
                             <div class="h-member-text">通知</div>
                         </li>
                     </a>
+                    <?php if (empty($user)) : ?>
+                        <a class="member-loginBtn" href="./login.php" style="text-decoration:none;">
+                            <div class="h-member-loginText">登入</div>
+                        </a>
+                    <?php endif; ?>
+                    <?php if (!empty($user)) : ?>
+                        <a class="member-logoutBtn" href="./logout.php" style="text-decoration:none;">
+                            <div class="h-member-loginText">登出</div>
+                        </a>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -602,14 +613,16 @@ require __DIR__ . '/connect_db.php';
         <?php if (!empty($_SESSION['history'])) : ?>
             <?php
             foreach ($_SESSION['history'] as $k => $v) : ?>
-                <div class="historyItem" data-sid="<?= $k ?>">
-                    <div class="historyItem-img">
-                        <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                <a href="./product_details.php?sid=<?= $v['sid'] ?>">
+                    <div class="historyItem" data-sid="<?= $k ?>">
+                        <div class="historyItem-img">
+                            <img src="images/products/<?= $v['sid'] ?>_1.png" alt="<?= $v['name'] ?>">
+                        </div>
+                        <div class="historyItem-sub">
+                            <p><?= $v['name'] ?></p>
+                        </div>
                     </div>
-                    <div class="historyItem-sub">
-                        <p><?= $v['name'] ?></p>
-                    </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         <?php endif; ?>
     </div>

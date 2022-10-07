@@ -18,6 +18,7 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-orderbtn.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 
 <div class="wrap">
@@ -149,7 +150,8 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                     </div>
                                     <div class="step-text">
                                         <p>收到訂單</p>
-                                        <p><?= $memberorders[0]['order_date'] ?></p>
+                                        <p><?php $order_date = $memberorders[0]['order_date'];
+                                            echo substr($order_date, 0, 10) ?></p>
                                     </div>
                                 </div>
                                 <div class="order-dash">
@@ -285,7 +287,7 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE sid=$sid")->fetchAll();
                                 <div class="delivery-info">
                                     <div class="delivery-title-left">
                                         <div class="order-p">
-                                            <p><?= $memberorders[0]['recipient_name'] ?></p>
+                                            <p class="order_name"><?= $memberorders[0]['recipient_name'] ?></p>
                                             <p><?= $memberorders[0]['address'] ?></p>
                                         </div>
                                     </div>

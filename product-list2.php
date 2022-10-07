@@ -240,7 +240,7 @@ if ($totalRows > 0) {
     </div>
     <div class="product-list">
         <?php foreach ($rows as $r) : ?>
-            <a href="./product_details.php?sid=<?= $r['sid'] ?>">
+            <a onclick="addToHistory(event)" data-sid="<?= $r['sid'] ?>"  href="./product_details.php?sid=<?= $r['sid'] ?>">
                 <div class="product-card">
                     <div class="product-image">
                         <img src="./images/products/<?= $r['sid'] ?>_1.png" alt="">
@@ -696,7 +696,7 @@ if ($totalRows > 0) {
                             <circle cx="10" cy="10" r="9.5" fill="<?= $opc['web'] ?>" stroke="white" />
                         </svg>
                         &nbsp;&nbsp;<?= $opc['name_zh'] ?></span>
-                    <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" />
+                    <input type="checkbox" name="color" id="<?= $opc['name_en'] ?>" value="<?= $opc['name_en'] ?>" <?= (in_array($opc['name_en'], $colors)) ?  'checked' : '' ?> />
                 </label>
             <?php endforeach; ?>
         </div>

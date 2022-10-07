@@ -8,35 +8,32 @@ if(! isset($_SESSION['history'])){
 
 $sid = isset($_GET['sid']) ? intval($_GET['sid']) : 0;
 //紀錄哪個產品就好
-$qty = isset($_GET['qty']) ? intval($_GET['qty']) : 0;
 
 
-if(! empty($sid)){
 
-    if(! empty($qty)){
-        // 新增或變更
+// if(! empty($sid)){
 
-        if(!empty($_SESSION['history'][$sid])){
-            // 已存在, 變更
-            $_SESSION['history'][$sid]['qty'] = $qty;
-        } else {
-            // 新增
-            //檢查資料表是不是有這個商品
-            $row = $pdo->query("SELECT * FROM product WHERE sid=$sid")->fetch();
-            if(! empty($row)){
-                $row['qty'] = $qty;  // 先把數量放進去
-                $_SESSION['history'][$sid] = $row;
+    // if(! empty($_SESSION['history'][$sid])){
+
+        // } else {
+        //     // 新增
+        //     //檢查資料表是不是有這個商品
+            $list = $pdo->query("SELECT * FROM product WHERE sid=$sid")->fetch();
+            if(! empty($list)){
+
+                // $_SESSION['history'][$sid] = $list;
+                array_unshift($_SESSION['history'], $list ) ;
             }
-        }
-    }else{
-         // 刪除項目
+        // }
+// }
 
+// array_unshift($list);
+$row= $_SESSION['history'];
+if(count($row) > 5){
+    array_pop($row);
 
- 
-        unset($_SESSION['history'][$sid]);
-    }
+    $_SESSION['history'] = $row;
 }
-
 
 
 echo json_encode($_SESSION['history'], JSON_UNESCAPED_UNICODE);

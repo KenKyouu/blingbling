@@ -45,3 +45,20 @@ function loginCheckFormmb() {
     "json"
   );
 }
+
+
+var input = document.getElementById('login-password')
+var imgs = document.getElementById('eye_close');
+    //下面是一個判斷每次點選的效果
+var flag = 0;
+imgs.onclick = function () {
+    if (flag == 0) {
+        input.type = 'text';
+        eye_close.src = './images/icons/icon=eye_open.svg';//睜眼圖
+        flag = 1;
+      } else {
+        input.type = 'password';
+        eye_close.src = './images/icons/icon=eye_close.svg';//閉眼圖
+        flag = 0;
+      }
+    }

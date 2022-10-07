@@ -13,6 +13,7 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE member_sid=$user ORDER B
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-orderbtn.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 
 <div class="wrap">
@@ -140,7 +141,8 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE member_sid=$user ORDER B
                                         <div>訂單狀態</div>
                                     </div>
                                     <div class="order-detail">
-                                        <div><?= $o['order_date'] ?></div>
+                                        <div><?php $order_date = $o['order_date'];
+                                                echo substr($order_date, 0, 10) ?></div>
                                         <div><?= $o['pay'] ?></div>
                                         <div>NT$ <?= $o['amount'] ?></div>
                                         <div>處理中</div>

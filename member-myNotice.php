@@ -19,6 +19,7 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-noticebtn.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
     <div class="containerr">
@@ -191,16 +192,22 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
                         <!------------ notice details ------------>
 
+
+
                         <div class="noticeborder">
                             <div class="noticeDetails">
-                                <div class="noticeDetail-unread">
-                                    <p class="noticeDate">2022-10-01</p>
-                                    <p class="notice">
-                                        系統已收到新訂單!
-                                    </p>
-                                </div>
                                 <?php foreach ($membernotice as $n) : ?>
-                                    <div class="noticeDetail">
+                                    <button class="noticeken  <?php if ($n['readed'] == 1) {
+                                                                    echo "noticeDetail-unread";
+                                                                } else if ($n['readed'] == 2) {
+                                                                    echo "noticeDetail";
+                                                                }
+                                                                ?>" <?php
+                                                                    $linktogame = "onclick=location.href='http://localhost/blingbling/game.php'";
+                                                                    if ($n['notice_sid'] == 14 && ($n['readed'] == 1)) {
+                                                                        echo $linktogame;
+                                                                    };
+                                                                    ?> data-val="<?= $n['sid'] ?>" style="cursor: pointer;">
                                         <p class="noticeDate"><?= $n['notice_date'] ?></p>
                                         <p class="notice">
                                             <?php
@@ -208,7 +215,7 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
                                             $content = $pdo->query("SELECT * FROM notice WHERE `sid`= $nsid ")->fetchAll();
                                             echo $content[0]['content']  ?>
                                         </p>
-                                    </div>
+                                    </button>
                                 <?php endforeach; ?>
                             </div>
                         </div>
@@ -221,4 +228,18 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script src="./js/member.js"></script>
+<script>
+    $('.noticeken').click(function() {
+        let thisnotice = $(this).attr("data-val");
+        $.post(
+            "editnotice-api.php", {
+                thisnotice
+            },
+            function(data) {
+                thisnotice;
+                location.href = "member-myNotice.php"
+            }
+        )
+    })
+</script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

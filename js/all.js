@@ -81,50 +81,40 @@ $("span.clicktologin").click(function () {
   // $(".mb-login").addClass("mb-loginandsignup-show");
 });
 
+$('.member-loginBtn').click(function(){
+  $('.member-loginBtn').hide();
+  $('.member-logoutBtn').show();
+})
+//------jenni------
+function showCartCount(obj){
+  let count = 0;
+  for(let k in obj){
+      const item = obj[k];
+      count += +item.qty;
+  }
+  console.log(count);
+
+if(count == 0){
+  // console.log('0:',count);
+  $('.cart-none-point').removeClass('cart-red-point');
+}else if(count > 0){
+  // console.log('1:',count);
+  $('.cart-none-point').addClass('cart-red-point');
+
+}
+}
+
+$.get(
+'handle-cart.php',
+function(data){
+    showCartCount(data);
+},
+'json');
+
+
 //---拉拉historySection------------
 
-// function showHistoryList(obj){
-//   let list=0;
-
-//   for(let k in obj){
-//     const item = obj[k];
-
-//   }
-//   $('#historyList').
-// }
-
-// $.get(
-//   "history-api.php",
-//   function (data) {
-//     showHistoryList(data);
-//     console.log(data);
-//   },
-//   "json");
 
 
-// function showHistoryList(obj){
-//   let List = 0;
-//   for(let k in obj){
-//       const item = obj[k];
-//       // count += +item.qty;
-//   }
-//   console.log(count);
-  
-//   if(List == 0){
-//     // console.log('0:',count);
-//     $('.cart-none-point').removeClass('cart-red-point');
-//   }else if(count > 0){
-//     // console.log('1:',count);
-//     $('.cart-none-point').addClass('cart-red-point');
 
-//   }
-// }
 
-// $.get(
-//   'handle-cart.php',
-//   function(data){
-//       showCartCount(data);
-//   },
-//   'json');
-
-//   //

@@ -16,6 +16,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-introbtn.css">
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -31,6 +32,8 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 
                     <div class="left col-lg-3 col-xl-3">
                         <div class="myName">
+                            <!-- 拉拉TODO: -->
+                            <form action="upload-api.php" method="post" enctype="multipart/form-data">
                             <div class="photo">
                                 <div class="photoborder">
                                     <div class="myphoto">
@@ -45,6 +48,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                     </svg>
                                 </div>
                             </div>
+                            </form>
                             <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
                                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">

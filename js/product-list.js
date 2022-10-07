@@ -152,7 +152,21 @@ colorList = {
   gold: "金色",
 };
 
+const colorParams = location.search
+  .substr(1)
+  .split("&")
+  .filter((item) => decodeURI(item).indexOf("color[]=") != -1)
+  .map((item) => colorList[decodeURI(item).replace("color[]=", "")])
+  .join(", ");
+console.log("colorParams", colorParams);
+
+if (colorParams.length > 0) {
+  $("#color-span").text(colorParams).css("color", "#fff");
+}
+
 $(".filter-detail-back").click(function () {
+  colorArr.length = 0;
+  $(".addInput").empty();
   $("input[name=color]").each(function () {
     if ($(this).prop("checked")) {
       // console.log($(this).val());
@@ -168,11 +182,11 @@ $(".filter-detail-back").click(function () {
     // colorArr = [];
   });
   let color_zh = "";
+  // console.log("colorArr", colorArr);
   colorArr.forEach(function (el) {
-    // console.log(colorList[el]);
     color_zh += colorList[el] + ", ";
   });
-  // console.log(color_zh.substring(0, color_zh.length - 1));
+  console.log(color_zh.substring(0, color_zh.length - 2));
   $("#color-span")
     .text(color_zh.substring(0, color_zh.length - 2))
     .css("color", "#fff");
@@ -202,20 +216,18 @@ $(".heart").click(function () {
 //----拉拉 history區--------
 function addToHistory(event) {
   const addToHistoryBtn = $(event.currentTarget);
-  const HistorySid = addToHistoryBtn.attr("data-sid");
+  const sid = addToHistoryBtn.attr("data-sid");
   console.log({
-    HistorySid,
+    hi: "hello",
+    sid,
   });
 
   $.get(
     "history-api.php",
     {
-      HistorySid,
+      sid,
     },
-    function (data) {
-      showHistoryList(data);
-      console.log(data);
-    },
+
     "json"
   );
 }

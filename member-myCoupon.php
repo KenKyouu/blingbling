@@ -9,14 +9,18 @@ if (empty($_SESSION['user'])) {
 $user = $_SESSION['user']['id'];
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 $membercoupon = $pdo->query("SELECT * FROM member_coupon WHERE member_sid=$user ORDER BY `expiry_date`")->fetchAll();
-$couponsid = $membercoupon[0]['coupon_sid'];
-// echo json_encode($productsid);
-// exit;
-$coupon = $pdo->query("SELECT * FROM coupon WHERE `sid`=$couponsid")->fetchAll();
+if (!empty($couponsid)) {
+    $couponsid = $membercoupon[0]['coupon_sid'];
+    // echo json_encode($productsid);
+    // exit;
+    $coupon = $pdo->query("SELECT * FROM coupon WHERE `sid`=$couponsid")->fetchAll();
+}
+
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
 <link rel="stylesheet" href="./styles/member-all.css">
+<link rel="stylesheet" href="./styles/member-couponbtn.css">
 <?php include __DIR__ . '/parts/navbar.php'; ?>
 <div class="wrap">
     <div class="containerr">
@@ -154,16 +158,18 @@ $coupon = $pdo->query("SELECT * FROM coupon WHERE `sid`=$couponsid")->fetchAll()
                             </div>
                         </div>
                         <div class="validCoupon">
-                            <?php foreach ($membercoupon as $c) : ?>
-                                <div class="coupons">
-                                    <div class="coupon">
-                                        <img src="./images/coupon/coupon_<?= $c['coupon_sid'] ?>.png" alt="">
+                            <?php if (!empty($membercoupon)) : ?>
+                                <?php foreach ($membercoupon as $c) : ?>
+                                    <div class="coupons">
+                                        <div class="coupon">
+                                            <img src="./images/coupon/coupon_<?= $c['coupon_sid'] ?>.png" alt="">
+                                        </div>
+                                        <div class="couponInvalidDate">
+                                            <p>至&nbsp;<span><?= $c['expiry_date'] ?></span>&nbsp;截止</p>
+                                        </div>
                                     </div>
-                                    <div class="couponInvalidDate">
-                                        <p>至&nbsp;<span><?= $c['expiry_date'] ?></span>&nbsp;截止</p>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
