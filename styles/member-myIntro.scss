@@ -1086,21 +1086,18 @@ $bold: 900;
 }
 
 .uploadPhoto {
+    width: 375px;
+    height: auto;
+    border: 5px solid $lake-green;
+    border-radius: 44px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     p.editTitle {
         font-family: "GenSenRounded-B";
         font-size: $ps-font-size;
         color: $dark-gray;
-    }
-    .detail-input {
-        input {
-            width: 130px;
-            height: 38px;
-            border-radius: 10px;
-            border: 3px solid $light-lake-green;
-            color: $lake-green;
-            font-family: "GenSenRounded-B";
-            font-size: $ps-font-size;
-        }
     }
     .detailsbtn {
         margin-top: 20px;
