@@ -2150,11 +2150,13 @@ $bold: 900;
                         padding: 0 10px;
                         font-family: "GenSenRounded-B";
                         font-size: $ps-font-size;
+                        color: $super-dark;
                     }
 
                     ::-webkit-input-placeholder {
                         color: $gray;
                     }
+                    
 
                     select {
                         width: 100px;
@@ -2182,11 +2184,12 @@ $bold: 900;
                         background-color: rgba(0, 0, 0, 0);
                         border: 2px solid $lake-green;
                         padding: 0 10px;
-                        color: $gray;
+                        // color: $gray;
                         font-family: "GenSenRounded-B";
                         font-size: $ps-font-size;
                         text-align: center;
                         margin-right: 10px;
+                        color: $super-dark;
                     }
                     .appendtag {
                         width: 200px;
@@ -2194,7 +2197,7 @@ $bold: 900;
                         border-radius: 10px;
                         background-color: rgba(0, 0, 0, 0);
                         border: 2px solid $lake-green;
-                        padding: 10px 8px;
+                        padding: 13px 8px;
                         display: flex;
                         align-items: center;
                         flex-wrap: wrap;
@@ -2355,6 +2358,7 @@ $bold: 900;
                         padding: 0 10px;
                         font-family: "GenSenRounded-B";
                         font-size: $ps-font-size;
+                        color: $super-dark;
                     }
 
                     ::-webkit-input-placeholder {
@@ -2387,11 +2391,11 @@ $bold: 900;
                         background-color: rgba(0, 0, 0, 0);
                         border: 2px solid $lake-green;
                         padding: 0 10px;
-                        color: $gray;
                         font-family: "GenSenRounded-B";
                         font-size: $ps-font-size;
                         text-align: center;
                         margin-right: 10px;
+                        color: $super-dark;
                     }
                     .appendtag {
                         width: 200px;
@@ -2399,7 +2403,7 @@ $bold: 900;
                         border-radius: 10px;
                         background-color: rgba(0, 0, 0, 0);
                         border: 2px solid $lake-green;
-                        padding: 10px 8px;
+                        padding: 13px 8px;
                         display: flex;
                         align-items: center;
                         flex-wrap: wrap;
@@ -3194,7 +3198,7 @@ $bold: 900;
                                 }
                             }
                             .friendGroupTitle {
-                                padding-right: 17px;
+                                // padding-right: 17px;
                                 .f-name {
                                     font-size: $ps-font-size;
                                     font-family: "GenSenRounded-B";
@@ -3382,13 +3386,13 @@ $bold: 900;
                             .couponTitle {
                                 margin: 40px 0 10px 0;
                                 .couponName {
-                                    width: 68%;
+                                    width: 70%;
                                     p.couponName {
                                         font-size: $p-font-size;
                                     }
                                 }
                                 .couponDate {
-                                    width: 32%;
+                                    width: 30%;
                                     p.couponDate {
                                         font-size: $p-font-size;
                                     }
@@ -3548,6 +3552,7 @@ $bold: 900;
                             padding: 0 10px;
                             font-family: "GenSenRounded-B";
                             font-size: $p-font-size;
+                            color: $super-dark;
                         }
 
                         ::-webkit-input-placeholder {
@@ -3580,15 +3585,16 @@ $bold: 900;
                             background-color: rgba(0, 0, 0, 0);
                             border: 2px solid $lake-green;
                             padding: 0 10px;
-                            color: $gray;
                             font-family: "GenSenRounded-B";
                             font-size: $p-font-size;
                             text-align: center;
                             margin-right: 20px;
+                            color: $super-dark;
                         }
 
                         .appendtag {
                             width: 400px;
+                            padding: 15px 8px;
                             span {
                                 font-size: $p-font-size;
                             }
@@ -3717,6 +3723,7 @@ $bold: 900;
                             padding: 0 10px;
                             font-family: "GenSenRounded-B";
                             font-size: $p-font-size;
+                            color: $super-dark;
                         }
 
                         ::-webkit-input-placeholder {
@@ -3749,15 +3756,16 @@ $bold: 900;
                             background-color: rgba(0, 0, 0, 0);
                             border: 2px solid $lake-green;
                             padding: 0 10px;
-                            color: $gray;
                             font-family: "GenSenRounded-B";
                             font-size: $p-font-size;
                             text-align: center;
                             margin-right: 20px;
+                            color: $super-dark;
                         }
 
                         .appendtag {
                             width: 400px;
+                            padding: 15px 8px;
                             span {
                                 font-size: $p-font-size;
                             }
