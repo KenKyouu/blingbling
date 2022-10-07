@@ -395,7 +395,10 @@ body {
   .banner {
     width: 100%;
     height: 160px;
-    background-image: url("https://picsum.photos/id/1008/1920/375");
+    // background-image: url("https://picsum.photos/id/1008/1920/375");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: relative;
     box-shadow: 5px 10px 12px $gray;
     @media screen and (min-width: 768px) {
@@ -404,6 +407,7 @@ body {
     .class {
       padding: 5px 15px;
       border: 1px solid $white;
+      background-color: $lake-green;
       border-radius: 4px;
       display: flex;
       justify-content: center;

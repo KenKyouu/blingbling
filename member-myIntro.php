@@ -33,6 +33,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <div class="left col-lg-3 col-xl-3">
                         <div class="myName">
                             <!-- 拉拉TODO: -->
+
                             <form id="img-load" name="form1" onsubmit="return false">
                                 <div class="photo">
                                     <div class="photoborder">
@@ -40,6 +41,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                             <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
                                             <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
                                         </div>
+
                                     </div>
                                     <label name="avatar" for="file" class="photoedit">
                                         <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,7 +245,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         </div>
                                     </div>
                                     <div class="myIntro-info">
-                                        <p class="myIntro-info"><?= $member[0]['gender'] ?></p>
+                                        <p class="myIntro-info"><?= $member[0]['gender'] == 'male' ? '男' : '女' ?></p>
                                     </div>
                                 </div>
                                 <div class="birthday">
@@ -360,7 +362,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <p><span>*</span> 姓名</p>
                                                     </div>
                                                     <div class="detail-input">
-                                                        <input type="text" name="infoname" id="name" placeholder="您的姓名或暱稱" required>
+                                                        <input type="text" name="infoname" id="name" placeholder="您的姓名或暱稱" value="<?php if (!empty($member[0]['name'])) {
+                                                                                                                                        echo $member[0]['name'];
+                                                                                                                                    } ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="detail">
@@ -369,8 +373,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     </div>
                                                     <div class="detail-input">
                                                         <select name="infogender" placeholder="請選擇" id="gender" required>
-                                                            <option value="male">男</option>
-                                                            <option value="female">女</option>
+                                                            <?php $selected = "selected='selected'" ?>
+                                                            <option value="male" <?= $member[0]['gender'] == 'male' ? $selected : ''; ?>>男</option>
+                                                            <option value="female" <?= $member[0]['gender'] == 'female' ? $selected : ''; ?>>女</option>
                                                             <!-- <option value="others">不顯示</option> -->
                                                         </select>
                                                     </div>
@@ -398,7 +403,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <p><span>*</span> 聯絡電話</p>
                                                     </div>
                                                     <div class="detail-input">
-                                                        <input type="text" name="infomobile" id="phone" placeholder="您的聯絡電話" minlength="10" maxlength="10" required>
+                                                        <input type="text" name="infomobile" id="phone" placeholder="您的聯絡電話" minlength="10" maxlength="10" value="<?php if (!empty($member[0]['mobile'])) {
+                                                                                                                                                                        echo $member[0]['mobile'];
+                                                                                                                                                                    } ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="detail">
@@ -406,7 +413,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <p><span>*</span> 聯絡地址</p>
                                                     </div>
                                                     <div class="detail-input">
-                                                        <input type="text" name="infoaddress" id="address" placeholder="您的聯絡地址" required>
+                                                        <input type="text" name="infoaddress" id="address" placeholder="您的聯絡地址" value="<?php if (!empty($member[0]['address'])) {
+                                                                                                                                            echo $member[0]['address'];
+                                                                                                                                        } ?>" required>
                                                     </div>
                                                 </div>
                                             </div>

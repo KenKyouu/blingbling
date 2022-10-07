@@ -350,6 +350,15 @@ $today = date('m/d');
     let tagvalueArr = [];
     let inputname = 1;
 
+    $('.tagbyken, span.kenken').click(function() {
+        if (tagvalueArr.length < 5) {
+            $(this).css({
+                'background-color': '#000000',
+                'color': '#ffffff'
+            })
+        }
+    })
+
     $('.tagbyken').click(function() {
         if (tagvalueArr.length < 5) {
             let tagname = $(this).text();
@@ -397,21 +406,14 @@ $today = date('m/d');
 
 
     $('.tagbyken, span.kenken').click(function() {
-        $(this).css({
-            'background-color': '#000000',
-            'color': '#ffffff'
-        })
-        // let hasvalue = $(this).attr('data-val');
-        // if (tagvalueArr.hasOwnProperty(hasvalue)) {
-        //     console.log("aiefjoawiofje")
-        //     $('.tagbyken').css({
-        //         'background-color': '#ffffff',
-        //         'color': '#000000'
-        //     })
-        // } else {
-        //     console.log("noononon")
-        // }
+        if (tagvalueArr.length < 5) {
+            $(this).css({
+                'background-color': '#000000',
+                'color': '#ffffff'
+            })
+        }
     })
+
 
 
 
