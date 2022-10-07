@@ -34,7 +34,7 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
                             <div class="photo">
                                 <div class="photoborder">
                                     <div class="myphoto">
-                                        <img src="./images/elf_logo.png" alt="" class="photo">
+                                        <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
                                     </div>
                                 </div>
                                 <div class="photoedit">
