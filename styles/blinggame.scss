@@ -88,25 +88,25 @@ $bold: 900;
 
 #app{
   width: 1920px;
-  height: 1000px;
+  height: 935px;
   position: relative;
   .coin{
     position: absolute;
     // font-size: $h1-font-size;
     // font-family: "GenSenRounded-B";
     // // color: $lake-green;
-    top: 120px;
+    top: 80px;
     left: 100px;
     z-index: 10; 
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
   }
   .winNum{
       position: absolute;
       font-size: $h2-font-size;
       font-family: "GenSenRounded-B";
       color: $lake-green;
-      top: 130px;
+      top: 90px;
       left: 175px;
       z-index: 10;    
   }
@@ -179,8 +179,8 @@ $bold: 900;
 .hpBar{
   z-index: 10;
   position: absolute;
-  top: 130px;
-  right: 150px;
+  top: 80px;
+  right: 160px;
   // width: 145px;
   display: flex;
   align-items: center;
@@ -190,8 +190,8 @@ $bold: 900;
     // color: $lake-green;
     padding-right: 20px;
     img{
-      width: 65px;
-      height: 65px;
+      width: 60px;
+      height: 60px;
     }
   }
   .hpBox{
@@ -207,6 +207,6 @@ $bold: 900;
       }
   }
 }
-
-
-
+#canvas{
+  bottom: 0;
+}
