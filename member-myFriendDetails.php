@@ -376,22 +376,17 @@ if (!empty($friendismember)) {
                 </div>
                 <div class="detail-input">
                     <div class="appendtag">
-                        <!-- <span>最多選擇五個</span> -->
-                        <div class="tag">
-                            <span>沙發馬鈴薯</span>
-                        </div>
-                        <div class="tag">
-                            <span>沙發馬鈴薯</span>
-                        </div>
-                        <div class="tag">
-                            <span>沙發馬鈴薯</span>
-                        </div>
-                        <div class="tag">
-                            <span>沙發馬鈴薯</span>
-                        </div>
-                        <div class="tag">
-                            <span>沙發馬鈴薯</span>
-                        </div>
+                        <?php if (!empty($friendtags)) : ?>
+                            <?php foreach ($friendtags as $ft) : ?>
+                                <input type='text' name='friendtag[]' value='<?= $ft['tag_sid'] ?>' hidden></input>
+                                <div class="tag" data-val="<?= $ft['tag_sid'] ?>">
+                                    <span class="kenken" data-val="<?= $ft['tag_sid'] ?>"><?php
+                                                                                            $ftsid = $ft['tag_sid'];
+                                                                                            $ftshow = $pdo->query("SELECT * FROM tag WHERE `sid`= $ftsid ")->fetchAll();
+                                                                                            echo $ftshow[0]['name']; ?></span>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -401,7 +396,13 @@ if (!empty($friendismember)) {
                     <div class="tagsselect">
                         <div class="tags">
                             <?php foreach ($tags as $t) : ?>
-                                <span class="tagbyken" data-val="<?= $t['sid'] ?>"><?= $t['name'] ?></span>
+                                <span class="tagbyken <?= $t['sid'] ?>" data-val="<?= $t['sid'] ?>" style="<?php
+                                                                                                            if (!empty($friendtags)) {
+                                                                                                                foreach ($friendtags as $ft) {
+                                                                                                                    echo $ft['tag_sid'] == $t['sid'] ? 'background-color: #000000; color: #ffffff' : '';
+                                                                                                                };
+                                                                                                            };
+                                                                                                            ?>"><?= $t['name'] ?></span>
                             <?php endforeach; ?>
                         </div>
                     </div>
@@ -449,18 +450,61 @@ if (!empty($friendismember)) {
 
     let tagnameArr = [];
     let tagvalueArr = [];
+    <?php foreach ($friendtags as $ft) : ?>
+        tagvalueArr.push(<?= $ft['tag_sid']; ?>);
+    <?php endforeach; ?>
+    console.log(tagvalueArr)
     let inputname = 1;
     $('.tagbyken').click(function() {
-        let tagname = $(this).text();
-        let tagvalue = $(this).attr('data-val');
-        tagnameArr.push(tagname);
-        tagvalueArr.push(tagvalue);
-        console.log(tagvalueArr)
-        $('.appendtag').append(
-            "<input type='text' name='friendtag[]' value='" +
-            tagvalue +
-            "' hidden></input>"
-        )
+        if (tagvalueArr.length < 5) {
+            let tagname = $(this).text();
+            let tagvalue = $(this).attr('data-val');
+            tagnameArr.push(tagname);
+            tagvalueArr.push(tagvalue);
+            console.log(tagvalueArr)
+            $('.appendtag').append(
+                "<input type='text' name='friendtag[]' value='" +
+                tagvalue +
+                "' hidden></input>"
+            )
+            $('.appendtag').append(
+                "<div class='tag' data-val='" + tagvalue + "'><span class='kenken' data-val='" + tagvalue + "'>" + tagname + "</span></div>"
+            )
+        }
+    })
+    $('button.clean').click(function() {
+        $('.appendtag').empty();
+        tagvalueArr.length = 0;
+        $('.tagbyken').css({
+            'background-color': '#ffffff',
+            'color': '#000000'
+        })
+    })
+    $('.appendtag').on("click", 'span.kenken', function() {
+        const thisval = $(this).attr('data-val');
+        console.log("1." + thisval);
+
+        for (let j = 0; j < tagvalueArr.length; j++) {
+            if (tagvalueArr[j] === thisval) {
+                tagvalueArr.splice(j, 1);
+            }
+        }
+        // console.log($(this).parent());
+        // console.log($(this).parent().prev('input'));
+        ($(this).parent().parent().parent().parent().next().find(`span.${thisval}`)).css({
+            'background-color': '#ffffff',
+            'color': '#000000'
+        });
+        ($(this).parent().prev('input')).remove();
+        ($(this).parent()).remove();
+        $(this).remove();
+        console.log(tagvalueArr);
+    })
+    $('.tagbyken, span.kenken').click(function() {
+        $(this).css({
+            'background-color': '#000000',
+            'color': '#ffffff'
+        })
     })
 </script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
