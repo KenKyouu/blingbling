@@ -260,7 +260,8 @@ $bold: 900;
                                     width: 280px;
                                     height: 420px;
                                     border-radius: 10px;
-                                    box-shadow: 1px 0 10px $dark-gray;
+                                    box-shadow: 3px 6px 10px  rgba(0,0,0,0.08);
+                                    // box-shadow: 1px 0 10px $dark-gray;
 
                                     img.memberCard {
                                         width: 100%;
@@ -1484,6 +1485,10 @@ $bold: 900;
                                         height: 20px;
                                         border: none;
                                         background-color: rgba(255, 255, 255, 0);
+                                        transition: .5s;
+                                        &:hover{
+                                            transform: scale(1.2);
+                                        }
                                     }
                                 }
 
@@ -2715,7 +2720,10 @@ $bold: 900;
 
 @media screen and (min-width:992px) {
     .wrap {
-        background-image: url(../images/other_bg_paper.png);
+        background-image: url(../images/web_bg_down-2.png),url(../images/other_bg_paper.png);
+        background-repeat: no-repeat,repeat;
+        background-size:100%,auto;
+        background-position:bottom, 0%;
 
         .containerr {
             margin: 0 5%;
