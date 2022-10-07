@@ -306,7 +306,6 @@ if (!empty($membercoupon)) {
                 </div>
 
                 <div class="col-6 d-flex j-relative">
-
                     <label class="discount-radio j-point d-flex">
                         <h3 class="pl-4 pt-1 mr-2">全折抵</h3>
                         <input type="radio" name="giftvoucher" class="default-package j-gift-voucher voucher" data-val="<?= $member[0]['gift_voucher'] ?>">
@@ -460,7 +459,7 @@ if (!empty($membercoupon)) {
             </div>
 
             <div class="col subtitle-btn">
-                <a href="./cart2.php">
+                <a class="w-100" href="./cart2.php">
                     <button class="cart1-check" onclick="addToOrder(event)">前往結帳</button>
                 </a>
             </div>
@@ -561,15 +560,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/festival-01.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-035.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>創意小物館 夜光月球遙控小夜燈</h3>
+                            <h3>儀式感首選必備 聖誕裝飾樹</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice">296</p>
+                                <p class="additionalPrice">799</p>
                             </div>
                         </div>
                     </div>
@@ -582,10 +581,10 @@ if (!empty($membercoupon)) {
                         </div>
 
                         <div class="info-wrap">
-                            <h3>怦然心動 永生花小夜燈</h3>
+                            <h3>茗月共賞 中秋星級聯名月餅禮盒-萃釅×TASTE</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">1480</p>
+                                <p class="additionalPrice pt-1">1,680</p>
                             </div>
                         </div>
                     </div>
@@ -593,15 +592,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/festival-03.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-005.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>太空人磁懸浮藍芽音箱 坐姿款 - 銀色</h3>
+                            <h3>Harry Pottery 藥水瓶燈</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">1052</p>
+                                <p class="additionalPrice pt-1">1,280</p>
                             </div>
                         </div>
                     </div>
@@ -609,15 +608,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/festival-04.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-011.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>Light光印樣 月亮與小兔 中秋小夜燈</h3>
+                            <h3>聖誕配對 雪花燈串燈飾布置</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">864</p>
+                                <p class="additionalPrice pt-1">990</p>
                             </div>
                         </div>
                     </div>
@@ -630,10 +629,10 @@ if (!empty($membercoupon)) {
                         </div>
 
                         <div class="info-wrap">
-                            <h3>La Millou 豆豆安撫兔禮盒組</h3>
+                            <h3>月下邱比特 愛麗絲夢遊仙境特別版 雙層餅乾月餅禮盒限定組</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice">1998</p>
+                                <p class="additionalPrice">1,590</p>
                             </div>
                         </div>
                     </div>
@@ -641,15 +640,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/festival-06.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-008.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>mamaway 無袖傘狀背心+寬褲兩件式套裝 綠-S</h3>
+                            <h3>萬聖節限定 手作惡魔南瓜盒</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">1680</p>
+                                <p class="additionalPrice pt-1">400</p>
                             </div>
                         </div>
                     </div>
@@ -662,10 +661,10 @@ if (!empty($membercoupon)) {
                         </div>
 
                         <div class="info-wrap">
-                            <h3>Lassig 時尚完美大開口後背媽媽包 粉色-M</h3>
+                            <h3>醉茶－玉雪白茶套裝</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">2,129</p>
+                                <p class="additionalPrice pt-1">1,599</p>
                             </div>
                         </div>
                     </div>
@@ -673,15 +672,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/festival-08.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-012.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>小王子聯名 閃耀星空8結彌月提盒</h3>
+                            <h3>聖誕佈置唯美LED星星燈具組</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">300</p>
+                                <p class="additionalPrice pt-1">309</p>
                             </div>
                         </div>
                     </div>
@@ -689,15 +688,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/populer-01.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-002.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>La Millou 豆豆安撫兔禮盒組</h3>
+                            <h3>烏克麗麗 ukelele 夾式耳環－吉他款</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice">1998</p>
+                                <p class="additionalPrice">490</p>
                             </div>
                         </div>
                     </div>
@@ -705,15 +704,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/populer-02.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-006.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>mamaway 無袖傘狀背心+寬褲兩件式套裝 綠-S</h3>
+                            <h3>萬聖節交換禮物 南瓜造型療癒床頭燈 夜燈 3D小夜燈</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">1680</p>
+                                <p class="additionalPrice pt-1">1,280</p>
                             </div>
                         </div>
                     </div>
@@ -721,15 +720,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/populer-03.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-036.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>Lassig 時尚完美大開口後背媽媽包 粉色-M</h3>
+                            <h3>交換禮物首選 手工琉璃聖誕擴香禮盒組 2022限定款</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">2,129</p>
+                                <p class="additionalPrice pt-1">1,299</p>
                             </div>
                         </div>
                     </div>
@@ -737,15 +736,15 @@ if (!empty($membercoupon)) {
                     <div class="additional-product-card">
                         <div class="img-wrap w-100">
                             <div class="img-bg">
-                                <img class="w-100" src="./images/products/festival-02.jpeg" alt="">
+                                <img class="w-100" src="./images/products/tag-item-013.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="info-wrap">
-                            <h3>怦然心動 永生花小夜燈</h3>
+                            <h3>蒂芬妮派對 生日快樂套派對氣球套裝組</h3>
 
                             <div class="cta-btn d-flex">
-                                <p class="additionalPrice pt-1">1480</p>
+                                <p class="additionalPrice pt-1">495</p>
                             </div>
                         </div>
                     </div>
