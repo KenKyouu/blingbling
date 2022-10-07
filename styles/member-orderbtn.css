@@ -1,0 +1,14 @@
+@media screen and (min-width: 992px) {
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a#btn3 {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a#btn3 .btnsvg .ordersvg path {
+    fill: #4c4948;
+    stroke: #4c4948;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a#btn3 .btnP {
+    color: #4c4948;
+  }
+}
+/*# sourceMappingURL=member-orderbtn.css.map */

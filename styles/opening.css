@@ -1,0 +1,34 @@
+* {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  background-color: #ca3f68;
+  color: #ffffff;
+}
+/*# sourceMappingURL=opening.css.map */

@@ -1,23 +1,28 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+
 .pc-signup {
   width: 100%;
   height: 100vh;
 }
+
 .pc-signup .signup-bg {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
@@ -26,6 +31,7 @@
   left: 0%;
   right: 0;
 }
+
 .pc-signup .signup-box {
   z-index: 2;
   width: 90%;
@@ -33,20 +39,24 @@
   max-width: 933px;
   top: 50vh;
   left: 50vw;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   background: url(../images/pc-signup.svg) no-repeat;
   background-size: 100% 100%;
 }
+
 .pc-signup .signup-box .pc-signup-info {
   width: 28.5%;
   position: absolute;
   top: 25%;
   left: 45%;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container {
   width: 130%;
   padding-top: 15%;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
   width: 90%;
   font-family: "GenSenRounded-B";
@@ -57,100 +67,120 @@
   outline: none;
   padding-bottom: 2%;
 }
+
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
     width: 85%;
   }
 }
+
 @media screen and (max-width: 909px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
     width: 80%;
   }
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .mail-input {
   padding-top: 2%;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input {
   padding-top: 5%;
   position: relative;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input .eye-close {
   position: absolute;
   top: 20px;
   right: 5px;
 }
+
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input .eye-close {
     top: 20px;
     right: 22px;
   }
 }
+
 @media screen and (max-width: 909px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input .eye-close {
     top: 16px;
     right: 30px;
   }
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-input p {
   padding-top: 2px;
   padding-left: 30px;
   font-weight: bold;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input {
   padding-top: 5%;
   width: 100%;
   margin-left: 30px;
   position: relative;
 }
+
 @media screen and (max-width: 909px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input {
     width: 100%;
   }
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input .eye-close {
   position: absolute;
   top: 20px;
   right: 35px;
 }
+
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input .eye-close {
     top: 15px;
     right: 50px;
   }
 }
+
 @media screen and (max-width: 909px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input .eye-close {
     top: 16px;
     right: 60px;
   }
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .password-corret-input p {
   padding-top: 2px;
   padding-left: 30px;
   font-weight: bold;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input {
   padding-top: 5%;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input input {
   text-align: center;
   width: 28%;
   margin: 0 3px;
 }
+
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input input {
     width: 26%;
   }
 }
+
 @media screen and (max-width: 909px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input input {
     width: 25%;
   }
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input .bd-input-1 {
   text-align: left;
   margin-left: 0;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .bd-input p {
   padding-left: 12%;
   padding-top: 3px;
@@ -160,6 +190,7 @@
   font-size: 11px;
   color: #4c4948;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .sign-p {
   font-family: "Roboto";
   font-weight: bold;
@@ -168,9 +199,11 @@
   text-align: left;
   padding: 5px 5px 8px 0px;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .sign-p a {
   color: #154d7a;
 }
+
 .pc-signup .signup-box .pc-signup-info .pc-signup-container .signup-btn {
   width: 150px;
   height: 35px;
@@ -180,9 +213,14 @@
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 16px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .pc-signup .signup-box .pc-signup-info .or {
   text-align: center;
   font-family: "GenSenRounded-B";
@@ -190,40 +228,62 @@
   color: #4c4948;
   padding-bottom: 10px;
 }
+
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .or {
     padding-top: 5%;
   }
 }
+
 @media screen and (min-width: 910px) {
   .pc-signup .signup-box .pc-signup-info .or {
     padding-top: 8%;
   }
 }
+
 .pc-signup .signup-box .pc-signup-info .orwith-icon {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .pc-signup .signup-box .pc-signup-info .orwith-icon .fb-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: rgba(194, 194, 194, 0.2901960784);
+  background-color: #c2c2c24a;
   border-radius: 10px;
   margin-right: 10px;
 }
+
 .pc-signup .signup-box .pc-signup-info .orwith-icon .google-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: rgba(194, 194, 194, 0.2901960784);
+  background-color: #c2c2c24a;
   border-radius: 10px;
 }
+
 .pc-signup .signup-box .pc-signup-info .not-member {
   padding-top: 20px;
   font-family: "GenSenRounded-B";
@@ -231,10 +291,12 @@
   text-align: center;
   color: #4c4948;
 }
+
 .pc-signup .signup-box .pc-signup-info .not-member a {
   color: #7cb2af;
 }
 
 .signup-show {
   position: fixed;
-}/*# sourceMappingURL=pc-signup.css.map */
+}
+/*# sourceMappingURL=pc-signup.css.map */
