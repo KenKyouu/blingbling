@@ -1,4 +1,3 @@
-
 let lastScroll = 0;
 $(window).scroll(function () {
     let scrollNow = $(window).scrollTop();
@@ -21,6 +20,9 @@ $('#arrowRight').click(function () {
         nowPage = nowPage + 1;
     }
     moveX(nowPage);
+
+    let i = nowPage + 1;
+    $(`.dot-group>li:nth-child(${i})`).addClass('active').prev().removeClass('active');
 })
 
 $('#arrowLeft').click(function () {
@@ -28,6 +30,9 @@ $('#arrowLeft').click(function () {
         nowPage = nowPage - 1;
     }
     moveX(nowPage);
+
+    let i = nowPage + 1;
+    $(`.dot-group>li:nth-child(${i})`).addClass('active').next().removeClass('active');
 })
 
 // 居家生活第一篇
@@ -36,6 +41,9 @@ $('#livingArrowRight').click(function () {
         nowPage = nowPage + 1;
     }
     moveX(nowPage);
+
+    let x = nowPage + 1;
+    $(`.living-dot-group>li:nth-child(${x})`).addClass('active').prev().removeClass('active');
 })
 
 $('#livingArrowLeft').click(function () {
@@ -43,6 +51,9 @@ $('#livingArrowLeft').click(function () {
         nowPage = nowPage - 1;
     }
     moveX(nowPage);
+
+    let x = nowPage + 1;
+    $(`.living-dot-group>li:nth-child(${x})`).addClass('active').next().removeClass('active');
 })
 
 // 數位家電第二篇
@@ -51,6 +62,9 @@ $('#houseArrowRight').click(function () {
         nowPage = nowPage + 1;
     }
     moveX(nowPage);
+
+    let y = nowPage + 1;
+    $(`.house-dot-group>li:nth-child(${y})`).addClass('active').prev().removeClass('active');
 })
 
 $('#houseArrowLeft').click(function () {
@@ -58,6 +72,9 @@ $('#houseArrowLeft').click(function () {
         nowPage = nowPage - 1;
     }
     moveX(nowPage);
+
+    let y = nowPage + 1;
+    $(`.house-dot-group>li:nth-child(${y})`).addClass('active').next().removeClass('active');
 })
 
 function moveX(nowPage) {
@@ -70,6 +87,15 @@ $('.article-page > svg').click(function () {
     moveX(nowPage);
 })
 
+
+// $('.arrowRight').on('click', function () {
+//     let dotPage = $(this).index();
+//     let dotmovement = $(this).index() * -20;
+//     $(this).addClass('active').siblings().removeClass('active');
+//     $('.swiper-train-btn > li').css('transform', `translateX(${dotmovement}%)`)
+// })
+
+// ---------------------------------------------------------------------------
 // 各文章標籤分類
 $('#mbNewsBeauty,#pcNewsBeauty').click(function () {
     $('#beautySection').css('display', 'block');
