@@ -59,7 +59,7 @@ $ps-font-size: 14px;
 $bold: 900;
 
 body {
-    background: url(../images/index-bg_paper.png) center center / cover repeat-y;
+    background: url(../images/index-bg_paper.png) center center / contain repeat-y;
 }
 
 .header-hidden {
@@ -169,6 +169,7 @@ body {
         font-weight: 700;
         color: $super-dark;
         padding-bottom: 10px;
+        line-height: 2rem;
     }
 
     .article-ribbon {
@@ -238,6 +239,7 @@ body {
         font-weight: 700;
         color: $super-dark;
         padding-bottom: 10px;
+        line-height: 2rem;
     }
 
     .article-ribbon {
@@ -287,6 +289,7 @@ body {
                         color: $super-dark;
                         text-align: justify;
                         padding-top: 5px;
+                        line-height: 1.5rem;
                     }
 
                     .sub-content p {
@@ -297,6 +300,7 @@ body {
                         padding: 20px 0 0;
                         height: 150px;
                         overflow-y: hidden;
+                        line-height: 1rem;
                     }
                 }
             }
@@ -331,6 +335,7 @@ body {
         color: $super-dark;
         text-align: justify;
         padding-top: 5px;
+        line-height: 1.5rem;
     }
 
     .sub-content p {
@@ -341,6 +346,7 @@ body {
         padding: 20px 0 0;
         height: 110px;
         overflow-y: hidden;
+        line-height: 1.5rem;
     }
 }
 
@@ -375,6 +381,7 @@ body {
                                     padding: 10px 0 0;
                                     height: 150px;
                                     overflow-y: hidden;
+                                    line-height: 1rem;
                                 }
                             }
                         }
@@ -425,6 +432,7 @@ body {
                 .article-title {
                     font-size: $h4-font-size;
                     font-weight: 900;
+                    line-height: 2rem;
                 }
 
                 .kol-wrap {
@@ -502,6 +510,7 @@ body {
                 .article-title {
                     font-size: $h3-font-size;
                     font-weight: 900;
+                    line-height: 2rem;
                 }
 
                 .article-ribbon {
@@ -528,12 +537,13 @@ body {
 
                             h6 {
                                 font-size: $h5-font-size;
+                                line-height: 1.5rem;
                             }
 
                             p {
                                 height: 165px;
                                 font-size: $ps-font-size;
-                                line-height: 1.3rem;
+                                line-height: 1.5rem;
                             }
                         }
                     }
