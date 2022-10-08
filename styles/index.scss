@@ -317,28 +317,43 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
   }
   .w-indexScrollTop{
+    display: none;
     position: fixed;
     z-index: 19;
     bottom: 2%;
     right: 2%;
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    @media (min-width:768px) {
+      width: 50px;
+      height: 50px;
+    }
     .scrollBtn{
       width: 100%;
       height: 100%;
-      img{
+      transition: .5s;
+      svg{
         width: 100%;
         object-fit: contain;
+        .cls-1{
+          fill:#fff
+        }
+        .cls-2{
+          fill:#6b9995;
+          opacity: .65;
+          transition: .5s;
+          &:hover{
+            fill:$deep-brown;
+          }
+        }
       }
     }
   }
 }
-// #menuFixed{
-//   display: none;
-// }
-// .menuFixed{
-//   display: flex;
-// }
+.ScrollHidden{
+  transform: translateY(100px);
+}
 //--------vue卡片--------------------------
 .p-index-container {
   margin-top: 100px;
@@ -1796,7 +1811,6 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             }
             100% {
               transform: translateX(calc(-200px * 10))
-                // transform: translateX(-50%);
             }
           }
         }

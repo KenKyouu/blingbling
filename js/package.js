@@ -155,13 +155,14 @@ $(".w-CardStyle-3").click(function(){
 
 
 //換頁功能--------
-$('#w-step1BtnPackage-pre').click(function(){
+$('#giftLightSkip_cm').click(function(){
     // console.log('hi2')
     $('.w-newpackageSection').css('display', 'none');
     $('#c').css('display', 'none');    
     $('.w-newCardSection').css('display', 'flex');
     $('.stepTop2').css('background','#2d827d')
     $('.stepTop2').css('color','#ffffff')
+    $('.giftBoxLightBox-Skip').css('display','none');
 });
 $('#w-step1BtnPackage-next').click(function(){
     $('.w-newpackageSection').css('display', 'none');
@@ -172,13 +173,14 @@ $('#w-step1BtnPackage-next').click(function(){
     $('.stepTop2').css('color','#ffffff')
 })
 
-$('#w-step2BtnCard-pre').click(function(){
+$('#CardLightSkip_cm').click(function(){
     $('.w-newCardSection').css('display', 'none');
     $('.w-newpackageSection').css('display', 'none');
     $('#c').css('display', 'none');
     $('.w-newFinishSection').css('display', 'flex');
-    $('.stepTop3').css('background','#ca3f68')
-    $('.stepTop3').css('color','#ffffff')
+    $('.stepTop3').css('background','#ca3f68');
+    $('.stepTop3').css('color','#ffffff');
+    $('.giftCardLightBox-Skip').css('display','none');
 })
 
 $('#w-step2BtnCard-next').click(function(){
@@ -188,6 +190,11 @@ $('#w-step2BtnCard-next').click(function(){
     $('.w-newFinishSection').css('display', 'flex');
     $('.stepTop3').css('background','#ca3f68')
     $('.stepTop3').css('color','#ffffff')
+})
+
+$('#step3Btn-clean').click(function(){
+    console.log('ii')
+    $('.giftBoxLightBox').css('display','flex');
 })
 
 //----canvas-dataurl----------------------
@@ -228,3 +235,21 @@ function bgImage(){
     $('#CardShowArea-Content').text(content);
 
 }
+//------------lightBox-------------
+$('#giftLight_cl').click(function(){
+    $('.giftBoxLightBox').css('display','none');
+})
+$('#giftLighSkip_cl').click(function(){
+    $('.giftBoxLightBox-Skip').css('display','none');
+})
+$('#w-step1BtnPackage-pre').click(function(){
+    $('.giftBoxLightBox-Skip').css('display','flex');
+})
+$('#w-step2BtnCard-pre').click(function(){
+    $('.giftCardLightBox-Skip').css('display','flex');
+})
+$('#CardLighSkip_cl').click(function(){
+    $('.giftCardLightBox-Skip').css('display','none');
+})
+
+

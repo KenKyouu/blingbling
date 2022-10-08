@@ -1251,20 +1251,22 @@ html {
         padding: 3px 5px;
         background-color: $super-dark;
         border-radius: 10px;
-        border: 1.5px solid $super-dark;
+        border: 2px solid $super-dark;
         font-family: "GenSenRounded-M";
         font-size: $ps-font-size;
         color: $white;
+        transition: .5s;
         @media (min-width:376px) {
           margin-right: 20px;
           font-size: $p-font-size;
           padding: 6px 5px;
-          width: 90px;
+          width: 95px;
         }
       }
       .w-p-new-skipBtn:hover{
         color: $white;
         background-color: $lake-green;
+        border: 2px solid $light-lake-green;
         transition: .5s;
       }
     }
@@ -2061,7 +2063,7 @@ html {
     bottom: 10%;
   }
   @media (min-width:768px) {
-    right: 29%;
+    right: 28%;
     bottom: 10%;
   }
   .w-newCard-skipBtn{
@@ -2075,20 +2077,22 @@ html {
     padding: 3px 5px;
     background-color: $super-dark;
     border-radius: 10px;
-    border: 1.5px solid $super-dark;
+    border: 2px solid $super-dark;
     font-family: "GenSenRounded-M";
     font-size: $ps-font-size;
     color: $white;
+    transition: .5s;
     @media (min-width:376px) {
       margin-right: 20px;
       font-size: $p-font-size;
       padding: 6px 5px;
-      width: 90px;
+      width: 95px;
     }
   }
   .w-newCard-skipBtn:hover{
     color: $white;
     background-color: $lake-green;
+    border: 2px solid $light-lake-green;
     transition: .5s;
   }
 }
@@ -2155,10 +2159,11 @@ html {
     padding: 3px 5px;
     background-color: $super-dark;
     border-radius: 10px;
-    border: 1.5px solid $super-dark;
+    border: 2px solid $super-dark;
     font-family: "GenSenRounded-M";
     font-size: 14px;
     color: $white;
+    transition: .5s;
     @media (min-width:376px) {
       margin-right: 20px;
       -ms-flex: 0 0 50%;
@@ -2179,6 +2184,7 @@ html {
   .w-newFinish-skipBtn:hover{
     color: $white;
     background-color: $lake-green;
+    border: 2px solid $light-lake-green;
     transition: .5s;
   }
 }
@@ -2383,5 +2389,332 @@ form{
     left:14%;
     width: 29%;
     font-size: $h5-font-size;
+  }
+}
+
+// --------光箱區包裝清除設計------------------
+.giftBoxLightBox{
+  display: none;
+  z-index:20;
+  background-color: rgba($color: $super-dark, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: .5s;
+  .lightBoxBg{
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    top:50%;
+    left: 50%;
+    border-radius: 25px;
+    transform-origin:center;
+    transform: translate(-50%, -50%);
+    background-color: $lake-green;
+    @media (min-width:768px) {
+      width: 30%;
+      height: 35%;
+      top:45%;
+      left: 50%;
+      transform: translate(-47%, -50%);
+    }
+    .lightBoxArea{
+      position: absolute;
+      top:-3%;
+      left: -1.5%;
+      background-color: $white;
+      border: 5px solid $light-lake-green;
+      box-shadow:  0 6px 6px  rgba(0,0,0,0.08);
+      width:100%;
+      height: 100%;
+      border-radius: 25px;
+      padding: 0px 5%;
+
+      .lightBoxTop{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        // background-color: #154d7a;
+        img{
+          margin: auto;
+          padding:6% 4% 4% 4%;
+          filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+          width: 40%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .lightBoxText{
+        text-align: center;
+        margin-top: 3%;
+        @media (min-width:768px) {
+        margin-top: 1%;
+        }
+        p{
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          @media (min-width:768px) {
+            font-family: "GenSenRounded-B";
+          font-size: $h6-font-size;
+          }
+        }
+      }
+      .lightBoxBottom{
+        margin-top: 8%;
+        display: flex;
+        justify-content: center;
+        .lightBoxBtn-L{
+          background-color: $super-dark;
+          color: $white;
+          border-radius: 10px;
+          border: 2px solid $super-dark;
+          padding: 1% 7%;
+          margin-right: 5%;
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          transition: .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: $lake-green;
+            border-color: $light-lake-green;
+          }
+        }
+        .lightBoxBtn-R{
+          // background-color: $super-dark;
+          border: 2px solid $super-dark;
+          color: $super-dark;
+          border-radius: 10px;
+          padding: 1% 7%;
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          transition: .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: $lake-green;
+            border-color: $light-lake-green;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+//------光箱區略過包裝設計---------
+.giftBoxLightBox-Skip{
+  display: none;
+  z-index:21;
+  background-color: rgba($color: $super-dark, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: .5s;
+  .lightBoxBg{
+    position: absolute;
+    width: 90%;
+    height: 45%;
+    top:50%;
+    left: 50%;
+    border-radius: 25px;
+    transform-origin:center;
+    transform: translate(-50%, -50%);
+    background-color: $lake-green;
+    @media (min-width:768px) {
+      width: 30%;
+      height: 35%;
+      top:45%;
+      left: 50%;
+      transform: translate(-47%, -50%);
+    }
+    .lightBoxArea{
+      position: absolute;
+      top:-3%;
+      left: -1.5%;
+      background-color: $white;
+      border: 5px solid $light-lake-green;
+      box-shadow:  0 6px 6px  rgba(0,0,0,0.08);
+      width:100%;
+      height: 100%;
+      border-radius: 25px;
+      padding: 0px 5%;
+      @media (min-width:768px) {
+        padding: 0px 5%;
+      }
+      .lightBoxTop{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        // background-color: #154d7a;
+        img{
+          margin: auto;
+          padding:6% 4% 4% 4%;
+          filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+          width: 40%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .lightBoxText{
+        text-align: center;
+        margin-top: 3%;
+        @media (min-width:768px) {
+          margin-top: 1%;
+        }
+        p{
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          @media (min-width:768px) {
+            font-family: "GenSenRounded-B";
+            font-size: $h6-font-size;
+          }
+        }
+      }
+      .lightBoxBottom{
+        margin-top: 8%;
+        display: flex;
+        justify-content: center;
+        .lightBoxBtn-L{
+          background-color: $super-dark;
+          color: $white;
+          border-radius: 10px;
+          border: 2px solid $super-dark;
+          padding: 1% 7%;
+          margin-right: 5%;
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          transition: .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: $lake-green;
+            border-color: $light-lake-green;
+          }
+        }
+        .lightBoxBtn-R{
+          // background-color: $super-dark;
+          border: 2px solid $super-dark;
+          color: $super-dark;
+          border-radius: 10px;
+          padding: 1% 7%;
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          transition: .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: $lake-green;
+            border-color: $light-lake-green;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+//------光箱區略過卡片設計---------
+.giftCardLightBox-Skip{
+  display: none;
+  z-index:22;
+  background-color: rgba($color: $super-dark, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: .5s;
+  .lightBoxBg{
+    position: absolute;
+    width: 90%;
+    height: 45%;
+    top:50%;
+    left: 50%;
+    border-radius: 25px;
+    transform-origin:center;
+    transform: translate(-50%, -50%);
+    background-color: $lake-green;
+    @media (min-width:768px) {
+      width: 30%;
+      height: 35%;
+      top:45%;
+      left: 50%;
+      transform: translate(-47%, -50%);
+    }
+    .lightBoxArea{
+      position: absolute;
+      top:-3%;
+      left: -1.5%;
+      background-color: $white;
+      border: 5px solid $light-lake-green;
+      box-shadow:  0 6px 6px  rgba(0,0,0,0.08);
+      width:100%;
+      height: 100%;
+      border-radius: 25px;
+      padding: 0px 5%;
+      @media (min-width:768px) {
+        padding: 0px 5%;
+      }
+      .lightBoxTop{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        // background-color: #154d7a;
+        img{
+          margin: auto;
+          padding:6% 4% 4% 4%;
+          filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+          width: 40%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .lightBoxText{
+        text-align: center;
+        margin-top: 3%;
+        @media (min-width:768px) {
+          margin-top: 1%;
+        }
+        p{
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          @media (min-width:768px) {
+            font-family: "GenSenRounded-B";
+            font-size: $h6-font-size;
+          }
+        }
+      }
+      .lightBoxBottom{
+        margin-top: 8%;
+        display: flex;
+        justify-content: center;
+        .lightBoxBtn-L{
+          background-color: $super-dark;
+          color: $white;
+          border-radius: 10px;
+          border: 2px solid $super-dark;
+          padding: 1% 7%;
+          margin-right: 5%;
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          transition: .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: $lake-green;
+            border-color: $light-lake-green;
+          }
+        }
+        .lightBoxBtn-R{
+          // background-color: $super-dark;
+          border: 2px solid $super-dark;
+          color: $super-dark;
+          border-radius: 10px;
+          padding: 1% 7%;
+          font-family: "GenSenRounded-B";
+          font-size: $p-font-size;
+          transition: .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: $lake-green;
+            border-color: $light-lake-green;
+            color: $white;
+          }
+        }
+      }
+    }
   }
 }
