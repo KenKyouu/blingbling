@@ -407,7 +407,7 @@ body {
     .class {
       padding: 5px 15px;
       border: 1px solid $white;
-      background-color: $lake-green;
+      background-color: rgba(255, 255, 255, 0.647);
       border-radius: 4px;
       display: flex;
       justify-content: center;
@@ -417,14 +417,14 @@ body {
       bottom: 50px;
       transform: translateX(-50%);
       @media screen and (min-width: 768px) {
-        border: 2px solid $white;
+        border: 3px solid $white;
       }
       @media screen and (min-width: 768px) {
         bottom: 80px;
       }
       h3 {
         padding-bottom: 3px;
-        color: $white;
+        color: $dark-gray;
         font-family: "GenSenRounded-M";
         font-size: $h7-font-size;
         @media screen and (min-width: 768px) {
@@ -451,9 +451,17 @@ body {
         margin: 0 15px;
         color: $white;
         font-family: "GenSenRounded-M";
-        font-size: $ps-font-size;
+        font-size: 13px;
+        transition: .5s;
+        padding: 7px 15px;
+        border-radius: 20px;
+        text-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.286) ;
         @media screen and (min-width: 768px) {
           font-size: $h6-font-size;
+        }
+        &:hover{
+          background-color: $deep-brown;
+          border-radius: 20px;
         }
       }
       .breadsvg {
@@ -485,8 +493,9 @@ body {
         li {
           padding: 5px 15px;
           margin: 15px 10px;
-          border: 2px solid $super-dark;
-          border-radius: 15px;
+          border: 2px solid #c2c2c26f;
+          border-radius: 20px;
+          background-color:#c2c2c26f;
           flex-shrink: 0;
           cursor: pointer;
           transition: all 0.2s;
@@ -502,7 +511,7 @@ body {
             margin-bottom: 30px;
           }
           a {
-            color: $super-dark;
+            color: $deep-brown;
             font-family: "GenSenRounded-M";
             font-size: $p-font-size;
             text-decoration: none;
@@ -522,10 +531,11 @@ body {
     }
     button.filter {
       padding: 5px 8px;
-      border: 2px solid $dark-gray;
+      // border: 2px solid $dark-gray;
       border-radius: 10px;
-      background-color: rgba($color: #000000, $alpha: 0);
-      color: $super-dark;
+      background-color: rgba($color: $lake-green, $alpha: 0.3);
+      // background-color: rgba($color: #000000, $alpha: 0);
+      color: $dark-gray;
       font-family: "GenSenRounded-M";
       font-size: $p-font-size;
       @media screen and (min-width: 992px) {
@@ -535,15 +545,15 @@ body {
   }
   .filter-button-pc {
     position: fixed;
-    padding: 30px 0;
+    // padding: 10px 0;
     @media screen and (max-width: 768px) {
       display: none;
     }
     button.filter-pc {
       padding: 10px;
-      border-top: 2px solid $dark-gray;
-      border-right: 2px solid $dark-gray;
-      border-bottom: 2px solid $dark-gray;
+      // border-top: 2px solid $dark-gray;
+      // border-right: 2px solid $dark-gray;
+      // border-bottom: 2px solid $dark-gray;
       border-left: 2px solid rgba($color: #000000, $alpha: 0);
       // border: 2px solid $dark-gray;
       border-radius: 0 10px 10px 0;
@@ -551,6 +561,10 @@ body {
       color: $super-dark;
       font-family: "GenSenRounded-M";
       font-size: $h6-font-size;
+      transition: .5s;
+      &:hover{
+        background-color: $skin;
+      }
     }
   }
   .product-list {
@@ -601,17 +615,24 @@ body {
           margin-bottom: 30px;
         }
         .product-image {
+          border-radius: 15px;
           width: 170px;
           height: 170px;
           margin: auto;
+          box-shadow:  2px 3px 3px  rgba(0,0,0,0.08);
           // object-fit: cover;
           position: relative;
-          background-color: $white;
+          background-color: $deep-brown;
           overflow: hidden;
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: .5s;
+            opacity: 1;
+            &:hover{
+              opacity: .9;
+            }
           }
           @media screen and (min-width: 992px) {
             width: 250px;
@@ -623,6 +644,7 @@ body {
             // background-position: center center;
           }
           .heart {
+            z-index: 3;
             width: 30px;
             height: 30px;
             cursor: default;
@@ -630,6 +652,10 @@ body {
             right: 3px;
             bottom: 3px;
             background-image: url(../images/icons/addlike0.svg);
+            transition: .5s;
+            &:hover{
+              background-image: url(../images/icons/addlike1.svg);
+            }
           }
         }
         .product-title {
@@ -650,8 +676,8 @@ body {
             padding-bottom: 15px;
           }
           h3 {
-            color: $super-dark;
-            font-family: "GenSenRounded-M";
+            color: $dark-gray;
+            font-family: "GenSenRounded-B";
             font-size: $p-font-size;
             overflow: hidden;
             display: -webkit-box;
@@ -674,16 +700,19 @@ body {
             width: 275px;
           }
           p {
-            color: $deep-brown;
+            color: $light-lake-green;
             font-family: "GenSenRounded-M";
             font-size: $p-font-size;
             font-weight: $bold;
+            border-left: 3px solid $skin;
+            border-radius: 2px;
+            padding-left: 3%;
             &::before {
               display: inline-block;
               content: "NT$ ";
             }
             @media screen and (min-width: 992px) {
-              font-size: $h7-font-size;
+              font-size: $p-font-size;
             }
           }
         }
@@ -697,13 +726,23 @@ body {
       ul {
         display: flex;
         justify-content: center;
-        li.active a {
-          background-color: $lake-green;
-          border-color: $dark-gray;
+        .page-item{
+          border-radius: 5px;
+          .page-link{
+            background-color: $light-brown;
+            border-radius: 5px;
+            border: 2px solid $light-brown;
+          }
+        }
+        .page-item.active a {
+          border-radius: 5px;
+          background-color: $light-lake-green;
+          border-color: rgba($color: $deep-brown, $alpha: 0.3);
         }
         a {
           color: $dark-gray;
           margin: 0 5px;
+          
         }
       }
     }
@@ -724,6 +763,12 @@ body {
     padding: 100px 0 0 30px;
     span.filter-pc-back {
       cursor: pointer;
+      svg{
+        transition: .5s;
+        &:hover{
+          transform: translateX(-10px) scaleX(.8);
+        }
+      }
     }
   }
   .filter-class-pc {
@@ -768,6 +813,12 @@ body {
               color: $white;
               font-size: $h6-font-size;
               font-family: "GenSenRounded-M";
+              transition: .5s;
+              padding: 5px 15px;
+              border-radius: 5px;
+              &:hover{
+                background-color: $light-lake-green;
+              }
             }
           }
         }
@@ -788,23 +839,33 @@ body {
       }
       .gender {
         margin-left: 20px;
+        cursor: pointer;
         input {
           margin: 20px 0;
+          cursor: pointer;
         }
         label {
           margin: 0 40px 0 10px;
           color: $white;
           font-size: $h6-font-size;
           font-family: "GenSenRounded-M";
+          padding: 5px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover{
+            background-color: $light-lake-green;
+          }
         }
       }
     }
     .color-filter-pc {
       margin-top: 60px;
+      cursor: pointer;
       h2 {
         color: $white;
         font-size: $h5-font-size;
         font-family: "GenSenRounded-M";
+        cursor: pointer;
       }
       .horizon {
         margin-top: 15px;
@@ -820,6 +881,7 @@ body {
           align-items: center;
           input {
             margin: 15px 0;
+            cursor: pointer;
           }
           label {
             display: flex;
@@ -828,6 +890,7 @@ body {
             color: $white;
             font-size: $h6-font-size;
             font-family: "GenSenRounded-M";
+            cursor: pointer;
           }
         }
       }
@@ -880,6 +943,10 @@ body {
       color: $white;
       font-size: $h7-font-size;
       font-family: "GenSenRounded-M";
+      transition: .5s;
+      &:hover{
+        background-color: $red-pink;
+      }
     }
   }
 }

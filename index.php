@@ -23,7 +23,7 @@ require __DIR__ . '/parts/connect_db.php';
   </div>
 </div>
 
-<div class="indexContainer">
+<div id="area1" class="indexContainer">
   <div id="menuFixed" class="w-indexHeader-menu_fixed">
     <div class="w-indexHeader-menu">
       <img src="./images/icons/index-icon-menu.svg" alt="">
@@ -126,6 +126,11 @@ require __DIR__ . '/parts/connect_db.php';
       </div>
     </div>
   </div>
+  <div id="scrollTop" class="w-indexScrollTop">
+    <div class="scrollBtn">
+      <img src="./images/icon_item05.png" alt="">
+    </div>
+  </div>
   <div class="indexBox">
     <div id="area1" class="I-mainSection">
       <div class="w-indexHeader">
@@ -152,37 +157,41 @@ require __DIR__ . '/parts/connect_db.php';
         </div>
         <div class="mainNav">
           <div class="mainNav-wrap">
-            <a href="./product-list2.php">
+            <a href="#area3">
               <div class="nav-1">
                 <div class="nav-1L">
-                  商品分類
+                  熱門商品
                 </div>
-                <div class="nav-1R">
+                <!-- <div class="nav-1R">
                   <svg id="product-listbar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.1 12.64">
                     <defs></defs>
                     <g id="_圖層_1-2">
                       <path class="cls-1" d="M9.69,12.06L16.83,2.23c.68-.93,0-2.23-1.14-2.23H1.41C.26,0-.4,1.3,.27,2.23L7.41,12.06c.56,.77,1.71,.77,2.28,0Z" />
                     </g>
                   </svg>
+                </div> -->
+              </div>
+            </a>
+            <div class="nav-line">
+              |
+            </div>
+            <a href="#area4">
+              <div class="nav-2">
+                <div class="nav-2box">
+                  節慶推薦
                 </div>
               </div>
             </a>
             <div class="nav-line">
               |
             </div>
-            <div class="nav-2">
-              <div class="nav-2box">
-                溫馨送禮
+            <a href="#area5">
+              <div class="nav-3">
+                <div class="nav-3box">
+                  最新商品
+                </div>
               </div>
-            </div>
-            <div class="nav-line">
-              |
-            </div>
-            <div class="nav-3">
-              <div class="nav-3box">
-                YouTube
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -210,27 +219,6 @@ require __DIR__ . '/parts/connect_db.php';
 
 
       <div class="mainBotton">
-        <!-- <div class="mainRow">
-              <div class="mainCard">
-                <img src="./images/whiteCard-m-index.svg" alt="">
-              </div>
-            </div>
-            <div class="mainRow">
-              <div class="mainCard">
-                <img src="./images/whiteCard-m-index.svg" alt="">
-              </div>
-            </div>
-            <div class="mainRow">
-              <div class="mainCard">
-                <img src="./images/whiteCard-m-index.svg" alt="">
-              </div>
-            </div>
-            <div class="mainRow">
-              <div class="mainCard">
-                <img src="./images/whiteCard-m-index.svg" alt="">
-              </div>
-            </div>
-          </div> -->
       </div>
     </div>
   </div>
@@ -848,84 +836,134 @@ require __DIR__ . '/parts/connect_db.php';
 </div>
 <div id="area7" class="I-brandSection">
   <div class="brandBox">
-    <div class="brandSlide d-flex">
-      <div class="brandTop d-flex">
+    <div class="brandSlide ">
+      <div class="brandTop ">
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-01.svg" alt="">
+          <img src="./images/brands/brand-logo-14.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-02.svg" alt="">
+          <img src="./images/brands/brand-logo-15.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-03.svg" alt="">
+          <img src="./images/brands/brand-logo-16.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-04.svg" alt="">
+          <img src="./images/brands/brand-logo-17.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-05.svg" alt="">
+          <img src="./images/brands/brand-logo-18.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-19.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-20.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-21.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-22.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-23.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-24.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-25.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-26.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-27.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-28.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-29.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-30.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-31.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-32.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-33.svg" alt="">
         </div>
       </div>
-      <div class="brandTop2 d-flex">
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-01.svg" alt="">
+    </div>
+    <div class="brandSlide">
+      <div class="brandTop">
+      <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-34.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-02.svg" alt="">
+          <img src="./images/brands/brand-logo-35.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-03.svg" alt="">
+          <img src="./images/brands/brand-logo-36.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-04.svg" alt="">
+          <img src="./images/brands/brand-logo-37.svg" alt="">
         </div>
         <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-05.svg" alt="">
+          <img src="./images/brands/brand-logo-38.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-39.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-40.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-41.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-42.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-43.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-44.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-45.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-46.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-47.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-48.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-49.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-50.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-51.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-52.svg" alt="">
+        </div>
+        <div class="brandImgWarp ">
+          <img src="./images/brands/brand-logo-53.svg" alt="">
         </div>
       </div>
     </div>
-    <div class="brandSlide d-flex">
-      <div class="brandTop d-flex">
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-05.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-04.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-03.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-02.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-01.svg" alt="">
-        </div>
-
-
-      </div>
-      <div class="brandTop2 d-flex">
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-05.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-04.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-03.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-02.svg" alt="">
-        </div>
-        <div class="brandImgWarp ">
-          <img src="./images/brands/brand-logo-01.svg" alt="">
-        </div>
-
-
-      </div>
-    </div>
-
-
   </div>
 </div>
 <div class="footer-mobile">
