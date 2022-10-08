@@ -181,8 +181,12 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       width: 5%;
       transition: .5s;
       img{
-        width: 70%;
+        width: 76%;
         cursor: pointer;
+        transition: .5s;
+        &:hover{
+          transform: rotate(1.2);
+        }
       }
     }
   }
@@ -193,8 +197,8 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     top: 100px;
     right: 60px;
     // background-color: rgba(255, 255, 255, 0.629);
-    opacity: 0;
-    // display: none;
+    // opacity: 0;
+    display: none;
     transition: .5s;
     .menuSection_top{
       position: absolute;
@@ -309,6 +313,22 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             filter: drop-shadow( 0 6px 6px  rgba(0,0,0,0.08));
           }
         }
+      }
+    }
+  }
+  .w-indexScrollTop{
+    position: fixed;
+    z-index: 19;
+    bottom: 2%;
+    right: 2%;
+    width: 70px;
+    height: 70px;
+    .scrollBtn{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
@@ -562,29 +582,35 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
                 }
               }
             }
-            .nav-2{
-              display: flex;
-              cursor: pointer;
-              .nav-2box{
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                padding-right: 10px;
-                color: $super-dark;
-                &:hover{
-                  color: $lake-green;
+            a{
+              text-decoration: none;
+              .nav-2{
+                display: flex;
+                cursor: pointer;
+                .nav-2box{
+                  font-family: "GenSenRounded-B";
+                  font-size: $p-font-size;
+                  padding-right: 10px;
+                  color: $super-dark;
+                  &:hover{
+                    color: $lake-green;
+                  }
                 }
               }
-            }
-            .nav-3{
-              display: flex;
-              cursor: pointer;
-              .nav-3box{
-                font-family: "GenSenRounded-B";
-                font-size: $p-font-size;
-                padding-right: 10px;
-                color: $super-dark;
-                &:hover{
-                  color: $lake-green;
+            } 
+            a{
+              text-decoration: none;
+              .nav-3{
+                display: flex;
+                cursor: pointer;
+                .nav-3box{
+                  font-family: "GenSenRounded-B";
+                  font-size: $p-font-size;
+                  padding-right: 10px;
+                  color: $super-dark;
+                  &:hover{
+                    color: $lake-green;
+                  }
                 }
               }
             }
@@ -786,11 +812,37 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 //------populerSection---------
 .I-populerSection{
   transition: .5s;
+  background-image: url(../images/elf_06_border.png);
+  background-repeat: no-repeat;
+  background-position: 105%;
+  background-position-y: -10px;
   margin-bottom: 200px;
-  @media (min-width:768px){
-    margin-top: 250px;
-  }
+  background-size: 40%;
+  padding-top: 30px;
   width: 100%;
+  animation: populerElf 2s infinite alternate;
+  @keyframes populerElf {
+    from{
+      background-position-x: 105%;
+    }
+    to{
+      background-position-x: 100%;
+    }
+  }
+  @media (min-width:768px){
+    padding-top: 250px;
+    background-size: 20%;
+    background-position-y: 0px;
+    background-position-x: 100%;
+    @keyframes populerElf {
+      from{
+        background-position-x: 100%;
+      }
+      to{
+        background-position-x: 95%;
+      }
+    }
+  }
   .populerTitle{
     width: 100%;
     height: 20%;
@@ -997,16 +1049,16 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-repeat: no-repeat;
   background-size: 10%,10%,70%;
   background-position-x:0%,100%,90% ;
-  background-position-y: 200px, 350px,0px;
+  background-position-y: 120px, 300px,0px;
   background-attachment: fixed,fixed,local;
   transition: .5s;
   animation: FestivalAnimate 1.5s alternate infinite;
   @keyframes FestivalAnimate {
     0%{
-      background-position-y: 200px, 350px,0px;
+      background-position-y: 120px, 300px,0px;
     }
     100%{
-      background-position-y: 200px, 350px,15px;
+      background-position-y: 120px, 300px,15px;
     }
   }
   @media (min-width:1400px){
@@ -1015,12 +1067,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     background-position-y: 150px, 280px,200px;
     background-attachment: fixed,fixed,local;
     margin-top: 300px;
+    animation: FestivalAnimate 10s linear alternate infinite;
     @keyframes FestivalAnimate {
       0%{
-        background-position-y: 150px, 280px,200px;
+        background-position-y: -50px, 1600px,200px;
       }
       100%{
-        background-position-y: 150px, 280px,170px;
+        background-position-y: 1500px, 0px,170px;
       }
     }
   }
@@ -1077,6 +1130,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
             width: 90%;
             margin: auto;
             transition: .5s;
+            cursor: pointer;
             .FestivalCard-Top{
               .img-wrap{
                 width: 100%;
@@ -1200,14 +1254,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 //----newSection-----------------
 .I-newSection{
-  // padding-left:30px;
-  // padding-right:30px;
   width: 100%;
   @media (min-width:768px) {
     padding-left:100px;
     margin-top: 300px;
   }
   @media (min-width:1000px) {
+    padding-top: 50px;
     padding-left:270px;
     
   }
@@ -1222,7 +1275,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       height: 20%;
       padding-left:30px;
       padding-top: 40px;
-      margin-right: 45px;
+      margin-right: 40px;
       // background-color: #2d827d;
       @media (min-width:768px){
         margin-right: 0px;
@@ -1246,7 +1299,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
           color: $light-brown;
           background-color:$super-dark;
           border-radius: 60px;
-          padding: 0px 15px 3px 15px;
+          padding: 5px 15px 5px 15px;
           @media (min-width:768px){
             font-size: 24px;
             padding: 8px 15px;
@@ -1255,9 +1308,13 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       }
     }
     .newRow-Top{
-      width: 100%;
-      height:100% ;
+      width: 90%;
+      height:90%;
       overflow: hidden;
+      @media (min-width:376px){
+        width: 100%;
+        height:100% ;
+      }
       .newCardBox{
         overflow-x: scroll;
         .newCardRow{
@@ -1431,6 +1488,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         }
         @media (min-width:1400px) {
           padding-left:50px;
+          padding-top: 100px;
+        }
+        @media (min-width:1600px) {
+          padding-left:50px;
           padding-top: 150px;
         }
         h2{
@@ -1541,7 +1602,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         top: 68%;
       }
       @media (min-width:1400px) {
-        top: 60%;
+        top: 53%;
+      }
+      @media (min-width:1550px) {
+        top: 65%;
       }
       .NEWSbtn{
         background-color: $lake-green;
@@ -1557,9 +1621,15 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         }
         @media (min-width:1400px) {
           width: 13%;
+          margin-left: 26%;
+          padding: 10px 25px;
+        }
+        @media (min-width:1550px) {
+          width: 13%;
           margin-left: 21%;
           padding: 10px 25px;
         }
+
         .NEWSbtn-L{
           color: $white;
           p{
@@ -1625,6 +1695,9 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         @media (min-width:768px) {
           height: 90%;
         }
+        @media (min-width:1400px) {
+          height: 90%;
+        }
         .p-NEWScard-text{
           color: $white;
           padding: 5px 10px;
@@ -1680,7 +1753,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 .I-brandSection{
   width: 100%;
   height: 45vh;
-  // background-color: #154d7a;
+  // background-color:#2d827d;
   @media (min-width:768px) {
     height: 600px;
 
@@ -1695,41 +1768,59 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
     .brandSlide{
       width: 200%;
+      height: 40%;
       margin-top: -20px;
       @media (min-width:768px) {
         width: 110%;
       }
       .brandTop{
-        width: 100%;
+        width: calc(100px * 20);
+        display: flex;
+        // width: 100%;
         overflow-x:scroll;
-        animation: brandSlide 10s linear infinite;
-        // animation-fill-mode:both;
-        // animation: brandSlide2 10s linear infinite;
-  
+        animation: brandSlide 30s linear alternate;
         @keyframes brandSlide{
           0% {
               transform: translateX(0);
           }
           100% {
-              transform: translateX(-50%);
+            transform: translateX(calc(-100px * 10))
+              // transform: translateX(-50%);
           }
-      }
-        
+        }
+        @media (min-width:768px){
+          width: calc(200px * 20);
+          @keyframes brandSlide{
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-200px * 10))
+                // transform: translateX(-50%);
+            }
+          }
+        }
   
         .brandImgWarp{
-          width: 100%;
-          -ms-flex: 0 0 22%;
-          flex: 0 0 22%;
-          max-width: 22%;
+          width: 100px;
           margin: 0 -5px;
+          justify-content: center; 
+          margin: 0 10px;
           @media (min-width:768px) {
-            width: 70%;
+            // width: 70%;
+            text-align: center;
+            width: 200px;
+            margin: 0 30px;
           }
   
           img{
-            width: 100%;
+            width: 100px;
+            object-fit: contain;
             @media (min-width:768px) {
-              width: 70%;
+              // width: 70%;
+              text-align: center;
+              width: 200px;
+              object-fit: contain;
             }
           }
         }
@@ -1767,8 +1858,10 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   
           img{
             width: 100%;
+            object-fit: contain;
             @media (min-width:768px) {
               width: 70%;
+              object-fit: contain;
             }
   
           }

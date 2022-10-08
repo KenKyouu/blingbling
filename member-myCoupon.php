@@ -32,20 +32,24 @@ if (!empty($couponsid)) {
 
                     <div class="left col-lg-3 col-xl-3">
                         <div class="myName">
-                            <div class="photo">
-                                <div class="photoborder">
-                                    <div class="myphoto">
-                                        <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
+                            <form id="img-load" name="form1" onsubmit="return false">
+                                <div class="photo">
+                                    <div class="photoborder">
+                                        <div class="myphoto">
+                                            <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
+                                            <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
+                                        </div>
+
                                     </div>
+                                    <label name="avatar" for="file" class="photoedit">
+                                        <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
+                                            <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
+                                            <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
+                                        </svg>
+                                    </label>
                                 </div>
-                                <div class="photoedit">
-                                    <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
-                                        <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
-                                        <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
-                                    </svg>
-                                </div>
-                            </div>
+                            </form>
                             <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
                                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
