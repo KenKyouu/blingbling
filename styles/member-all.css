@@ -81,8 +81,16 @@
   overflow: hidden;
 }
 
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto .nodisplay {
+  display: none;
+}
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.upload_photo {
+  width: 100%;
 }
 
 .wrap .containerr .main .row .col .left .myName .photo .photoedit {
@@ -103,6 +111,13 @@
   position: absolute;
   right: -3px;
   bottom: 0;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoedit:hover {
+  background-color: #000000;
 }
 
 .wrap .containerr .main .row .col .left .myName h5 {
@@ -2445,6 +2460,7 @@
   padding: 0 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
+  color: #000000;
 }
 
 .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
@@ -2476,11 +2492,11 @@
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
   padding: 0 10px;
-  color: #c2c2c2;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   text-align: center;
   margin-right: 10px;
+  color: #000000;
 }
 
 .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input .appendtag {
@@ -2489,7 +2505,7 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
-  padding: 10px 8px;
+  padding: 13px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2675,6 +2691,7 @@
   padding: 0 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
+  color: #000000;
 }
 
 .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
@@ -2706,11 +2723,11 @@
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
   padding: 0 10px;
-  color: #c2c2c2;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   text-align: center;
   margin-right: 10px;
+  color: #000000;
 }
 
 .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input .appendtag {
@@ -2719,7 +2736,7 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
-  padding: 10px 8px;
+  padding: 13px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3045,19 +3062,22 @@
     top: -50px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto {
-    width: 86px;
-    height: 86px;
+    width: 110px;
+    height: 110px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto .nodisplay {
+    display: none;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto img.photo {
     width: 120%;
     position: static;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoedit {
-    right: -5px;
+    right: 2px;
     bottom: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
@@ -3448,9 +3468,6 @@
     color: #ffffff;
     border: none;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle {
-    padding-right: 17px;
-  }
   .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle .f-name {
     font-size: 14px;
     font-family: "GenSenRounded-B";
@@ -3607,13 +3624,13 @@
     margin: 40px 0 10px 0;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName {
-    width: 68%;
+    width: 70%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName p.couponName {
     font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate {
-    width: 32%;
+    width: 30%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate p.couponDate {
     font-size: 16px;
@@ -3727,6 +3744,7 @@
     padding: 0 10px;
     font-family: "GenSenRounded-B";
     font-size: 16px;
+    color: #000000;
   }
   .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
     color: #c2c2c2;
@@ -3754,14 +3772,15 @@
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #2d827d;
     padding: 0 10px;
-    color: #c2c2c2;
     font-family: "GenSenRounded-B";
     font-size: 16px;
     text-align: center;
     margin-right: 20px;
+    color: #000000;
   }
   .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input .appendtag {
     width: 400px;
+    padding: 15px 8px;
   }
   .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input .appendtag span {
     font-size: 16px;
@@ -3881,6 +3900,7 @@
     padding: 0 10px;
     font-family: "GenSenRounded-B";
     font-size: 16px;
+    color: #000000;
   }
   .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
     color: #c2c2c2;
@@ -3908,14 +3928,15 @@
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #2d827d;
     padding: 0 10px;
-    color: #c2c2c2;
     font-family: "GenSenRounded-B";
     font-size: 16px;
     text-align: center;
     margin-right: 20px;
+    color: #000000;
   }
   .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input .appendtag {
     width: 400px;
+    padding: 15px 8px;
   }
   .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input .appendtag span {
     font-size: 16px;

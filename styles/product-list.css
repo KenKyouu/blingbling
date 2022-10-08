@@ -42,7 +42,7 @@ body {
 .content .banner .class {
   padding: 5px 15px;
   border: 1px solid #ffffff;
-  background-color: #2d827d;
+  background-color: rgba(255, 255, 255, 0.647);
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,7 +62,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .content .banner .class {
-    border: 2px solid #ffffff;
+    border: 3px solid #ffffff;
   }
 }
 
@@ -74,7 +74,7 @@ body {
 
 .content .banner .class h3 {
   padding-bottom: 3px;
-  color: #ffffff;
+  color: #4c4948;
   font-family: "GenSenRounded-M";
   font-size: 18px;
 }
@@ -117,13 +117,23 @@ body {
   margin: 0 15px;
   color: #ffffff;
   font-family: "GenSenRounded-M";
-  font-size: 14px;
+  font-size: 13px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 7px 15px;
+  border-radius: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.286);
 }
 
 @media screen and (min-width: 768px) {
   .content .banner .bread a {
     font-size: 20px;
   }
+}
+
+.content .banner .bread a:hover {
+  background-color: #554d49;
+  border-radius: 20px;
 }
 
 .content .banner .bread .breadsvg {
@@ -170,8 +180,9 @@ body {
 .content .slider .slider-bar ul li {
   padding: 5px 15px;
   margin: 15px 10px;
-  border: 2px solid #000000;
-  border-radius: 15px;
+  border: 2px solid #c2c2c26f;
+  border-radius: 20px;
+  background-color: #c2c2c26f;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   cursor: pointer;
@@ -196,7 +207,7 @@ body {
 }
 
 .content .slider .slider-bar ul li a {
-  color: #000000;
+  color: #554d49;
   font-family: "GenSenRounded-M";
   font-size: 16px;
   text-decoration: none;
@@ -222,10 +233,9 @@ body {
 
 .content .filter-button-mobile button.filter {
   padding: 5px 8px;
-  border: 2px solid #4c4948;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0);
-  color: #000000;
+  background-color: rgba(45, 130, 125, 0.3);
+  color: #4c4948;
   font-family: "GenSenRounded-M";
   font-size: 16px;
 }
@@ -238,7 +248,6 @@ body {
 
 .content .filter-button-pc {
   position: fixed;
-  padding: 30px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -249,15 +258,18 @@ body {
 
 .content .filter-button-pc button.filter-pc {
   padding: 10px;
-  border-top: 2px solid #4c4948;
-  border-right: 2px solid #4c4948;
-  border-bottom: 2px solid #4c4948;
   border-left: 2px solid rgba(0, 0, 0, 0);
   border-radius: 0 10px 10px 0;
   background-color: rgba(45, 130, 125, 0.3);
   color: #000000;
   font-family: "GenSenRounded-M";
   font-size: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.content .filter-button-pc button.filter-pc:hover {
+  background-color: #d4cfc6;
 }
 
 .content .product-list {
@@ -350,11 +362,14 @@ body {
 }
 
 .content .product-list a .product-card .product-image {
+  border-radius: 15px;
   width: 170px;
   height: 170px;
   margin: auto;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
   position: relative;
-  background-color: #ffffff;
+  background-color: #554d49;
   overflow: hidden;
 }
 
@@ -363,6 +378,13 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 1;
+}
+
+.content .product-list a .product-card .product-image img:hover {
+  opacity: .9;
 }
 
 @media screen and (min-width: 992px) {
@@ -380,6 +402,7 @@ body {
 }
 
 .content .product-list a .product-card .product-image .heart {
+  z-index: 3;
   width: 30px;
   height: 30px;
   cursor: default;
@@ -387,6 +410,12 @@ body {
   right: 3px;
   bottom: 3px;
   background-image: url(../images/icons/addlike0.svg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.content .product-list a .product-card .product-image .heart:hover {
+  background-image: url(../images/icons/addlike1.svg);
 }
 
 .content .product-list a .product-card .product-title {
@@ -415,8 +444,8 @@ body {
 }
 
 .content .product-list a .product-card .product-title h3 {
-  color: #000000;
-  font-family: "GenSenRounded-M";
+  color: #4c4948;
+  font-family: "GenSenRounded-B";
   font-size: 16px;
   overflow: hidden;
   display: -webkit-box;
@@ -450,10 +479,13 @@ body {
 }
 
 .content .product-list a .product-card .product-price p {
-  color: #554d49;
+  color: #7cb2af;
   font-family: "GenSenRounded-M";
   font-size: 16px;
   font-weight: 900;
+  border-left: 3px solid #d4cfc6;
+  border-radius: 2px;
+  padding-left: 3%;
 }
 
 .content .product-list a .product-card .product-price p::before {
@@ -463,7 +495,7 @@ body {
 
 @media screen and (min-width: 992px) {
   .content .product-list a .product-card .product-price p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -481,9 +513,20 @@ body {
           justify-content: center;
 }
 
-.content .page-button nav ul li.active a {
-  background-color: #2d827d;
-  border-color: #4c4948;
+.content .page-button nav ul .page-item {
+  border-radius: 5px;
+}
+
+.content .page-button nav ul .page-item .page-link {
+  background-color: #d4cfc6;
+  border-radius: 5px;
+  border: 2px solid #d4cfc6;
+}
+
+.content .page-button nav ul .page-item.active a {
+  border-radius: 5px;
+  background-color: #7cb2af;
+  border-color: rgba(85, 77, 73, 0.3);
 }
 
 .content .page-button nav ul a {
@@ -509,6 +552,16 @@ body {
 
 .filter-page-pc .filter-page-pc-back span.filter-pc-back {
   cursor: pointer;
+}
+
+.filter-page-pc .filter-page-pc-back span.filter-pc-back svg {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.filter-page-pc .filter-page-pc-back span.filter-pc-back svg:hover {
+  -webkit-transform: translateX(-10px) scaleX(0.8);
+          transform: translateX(-10px) scaleX(0.8);
 }
 
 .filter-page-pc .filter-class-pc {
@@ -563,6 +616,14 @@ body {
   color: #ffffff;
   font-size: 20px;
   font-family: "GenSenRounded-M";
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.filter-page-pc .filter-class-pc .class-filter-pc .class-name ul li a:hover {
+  background-color: #7cb2af;
 }
 
 .filter-page-pc .filter-class-pc .gender-filter-pc {
@@ -584,10 +645,12 @@ body {
 
 .filter-page-pc .filter-class-pc .gender-filter-pc .gender {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .filter-page-pc .filter-class-pc .gender-filter-pc .gender input {
   margin: 20px 0;
+  cursor: pointer;
 }
 
 .filter-page-pc .filter-class-pc .gender-filter-pc .gender label {
@@ -595,16 +658,25 @@ body {
   color: #ffffff;
   font-size: 20px;
   font-family: "GenSenRounded-M";
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-page-pc .filter-class-pc .gender-filter-pc .gender label:hover {
+  background-color: #7cb2af;
 }
 
 .filter-page-pc .filter-class-pc .color-filter-pc {
   margin-top: 60px;
+  cursor: pointer;
 }
 
 .filter-page-pc .filter-class-pc .color-filter-pc h2 {
   color: #ffffff;
   font-size: 24px;
   font-family: "GenSenRounded-M";
+  cursor: pointer;
 }
 
 .filter-page-pc .filter-class-pc .color-filter-pc .horizon {
@@ -630,6 +702,7 @@ body {
 
 .filter-page-pc .filter-class-pc .color-filter-pc .color .color-content input {
   margin: 15px 0;
+  cursor: pointer;
 }
 
 .filter-page-pc .filter-class-pc .color-filter-pc .color .color-content label {
@@ -643,6 +716,7 @@ body {
   color: #ffffff;
   font-size: 20px;
   font-family: "GenSenRounded-M";
+  cursor: pointer;
 }
 
 .filter-page-pc .filter-class-pc .price-filter-pc {
@@ -704,6 +778,12 @@ body {
   color: #ffffff;
   font-size: 18px;
   font-family: "GenSenRounded-M";
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.filter-page-pc .filter-class-pc button.filter-submit-pc:hover {
+  background-color: #d45a6a;
 }
 
 .filter-page,
