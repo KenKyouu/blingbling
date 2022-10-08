@@ -20,17 +20,17 @@
 
 #app {
   width: 1920px;
-  height: 1000px;
+  height: 935px;
   position: relative;
 }
 
 #app .coin {
   position: absolute;
-  top: 120px;
+  top: 80px;
   left: 100px;
   z-index: 10;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
 }
 
 #app .winNum {
@@ -38,7 +38,7 @@
   font-size: 48px;
   font-family: "GenSenRounded-B";
   color: #2d827d;
-  top: 130px;
+  top: 90px;
   left: 175px;
   z-index: 10;
 }
@@ -107,8 +107,8 @@
 .hpBar {
   z-index: 10;
   position: absolute;
-  top: 130px;
-  right: 150px;
+  top: 80px;
+  right: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,8 +122,8 @@
 }
 
 .hpBar h2 img {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
 }
 
 .hpBar .hpBox {
@@ -138,5 +138,9 @@
   height: 100%;
   border-radius: 20px;
   background-color: #7cb2af;
+}
+
+#canvas {
+  bottom: 0;
 }
 /*# sourceMappingURL=blinggame.css.map */
