@@ -30,22 +30,22 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
           <div class="left col-lg-3 col-xl-3">
             <div class="myName">
               <form id="img-load" name="form1" onsubmit="return false">
-                  <div class="photo">
-                      <div class="photoborder">
-                          <div class="myphoto">
-                              <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
-                              <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
-                          </div>
+                <div class="photo">
+                  <div class="photoborder">
+                    <div class="myphoto">
+                      <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
+                      <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
+                    </div>
 
-                      </div>
-                      <label name="avatar" for="file" class="photoedit">
-                          <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
-                              <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
-                              <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
-                          </svg>
-                      </label>
                   </div>
+                  <label name="avatar" for="file" class="photoedit">
+                    <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
+                      <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
+                      <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
+                    </svg>
+                  </label>
+                </div>
               </form>
               <h5><?= $member[0]['name'] ?></h5>
               <a href="#" class="coin">
@@ -174,7 +174,7 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
                           </p>
                         </div>
                       </div>
-                      <button class="p-delete" data-val="<?= $psid; ?>" onclick="deleteCollection()">
+                      <button class="p-delete" data-val="<?= $psid; ?>" onclick="deleteCollection(event)">
                         <svg width="15" height="16" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M22.7251 4.55958H0.733645C0.330016 4.55958 0 4.23226 0 3.8263C0 3.42287 0.327477 3.09302 0.733645 3.09302H22.7251C23.1287 3.09302 23.4588 3.42033 23.4588 3.8263C23.4588 4.23226 23.1313 4.55958 22.7251 4.55958Z" fill="#4C4948" />
                           <path d="M14.7107 1.46656H8.74512C8.34149 1.46656 8.01147 1.13925 8.01147 0.733279C8.01147 0.329849 8.33895 0 8.74512 0H14.7107C15.1143 0 15.4444 0.327311 15.4444 0.733279C15.4444 1.13925 15.1169 1.46656 14.7107 1.46656Z" fill="#4C4948" />
