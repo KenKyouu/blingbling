@@ -968,6 +968,19 @@ require __DIR__ . '/parts/connect_db.php';
     </div>
   </div>
 </div>
+
+<!--bottom Area  -->
+<div class="I-BottomArea">
+  <div class="BottomInner">
+    <div class="BottomTextWrap">
+      <p>Welcome to <br>
+      Bling Bling Gifts</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ---------footerArea ---------->
 <div class="footer-mobile">
     <div class="footer-bg">
         <div class="footer-logo">
