@@ -159,7 +159,8 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-image: url(../images/m-indexBg-02.png);
   // background-image:url(../images/index-bg_paper.png);
   background-size: 100%;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  // background-repeat: repeat-y;
   @media (min-width:576px) {
     background-image: url(../images/w-indexbg-02.png);
     background-size: 100%;
@@ -1895,5 +1896,41 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 .header {
   @media screen and (min-width:768px) {
   display: none;
+  }
+}
+
+// --------bottomArea---------------
+.I-BottomArea{
+  background-image: url(../images/winter-seasonal-concept-gift-box.jpeg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  .BottomInner{
+    width: 100%;
+    top:-100px;
+    padding-top: 66%;
+    background-image: url(../images/indexBottom_bg2.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+    position: relative;
+    z-index: 15;
+    .BottomTextWrap{
+      width: 70%;
+      // background-color: #154d7a;
+      position: absolute;
+      top:40%;
+      left: 15%;
+      p{
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: $h1-font-size;
+        font-weight: 900;
+        color: $white;
+        filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.3));
+      }
+    }
   }
 }
