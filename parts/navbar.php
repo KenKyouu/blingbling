@@ -4,9 +4,6 @@ if (!empty($_SESSION['user'])) {
     $user = $_SESSION['user']['id'];
     $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 }
-
-
-
 ?>
 
 <div class="header">
@@ -488,7 +485,7 @@ if (!empty($_SESSION['user'])) {
         <div class="menu-body">
             <div class="member-info">
                 <div class="member-picture">
-                    <img src="./images/elf_logo.png" alt="" />
+                    <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
                 </div>
                 <div class="member-content">
                     <div class="member-name">
