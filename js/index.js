@@ -171,3 +171,25 @@ $('.nav-3').click(function(){
 $('.w-indexScrollTop').click(function(){
   $('html,body').animate({scrollTop:$('#area1').offset().top},800);
 })
+
+//scroll top 收起效果-----
+let lastScroll = 0;
+$(window).scroll(function(){
+  let scrollNow =  $(window).scrollTop();
+
+  console.log('lastScroll:', lastScroll);
+  console.log('scrollNow', scrollNow);
+
+  if(scrollNow > lastScroll){
+    $('.w-indexScrollTop').addClass('ScrollHidden');
+    $('.w-indexScrollTop').css('display','none');
+  }
+  else{
+    $('.w-indexScrollTop').removeClass('ScrollHidden');
+    $('.w-indexScrollTop').css('display','flex');
+  }
+
+
+  lastScroll = scrollNow;
+
+})
