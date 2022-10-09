@@ -2,10 +2,10 @@
 require __DIR__ . '/connect_db.php';
 if (!empty($_SESSION['user'])) {
     $user = $_SESSION['user']['id'];
+    $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
 }
 
-$user = $_SESSION['user']['id'];
-$member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+
 
 ?>
 
