@@ -9,10 +9,12 @@ if (empty($_SESSION['user'])) {
 $user = $_SESSION['user']['id'];
 $memberfavorite = $pdo->query("SELECT DISTINCT `product_sid` FROM member_favorite WHERE member_sid=$user")->fetchAll();
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
-$productsid = $memberfavorite[0]['product_sid'];
-// echo json_encode($productsid);
-// exit;
-$favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")->fetchAll();
+if (!empty($memberfavorite)) {
+  $productsid = $memberfavorite[0]['product_sid'];
+  // echo json_encode($productsid);
+  // exit;
+  $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")->fetchAll();
+}
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -79,9 +81,7 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
                       我的收藏
                     </div>
                   </a></li>
-
                 <li class="btn col-4 col-md-2 col-lg-12"><a href="./member_order.php" id="btn3">
-
                     <div class="btnsvg">
                       <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#4C4948" stroke="#4C4948" stroke-miterlimit="10" />
@@ -148,6 +148,19 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
               </div>
             </div> -->
             <div class="myWishLists">
+              <?php if (empty($memberfavorite)) {
+                echo '
+                <div class="emptystatus">
+                <div class="left">
+                <div class="img">
+                  <img src="./images/loading.png" alt=""></div>
+                </div>
+                <div class="right">
+                <h3>Oops！</h3>
+                <h5>您目前尚未有收藏的商品。</h5>
+                </div>
+                </div>';
+              } ?>
               <?php foreach ($memberfavorite as $m) : ?>
                 <div class="wishList ">
                   <div class="product-card">

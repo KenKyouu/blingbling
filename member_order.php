@@ -132,6 +132,19 @@ $memberorders = $pdo->query("SELECT * FROM orders WHERE member_sid=$user ORDER B
 
                     <div class="whiteBg col-lg-9 col-xl-9">
                         <div class="orders">
+                            <?php if (empty($memberorders)) {
+                                echo '
+                                 <div class="emptystatus">
+                                 <div class="left">
+                                 <div class="img">
+                                   <img src="./images/loading.png" alt=""></div>
+                                 </div>
+                                 <div class="right">
+                                 <h3>Oops！</h3>
+                                 <h5>您目前尚未有訂單。</h5>
+                                 </div>
+                                 </div>';
+                            } ?>
                             <?php foreach ($memberorders as $o) :  ?>
                                 <div class="order-list">
                                     <div class="order-num">

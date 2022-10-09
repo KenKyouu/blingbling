@@ -118,8 +118,8 @@ body {
   color: #ffffff;
   font-family: "GenSenRounded-M";
   font-size: 13px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   padding: 7px 15px;
   border-radius: 20px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.286);
@@ -264,8 +264,8 @@ body {
   color: #000000;
   font-family: "GenSenRounded-M";
   font-size: 20px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .content .filter-button-pc button.filter-pc:hover {
@@ -378,13 +378,13 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   opacity: 1;
 }
 
 .content .product-list a .product-card .product-image img:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 @media screen and (min-width: 992px) {
@@ -410,8 +410,8 @@ body {
   right: 3px;
   bottom: 3px;
   background-image: url(../images/icons/addlike0.svg);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .content .product-list a .product-card .product-image .heart:hover {
@@ -555,8 +555,8 @@ body {
 }
 
 .filter-page-pc .filter-page-pc-back span.filter-pc-back svg {
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .filter-page-pc .filter-page-pc-back span.filter-pc-back svg:hover {
@@ -616,8 +616,8 @@ body {
   color: #ffffff;
   font-size: 20px;
   font-family: "GenSenRounded-M";
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   padding: 5px 15px;
   border-radius: 5px;
 }
@@ -778,8 +778,8 @@ body {
   color: #ffffff;
   font-size: 18px;
   font-family: "GenSenRounded-M";
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .filter-page-pc .filter-class-pc button.filter-submit-pc:hover {

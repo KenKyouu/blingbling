@@ -3,6 +3,8 @@ require __DIR__ . '/connect_db.php';
 if (!empty($_SESSION['user'])) {
     $user = $_SESSION['user']['id'];
     $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
+    $notice = $pdo->query("SELECT * FROM member_notice WHERE `member_sid`=$user")->fetchAll();
+    $noticeArr = [];
 }
 ?>
 
@@ -79,7 +81,14 @@ if (!empty($_SESSION['user'])) {
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0655 10.434V13.9637L19.5291 20.9875C19.6944 21.4551 19.3461 21.9455 18.8503 21.9455H13.1069C13.1069 23.6328 11.7391 25 10.051 25C8.36279 25 6.99497 23.6328 6.99497 21.9455H1.25163C0.75586 21.9455 0.407549 21.4551 0.572806 20.9875L3.0415 13.9637V10.434C3.04824 7.2305 5.20587 4.5327 8.14713 3.70372V1.90394C8.14713 0.852424 8.99955 0 10.0511 0C10.0516 0 10.0521 1.957e-07 10.0526 5.87027e-07C10.0529 1.95715e-07 10.0532 0 10.0535 0C10.0549 0 10.0563 3.97422e-06 10.0576 1.19119e-05C11.1061 0.00355513 11.955 0.854616 11.955 1.90394V3.70147C14.9004 4.52732 17.0588 7.22849 17.0655 10.434Z" fill="white" />
                         </svg>
                     </a>
-                    <span class="notice-red-point"></span>
+                    <?php if (!empty($notice)) {
+                        foreach ($notice as $n) {
+                            array_push($noticeArr, $n['readed']);
+                        }
+                        if (in_array('1', $noticeArr)) {
+                            echo '<span class="notice-red-point"></span>';
+                        }
+                    } ?>
                 </li>
                 <li class="cart">
                     <a class="cart" href="./cart1.php"><svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
