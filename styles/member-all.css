@@ -112,8 +112,8 @@
   right: -3px;
   bottom: 0;
   cursor: pointer;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .wrap .containerr .main .row .col .left .myName .photo .photoedit:hover {
@@ -892,7 +892,7 @@
 
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList {
   width: 100%;
-  height: auto;
+  height: 260px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -929,6 +929,11 @@
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card a .product-image {
   width: 100%;
   height: 140px;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+  background-color: #554d49;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card a .product-image img {
@@ -936,6 +941,13 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card a .product-image img:hover {
+  opacity: 0.9;
 }
 
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card .p-down {
@@ -1219,7 +1231,9 @@
   padding-top: 25px;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 {
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1233,7 +1247,9 @@
           align-items: center;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1249,7 +1265,9 @@
   border-radius: 50%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle2 {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1265,11 +1283,15 @@
   border-radius: 50%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text {
   padding-top: 4%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text p {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text p {
   padding-top: 3px;
   font-family: "GenSenRounded-M";
   font-size: 14px;
@@ -1277,11 +1299,15 @@
   text-align: center;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 {
   padding-top: 4%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2 p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2 p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 p {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2 p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2 p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 p {
   padding-top: 3px;
   font-family: "GenSenRounded-M";
   font-size: 14px;
@@ -1891,8 +1917,8 @@
   height: 20px;
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon .watchFriendSvg:hover {
@@ -2021,6 +2047,9 @@
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button {
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 3px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button:hover {
@@ -3019,8 +3048,8 @@
 @media screen and (min-width: 992px) {
   .wrap {
     background-image: url(../images/web_bg_down-2.png), url(../images/other_bg_paper.png);
-    background-repeat: no-repeat,repeat;
-    background-size: 100%,auto;
+    background-repeat: no-repeat, repeat;
+    background-size: 100%, auto;
     background-position: bottom, 0%;
   }
   .wrap .containerr {
