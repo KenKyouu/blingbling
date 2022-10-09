@@ -890,6 +890,57 @@
   margin: 20px 0;
 }
 
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .left {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .left .img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .left .img img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h3 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h3 {
+    font-size: 24px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h5 {
+  padding-top: 50px;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h5 {
+    font-size: 16px;
+  }
+}
+
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList {
   width: 100%;
   height: 260px;
@@ -1038,6 +1089,64 @@
 .wrap .containerr .main .row .col .whiteBg .orders {
   width: 100%;
   margin-bottom: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus {
+  padding-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .orders .emptystatus {
+    padding-top: 20px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .left {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .left .img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .left .img img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h3 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h3 {
+    font-size: 24px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h5 {
+  padding-top: 50px;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h5 {
+    font-size: 16px;
+  }
 }
 
 .wrap .containerr .main .row .col .whiteBg .orders .order-list {
@@ -2328,6 +2437,64 @@
   width: 100%;
   overflow: hidden;
   margin-top: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus {
+  padding-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus {
+    padding-top: 20px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .left {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .left .img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .left .img img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h3 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h3 {
+    font-size: 24px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h5 {
+  padding-top: 50px;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h5 {
+    font-size: 16px;
+  }
 }
 
 .wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails {

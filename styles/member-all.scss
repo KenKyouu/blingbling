@@ -803,7 +803,40 @@ $bold: 900;
               flex-wrap: wrap;
               justify-content: left;
               margin: 20px 0;
-
+              .emptystatus {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .left {
+                  width: 50%;
+                  .img {
+                    width: 100%;
+                    img {
+                      width: 100%;
+                    }
+                  }
+                }
+                .right {
+                  width: 50%;
+                  h3 {
+                    color: $super-dark;
+                    font-family: "GenSenRounded-M";
+                    font-size: $h4-font-size;
+                    @media (max-width: 768px) {
+                      font-size: $h5-font-size;
+                    }
+                  }
+                  h5 {
+                    padding-top: 50px;
+                    color: $super-dark;
+                    font-family: "GenSenRounded-M";
+                    font-size: $h6-font-size;
+                    @media (max-width: 768px) {
+                      font-size: $p-font-size;
+                    }
+                  }
+                }
+              }
               .wishList {
                 width: 100%;
                 height: 260px;
@@ -917,6 +950,44 @@ $bold: 900;
             .orders {
               width: 100%;
               margin-bottom: 20px;
+              .emptystatus {
+                padding-top: 100px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                @media (max-width: 768px) {
+                  padding-top: 20px;
+                }
+                .left {
+                  width: 50%;
+                  .img {
+                    width: 100%;
+                    img {
+                      width: 100%;
+                    }
+                  }
+                }
+                .right {
+                  width: 50%;
+                  h3 {
+                    color: $super-dark;
+                    font-family: "GenSenRounded-M";
+                    font-size: $h4-font-size;
+                    @media (max-width: 768px) {
+                      font-size: $h5-font-size;
+                    }
+                  }
+                  h5 {
+                    padding-top: 50px;
+                    color: $super-dark;
+                    font-family: "GenSenRounded-M";
+                    font-size: $h6-font-size;
+                    @media (max-width: 768px) {
+                      font-size: $p-font-size;
+                    }
+                  }
+                }
+              }
               .order-list {
                 width: 100%;
                 padding-top: 15px;
@@ -2018,7 +2089,44 @@ $bold: 900;
               width: 100%;
               overflow: hidden;
               margin-top: 20px;
-
+              .emptystatus {
+                padding-top: 100px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                @media (max-width: 768px) {
+                  padding-top: 20px;
+                }
+                .left {
+                  width: 50%;
+                  .img {
+                    width: 100%;
+                    img {
+                      width: 100%;
+                    }
+                  }
+                }
+                .right {
+                  width: 50%;
+                  h3 {
+                    color: $super-dark;
+                    font-family: "GenSenRounded-M";
+                    font-size: $h4-font-size;
+                    @media (max-width: 768px) {
+                      font-size: $h5-font-size;
+                    }
+                  }
+                  h5 {
+                    padding-top: 50px;
+                    color: $super-dark;
+                    font-family: "GenSenRounded-M";
+                    font-size: $h6-font-size;
+                    @media (max-width: 768px) {
+                      font-size: $p-font-size;
+                    }
+                  }
+                }
+              }
               .noticeDetails {
                 width: 100%;
                 .noticeDetail-unread {

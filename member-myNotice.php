@@ -48,7 +48,7 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
                                         </svg>
                                     </label>
                                 </div>
-                            </form> 
+                            </form>
                             <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
                                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,6 +199,19 @@ $membernotice = $pdo->query("SELECT * FROM member_notice WHERE member_sid=$user 
 
 
                         <div class="noticeborder">
+                            <?php if (empty($membernotice)) {
+                                echo '
+                                <div class="emptystatus">
+                                <div class="left">
+                                <div class="img">
+                                <img src="./images/loading.png" alt=""></div>
+                                </div>
+                                <div class="right">
+                                <h3>Oops！</h3>
+                                <h5>目前尚未有通知訊息。</h5>
+                                </div>
+                                </div>';
+                            } ?>
                             <div class="noticeDetails">
                                 <?php foreach ($membernotice as $n) : ?>
                                     <button class="noticeken  <?php if ($n['readed'] == 1) {

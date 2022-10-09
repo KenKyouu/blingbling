@@ -452,14 +452,14 @@ body {
         color: $white;
         font-family: "GenSenRounded-M";
         font-size: 13px;
-        transition: .5s;
+        transition: 0.5s;
         padding: 7px 15px;
         border-radius: 20px;
-        text-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.286) ;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.286);
         @media screen and (min-width: 768px) {
           font-size: $h6-font-size;
         }
-        &:hover{
+        &:hover {
           background-color: $deep-brown;
           border-radius: 20px;
         }
@@ -495,7 +495,7 @@ body {
           margin: 15px 10px;
           border: 2px solid #c2c2c26f;
           border-radius: 20px;
-          background-color:#c2c2c26f;
+          background-color: #c2c2c26f;
           flex-shrink: 0;
           cursor: pointer;
           transition: all 0.2s;
@@ -561,8 +561,8 @@ body {
       color: $super-dark;
       font-family: "GenSenRounded-M";
       font-size: $h6-font-size;
-      transition: .5s;
-      &:hover{
+      transition: 0.5s;
+      &:hover {
         background-color: $skin;
       }
     }
@@ -619,7 +619,7 @@ body {
           width: 170px;
           height: 170px;
           margin: auto;
-          box-shadow:  2px 3px 3px  rgba(0,0,0,0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
           // object-fit: cover;
           position: relative;
           background-color: $deep-brown;
@@ -628,10 +628,10 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: .5s;
+            transition: 0.5s;
             opacity: 1;
-            &:hover{
-              opacity: .9;
+            &:hover {
+              opacity: 0.9;
             }
           }
           @media screen and (min-width: 992px) {
@@ -652,8 +652,8 @@ body {
             right: 3px;
             bottom: 3px;
             background-image: url(../images/icons/addlike0.svg);
-            transition: .5s;
-            &:hover{
+            transition: 0.5s;
+            &:hover {
               background-image: url(../images/icons/addlike1.svg);
             }
           }
@@ -726,9 +726,9 @@ body {
       ul {
         display: flex;
         justify-content: center;
-        .page-item{
+        .page-item {
           border-radius: 5px;
-          .page-link{
+          .page-link {
             background-color: $light-brown;
             border-radius: 5px;
             border: 2px solid $light-brown;
@@ -742,7 +742,6 @@ body {
         a {
           color: $dark-gray;
           margin: 0 5px;
-          
         }
       }
     }
@@ -763,10 +762,10 @@ body {
     padding: 100px 0 0 30px;
     span.filter-pc-back {
       cursor: pointer;
-      svg{
-        transition: .5s;
-        &:hover{
-          transform: translateX(-10px) scaleX(.8);
+      svg {
+        transition: 0.5s;
+        &:hover {
+          transform: translateX(-10px) scaleX(0.8);
         }
       }
     }
@@ -813,10 +812,10 @@ body {
               color: $white;
               font-size: $h6-font-size;
               font-family: "GenSenRounded-M";
-              transition: .5s;
+              transition: 0.5s;
               padding: 5px 15px;
               border-radius: 5px;
-              &:hover{
+              &:hover {
                 background-color: $light-lake-green;
               }
             }
@@ -852,7 +851,7 @@ body {
           padding: 5px 15px;
           border-radius: 5px;
           cursor: pointer;
-          &:hover{
+          &:hover {
             background-color: $light-lake-green;
           }
         }
@@ -943,8 +942,8 @@ body {
       color: $white;
       font-size: $h7-font-size;
       font-family: "GenSenRounded-M";
-      transition: .5s;
-      &:hover{
+      transition: 0.5s;
+      &:hover {
         background-color: $red-pink;
       }
     }
