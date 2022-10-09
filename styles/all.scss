@@ -217,7 +217,7 @@ body {
           width: 100%;
           img {
             width: 130px;
-            @media screen and (min-width: 768px){
+            @media screen and (min-width: 768px) {
               width: 180px;
             }
           }
@@ -838,6 +838,7 @@ body {
       .menu-button {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 60px 30px 0 30px;
         .circle {
           width: 40px;
@@ -857,6 +858,34 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+        }
+        .member-loginBtn {
+          flex-shrink: 0;
+          .h-member-loginText {
+            font-family: "GenSenRounded-B";
+            font-size: $p-font-size;
+            text-align: center;
+            flex-shrink: 0;
+            padding: 10px;
+            background-color: $lake-green;
+            color: $white;
+            border-radius: 7px;
+            transition: 0.5s;
+          }
+        }
+        .member-logoutBtn {
+          flex-shrink: 0;
+          .h-member-loginText {
+            font-family: "GenSenRounded-B";
+            font-size: $p-font-size;
+            text-align: center;
+            flex-shrink: 0;
+            padding: 10px;
+            background-color: $lake-green;
+            color: $white;
+            border-radius: 7px;
+            transition: 0.5s;
           }
         }
       }
