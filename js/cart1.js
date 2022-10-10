@@ -72,6 +72,10 @@ function moveX(nowPage) {
     });
 }
 
+$('.j-package-chose').click(function(){
+    console.log('click');
+    $('input[name="defaultPackage"]').prop('checked', false);
+})
 
 //價錢加,
 const dollarCommas = function (n) {

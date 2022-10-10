@@ -290,7 +290,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     <div class="j-select j-form-group" id="zipcode2" data-display="static" data-reference="parent">
                                                     </div>
                                                     <div class="j-form-group">
-                                                        <textarea name="address" id="address" cols="20" rows="2" class="j-input" placeholder="收件地址"></textarea>
+                                                        <textarea name="address" id="address" cols="20" rows="2" class="j-input j" placeholder="收件地址"></textarea>
                                                         <div class="j-messages"></div>
                                                     </div>
                                                 </li>
@@ -318,7 +318,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                 </li>
                                                 <li class="j-form-group">
                                                     <label for="remark">備註</label>
-                                                    <textarea name="remark" id="remark" cols="20" rows="3" class="j-input" placeholder="管理室代收/ 電話聯絡時間 ..."></textarea>
+                                                    <textarea name="remark" id="remark" cols="20" rows="3" class="j-input j" placeholder="管理室代收/ 電話聯絡時間 ..."></textarea>
                                                     <div class="j-messages"></div>
                                                 </li>
                                             </ul>
