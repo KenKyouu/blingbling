@@ -898,11 +898,14 @@ body {
           width: 90%;
           font-family: "GenSenRounded-B";
           font-size: $ps-font-size;
-          color: $gray;
+          color: $dark-gray;
           border: none;
           border-bottom: 2px solid $dark-gray;
           outline: none;
           padding-bottom: 2%;
+          ::-webkit-input-placeholder{
+            color: $gray;
+          }
           @media screen and (max-width: 864px) {
             width: 85%;
           }
@@ -1064,7 +1067,7 @@ body {
           width: 80%;
           font-family: "GenSenRounded-B";
           font-size: $ps-font-size;
-          color: $gray;
+          color: $dark-gray;
           border: none;
           border-bottom: 2px solid $dark-gray;
           outline: none;
@@ -1208,11 +1211,14 @@ body {
           width: 90%;
           font-family: "GenSenRounded-B";
           font-size: $ps-font-size;
-          color: $gray;
+          color: $dark-gray;
           border: none;
           border-bottom: 2px solid $dark-gray;
           outline: none;
           padding-bottom: 2%;
+          ::-webkit-input-placeholder{
+            color: $gray;
+          }
           @media screen and (max-width: 864px) {
             width: 85%;
           }
@@ -1435,7 +1441,7 @@ body {
           width: 80%;
           font-family: "GenSenRounded-B";
           font-size: $ps-font-size;
-          color: $gray;
+          color: $dark-gray;
           border: none;
           border-bottom: 2px solid $dark-gray;
           outline: none;
