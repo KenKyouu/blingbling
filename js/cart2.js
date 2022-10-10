@@ -877,6 +877,7 @@ function updatePrices() {
     $('.j-package').html('NT$ ' + dollarCommas(orderpackage));
     const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
     $('.j-giftvoucher').html('NT$ ' + dollarCommas(ordergiftvoucher));
+    const ordercouponsid = $('.j-coupon').attr('data-sid');
     const ordercoupon = $('.j-coupon').attr('data-val');
     $('.j-coupon').html('NT$ ' + dollarCommas(ordercoupon));
     const orderfreight = $('.j-freightfee').attr('data-val');
