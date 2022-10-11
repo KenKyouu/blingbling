@@ -981,7 +981,7 @@ require __DIR__ . '/parts/connect_db.php';
 
 
 <!-- ---------footerArea ---------->
-<div class="footer-mobile">
+<!-- <div class="footer-mobile">
     <div class="footer-bg">
         <div class="footer-logo">
             <img src="./images/logo-footer.svg" alt="" />
@@ -1012,7 +1012,7 @@ require __DIR__ . '/parts/connect_db.php';
             <p>&copy;&nbsp;bling&nbsp;bling&nbsp;gift,&nbsp;Inc.</p>
         </div>
     </div>
-</div>
+</div> -->
 <div class="footer-pc">
     <div class="footer-pc-up">
         <div class="footer-nav">

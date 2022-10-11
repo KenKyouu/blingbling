@@ -80,6 +80,7 @@ avatar.addEventListener("change", async function () {
 */
 function uploadAvatar(data) {
     // avatar.click(); // 模擬點擊
+    console.log(data)
 
     const fd = new FormData();
     fd.append('data', data);
