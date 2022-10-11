@@ -33,21 +33,24 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                     <div class="left col-lg-3 col-xl-3">
                         <div class="myName">
                             <!-- 拉拉TODO: -->
-                            <form action="upload-api.php" method="post" enctype="multipart/form-data">
-                            <div class="photo">
-                                <div class="photoborder">
-                                    <div class="myphoto">
-                                        <img src="./images/elf_logo.png" alt="" class="photo">
+
+                            <form id="img-load" name="form1" onsubmit="return false">
+                                <div class="photo">
+                                    <div class="photoborder">
+                                        <div class="myphoto">
+                                            <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
+                                            <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
+                                        </div>
+
                                     </div>
+                                    <label name="avatar" for="file" class="photoedit">
+                                        <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
+                                            <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
+                                            <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
+                                        </svg>
+                                    </label>
                                 </div>
-                                <div class="photoedit">
-                                    <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
-                                        <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
-                                        <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
-                                    </svg>
-                                </div>
-                            </div>
                             </form>
                             <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
@@ -242,7 +245,7 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                         </div>
                                     </div>
                                     <div class="myIntro-info">
-                                        <p class="myIntro-info"><?= $member[0]['gender'] ?></p>
+                                        <p class="myIntro-info"><?= $member[0]['gender'] == 'male' ? '男' : '女' ?></p>
                                     </div>
                                 </div>
                                 <div class="birthday">
@@ -359,7 +362,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <p><span>*</span> 姓名</p>
                                                     </div>
                                                     <div class="detail-input">
-                                                        <input type="text" name="infoname" id="name" placeholder="您的姓名或暱稱" required>
+                                                        <input type="text" name="infoname" id="name" placeholder="您的姓名或暱稱" value="<?php if (!empty($member[0]['name'])) {
+                                                                                                                                        echo $member[0]['name'];
+                                                                                                                                    } ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="detail">
@@ -368,8 +373,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                     </div>
                                                     <div class="detail-input">
                                                         <select name="infogender" placeholder="請選擇" id="gender" required>
-                                                            <option value="male">男</option>
-                                                            <option value="female">女</option>
+                                                            <?php $selected = "selected='selected'" ?>
+                                                            <option value="male" <?= $member[0]['gender'] == 'male' ? $selected : ''; ?>>男</option>
+                                                            <option value="female" <?= $member[0]['gender'] == 'female' ? $selected : ''; ?>>女</option>
                                                             <!-- <option value="others">不顯示</option> -->
                                                         </select>
                                                     </div>
@@ -397,7 +403,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <p><span>*</span> 聯絡電話</p>
                                                     </div>
                                                     <div class="detail-input">
-                                                        <input type="text" name="infomobile" id="phone" placeholder="您的聯絡電話" minlength="10" maxlength="10" required>
+                                                        <input type="text" name="infomobile" id="phone" placeholder="您的聯絡電話" minlength="10" maxlength="10" value="<?php if (!empty($member[0]['mobile'])) {
+                                                                                                                                                                        echo $member[0]['mobile'];
+                                                                                                                                                                    } ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="detail">
@@ -405,7 +413,9 @@ $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
                                                         <p><span>*</span> 聯絡地址</p>
                                                     </div>
                                                     <div class="detail-input">
-                                                        <input type="text" name="infoaddress" id="address" placeholder="您的聯絡地址" required>
+                                                        <input type="text" name="infoaddress" id="address" placeholder="您的聯絡地址" value="<?php if (!empty($member[0]['address'])) {
+                                                                                                                                            echo $member[0]['address'];
+                                                                                                                                        } ?>" required>
                                                     </div>
                                                 </div>
                                             </div>

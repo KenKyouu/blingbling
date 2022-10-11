@@ -42,3 +42,53 @@ $('.newcoupon').click(function(){
 $('button.ok').click(function(){
   $('.coupon-lightbox-err').removeClass('show').css('left', '-100%');
 });
+
+//上傳照片------
+
+function previewFile() {
+  const preview = document.querySelector('.upload_photo');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener("load", () => {
+    // convert image file to base64 string
+    preview.src = reader.result;
+    uploadAvatar(reader.result);
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+
+
+const edit = document.querySelector(".photoedit");
+const myphoto = document.querySelector(".photo upload_photo");
+const avatar = document.form1.avatar;
+/*
+avatar.addEventListener("change", async function () {
+    // 上傳表單
+    const fd = new FormData(document.form1);
+    const r = await fetch("upload-api.php", {
+        method: "POST",
+        body: fd,
+    });
+    const obj = await r.json();
+    console.log(obj);
+    myphoto.src = "./uploaded/" + obj.filename;
+});
+*/
+function uploadAvatar(data) {
+    // avatar.click(); // 模擬點擊
+
+    const fd = new FormData();
+    fd.append('data', data);
+    fetch('save_avatar.php',{
+      method: 'POST',
+      body: fd,
+    }).then(r=>r.json())
+    .then(obj=>{
+      console.log(obj);
+    })
+
+}
