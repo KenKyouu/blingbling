@@ -79,6 +79,7 @@
   border-radius: 100%;
   background-color: #ffffff;
   overflow: hidden;
+  text-align: center;
 }
 
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
