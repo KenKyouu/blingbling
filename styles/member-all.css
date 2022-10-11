@@ -81,8 +81,16 @@
   overflow: hidden;
 }
 
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto .nodisplay {
+  display: none;
+}
+
 .wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.photo {
   width: 110%;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoborder .myphoto img.upload_photo {
+  width: 100%;
 }
 
 .wrap .containerr .main .row .col .left .myName .photo .photoedit {
@@ -103,6 +111,13 @@
   position: absolute;
   right: -3px;
   bottom: 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrap .containerr .main .row .col .left .myName .photo .photoedit:hover {
+  background-color: #000000;
 }
 
 .wrap .containerr .main .row .col .left .myName h5 {
@@ -875,9 +890,60 @@
   margin: 20px 0;
 }
 
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .left {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .left .img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .left .img img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h3 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h3 {
+    font-size: 24px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h5 {
+  padding-top: 50px;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .myWishLists .emptystatus .right h5 {
+    font-size: 16px;
+  }
+}
+
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList {
   width: 100%;
-  height: auto;
+  height: 260px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -914,6 +980,11 @@
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card a .product-image {
   width: 100%;
   height: 140px;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+  background-color: #554d49;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card a .product-image img {
@@ -921,6 +992,13 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card a .product-image img:hover {
+  opacity: 0.9;
 }
 
 .wrap .containerr .main .row .col .whiteBg .myWishLists .wishList .product-card .p-down {
@@ -1011,6 +1089,64 @@
 .wrap .containerr .main .row .col .whiteBg .orders {
   width: 100%;
   margin-bottom: 20px;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus {
+  padding-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .orders .emptystatus {
+    padding-top: 20px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .left {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .left .img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .left .img img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h3 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h3 {
+    font-size: 24px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h5 {
+  padding-top: 50px;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .orders .emptystatus .right h5 {
+    font-size: 16px;
+  }
 }
 
 .wrap .containerr .main .row .col .whiteBg .orders .order-list {
@@ -1204,7 +1340,9 @@
   padding-top: 25px;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 {
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1218,7 +1356,9 @@
           align-items: center;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1234,7 +1374,9 @@
   border-radius: 50%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle2 {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-circle2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-circle2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-circle2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1250,11 +1392,15 @@
   border-radius: 50%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text {
   padding-top: 4%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text p {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text p {
   padding-top: 3px;
   font-family: "GenSenRounded-M";
   font-size: 14px;
@@ -1262,11 +1408,15 @@
   text-align: center;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 {
   padding-top: 4%;
 }
 
-.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2 p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2 p, .wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 p {
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step1 .step-text2 p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step2 .step-text2 p,
+.wrap .containerr .main .row .col .whiteBg .order-detail-top .order-delivery .order-step3 .step-text2 p {
   padding-top: 3px;
   font-family: "GenSenRounded-M";
   font-size: 14px;
@@ -1876,8 +2026,8 @@
   height: 20px;
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .wrap .containerr .main .row .col .whiteBg .myFriendsGroup .friendList .watchFriendIcon .watchFriendSvg:hover {
@@ -2006,6 +2156,9 @@
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button {
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 3px;
 }
 
 .wrap .containerr .main .row .col .whiteBg .friendDetailsTop .friendDetails .friendName .friendEditIcon button:hover {
@@ -2286,6 +2439,64 @@
   margin-top: 20px;
 }
 
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus {
+  padding-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus {
+    padding-top: 20px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .left {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .left .img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .left .img img {
+  width: 100%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right {
+  width: 50%;
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h3 {
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h3 {
+    font-size: 24px;
+  }
+}
+
+.wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h5 {
+  padding-top: 50px;
+  color: #000000;
+  font-family: "GenSenRounded-M";
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrap .containerr .main .row .col .whiteBg .noticeborder .emptystatus .right h5 {
+    font-size: 16px;
+  }
+}
+
 .wrap .containerr .main .row .col .whiteBg .noticeborder .noticeDetails {
   width: 100%;
 }
@@ -2445,6 +2656,7 @@
   padding: 0 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
+  color: #000000;
 }
 
 .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
@@ -2476,11 +2688,11 @@
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
   padding: 0 10px;
-  color: #c2c2c2;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   text-align: center;
   margin-right: 10px;
+  color: #000000;
 }
 
 .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input .appendtag {
@@ -2489,7 +2701,7 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
-  padding: 10px 8px;
+  padding: 13px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2675,6 +2887,7 @@
   padding: 0 10px;
   font-family: "GenSenRounded-B";
   font-size: 14px;
+  color: #000000;
 }
 
 .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
@@ -2706,11 +2919,11 @@
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
   padding: 0 10px;
-  color: #c2c2c2;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   text-align: center;
   margin-right: 10px;
+  color: #000000;
 }
 
 .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input .appendtag {
@@ -2719,7 +2932,7 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #2d827d;
-  padding: 10px 8px;
+  padding: 13px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3002,8 +3215,8 @@
 @media screen and (min-width: 992px) {
   .wrap {
     background-image: url(../images/web_bg_down-2.png), url(../images/other_bg_paper.png);
-    background-repeat: no-repeat,repeat;
-    background-size: 100%,auto;
+    background-repeat: no-repeat, repeat;
+    background-size: 100%, auto;
     background-position: bottom, 0%;
   }
   .wrap .containerr {
@@ -3045,19 +3258,22 @@
     top: -50px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto {
-    width: 86px;
-    height: 86px;
+    width: 110px;
+    height: 110px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto .nodisplay {
+    display: none;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoborder .myphoto img.photo {
     width: 120%;
     position: static;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName .photo .photoedit {
-    right: -5px;
+    right: 2px;
     bottom: 0;
   }
   .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
@@ -3448,9 +3664,6 @@
     color: #ffffff;
     border: none;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle {
-    padding-right: 17px;
-  }
   .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle .f-name {
     font-size: 14px;
     font-family: "GenSenRounded-B";
@@ -3607,13 +3820,13 @@
     margin: 40px 0 10px 0;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName {
-    width: 68%;
+    width: 70%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponName p.couponName {
     font-size: 16px;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate {
-    width: 32%;
+    width: 30%;
   }
   .wrap .containerr .main .row .col .col-lg-9 .couponTitle .couponDate p.couponDate {
     font-size: 16px;
@@ -3727,6 +3940,7 @@
     padding: 0 10px;
     font-family: "GenSenRounded-B";
     font-size: 16px;
+    color: #000000;
   }
   .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
     color: #c2c2c2;
@@ -3754,14 +3968,15 @@
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #2d827d;
     padding: 0 10px;
-    color: #c2c2c2;
     font-family: "GenSenRounded-B";
     font-size: 16px;
     text-align: center;
     margin-right: 20px;
+    color: #000000;
   }
   .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input .appendtag {
     width: 400px;
+    padding: 15px 8px;
   }
   .inputNewFriend .lightbox-newFriendDetails .friend-details .detail .detail-input .appendtag span {
     font-size: 16px;
@@ -3881,6 +4096,7 @@
     padding: 0 10px;
     font-family: "GenSenRounded-B";
     font-size: 16px;
+    color: #000000;
   }
   .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input ::-webkit-input-placeholder {
     color: #c2c2c2;
@@ -3908,14 +4124,15 @@
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #2d827d;
     padding: 0 10px;
-    color: #c2c2c2;
     font-family: "GenSenRounded-B";
     font-size: 16px;
     text-align: center;
     margin-right: 20px;
+    color: #000000;
   }
   .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input .appendtag {
     width: 400px;
+    padding: 15px 8px;
   }
   .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail .detail-input .appendtag span {
     font-size: 16px;

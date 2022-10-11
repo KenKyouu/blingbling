@@ -17,6 +17,10 @@ $friendsid = substr($_SERVER['QUERY_STRING'], 4);
 $friend = intval($friendsid);
 $friendiswho = $pdo->query("SELECT * FROM member_friend WHERE `sid` = $friend")->fetchAll();
 $friendemail = strval($friendiswho[0]['email']);
+$friendnamename = strval($friendiswho[0]['name']);
+$friendmm = strval($friendiswho[0]['birthday_mm']);
+$frienddd = strval($friendiswho[0]['birthday_dd']);
+$friendgender = strval($friendiswho[0]['gender']);
 $friendismember = $pdo->query("SELECT * FROM member WHERE email= '$friendemail' ")->fetchAll();
 $tags = $pdo->query("SELECT * FROM tag WHERE 1 ")->fetchAll();
 $friendtags = $pdo->query("SELECT * FROM friend_tag WHERE `friend_sid`= $friend ")->fetchAll();
@@ -46,20 +50,24 @@ if (!empty($friendismember)) {
 
                     <div class="left col-lg-3 col-xl-3">
                         <div class="myName">
-                            <div class="photo">
-                                <div class="photoborder">
-                                    <div class="myphoto">
-                                        <img src="./images/elf_logo.png" alt="" class="photo">
+                            <form id="img-load" name="form1" onsubmit="return false">
+                                <div class="photo">
+                                    <div class="photoborder">
+                                        <div class="myphoto">
+                                            <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
+                                            <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
+                                        </div>
+
                                     </div>
+                                    <label name="avatar" for="file" class="photoedit">
+                                        <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
+                                            <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
+                                            <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
+                                        </svg>
+                                    </label>
                                 </div>
-                                <div class="photoedit">
-                                    <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
-                                        <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
-                                        <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
-                                    </svg>
-                                </div>
-                            </div>
+                            </form>
                             <h5><?= $member[0]['name'] ?></h5>
                             <a href="#" class="coin">
                                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +187,7 @@ if (!empty($friendismember)) {
                                 </div>
                                 <div class="friendGenderBirth">
                                     <div class="friendGender">
-                                        <p><?= $r['gender'] ?></p>
+                                        <p><?= $r['gender'] == 'female' ? '女' : '男' ?></p>
                                     </div>
                                     <div class="friendBirth">
                                         <p><?= $r['birthday_mm'] ?>月<?= $r['birthday_dd'] ?>日</p>
@@ -210,7 +218,9 @@ if (!empty($friendismember)) {
                         <div class="friendWishList">
                             <div class="f-wishes">
                                 <div class="f-title">
-                                    <p>好友心願</p>
+                                    <?php if (!empty($friendfavorite)) : ?>
+                                        <p>好友心願</p>
+                                    <?php endif; ?>
                                 </div>
                                 <?php if (!empty($friendfavorite)) : ?>
                                     <?php foreach ($friendfavorite as $ff) : ?>
@@ -221,41 +231,7 @@ if (!empty($friendismember)) {
                                         </div>
                                     <?php endforeach; ?>
                                 <?php endif; ?>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/72-2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
-                                    <a href="#">
-                                        <img class="wish" src="./images/products/71-4.jpeg" alt="">
-                                    </a>
-                                </div>
+
                             </div>
                             <div class="f-recommend">
                                 <?php if (!empty($friendtags)) : ?>
@@ -339,7 +315,9 @@ if (!empty($friendismember)) {
                     <p><span>*</span> 好友姓名</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="friendname" placeholder="好友的姓名或暱稱" required>
+                    <input type="text" name="friendname" placeholder="好友的姓名或暱稱" value="<?php if (!empty($friendnamename)) {
+                                                                                            echo $friendnamename;
+                                                                                        } ?>" required>
                 </div>
             </div>
             <div class="detail">
@@ -348,9 +326,9 @@ if (!empty($friendismember)) {
                 </div>
                 <div class="detail-input">
                     <select name="friendgender" placeholder="請選擇" required>
-                        <option value="male">男</option>
-                        <option value="female">女</option>
-                        <!-- <option value="others">不顯示</option> -->
+                        <?php $selected = "selected='selected'" ?>
+                        <option value="male" <?= $friendgender == 'male' ? $selected : '' ?>>男</option>
+                        <option value="female" <?= $friendgender == 'female' ? $selected : '' ?>>女</option>
                     </select>
                 </div>
             </div>
@@ -359,7 +337,9 @@ if (!empty($friendismember)) {
                     <p>好友Email</p>
                 </div>
                 <div class="detail-input">
-                    <input type="email" name="friendemail" placeholder="好友的電子郵件地址">
+                    <input type="email" name="friendemail" placeholder="好友的電子郵件地址" value="<?php if (!empty($friendemail)) {
+                                                                                                echo $friendemail;
+                                                                                            } ?>">
                 </div>
             </div>
             <div class="detail">
@@ -367,8 +347,12 @@ if (!empty($friendismember)) {
                     <p><span>*</span> 好友生日</p>
                 </div>
                 <div class="detail-input">
-                    <input type="text" name="friendmonth" placeholder="MM" class="birthmd" \d{1}\d{1} required>
-                    <input type="text" name="friendday" placeholder="DD" class="birthmd" required>
+                    <input type="text" name="friendmonth" placeholder="MM" value="<?php if (!empty($friendmm)) {
+                                                                                        echo $friendmm;
+                                                                                    } ?>" class="birthmd" \d{1}\d{1} required>
+                    <input type="text" name="friendday" placeholder="DD" value="<?php if (!empty($frienddd)) {
+                                                                                    echo $frienddd;
+                                                                                } ?>" class="birthmd" required>
                 </div>
             </div>
             <div class="detail">
@@ -437,10 +421,12 @@ if (!empty($friendismember)) {
             "editfriend-api.php",
             $(document.editFriend).serialize(),
             function(data) {
+                // location.href = "member-myFriendDetails.php" + url;
                 if (data.success) {
                     location.href = "member-myFriendDetails.php" + url;
                 } else {
-                    alert(data.error);
+                    location.href = "member-myFriendDetails.php" + url;
+                    // alert(data.error);
                 }
             },
             "json"
@@ -451,9 +437,24 @@ if (!empty($friendismember)) {
 
     let tagnameArr = [];
     let tagvalueArr = [];
-    <?php foreach ($friendtags as $ft) : ?>
-        tagvalueArr.push(<?= $ft['tag_sid']; ?>);
-    <?php endforeach; ?>
+
+
+    for (let n = 0; n < $('span.kenken').length; n++) {
+        let defavalue = $('span.kenken')[n];
+        // console.log($(defavalue).attr('data-val'))
+        tagvalueArr.push($(defavalue).attr('data-val'));
+        // console.log(tagvalueArr);
+    }
+
+    $('.tagbyken, span.kenken').click(function() {
+        if (tagvalueArr.length < 5) {
+            $(this).css({
+                'background-color': '#000000',
+                'color': '#ffffff'
+            })
+        }
+    })
+
     console.log(tagvalueArr)
     let inputname = 1;
     $('.tagbyken').click(function() {
@@ -500,12 +501,6 @@ if (!empty($friendismember)) {
         ($(this).parent()).remove();
         $(this).remove();
         console.log(tagvalueArr);
-    })
-    $('.tagbyken, span.kenken').click(function() {
-        $(this).css({
-            'background-color': '#000000',
-            'color': '#ffffff'
-        })
     })
 </script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>

@@ -52,6 +52,7 @@ var imgs = document.getElementById('eye_close');
     //下面是一個判斷每次點選的效果
 var flag = 0;
 imgs.onclick = function () {
+  // console.log('123');
     if (flag == 0) {
         input.type = 'text';
         eye_close.src = './images/icons/icon=eye_open.svg';//睜眼圖

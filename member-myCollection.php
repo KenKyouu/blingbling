@@ -9,10 +9,12 @@ if (empty($_SESSION['user'])) {
 $user = $_SESSION['user']['id'];
 $memberfavorite = $pdo->query("SELECT DISTINCT `product_sid` FROM member_favorite WHERE member_sid=$user")->fetchAll();
 $member = $pdo->query("SELECT * FROM member WHERE sid=$user")->fetchAll();
-$productsid = $memberfavorite[0]['product_sid'];
-// echo json_encode($productsid);
-// exit;
-$favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")->fetchAll();
+if (!empty($memberfavorite)) {
+  $productsid = $memberfavorite[0]['product_sid'];
+  // echo json_encode($productsid);
+  // exit;
+  $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")->fetchAll();
+}
 ?>
 
 <?php include __DIR__ . '/parts/html-head.php'; ?>
@@ -29,20 +31,24 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
 
           <div class="left col-lg-3 col-xl-3">
             <div class="myName">
-              <div class="photo">
-                <div class="photoborder">
-                  <div class="myphoto">
-                    <img src="./images/elf_logo.png" alt="" class="photo">
+              <form id="img-load" name="form1" onsubmit="return false">
+                <div class="photo">
+                  <div class="photoborder">
+                    <div class="myphoto">
+                      <input type="file" class="nodisplay" id="file" name="file" onchange="previewFile()">
+                      <img src="<?= empty($member[0]['avatar']) ? './images/elf_logo.png' : $member[0]['avatar'] ?>" alt="Image preview" class="photo upload_photo">
+                    </div>
+
                   </div>
+                  <label name="avatar" for="file" class="photoedit">
+                    <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
+                      <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
+                      <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
+                    </svg>
+                  </label>
                 </div>
-                <div class="photoedit">
-                  <svg width="8" height="8" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.3139 10.2864L14.7085 2.68474L17.1825 0.212005C17.4653 -0.0706682 17.9213 -0.0706682 18.2042 0.212005L24.7878 6.79241C25.0706 7.07509 25.0706 7.53093 24.7878 7.8136L22.3139 10.2864Z" fill="#ffffff" />
-                    <path d="M21.1211 11.4791L13.4751 3.83691L2.32505 14.9815L9.971 22.6236L21.1211 11.4791Z" fill="#ffffff" />
-                    <path d="M4.9528 19.9966L8.77459 23.8165L4.34386 24.4226L0.580677 24.937C0.244359 24.9829 -0.0410016 24.6976 0.00485987 24.3615L0.519529 20.6002L1.12592 16.1716L4.9528 19.9966Z" fill="#ffffff" />
-                  </svg>
-                </div>
-              </div>
+              </form>
               <h5><?= $member[0]['name'] ?></h5>
               <a href="#" class="coin">
                 <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,9 +81,7 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
                       我的收藏
                     </div>
                   </a></li>
-
                 <li class="btn col-4 col-md-2 col-lg-12"><a href="./member_order.php" id="btn3">
-
                     <div class="btnsvg">
                       <svg width="15" height="13" viewBox="0 0 26 23" fill="none" class="ordersvg" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.88232 15.6203H20.3076V5.69214H1.72564C1.2217 5.69214 0.871237 6.1319 1.04519 6.54611L4.88232 15.6203Z" fill="#4C4948" stroke="#4C4948" stroke-miterlimit="10" />
@@ -144,6 +148,19 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
               </div>
             </div> -->
             <div class="myWishLists">
+              <?php if (empty($memberfavorite)) {
+                echo '
+                <div class="emptystatus">
+                <div class="left">
+                <div class="img">
+                  <img src="./images/loading.png" alt=""></div>
+                </div>
+                <div class="right">
+                <h3>Oops！</h3>
+                <h5>您目前尚未有收藏的商品。</h5>
+                </div>
+                </div>';
+              } ?>
               <?php foreach ($memberfavorite as $m) : ?>
                 <div class="wishList ">
                   <div class="product-card">
@@ -170,11 +187,11 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
                           </p>
                         </div>
                       </div>
-                      <button class="p-delete">
+                      <button class="p-delete" data-val="<?= $psid; ?>" onclick="deleteCollection(event)">
                         <svg width="15" height="16" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M22.7251 4.55958H0.733645C0.330016 4.55958 0 4.23226 0 3.8263C0 3.42287 0.327477 3.09302 0.733645 3.09302H22.7251C23.1287 3.09302 23.4588 3.42033 23.4588 3.8263C23.4588 4.23226 23.1313 4.55958 22.7251 4.55958Z" fill="#4C4948"/>
-                          <path d="M14.7107 1.46656H8.74512C8.34149 1.46656 8.01147 1.13925 8.01147 0.733279C8.01147 0.329849 8.33895 0 8.74512 0H14.7107C15.1143 0 15.4444 0.327311 15.4444 0.733279C15.4444 1.13925 15.1169 1.46656 14.7107 1.46656Z" fill="#4C4948"/>
-                          <path d="M19.4555 6.74414H4.00082C2.74423 6.74414 1.76181 7.69055 1.88874 8.78159L3.48549 22.5033C3.6505 23.9216 5.01877 25 6.6536 25H16.8027C18.4376 25 19.8058 23.9216 19.9708 22.5033L21.5676 8.78159C21.6945 7.69055 20.7121 6.74414 19.4555 6.74414ZM8.3265 21.6964C8.3265 22.2191 7.8518 22.6429 7.26539 22.6429H6.36421C5.7778 22.6429 5.3031 22.2191 5.3031 21.6964L3.95004 10.0477C3.95004 9.52502 4.42475 9.10129 5.01116 9.10129H7.26539C7.8518 9.10129 8.3265 9.52502 8.3265 10.0477V21.6964ZM13.5965 21.973C13.5965 22.3435 13.2741 22.6429 12.8781 22.6429H10.5807C10.1822 22.6429 9.86233 22.3435 9.86233 21.973V9.77368C9.86233 9.40323 10.1847 9.10383 10.5807 9.10383H12.8781C13.2767 9.10383 13.5965 9.40323 13.5965 9.77368V21.973ZM18.1558 21.6964C18.1558 22.2191 17.6811 22.6429 17.0947 22.6429H16.1935C15.6071 22.6429 15.1324 22.2191 15.1324 21.6964V10.0477C15.1324 9.52502 15.6071 9.10129 16.1935 9.10129H18.4477C19.0341 9.10129 19.5088 9.52502 19.5088 10.0477L18.1558 21.6964Z" fill="#4C4948"/>
+                          <path d="M22.7251 4.55958H0.733645C0.330016 4.55958 0 4.23226 0 3.8263C0 3.42287 0.327477 3.09302 0.733645 3.09302H22.7251C23.1287 3.09302 23.4588 3.42033 23.4588 3.8263C23.4588 4.23226 23.1313 4.55958 22.7251 4.55958Z" fill="#4C4948" />
+                          <path d="M14.7107 1.46656H8.74512C8.34149 1.46656 8.01147 1.13925 8.01147 0.733279C8.01147 0.329849 8.33895 0 8.74512 0H14.7107C15.1143 0 15.4444 0.327311 15.4444 0.733279C15.4444 1.13925 15.1169 1.46656 14.7107 1.46656Z" fill="#4C4948" />
+                          <path d="M19.4555 6.74414H4.00082C2.74423 6.74414 1.76181 7.69055 1.88874 8.78159L3.48549 22.5033C3.6505 23.9216 5.01877 25 6.6536 25H16.8027C18.4376 25 19.8058 23.9216 19.9708 22.5033L21.5676 8.78159C21.6945 7.69055 20.7121 6.74414 19.4555 6.74414ZM8.3265 21.6964C8.3265 22.2191 7.8518 22.6429 7.26539 22.6429H6.36421C5.7778 22.6429 5.3031 22.2191 5.3031 21.6964L3.95004 10.0477C3.95004 9.52502 4.42475 9.10129 5.01116 9.10129H7.26539C7.8518 9.10129 8.3265 9.52502 8.3265 10.0477V21.6964ZM13.5965 21.973C13.5965 22.3435 13.2741 22.6429 12.8781 22.6429H10.5807C10.1822 22.6429 9.86233 22.3435 9.86233 21.973V9.77368C9.86233 9.40323 10.1847 9.10383 10.5807 9.10383H12.8781C13.2767 9.10383 13.5965 9.40323 13.5965 9.77368V21.973ZM18.1558 21.6964C18.1558 22.2191 17.6811 22.6429 17.0947 22.6429H16.1935C15.6071 22.6429 15.1324 22.2191 15.1324 21.6964V10.0477C15.1324 9.52502 15.6071 9.10129 16.1935 9.10129H18.4477C19.0341 9.10129 19.5088 9.52502 19.5088 10.0477L18.1558 21.6964Z" fill="#4C4948" />
                         </svg>
                       </button>
                     </div>
@@ -190,4 +207,21 @@ $favoriteproduct = $pdo->query("SELECT * FROM product WHERE `sid`=$productsid")-
 </div>
 <?php include __DIR__ . '/parts/scripts.php'; ?>
 <script src="./js/member.js"></script>
+<script>
+  function deleteCollection(event) {
+    const deleteButton = $(event.currentTarget);
+    const sid = deleteButton.attr('data-val');
+    console.log(sid);
+    $.get(
+      "deleteCollection-api.php", {
+        sid
+      },
+      function(data) {
+        console.log(data);
+      },
+      "json"
+    );
+    document.location.href = "./member-myCollection.php"
+  }
+</script>
 <?php include __DIR__ . '/parts/html-foot.php'; ?>
