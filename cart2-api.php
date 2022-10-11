@@ -51,6 +51,7 @@ $od_sql = "INSERT INTO `orders`(
     `pay`,
     `order_date`,
     `package`,
+    `coupon_sid`,
     `gift_voucher_use`,
     `coupon_use`,
     `freight`
@@ -68,6 +69,7 @@ $od_sql = "INSERT INTO `orders`(
     CONCAT(?,?,?,?),
     ?,
     NOW(),
+    ?,
     ?,
     ?,
     ?,
@@ -96,6 +98,7 @@ $stmt->execute([
     $_POST['address'],
     $_POST['pay'],
     $_SESSION['order']['orderpackage'],
+    $_SESSION['order']['ordercouponsid'],
     $_SESSION['order']['ordergiftvoucher'],
     $_SESSION['order']['ordercoupon'],
     $_SESSION['order']['orderfreight'],
@@ -150,15 +153,22 @@ $stmt->execute([
     5
 ]);
 
-
+// $gift = "SELECT `gift_voucher` FROM `member` WHERE `sid`=$user";
+// $gift_v = intval($gift) - $_SESSION['order']['ordergiftvoucher'];
 $sql = "UPDATE `member` SET 
-    `gift_voucher`= ? 
+    `gift_voucher` = `gift_voucher` - ?
     WHERE `sid`= $user ";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-        0
+        $_SESSION['order']['ordergiftvoucher'],
     ]);
 
+$c_sql = "DELETE FROM `member_coupon`
+WHERE `member_sid` = $user and `sid` = ? ";
+$stmt = $pdo->prepare($c_sql);
+$stmt->execute([
+    $_SESSION['order']['ordercouponsid'],
+]);
     
 
 unset($_SESSION['cart']); // 清除購物車內容

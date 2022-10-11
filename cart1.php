@@ -230,7 +230,7 @@ if (!empty($membercoupon)) {
                                     <?php foreach ($coupon_value as $cv) : ?>
                                         <label class="d-flex j-point mt-2">
                                             <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
-                                            <input type="radio" name="coupon-radio" class="coupon-radio" data-val="<?= $cv['coupon_value'] ?>">
+                                            <input type="radio" name="coupon-radio" class="coupon-radio"  data-val="<?= $cv['coupon_value'] ?>" data-sid="<?= $cv['sid'] ?>">
                                             <span class="j-checkmark-r"></span>
                                         </label>
                                     <?php endforeach; ?>
@@ -344,7 +344,7 @@ if (!empty($membercoupon)) {
                             <?php foreach ($coupon_value as $cv) : ?>
                                 <label class="d-flex j-point mt-2">
                                     <img class="w-100 ml-4" src="./images/coupon/coupon_<?= $cv['coupon_sid'] ?>.png" alt="">
-                                    <input type="radio" name="couponradio" class="coupon-radio " data-val="<?= $cv['coupon_value'] ?>">
+                                    <input type="radio" name="couponradio" class="coupon-radio " data-val="<?= $cv['coupon_value'] ?>" data-sid="<?= $cv['sid'] ?>">
                                     <span class="j-checkmark-r "></span>
                                 </label>
                             <?php endforeach; ?>
