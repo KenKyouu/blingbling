@@ -1826,10 +1826,11 @@
 
 .wrap .containerr .main .row .col .whiteBg .order-detail-info .buy-again button {
   padding: 5px 15px;
-  border: 3px solid #7cb2af;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
-  color: #2d827d;
+  color: #ffffff;
+  background-color: #c2c2c2;
+  border: none;
   font-family: "GenSenRounded-B";
   font-size: 14px;
   display: -webkit-box;
@@ -1845,17 +1846,6 @@
 
 .wrap .containerr .main .row .col .whiteBg .order-detail-info .buy-again button p {
   padding-right: 5px;
-}
-
-.wrap .containerr .main .row .col .whiteBg .order-detail-info .buy-again button:hover {
-  border: 3px solid #2d827d;
-  background-color: #2d827d;
-  color: #ffffff;
-}
-
-.wrap .containerr .main .row .col .whiteBg .order-detail-info .buy-again button:hover svg path {
-  fill: #ffffff;
-  stroke: #ffffff;
 }
 
 .wrap .containerr .main .row .col .whiteBg {

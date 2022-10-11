@@ -140,6 +140,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -152,6 +154,7 @@ body {
 @media (min-width: 768px) {
   .content .containerr .product-info1 .product-right .product-pic .slider-bar .slider-row img {
     height: 100vh;
+    width: 100%;
   }
 }
 
@@ -780,9 +783,16 @@ body {
 
 .content2 .mightlike .product-list .product-list-scroll .product-list-row a .product-card .product-image {
   width: 250px;
+  border-radius: 15px;
   height: 250px;
   margin: auto;
   background-color: #ffffff;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+  background-color: #554d49;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -836,10 +846,12 @@ body {
 }
 
 .content2 .mightlike .product-list .product-list-scroll .product-list-row a .product-card .product-price p {
-  color: #554d49;
+  color: #7cb2af;
   font-family: "GenSenRounded-M";
   font-size: 14px;
   font-weight: 900;
+  border-left: 3px solid #d4cfc6;
+  padding-left: 3%;
 }
 
 .content2 .mightlike .product-list .product-list-scroll .product-list-row a .product-card .product-price p::before {
