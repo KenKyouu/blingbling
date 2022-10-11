@@ -72,6 +72,10 @@ function moveX(nowPage) {
     });
 }
 
+$('.j-package-chose').click(function(){
+    console.log('click');
+    $('input[name="defaultPackage"]').prop('checked', false);
+})
 
 //價錢加,
 const dollarCommas = function (n) {
@@ -229,9 +233,12 @@ $('.coupon-apply-btn').click(function () {
     $('input[class*=coupon-radio]').each(function () {
         if ($(this).prop("checked")) {
             let couponradio = $(this).attr('data-val');
+            let couponsid = $(this).attr('data-sid');
             console.log(couponradio);
+            console.log(couponsid);
             $('.j-coupon').html('NT$ ' + dollarCommas(couponradio));
             $('.j-coupon').attr('data-val', couponradio);
+            $('.j-coupon').attr('data-sid', couponsid);
             updatePrices();
         }
     })
@@ -281,11 +288,13 @@ function addToOrder(event) {
     const orderpackage = $('.j-orderpackage').attr('data-val');
     const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
     const ordercoupon = $('.j-coupon').attr('data-val');
+    const ordercouponsid = $('.j-coupon').attr('data-sid');
     console.log({
         producttotal,
         orderpackage,
         ordergiftvoucher,
         ordercoupon,
+        ordercouponsid,
     });
 
     $.get(
@@ -296,6 +305,7 @@ function addToOrder(event) {
             orderpackage,
             ordergiftvoucher,
             ordercoupon,
+            ordercouponsid,
         },
         function (data) {
             // showCartCount(data);

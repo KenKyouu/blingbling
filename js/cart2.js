@@ -106,6 +106,8 @@ $('input:radio[name="pay"]').change(function(){
 //auto input address
 $('textarea[name="address"]').click(function(){
     $(this).val('中正路216巷133-1號6樓');
+    $('textarea[name="address"]').parent().removeClass('has-error');
+    $('textarea[name="address"]').next().html('');
 });
 
 //避免按下Enter就送出表單
@@ -288,7 +290,7 @@ $(document).on("keypress", "form", function (e) {
     });
 
     // Hook up the inputs to validate on the fly
-    let inputs = document.querySelectorAll(".j, textarea, select")
+    let inputs = document.querySelectorAll(".j, select")
     for (let i = 0; i < inputs.length; ++i) {
         inputs.item(i).addEventListener("change", function(ev) {
         let errors = validate(form, constraints) || {};
@@ -301,7 +303,7 @@ $(document).on("keypress", "form", function (e) {
     // Updates the inputs with the validation errors
     function showErrors(form, errors) {
         // We loop through all the inputs and show the errors for that input
-        _.each(form.querySelectorAll(".j[name], textarea[name], select[name]"), function(input) {
+        _.each(form.querySelectorAll(".j[name], select[name]"), function(input) {
             // Since the errors can be null if no errors were found we need to handle
             // that
             showErrorsForInput(input, errors && errors[input.name]);
@@ -875,6 +877,7 @@ function updatePrices() {
     $('.j-package').html('NT$ ' + dollarCommas(orderpackage));
     const ordergiftvoucher = $('.j-giftvoucher').attr('data-val');
     $('.j-giftvoucher').html('NT$ ' + dollarCommas(ordergiftvoucher));
+    const ordercouponsid = $('.j-coupon').attr('data-sid');
     const ordercoupon = $('.j-coupon').attr('data-val');
     $('.j-coupon').html('NT$ ' + dollarCommas(ordercoupon));
     const orderfreight = $('.j-freightfee').attr('data-val');
