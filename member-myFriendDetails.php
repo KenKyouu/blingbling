@@ -222,16 +222,17 @@ if (!empty($friendismember)) {
                                         <p>好友心願</p>
                                     <?php endif; ?>
                                 </div>
+                                <div class="range">
                                 <?php if (!empty($friendfavorite)) : ?>
                                     <?php foreach ($friendfavorite as $ff) : ?>
-                                        <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                        <div class="wishList col-6 col-sm-4 col-md-4 col-lg-3 col-xl-3">
                                             <a href="./product_details.php?sid=<?= $ff['product_sid'] ?>">
                                                 <img class="wish" src="./images/products/<?= $ff['product_sid'] ?>_1.png" alt="">
                                             </a>
                                         </div>
                                     <?php endforeach; ?>
                                 <?php endif; ?>
-
+                                </div>
                             </div>
                             <div class="f-recommend">
                                 <?php if (!empty($friendtags)) : ?>
@@ -239,6 +240,7 @@ if (!empty($friendismember)) {
                                         <p>禮物推薦</p>
                                     </div>
                                 <?php endif; ?>
+                                <div class="range">
                                 <?php if (!empty($friendtags)) {
                                     $recommendArr = [];
                                     for ($n = 0; $n < count($friendtags); $n++) {
@@ -253,13 +255,14 @@ if (!empty($friendismember)) {
                                 } ?>
                                 <?php if (!empty($friendtags)) : ?>
                                     <?php foreach ($recommend as $rc) : ?>
-                                        <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                                        <div class="wishList col-6 col-sm-4 col-md-4 col-lg-3 col-xl-3">
                                             <a href="./product_details.php?sid=<?= $rc['product_sid'] ?>">
                                                 <img class="wish" src="./images/products/<?= $rc['product_sid'] ?>_1.png" alt="">
                                             </a>
                                         </div>
                                     <?php endforeach; ?>
                                 <?php endif; ?>
+                                </div>
                                 <!-- <div class="wishList col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3">
                                     <a href="#">
                                         <img class="wish" src="./images/products/72-2.jpeg" alt="">

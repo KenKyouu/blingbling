@@ -1782,14 +1782,39 @@ $bold: 900;
                     text-align: center;
                   }
                 }
-                .wishList {
-                  padding: 9px;
-                  a {
-                    img {
+                .range {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: auto auto;
+                  .wishList {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 15px;
+                    box-shadow: 2px 3px 3px rgb(0 0 0 / 8%);
+                    background-color: $deep-brown;
+                    overflow: hidden;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                    padding: 0;
+                    a {
                       width: 100%;
-                      height: 160px;
-                      object-fit: contain;
+                      height: 100%;
+                      text-decoration: none;
+                      img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.5s;
+                        opacity: 1;
+                        background-color: $white;
+                        &:hover {
+                          opacity: 0.9;
+                        }
+                      }
                     }
+                  }
+                  .col-6 {
+                    max-width: none;
                   }
                 }
               }
@@ -1797,7 +1822,7 @@ $bold: 900;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: left;
-                margin: 20px 0 10px 0;
+                // margin: 20px 0 10px 0;
                 align-items: center;
                 .f-title {
                   width: 100%;
@@ -1812,15 +1837,39 @@ $bold: 900;
                     text-align: center;
                   }
                 }
-                .wishList {
-                  padding: 9px;
-
-                  a {
-                    img {
+                .range {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: auto auto;
+                  .wishList {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 15px;
+                    box-shadow: 2px 3px 3px rgb(0 0 0 / 8%);
+                    background-color: $deep-brown;
+                    overflow: hidden;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                    padding: 0;
+                    a {
                       width: 100%;
-                      height: 160px;
-                      object-fit: contain;
+                      height: 100%;
+                      text-decoration: none;
+                      img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.5s;
+                        opacity: 1;
+                        background-color: $white;
+                        &:hover {
+                          opacity: 0.9;
+                        }
+                      }
                     }
+                  }
+                  .col-6 {
+                    max-width: none;
                   }
                 }
               }
@@ -2794,6 +2843,30 @@ $bold: 900;
                 }
               }
             }
+            .whiteBg {
+              .friendWishList {
+                .f-wishes {
+                  .wishList {
+                    width: 150px;
+                    height: 150px;
+                    margin: 8px;
+                  }
+                  .col-sm-4 {
+                    max-width: 150px;
+                  }
+                }
+                .f-recommend {
+                  .wishList {
+                    width: 150px;
+                    height: 150px;
+                    margin: 8px;
+                  }
+                  .col-sm-4 {
+                    max-width: 150px;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -2811,6 +2884,30 @@ $bold: 900;
           .col {
             .whiteBg {
               padding: 0 100px;
+            }
+            .whiteBg {
+              .friendWishList {
+                .f-wishes {
+                  .wishList {
+                    width: 150px;
+                    height: 150px;
+                    margin: 8px;
+                  }
+                  .col-sm-4 {
+                    max-width: 150px;
+                  }
+                }
+                .f-recommend {
+                  .wishList {
+                    width: 150px;
+                    height: 150px;
+                    margin: 8px;
+                  }
+                  .col-sm-4 {
+                    max-width: 150px;
+                  }
+                }
+              }
             }
           }
         }
@@ -2830,6 +2927,30 @@ $bold: 900;
             .left {
               .myName {
                 padding-top: 120px;
+              }
+            }
+            .whiteBg {
+              .friendWishList {
+                .f-wishes {
+                  .wishList {
+                    width: 165px;
+                    height: 165px;
+                    margin: 10px;
+                  }
+                  .col-md-4 {
+                    max-width: 165px;
+                  }
+                }
+                .f-recommend {
+                  .wishList {
+                    width: 165px;
+                    height: 165px;
+                    margin: 10px;
+                  }
+                  .col-md-4 {
+                    max-width: 165px;
+                  }
+                }
               }
             }
           }
@@ -3441,16 +3562,31 @@ $bold: 900;
                 height: 400px;
                 overflow-y: scroll;
 
-                .col-lg-3 {
+                .f-wishes {
                   width: 100%;
-                  height: auto;
-                  background-color: rgba(255, 255, 255, 0);
-
-                  a {
-                    img.wish {
-                      width: 100%;
-                      height: 160px;
-                      object-fit: contain;
+                  margin-bottom: 0;
+                  .range {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto;
+                    .wishList {
+                      width: 150px;
+                      height: 150px;
+                      margin-bottom: 20px;
+                    }
+                  }
+                }
+                .f-recommend {
+                  width: 100%;
+                  margin-bottom: 0;
+                  .range {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto;
+                    .wishList {
+                      width: 150px;
+                      height: 150px;
+                      margin-bottom: 20px;
                     }
                   }
                 }
@@ -3953,6 +4089,36 @@ $bold: 900;
   .wrap {
     .containerr {
       margin: 0 10%;
+      .main {
+        .row {
+          .col {
+            .col-xl-9 {
+              grid-template-columns: auto auto auto;
+              .friendWishList {
+                grid-template-columns: auto auto auto;
+                .f-wishes {
+                  width: 100%;
+                  grid-template-columns: auto auto auto;
+                  .col-xl-3 {
+                    
+                    width: 150px;
+                    height: 150px;
+                    margin: 3px;
+                    max-width: 25%;
+                  }
+                }
+                .f-recommend {
+                  width: 100%;
+                  .col-xl-3 {
+                    width: 100%;
+                    margin: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
