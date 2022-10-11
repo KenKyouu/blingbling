@@ -1023,11 +1023,15 @@ body {
   width: 90%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
   padding-bottom: 2%;
+}
+
+.pc-login .login-box .pc-login-info .pc-login-container input ::-webkit-input-placeholder {
+  color: #c2c2c2;
 }
 
 @media screen and (max-width: 864px) {
@@ -1236,7 +1240,7 @@ body {
   width: 80%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
@@ -1419,11 +1423,15 @@ body {
   width: 90%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
   padding-bottom: 2%;
+}
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container input ::-webkit-input-placeholder {
+  color: #c2c2c2;
 }
 
 @media screen and (max-width: 864px) {
@@ -1727,7 +1735,7 @@ body {
   width: 80%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
