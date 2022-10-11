@@ -272,7 +272,7 @@ if ($totalRows > 0) {
         </button>
     </div>
     <div class="filter-button-pc">
-        <button class="filter-pc" style="border: none" >
+        <button class="filter-pc" style="border: none">
             <svg width="30" height="30" viewBox="0 0 25 18" fill="#4C4948" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24.3751 2.80309H0.624875C0.279682 2.80309 0 2.52355 0 2.17852C0 1.8335 0.279682 1.55396 0.624875 1.55396H24.3751C24.7203 1.55396 25 1.8335 25 2.17852C25 2.52355 24.7203 2.80309 24.3751 2.80309Z" fill="#4C4948" />
                 <path d="M24.3751 9.24498H0.624875C0.279682 9.24498 0 8.96544 0 8.62041C0 8.27539 0.279682 7.99585 0.624875 7.99585H24.3751C24.7203 7.99585 25 8.27539 25 8.62041C25 8.96544 24.7203 9.24498 24.3751 9.24498Z" fill="#4C4948" />
@@ -289,8 +289,8 @@ if ($totalRows > 0) {
                 <div class="product-card">
                     <div class="product-image">
                         <img src="./images/products/<?= $r['sid'] ?>_1.png" alt="">
-                        <div class="heart">
-                        </div>
+                        <!-- <div class="heart">
+                        </div> -->
                     </div>
                     <div class="product-title">
                         <h3><?= $r['name'] ?></h3>
