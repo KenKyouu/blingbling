@@ -148,6 +148,7 @@ body {
               @media (min-width: 768px) {
                 display: block;
                 flex-direction: column;
+                object-fit: cover;
               }
               img {
                 height: 276px;
