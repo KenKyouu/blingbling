@@ -654,13 +654,21 @@ body {
                   height: 150px;
                 }
                 width: 250px;
+                border-radius: 15px;
                 height: 250px;
                 margin: auto;
                 background-color: $white;
+                box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+                background-color: $deep-brown;
+                overflow: hidden;
+                transition: 0.5s;
                 // background-image: url(../images/products/73-2.jpeg);
                 background-size: cover;
                 background-position: center;
                 position: relative;
+                // &:hover {
+                //   opacity: 0.5;
+                // }
                 .heart {
                   cursor: default;
                   position: absolute;
@@ -692,10 +700,12 @@ body {
                 width: 250px;
                 padding: 0 0 5px 0;
                 p {
-                  color: $deep-brown;
+                  color: $light-lake-green;
                   font-family: "GenSenRounded-M";
                   font-size: $ps-font-size;
                   font-weight: $bold;
+                  border-left: 3px solid #d4cfc6;
+                  padding-left: 3%;
                   &::before {
                     display: inline-block;
                     content: "NT$";
