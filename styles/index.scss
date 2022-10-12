@@ -1796,7 +1796,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         display: flex;
         // width: 100%;
         overflow-x:scroll;
-        animation: brandSlide 30s linear alternate;
+        animation: brandSlide 30s linear alternate infinite;
         @keyframes brandSlide{
           0% {
               transform: translateX(0);
@@ -1911,6 +1911,7 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  overflow: hidden;
   .BottomInner{
     width: 100vw;
     top:-10px;
