@@ -2274,8 +2274,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
-  -webkit-animation: brandSlide 30s linear alternate;
-          animation: brandSlide 30s linear alternate;
+  -webkit-animation: brandSlide 30s linear alternate infinite;
+          animation: brandSlide 30s linear alternate infinite;
 }
 
 @-webkit-keyframes brandSlide {
@@ -2445,6 +2445,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  overflow: hidden;
 }
 
 .I-BottomArea .BottomInner {
