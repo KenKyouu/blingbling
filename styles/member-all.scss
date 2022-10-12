@@ -1793,7 +1793,7 @@ $bold: 900;
                     width: 150px;
                     height: 150px;
                     border-radius: 15px;
-                    box-shadow: 2px 3px 3px rgb(0 0 0 / 8%);
+                    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
                     background-color: $deep-brown;
                     overflow: hidden;
                     object-fit: cover;
@@ -1848,7 +1848,7 @@ $bold: 900;
                     width: 150px;
                     height: 150px;
                     border-radius: 15px;
-                    box-shadow: 2px 3px 3px rgb(0 0 0 / 8%);
+                    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
                     background-color: $deep-brown;
                     overflow: hidden;
                     object-fit: cover;
@@ -3564,7 +3564,7 @@ $bold: 900;
                 width: 100%;
                 height: 400px;
                 overflow-y: scroll;
-
+// 
                 .f-wishes {
                   width: 100%;
                   margin-bottom: 0;

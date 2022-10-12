@@ -2277,15 +2277,51 @@
   text-align: center;
 }
 
-.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .wishList {
-  padding: 9px;
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .range {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
 }
 
-.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .wishList a img {
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .range .wishList {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+  background-color: #554d49;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .range .wishList a {
   width: 100%;
-  height: 160px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  text-decoration: none;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .range .wishList a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+  background-color: #ffffff;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .range .wishList a img:hover {
+  opacity: 0.9;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .range .col-6 {
+  max-width: none;
 }
 
 .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend {
@@ -2297,7 +2333,6 @@
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin: 20px 0 10px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2318,15 +2353,51 @@
   text-align: center;
 }
 
-.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .wishList {
-  padding: 9px;
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .range {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
 }
 
-.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .wishList a img {
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .range .wishList {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+  background-color: #554d49;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .range .wishList a {
   width: 100%;
-  height: 160px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  text-decoration: none;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .range .wishList a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+  background-color: #ffffff;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .range .wishList a img:hover {
+  opacity: 0.9;
+}
+
+.wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .range .col-6 {
+  max-width: none;
 }
 
 .wrap .containerr .main .row .col .whiteBg {
@@ -3188,17 +3259,65 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .wishList {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .col-sm-4 {
+    max-width: 150px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .wishList {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .col-sm-4 {
+    max-width: 150px;
+  }
 }
 
 @media screen and (min-width: 700px) {
   .wrap .containerr .main .row .col .whiteBg {
     padding: 0 100px;
   }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .wishList {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .col-sm-4 {
+    max-width: 150px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .wishList {
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .col-sm-4 {
+    max-width: 150px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .wrap .containerr .main .row .col .left .myName {
     padding-top: 120px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .wishList {
+    width: 165px;
+    height: 165px;
+    margin: 10px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-wishes .col-md-4 {
+    max-width: 165px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .wishList {
+    width: 165px;
+    height: 165px;
+    margin: 10px;
+  }
+  .wrap .containerr .main .row .col .whiteBg .friendWishList .f-recommend .col-md-4 {
+    max-width: 165px;
   }
 }
 
@@ -3778,16 +3897,37 @@
     height: 400px;
     overflow-y: scroll;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 {
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-wishes {
     width: 100%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 0;
   }
-  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .col-lg-3 a img.wish {
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-wishes .range {
     width: 100%;
-    height: 160px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-wishes .range .wishList {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-recommend {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-recommend .range {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-recommend .range .wishList {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
   }
   .wrap .containerr .main .row .col .col-lg-9 {
     height: 70%;
@@ -4182,6 +4322,32 @@
 @media screen and (min-width: 1200px) {
   .wrap .containerr {
     margin: 0 10%;
+  }
+  .wrap .containerr .main .row .col .col-xl-9 {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .wrap .containerr .main .row .col .col-xl-9 .friendWishList {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .wrap .containerr .main .row .col .col-xl-9 .friendWishList .f-wishes {
+    width: 100%;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .wrap .containerr .main .row .col .col-xl-9 .friendWishList .f-wishes .col-xl-3 {
+    width: 150px;
+    height: 150px;
+    margin: 3px;
+    max-width: 25%;
+  }
+  .wrap .containerr .main .row .col .col-xl-9 .friendWishList .f-recommend {
+    width: 100%;
+  }
+  .wrap .containerr .main .row .col .col-xl-9 .friendWishList .f-recommend .col-xl-3 {
+    width: 100%;
+    margin: 5px;
   }
 }
 
