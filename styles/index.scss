@@ -98,8 +98,8 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   // background-image: linear-gradient(to bottom,$dark-blue, #0b2234);
   background-position: center;
   background-size: 100%;
-  -webkit-mask: url(../images/open_face.svg) no-repeat center;
-  -webkit-mask-size: 350% 350%;
+  // -webkit-mask: url(../images/open_face.svg) no-repeat center;
+  // -webkit-mask-size: 350% 350%;
   mask: url(../images/open_face.svg) no-repeat center;
   mask-size: 350% 350%;
   animation: openBg 2s infinite alternate;
@@ -1950,9 +1950,4 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
       }
     }
   }
-}
-
-.footer-mobile{
-  margin-top: -%;
-  z-index:50;
 }
