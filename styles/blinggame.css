@@ -1,29 +1,24 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "GenSenRounded-M";
   src: url("../fonts/GenSenRoundedTW-M-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-M-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "GenSenRounded-B";
   src: url("../fonts/GenSenRoundedTW-B-01.woff") format("woff"), url("../fonts/GenSenRoundedTW-B-01.ttf") format("truetype");
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
-
 #app {
   width: 1920px;
   height: 935px;
   position: relative;
 }
-
 #app .coin {
   position: absolute;
   top: 80px;
@@ -32,7 +27,6 @@
   width: 60px;
   height: 60px;
 }
-
 #app .winNum {
   position: absolute;
   font-size: 48px;
@@ -42,51 +36,39 @@
   left: 175px;
   z-index: 10;
 }
-
 #app .gamePlayBtn {
   cursor: pointer;
   position: absolute;
   z-index: 10;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 #app .gamePlayBtn img {
   width: 300px;
 }
-
 #app .over {
   display: none;
   position: absolute;
   z-index: 10;
   width: 100%;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 #app .over .box {
   width: 371px;
 }
-
 #app .over .box img {
   width: 300px;
 }
-
 #app .over .box .text {
   font-family: "GenSenRounded-B";
   color: #2d827d;
   font-size: 36px;
   margin-bottom: 20px;
 }
-
 #app .over .box button {
   padding: 10px 40px;
   border: none;
@@ -94,12 +76,10 @@
   background-color: #2d827d;
   font-family: "GenSenRounded-B";
 }
-
 #app .over .box button p {
   font-size: 24px;
   color: #ffffff;
 }
-
 #app .over .box button:hover {
   background-color: #7cb2af;
 }
@@ -109,30 +89,22 @@
   position: absolute;
   top: 80px;
   right: 160px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .hpBar h2 {
   padding-right: 20px;
 }
-
 .hpBar h2 img {
   width: 60px;
   height: 60px;
 }
-
 .hpBar .hpBox {
   width: 250px;
   height: 40px;
   border: 5px solid #2d827d;
   border-radius: 20px;
 }
-
 .hpBar .hpBox .hp {
   width: 100%;
   height: 100%;
@@ -142,5 +114,4 @@
 
 #canvas {
   bottom: 0;
-}
-/*# sourceMappingURL=blinggame.css.map */
+}/*# sourceMappingURL=blinggame.css.map */
