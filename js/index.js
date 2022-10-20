@@ -190,6 +190,6 @@ $(window).scroll(function(){
   }
 
 
-  lastScroll = scrollNow;
+  lastScroll = scrollN
 
 })

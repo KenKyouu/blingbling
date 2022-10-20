@@ -14,6 +14,17 @@
   font-family: "Roboto";
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
+<<<<<<< HEAD
+=======
+
+-----------------------------------------------------------
+body {
+  background-image: url(../images/index-bg_new.png);
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 .openingArea {
   width: 100%;
   height: 100vh;
@@ -278,8 +289,15 @@
   right: 2%;
   width: 40px;
   height: 40px;
+<<<<<<< HEAD
   transition: 0.5s;
 }
+=======
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 @media (min-width: 768px) {
   .indexContainer .w-indexScrollTop {
     width: 50px;
@@ -289,8 +307,15 @@
 .indexContainer .w-indexScrollTop .scrollBtn {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   transition: 0.5s;
 }
+=======
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 .indexContainer .w-indexScrollTop .scrollBtn svg {
   width: 100%;
   -o-object-fit: contain;
@@ -310,6 +335,26 @@
 
 .ScrollHidden {
   transform: translateY(100px);
+}
+
+.indexContainer .w-indexScrollTop .scrollBtn svg .cls-1 {
+  fill: #fff;
+}
+
+.indexContainer .w-indexScrollTop .scrollBtn svg .cls-2 {
+  fill: #6b9995;
+  opacity: .65;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.indexContainer .w-indexScrollTop .scrollBtn svg .cls-2:hover {
+  fill: #554d49;
+}
+
+.ScrollHidden {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .p-index-container {
@@ -1815,8 +1860,8 @@
   width: 2000px;
   display: flex;
   overflow-x: scroll;
-  -webkit-animation: brandSlide 30s linear alternate;
-          animation: brandSlide 30s linear alternate;
+  -webkit-animation: brandSlide 30s linear alternate infinite;
+          animation: brandSlide 30s linear alternate infinite;
 }
 @-webkit-keyframes brandSlide {
   0% {
@@ -1954,10 +1999,19 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+<<<<<<< HEAD
 }
 .I-BottomArea .BottomInner {
   width: 100%;
   top: -100px;
+=======
+  overflow: hidden;
+}
+
+.I-BottomArea .BottomInner {
+  width: 100vw;
+  top: -10px;
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
   padding-top: 66%;
   background-image: url(../images/indexBottom_bg2.png);
   background-repeat: no-repeat;
@@ -1965,6 +2019,7 @@
   position: relative;
   z-index: 15;
 }
+<<<<<<< HEAD
 .I-BottomArea .BottomInner .BottomTextWrap {
   width: 70%;
   position: absolute;
@@ -1978,3 +2033,50 @@
   color: #ffffff;
   filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.3));
 }/*# sourceMappingURL=index.css.map */
+=======
+
+@media (min-width: 768px) {
+  .I-BottomArea .BottomInner {
+    padding-top: 66%;
+    background-size: 100%;
+    width: 100%;
+    top: -100px;
+  }
+}
+
+.I-BottomArea .BottomInner .BottomTextWrap {
+  width: 70%;
+  position: absolute;
+  top: 100%;
+  left: 15%;
+}
+
+@media (min-width: 768px) {
+  .I-BottomArea .BottomInner .BottomTextWrap {
+    top: 40%;
+    left: 15%;
+  }
+}
+
+.I-BottomArea .BottomInner .BottomTextWrap p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  -webkit-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.3));
+}
+
+@media (min-width: 768px) {
+  .I-BottomArea .BottomInner .BottomTextWrap p {
+    font-size: 80px;
+    font-weight: 900;
+  }
+}
+
+.footer-mobile {
+  margin-top: -%;
+  z-index: 50;
+}
+/*# sourceMappingURL=index.css.map */
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68

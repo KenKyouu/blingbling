@@ -758,12 +758,20 @@ body {
   width: 90%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
   padding-bottom: 2%;
 }
+<<<<<<< HEAD
+=======
+
+.pc-login .login-box .pc-login-info .pc-login-container input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 @media screen and (max-width: 864px) {
   .pc-login .login-box .pc-login-info .pc-login-container input {
     width: 85%;
@@ -922,7 +930,7 @@ body {
   width: 80%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
@@ -1059,12 +1067,20 @@ body {
   width: 90%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
   padding-bottom: 2%;
 }
+<<<<<<< HEAD
+=======
+
+.pc-signup .signup-box .pc-signup-info .pc-signup-container input ::-webkit-input-placeholder {
+  color: #c2c2c2;
+}
+
+>>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
     width: 85%;
@@ -1303,7 +1319,7 @@ body {
   width: 80%;
   font-family: "GenSenRounded-B";
   font-size: 14px;
-  color: #c2c2c2;
+  color: #4c4948;
   border: none;
   border-bottom: 2px solid #4c4948;
   outline: none;
