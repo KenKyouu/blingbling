@@ -107,16 +107,9 @@ body {
 @media (min-width: 768px) {
   .content .containerr .product-info1 .product-right .product-pic .slider-bar .slider-row {
     display: block;
-<<<<<<< HEAD
     flex-direction: column;
-=======
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -o-object-fit: cover;
        object-fit: cover;
->>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
   }
 }
 .content .containerr .product-info1 .product-right .product-pic .slider-bar .slider-row img {
@@ -596,11 +589,9 @@ body {
   height: 250px;
   margin: auto;
   background-color: #ffffff;
-  -webkit-box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
-          box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.08);
   background-color: #554d49;
   overflow: hidden;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: cover;
   background-position: center;

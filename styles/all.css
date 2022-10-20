@@ -764,14 +764,9 @@ body {
   outline: none;
   padding-bottom: 2%;
 }
-<<<<<<< HEAD
-=======
-
 .pc-login .login-box .pc-login-info .pc-login-container input ::-webkit-input-placeholder {
   color: #c2c2c2;
 }
-
->>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 @media screen and (max-width: 864px) {
   .pc-login .login-box .pc-login-info .pc-login-container input {
     width: 85%;
@@ -1073,14 +1068,9 @@ body {
   outline: none;
   padding-bottom: 2%;
 }
-<<<<<<< HEAD
-=======
-
 .pc-signup .signup-box .pc-signup-info .pc-signup-container input ::-webkit-input-placeholder {
   color: #c2c2c2;
 }
-
->>>>>>> 0ae25478ee028808dde93031d69dd80e4c1b0a68
 @media screen and (max-width: 864px) {
   .pc-signup .signup-box .pc-signup-info .pc-signup-container input {
     width: 85%;
