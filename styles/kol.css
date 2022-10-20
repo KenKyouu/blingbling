@@ -15,7 +15,7 @@
   src: url("../fonts/RobotoFlex.woff") format("woff"), url("../fonts/RobotoFlex.ttf") format("truetype");
 }
 body {
-  background: url(../images/index-bg_paper.png) center center/cover repeat-y;
+  background: url(../images/index-bg_paper.png) center center/contain repeat-y;
 }
 
 .header-hidden {
@@ -105,6 +105,7 @@ body {
   font-weight: 700;
   color: #000000;
   padding-bottom: 10px;
+  line-height: 2rem;
 }
 .article-wrap .article-ribbon .col img {
   width: 50%;
@@ -139,9 +140,13 @@ body {
   font-family: "Roboto";
   font-size: 14px;
   padding: 10px;
+  text-decoration: none;
+  color: white;
 }
 .article-wrap .kol-wrap .swiper-wrap .swiper-train:hover {
   display: block;
+  text-decoration: none;
+  color: white;
 }
 
 .article-wrap .article-title {
@@ -150,6 +155,7 @@ body {
   font-weight: 700;
   color: #000000;
   padding-bottom: 10px;
+  line-height: 2rem;
 }
 .article-wrap .article-ribbon .col img {
   width: 50%;
@@ -188,6 +194,7 @@ body {
   color: #000000;
   text-align: justify;
   padding-top: 5px;
+  line-height: 1.5rem;
 }
 .article-wrap .kol-wrap .none-swiper-wrap .none-swiper-train .article-content-wrap .sub-content p {
   font-family: "GenSenRounded-M";
@@ -197,6 +204,7 @@ body {
   padding: 20px 0 0;
   height: 150px;
   overflow-y: hidden;
+  line-height: 1rem;
 }
 
 .arrow-svg {
@@ -223,6 +231,7 @@ body {
   color: #000000;
   text-align: justify;
   padding-top: 5px;
+  line-height: 1.5rem;
 }
 .article-content-wrap .sub-content p {
   font-family: "GenSenRounded-M";
@@ -232,6 +241,7 @@ body {
   padding: 20px 0 0;
   height: 110px;
   overflow-y: hidden;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 375px) and (max-width: 767.98px) {
@@ -264,6 +274,7 @@ body {
     padding: 10px 0 0;
     height: 150px;
     overflow-y: hidden;
+    line-height: 1rem;
   }
   .article-container .article .kol-wrap .article-page {
     position: absolute;
@@ -295,9 +306,12 @@ body {
   .article-container .article .article-wrap .article-title {
     font-size: 32px;
     font-weight: 900;
+    line-height: 2rem;
   }
   .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train .img-wrap button {
     display: none;
+    text-decoration: none;
+    color: white;
   }
   .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train:hover button {
     display: block;
@@ -314,21 +328,26 @@ body {
     padding: 15px;
     transition: 0.5s all ease;
     opacity: 0.7;
+    text-decoration: none;
   }
-  .article-container .article .article-wrap .kol-wrap .swiper-wrap .article-content-wrap {
+  .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train:hover:hover {
+    text-decoration: none;
+    color: white;
+  }
+  .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train .article-content-wrap {
     width: 60%;
     height: 250px;
   }
-  .article-container .article .article-wrap .kol-wrap .swiper-wrap .article-content-wrap h6 {
+  .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train .article-content-wrap h6 {
     font-size: 20px;
     padding-top: 15px;
   }
-  .article-container .article .article-wrap .kol-wrap .swiper-wrap .article-content-wrap p {
+  .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train .article-content-wrap p {
     font-size: 14px;
     padding: 30px 0;
     height: 140px;
   }
-  .article-container .article .article-wrap .kol-wrap .swiper-wrap .article-content-wrap .article-page {
+  .article-container .article .article-wrap .kol-wrap .swiper-wrap .swiper-train .article-content-wrap .article-page {
     padding: 0 15px;
   }
 }
@@ -339,12 +358,15 @@ body {
   .article-container .article .article-wrap .article-title {
     font-size: 36px;
     font-weight: 900;
+    line-height: 2rem;
   }
   .article-container .article .article-wrap .article-ribbon .col img {
     width: 30%;
   }
   .article-container .article .article-wrap .kol-wrap button {
     width: 20%;
+    text-decoration: none;
+    color: white;
   }
   .article-container .article .article-wrap .kol-wrap .article-content-wrap {
     width: 60%;
@@ -352,11 +374,12 @@ body {
   }
   .article-container .article .article-wrap .kol-wrap .article-content-wrap .sub-content h6 {
     font-size: 24px;
+    line-height: 1.5rem;
   }
   .article-container .article .article-wrap .kol-wrap .article-content-wrap .sub-content p {
     height: 165px;
     font-size: 14px;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -527,4 +550,9 @@ body {
 
 .article-page .col svg:hover {
   cursor: pointer;
+}
+
+.ctaBtn a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=kol.css.map */
