@@ -257,12 +257,12 @@
   width: 60px;
   height: 60px;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
   background-color: #4c4948;
 }
 .j-list .j-list-info .j-list-item .j-list-img img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 .j-list .j-list-info .j-list-item .j-list-sub {
@@ -1289,7 +1289,7 @@
   }
 }
 .j-scroll {
-  transform: translateY(-35vh);
+  transform: translateY(-40vh);
 }
 
 .footer-mobile {

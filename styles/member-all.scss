@@ -105,6 +105,7 @@ $bold: 900;
           // ---------------green border---------------
 
           .left {
+
             // background-color: $lake-green;
             .myName {
               padding-top: 80px;
@@ -132,12 +133,15 @@ $bold: 900;
                     border-radius: 100%;
                     background-color: $white;
                     overflow: hidden;
+
                     .nodisplay {
                       display: none;
                     }
+
                     img.photo {
                       width: 110%;
                     }
+
                     img.upload_photo {
                       width: 100%;
                     }
@@ -158,6 +162,7 @@ $bold: 900;
                   bottom: 0;
                   cursor: pointer;
                   transition: 0.5s;
+
                   &:hover {
                     background-color: $super-dark;
                   }
@@ -247,9 +252,11 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
+
             // min-height: 400px;
 
             .mydetailstop {
@@ -792,6 +799,7 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
@@ -803,40 +811,50 @@ $bold: 900;
               flex-wrap: wrap;
               justify-content: left;
               margin: 20px 0;
+
               .emptystatus {
                 width: 100%;
                 display: flex;
                 align-items: center;
+
                 .left {
                   width: 50%;
+
                   .img {
                     width: 100%;
+
                     img {
                       width: 100%;
                     }
                   }
                 }
+
                 .right {
                   width: 50%;
+
                   h3 {
                     color: $super-dark;
                     font-family: "GenSenRounded-M";
                     font-size: $h4-font-size;
+
                     @media (max-width: 768px) {
                       font-size: $h5-font-size;
                     }
                   }
+
                   h5 {
                     padding-top: 50px;
                     color: $super-dark;
                     font-family: "GenSenRounded-M";
                     font-size: $h6-font-size;
+
                     @media (max-width: 768px) {
                       font-size: $p-font-size;
                     }
                   }
                 }
               }
+
               .wishList {
                 width: 100%;
                 height: 260px;
@@ -855,10 +873,12 @@ $bold: 900;
                   display: flex;
                   flex-direction: column;
                   padding: 20px;
+
                   a {
                     width: 100%;
                     height: 80%;
                     text-decoration: none;
+
                     .product-image {
                       width: 100%;
                       height: 140px;
@@ -866,12 +886,14 @@ $bold: 900;
                       background-color: $deep-brown;
                       border-radius: 15px;
                       overflow: hidden;
+
                       img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         transition: 0.5s;
                         opacity: 1;
+
                         &:hover {
                           opacity: 0.9;
                         }
@@ -884,8 +906,10 @@ $bold: 900;
                     height: 20%;
                     display: flex;
                     align-items: flex-end;
+
                     .p-detail {
                       width: 100%;
+
                       .product-title {
                         width: 100%;
                         padding: 8px 0 8px 0;
@@ -906,6 +930,7 @@ $bold: 900;
                         @media (max-width: 768px) {
                           width: 130px;
                         }
+
                         width: 100%;
 
                         p {
@@ -921,6 +946,7 @@ $bold: 900;
                         }
                       }
                     }
+
                     button.p-delete {
                       border: none;
                       background-color: #ffffff00;
@@ -943,6 +969,7 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
@@ -950,44 +977,55 @@ $bold: 900;
             .orders {
               width: 100%;
               margin-bottom: 20px;
+
               .emptystatus {
                 padding-top: 100px;
                 width: 100%;
                 display: flex;
                 align-items: center;
+
                 @media (max-width: 768px) {
                   padding-top: 20px;
                 }
+
                 .left {
                   width: 50%;
+
                   .img {
                     width: 100%;
+
                     img {
                       width: 100%;
                     }
                   }
                 }
+
                 .right {
                   width: 50%;
+
                   h3 {
                     color: $super-dark;
                     font-family: "GenSenRounded-M";
                     font-size: $h4-font-size;
+
                     @media (max-width: 768px) {
                       font-size: $h5-font-size;
                     }
                   }
+
                   h5 {
                     padding-top: 50px;
                     color: $super-dark;
                     font-family: "GenSenRounded-M";
                     font-size: $h6-font-size;
+
                     @media (max-width: 768px) {
                       font-size: $p-font-size;
                     }
                   }
                 }
               }
+
               .order-list {
                 width: 100%;
                 padding-top: 15px;
@@ -999,11 +1037,13 @@ $bold: 900;
                   align-items: center;
                   justify-content: space-between;
                   width: 100%;
+
                   p {
                     font-family: "GenSenRounded-B";
                     font-size: $p-font-size;
                     color: $super-dark;
                   }
+
                   button {
                     // width: 105px;
                     // height: 28px;
@@ -1013,19 +1053,23 @@ $bold: 900;
                     background-color: rgba(255, 255, 255, 0);
                     font-family: "GenSenRounded-B";
                     font-size: $ps-font-size;
+
                     a {
                       text-decoration: none;
                       color: $super-dark;
                       padding-right: 5px;
                     }
                   }
+
                   button:hover {
                     background-color: $super-dark;
+
                     a {
                       color: $white;
                     }
                   }
                 }
+
                 .order-detail-title {
                   margin-top: 10px;
                   background-color: $skin;
@@ -1039,11 +1083,13 @@ $bold: 900;
                   font-family: "GenSenRounded-B";
                   font-size: $p-font-size;
                   color: $dark-gray;
+
                   @media (max-width: 768px) {
                     font-size: $ps-font-size;
                     padding: 0 10px 0 10px;
                   }
                 }
+
                 .order-detail {
                   margin-top: 5px;
                   width: 100%;
@@ -1055,11 +1101,13 @@ $bold: 900;
                   padding: 0 25px 0 15px;
                   font-family: "GenSenRounded-B";
                   font-size: $ps-font-size;
+
                   @media (max-width: 768px) {
                     padding: 0 10px 0 5px;
                   }
                 }
               }
+
               @media (min-width: 992px) {
                 width: 100%;
                 height: 560px;
@@ -1081,26 +1129,32 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
 
             .order-detail-top {
               width: 100%;
+
               @media (min-width: 768px) {
                 display: flex;
               }
+
               .order-detail-back {
                 @media (min-width: 768px) {
                   padding-top: 0;
                 }
+
                 width: 60%;
                 display: flex;
                 align-items: center;
                 text-align: left;
                 padding-top: 25px;
+
                 a {
                   text-decoration: none;
+
                   p {
                     font-family: "GenSenRounded-B";
                     font-size: $ps-font-size;
@@ -1108,16 +1162,19 @@ $bold: 900;
                     padding-left: 15px;
                   }
                 }
+
                 a:hover {
                   p {
                     color: $light-lake-green;
                   }
                 }
               }
+
               .order-delivery {
                 width: 100%;
                 display: flex;
                 padding-top: 25px;
+
                 .order-step1,
                 .order-step2,
                 .order-step3 {
@@ -1125,6 +1182,7 @@ $bold: 900;
                   display: flex;
                   flex-direction: column;
                   align-items: center;
+
                   .step-circle {
                     display: flex;
                     align-items: center;
@@ -1134,6 +1192,7 @@ $bold: 900;
                     background-color: $lake-green;
                     border-radius: 50%;
                   }
+
                   .step-circle2 {
                     display: flex;
                     align-items: center;
@@ -1143,8 +1202,10 @@ $bold: 900;
                     background-color: $gray;
                     border-radius: 50%;
                   }
+
                   .step-text {
                     padding-top: 4%;
+
                     p {
                       padding-top: 3px;
                       font-family: "GenSenRounded-M";
@@ -1153,8 +1214,10 @@ $bold: 900;
                       text-align: center;
                     }
                   }
+
                   .step-text2 {
                     padding-top: 4%;
+
                     p {
                       padding-top: 3px;
                       font-family: "GenSenRounded-M";
@@ -1164,12 +1227,14 @@ $bold: 900;
                     }
                   }
                 }
+
                 .order-dash {
                   width: 20%;
                   display: flex;
                   align-items: center;
                   padding-bottom: 30px;
                   justify-content: space-between;
+
                   div {
                     width: 5px;
                     height: 5px;
@@ -1180,6 +1245,7 @@ $bold: 900;
                 }
               }
             }
+
             .order-detail-info {
               @media (min-width: 992px) {
                 height: 470px;
@@ -1187,8 +1253,10 @@ $bold: 900;
                 overflow-y: scroll;
                 padding-top: 0;
               }
+
               width: 100%;
               padding-top: 15px;
+
               .order-detail-num {
                 margin-top: 10px;
                 padding: 5px;
@@ -1196,12 +1264,14 @@ $bold: 900;
                 align-items: center;
                 justify-content: left;
                 width: 100%;
+
                 p {
                   font-family: "GenSenRounded-B";
                   font-size: $p-font-size;
                   color: $super-dark;
                 }
               }
+
               .detail-title {
                 margin-top: 10px;
                 background-color: $skin;
@@ -1215,37 +1285,45 @@ $bold: 900;
                 font-family: "GenSenRounded-B";
                 font-size: $p-font-size;
                 color: $dark-gray;
+
                 @media (max-width: 768px) {
                   font-size: $ps-font-size;
                 }
+
                 .title-left {
                   width: 65%;
                   display: flex;
                   justify-content: left;
                   align-items: center;
+
                   @media (max-width: 768px) {
                     width: 60%;
                   }
                 }
+
                 .title-center {
                   width: 10%;
                   display: flex;
                   justify-content: center;
                   align-items: center;
+
                   @media (max-width: 768px) {
                     width: 15%;
                   }
                 }
+
                 .title-right {
                   width: 25%;
                   display: flex;
                   justify-content: right;
                   align-items: center;
+
                   @media (max-width: 768px) {
                     width: 30%;
                   }
                 }
               }
+
               .detail-info {
                 margin-top: 15px;
                 width: 100%;
@@ -1257,34 +1335,43 @@ $bold: 900;
                 font-family: "GenSenRounded-M";
                 font-size: $ps-font-size;
                 color: $super-dark;
+
                 @media (min-width: 992px) {
                   font-size: $p-font-size;
                 }
+
                 .title-left {
                   width: 65%;
                   height: auto;
                   display: flex;
                   justify-content: left;
                   align-items: center;
+
                   @media (max-width: 768px) {
                     width: 60%;
                   }
+
                   .order-product {
                     display: flex;
                     align-items: center;
                     width: 100%;
+
                     .order-product-pic {
                       @media (max-width: 768px) {
                         width: 60%;
                       }
+
                       width: 20%;
+
                       img {
                         width: 100%;
                       }
                     }
+
                     .order-product-text {
                       padding: 0 0 0 20px;
                       width: 70%;
+
                       p {
                         line-height: 20px;
                       }
@@ -1293,6 +1380,7 @@ $bold: 900;
                         padding: 5px 0 0 0;
                       }
                     }
+
                     @media (max-width: 768px) {
                       display: flex;
                       flex-direction: column;
@@ -1300,50 +1388,60 @@ $bold: 900;
                     }
                   }
                 }
+
                 .title-center {
                   width: 10%;
                   display: flex;
                   justify-content: center;
                   align-items: center;
+
                   @media (max-width: 768px) {
                     width: 10%;
                   }
                 }
+
                 .title-right {
                   width: 25%;
                   display: flex;
                   justify-content: right;
                   align-items: center;
+
                   @media (max-width: 768px) {
                     width: 30%;
                   }
                 }
               }
+
               .detail-price {
                 padding: 30px 15px 0 5px;
                 font-family: "GenSenRounded-B";
                 font-size: $ps-font-size;
                 color: $dark-gray;
                 display: flex;
+
                 .price-left {
                   width: 50%;
                   text-align: left;
                   line-height: 1.3rem;
+
                   .order-total-price {
                     font-size: $p-font-size;
                     padding: 3% 0;
                   }
                 }
+
                 .price-right {
                   width: 50%;
                   line-height: 1.3rem;
                   text-align: right;
+
                   .order-total-price {
                     font-size: $p-font-size;
                     padding: 3% 0;
                   }
                 }
               }
+
               .detail-delivery {
                 .detail-delivery-title {
                   margin-top: 10px;
@@ -1357,22 +1455,27 @@ $bold: 900;
                   font-family: "GenSenRounded-B";
                   font-size: $p-font-size;
                   color: $dark-gray;
+
                   @media (max-width: 768px) {
                     font-size: $ps-font-size;
                   }
+
                   .delivery-title-left {
                     width: 45%;
                     text-align: left;
                   }
+
                   .delivery-title-center {
                     width: 25%;
                     text-align: center;
                   }
+
                   .delivery-title-right {
                     width: 30%;
                     text-align: right;
                   }
                 }
+
                 .delivery-info {
                   margin-top: 5px;
                   width: 100%;
@@ -1388,29 +1491,35 @@ $bold: 900;
                     width: 45%;
                     text-align: left;
                     line-height: 1.2rem;
+
                     .order_name {
                       font-size: $p-font-size;
                     }
                   }
+
                   .delivery-title-center {
                     width: 25%;
                     text-align: center;
                   }
+
                   .delivery-title-right {
                     width: 30%;
                     text-align: right;
                   }
                 }
               }
+
               .buy-again {
                 width: 100%;
                 display: flex;
                 justify-content: right;
                 padding: 5% 0;
+
                 @media (max-width: 768px) {
                   display: flex;
                   justify-content: center;
                 }
+
                 button {
                   padding: 5px 15px;
                   // border: 3px solid $light-lake-green;
@@ -1424,10 +1533,12 @@ $bold: 900;
                   display: flex;
                   align-items: center;
                   justify-content: center;
+
                   p {
                     padding-right: 5px;
                   }
                 }
+
                 // 
                 // button:hover {
                 //   border: 3px solid $lake-green;
@@ -1456,6 +1567,7 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
@@ -1508,23 +1620,28 @@ $bold: 900;
               .f-gift {
                 width: 13%;
               }
+
               .f-name {
                 width: 25%;
                 text-align: left;
               }
+
               .f-birth {
                 width: 22%;
                 text-align: center;
               }
+
               .f-watchDetails {
                 width: 25%;
                 text-align: center;
               }
+
               .f-delete {
                 width: 15%;
                 text-align: center;
               }
             }
+
             .myFriendsGroup {
               width: 100%;
 
@@ -1566,12 +1683,14 @@ $bold: 900;
                 .watchFriendIcon {
                   width: 25%;
                   text-align: center;
+
                   .watchFriendSvg {
                     width: 20px;
                     height: 20px;
                     border: none;
                     background-color: rgba(255, 255, 255, 0);
                     transition: 0.5s;
+
                     &:hover {
                       transform: scale(1.2);
                     }
@@ -1581,6 +1700,7 @@ $bold: 900;
                 .deleteFriendIcon {
                   width: 15%;
                   text-align: center;
+
                   .deleteFriendSvg {
                     width: 20px;
                     height: 20px;
@@ -1604,6 +1724,7 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 250px;
             }
@@ -1620,6 +1741,7 @@ $bold: 900;
                 background-color: rgba(255, 255, 255, 0);
                 width: 100%;
                 text-decoration: none;
+
                 p {
                   font-family: "GenSenRounded-B";
                   font-size: $ps-font-size;
@@ -1627,12 +1749,14 @@ $bold: 900;
                   padding-left: 15px;
                 }
               }
+
               a.btl:hover {
                 svg {
                   path {
                     fill: $light-lake-green;
                   }
                 }
+
                 p {
                   color: $light-lake-green;
                 }
@@ -1668,6 +1792,7 @@ $bold: 900;
                   .friendEditIcon {
                     width: 40%;
                     margin-left: 20px;
+
                     button {
                       border: none;
                       background-color: rgba(255, 255, 255, 0);
@@ -1676,6 +1801,7 @@ $bold: 900;
                       // width: 20px;
                       // height: 20px;
                     }
+
                     button:hover {
                       background-color: $gray;
                       border-radius: 3px;
@@ -1772,11 +1898,13 @@ $bold: 900;
                 justify-content: left;
                 margin-bottom: 10px;
                 align-items: center;
+
                 .f-title {
                   width: 100%;
                   background-color: $light-brown;
                   border-radius: 10px 10px 0 0;
                   margin-bottom: 10px;
+
                   p {
                     color: $dark-gray;
                     font-family: "GenSenRounded-B";
@@ -1785,10 +1913,12 @@ $bold: 900;
                     text-align: center;
                   }
                 }
+
                 .range {
                   width: 100%;
                   display: grid;
                   grid-template-columns: auto auto;
+
                   .wishList {
                     width: 150px;
                     height: 150px;
@@ -1799,10 +1929,12 @@ $bold: 900;
                     object-fit: cover;
                     margin-bottom: 10px;
                     padding: 0;
+
                     a {
                       width: 100%;
                       height: 100%;
                       text-decoration: none;
+
                       img {
                         width: 100%;
                         height: 100%;
@@ -1810,28 +1942,33 @@ $bold: 900;
                         transition: 0.5s;
                         opacity: 1;
                         background-color: $white;
+
                         &:hover {
                           opacity: 0.9;
                         }
                       }
                     }
                   }
+
                   .col-6 {
                     max-width: none;
                   }
                 }
               }
+
               .f-recommend {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: left;
                 // margin: 20px 0 10px 0;
                 align-items: center;
+
                 .f-title {
                   width: 100%;
                   background-color: $light-brown;
                   border-radius: 10px 10px 0 0;
                   margin-bottom: 10px;
+
                   p {
                     color: $dark-gray;
                     font-family: "GenSenRounded-B";
@@ -1840,10 +1977,12 @@ $bold: 900;
                     text-align: center;
                   }
                 }
+
                 .range {
                   width: 100%;
                   display: grid;
                   grid-template-columns: auto auto;
+
                   .wishList {
                     width: 150px;
                     height: 150px;
@@ -1854,10 +1993,12 @@ $bold: 900;
                     object-fit: cover;
                     margin-bottom: 10px;
                     padding: 0;
+
                     a {
                       width: 100%;
                       height: 100%;
                       text-decoration: none;
+
                       img {
                         width: 100%;
                         height: 100%;
@@ -1865,12 +2006,14 @@ $bold: 900;
                         transition: 0.5s;
                         opacity: 1;
                         background-color: $white;
+
                         &:hover {
                           opacity: 0.9;
                         }
                       }
                     }
                   }
+
                   .col-6 {
                     max-width: none;
                   }
@@ -1891,6 +2034,7 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
@@ -1960,20 +2104,26 @@ $bold: 900;
               display: none;
               width: 100%;
             }
+
             .validCoupon {
               margin-top: 20px;
+
               .coupons {
                 width: 100%;
                 height: auto;
                 margin-bottom: 25px;
+
                 .coupon {
                   width: 100%;
+
                   img {
                     width: 100%;
                   }
                 }
+
                 .couponInvalidDate {
                   width: 100%;
+
                   p {
                     font-family: "GenSenRounded-B";
                     font-size: $p-font-size;
@@ -1981,6 +2131,7 @@ $bold: 900;
                     padding-top: 10px;
                     width: 100%;
                     text-align: left;
+
                     span {
                       color: $red-pink;
                     }
@@ -2081,6 +2232,7 @@ $bold: 900;
             align-items: center;
             padding: 0px 30px;
             margin-top: 15px;
+
             @media screen and (max-width: 991px) {
               min-height: 275px;
             }
@@ -2141,46 +2293,58 @@ $bold: 900;
               width: 100%;
               overflow: hidden;
               margin-top: 20px;
+
               .emptystatus {
                 padding-top: 100px;
                 width: 100%;
                 display: flex;
                 align-items: center;
+
                 @media (max-width: 768px) {
                   padding-top: 20px;
                 }
+
                 .left {
                   width: 50%;
+
                   .img {
                     width: 100%;
+
                     img {
                       width: 100%;
                     }
                   }
                 }
+
                 .right {
                   width: 50%;
+
                   h3 {
                     color: $super-dark;
                     font-family: "GenSenRounded-M";
                     font-size: $h4-font-size;
+
                     @media (max-width: 768px) {
                       font-size: $h5-font-size;
                     }
                   }
+
                   h5 {
                     padding-top: 50px;
                     color: $super-dark;
                     font-family: "GenSenRounded-M";
                     font-size: $h6-font-size;
+
                     @media (max-width: 768px) {
                       font-size: $p-font-size;
                     }
                   }
                 }
               }
+
               .noticeDetails {
                 width: 100%;
+
                 .noticeDetail-unread {
                   width: 100%;
                   height: auto;
@@ -2266,6 +2430,7 @@ $bold: 900;
   position: fixed;
   top: 0;
   left: -100%;
+
   .lightbox-newFriendDetails {
     width: 375px;
     height: auto;
@@ -2363,6 +2528,7 @@ $bold: 900;
             margin-right: 10px;
             color: $super-dark;
           }
+
           .appendtag {
             width: 200px;
             height: auto;
@@ -2373,11 +2539,13 @@ $bold: 900;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+
             span {
               font-family: "GenSenRounded-B";
               font-size: $ps-font-size;
               color: $gray;
             }
+
             .tag {
               span {
                 display: inline-block;
@@ -2390,6 +2558,7 @@ $bold: 900;
                 cursor: pointer;
                 color: $super-dark;
               }
+
               span:hover {
                 background-color: $super-dark;
                 color: $white;
@@ -2421,6 +2590,7 @@ $bold: 900;
                 color: $super-dark;
                 cursor: pointer;
               }
+
               span:hover {
                 background-color: $super-dark;
                 color: $white;
@@ -2473,6 +2643,7 @@ $bold: 900;
   position: fixed;
   top: 0;
   left: -100%;
+
   .lightbox-friendDetails {
     width: 375px;
     height: auto;
@@ -2569,6 +2740,7 @@ $bold: 900;
             margin-right: 10px;
             color: $super-dark;
           }
+
           .appendtag {
             width: 200px;
             height: auto;
@@ -2579,11 +2751,13 @@ $bold: 900;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+
             span {
               font-family: "GenSenRounded-B";
               font-size: $ps-font-size;
               color: $gray;
             }
+
             .tag {
               span {
                 display: inline-block;
@@ -2596,6 +2770,7 @@ $bold: 900;
                 cursor: pointer;
                 color: $super-dark;
               }
+
               span:hover {
                 background-color: $super-dark;
                 color: $white;
@@ -2627,6 +2802,7 @@ $bold: 900;
                 color: $super-dark;
                 cursor: pointer;
               }
+
               span:hover {
                 background-color: $super-dark;
                 color: $white;
@@ -2751,10 +2927,12 @@ $bold: 900;
                 }
               }
             }
+
             .whiteBg {
               .couponTitle {
                 display: flex;
                 margin: 30px 0 10px 0;
+
                 .couponName {
                   width: 70%;
 
@@ -2783,6 +2961,7 @@ $bold: 900;
                   }
                 }
               }
+
               .validCoupon {
                 .coupons {
                   width: 100%;
@@ -2791,15 +2970,19 @@ $bold: 900;
                   display: flex;
                   align-items: center;
                   margin: 15px 0;
+
                   .coupon {
                     width: 70%;
                     padding-right: 15px;
+
                     img {
                       width: 100%;
                     }
                   }
+
                   .couponInvalidDate {
                     width: 30%;
+
                     p {
                       width: 100%;
                     }
@@ -2807,34 +2990,42 @@ $bold: 900;
                 }
               }
             }
+
             .whiteBg {
               .myWishLists {
                 width: 100%;
                 display: flex;
+
                 .wishList {
                   -ms-flex: 0 0 50%;
                   flex: 0 0 50%;
                   max-width: 50%;
+
                   @media (min-width: 700px) {
                     -ms-flex: 0 0 33%;
                     flex: 0 0 33%;
                     max-width: 33%;
                   }
+
                   @media (min-width: 1200px) {
                     -ms-flex: 0 0 33%;
                     flex: 0 0 33%;
                     max-width: 33%;
                   }
+
                   .product-card {
                     width: 100%;
                     height: 100%;
                     padding: 20px;
+
                     a {
                       width: 100%;
                       height: 80%;
+
                       .product-image {
                         width: 100%;
                         height: 100%;
+
                         img {
                           width: 100%;
                           height: 100%;
@@ -2846,6 +3037,7 @@ $bold: 900;
                 }
               }
             }
+
             .whiteBg {
               .friendWishList {
                 .f-wishes {
@@ -2854,16 +3046,19 @@ $bold: 900;
                     height: 150px;
                     margin: 8px;
                   }
+
                   .col-sm-4 {
                     max-width: 150px;
                   }
                 }
+
                 .f-recommend {
                   .wishList {
                     width: 150px;
                     height: 150px;
                     margin: 8px;
                   }
+
                   .col-sm-4 {
                     max-width: 150px;
                   }
@@ -2888,6 +3083,7 @@ $bold: 900;
             .whiteBg {
               padding: 0 100px;
             }
+
             .whiteBg {
               .friendWishList {
                 .f-wishes {
@@ -2896,16 +3092,19 @@ $bold: 900;
                     height: 150px;
                     margin: 8px;
                   }
+
                   .col-sm-4 {
                     max-width: 150px;
                   }
                 }
+
                 .f-recommend {
                   .wishList {
                     width: 150px;
                     height: 150px;
                     margin: 8px;
                   }
+
                   .col-sm-4 {
                     max-width: 150px;
                   }
@@ -2932,6 +3131,7 @@ $bold: 900;
                 padding-top: 120px;
               }
             }
+
             .whiteBg {
               .friendWishList {
                 .f-wishes {
@@ -2940,16 +3140,19 @@ $bold: 900;
                     height: 165px;
                     margin: 10px;
                   }
+
                   .col-md-4 {
                     max-width: 165px;
                   }
                 }
+
                 .f-recommend {
                   .wishList {
                     width: 165px;
                     height: 165px;
                     margin: 10px;
                   }
+
                   .col-md-4 {
                     max-width: 165px;
                   }
@@ -3011,9 +3214,11 @@ $bold: 900;
                     .myphoto {
                       width: 110px;
                       height: 110px;
+
                       .nodisplay {
                         display: none;
                       }
+
                       img.photo {
                         width: 120%;
                         position: static;
@@ -3054,6 +3259,7 @@ $bold: 900;
                     display: flex;
                     flex-direction: column;
                     border-radius: 100px 0 0 100px;
+
                     a {
                       width: 100%;
                       height: 54px;
@@ -3061,6 +3267,7 @@ $bold: 900;
                       // background-color: $white;
                       background-color: rgba(255, 255, 255, 0);
                       flex-direction: row;
+
                       .btnsvg {
                         width: 35%;
                         text-align: right;
@@ -3081,6 +3288,7 @@ $bold: 900;
                           width: 16px;
                           height: 16px;
                           margin-bottom: 2px;
+
                           path {
                             fill: $white;
                             stroke: $white;
@@ -3097,14 +3305,17 @@ $bold: 900;
                         color: $white;
                       }
                     }
+
                     .showBtn {
                       background-color: $white;
+
                       .btnsvg {
                         svg {
                           path {
                             fill: $dark-gray;
                           }
                         }
+
                         svg.ordersvg {
                           path {
                             fill: $dark-gray;
@@ -3112,6 +3323,7 @@ $bold: 900;
                           }
                         }
                       }
+
                       .btnP {
                         color: $dark-gray;
                       }
@@ -3156,6 +3368,7 @@ $bold: 900;
 
                     .myIntro-info {
                       width: 65%;
+
                       p {
                         font-size: $p-font-size;
                       }
@@ -3171,6 +3384,7 @@ $bold: 900;
 
                     .myIntro-info {
                       width: 65%;
+
                       p {
                         font-size: $p-font-size;
                       }
@@ -3186,6 +3400,7 @@ $bold: 900;
 
                     .myIntro-info {
                       width: 65%;
+
                       p {
                         font-size: $p-font-size;
                       }
@@ -3201,6 +3416,7 @@ $bold: 900;
 
                     .myIntro-info {
                       width: 65%;
+
                       p {
                         font-size: $p-font-size;
                       }
@@ -3216,6 +3432,7 @@ $bold: 900;
 
                     .myIntro-info {
                       width: 65%;
+
                       p {
                         font-size: $p-font-size;
                       }
@@ -3231,6 +3448,7 @@ $bold: 900;
 
                     .myIntro-info {
                       width: 65%;
+
                       p {
                         font-size: $p-font-size;
                       }
@@ -3242,12 +3460,15 @@ $bold: 900;
               button.editMyInfo {
                 margin: 35px 0 0 0;
               }
+
               button.editMyInfo:hover {
                 border: none;
                 background-color: $super-dark;
+
                 p.edit {
                   color: $white;
                 }
+
                 svg {
                   path {
                     fill: $white;
@@ -3438,38 +3659,47 @@ $bold: 900;
                   border: none;
                 }
               }
+
               .friendGroupTitle {
+
                 // padding-right: 17px;
                 .f-name {
                   font-size: $ps-font-size;
                   font-family: "GenSenRounded-B";
+
                   p {
                     text-decoration: underline solid $light-brown 3px;
                     text-underline-offset: 10px;
                   }
                 }
+
                 .f-birth {
                   font-size: $ps-font-size;
                   font-family: "GenSenRounded-B";
+
                   p {
                     text-decoration: underline solid $light-brown 3px;
                     text-align: center;
                     text-underline-offset: 10px;
                   }
                 }
+
                 .f-watchDetails {
                   font-size: $ps-font-size;
                   font-family: "GenSenRounded-B";
                   text-align: center;
+
                   p {
                     text-decoration: underline solid $light-brown 3px;
                     text-underline-offset: 10px;
                   }
                 }
+
                 .f-delete {
                   text-align: center;
                   font-size: $ps-font-size;
                   font-family: "GenSenRounded-B";
+
                   p {
                     width: auto;
                     text-decoration: underline solid $light-brown 3px;
@@ -3477,11 +3707,13 @@ $bold: 900;
                   }
                 }
               }
+
               .myFriendsGroup {
                 width: 100%;
                 height: 460px;
                 margin: 20px 0;
                 overflow-y: scroll;
+
                 .friendList {
                   .friendBirth {
                     p {
@@ -3516,6 +3748,7 @@ $bold: 900;
                   .friendName {
                     .fn {
                       width: 50%;
+
                       p {
                         text-align: left;
                         font-size: $h4-font-size;
@@ -3524,6 +3757,7 @@ $bold: 900;
 
                     .friendEditIcon {
                       width: 50%;
+
                       svg {
                         width: 15px;
                         height: 15px;
@@ -3531,6 +3765,7 @@ $bold: 900;
                       }
                     }
                   }
+
                   .friendGenderBirth {
                     .friendGender {
                       p {
@@ -3538,6 +3773,7 @@ $bold: 900;
                         color: $gray;
                       }
                     }
+
                     .friendBirth {
                       p {
                         font-size: $h6-font-size;
@@ -3546,13 +3782,16 @@ $bold: 900;
                     }
                   }
                 }
+
                 .friendtags {
                   .tagsName {
                     text-align: left;
                   }
+
                   .tags {
                     justify-content: left;
                     margin-bottom: 0;
+
                     .tag {
                       margin: 5px;
                     }
@@ -3564,14 +3803,17 @@ $bold: 900;
                 width: 100%;
                 height: 400px;
                 overflow-y: scroll;
-// 
+
+                // 
                 .f-wishes {
                   width: 100%;
                   margin-bottom: 0;
+
                   .range {
                     width: 100%;
                     display: grid;
                     grid-template-columns: auto auto auto auto;
+
                     .wishList {
                       width: 150px;
                       height: 150px;
@@ -3579,13 +3821,16 @@ $bold: 900;
                     }
                   }
                 }
+
                 .f-recommend {
                   width: 100%;
                   margin-bottom: 0;
+
                   .range {
                     width: 100%;
                     display: grid;
                     grid-template-columns: auto auto auto auto;
+
                     .wishList {
                       width: 150px;
                       height: 150px;
@@ -3639,14 +3884,18 @@ $bold: 900;
 
               .couponTitle {
                 margin: 40px 0 10px 0;
+
                 .couponName {
                   width: 70%;
+
                   p.couponName {
                     font-size: $p-font-size;
                   }
                 }
+
                 .couponDate {
                   width: 30%;
+
                   p.couponDate {
                     font-size: $p-font-size;
                   }
@@ -3657,6 +3906,7 @@ $bold: 900;
                 width: 100%;
                 height: 500px;
                 overflow-y: scroll;
+
                 .coupons {
                   .coupon {
                     img {
@@ -3720,19 +3970,23 @@ $bold: 900;
                 overflow-y: scroll;
                 margin-bottom: 30px;
                 margin-top: 30px;
+
                 .noticeDetails {
                   .noticeDetail-unread {
                     p.noticeDate {
                       font-size: $p-font-size;
                     }
+
                     p.notice {
                       font-size: $p-font-size;
                     }
                   }
+
                   .noticeDetail {
                     p.noticeDate {
                       font-size: $p-font-size;
                     }
+
                     p.notice {
                       font-size: $p-font-size;
                     }
@@ -3848,9 +4102,11 @@ $bold: 900;
             .appendtag {
               width: 400px;
               padding: 15px 8px;
+
               span {
                 font-size: $p-font-size;
               }
+
               .tag {
                 span {
                   font-family: "GenSenRounded-B";
@@ -3915,6 +4171,7 @@ $bold: 900;
       }
     }
   }
+
   // ------------------lightbox-friendDetails-----------------
 
   .lightbox-friendDetails-bg {
@@ -4017,9 +4274,11 @@ $bold: 900;
             .appendtag {
               width: 400px;
               padding: 15px 8px;
+
               span {
                 font-size: $p-font-size;
               }
+
               .tag {
                 span {
                   font-family: "GenSenRounded-B";
@@ -4092,26 +4351,32 @@ $bold: 900;
   .wrap {
     .containerr {
       margin: 0 10%;
+
       .main {
         .row {
           .col {
             .col-xl-9 {
               grid-template-columns: auto auto auto;
+
               .friendWishList {
                 grid-template-columns: auto auto auto;
+
                 .f-wishes {
                   width: 100%;
                   grid-template-columns: auto auto auto;
+
                   .col-xl-3 {
-                    
+
                     width: 150px;
                     height: 150px;
                     margin: 3px;
                     max-width: 25%;
                   }
                 }
+
                 .f-recommend {
                   width: 100%;
+
                   .col-xl-3 {
                     width: 100%;
                     margin: 5px;
@@ -4177,6 +4442,7 @@ $bold: 900;
   position: fixed;
   top: 0;
   left: -100%;
+
   .friend-lightbox-bg {
     z-index: 11;
     width: 100%;
@@ -4252,6 +4518,7 @@ $bold: 900;
   position: fixed;
   top: 0;
   left: -100%;
+
   .coupon-lightbox-bg {
     z-index: 11;
     width: 100%;
@@ -4279,6 +4546,7 @@ $bold: 900;
       }
     }
   }
+
   button.ok {
     border: none;
     background-color: $super-dark;
@@ -4304,6 +4572,7 @@ $bold: 900;
   position: fixed;
   top: 0;
   left: -100%;
+
   .coupon-lightbox-bg {
     z-index: 11;
     // position: fixed;
@@ -4335,6 +4604,7 @@ $bold: 900;
       }
     }
   }
+
   button.ok {
     border: none;
     background-color: $super-dark;
