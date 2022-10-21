@@ -3468,4 +3468,169 @@
   font-size: 16px;
   padding: 10px 30px;
   margin-top: 10px;
+}
+
+@media screen and (min-height: 600px) and (max-height: 900px) {
+  .wrap .containerr .main .row .col {
+    padding-top: 40px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName {
+    padding-top: 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName form .photo {
+    top: -54px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName form .photo .photoborder {
+    width: 106px;
+    height: 106px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName form .photo .photoborder .myphoto {
+    width: 90px;
+    height: 90px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName form .photo .photoborder .myphoto .nodisplay {
+    display: none;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName form .photo .photoborder .myphoto img.photo {
+    width: 110%;
+    position: static;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .myName h5 {
+    margin-top: -40px;
+    padding-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul {
+    padding-top: 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn {
+    margin: 6px 0 6px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a {
+    height: 48px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg {
+    width: 35%;
+    text-align: right;
+    padding-right: 20px;
+    fill: #ffffff;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg {
+    margin-bottom: 4px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnsvg svg.ordersvg {
+    margin-bottom: 4px;
+  }
+  .wrap .containerr .main .row .col .col-lg-3 .memberbutton ul li.btn a .btnP {
+    font-size: 18px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop {
+    margin-top: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card {
+    width: 90%;
+    padding-top: 0;
+    padding-right: 5%;
+    border: none;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card .membercardimg {
+    width: 75%;
+    height: auto;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card .memberLevel {
+    width: 75%;
+    margin-top: 20px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .member-card .memberLevel .progress {
+    width: 100%;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .userName {
+    padding-top: 23px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .gender {
+    padding-top: 28px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .birthday {
+    padding-top: 28px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .email {
+    padding-top: 28px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .phone {
+    padding-top: 28px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .mydetailstop .myIntro .address {
+    padding-top: 28px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 button.editMyInfo {
+    margin: 30px 0 0 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .modal .modal-dialog {
+    padding: 30px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .modal .modal-dialog .modal-content .modal-body .my-details .detail {
+    margin-bottom: 30px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .myWishLists {
+    margin: 30px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .orders .order-list {
+    padding-top: 0;
+    padding-bottom: 15px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .newFriend {
+    margin: 25px 0 10px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendGroupTitle {
+    margin-bottom: 10px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .myFriendsGroup {
+    height: 450px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop {
+    padding: 10px 0;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendName .fn p {
+    font-size: 28px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendGenderBirth .friendGender p {
+    font-size: 18px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendDetailsTop .friendDetails .friendGenderBirth .friendBirth p {
+    font-size: 18px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList {
+    height: 320px;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-wishes .range {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+  .wrap .containerr .main .row .col .col-lg-9 .friendWishList .f-recommend .range {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+  .inputNewFriend .lightbox-newFriendDetails {
+    padding: 30px 0;
+  }
+  .inputNewFriend .lightbox-newFriendDetails p.editTitle {
+    padding-bottom: 30px;
+  }
+  .inputNewFriend .lightbox-newFriendDetails .friend-details .detail {
+    margin-bottom: 30px;
+  }
+  .inputNewFriend .lightbox-newFriendDetails .detailsbtn {
+    margin-top: 20px;
+  }
+  .lightbox-friendDetails-bg .lightbox-friendDetails {
+    padding: 30px 0;
+  }
+  .lightbox-friendDetails-bg .lightbox-friendDetails p.editTitle {
+    padding-bottom: 30px;
+  }
+  .lightbox-friendDetails-bg .lightbox-friendDetails .friend-details .detail {
+    margin-bottom: 30px;
+  }
+  .lightbox-friendDetails-bg .lightbox-friendDetails .detailsbtn {
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=member-all.css.map */
